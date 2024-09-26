@@ -1,0 +1,23 @@
+---
+import "../styles/global.css";
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Laravel Company - laravelcompany.com</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Crafting digital magic through innovative code solutions. Explore open-source projects created by our company."/>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <ViewTransitions />
+  </head>
+  <body class="bg-white font-SpaceGrotesk">
+    <Navbar />
+    <slot />
+    <Footer/>
+  </body>
+</html>
