@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name1": "Laravel",
+        "name2": "Mail",
+        "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+        "arrow": "./services/ag.svg",
+        "link": "https://laravelmail.com",
+        "image": "./services/01.svg"
+    },
+    {
+        "id": 2,
+        "name1": "Laravel",
+        "name2": "GPT",
+        "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+        "arrow": "./services/ag.svg",
+        "link": "https://laravelgpt.com",
+        "image": "./services/02.svg"
+    },
+    {
+        "id": 3,
+        "name1": "Laravel ",
+        "name2": "Seo",
+        "background": "h-[310px] p-12 bg-black rounded-[45px] shadow-card border border-black justify-between items-center flex text-white",
+        "arrow": "./services/aw.svg",
+        "link": "./",
+        "image": "./services/03.svg"
+    },
+    {
+        "id": 4,
+        "name1": "Laravel ",
+        "name2": "Crawler",
+        "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+        "arrow": "./services/ag.svg",
+        "link": "./",
+        "image": "./services/04.svg"
+    }
+]

@@ -11,5 +11,4 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'server',
   adapter: cloudflare(),
-
 });
