@@ -3,7 +3,7 @@ import Container from "./Container.astro"
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
-  { href: '/about', label: 'About us' },
+
   { href: '/products', label: 'Products' },
 ];
 
@@ -40,7 +40,7 @@ const navButton = { href: 'contact', label: 'Contact' };
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a class="px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" href={navButton.href} target="_blank">
+        <a class="px-8 py-5 bg-zinc-900 hover:bg-white rounded-2xl text-center text-white hover:text-black border text-xl font-normal leading-7" href={navButton.href} target="_blank">
 
           <span class="text-center text-xl font-normal leading-7">{navButton.label}</span>
         </a>
