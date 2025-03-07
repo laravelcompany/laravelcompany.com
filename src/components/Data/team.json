@@ -4,16 +4,30 @@
         {
             "title": "Founder",
             "name": "Stefan I.",
-            "description": "helping businesses solve complex software challenges since 2007.",
+            "description": "Transforming ideas into interactive and seamless digital experiences with cutting-edge Backend development.",
             "profile": "https://avatars.githubusercontent.com/u/2276408?s=75&v=4",
             "link": "https://linkedin.com/in/izdrail"
         },
         {
-            "title": "Founder",
+            "title": "Member",
             "name": "Andrei M.",
             "description": "Looking to work with B2B companies in eCommerce",
             "profile": "https://avatars.githubusercontent.com/u/13685130?s=75&v=4",
             "link": "https://www.linkedin.com/in/andrei-marmureanu-b5334a49/"
+        },
+        {
+            "title": "Co-founder",
+            "name": "Alex M.",
+            "description": "Driving sales and marketing efforts for B2B companies in eCommerce",
+            "profile": "https://i1.wp.com/vanillicon.com/d09e892ed2fd5b24ad409c183957ec30_100.png?ssl=1",
+            "link": "#"
+        },
+        {
+            "title": "Member",
+            "name": "Bogdan M.",
+            "description": "Increasing sales trough complex funnels for our customers",
+            "profile": "https://avatars.githubusercontent.com/u/90279111?s=75&v=4",
+            "link": "#"
         }
     ],
     "process":

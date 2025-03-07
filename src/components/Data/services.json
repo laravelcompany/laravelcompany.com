@@ -13,10 +13,10 @@
         "id": 2,
         "name1": "Laravel GPT",
         "name2": "Platform",
-        "description": "",
+        "description": "Cloud based platform for running your AI models for the cheap.",
         "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
         "arrow": "./services/ag.svg",
-        "link": "https://laravelgpt.com",
+        "link": "#",
         "image": "./services/02.svg"
     }
 ]

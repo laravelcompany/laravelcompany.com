@@ -8,7 +8,9 @@ slug: laravel-mail
 summary: "Laravel Mail is a fully featured email marketing platform built for growing creators, developers, and businesses."
 type: "Product"
 ---
+<a href="https://laravelmail.com/">
 <img alt="Leadscaptain" src="https://leadscaptain.com/images/logo.svg">
+
 
 # Laravel Mail
 
@@ -25,3 +27,4 @@ Powerful marketing, automations, Voip communication and transactional emails, se
 - Edit, send, and track transactional emails directly in Laravel Mail.
 
 Check our website on how to [Get started](https://laravelmail.com/).
+</a>
