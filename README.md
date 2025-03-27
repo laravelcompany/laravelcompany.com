@@ -1,7 +1,9 @@
-# Laravel Company - Laravel Agency Website
+# Laravel Agency 
 
-Introducing "Laravel Company" - a stunning and versatile Astro theme designed for digital marketing agencies.
+Introducing "Laravel Agency" - a stunning and versatile Astro theme designed for digital marketing agencies.
+We specialize in delivering custom Laravel applications that help businesses grow and succeed online. If you are looking for Laravel developers in the UK? Our team of skilled Laravel developers delivers tailored web solutions, from consulting and design to full project management. We specialize in creating robust Laravel applications at affordable rates starting from £25 per hour.
 
+## Features
 Built with clean, modern aesthetics and leveraging the power of Astro and Tailwind, Positivus empowers you to craft a captivating website that showcases your agency's expertise and fosters trust with potential clients.
 
 [![Static Badge](https://img.shields.io/badge/UI%2FUX-Olga-blue)](https://www.figma.com/@olgaaverchenko) [![View Demo](https://img.shields.io/badge/Develop-Manul_Thanura-red)](https://lk.linkedin.com/in/manulthanura)
