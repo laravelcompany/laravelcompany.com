@@ -13,19 +13,19 @@ Introducing "Laravel Agency" - a stunning and versatile Astro theme designed for
 We specialize in delivering custom Laravel applications that help businesses grow and succeed online. If you are looking for Laravel developers in the UK? Our team of skilled Laravel developers delivers tailored web solutions, from consulting and design to full project management. We specialize in creating robust Laravel applications at affordable rates starting from £25 per hour.
 
 ## Features
-Built with clean, modern aesthetics and leveraging the power of Astro and Tailwind, Positivus empowers you to craft a captivating website that showcases your agency's expertise and fosters trust with potential clients.
+Built with clean, modern aesthetics and leveraging the power of Astro and Tailwind, Laravel Agency empowers you to craft a captivating website that showcases your agency's expertise and fosters trust with potential clients.
 
-[![Static Badge](https://img.shields.io/badge/UI%2FUX-Olga-blue)](https://laravelcompany.com)
-[![View Demo](https://img.shields.io/badge/Develop-Manul_Thanura-red)](https://laravelcompany.com)
+[![Static Badge](https://img.shields.io/badge/UI%2FUX-Andrew-blue)](https://laravelcompany.com)
+[![View Demo](https://img.shields.io/badge/Develop-John-red)](https://laravelcompany.com)
 [![Static Badge](https://img.shields.io/badge/View_Demo-green)](https://laravelcompany.com/)
 
 [![Static Badge](https://img.shields.io/badge/Astro-orange)](https://astro.build/)
 
-![Cover](./public/cover.png)
+![Cover](https://i.imgur.com/xD1xl8M.png)
 
 ## Theme Features
 
-Leveraging the power of Astro and Tailwind CSS, Positivus offers:
+Leveraging the power of Astro and Tailwind CSS, Laravel Agency offers:
 
 - Clean and modern design.
 - SEO-friendly.
