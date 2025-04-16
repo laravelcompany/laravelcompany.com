@@ -10,7 +10,7 @@ const priceData = [
     price: 29,
     pricingUnit: "per month",
     details: {
-      developers: "1 Junior Developer",
+      developers: "1 Developer",
       support: "10 hours",
       updates: "1 project"
     },
@@ -23,11 +23,11 @@ const priceData = [
   {
     title: "Growth",
     slug: "growth",
-    description: "Good for growing businesses.",
+    description: "This package addresses the most common growth challenges of businesses. It provides a robust feature set, standard integrations, and priority email support.",
     price: 49,
     pricingUnit: "per month",
     details: {
-      developers: "2 Mid-Level Developers",
+      developers: "1 Developer",
       support: "50 hours",
       updates: "2 projects"
     },
@@ -45,13 +45,13 @@ const priceData = [
   {
     title: "Premium",
     slug: "premium",
-    description: "Tailored for enterprises requiring advanced features, faster delivery, and dedicated account management with a Senior Developer.",
+    description: "Tailored for enterprises requiring advanced features, faster delivery, and dedicated account management with a Lead Developer.",
     price: 79,
     pricingUnit: "per month",
     details: {
-      developers: "1 Senior Developer",
-      support: "50 hours",
-      updates: "3 versions"
+      developers: "1 Developer",
+      support: "100 hours",
+      updates: "3 projects"
     },
     features: [
       "Comprehensive feature set",
@@ -144,7 +144,7 @@ const currencySymbol = "£";
 
               <a
                 href={plan.link}
-                class="mt-auto text-center  hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-500 dark:hover:bg-primary-600 dark:focus:ring-primary-800"
+                class="mt-auto text-center  focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 bg-primary-500 dark:bg-primary-500 dark:hover:bg-primary-600 dark:focus:ring-primary-800"
               >
                 {plan.callToAction}
               </a>
