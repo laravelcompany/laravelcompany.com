@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import Section from "./Section.astro";
+
+// Define sponsors with Font Awesome icons
+const sponsors = [
+  { icon: "fa-brands fa-aws", name: "Amazon Web Services", color: "#FF9900" },
+  { icon: "fa-brands fa-github", name: "Github", color: "#EA4C89" },
+  { icon: "fa-brands fa-hubspot", name: "HubSpot", color: "#FF7A59" },
+  { icon: "fa-brands fa-neos", name: "Notion", color: "#000000" },
+  { icon: "fa-brands fa-google", name: "Google Cloud", color: "#4285F4" },
+  { icon: "fa-brands fa-microsoft", name: "Microsoft Azure", color: "#0078D4" },
+  { icon: "fa-brands fa-nvidia", name: "Nvidia", color: "#76B900" },
+  { icon: "fa-solid fa-robot", name: "Hugging Face", color: "#FFC107" },
+  { icon: "fa-solid fa-brain", name: "OpenAI", color: "#10A37F" },
+  // PHP and Frontend Development Sponsors
+  { icon: "fa-brands fa-php", name: "PHP", color: "#8892BE" },
+  { icon: "fa-brands fa-laravel", name: "Laravel", color: "#FF2D20" },
+  { icon: "fa-brands fa-symfony", name: "Symfony", color: "#000000" },
+  { icon: "fa-brands fa-js", name: "JavaScript", color: "#F7DF1E" },
+  { icon: "fa-brands fa-react", name: "React", color: "#61DAFB" },
+  { icon: "fa-brands fa-vuejs", name: "Vue.js", color: "#42B883" },
+  { icon: "fa-brands fa-npm", name: "npm", color: "#CB3837" },
+  { icon: "fa-brands fa-yarn", name: "Yarn", color: "#2C8EBB" },
+  { icon: "fa-brands fa-docker", name: "Docker", color: "#2496ED" },
+  { icon: "fa-brands fa-gitlab", name: "GitLab", color: "#FCA121" },
+  { icon: "fa-brands fa-bitbucket", name: "Bitbucket", color: "#205081" },
+];
+---
+
+<Section id="sponsors">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <div class="flex-row items-center">
+    <h3 class="text-xl font-medium text-center mb-4">Supporting the Ecosystem</h3>
+    <p class="text-center text-gray-600 mb-8">
+      We are grateful for the support of these fantastic organizations and technologies that power our development in areas like AI, PHP, and modern frontend frameworks.
+    </p>
+    <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-4">
+      {
+        sponsors.map((sponsor) => {
+          return (
+            <div class="p-4 grayscale transition duration-200 hover:grayscale-0 hover:text-[{sponsor.color}] text-center">
+              <i class={`${sponsor.icon} text-4xl mx-auto`} aria-hidden="true"></i>
+              <span class="sr-only">{sponsor.name}</span>
+              <p class="text-xs mt-2 opacity-70">{sponsor.name}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</Section>
+
+<style>
+  /* Additional styles for smoother transitions */
+  .grayscale {
+    filter: grayscale(100%);
+    opacity: 0.7;
+  }
+
+  .grayscale:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+</style>

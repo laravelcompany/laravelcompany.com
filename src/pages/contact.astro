@@ -1,29 +1,37 @@
 ---
-import Container from "../components/Container.astro"
-import Layout from '../layouts/Layout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import Sponsors from "../components/sections/Sponsors.astro";
 ---
 
-<Layout title="Contact us - Laravelcompany.com">
-	<main class="space-y-20">
-		<Container>
-            <div class="relative flex flex-col-reverse items-center justify-center md:flex-row" id="hero">
-                <div class="row items-center py-5 md:pb-20 md:pt-10">
-                    <div class="justify-center flex py-5">
-                        <img src="/contact.svg" width="50%" alt="contact laravel agency essex"/>
+<MainLayout title="Laravel Services">
+    <main class="space-y-28">
+        <!-- Hero Section -->
+        <section class="relative from-blue-50 to-white">
+            <div class="container mx-auto px-4 py-20 md:py-28">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 text-center md:text-left space-y-8">
+                        <h1
+                            class="text-5xl md:text-6xl font-bold leading-tight text-gray-900"
+                        >
+                            Contact <span class="text-red-600">Laravel</span> Experts.
+                    
+                        </h1>
+                        <p class="text-xl text-gray-600 leading-relaxed">
+                            Accelerate your digital transformation with our
+                            comprehensive Laravel solutions. From startups to
+                            enterprises, we deliver secure, scalable web
+                            applications that drive business growth.
+                        </p>
+                       
                     </div>
-                    <div class="text-center space-y-10">
-                        <h3 class="text-2xl font-medium leading-none md:text-4xl">
-                          Wickford  Essex, United Kingdom
-                        </h3>
-                        <a class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex" rel="noopener noreferrer"  href="https://calendly.com/izdrail" target="_blank">
-                            <h2 class="text-center text-xl font-normal leading-7">
-                                Book a free consultation
-                            </h2>
-                        </a>
+                    <div class="md:w-1/2 mt-12 md:mt-0">
+                        <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/laravelagency" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
                     </div>
                 </div>
             </div>
-        </Container>
-     
-	</main>
-</Layout>
+        </section>
+    </main>
+</MainLayout>

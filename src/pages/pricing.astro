@@ -1,133 +1,157 @@
 ---
-import Container from "../components/Container.astro"
-import Layout from '../layouts/Layout.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import Card from "../components/ui/Card.astro";
+
+const priceData = [
+  {
+    title: "Starter",
+    slug: "starter",
+    description: "Ideal for startups and individuals requiring essential software development services like small content changes, small updates.",
+    price: 29,
+    pricingUnit: "per month",
+    details: {
+      developers: "1 Junior Developer",
+      support: "10 hours",
+      updates: "1 project"
+    },
+    features: ["Essential feature set", "Basic integrations", "Email support"],
+    callToAction: "Get Started",
+    link: "/contact",
+    recommendedFor: "Startups, small projects",
+    isPopular: false,
+  },
+  {
+    title: "Growth",
+    slug: "growth",
+    description: "Good for growing businesses.",
+    price: 49,
+    pricingUnit: "per month",
+    details: {
+      developers: "2 Mid-Level Developers",
+      support: "50 hours",
+      updates: "2 projects"
+    },
+    features: [
+      "Robust feature set",
+      "Standard integrations",
+      "Priority email support",
+      "Team collaboration tools",
+    ],
+    callToAction: "Get Started",
+    link: "/contact",
+    recommendedFor: "SMEs, growing teams",
+    isPopular: true,
+  },
+  {
+    title: "Premium",
+    slug: "premium",
+    description: "Tailored for enterprises requiring advanced features, faster delivery, and dedicated account management with a Senior Developer.",
+    price: 79,
+    pricingUnit: "per month",
+    details: {
+      developers: "1 Senior Developer",
+      support: "50 hours",
+      updates: "3 versions"
+    },
+    features: [
+      "Comprehensive feature set",
+      "Advanced integrations",
+      "Dedicated support & account management",
+      "Faster delivery timelines",
+    ],
+    callToAction: "Contact Us",
+    link: "/contact",
+    recommendedFor: "Large organizations, high-demand projects",
+    isPopular: false,
+  },
+];
+
+const currencySymbol = "£";
 ---
 
-<Layout title="Positivus - Pricing">
-	<main class="space-y-20">
-		<Container>
-            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-                <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">Designed for business teams like yours</h2>
-                    <p class="mb-5 font-light text-gray-500 sm:text-xl">Here at Positivus we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+<MainLayout title="Our Pricing">
+  <main>
+    <section class="py-12 px-4 mx-auto max-w-screen-xl">
+      <div class="mx-auto max-w-screen-md text-center mb-10 lg:mb-16">
+        <h1 class="mb-4 text-3xl font-extrabold text-[#031D40] sm:text-4xl">
+          Choose the perfect plan for your business
+        </h1>
+        <p class="text-gray-500 text-[#031D40] sm:text-xl">
+          Transparent and flexible pricing to help your business grow with <strong>Laravel Agency</strong>.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        {priceData.map((plan) => (
+          <Card
+            isUnderline={true}
+            className={plan.isPopular ? "border-2 border-primary-500 dark:border-primary-400 relative" : ""}
+          >
+            <div class="flex flex-col p-6 h-full">
+              {plan.isPopular && (
+                <div class="absolute top-0 right-0 bg-primary-500 text-white text-xs font-semibold px-3 py-1 rounded-bl">
+                  Popular
                 </div>
-                <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-                    <!-- Pricing Card -->
-                    <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-3xl border border-gray-100 shadow-card ">
-                        <h3 class="mb-4 text-2xl font-semibold">Starter</h3>
-                        <p class="font-light text-gray-500 sm:text-lg">Best option for personal use & for your next project.</p>
-                        <div class="flex justify-center items-baseline my-8">
-                            <span class="mr-2 text-5xl font-extrabold">$29</span>
-                            <span class="text-gray-500">/month</span>
-                        </div>
-                        <!-- List -->
-                        <ul role="list" class="mb-8 space-y-4 text-left">
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Individual configuration</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>No setup, or hidden fees</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Team size: <span class="font-semibold">1 developer</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Premium support: <span class="font-semibold">6 months</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Free updates: <span class="font-semibold">6 months</span></span>
-                            </li>
-                        </ul>
-                        <a href="#" class="text-black hover:text-white bg-lime hover:bg-black focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get started</a>
-                    </div>
-                    <!-- Pricing Card -->
-                    <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-3xl border border-gray-100 shadow-card ">
-                        <h3 class="mb-4 text-2xl font-semibold">Company</h3>
-                        <p class="font-light text-gray-500 sm:text-lg">Relevant for multiple users, extended & premium support.</p>
-                        <div class="flex justify-center items-baseline my-8">
-                            <span class="mr-2 text-5xl font-extrabold">$99</span>
-                            <span class="text-gray-500">/month</span>
-                        </div>
-                        <!-- List -->
-                        <ul role="list" class="mb-8 space-y-4 text-left">
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Individual configuration</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>No setup, or hidden fees</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Team size: <span class="font-semibold">10 developers</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Premium support: <span class="font-semibold">24 months</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Free updates: <span class="font-semibold">24 months</span></span>
-                            </li>
-                        </ul>
-                        <a href="#" class="text-black hover:text-white bg-lime hover:bg-black focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get started</a>
-                    </div>
-                    <!-- Pricing Card -->
-                    <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-3xl border border-gray-100 shadow-card ">
-                        <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
-                        <p class="font-light text-gray-500 sm:text-lg">Best for large scale uses and extended redistribution rights.</p>
-                        <div class="flex justify-center items-baseline my-8">
-                            <span class="mr-2 text-5xl font-extrabold">$499</span>
-                            <span class="text-gray-500">/month</span>
-                        </div>
-                        <!-- List -->
-                        <ul role="list" class="mb-8 space-y-4 text-left">
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Individual configuration</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>No setup, or hidden fees</span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Team size: <span class="font-semibold">100+ developers</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Premium support: <span class="font-semibold">36 months</span></span>
-                            </li>
-                            <li class="flex items-center space-x-3">
-                                <!-- Icon -->
-                                <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                <span>Free updates: <span class="font-semibold">36 months</span></span>
-                            </li>
-                        </ul>
-                        <a href="#" class="text-black hover:text-white bg-lime hover:bg-black focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get started</a>
-                    </div>
-                </div>
+              )}
+              
+              <header class="mb-6 text-center">
+                <h2 class="text-2xl font-semibold text-[#031D40] mb-2">
+                  {plan.title}
+                </h2>
+                <p class="text-[#031D40]">
+                  {plan.description}
+                </p>
+              </header>
+
+              <div class="flex justify-center items-baseline my-6">
+                <span class="text-4xl font-extrabold text-[#031D40]">
+                  {currencySymbol}{plan.price}
+                </span>
+                <span class="ml-1 text-gray-500 dark:text-gray-400">
+                  /{plan.pricingUnit.replace(" ", "")}
+                </span>
+              </div>
+
+              <div class="mb-6 bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                  <strong>Recommended for:</strong> {plan.recommendedFor}
+                </p>
+                <ul class="space-y-2 text-sm">
+                  {Object.entries(plan.details).map(([key, value]) => (
+                    <li class="flex items-center">
+                      <svg class="flex-shrink-0 w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span class="capitalize">{key}:</span> <span class="ml-1 font-medium">{value}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div class="mb-6 flex-grow">
+                <h3 class="font-medium mb-3 ">Features:</h3>
+                <ul class="space-y-2">
+                  {plan.features.map((feature) => (
+                    <li class="flex items-center">
+                      <svg class="flex-shrink-0 w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span class="text-gray-700 dark:text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a
+                href={plan.link}
+                class="mt-auto text-center  hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-500 dark:hover:bg-primary-600 dark:focus:ring-primary-800"
+              >
+                {plan.callToAction}
+              </a>
             </div>
-        </Container>
-	</main>
-</Layout>
+          </Card>
+        ))}
+      </div>
+    </section>
+  </main>
+</MainLayout>

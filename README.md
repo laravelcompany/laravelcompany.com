@@ -1,4 +1,13 @@
 # Laravel Agency 
+        
+        
+The #F24B69 value of swatch 1
+The #031D40 value of swatch 2
+The #064072 value of swatch 3
+The #30A8D8 value of swatch 4
+The #F25244 value of swatch 5
+
+
 
 Introducing "Laravel Agency" - a stunning and versatile Astro theme designed for digital marketing agencies.
 We specialize in delivering custom Laravel applications that help businesses grow and succeed online. If you are looking for Laravel developers in the UK? Our team of skilled Laravel developers delivers tailored web solutions, from consulting and design to full project management. We specialize in creating robust Laravel applications at affordable rates starting from £25 per hour.

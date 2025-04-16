@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import Card from "./Card.astro";
+
+import gob from "../../assets/icon6.svg";
+import wob from "../../assets/icon7.svg";
+
+// Define proper TypeScript interface for props
+interface Props {
+  index: number;
+  titleTop: string;
+  titleBottom: string;
+  img?: any; // Keep for backward compatibility
+  alt: string;
+  link: string;
+  serviceDescription?: string; // Added for SEO
+  serviceName?: string; // Added for SEO
+}
+
+const { 
+  index, 
+  titleTop, 
+  titleBottom, 
+  img, 
+  alt, 
+  link,
+  serviceDescription = "Professional Laravel development services and solutions", 
+  serviceName = titleTop + " " + titleBottom 
+} = Astro.props as Props;
+
+// Define background and text classes based on index
+const bgClass = index === 1 ? 'bg-gray' : index === 2 ? 'bg-green' : 'bg-dark text-gray';
+const headingClass = index === 1 ? 'greenhead' : 'whitehead';
+const iconSrc = index === 1 || index === 2 ? gob : wob;
+---
+
+<Card isUnderline={true}>
+  <div
+  class={`h-[300px] w-full sm:h-full lg:gap-[60px] grid custom-grid lg:grid-cols-2 lg:grid-rows-1 p-8 sm:p-[50px] rounded-[45px] ${bgClass}`}
+  aria-labelledby={`service-title-${index}`}
+  itemscope
+  itemtype="http://schema.org/Service"
+>
+  <h3
+    id={`service-title-${index}`}
+    class={`flex flex-col col-span-2 lg:col-span-1`}
+    itemprop="name"
+  >
+    <span class={`w-[fit-content] ${serviceName}`}>{titleTop}</span>
+    
+  </h3>
+
+  <meta itemprop="description" content={serviceDescription} />
+
+  {/* Example of adding serviceType */}
+  <meta itemprop="serviceType" content={serviceName} />
+
+  <div class="flex items-end">
+    <p>
+      {alt} <span class="sr-only">Service Info: {serviceDescription}</span>
+    </p>
+
+    <a
+      href={link}
+      class="flex items-center gap-3.5 hover:underline focus:outline-dashed focus:outline-2"
+      aria-label={`Learn more about ${serviceName}`}
+      itemprop="url"
+    >
+
+   
+    </a>
+  </div>
+</div>
+</Card>
+
+<style>
+  .custom-grid {
+    grid-template: auto auto;
+  }
+</style>

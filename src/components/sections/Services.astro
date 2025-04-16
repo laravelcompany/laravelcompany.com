@@ -1,0 +1,107 @@
+---import SectionTitle from "../ui/SectionTitle.astro";
+import Card from "../ui/Card.astro";
+import Section from "./Section.astro";
+
+const laravelServices = [
+  {
+    id: 1,
+    title: "Laravel Application Development",
+    category: "Development",
+    description: "Build high-quality, custom web applications tailored to your business needs using the robust Laravel PHP framework.",
+    link: "/services/laravel-development",
+    isDark: false,
+    bgColor: "bg-gray"
+  },
+  {
+    id: 2,
+    title: "Laravel Maintenance & Support",
+    category: "Support",
+    description: "Ensure the continuous performance and security of your Laravel projects with our comprehensive maintenance and update services.",
+    link: "/services/laravel-maintenance",
+    isDark: false,
+    bgColor: "bg-green"
+  },
+  {
+    id: 3,
+    title: "Laravel API Development & Integration",
+    category: "Integration",
+    description: "Develop scalable and secure RESTful and GraphQL APIs with Laravel to connect your applications and integrate with third-party services.",
+    link: "/services/api-development",
+    isDark: true,
+    bgColor: "bg-dark"
+  },
+  {
+    id: 4,
+    title: "Laravel Consulting & Strategy",
+    category: "Strategy",
+    description: "Get expert technical guidance, strategic planning, and best practices for your Laravel development projects from our experienced consultants.",
+    link: "/services/laravel-consulting",
+    isDark: true,
+    bgColor: "bg-green"
+  },
+  {
+    id: 5,
+    title: "Laravel Database Optimization",
+    category: "Performance",
+    description: "Improve the speed and efficiency of your Laravel applications with our database optimization and scaling techniques.",
+    link: "/services/database-optimization",
+    isDark: true,
+    bgColor: "bg-dark"
+  },
+  {
+    id: 6,
+    title: "Laravel Version Upgrades",
+    category: "Upgrades",
+    description: "Seamlessly upgrade your Laravel applications to the latest versions to benefit from new features, security updates, and performance improvements.",
+    link: "/services/laravel-upgrades",
+    isDark: true,
+    bgColor: "bg-green"
+  }
+];
+
+const sectionDescription = "We are a specialized Laravel development agency offering comprehensive services and technical expertise to help businesses build, maintain, and scale robust web applications.";
+---
+
+<Section id="services" aria-label="Our Laravel Development Services">
+  <div class="mt-24 mb-10">
+    <SectionTitle 
+      sectionTitle="Our Laravel Services" 
+      description={sectionDescription} 
+    />
+    
+    <div class="grid gap-8 md:grid-cols-2">
+      {laravelServices.map((service) => {
+        const textClass = service.isDark ? "text-gray" : "";
+        
+        return (
+          <Card isUnderline={true}>
+            <a 
+              href={service.link} 
+              class={`block h-full p-6 sm:p-10 rounded-3xl ${service.bgColor} ${textClass} hover:opacity-95 transition-opacity`}
+            >
+              <div 
+                class="grid h-full md:grid-cols-2 gap-4"
+                itemscope 
+                itemtype="http://schema.org/Service"
+              >
+                <h3 
+                  id={`service-${service.id}`}
+                  class="text-xl font-bold"
+                  itemprop="name"
+                >
+                  {service.title}
+                </h3>
+                
+                <div class="flex items-end">
+                  <p itemprop="description">{service.description}</p>
+                </div>
+                
+                <meta itemprop="serviceType" content={service.category} />
+              </div>
+            </a>
+          </Card>
+        );
+      })}
+    </div>
+  </div>
+</Section>

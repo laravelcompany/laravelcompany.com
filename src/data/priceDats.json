@@ -1,0 +1,62 @@
+[
+    {
+      "title": "Starter",
+      "slug": "starter",
+      "description": "Ideal for startups and individuals requiring essential software development services like small content changes, small updates.",
+      "price": 29,
+      "pricingUnit": "per month",
+      "developerCount": 1,
+      "developerSkillLevel": "Junior",
+      "supportHours": 10,
+      "includedUpdates": 1,
+      "features": [
+        "Essential feature set",
+        "Basic integrations",
+        "Email support"
+      ],
+      "callToAction": "Get Started",
+      "link": "/starter",
+      "recommendedFor": "Startups, small projects"
+    },
+    {
+      "title": "Growth",
+      "slug": "growth",
+      "description": "Optimized for growing businesses, offering enhanced tools and support with a Mid-Level Developer.",
+      "price": 49,
+      "pricingUnit": "per month",
+      "developerCount": 2,
+      "developerSkillLevel": "Mid-Level",
+      "supportHours": 10,
+      "includedUpdates": 2,
+      "features": [
+        "Robust feature set",
+        "Standard integrations",
+        "Priority email support",
+        "Team collaboration tools"
+      ],
+      "callToAction": "Get Started",
+      "link": "/growth",
+      "recommendedFor": "SMEs, growing teams"
+    },
+    {
+      "title": "Premium",
+      "slug": "premium",
+      "description": "Tailored for enterprises requiring advanced features, faster delivery, and dedicated account management with a Senior Developer.",
+      "price": 79,
+      "pricingUnit": "per month",
+      "developerCount": 1,
+      "developerSkillLevel": "Senior",
+      "supportHours": 50,
+      "includedUpdates": 3,
+      "features": [
+        "Comprehensive feature set",
+        "Advanced integrations",
+        "Dedicated support & account management",
+        "Faster delivery timelines"
+      ],
+      "callToAction": "Contact Us",
+      "link": "/premium",
+      "recommendedFor": "Large organizations, high-demand projects"
+    }
+  ]
+  
