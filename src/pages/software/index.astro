@@ -1,30 +1,33 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import ArticleCard from "../../components/ui/ArticleCard.astro";
 import SearchForm from "../../components/ui/SearchForm.astro";
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from "astro:content";
+import SoftwareCard from "../../components/ui/SoftwareCard.astro";
 
 const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1;
 
-const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog'))
-  .sort((a:CollectionEntry<'blog'>, b:CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const allBlogArticles: CollectionEntry<'software'>[] = (await getCollection('software'));
 
 ---
 
-<MainLayout title="Laravel Agency - Blog">
+<MainLayout title="Laravel Agency - Software">
 	<main class="space-y-20">
             <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-3">
                 <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-                    <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold">Agency Blog</h2>
-                    <p class="font-light sm:text-xl">We use an agile approach to test assumptions and connect with the needs of your audience early and often.</p>
+                    <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold">
+                        Our Software.
+                    </h2>
+                    <p class="font-light sm:text-xl">
+                        We have a wide variety of software that we use to build our websites.
+                    </p>
                 </div> 
                 <br>
                 <SearchForm />
                 <br>
                 <div class="grid gap-8 lg:grid-cols-2">
                     {allBlogArticles.map(article => (
-                        <ArticleCard article={article} />
+                        <SoftwareCard software={article} />
                     ))}
                 </div>  
             </div>

@@ -8,7 +8,7 @@ const laravelServices = [
     title: "Laravel Application Development",
     category: "Development",
     description: "Build high-quality, custom web applications tailored to your business needs using the robust Laravel PHP framework.",
-    link: "/services/laravel-development",
+    link: "/services",
     isDark: false,
     bgColor: "bg-gray"
   },
@@ -17,7 +17,7 @@ const laravelServices = [
     title: "Laravel Maintenance & Support",
     category: "Support",
     description: "Ensure the continuous performance and security of your Laravel projects with our comprehensive maintenance and update services.",
-    link: "/services/laravel-maintenance",
+    link: "/services",
     isDark: false,
     bgColor: "bg-green"
   },
@@ -26,7 +26,7 @@ const laravelServices = [
     title: "Laravel API Development & Integration",
     category: "Integration",
     description: "Develop scalable and secure RESTful and GraphQL APIs with Laravel to connect your applications and integrate with third-party services.",
-    link: "/services/api-development",
+    link: "/services",
     isDark: true,
     bgColor: "bg-dark"
   },
@@ -35,16 +35,16 @@ const laravelServices = [
     title: "Laravel Consulting & Strategy",
     category: "Strategy",
     description: "Get expert technical guidance, strategic planning, and best practices for your Laravel development projects from our experienced consultants.",
-    link: "/services/laravel-consulting",
+    link: "/services",
     isDark: true,
-    bgColor: "bg-green"
+    bgColor: "bg-gray"
   },
   {
     id: 5,
     title: "Laravel Database Optimization",
     category: "Performance",
     description: "Improve the speed and efficiency of your Laravel applications with our database optimization and scaling techniques.",
-    link: "/services/database-optimization",
+    link: "/services",
     isDark: true,
     bgColor: "bg-dark"
   },
@@ -53,13 +53,13 @@ const laravelServices = [
     title: "Laravel Version Upgrades",
     category: "Upgrades",
     description: "Seamlessly upgrade your Laravel applications to the latest versions to benefit from new features, security updates, and performance improvements.",
-    link: "/services/laravel-upgrades",
+    link: "/services",
     isDark: true,
     bgColor: "bg-green"
   }
 ];
 
-const sectionDescription = "We are a specialized Laravel development agency offering comprehensive services and technical expertise to help businesses build, maintain, and scale robust web applications.";
+const sectionDescription = "As a Laravel development agency we offer unrestricted and bespoke development for websites and applications.";
 ---
 
 <Section id="services" aria-label="Our Laravel Development Services">
@@ -70,6 +70,12 @@ const sectionDescription = "We are a specialized Laravel development agency offe
     />
     
     <div class="grid gap-8 md:grid-cols-2">
+      <p>
+        Laravel's exceptional scalability, flexibility, and robust functionality position at the top when it comes developing complex MVP platforms. 
+Our process begins with a short call where we will discuss your business requirements. From there, we recomend you to chose any of our plans that is most suitable to to bring these requirements to life.
+
+We strategically leverage Laravel’s seamless integrations—such as Stripe for payments, Algolia for advanced search capabilities, and automated deployment tools—to ensure that your Laravel-based web applications and platforms are not only performant from day one but also built to scale alongside your growing business.
+      </p>
       {laravelServices.map((service) => {
         const textClass = service.isDark ? "text-gray" : "";
         
