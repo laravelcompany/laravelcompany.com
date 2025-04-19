@@ -19,7 +19,7 @@ const softwareCollection = defineCollection({
     title: z.string(),
     summary: z.string(),
     image: z.string(),
-
+  
   }),
 });
 export const collections = {

@@ -20,8 +20,8 @@ export const GET: APIRoute = async ({ url }): Promise<Response> => {
     );
   }
 
-  const allBlogArticles: CollectionEntry<'blog'>[] = await getCollection(
-    'blog'
+  const allBlogArticles: CollectionEntry<'software'>[] = await getCollection(
+    'software'
   );
 
   // Filter articles based on query
