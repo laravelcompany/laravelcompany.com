@@ -1,8 +1,8 @@
 {
   "title": "Laravel Agency",
-  "description": "Positivus is a simple and minimalistic blog theme for Ghost. It is designed to be a perfect starting point for your blog project.",
+  "description": "Experts in Laravel, we design, build and maintain bespoke, human-centric products and applications that scale and perform for your business as it grows, whatever your requirements.",
   "image": {
-    "src": "https://github.com/manulthanura/Positivus/raw/main/public/cover.png",
+    "src": "https://i.imgur.com/xD1xl8M.png",
     "alt": "Laravel agency"
   }
 }
