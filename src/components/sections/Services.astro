@@ -1,113 +1,143 @@
----import SectionTitle from "../ui/SectionTitle.astro";
+---
+import SectionTitle from "../ui/SectionTitle.astro";
 import Card from "../ui/Card.astro";
 import Section from "./Section.astro";
 
 const laravelServices = [
   {
     id: 1,
-    title: "Laravel Application Development",
-    category: "Development",
-    description: "Build high-quality, custom web applications tailored to your business needs using the robust Laravel PHP framework.",
-    link: "/services",
-    isDark: false,
-    bgColor: "bg-gray"
+    title: "Laravel Software",
+    category: "Software",
+    description:"Discover our Multi-tenant Laravel SaaS Starter Kit that comes with all features required to run a modern SaaS. Payments, Beautiful Checkout and more",
+    link: "/software",
+    isDark: true,
+    bgColor: "bg-green", /** pink **/
   },
   {
     id: 2,
-    title: "Laravel Maintenance & Support",
+    title: "Laravel Support",
     category: "Support",
-    description: "Ensure the continuous performance and security of your Laravel projects with our comprehensive maintenance and update services.",
-    link: "/services",
-    isDark: false,
-    bgColor: "bg-green"
+    description:"Are you no longer receiving security updates! Need help upgrading your app? Try contact our team if you need more than just support.",
+    link: "/contact",
+    isDark: true,
+    bgColor: "bg-dark",
   },
   {
     id: 3,
-    title: "Laravel API Development & Integration",
+    title: "Laravel APIs",
     category: "Integration",
-    description: "Develop scalable and secure RESTful and GraphQL APIs with Laravel to connect your applications and integrate with third-party services.",
-    link: "/services",
-    isDark: true,
-    bgColor: "bg-dark"
+    description:"Are you stuck and you need help integrating to different APIs? We have a team of experts that can help you integrate the API/automation beeing hardware if need it.",
+    link: "/contact",
+    isDark: false,
+    bgColor: "bg-gray",
   },
   {
     id: 4,
-    title: "Laravel Consulting & Strategy",
+    title: "Laravel Consulting",
     category: "Strategy",
-    description: "Get expert technical guidance, strategic planning, and best practices for your Laravel development projects from our experienced consultants.",
-    link: "/services",
-    isDark: true,
-    bgColor: "bg-gray"
+    description:
+      "Get expert technical guidance, strategic planning, and best practices for your Laravel development projects from our experienced consultants.",
+    link: "/contact",
+    isDark: false,
+    bgColor: "bg-gray",
   },
   {
     id: 5,
-    title: "Laravel Database Optimization",
+    title: "Laravel Optimization",
     category: "Performance",
-    description: "Improve the speed and efficiency of your Laravel applications with our database optimization and scaling techniques.",
-    link: "/services",
+    description:
+      "Improve the speed and efficiency of your Laravel applications with our database optimization and scaling techniques.",
+    link: "/contact",
     isDark: true,
-    bgColor: "bg-dark"
+    bgColor: "bg-dark",
   },
   {
     id: 6,
-    title: "Laravel Version Upgrades",
+    title: "Laravel Upgrades",
     category: "Upgrades",
-    description: "Seamlessly upgrade your Laravel applications to the latest versions to benefit from new features, security updates, and performance improvements.",
-    link: "/services",
-    isDark: true,
-    bgColor: "bg-green"
-  }
+    description:
+      "Seamlessly upgrade your Laravel applications to the latest versions to benefit from new features, security updates, and performance improvements.",
+    link: "/contact",
+    isDark: false,
+    bgColor: "bg-green",
+  },
+  {
+    id: 4,
+    title: "Laravel Consulting",
+    category: "Strategy",
+    description:
+      "Get expert technical guidance, strategic planning, and best practices for your Laravel development projects from our experienced consultants.",
+    link: "/contact",
+    isDark: false,
+    bgColor: "bg-gray",
+  },
 ];
 
-const sectionDescription = "As a Laravel development agency we offer unrestricted and bespoke development for websites and applications.";
+const sectionDescription =
+  "As a Laravel only software development agency we offer unrestricted and bespoke development for websites and applications.";
 ---
 
 <Section id="services" aria-label="Our Laravel Development Services">
   <div class="mt-24 mb-10">
-    <SectionTitle 
-      sectionTitle="Our Laravel Services" 
-      description={sectionDescription} 
+    <SectionTitle
+      sectionTitle="Our Laravel Services"
+      description={sectionDescription}
     />
-    
+
     <div class="grid gap-8 md:grid-cols-2">
       <p>
-        Laravel's exceptional scalability, flexibility, and robust functionality position at the top when it comes developing complex MVP platforms. 
-Our process begins with a short call where we will discuss your business requirements. From there, we recomend you to chose any of our plans that is most suitable to to bring these requirements to life.
-
-We strategically leverage Laravel’s seamless integrations—such as Stripe for payments, Algolia for advanced search capabilities, and automated deployment tools—to ensure that your Laravel-based web applications and platforms are not only performant from day one but also built to scale alongside your growing business.
+        Already have a website or application that you need to build? We have a
+        wide range of <b>Laravel services</b> for scalable, secure, and maintainable
+        PHP applications. We provide already build robust systems using clean architecture,
+        SOLID principles, and seamless frontend-backend integration so you don't
+        have to anymore.
       </p>
-      {laravelServices.map((service) => {
-        const textClass = service.isDark ? "text-gray" : "";
-        
-        return (
-          <Card isUnderline={true}>
-            <a 
-              href={service.link} 
-              class={`block h-full p-6 sm:p-10 rounded-3xl ${service.bgColor} ${textClass} hover:opacity-95 transition-opacity`}
-            >
-              <div 
-                class="grid h-full md:grid-cols-2 gap-4"
-                itemscope 
-                itemtype="http://schema.org/Service"
+      {
+        laravelServices.map((service) => {
+          const textClass = service.isDark ? "text-white" : "";
+
+          return (
+            <Card isUnderline={true}>
+              <a
+                href={service.link}
+                class={`block h-full p-6 sm:p-10 rounded-3xl ${service.bgColor} ${textClass} hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out`}
               >
-                <h3 
-                  id={`service-${service.id}`}
-                  class="text-xl font-bold"
-                  itemprop="name"
+                <div
+                  class="grid h-full gap-6 md:grid-cols-[1fr_auto]"
+                  itemscope
+                  itemtype="http://schema.org/Service"
                 >
-                  {service.title}
-                </h3>
-                
-                <div class="flex items-end">
-                  <p itemprop="description">{service.description}</p>
+                  <div class="flex flex-col justify-between">
+                    <h2
+                      title={`${service.title} agency`}
+                      id={`service-${service.id}`}
+                      class="text-2xl font-semibold tracking-tight leading-snug mb-2"
+                      itemprop="name"
+                    >
+                      {service.title}
+                    </h2>
+
+                    <p
+                      class="text-base text-muted-foreground leading-relaxed"
+                      itemprop="description"
+                    >
+                      {service.description}
+                    </p>
+                  </div>
+
+                  <div class="flex items-end justify-end">
+                    <span class="inline-block px-4 py-1 text-sm font-medium bg-white/20 rounded-full backdrop-blur-md">
+                      {service.category}
+                    </span>
+                  </div>
+
+                  <meta itemprop="serviceType" content={service.category} />
                 </div>
-                
-                <meta itemprop="serviceType" content={service.category} />
-              </div>
-            </a>
-          </Card>
-        );
-      })}
+              </a>
+            </Card>
+          );
+        })
+      }
     </div>
   </div>
 </Section>

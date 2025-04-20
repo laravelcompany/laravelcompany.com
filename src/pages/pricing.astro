@@ -6,62 +6,68 @@ const priceData = [
   {
     title: "Starter",
     slug: "starter",
-    description: "Ideal for startups and individuals requiring essential software development services like small content changes, small updates.",
-    price: 29,
-    pricingUnit: "per month",
+    description: "Perfect for solo founders or small teams who need quick fixes, content changes, or maintenance with predictable costs.",
+    price: 250,
+    pricingUnit: "per 10 hours",
     details: {
-      developers: "1 Developer",
-      support: "10 hours",
-      updates: "1 project"
+      developers: "1 Junior Developer",
+      support: "10 hours/month",
+      updates: "1 active project"
     },
-    features: ["Essential feature set", "Basic integrations", "Email support"],
+    features: [
+      "Bug fixes & small updates",
+      "Basic integrations",
+      "Email support",
+      
+    ],
     callToAction: "Get Started",
     link: "/contact",
-    recommendedFor: "Startups, small projects",
+    recommendedFor: "Startups, MVPs, maintenance",
     isPopular: false,
   },
   {
     title: "Growth",
     slug: "growth",
-    description: "This package addresses the most common growth challenges of businesses. It provides a robust feature set, standard integrations, and priority email support.",
-    price: 49,
-    pricingUnit: "per month",
+    description: "For growing teams who need more consistent engineering support with better response times and proactive help.",
+    price: 1500,
+    pricingUnit: "per 50 hours",
     details: {
-      developers: "1 Developer",
-      support: "50 hours",
-      updates: "2 projects"
+      developers: "1 Mid-Level Developer",
+      support: "50 hours/month",
+      updates: "Up to 2 active projects"
     },
     features: [
-      "Robust feature set",
+      "Scalable backend and frontend dev",
       "Standard integrations",
       "Priority email support",
-      "Team collaboration tools",
+      "Daily progress check-ins",
     ],
     callToAction: "Get Started",
     link: "/contact",
-    recommendedFor: "SMEs, growing teams",
+    recommendedFor: "SMEs, scale-ups",
     isPopular: true,
   },
   {
-    title: "Premium",
-    slug: "premium",
-    description: "Tailored for enterprises requiring advanced features, faster delivery, and dedicated account management with a Lead Developer.",
-    price: 79,
-    pricingUnit: "per month",
+    title: "Unlimited",
+    slug: "unlimited",
+    description: "For teams needing a high-velocity development partner. Unlimited hours, dedicated lead developer, and full-stack support.",
+    price: 4500,
+    pricingUnit: "flat rate/month",
     details: {
-      developers: "1 Developer",
-      support: "100 hours",
-      updates: "3 projects"
+      developers: "1 Senior Developer (Full-time)",
+      support: "Unlimited hours",
+      updates: "Unlimited projects"
     },
     features: [
-      "Comprehensive feature set",
-      "Advanced integrations",
-      "Dedicated support & account management",
-      "Faster delivery timelines",
+      "Full-stack architecture & dev",
+      "Advanced features & integrations",
+      "Dedicated Slack channel",
+      "Daily planning & reporting",
+      "Ongoing optimisation & consulting",
     ],
-    callToAction: "Contact Us",
+    callToAction: "Book Consultation",
     link: "/contact",
-    recommendedFor: "Large organizations, high-demand projects",
+    recommendedFor: "Established businesses, agencies",
     isPopular: false,
   },
 ];
@@ -153,45 +159,44 @@ const currencySymbol = "£";
         ))}
       </div>
     </section>
-       <!-- Additional Sections -->
-       <div class="mt-16">
-        <h2 class="text-2xl font-bold text-center text-[#031D40] mb-6">
-          Why Choose Us?
-        </h2>
-        <p class="text-center text-gray-600 max-w-screen-md mx-auto">
-          Our Laravel development services are trusted by businesses of all sizes. We combine cutting-edge technology, industry expertise, and unparalleled customer support to deliver solutions that drive growth and innovation.
-        </p>
+     <!-- Additional Sections -->
+<div class="mt-20 px-4 sm:px-6 lg:px-8">
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-[#031D40] mb-4">
+    Why Choose Us?
+  </h2>
+  <p class="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
+    Trusted by startups, SMEs and enterprise clients. We blend modern Laravel practices with real-world experience and rock-solid support to deliver impactful results.
+  </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-          <div class="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-            <svg class="w-8 h-8 text-primary-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <h3 class="text-lg font-semibold text-[#031D40]">Expertise</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Years of experience in Laravel development ensure your project is in capable hands.
-            </p>
-          </div>
-          <div class="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-            <svg class="w-8 h-8 text-primary-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
-            <h3 class="text-lg font-semibold text-[#031D40]">Scalability</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Build solutions that grow with your business, from startups to enterprises.
-            </p>
-          </div>
-          <div class="flex flex-col items-center text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-            <svg class="w-8 h-8 text-primary-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <h3 class="text-lg font-semibold text-[#031D40]">Support</h3>
-            <p class="text-gray-600 dark:text-gray-300">
-              Dedicated support teams available to assist you every step of the way.
-            </p>
-          </div>
-        </div>
-      </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <!-- Expertise -->
+    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md transition hover:shadow-xl">
+      <i class="fas fa-code text-3xl text-[#007BFF] mb-4"></i>
+      <h3 class="text-lg font-semibold text-[#031D40] mb-2">Expertise</h3>
+      <p class="text-gray-600 dark:text-gray-300">
+        Over a decade of Laravel development ensures your project is built with rock-solid architecture and performance.
+      </p>
+    </div>
+
+    <!-- Scalability -->
+    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md transition hover:shadow-xl">
+      <i class="fas fa-layer-group text-3xl text-[#28A745] mb-4"></i>
+      <h3 class="text-lg font-semibold text-[#031D40] mb-2">Scalability</h3>
+      <p class="text-gray-600 dark:text-gray-300">
+        We craft systems that scale gracefully from MVPs to enterprise platforms with multi-tenancy and modular design.
+      </p>
+    </div>
+
+    <!-- Support -->
+    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md transition hover:shadow-xl">
+      <i class="fas fa-headset text-3xl text-[#FFC107] mb-4"></i>
+      <h3 class="text-lg font-semibold text-[#031D40] mb-2">Support</h3>
+      <p class="text-gray-600 dark:text-gray-300">
+        We're with you at every step. Expect fast response times, clear communication, and long-term partnerships.
+      </p>
+    </div>
+  </div>
+</div>
 
       <!-- Testimonials -->
       <div class="mt-16">
