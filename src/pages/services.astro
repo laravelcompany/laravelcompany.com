@@ -1,454 +1,405 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Sponsors from "../components/sections/Sponsors.astro";
+/**
+ *   'Miscellaneous',
+  'Project Management Tools',
+  'Help and Support Tools',
+  'Shopping Carts',
+  'Social Networking',
+  'Images and Media',
+  'Forms',
+  'Loaders and Uploaders',
+  'Calendars',
+  'Database Abstractions',
+  'Search',
+  'Ratings and Charts',
+  'Navigation',
+  'Countdowns',
+  'News Tickers',
+  'Polls',
+ */
 ---
 
-<MainLayout title="Laravel Software Development Services Agency | Laravel Agency | Software Development ">
+<MainLayout
+  title="Laravel Software Development Services Agency | Laravel Agency | Software Development "
+>
   <main class="space-y-28">
-          
     <!-- Hero Section -->
-    <section class="relative  from-blue-50 to-white">
-        <div class="container mx-auto px-4 py-20 md:py-28">
-          <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2 text-center md:text-left space-y-8">
-              <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900" title="Laravel Agency">
-                <span class="text-red-600">Laravel</span>  software agency 
-              </h1>
-              <p class="text-2xl text-gray-600 leading-relaxed">
-                As a <b>laravel only</b> <a href="https://laravelcompany.com">software development agency</a> we offer <b>software development services</b>, laravel support and laravel consulting.
-              </p>
-              <p>
-                We can help your A.I transformation with our custom software built solutions.
-              </p>
-              <p>
-                Laravel is widely considered one of the most intelligent, safe and robust PHP frameworks, giving each website, application and software it powers strong foundations.
-As Laravel specialists, we’re speaking our native language, so nothing gets lost in translation. Using skill, experience and client input we create powerful, valuable solutions that stand the test of time. Our Laravel development services combine these foundations with technical prowess, flawless design and an integrated approach.
-              </p>
-              <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <a
-                  href="contact"
-                  class="px-8 py-4 bg-blue-600 hover:bg-red-700 text-white rounded-xl transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl"
-                >
-                  Schedule Free Consultation
-                </a>
-                <a
-                  href="https://laravelcompany.com/services"
-                  class="px-8 py-4 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-300 text-lg font-semibold"
-                >
-                  Explore Services
-                </a>
-              </div>
-            </div>
-            <div class="md:w-1/2 mt-12 md:mt-0">
-              <img
-                src="logo.png"
-                alt="Laravel software development agency"
-                class="w-full h-auto animate-float"
-              />
-            </div>
+    <section class="relative from-blue-50 to-white">
+      <div class="container mx-auto px-4 py-20 md:py-28">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2 text-center md:text-left space-y-8">
+            <h1
+              class="text-5xl md:text-6xl font-bold leading-tight text-gray-900"
+              title="Laravel Agency"
+            >
+              <span class="text-red-600">Laravel</span> software agency
+            </h1>
+            <p class="text-2xl text-gray-600 leading-relaxed">
+              As a <b>laravel only</b>
+              <a href="https://laravelcompany.com" class="text-underline"
+                >software development agency</a
+              > we offer <b>software development services</b>, laravel support
+              and laravel consulting.
+            </p>
+            <p>
+              We can help your A.I transformation with our custom software built
+              solutions.
+            </p>
+            <p>
+              Laravel is widely considered one of the most intelligent, safe and
+              robust PHP frameworks, giving each website, application and
+              software it powers strong foundations. As Laravel specialists,
+              we’re speaking your native language, so nothing gets lost in
+              translation.
+            </p>
+            <p>
+              Using skill, experience and client input we create powerful,
+              valuable solutions that stand the test of time. Our Laravel
+              development services combine these foundations with technical
+              prowess, flawless design and an integrated approach.
+            </p>
+          </div>
+          <div class="md:w-1/2 mt-12 md:mt-0">
+            <img
+              src="logo.png"
+              alt="Laravel software development agency"
+              class="w-full h-auto animate-float"
+            />
           </div>
         </div>
-      </section>
-  
-        <!-- Services Section -->
-        <section id="services" class="container mx-auto px-4 py-20">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-              <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Our Software Development Services
-              </h2>
-              <p class="text-xl text-gray-600">
-                Software development services that we can help your business with.
-              </p>
-            </div>
-      
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <!-- Custom Application Development -->
-              <div
-                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div
-                  class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6"
-                >
-                  <svg
-                    class="w-8 h-8 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                  Laravel Migrations
-                </h3>
-                <p class="text-gray-600 mb-4">
-                  Migrate old legacy applications to Laravel Framework.
-                  We have our own Laravel Migration tool called Laravel Arhitect.
-                  This tool can be used to migrate old application to Laravel framework.
-                </p>
-                <ul class="list-disc list-inside text-gray-600 space-y-2">
-                  <li>
-                    Out of the Laravel SASS solution Laravel Arhitect.
-                  </li>
-                  <li>
-                    Laravel latest version
-                  </li>
-                  <li>
-                    Out of the box rest api.
-                  </li>
-                  <li>
-                    Drag and drop website builder tool.
-                  </li>
-                </ul>
-              </div>
-      
-              <!-- eCommerce Solutions -->
-              <div
-                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div
-                  class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6"
-                >
-                  <svg
-                    class="w-8 h-8 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4" title="laravel ecommerce package">
-                  Laravel ecommerce
-                </h3>
-                <p class="text-gray-600 mb-4">
-                  Migrate your ecommerce website to Laravel.
-                  With our inhouse ecommerce platform you can easily migrate your ecommerce website from any cms or framework to Laravel.
-                </p>
-                <ul class="list-disc list-inside text-gray-600 space-y-2">
-                  <li>Shopify/Magento migration</li>
-                  <li>Payment gateway migration</li>
-                  <li>Inventory management migration</li>
-                </ul>
-              </div>
-      
-              <!-- CRM Development -->
-              <div
-                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div
-                  class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6"
-                >
-                  <svg
-                    class="w-8 h-8 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 005.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                  Laravel CRM
-                </h3>
-                <p class="text-gray-600 mb-4">
-                  Discover our variate CRM solutions.
-                </p>
-                <ul class="list-disc list-inside text-gray-600 space-y-2">
-                  <li>
-                    Education
-                  </li>
-                  <li>
-                    Health
-                  </li>
-                  <li>Automated workflows</li>
-                </ul>
-              </div>
-      
-              <!-- CMS Development -->
-              <div
-                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div
-                  class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6"
-                >
-                  <svg
-                    class="w-8 h-8 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 17V7m0 10h6m-6 0H3m12 0h6M5 7h14m-7 4v6"
-                    />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">CMS Development</h3>
-                <p class="text-gray-600 mb-4">
-                  User-friendly content management systems for seamless website management.
-                </p>
-                <ul class="list-disc list-inside text-gray-600 space-y-2">
-                  <li>Custom content types</li>
-                  <li>Role-based access</li>
-                  <li>SEO optimization</li>
-                </ul>
-              </div>
-      
-              <!-- API Development -->
-              <div
-                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div
-                  class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6"
-                >
-                  <svg
-                    class="w-8 h-8 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">API Development</h3>
-                <p class="text-gray-600 mb-4">
-                  Robust APIs for seamless data exchange and third-party integrations.
-                </p>
-                <ul class="list-disc list-inside text-gray-600 space-y-2">
-                  <li>RESTful APIs</li>
-                  <li>Secure authentication</li>
-                  <li>Scalable endpoints</li>
-                </ul>
-              </div>
-      
-              <!-- Performance Optimization -->
-              <div
-                class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div
-                  class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6"
-                >
-                  <svg
-                    class="w-8 h-8 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                  Performance Optimization
-                </h3>
-                <p class="text-gray-600 mb-4">
-                  Enhancing the speed and efficiency of Laravel applications.
-                </p>
-                <ul class="list-disc list-inside text-gray-600 space-y-2">
-                  <li>Caching strategies</li>
-                  <li>Database optimization</li>
-                  <li>Load balancing</li>
-                </ul>
-              </div>
-            </div>
-      
-            <!-- Services Table -->
-            <div class="mt-16 overflow-x-auto">
-              <table class="w-full text-left border-collapse">
-                <thead>
-                  <tr class="bg-gray-100">
-                    <th class="px-6 py-4 text-lg font-semibold text-gray-900">
-                      Service Category
-                    </th>
-                    <th class="px-6 py-4 text-lg font-semibold text-gray-900">
-                      Description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Custom Web Application Development
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Tailored web solutions using Laravel and other frameworks.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Laravel eCommerce Development
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Building eCommerce platforms with Laravel, often integrated with Shopify, Magento, etc.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Laravel CRM Development
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Developing customer relationship management systems using Laravel.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Laravel CMS Development
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Creating content management systems for easy website management.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Laravel API Development and Integration
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Creating and integrating APIs for seamless data exchange.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Full-stack Development with Laravel
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Combining frontend and backend development, leveraging Laravel for backend.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Laravel Migration and Upgrade
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Migrating existing applications to Laravel or upgrading Laravel versions.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Laravel Consulting and Strategy
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Providing expert advice on Laravel implementation and strategy.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      UI/UX Design for Laravel Applications
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Designing user-friendly and visually appealing interfaces for Laravel apps.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Performance Optimization
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Enhancing the speed and efficiency of Laravel applications.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Security Audits and Enhancements
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Ensuring Laravel applications are secure against common vulnerabilities.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Maintenance and Support
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Ongoing support, updates, and maintenance for Laravel applications.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Laravel Plugin and Extension Development
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Building customized plugins and extensions using Laravel tools like Composer.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Integration with Third-party Services
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Integrating Laravel applications with external services like payment gateways.
-                    </td>
-                  </tr>
-                  <tr class="border-b">
-                    <td
-                      class="px-6 py-4 text-base font-medium text-gray-900"
-                    >
-                      Mobile App Development
-                    </td>
-                    <td class="px-6 py-4 text-base text-gray-600">
-                      Building iOS, Android, and hybrid mobile applications, sometimes using Laravel for backend.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-      
+      </div>
+    </section>
 
+    <!-- Starter Kits Section -->
+    <section id="starter-kits" class="container mx-auto px-4 py-20">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Pre-Built Laravel Solutions for Rapid Development
+        </h2>
+        <p class="text-xl text-gray-600">
+          Accelerate your time-to-market with our battle-tested Laravel starter
+          kits:
+        </p>
+      </div>
 
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h3 class="text-2xl font-bold mb-4">eCommerce Solutions</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>✅ Shopify/Magento migration kits</li>
+            <li>✅ PCI-compliant checkout systems</li>
+            <li>✅ Inventory management modules</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h3 class="text-2xl font-bold mb-4">Business Automation</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>✅ CRM/ERP integration packages</li>
+            <li>✅ Workflow automation engines</li>
+            <li>✅ API gateway configurations</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <h3 class="text-2xl font-bold mb-4">Enterprise Features</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>✅ SSO authentication systems</li>
+            <li>✅ Audit logging frameworks</li>
+            <li>✅ Role-based access controls</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white text-center">
+      <div class="container mx-auto px-4">
+        <h1
+          class="text-5xl md:text-6xl font-bold leading-tight text-gray-900"
+          title="Laravel Software Development Agency"
+        >
+          <span class="text-red-600">Laravel</span> Software Development Agency
+        </h1>
+        <p class="text-2xl text-gray-600 leading-relaxed mt-6">
+          We are a <strong>Laravel-exclusive software agency</strong> offering <strong
+            >custom Laravel development services</strong
+          >, ongoing Laravel support, and expert Laravel consulting.
+        </p>
+        <p class="mt-4 text-xl text-gray-600">
+          We’ve built <strong>ready-to-use Laravel starter kits</strong> for 15+
+          software categories — including eCommerce, CRM, CMS, Project Management,
+          and more.
+        </p>
+        <p class="mt-2 text-lg text-gray-600">
+          Whether you're starting from scratch or modernising legacy software,
+          our Laravel starter kits and tools help you launch faster and scale
+          smarter.
+        </p>
+      </div>
+    </section>
+
+    <section id="starter-kits" class="container mx-auto px-4 py-20">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Laravel Starter Kits for Every Software Category
+        </h2>
+        <p class="text-xl text-gray-600">
+          We’ve developed production-ready starter kits for every type of
+          Laravel app:
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-700"
+      >
+
+          <ul class="space-y-4">
+            <li>
+              ✅ <strong>Project Management Tools</strong><br />
+              Designed for construction, tech, and agency teams — track tasks, milestones,
+              and budgets in real-time with customisable Kanban boards and reporting.
+            </li>
+            <li>
+              ✅ <strong>Help and Support Tools</strong><br />
+              Ideal for SaaS and eCommerce platforms — includes ticketing systems,
+              live chat, and knowledge bases to streamline customer support.
+            </li>
+            <li>
+              ✅ <strong>Shopping Carts</strong><br />
+              Built for retail, fashion, electronics, and marketplaces — supports
+              variations, coupons, taxes, multi-language, and payment gateways.
+            </li>
+            <li>
+              ✅ <strong>Social Networking</strong><br />
+              Great for community platforms, alumni portals, or interest-based groups
+              — includes messaging, profiles, followers, and activity feeds.
+            </li>
+            <li>
+              ✅ <strong>Images and Media</strong><br />
+              Perfect for photographers, media agencies, and eLearning platforms
+              — manage galleries, uploads, watermarks, and responsive previews.
+            </li>
+          </ul>
+
+          <ul class="space-y-4">
+            <li>
+              ✅ <strong>Forms and Form Builders</strong><br />
+              Widely used in government, finance, and education — build dynamic forms
+              with validation, branching logic, and exportable submissions.
+            </li>
+            <li>
+              ✅ <strong>Loaders and Uploaders</strong><br />
+              Core for SaaS dashboards, CMS platforms, and media apps — includes
+              drag-and-drop uploaders, progress bars, and queue workers.
+            </li>
+            <li>
+              ✅ <strong>Calendars and Schedulers</strong><br />
+              Useful in healthcare, logistics, and coaching — full-featured event
+              scheduling with reminders, time zones, and recurring rules.
+            </li>
+            <li>
+              ✅ <strong>Database Abstractions</strong><br />
+              Designed for enterprise systems and CRMs — powerful DTO and repository
+              patterns to handle complex relational data with ease.
+            </li>
+            <li>
+              ✅ <strong>Search and Filter Tools</strong><br />
+              Crucial for eCommerce, real estate, and directory apps — includes advanced
+              filters, full-text search, and facet support.
+            </li>
+          </ul>
+
+          <ul class="space-y-4">
+            <li>
+              ✅ <strong>Ratings and Charting</strong><br />
+              Common in SaaS analytics, review platforms, and EdTech — supports star
+              ratings, bar/pie/line charts, and live dashboards.
+            </li>
+            <li>
+              ✅ <strong>Navigation and Menus</strong><br />
+              Used across all app types — dynamic sidebars, multi-level nav, breadcrumbs,
+              and mobile-friendly menus.
+            </li>
+            <li>
+              ✅ <strong>Countdown Timers</strong><br />
+              Ideal for event management, sales, webinars, and auctions — supports
+              real-time updates and expiration triggers.
+            </li>
+            <li>
+              ✅ <strong>News Tickers</strong><br />
+              Best for finance apps, news outlets, and public agencies — real-time
+              scrollable headlines, feeds, and announcement banners.
+            </li>
+            <li>
+              ✅ <strong>Polling Systems</strong><br />
+              Engages users in communities, education, and media — supports anonymous
+              votes, result breakdowns, and visual analytics.
+            </li>
+          </ul>
+
+      </div>
+
+      <div class="text-center mt-12">
+        <a
+          href="/software"
+          class="px-8 py-4 bg-blue-600 hover:bg-red-700 text-white rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition duration-300"
+        >
+          View our Laravel Starter Kits
+        </a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container mx-auto px-4 py-20">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Our Software Development Services
+        </h2>
+        <p class="text-xl text-gray-600">
+          Software development services that we can help your business with.
+        </p>
+      </div>
+
+      <div class="mt-16 overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="px-6 py-4 text-lg font-semibold text-gray-900">
+                Service Category
+              </th>
+              <th class="px-6 py-4 text-lg font-semibold text-gray-900">
+                Description
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Custom Web Application Development
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Specific task only Laravel.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Laravel eCommerce Development
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Integrate eCommerce platforms with Laravel, often integrated
+                with Shopify, Magento, etc.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Laravel CRM Development
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Developing customer relationship management systems using
+                Laravel.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Laravel CMS Development
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Creating content management systems for easy website management.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Laravel API Development and Integration
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Creating and integrating APIs for seamless data exchange.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Full-stack Development with Laravel
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Combining frontend and backend development, leveraging Laravel
+                for backend.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Laravel Migration and Upgrade
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Migrating existing applications to Laravel or upgrading Laravel
+                versions.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Laravel Consulting and Strategy
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Providing expert advice on Laravel implementation and strategy.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                UI/UX Design for Laravel Applications
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Designing user-friendly and visually appealing interfaces for
+                Laravel apps.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Performance Optimization
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Enhancing the speed and efficiency of Laravel applications.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Security Audits and Enhancements
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Ensuring Laravel applications are secure against common
+                vulnerabilities.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Maintenance and Support
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Ongoing support, updates, and maintenance for Laravel
+                applications.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Laravel Plugin and Extension Development
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Building customized plugins and extensions using Laravel tools
+                like Composer.
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-6 py-4 text-base font-medium text-gray-900">
+                Integration with Third-party Services
+              </td>
+              <td class="px-6 py-4 text-base text-gray-600">
+                Integrating Laravel applications with external services like
+                payment gateways.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Services Table -->
+    </section>
   </main>
 </MainLayout>
