@@ -1,10 +1,9 @@
 ---
 title: "Laravel Architect CMS"
-image: 'image4.png'
-tags: ['photography', 'canon', 'tech']
+image: '/image4.png'
 slug: laravel-architect
 summary: "As a fresh rewrite from the original Laravel Architect source code, this solution offers businesses a refined, actively maintained website development tool that balances sophistication with ease of use"
-type: "Backend"
+type: "Project Management Tools"
 ---
 
 
