@@ -22,7 +22,6 @@ const {
   url = Astro.url,
   image,
   frontmatter,
-  robots,
 } = Astro.props;
 
 // Again, frontmatter triggers CMS post type
@@ -37,7 +36,7 @@ const jsonLD = jsonLDGenerator({
 <link rel="canonical" href={url} />
 
 <!-- Open Graph -->
-<meta property="og:site_name" content="Site Name" />
+<meta property="og:site_name" content="Laravel Agency" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={url} />
@@ -62,7 +61,6 @@ const jsonLD = jsonLDGenerator({
 <!-- Using environment domain -->
 <meta name="twitter:domain" content={import.meta.env.SITE} />
 
-{robots && <meta name="robots" content="noindex, nofollow" />}
 
 <!-- JSON LD -->
 <Fragment set:html={jsonLD} />

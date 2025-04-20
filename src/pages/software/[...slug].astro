@@ -31,12 +31,14 @@ const { Content } = await entry.render();
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18">
                         </path>
                     </svg>
-                    <span class="ml-1 font-bold text-lg">All Articles</span>
+                    <span class="ml-1 font-bold text-lg">
+                      Laravel Starter Kits.
+                    </span>
                   </a>
                   <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">{entry.data.title}</h2>
           
                   <Tags tags={entry.data.tags} />
-                  <img src={'/blog/' + entry.data.image} alt="Article Image" class="w-full h-auto rounded-xl my-6" />
+                  <img src={'/software/' + entry.data.image} alt="Software starter kit" class="w-full h-auto rounded-xl my-6" />
                   <div class="content">
                     <Content/>
                   </div>
