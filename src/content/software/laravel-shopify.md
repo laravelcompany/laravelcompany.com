@@ -1,6 +1,6 @@
 ---
-title: "Laravel Shopify Starter Kit"
-image: "/assets/blog/laravel-shopify.png"
+title: "Laravel Shopify"
+image: "/laravel-shopify.png"
 slug: laravel-shopify-starter
 summary: "Inspired by Laravel Boilerplate, Wave, and Shopr – now rebuilt with modern tools and Shopify-like architecture"
 type: "Shopping Carts"
@@ -22,17 +22,6 @@ With Starter by Laravel Company, developers, startups, freelancers, and SaaS bui
 websites, or launch your next SaaS with ease. Get started now and bring your ideas to life!
 Absolutely mate! Here's a polished draft for your new project—**Laravel Shopify Starter Kit**—keeping the same tone, structure, and inspiration theme. Let’s get it poppin’:
 
----
-
-```yaml
-title: "Laravel Shopify Starter Kit"
-image: "/assets/blog/laravel-shopify.png"
-slug: laravel-shopify-starter
-summary: "Inspired by Laravel Boilerplate, Wave, and Shopr – now rebuilt with modern tools and Shopify-like architecture"
-type: "Shopping Carts"
-```
-
----
 
 As a modern reinvention inspired by **Laravel Boilerplate**, **Wave**, and **Shopr**, the Laravel Shopify Starter Kit delivers a clean, extensible foundation tailored for developers building scalable eCommerce platforms with Laravel.
 
@@ -200,6 +189,3 @@ To develop an all-in-one open-source Laravel eCommerce platform that combines th
 - Blog about open-source eCommerce stacks
 - Invite contributors from the Laravel ecosystem
 
----
-
-Would you like me to mock up a product roadmap next or dig into a technical spec (package structure, events, modules etc)?

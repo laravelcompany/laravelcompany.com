@@ -4,13 +4,15 @@ import SearchForm from "../../components/ui/SearchForm.astro";
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from "astro:content";
 import SoftwareCard from "../../components/ui/SoftwareCard.astro";
-
+import Card from "../../components/ui/Card.astro";
+import Section from "../../components/sections/Section.astro";
 
 const allSoftware: CollectionEntry<'software'>[] = (await getCollection('software'));
 
 ---
 
 <MainLayout title="Best laravel only framework software to download and use today">
+    
 	<main class="space-y-20">
             <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-3">
                 <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
@@ -31,4 +33,146 @@ const allSoftware: CollectionEntry<'software'>[] = (await getCollection('softwar
                 </div>  
             </div>
 	</main>
+    <Section id="laravel-shopify">
+        <Card>
+          <div
+            class="flex flex-col bg-gradient-to-br from-[#031D40] to-[#052f66] rounded-[45px] p-[60px] relative mt-[123px] mb-[163px] overflow-hidden"
+          >
+            <!-- Background pattern -->
+            <div class="absolute inset-0 opacity-5">
+              <div class="absolute top-0 left-0 w-full h-full">
+                <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+                  </pattern>
+                  <rect width="100%" height="100%" fill="url(#grid)" />
+                </svg>
+              </div>
+            </div>
+      
+            <!-- Header with badge -->
+            <div class="flex items-center gap-4 mb-4">
+              <div class="bg-green text-white px-4 py-1 rounded-full text-sm font-medium">NEW</div>
+              <h3 class="text-green font-medium">Laravel eCommerce Solution</h3>
+            </div>
+      
+            <!-- Main title -->
+            <h2 class="text-4xl font-bold text-white mb-6">Laravel Shopify Starter Kit</h2>
+      
+            <!-- Introduction -->
+            <div class="text-white/90 text-lg mb-8 max-w-3xl">
+              <p class="mb-4">
+                As a modern reinvention inspired by <span class="text-green font-medium">Laravel Boilerplate</span>, 
+                <span class="text-green font-medium">Wave</span>, and 
+                <span class="text-green font-medium">Shopr</span>, 
+                the Laravel Shopify Starter Kit delivers a clean, extensible foundation tailored for developers building scalable eCommerce platforms with Laravel.
+              </p>
+              <p>
+                We've taken the best from each – authentication scaffolding from Boilerplate, modular design from Wave, and the Shopify-style product management from Shopr – and merged them into a cohesive, production-ready starter.
+              </p>
+            </div>
+      
+            <!-- Two column layout for features and image -->
+            <div class="flex flex-col md:flex-row gap-12">
+              <div class="w-full md:w-[60%] text-white flex flex-col gap-8">
+                <!-- Feature list -->
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="flex items-start gap-3">
+                    <div class="bg-green rounded-full p-1.5 mt-1 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="text-white/80">
+                      <span class="text-white font-medium block">Multi-product Support</span>
+                      Complete with images, inventory tracking, and variants
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <div class="bg-green rounded-full p-1.5 mt-1 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="text-white/80">
+                      <span class="text-white font-medium block">Full Checkout Flow</span>
+                      Cart, payments, and order management system
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <div class="bg-green rounded-full p-1.5 mt-1 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="text-white/80">
+                      <span class="text-white font-medium block">Stripe Integration</span>
+                      For subscriptions and one-time purchases
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <div class="bg-green rounded-full p-1.5 mt-1 flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <p class="text-white/80">
+                      <span class="text-white font-medium block">Filament Admin</span>
+                      Beautiful dashboard for product management
+                    </p>
+                  </div>
+                </div>
+      
+                <!-- Ideal for section -->
+                <div class="bg-white/10 rounded-2xl p-6">
+                  <h3 class="text-xl font-medium mb-3">Ideal for:</h3>
+                  <div class="flex flex-wrap gap-3">
+                    <span class="bg-white/10 text-white px-3 py-1 rounded-full text-sm">Store Owners</span>
+                    <span class="bg-white/10 text-white px-3 py-1 rounded-full text-sm">Developers</span>
+                    <span class="bg-white/10 text-white px-3 py-1 rounded-full text-sm">Startups</span>
+                    <span class="bg-white/10 text-white px-3 py-1 rounded-full text-sm">Freelancers</span>
+                    <span class="bg-white/10 text-white px-3 py-1 rounded-full text-sm">SaaS Builders</span>
+                  </div>
+                </div>
+      
+                <!-- CTA buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                  <a href="/purchase" class="btn-primary text-center py-3.5 px-8">
+                    Get Started For $39
+                    <span class="text-sm block opacity-90">Personal & Client Projects</span>
+                  </a>
+                  <a href="/purchase-commercial" class="btn-secondary text-center py-3.5 px-8">
+                    $89 Commercial License
+                    <span class="text-sm block opacity-90">SaaS & Multi-vendor Systems</span>
+                  </a>
+                </div>
+              </div>
+      
+              <!-- Product showcase image -->
+              <div class="w-full md:w-[40%] relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#031D40] to-transparent md:hidden z-10"></div>
+                <div class="relative z-0 h-full flex items-center justify-center">
+                  <!-- Dashboard mockup with glow effect -->
+                  <div class="relative">
+                    <div class="absolute -inset-0.5 bg-green/20 rounded-xl blur-lg"></div>
+                    <img 
+                      src="/assets/blog/laravel-shopify.png" 
+                      alt="Laravel Shopify Starter Kit Dashboard" 
+                      class="relative rounded-xl border border-white/20 shadow-xl z-10"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Bottom testimonial/quote -->
+            <div class="mt-12 bg-white/5 p-6 rounded-xl border border-white/10">
+              <blockquote class="text-white/90 italic">
+                "Whether you're launching your own store, building client shops, or creating a multi-vendor SaaS, this kit cuts boilerplate out and gets you building."
+              </blockquote>
+            </div>
+          </div>
+        </Card>
+      </Section>
+      
 </MainLayout>
