@@ -4,7 +4,8 @@
 
 **Laravel Agency** is a sleek, responsive Astro theme built for digital marketing agencies, consultancies, and freelancers offering Laravel development services.
 
-We specialize in delivering high-quality, custom Laravel applications that help businesses grow online. Whether you're a startup or an established company in the UK, our expert Laravel developers provide full-service solutions — from consultancy and UI/UX design to deployment and maintenance — at competitive rates starting from **£25/hour**.
+Discover already built solution that you can use today to start building your project with Laravel.
+Laravel Starter Kits for ecommerce, marketing, and more are available for you to use right away.
 
 ---
 
