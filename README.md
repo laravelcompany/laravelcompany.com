@@ -1,67 +1,50 @@
-# Laravel Agency 
-        
-        
-The #F24B69 value of swatch 1
-The #031D40 value of swatch 2
-The #064072 value of swatch 3
-The #30A8D8 value of swatch 4
-The #F25244 value of swatch 5
+# Laravel Agency 🌐
 
+![Cover](https://raw.githubusercontent.com/laravelcompany/laravelcompany.com/refs/heads/main/public/laravel-company-logo.svg)
 
+**Laravel Agency** is a sleek, responsive Astro theme built for digital marketing agencies, consultancies, and freelancers offering Laravel development services.
 
-Introducing "Laravel Agency" - a stunning and versatile Astro theme designed for digital marketing agencies.
-We specialize in delivering custom Laravel applications that help businesses grow and succeed online. If you are looking for Laravel developers in the UK? Our team of skilled Laravel developers delivers tailored web solutions, from consulting and design to full project management. We specialize in creating robust Laravel applications at affordable rates starting from £25 per hour.
+We specialize in delivering high-quality, custom Laravel applications that help businesses grow online. Whether you're a startup or an established company in the UK, our expert Laravel developers provide full-service solutions — from consultancy and UI/UX design to deployment and maintenance — at competitive rates starting from **£25/hour**.
 
-## Features
-Built with clean, modern aesthetics and leveraging the power of Astro and Tailwind, Laravel Agency empowers you to craft a captivating website that showcases your agency's expertise and fosters trust with potential clients.
+---
 
-[![Static Badge](https://img.shields.io/badge/UI%2FUX-Andrew-blue)](https://laravelcompany.com)
-[![View Demo](https://img.shields.io/badge/Develop-John-red)](https://laravelcompany.com)
-[![Static Badge](https://img.shields.io/badge/View_Demo-green)](https://laravelcompany.com/)
+## 🎨 Brand Swatches
 
-[![Static Badge](https://img.shields.io/badge/Astro-orange)](https://astro.build/)
+| Swatch | Colour       | Hex       |
+|--------|--------------|-----------|
+| 1      | Pink         | `#F24B69` |
+| 2      | Dark Navy    | `#031D40` |
+| 3      | Deep Blue    | `#064072` |
+| 4      | Sky Blue     | `#30A8D8` |
+| 5      | Coral Red    | `#F25244` |
 
-![Cover](https://i.imgur.com/xD1xl8M.png)
+---
 
-## Theme Features
+## ✨ Theme Highlights
 
-Leveraging the power of Astro and Tailwind CSS, Laravel Agency offers:
+Built with Astro.js and Tailwind CSS, **Laravel Agency** offers a modern foundation to present your brand confidently:
 
-- Clean and modern design.
-- SEO-friendly.
-- Multiple Layouts.
-- Seamless Navigation.
-- Pre-built Sections.
-- Customizable Components.
-- Mobile-Responsiveness.
+- ⚡ Clean and minimal design
+- 📱 Mobile-first and responsive
+- 🔍 SEO-optimized structure
+- 📐 Multiple layout options
+- 📦 Pre-built components and sections
+- 🧩 Easily customizable with Tailwind
+- 🌍 Fast loading and production-ready
 
-## 🚀 Project Structure
+---
 
-The project is built using Astro.js and Tailwind CSS. Here's a quick look at the project structure:
+## 📁 Project Structure
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+This theme uses [Astro](https://astro.build) with [Tailwind CSS](https://tailwindcss.com):
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [Astro documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+```bash
+├── public/               # Static assets (images, fonts, etc.)
+├── src/
+│   ├── components/       # Reusable UI components
+│   ├── layouts/          # Page layouts
+│   ├── pages/            # Astro/Markdown pages mapped to routes
+│   └── styles/           # Global styles and Tailwind config
+├── astro.config.mjs      # Astro configuration
+├── tailwind.config.js    # Tailwind config
+└── package.json          # Dependencies and scripts
