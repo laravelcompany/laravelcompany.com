@@ -14,7 +14,27 @@ const { title, description, image, frontmatter, robots } = Astro.props;
   <meta name="generator" content={Astro.generator} />
 
   <title>{title}</title>
+
+  <meta name="bingbot" content="noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="title" content={title} />
+  <meta property="og:image:height" content="369" />
+  <meta property="og:image:width" content="800" />
   <meta name="description" content={description} />
+  <meta property="og:site_name" content={title} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content="https://research.facebook.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://research.facebook.com/file/773643347343159/RAI-Collaboration.jpg" />
+  <meta property="og:twitter:image" content="https://research.facebook.com/file/773643347343159/RAI-Collaboration.jpg" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:twitter:card" content="summary_large_image" />
+  <meta property="og:twitter:site" content="Meta Research" />
+  <meta property="og:twitter:title" content="Meta Research" />
+  <meta property="og:twitter:description" content="At Meta, research permeates everything we do. We believe the most interesting research questions are derived from real world problems." />
+
+
   <script>
     (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
         a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];

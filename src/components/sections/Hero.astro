@@ -1,40 +1,50 @@
 ---
 import Section from "./Section.astro";
-import { Image } from "astro:assets";
-import HeroIlust from "./../../../public/logo.png";
 ---
 
 <Section id="home">
-   
-    <div class="relative flex flex-col-reverse items-center md:flex-row" id="hero">
-        <div class="row items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
-            <div class="text-left space-y-3">
-                <h1 title="laravel agency" class="text-4xl  text-[#031D40] font-medium leading-none md:text-6xl text-center md:text-left">
-                    Laravel Agency 
-                </h1>
-                <p class="text-[#031D40]">
-                    With one of the world’s most extensive portfolios of Laravel-driven solutions, we blend technical excellence with affordability. 
-                    Our partnerships with companies and developers worldwide ensure robust, self-hosted systems that balance performance, security, and scalability.
-                </p>
-                <p
-                    class="mt-6 mb-8 text-lg font-normal leading-7 sm:mb-12 text-center md:text-left md:pr-12"
-                >
-                Our expertise encompasses a range of <a href="software">software</a> services, including meticulous maintenance, timely updates, bespoke development of CRM systems, and seamless REST API implementations, alongside strategic PPC campaigns, impactful social media marketing, and compelling content creation.
-                </p>
-                <div
-                    class="w-full justify-center md:justify-start items-center inline-flex"
-                >
-                    <a
-                        href="contact"
-                        target="_blank"
-                        class="px-8 py-5 bg-green hover:bg-blue rounded-2xl text-center text-white hover:text-black border text-xl font-normal leading-7"
-                        >Book a consultation
-                    </a>
+    <!-- Hero Section -->
+    <section class="relative from-blue-50 to-white">
+        <div class="container mx-auto px-4 py-20 md:py-28">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 text-center md:text-left space-y-8">
+                    <h1
+                        class="text-5xl md:text-6xl font-bold leading-tight text-gray-900"
+                        title="Laravel Agency"
+                    >
+                        <span class="text-red-600">Laravel™</span> Impossible? Let’s
+                        see.
+                    </h1>
+                    <p class="text-2xl text-gray-600 leading-relaxed">
+                        Laravel™ Agency strives to continuously progress
+                        Laravel™, by sharing our latest developments and best
+                        practices.
+                    </p>
+
+                    <p>
+                        Our team tries to improve the state of the Laravel™
+                        through research, systems engineering, and collaboration
+                        across the globe. We publish hundreds of Laravel™
+                        author-written papers each year trought across a wide
+                        range of domains, sharing our latest developments in
+                        order to collaboratively progress computing and science.
+                    </p>
+                    <p>
+                        Using skill, experience and client input we create
+                        powerful, valuable solutions that stand the test of
+                        time. Our Laravel™ development services combine these
+                        foundations with technical prowess, flawless design and
+                        an integrated approach.
+                    </p>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0">
+                    <img
+                        src="logo.png"
+                        alt="Laravel™ Agency"
+                        class="w-full h-auto animate-float"
+                    />
                 </div>
             </div>
         </div>
-        <div class="flex items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
-            <Image inferSize={true} src="https://raw.githubusercontent.com/laravelcompany/laravelcompany.com/refs/heads/main/public/simple-logo.svg" alt="Laravel Agency" loading="eager" />
-        </div>
-    </div>
+    </section>
 </Section>
