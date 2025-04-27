@@ -1,53 +1,46 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Sponsors from "../components/sections/Sponsors.astro";
-/**
- *   'Miscellaneous',
-  'Project Management Tools',
-  'Help and Support Tools',
-  'Shopping Carts',
-  'Social Networking',
-  'Images and Media',
-  'Forms',
-  'Loaders and Uploaders',
-  'Calendars',
-  'Database Abstractions',
-  'Search',
-  'Ratings and Charts',
-  'Navigation',
-  'Countdowns', Find a Laravel Partner. Laravel Partners are digital studios that provide expert development, design, and guidance to Laravel based projects.
-    "Laravel Agency Website is a comprehensive database of trusted developers and digital studios within the Laravel community. Partner with us to access expert development, design, and guidance for your Laravel-based projects
-    'News Tickers',
-  'Polls',
-
-Our laravel agency website offers access to the largest software tools pool in wthe world created by developers for developers
-   Large Software Tools Pool: Laravel Agency have strong connections within the Laravel community, enabling access to highly software development starter kits created by developers. for developers
- */
 ---
-
 <MainLayout
-  title="Software company in london where software permeates everything we do. We believe the most interesting questions come from real world problems "
-  description="Our laravel agency website offers access to the largest software tools pool in wthe world created by developers for developers."
+  title="Software company in London where software permeates everything we do. We believe the most interesting questions come from real world problems."
+  description="Our Laravel agency website offers access to the largest software tools pool in the world created by developers for developers."
 >
   <main class="space-y-28">
+    <!-- Agency Info Section -->
+    <section class="py-20 bg-white text-center">
+      <div class="container mx-auto px-4">
+        <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900" title="Laravel Software Development Agency">
+          <span class="text-red-600">Laravel™</span> Software Development Agency
+        </h1>
+        <p class="text-2xl text-gray-600 leading-relaxed mt-6">
+          We are a <strong>Laravel-exclusive software agency</strong> offering <strong>custom Laravel development services</strong>,
+          ongoing Laravel support, and expert Laravel consulting.
+        </p>
+        <p class="mt-4 text-xl text-gray-600">
+          We’ve built <strong>ready-to-use Laravel starter kits</strong> for 15+ software categories — including eCommerce, CRM, CMS, Project Management, and more.
+        </p>
+        <p class="mt-2 text-lg text-gray-600">
+          Whether you're starting from scratch or modernising legacy software,
+          our Laravel starter kits and tools help you launch faster and scale smarter.
+        </p>
+      </div>
+    </section>
+
     <!-- Hero Section -->
     <section class="relative from-blue-50 to-white">
       <div class="container mx-auto px-4 py-20 md:py-28">
         <div class="flex flex-col md:flex-row items-center gap-12">
           <div class="md:w-1/2 text-center md:text-left space-y-8">
-            <h1
-              class="text-5xl md:text-6xl font-bold leading-tight text-gray-900"
-              title="Laravel Development Services"
-            >
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900" title="Laravel Development Services">
               <span class="text-red-600">Laravel</span> Impossible? Let’s see.
             </h1>
             <p class="text-2xl text-gray-600 leading-relaxed">
               Laravel™ Agency strives to continuously progress Laravel™, by sharing our latest developments and best practices.
             </p>
-
             <p>
-              Our team tries to improve the state of the Laravel™ through research, systems engineering, and collaboration across the globe. 
-              We publish hundreds of Laravel™ author-written papers each year trought across a wide range of domains, 
+              Our team tries to improve the state of Laravel™ through research, systems engineering, and collaboration across the globe.
+              We publish hundreds of Laravel™ author-written papers each year across a wide range of domains,
               sharing our latest developments in order to collaboratively progress computing and science.
             </p>
             <p>
@@ -57,6 +50,7 @@ Our laravel agency website offers access to the largest software tools pool in w
               prowess, flawless design and an integrated approach.
             </p>
           </div>
+
           <div class="md:w-1/2 mt-12 md:mt-0">
             <img
               src="logo.png"
@@ -75,8 +69,7 @@ Our laravel agency website offers access to the largest software tools pool in w
           Pre-Built Laravel™ Solutions for Rapid Development
         </h2>
         <p class="text-xl text-gray-600">
-          Accelerate your time-to-market with our battle-tested Laravel™ starter
-          kits:
+          Accelerate your time-to-market with our battle-tested Laravel™ starter kits:
         </p>
       </div>
 
@@ -110,292 +103,50 @@ Our laravel agency website offers access to the largest software tools pool in w
       </div>
     </section>
 
-    <section class="py-20 bg-white text-center">
-      <div class="container mx-auto px-4">
-        <h1
-          class="text-5xl md:text-6xl font-bold leading-tight text-gray-900"
-          title="Laravel Software Development Agency"
-        >
-          <span class="text-red-600">Laravel™</span> Software Development Agency
-        </h1>
-        <p class="text-2xl text-gray-600 leading-relaxed mt-6">
-          We are a <strong>Laravel-exclusive software agency</strong> offering <strong
-            >custom Laravel development services</strong
-          >, ongoing Laravel support, and expert Laravel consulting.
-        </p>
-        <p class="mt-4 text-xl text-gray-600">
-          We’ve built <strong>ready-to-use Laravel starter kits</strong> for 15+
-          software categories — including eCommerce, CRM, CMS, Project Management,
-          and more.
-        </p>
-        <p class="mt-2 text-lg text-gray-600">
-          Whether you're starting from scratch or modernising legacy software,
-          our Laravel starter kits and tools help you launch faster and scale
-          smarter.
-        </p>
-      </div>
-    </section>
 
-    <section id="starter-kits" class="container mx-auto px-4 py-20">
+    <!-- Starter Kits Categories Section -->
+    <section id="starter-kits-categories" class="container mx-auto px-4 py-20">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <h2 title="Laravel Starter Kits for Every Software Category" class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           Laravel Starter Kits for Every Software Category
         </h2>
         <p class="text-xl text-gray-600">
-          We’ve developed production-ready starter kits for every type of
-          Laravel app:
+          We’ve developed production-ready starter kits for every type of Laravel app:
         </p>
       </div>
 
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-700"
-      >
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-700">
+        <ul class="space-y-4">
+          <li>✅ <strong>Miscellaneous</strong></li>
+          <li>✅ <strong>Project Management Tools</strong><br />Track tasks, milestones, budgets with Kanban boards.</li>
+          <li>✅ <strong>Help and Support Tools</strong><br />Ticketing systems, live chat, knowledge bases.</li>
+          <li>✅ <strong>Shopping Carts</strong><br />Full eCommerce features: variations, coupons, payment gateways.</li>
+          <li>✅ <strong>Social Networking</strong><br />Messaging, profiles, activity feeds, followers.</li>
+          <li>✅ <strong>Images and Media</strong><br />Galleries, uploads, watermarks, responsive previews.</li>
+          <li>✅ <strong>Forms</strong><br />Dynamic form builders with validation and exportable submissions.</li>
+        </ul>
 
-          <ul class="space-y-4">
-            <li>
-              ✅ <strong>Project Management Tools</strong><br />
-              Designed for construction, tech, and agency teams — track tasks, milestones,
-              and budgets in real-time with customisable Kanban boards and reporting.
-            </li>
-            <li>
-              ✅ <strong>Help and Support Tools</strong><br />
-              Ideal for SaaS and eCommerce platforms — includes ticketing systems,
-              live chat, and knowledge bases to streamline customer support.
-            </li>
-            <li>
-              ✅ <strong>Shopping Carts</strong><br />
-              Built for retail, fashion, electronics, and marketplaces — supports
-              variations, coupons, taxes, multi-language, and payment gateways.
-            </li>
-            <li>
-              ✅ <strong>Social Networking</strong><br />
-              Great for community platforms, alumni portals, or interest-based groups
-              — includes messaging, profiles, followers, and activity feeds.
-            </li>
-            <li>
-              ✅ <strong>Images and Media</strong><br />
-              Perfect for photographers, media agencies, and eLearning platforms
-              — manage galleries, uploads, watermarks, and responsive previews.
-            </li>
-          </ul>
+        <ul class="space-y-4">
+          <li>✅ <strong>Loaders and Uploaders</strong><br />Drag-and-drop uploads, progress tracking, background workers.</li>
+          <li>✅ <strong>Calendars</strong><br />Scheduling events, reminders, collaborative calendars.</li>
+          <li>✅ <strong>Database Abstractions</strong><br />DTOs, ORM mappings, database tools.</li>
+          <li>✅ <strong>Search</strong><br />Advanced search with indexing and filtering.</li>
+          <li>✅ <strong>Ratings and Charts</strong><br />User feedback, star ratings, data visualizations.</li>
+          <li>✅ <strong>Navigation</strong><br />Dynamic menu builders, breadcrumbs, mega menus.</li>
+          <li>✅ <strong>Countdowns</strong><br />Timers for product launches, webinars, sales events.</li>
+        </ul>
 
-          <ul class="space-y-4">
-            <li>
-              ✅ <strong>Forms and Form Builders</strong><br />
-              Widely used in government, finance, and education — build dynamic forms
-              with validation, branching logic, and exportable submissions.
-            </li>
-            <li>
-              ✅ <strong>Loaders and Uploaders</strong><br />
-              Core for SaaS dashboards, CMS platforms, and media apps — includes
-              drag-and-drop uploaders, progress bars, and queue workers.
-            </li>
-            <li>
-              ✅ <strong>Calendars and Schedulers</strong><br />
-              Useful in healthcare, logistics, and coaching — full-featured event
-              scheduling with reminders, time zones, and recurring rules.
-            </li>
-            <li>
-              ✅ <strong>Database Abstractions</strong><br />
-              Designed for enterprise systems and CRMs — powerful DTO and repository
-              patterns to handle complex relational data with ease.
-            </li>
-            <li>
-              ✅ <strong>Search and Filter Tools</strong><br />
-              Crucial for eCommerce, real estate, and directory apps — includes advanced
-              filters, full-text search, and facet support.
-            </li>
-          </ul>
-
-          <ul class="space-y-4">
-            <li>
-              ✅ <strong>Ratings and Charting</strong><br />
-              Common in SaaS analytics, review platforms, and EdTech — supports star
-              ratings, bar/pie/line charts, and live dashboards.
-            </li>
-            <li>
-              ✅ <strong>Navigation and Menus</strong><br />
-              Used across all app types — dynamic sidebars, multi-level nav, breadcrumbs,
-              and mobile-friendly menus.
-            </li>
-            <li>
-              ✅ <strong>Countdown Timers</strong><br />
-              Ideal for event management, sales, webinars, and auctions — supports
-              real-time updates and expiration triggers.
-            </li>
-            <li>
-              ✅ <strong>News Tickers</strong><br />
-              Best for finance apps, news outlets, and public agencies — real-time
-              scrollable headlines, feeds, and announcement banners.
-            </li>
-            <li>
-              ✅ <strong>Polling Systems</strong><br />
-              Engages users in communities, education, and media — supports anonymous
-              votes, result breakdowns, and visual analytics.
-            </li>
-          </ul>
-
-      </div>
-
-      <div class="text-center mt-12">
-        <a
-          href="/software"
-          class="px-8 py-4 bg-blue-600 hover:bg-red-700 text-white rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition duration-300"
-        >
-          View our Laravel Starter Kits
-        </a>
+        <ul class="space-y-4">
+          <li>✅ <strong>News Tickers</strong><br />Real-time updates for news, notifications, blog feeds.</li>
+          <li>✅ <strong>Polls</strong><br />Interactive voting systems with real-time results.</li>
+          <li>✅ <strong>Laravel Partners</strong><br />Find a Laravel Partner for expert guidance and project support.</li>
+          <li>✅ <strong>Laravel Agency Website</strong><br />Database of trusted developers and studios for collaboration.</li>
+          <li>✅ <strong>Large Software Tools Pool</strong><br />Massive collection of starter kits created by developers, for developers.</li>
+        </ul>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="container mx-auto px-4 py-20">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Our Software Development Services
-        </h2>
-        <p class="text-xl text-gray-600">
-          Software development services that we can help your business with.
-        </p>
-      </div>
-
-      <div class="mt-16 overflow-x-auto">
-        <table class="w-full text-left border-collapse">
-          <thead>
-            <tr class="bg-gray-100">
-              <th class="px-6 py-4 text-lg font-semibold text-gray-900">
-                Service Category
-              </th>
-              <th class="px-6 py-4 text-lg font-semibold text-gray-900">
-                Description
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Custom Web Application Development
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Specific task only Laravel.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Laravel eCommerce Development
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Integrate eCommerce platforms with Laravel, often integrated
-                with Shopify, Magento, etc.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Laravel CRM Development
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Developing customer relationship management systems using
-                Laravel.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Laravel CMS Development
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Creating content management systems for easy website management.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Laravel API Development and Integration
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Creating and integrating APIs for seamless data exchange.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Full-stack Development with Laravel
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Combining frontend and backend development, leveraging Laravel
-                for backend.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Laravel Migration and Upgrade
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Migrating existing applications to Laravel or upgrading Laravel
-                versions.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Laravel Consulting and Strategy
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Providing expert advice on Laravel implementation and strategy.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                UI/UX Design for Laravel Applications
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Designing user-friendly and visually appealing interfaces for
-                Laravel apps.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Performance Optimization
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Enhancing the speed and efficiency of Laravel applications.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Security Audits and Enhancements
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Ensuring Laravel applications are secure against common
-                vulnerabilities.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Maintenance and Support
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Ongoing support, updates, and maintenance for Laravel
-                applications.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Laravel Plugin and Extension Development
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Building customized plugins and extensions using Laravel tools
-                like Composer.
-              </td>
-            </tr>
-            <tr class="border-b">
-              <td class="px-6 py-4 text-base font-medium text-gray-900">
-                Integration with Third-party Services
-              </td>
-              <td class="px-6 py-4 text-base text-gray-600">
-                Integrating Laravel applications with external services like
-                payment gateways.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- Services Table -->
-    </section>
+    <Sponsors />
+    
   </main>
 </MainLayout>
