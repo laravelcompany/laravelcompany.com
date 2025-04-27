@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import Card from "../ui/Card.astro";
+import Section from "../sections/Section.astro";
+---
+
+<Section id="collaboration">
+  <Card>
+    <div
+      class="flex bg-[#031D40] rounded-[45px] p-[60px] relative mt-[123px] mb-[163px]"
+    >
+      <div class="w-full text-white md:w-[50%] flex flex-col gap-[26px]">
+        <h2 class="text-3xl font-medium">Free Laravel hosting</h2>
+        <p class="text-lg">
+          We believe in the power of technology to create positive change. Our Laravel hosting panel is  for both commercial projects and meaningful open-source initiatives.
+        </p>
+        <div class="flex flex-col gap-4 mt-2">
+          <div class="flex items-start gap-3">
+            <div class="bg-green rounded-full p-1 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <p>
+              We dedicate up to 20% of our time to pro-bono work for environmental and social impact projects like 
+              <a href="https://publicsos.org/" class="underline text-green hover:text-white transition" target="_blank" rel="noopener">
+                PublicSOS
+              </a> – a comprehensive emergency response management platform that empowers teams to deliver coordinated, secure, and efficient rescue operations.
+            </p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="bg-green rounded-full p-1 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <p>
+              Our team actively contributes to Laravel packages that improve developer productivity and application performance.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 mt-4">
+          <a href="/contact" class="btn-primary text-center py-3">Start a commercial project</a>
+          <a href="/contact" class="btn-secondary border text-center py-3">Propose an open-source collaboration</a>
+        </div>
+      </div>
+      <picture
+        class="hidden md:flex absolute right-[-10%] lg:right-0 top-[-15%] h-[450px] items-center justify-center">
+        <img src="https://i.imgur.com/ztPKOVy.png" alt="laravel agency united states" style="max-height: 50vh;" />
+      </picture>
+    </div>
+  </Card>
+</Section>
+
+<style>
+  .btn-primary {
+    @apply bg-green text-white px-6 rounded-full font-medium hover:bg-opacity-90 transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-green text-green px-6 rounded-full font-medium hover:bg-green hover:bg-opacity-10 transition-all;
+  }
+</style>

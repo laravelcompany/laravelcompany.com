@@ -1,6 +1,7 @@
 {
   "name": "laravel-agency",
   "description": "We specialize in delivering custom Laravel applications that help businesses grow and succeed online. If you are looking for Laravel developers in the UK? Our team of skilled Laravel developers delivers tailored web solutions, from consulting and design to full project management. We specialize in creating robust Laravel applications at affordable rates starting from £25 per hour.",
+
    "keywords": [
      "laravel",
      "agency",
@@ -9,7 +10,7 @@
      "Essex"
    ],
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

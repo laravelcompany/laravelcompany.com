@@ -1,10 +1,26 @@
 ---
-import Accordion from "../ui/Accordion.astro";
-import SectionTitle from "../ui/SectionTitle.astro";
-import Section from "./Section.astro";
+import AccordionItem from "../ui/AccordionItem.astro";
 
-const description = "";
+import Section from "./Section.astro";
+const content = [
+  {
+    index: 1,
+    title: "Discovery Call & Project Assessment",
+    description: "Begin with a free consultation call with one of our partners to discuss your project needs and goals. We'll analyze your requirements, evaluate technical feasibility, and recommend the most suitable Laravel solution. By the end of this stage, you'll receive a clear proposal with timeline and pricing options tailored to your project scope."
+  },
+  {
+    index: 2,
+    title: "Contract & Development Kickoff",
+    description: "Once you approve the proposal, we'll set up a flexible monthly payment plan and begin development immediately. Our Laravel experts will design the system architecture, create database schemas, and establish API structures. Development follows an agile methodology with regular demos and feedback sessions to ensure we're building exactly what you need."
+  },
+  {
+    index: 3,
+    title: "Delivery & Ongoing Support",
+    description: "After thorough testing and your approval, we deploy your Laravel application to your preferred hosting environment. Our relationship doesn't end at launch—we provide ongoing maintenance and support on a monthly basis, handling updates, performance optimization, security patches, and new feature implementation as your business grows."
+  }
+];
 ---
+
 
 <Section id="process">
   <div class="mt-[140px]">
@@ -18,14 +34,22 @@ const description = "";
     </p>
       <p class="w-auto text-xl text-center sm:text-left sm:w-[580px]">
         Our software development process is quite straightforward. We follow a
-        clear, structured approach that ensures each project is delivere in
+        clear, structured approach that ensures each project is delivers in
         time.
       </p>
     </div>
 
-    <Accordion />
-
-
+    {
+      content.map((item) => {
+        return (
+            <AccordionItem
+                index={item.index}
+                title={item.title}
+                description={item.description}
+            />
+        );
+      })
+    }
     
   </div>
 </Section>
