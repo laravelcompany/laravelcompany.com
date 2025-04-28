@@ -6,132 +6,161 @@ import Section from "./Section.astro";
 const laravelServices = [
   {
     id: 1,
-    title: "Laravel Software",
-    category: "Software",
-    description:"Discover our Multi-tenant Laravel SaaS Starter Kit that comes with all features required to run a modern SaaS. Payments, Beautiful Checkout and more",
-    link: "/software",
+    title: "Laravel AI & LLM Integrations",
+    category: "Artificial Intelligence",
+    description: "Harness the power of Large Language Models (LLMs) in your Laravel applications. We implement AI-driven chatbots, predictive analytics, and natural language processing solutions. Integrate OpenAI, GPT-4, and custom ML models for personalized user experiences, automated content generation, and intelligent data analysis.",
+    link: "/ai-integrations",
     isDark: true,
-    bgColor: "bg-green", /** pink **/
+    bgColor: "bg-green",
   },
   {
     id: 2,
-    title: "Laravel Support",
-    category: "Support",
-    description:"Are you no longer receiving security updates! Need help upgrading your app? Try contact our team if you need more than just support.",
-    link: "/contact",
-    isDark: true,
-    bgColor: "bg-dark",
-  },
-  {
-    id: 3,
-    title: "Laravel APIs",
-    category: "Integration",
-    description:"Are you stuck and you need help integrating to different APIs? We have a team of experts that can help you integrate the API/automation beeing hardware if need it.",
-    link: "/contact",
+    title: "Laravel Ecommerce Solutions",
+    category: "Shopify & WooCommerce",
+    description: "Build enterprise-grade ecommerce platforms with Laravel and Shopify integrations. Develop custom API connections for inventory management, order processing, and payment gateways. Implement headless commerce architectures with React/Vue frontends and Laravel backend microservices.",
+    link: "/ecommerce",
     isDark: false,
     bgColor: "bg-gray",
   },
   {
+    id: 3,
+    title: "Laravel VoIP Systems",
+    category: "Cloud Communications",
+    description: "Develop VoIP solutions with Laravel for voice/video calling, conferencing, and SMS integrations. Implement Twilio, Plivo, and custom WebRTC solutions with real-time analytics. Build auto-dialers, call centers, and AI-powered voice assistants with TTS (Text-to-Speech) integration.",
+    link: "/voip",
+    isDark: true,
+    bgColor: "bg-dark",
+  },
+  {
     id: 4,
-    title: "Laravel Consulting",
-    category: "Strategy",
-    description:
-      "Get expert technical guidance, strategic planning, and best practices for your Laravel development projects from our experienced consultants.",
-    link: "/contact",
+    title: "Laravel SaaS Platforms",
+    category: "Cloud Software",
+    description: "Launch scalable SaaS products with our multi-tenant Laravel starter kit. Includes subscription billing, role-based access, and AWS/Google Cloud integration. Pre-configured with Stripe/Paddle payments and Kubernetes-ready architecture.",
+    link: "/saas",
     isDark: false,
     bgColor: "bg-gray",
   },
   {
     id: 5,
-    title: "Laravel Optimization",
-    category: "Performance",
-    description:
-      "Improve the speed and efficiency of your Laravel applications with our database optimization and scaling techniques.",
-    link: "/contact",
+    title: "Laravel API Development",
+    category: "Microservices",
+    description: "Build RESTful APIs and GraphQL endpoints for IoT devices, mobile apps, and third-party integrations. Implement OAuth2 security, rate limiting, and real-time WebSocket communications. Optimized for high-throughput applications with Redis caching and queue management.",
+    link: "/api",
     isDark: true,
     bgColor: "bg-dark",
   },
   {
     id: 6,
-    title: "Laravel Upgrades",
-    category: "Upgrades",
-    description:
-      "Seamlessly upgrade your Laravel applications to the latest versions to benefit from new features, security updates, and performance improvements.",
-    link: "/contact",
+    title: "Laravel Automation",
+    category: "RPA & Workflows",
+    description: "Implement robotic process automation (RPA) with Laravel queues and scheduled tasks. Create custom workflows for CRM integrations, email marketing automation, and AI-driven decision engines. Features TTS notifications and NLP-powered document processing.",
+    link: "/automation",
     isDark: false,
     bgColor: "bg-green",
   },
-  {
-    id: 4,
-    title: "Laravel Consulting",
-    category: "Strategy",
-    description:
-      "Get expert technical guidance, strategic planning, and best practices for your Laravel development projects from our experienced consultants.",
-    link: "/contact",
-    isDark: false,
-    bgColor: "bg-gray",
-  },
 ];
 
-const sectionDescription =
-  "As a Laravel only software development agency we offer unrestricted and bespoke development for websites and applications.";
+const sectionDescription = 
+  "Leverage cutting-edge technologies in your Laravel projects with our expert development services. Specializing in AI/ML integrations, VoIP solutions, and enterprise ecommerce systems. Partner with us to implement LLM-powered features, Shopify API connections, and cloud-based communication systems.";
 ---
 
-<Section id="services" aria-label="Our Laravel Development Services">
+<Section id="services" aria-label="Advanced Laravel Development Services with AI, Ecommerce, and VoIP Integrations">
   <div class="mt-24 mb-10">
     <SectionTitle
-      sectionTitle="Our Laravel Services"
+      sectionTitle="Next-Gen Laravel Development Services"
       description={sectionDescription}
     />
 
+    <!-- SEO-rich content section -->
+    <div class="prose max-w-none mb-16" itemprop="mainContentOfPage">
+      <h2 class="text-3xl font-bold mb-6">Transform Your Business with Modern Laravel Solutions</h2>
+      
+      <p class="text-lg mb-6">In today's rapidly evolving digital landscape, integrating cutting-edge technologies like Large Language Models (LLMs), VoIP systems, and AI-driven automation has become crucial for maintaining competitive advantage. Our Laravel development services bridge the gap between traditional web development and modern technological demands.</p>
+
+      <h3 class="text-2xl font-semibold mt-8 mb-4">Key Technology Integrations</h3>
+      <ul class="list-disc pl-6 mb-8">
+        <li class="mb-3"><strong>AI & Machine Learning:</strong> Implement GPT-4 chatbots, predictive analytics, and NLP-powered features</li>
+        <li class="mb-3"><strong>Ecommerce Solutions:</strong> Shopify API integrations, headless commerce architectures, and payment gateways</li>
+        <li class="mb-3"><strong>Cloud Communications:</strong> VoIP systems, WebRTC implementations, and TTS/STT integrations</li>
+        <li class="mb-3"><strong>Automation:</strong> RPA workflows, AI-driven decision engines, and IoT integrations</li>
+      </ul>
+
+      <div class="bg-gray-100 p-6 rounded-lg mb-8">
+        <h4 class="text-xl font-semibold mb-4">Why Choose Laravel for Modern Applications?</h4>
+        <p>Laravel's elegant syntax and robust ecosystem make it ideal for implementing complex technologies:</p>
+        <ul class="list-square pl-6 mt-2">
+          <li>Event-driven architecture for real-time applications</li>
+          <li>Built-in queue system for AI/ML task processing</li>
+          <li>Secure API development with Passport/Sanctum</li>
+          <li>Scalable database architectures for big data applications</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Services grid -->
     <div class="grid gap-8 md:grid-cols-2">
-     
-      {
-        laravelServices.map((service) => {
-          const textClass = service.isDark ? "text-white" : "";
-
-          return (
-            <Card isUnderline={true}>
-              <a
-                href={service.link}
-                class={`block h-full p-6 sm:p-10 rounded-3xl ${service.bgColor} ${textClass} hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out`}
+      {laravelServices.map((service) => {
+        const textClass = service.isDark ? "text-white" : "";
+        return (
+          <Card isUnderline={true}>
+            <a
+              href={service.link}
+              class={`block h-full p-6 sm:p-10 rounded-3xl ${service.bgColor} ${textClass} hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out`}
+              aria-labelledby={`service-${service.id}`}
+            >
+              <div
+                class="grid h-full gap-6 md:grid-cols-[1fr_auto]"
+                itemscope
+                itemtype="http://schema.org/Service"
               >
-                <div
-                  class="grid h-full gap-6 md:grid-cols-[1fr_auto]"
-                  itemscope
-                  itemtype="http://schema.org/Service"
-                >
-                  <div class="flex flex-col justify-between">
-                    <h2
-                      title={`${service.title} agency`}
-                      id={`service-${service.id}`}
-                      class="text-2xl font-semibold tracking-tight leading-snug mb-2"
-                      itemprop="name"
-                    >
-                      {service.title}
-                    </h2>
-
-                    <p
-                      class="text-base text-muted-foreground leading-relaxed"
-                      itemprop="description"
-                    >
-                      {service.description}
-                    </p>
-                  </div>
-
-                  <div class="flex items-end justify-end">
-                    <span class="inline-block px-4 py-1 text-sm font-medium bg-white/20 rounded-full backdrop-blur-md">
-                      {service.category}
-                    </span>
-                  </div>
-
-                  <meta itemprop="serviceType" content={service.category} />
+                <div class="flex flex-col justify-between">
+                  <h2
+                    id={`service-${service.id}`}
+                    class="text-2xl font-semibold tracking-tight leading-snug mb-2"
+                    itemprop="name"
+                  >
+                    {service.title}
+                  </h2>
+                  <p
+                    class="text-base text-muted-foreground leading-relaxed"
+                    itemprop="description"
+                  >
+                    {service.description}
+                  </p>
                 </div>
-              </a>
-            </Card>
-          );
-        })
-      }
+                <div class="flex items-end justify-end">
+                  <span 
+                    class="inline-block px-4 py-1 text-sm font-medium bg-white/20 rounded-full backdrop-blur-md"
+                    itemprop="category"
+                  >
+                    {service.category}
+                  </span>
+                </div>
+                <meta itemprop="serviceType" content={service.category} />
+              </div>
+            </a>
+          </Card>
+        );
+      })}
+    </div>
+
+    <!-- Additional SEO content -->
+    <div class="prose max-w-none mt-16" itemscope itemtype="http://schema.org/FAQPage">
+      <h2 class="text-3xl font-bold mb-6">FAQs: Modern Laravel Development</h2>
+      
+      <div class="mb-8" itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+        <h3 class="text-xl font-semibold mb-2" itemprop="name">How can Laravel integrate with LLMs like GPT-4?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+          <p itemprop="text">Our team implements custom API integrations with AI services, creating middleware for prompt engineering, response caching, and contextual awareness within Laravel's queue system.</p>
+        </div>
+      </div>
+
+      <div class="mb-8" itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
+        <h3 class="text-xl font-semibold mb-2" itemprop="name">What Shopify features can be extended with Laravel?</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+          <p itemprop="text">We develop custom order management systems, loyalty programs, and AI-powered product recommendation engines that integrate with Shopify's API while handling high-volume transactions.</p>
+        </div>
+      </div>
     </div>
   </div>
 </Section>
