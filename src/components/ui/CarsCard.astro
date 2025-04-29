@@ -1,0 +1,26 @@
+---
+import { formatDate } from "../../utils";
+import type { CollectionEntry } from "astro:content";
+
+import Card from "../ui/Card.astro";
+
+const { car } = Astro.props;
+
+interface Props {
+  car: CollectionEntry<'cars'>;
+}
+---
+<Card isUnderline={true}>
+  <a href={'/cars/' + car.slug} class="inline-flex items-center font-medium text-black hover:text-green"></a>
+<article class="p-6">
+  <div class="flex justify-between items-center mb-5 text-gray-500">
+    Cars Ecu Software 
+  </div>
+  <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{car.data.title}</h2>
+  <p class="mb-5 font-light text-gray-500" style="white-space: pre-line">{car.data.summary}</p>
+  
+    Read more
+
+</article> 
+</a>
+</Card>
