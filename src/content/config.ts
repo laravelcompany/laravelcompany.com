@@ -53,11 +53,21 @@ const cars = defineCollection({
 });
 
 
+//todo implement this 
+const docs = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+  }),
+});
+
 
 
 // Export all collections
 export const collections = {
   blog: blog,
   software: software,
-  cars:cars
+  cars:cars,
+  docs: docs,
 };
+

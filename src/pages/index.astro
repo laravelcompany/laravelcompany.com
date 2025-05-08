@@ -16,26 +16,54 @@ import GPT from "../components/products/GPT.astro";
 ---
 
 <MainLayout
-  title="Laravel Agency | London, UK"
-  description="At Laravel Agency, backend development is everything we do. We believe the most interesting backend-end questions are derived from real world problems."
+  title="Laravel Agency | Laravel Consulting"
+  description="We are a global laravel development agency, our laravel developers build bespoke laravel websites. Get in touch with our developers today."
 >
 
   <Hero />
-
-  <Process />
-  
+  <Services />
   <Mail />
 
   <GPT />
 
   <LaravelCompany />
 
+  <Process />
+
+
   <Proposal />
-
-  <Services />
-
   <Cases />
-
+  <div class="w-full border border-gray-100 dark:border-gray-800 rounded-lg">
+    <footer data-testid="flowbite-footer" class="w-full rounded-lg bg-white shadow dark:bg-gray-800 md:flex md:items-center md:justify-between">
+      <div class="mx-auto flex max-w-screen-xl flex-col items-center p-4 text-center md:p-8 lg:p-10 [&>div]:w-fit">
+        <!-- Logo + Brand -->
+        <div class="flex flex-col items-center mb-6">
+          <a data-testid="flowbite-footer-brand" href="https://laravelcompany.com" class="mb-4 flex items-center sm:mb-0">
+            <img alt="Flowbite logo" src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-8">
+            <span data-testid="flowbite-footer-brand-span" class="self-center whitespace-nowrap text-2xl font-semibold text-gray-800 dark:text-white">Flowbite</span>
+          </a>
+          
+          <!-- 🚀 SVG EMBEDDED LOGO -->
+          <div class="mt-4">
+            <svg width="236" height="136" viewBox="0 0 236 136" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto">
+              <!-- Paste your full SVG paths here -->
+            </svg>
+          </div>
+        </div>
+  
+        <!-- Description -->
+        <p class="my-6 text-gray-500 dark:text-gray-400">
+          Open-source company with over 200+ developers available for hire today.
+        </p>
+  
+        <!-- Copyright -->
+        <div data-testid="flowbite-footer-copyright" class="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
+          © 2002 <a href="https://laravelcompany.com" class="ml-1 hover:underline">Laravel™ Agency</a>. All Rights Reserved.</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
 
 </MainLayout>
 

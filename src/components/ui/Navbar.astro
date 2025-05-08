@@ -13,14 +13,15 @@ const companyDescription = "Your company's brief description."; // Add a brief d
 ---
 
 <div class="mt-20">
-  <nav class="w-full top-0 left-0 z-50 fixed bg-white">
+  <nav class="w-full top-0 left-0 z-50 fixed bg-white border-b border-gray-200">
+
     <header class="flex flex-col lg:flex-row justify-between items-center my-5 px-6 md:px-32">
       <Astronav>
         <div class="flex w-full lg:w-auto items-center justify-between">
           <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/logo.png" class="h-8" alt={`${companyName} - ${companyDescription}`} />
+            <img src="/logo-light.svg" class="h-8" alt={`${companyName} - ${companyDescription}`} />
             {/* Added company name and description to the logo alt text for better SEO */}
-           <h1 title="Laravel agency"> Laravel Agency </h1>
+
           </a>
           <div class="block lg:hidden">
             <div id="menu-icon" class="w-8 h-8 text-black cursor-pointer">

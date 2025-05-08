@@ -64,35 +64,31 @@ const sectionDescription =
   "Leverage cutting-edge technologies in your Laravel projects with our expert development services. Specializing in AI/ML integrations, VoIP solutions, and enterprise ecommerce systems. Partner with us to implement LLM-powered features, Shopify API connections, and cloud-based communication systems.";
 ---
 
-<Section id="services" aria-label="Advanced Laravel Development Services with AI, Ecommerce, and VoIP Integrations">
-  <div class="mt-24 mb-10">
-    <SectionTitle
-      sectionTitle="Next-Gen Laravel Development Services"
-      description={sectionDescription}
-    />
 
+<Section id="services" aria-label="Laravel E-commerce & ESOP Software Solutions">
+  <div class="mt-24 mb-10">
     <!-- SEO-rich content section -->
     <div class="prose max-w-none mb-16" itemprop="mainContentOfPage">
-      <h2 class="text-3xl font-bold mb-6">Transform Your Business with Modern Laravel Solutions</h2>
+      <h2 class="text-3xl font-bold mb-6">Transform Retail & Ownership Models with Laravel</h2>
       
-      <p class="text-lg mb-6">In today's rapidly evolving digital landscape, integrating cutting-edge technologies like Large Language Models (LLMs), VoIP systems, and AI-driven automation has become crucial for maintaining competitive advantage. Our Laravel development services bridge the gap between traditional web development and modern technological demands.</p>
+      <p class="text-lg mb-6">As a 100% employee-owned company, we build e-commerce systems that power both revenue growth and equity distribution. Our Laravel developers specialize in creating platforms that merge <strong>scalable digital commerce</strong> with <strong>employee ownership frameworks</strong>, delivering solutions trusted by Fortune 500 brands and Shopify Plus partners.</p>
 
-      <h3 class="text-2xl font-semibold mt-8 mb-4">Key Technology Integrations</h3>
+      <h3 class="text-2xl font-semibold mt-8 mb-4">Core Integration Capabilities</h3>
       <ul class="list-disc pl-6 mb-8">
-        <li class="mb-3"><strong>AI & Machine Learning:</strong> Implement GPT-4 chatbots, predictive analytics, and NLP-powered features</li>
-        <li class="mb-3"><strong>Ecommerce Solutions:</strong> Shopify API integrations, headless commerce architectures, and payment gateways</li>
-        <li class="mb-3"><strong>Cloud Communications:</strong> VoIP systems, WebRTC implementations, and TTS/STT integrations</li>
-        <li class="mb-3"><strong>Automation:</strong> RPA workflows, AI-driven decision engines, and IoT integrations</li>
+        <li class="mb-3"><strong>ESOP-First Commerce:</strong> Inventory systems tracking ownership stakes, profit-sharing dashboards, and equity-linked KPIs</li>
+        <li class="mb-3"><strong>AI-Driven Retail:</strong> GPT-powered product recommendations, dynamic pricing engines, and NLP chatbots</li>
+        <li class="mb-3"><strong>VoIP Commerce:</strong> Click-to-call sales integrations, AI call center analytics, and WebRTC customer support</li>
+        <li class="mb-3"><strong>Worker-Owned Marketplaces:</strong> Multi-vendor platforms with cooperative governance and revenue-sharing smart contracts</li>
       </ul>
 
-      <div class="bg-gray-100 p-6 rounded-lg mb-8">
-        <h4 class="text-xl font-semibold mb-4">Why Choose Laravel for Modern Applications?</h4>
-        <p>Laravel's elegant syntax and robust ecosystem make it ideal for implementing complex technologies:</p>
+      <div class="bg-indigo-50 p-6 rounded-lg mb-8">
+        <h4 class="text-xl font-semibold mb-4">Why Laravel for E-commerce & ESOP Systems?</h4>
+        <p>Laravel's architecture naturally supports complex ownership models and high-volume transactions:</p>
         <ul class="list-square pl-6 mt-2">
-          <li>Event-driven architecture for real-time applications</li>
-          <li>Built-in queue system for AI/ML task processing</li>
-          <li>Secure API development with Passport/Sanctum</li>
-          <li>Scalable database architectures for big data applications</li>
+          <li>Multi-tenancy for worker co-op structures</li>
+          <li>Queue system for batch equity calculations</li>
+          <li>Event broadcasting for real-time ownership dashboards</li>
+          <li>Scout/Meilisearch for AI-powered product discovery</li>
         </ul>
       </div>
     </div>
@@ -100,66 +96,90 @@ const sectionDescription =
     <!-- Services grid -->
     <div class="grid gap-8 md:grid-cols-2">
       {laravelServices.map((service) => {
+        // Enhanced service categories for ESOP/e-commerce context
+        const categoryMap = {
+          "Shopify & WooCommerce": "E-commerce Foundations",
+          "Cloud Communications": "Retail Engagement",
+          "Cloud Software": "Ownership Platforms",
+          "Microservices": "System Architecture",
+          "RPA & Workflows": "Operational Efficiency"
+        };
+        
         const textClass = service.isDark ? "text-white" : "";
         return (
-          <Card isUnderline={true}>
-            <a
-              href={service.link}
-              class={`block h-full p-6 sm:p-10 rounded-3xl ${service.bgColor} ${textClass} hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out`}
-              aria-labelledby={`service-${service.id}`}
-            >
-              <div
-                class="grid h-full gap-6 md:grid-cols-[1fr_auto]"
-                itemscope
-                itemtype="http://schema.org/Service"
-              >
-                <div class="flex flex-col justify-between">
-                  <h2
-                    title={`service-${service.title}`}
-                    id={`service-${service.id}`}
-                    class="text-2xl font-semibold tracking-tight leading-snug mb-2"
-                    itemprop="name"
-                  >
-                    {service.title}
-                  </h2>
-                  <p
-                    class="text-base text-muted-foreground leading-relaxed"
-                    itemprop="description"
-                  >
-                    {service.description}
-                  </p>
-                </div>
-                <div class="flex items-end justify-end">
-                  <span 
-                    class="inline-block px-4 py-1 text-sm font-medium bg-white/20 rounded-full backdrop-blur-md"
-                    itemprop="category"
-                  >
-                    {service.category}
-                  </span>
-                </div>
-                <meta itemprop="serviceType" content={service.category} />
-              </div>
-            </a>
-          </Card>
+<Card isUnderline={true}>
+  <a
+    href={service.link}
+    class={`block h-full p-6 sm:p-10 rounded-3xl ${service.bgColor} ${textClass} hover:shadow-xl hover:shadow-indigo-100/50 hover:scale-[1.01] transition-all duration-300 ease-in-out`}
+    aria-labelledby={`service-${service.id}`}
+  >
+    <div
+      class="grid h-full gap-6 md:grid-cols-[1fr_auto] md:grid-rows-2"
+      itemscope
+      itemtype="http://schema.org/Service"
+    >
+      <div class="flex flex-col justify-between row-span-1 md:row-auto">
+        <h2
+          title={`service-${service.title}`}
+          id={`service-${service.id}`}
+          class="text-2xl font-semibold tracking-tight leading-snug mb-2 group-hover:text-indigo-400 transition-colors duration-300"
+          itemprop="name"
+        >
+          {service.title}
+        </h2>
+        <p
+          class="text-base text-muted-foreground leading-relaxed line-clamp-3"
+          itemprop="description"
+        >
+          {service.description}
+        </p>
+      </div>
+      
+      <div class="flex flex-col items-end justify-end row-span-1 md:row-auto">
+        <div class="mb-4 transform translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+          <img 
+            src="/logo-light.svg" 
+            alt="Laravel Service Logo" 
+            width="48" 
+            height="48"
+            class="w-auto h-8 filter brightness-125 contrast-125 drop-shadow-sm"
+          />
+        </div>
+        
+        <span 
+          class="inline-flex items-center px-4 py-1.5 text-sm font-medium bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-sm hover:bg-white/20 transition-colors duration-300"
+          itemprop="category"
+        >
+          {categoryMap[service.category] || service.category}
+          <svg class="w-4 h-4 ml-1.5 opacity-80" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+      </div>
+      
+      <meta itemprop="serviceType" content={service.category} />
+    </div>
+  </a>
+</Card>
         );
       })}
     </div>
 
     <!-- Additional SEO content -->
     <div class="prose max-w-none mt-16" itemscope itemtype="http://schema.org/FAQPage">
-      <h2 class="text-3xl font-bold mb-6">FAQs: Modern Laravel Development</h2>
+      <h2 class="text-3xl font-bold mb-6">E-commerce + ESOP Integration FAQs</h2>
       
       <div class="mb-8" itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
-        <h3 class="text-xl font-semibold mb-2" itemprop="name">How can Laravel integrate with LLMs like GPT-4?</h3>
+        <h3 class="text-xl font-semibold mb-2" itemprop="name">How do you implement ownership tracking in e-commerce platforms?</h3>
         <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
-          <p itemprop="text">Our team implements custom API integrations with AI services, creating middleware for prompt engineering, response caching, and contextual awareness within Laravel's queue system.</p>
+          <p itemprop="text">We use Laravel's Eloquent ORM to create dynamic ownership models that track stake percentages in real-time, with blockchain-inspired audit trails for equity transactions.</p>
         </div>
       </div>
 
       <div class="mb-8" itemscope itemprop="mainEntity" itemtype="http://schema.org/Question">
-        <h3 class="text-xl font-semibold mb-2" itemprop="name">What Shopify features can be extended with Laravel?</h3>
+        <h3 class="text-xl font-semibold mb-2" itemprop="name">Can ESOP structures work with headless commerce?</h3>
         <div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
-          <p itemprop="text">We develop custom order management systems, loyalty programs, and AI-powered product recommendation engines that integrate with Shopify's API while handling high-volume transactions.</p>
+          <p itemprop="text">Yes! We've built headless architectures where Vue/React storefronts connect to Laravel backends that manage both commerce operations and ownership equity calculations via GraphQL APIs.</p>
         </div>
       </div>
     </div>
