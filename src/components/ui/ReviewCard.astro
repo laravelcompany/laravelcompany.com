@@ -1,0 +1,32 @@
+---
+const { title, rating, review, closing } = Astro.props;
+
+function generateStars(count) {
+  return Array.from({ length: 5 }, (_, i) =>
+    i < count ? '⭐' : '☆'
+  ).join('');
+}
+---
+
+<section class="py-12 px-6 max-w-3xl mx-auto bg-white shadow-lg rounded-lg border border-red-200 my-10">
+  <h2 class="text-2xl font-bold text-red-700 mb-4">
+    {title}
+  </h2>
+
+  <div class="flex items-center text-yellow-500 text-xl mb-4">
+    <span set:html={generateStars(rating)}></span>
+    <span class="ml-2 text-sm text-gray-500">({rating} out of 5 stars)</span>
+  </div>
+
+  <div class="space-y-4 text-base leading-relaxed">
+    {
+      Array.isArray(review) && review.map(para => (
+        <p>{para}</p>
+      ))
+    }
+  </div>
+
+  <p class="mt-6 italic text-gray-600">
+    {closing}
+  </p>
+</section>

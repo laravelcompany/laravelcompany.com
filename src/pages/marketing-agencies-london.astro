@@ -1,0 +1,171 @@
+---
+import ReviewCard from "../components/ui/ReviewCard.astro"
+import MainLayout from "../layouts/MainLayout.astro";
+
+const reviews = [
+    {
+        "name": "Rise at Seven",
+        "location": "London + Sheffield",
+        "rating": 5,
+        "review_title": "Top-tier Creative SEO – Worth Every Penny",
+        "review": [
+            "Working with Rise at Seven was a game-changer for our content strategy. Their SEO team doesn’t just optimise — they tell stories that rank.",
+            "The results were wild: we saw organic traffic skyrocket within 2 months. Plus, their PR campaigns landed us in high-profile publications we never thought we’d reach.",
+            "If you need a blend of digital PR and hardcore SEO skills, these guys are elite.",
+        ],
+        "closing": "Highly recommend if you're serious about growth."
+    },
+    {
+        "name": "Growthcurve",
+        "location": "Old Street",
+        "rating": 4,
+        "review_title": "Agile and Smart – Perfect for Scaling Startups",
+        "review": [
+            "Our team loved Growthcurve’s flexible model. They embedded into our workflow like they were part of the crew.",
+            "Campaign performance was solid, and their data-first thinking meant we could pivot quickly when something wasn’t converting.",
+            "Would’ve given 5 stars if their reporting dashboard was a bit more polished."
+        ],
+        "closing": "For lean startups, this is your squad."
+    },
+    {
+        "name": "KOTA",
+        "location": "Clerkenwell",
+        "rating": 4,
+        "review_title": "Creative Studio Vibes with ROI to Match",
+        "review": [
+            "KOTA built our brand from the ground up with stunning visuals and smooth UX.",
+            "The team was responsive, energetic, and deeply in tune with our aesthetic goals.",
+            "SEO wasn’t their strongest suit though — we had to bring in another agency for that later."
+        ],
+        "closing": "Design-forward businesses will vibe with KOTA hard."
+    },
+    {
+        "name": "Jellyfish",
+        "location": "The Shard",
+        "rating": 5,
+        "review_title": "Enterprise-Level Strategy with a Global View",
+        "review": [
+            "Jellyfish came in hot with deep Google expertise and killer campaign planning.",
+            "Perfect for larger teams — their structure and workflow are enterprise-grade.",
+            "Our international campaigns finally got the polish they needed to scale profitably."
+        ],
+        "closing": "Expensive? Yes. But 100% worth it if you’ve got global goals."
+    },
+    {
+        "name": "Gripped",
+        "location": "Liverpool Street",
+        "rating": 3,
+        "review_title": "Solid B2B Strategy but Needed More Creativity",
+        "review": [
+            "We came to Gripped for help scaling our B2B SaaS leads. They delivered — technically.",
+            "Their automation and lead funnel logic was on point, but content lacked spark.",
+            "Decent ROI, but the campaigns felt formulaic."
+        ],
+        "closing": "Great if you love spreadsheets more than storytelling."
+    }
+];
+---
+<MainLayout
+  title="Laravel Agency | Laravel Consulting"
+  description="We are a global laravel development agency, our laravel developers build bespoke laravel websites. Get in touch with our developers today."
+>
+
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <h1 class="text-4xl font-bold text-center mb-10">🚀 Top 10 Marketing Agencies in London (2025)</h1>
+    {reviews.map((data) => <ReviewCard {...data} />)}
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card Template -->
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+        <h2 class="text-xl font-semibold mb-2">1. Rise at Seven</h2>
+        <p class="text-sm text-gray-700 mb-4">📍 London + Sheffield<br>🚀 Viral campaigns. SEO on steroids. Big-brain digital PR.</p>
+        <a rel="nofollow" href="https://riseatseven.com" target="_blank" class="text-indigo-600 hover:underline text-sm">riseatseven.com</a>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+        <h2 class="text-xl font-semibold mb-2">2. Growthcurve</h2>
+        <p class="text-sm text-gray-700 mb-4">📍 Old Street<br>📊 Startups, scale-ups, high-growth beasts.</p>
+        <a rel="nofollow" href="https://growthcurve.io" target="_blank" class="text-indigo-600 hover:underline text-sm">growthcurve.io</a>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+        <h2 class="text-xl font-semibold mb-2">3. KOTA</h2>
+        <p class="text-sm text-gray-700 mb-4">📍 Clerkenwell<br>🎨 Creative agency + Web design powerhouse.</p>
+        <a rel="nofollow" href="https://kota.co.uk" target="_blank" class="text-indigo-600 hover:underline text-sm">kota.co.uk</a>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+        <h2 class="text-xl font-semibold mb-2">4. Jellyfish</h2>
+        <p class="text-sm text-gray-700 mb-4">📍 The Shard<br>🌐 Enterprise-ready, Google Partner, full-stack digital.</p>
+        <a rel="nofollow" href="https://jellyfish.com" target="_blank" class="text-indigo-600 hover:underline text-sm">jellyfish.com</a>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+        <h2 class="text-xl font-semibold mb-2">5. Gripped</h2>
+        <p class="text-sm text-gray-700 mb-4">📍 Liverpool Street<br>📈 SaaS & B2B performance marketing kings.</p>
+        <a rel="nofollow" href="https://gripped.io" target="_blank" class="text-indigo-600 hover:underline text-sm">gripped.io</a>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+        <h2 class="text-xl font-semibold mb-2">6. Socially Powerful</h2>
+        <p class="text-sm text-gray-700 mb-4">📍 Soho<br>📲 Influencer marketing & viral content masters.</p>
+        <a rel="nofollow" href="https://sociallypowerful.com" target="_blank" class="text-indigo-600 hover:underline text-sm">sociallypowerful.com</a>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+        <h2 class="text-xl font-semibold mb-2">7. Impression</h2>
+        <p class="text-sm text-gray-700 mb-4">📍 Holborn<br>🏆 Award-winning: Digital PR + Technical SEO = 💥</p>
+        <a rel="nofollow" href="https://impression.co.uk" target="_blank" class="text-indigo-600 hover:underline text-sm">impression.co.uk</a>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+        <h2 class="text-xl font-semibold mb-2">8. Favoured</h2>
+        <p class="text-sm text-gray-700 mb-4">📍 London Bridge<br>🧠 Specialist in: TikTok, YouTube Ads, Gen Z branding.</p>
+        <a rel="nofollow" href="https://favoured.co.uk" target="_blank" class="text-indigo-600 hover:underline text-sm">favoured.co.uk</a>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition">
+        <h2 class="text-xl font-semibold mb-2">9. The Good Marketer</h2>
+        <p class="text-sm text-gray-700 mb-4">📍 Shoreditch<br>💼 Focus: SMEs and startups. Targeted, affordable.</p>
+        <a rel="nofollow" href="https://thegoodmarketer.co.uk" target="_blank" class="text-indigo-600 hover:underline text-sm">thegoodmarketer.co.uk</a>
+      </div>
+
+      <section class="py-12 px-6 max-w-3xl mx-auto bg-white shadow-lg rounded-lg border border-red-200">
+        <!-- Title -->
+        <h2 class="text-2xl font-bold text-red-700 mb-4">
+          A Major Red Flag – This Agency’s Brand is Being Used for Scams!
+        </h2>
+    
+        <!-- Rating -->
+        <div class="flex items-center text-yellow-500 text-xl mb-4">
+          <span>⭐</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          <span class="ml-2 text-sm text-gray-500">(1 out of 5 stars)</span>
+        </div>
+    
+        <!-- Review Content -->
+        <div class="space-y-4 text-base leading-relaxed">
+          <p>
+            I was seriously considering Passion Digital as a potential partner for our company’s digital marketing needs in London. After seeing their presence online and decent ratings on Trustpilot and Clutch, I thought they might be a solid choice. Boy, was I wrong to look past the warning signs.
+          </p>
+          <p>
+            While doing my final due diligence, I stumbled upon a shocking notice directly on their Facebook page: they’ve issued a public warning that scammers are using their branding and logo to pull off fraud. That alone should be a massive red flag for any business owner looking to hire a reputable agency.
+          </p>
+          <p>
+            If an agency’s brand can be so easily hijacked and used in scams, what does that say about their security, credibility, and overall professionalism? It made me question everything—how secure would <em>our</em> data be if even their own identity isn’t fully protected? For a "digital strategy agency" handling sensitive client info and large marketing budgets, this kind of vulnerability is unacceptable.
+          </p>
+          <p>
+            I’m giving them one star only because I want others to see this review and avoid making the same mistake. If you're searching for a trustworthy digital marketing agency or web design company in London, steer clear of Passion Digital until they get a handle on these serious issues. Your business deserves better than to become the next victim of a scam hiding behind a familiar name.
+          </p>
+        </div>
+    
+        <!-- Closing -->
+        <p class="mt-6 italic text-gray-600">
+          Stay safe—and do your homework!
+        </p>
+      </section>
+    </div>
+  </div>
+
+
+  </MainLayout>
