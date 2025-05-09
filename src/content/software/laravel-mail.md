@@ -1,7 +1,7 @@
 ---
 title: "Laravel Shopify"
 image: "/laravel-shopify.png"
-slug: laravel-shopify
+slug: laravel-shopify-starter
 summary: "Inspired by Laravel Boilerplate, Wave, and Shopr – now rebuilt with modern tools and Shopify-like architecture"
 type: "Shopping Carts"
 ---

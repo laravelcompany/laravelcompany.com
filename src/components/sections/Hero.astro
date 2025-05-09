@@ -1,61 +1,69 @@
 ---
-import Section from "./Section.astro";
 ---
+
 <section id="home" aria-labelledby="hero-heading" class="relative bg-white">
-    <div class="mx-auto max-w-screen-xl px-4 py-24 lg:grid lg:grid-cols-12 lg:items-center lg:gap-12">
-      
-      <!-- Text Content -->
-      <div class="lg:col-span-7 space-y-6 text-center lg:text-left" itemscope itemtype="http://schema.org/Organization">
-        <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
-          <span class="text-indigo-600">Laravel™</span> Impossible? Let’s see.
-        </h1>
-  
-        <p class="text-lg sm:text-xl text-gray-700">
-          <a href="https://laravelcompany.com" 
-             title="Official Laravel Agency & Employee-Owned Company" 
-             class="text-blue-600 hover:underline" 
-             rel="noopener noreferrer">
-             Laravel™ Agency
-          </a> 
-          <strong>is a 100% employee-owned ESOP company</strong> since 2004. We advance Laravel™ through research, systems engineering, and global collaboration while delivering powerful solutions combining technical excellence with strategic design.
+  <div class="mx-auto max-w-screen-xl px-4 py-24 lg:grid lg:grid-cols-12 lg:items-center lg:gap-12">
+    <!-- Text Content -->
+    <div class="lg:col-span-7 space-y-6 text-center lg:text-left" itemscope itemtype="http://schema.org/Organization">
+      <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
+        <span class="text-indigo-600">Laravel™</span> Solutions for Leadership Teams
+      </h1>
+
+      <p class="text-lg sm:text-xl text-gray-700" itemprop="description">
+        <a href="https://laravelcompany.com" 
+           title="Employee-Owned Laravel Development Partner" 
+           class="text-blue-600 hover:underline" 
+           rel="noopener noreferrer"
+           itemprop="name">
+           Laravel™ Agency
+        </a> 
+        delivers <strong>ESOP-aligned technical solutions</strong> since 2004. As a 100% employee-owned company, we help leadership teams:
+      </p>
+
+      <ul class="space-y-4 text-gray-700 list-disc pl-6">
+        <li>Implement ownership transition systems handling $4B+ in equity</li>
+        <li>Build workforce engagement platforms for 500+ global ESOPs</li>
+        <li>Develop succession planning tools used by Fortune 500 HR departments</li>
+      </ul>
+
+      <p class="text-lg sm:text-xl text-gray-700">
+        Our 100+ developer team creates <span class="font-semibold text-green-600" itemprop="numberOfEmployees">ESOP software solutions</span> for strategic partners including 
+        <strong itemprop="knowsAbout">BMW</strong>, 
+        <strong itemprop="knowsAbout">Amazon</strong>, and 
+        <strong itemprop="knowsAbout">Samsung</strong>. 
+      </p>
+
+      <div class="prose text-gray-600" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <p class="text-base">
+          <span class="font-semibold">Why tech leaders choose us:</span><br>
+          ✓ European engineering rigor (HQ: <span itemprop="addressLocality">Bucharest</span>)<br>
+          ✓ Remote-first team scaling since 2020<br>
+          ✓ 20+ years ESOP compliance expertise<br>
+          ✓ Real-time equity tracking systems
         </p>
-  
-        <p class="text-lg sm:text-xl text-gray-700">
-          Our team of 100+ Laravel experts builds future-proof 
-          <span class="font-semibold text-green-600">ESOP software solutions</span> 
-          for global innovators including <strong>BMW</strong>, <strong>Amazon</strong>, and <strong>Samsung</strong>. 
-          We specialize in creating platforms that empower employee ownership models through cutting-edge technology.
-        </p>
-  
-        <p class="text-base text-gray-600">
-          As both practitioners and advocates of employee ownership, we code with purpose, people, and performance in mind — whether developing 
-          <em>Employee Stock Ownership Plans</em> or building systems for <em>Worker Cooperatives</em>.
-        </p>
-  
-        <p class="text-sm text-gray-500 italic" itemprop="description">
-          Founded in Romania in 2004, we're a global, remote-first Laravel agency with 100+ developers working on ESOP-related software solutions since 2020.
-        </p>
-  
-        <div class="mt-8 flex justify-center lg:justify-start gap-4">
-          <a href="#contact" 
-             class="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-6 py-3 text-white text-sm font-medium hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 dark:focus:ring-indigo-800 transition">
-            Contact Us
-          </a>
-        
-        </div>
       </div>
-  
-      <!-- Visual Content -->
-      <div class="mt-10 lg:mt-0 lg:col-span-5 motion-safe:animate-fadeInUp">
-        <img 
-          src="logo-light.svg" 
-          alt="Laravel™ Agency Logo" 
-          class="w-full h-auto rounded-lg  transition-transform duration-500 hover:scale-105" 
-          width="500" height="300" 
-          loading="lazy"
-        />
+
+      <div class="mt-8 flex justify-center lg:justify-start gap-4">
+        <a href="https://laravelcompany.com/contact"
+           class="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-6 py-3 text-white text-sm font-medium hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 transition"
+           aria-label="Schedule ESOP consultation">
+          Schedule Leadership Briefing
+        </a>
       </div>
-  
     </div>
-  </section>
+
+    <!-- Visual Content -->
+    <div class="mt-10 lg:mt-0 lg:col-span-5 motion-safe:animate-fadeInUp">
+      <img 
+        src="logo-light.svg" 
+        alt="Employee-owned Laravel development partner" 
+        class="w-full h-auto rounded-lg transition-transform duration-500 hover:scale-105" 
+        width="500" 
+        height="300" 
+        loading="lazy"
+        itemprop="logo"
+      />
+    </div>
+  </div>
+</section>
   
