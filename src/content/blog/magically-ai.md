@@ -1,5 +1,5 @@
 ---
-title: "Magically ai"
+title: "Magically ai task automation with Laravel GPT"
 pubDate: 2024-01-15
 author: 'Stefan Bogdan'
 authImage: 'https://avatars.githubusercontent.com/u/2276408?v=4'
@@ -21,10 +21,7 @@ Alright, let’s start with the marketing fantasy:
 “Hire your first agentic AI employee”
 “More work, less people, no problem”
 
-🚨 Spoiler alert: You’ll be spending more time troubleshooting this thing than actually automating anything. 
-The UI is shiny, but under the hood, it's a Lada with Tesla branding.
-
-
+🚨 Spoiler alert: You’ll be spending https://i.imgur.com/uK7yz9Q.jpeg
 ## How to get it?
 You shouldn't get it. It’s a paid service.
 Sure, mate. Here's a cheeky but professional *bad review blog post* in markdown, laced with a Gen Z attitude and a global multilingual touch — English with some Russian and Mandarin zhǎngwò de pīpíng (掌握的批评 – controlled criticism).
@@ -83,11 +80,6 @@ If you really wanna **automate workflows** and not lose your sanity:
 ✅ Add a pinch of event-driven logic
 ✅ No need for a Chrome extension that bricks your browser
 ✅ Customisable AF, scalable, and actually works offline
-
-
-
-
-Brilliant, mate — we’ve got *golden ammo* here. Let’s punch this up into a savage, yet professional Gen Z-flavoured review blog post, now with **real user quotes** to drive the nail in. Here it is:
 
 ---
 
@@ -284,6 +276,3 @@ Don’t let a flashy AI pitch make you install what could be a **potential spywa
 
 > Uninstall it. Run a malware scan. And maybe tell your IT team to blacklist it from your org.
 
----
-
-Want this pushed out as a dev community PSA, or shall I package it for Hacker News/Reddit? Could also turn it into a GitHub issue template or browser-extension audit checklist. Just say the word, брат.
