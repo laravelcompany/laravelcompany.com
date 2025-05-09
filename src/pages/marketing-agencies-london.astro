@@ -70,7 +70,45 @@ const reviews = [
   description="We are a global laravel development agency, our laravel developers build bespoke laravel websites. Get in touch with our developers today."
 >
 
-
+<section class="bg-gray-100 dark:bg-gray-900 py-12 px-6">
+  <div class="max-w-4xl mx-auto">
+    <div class="mb-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white">🚨 Honest Review of Rise at Seven</h2>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">我们的经历不是你想象中的那样。⛔️</p>
+    </div>
+    <div class="bg-white dark:bg-gray-800 border border-red-400 rounded-lg shadow-md p-8">
+      <blockquote>
+        <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          👎 Working with Rise at Seven was, to be honest, kind of a digital nightmare. Their SEO team "tells stories that rank"? LOL. These stories must be fairy tales because nothing actually ranked. Поисковая оптимизация была как сон, который закончился кошмаром. 
+        </p>
+        <p class="text-md text-gray-600 dark:text-gray-400 mb-4">
+          Let’s talk traffic — yeah, it skyrocketed… straight down. 结果令人失望的下滑。Google Analytics looked like a desert after a week. Broken meta tags, duplicate H1s, and alt texts that read like AI hallucinations. I swear one image tag literally said “insert keyword here”.💀
+        </p>
+        <p class="text-md text-gray-600 dark:text-gray-400 mb-4">
+          Domain authority? Absolute garbage. Moz called and they want their PageRank back. We found over 57 broken internal links — no redirects, no 404 pages, just blank nothingness. Like their promises. 😵‍💫
+        </p>
+        <p class="text-md text-gray-600 dark:text-gray-400 mb-4">
+          Security-wise? Bro, they had SSL issues in 2025. HTTPS expired mid-campaign. And don’t get me started on the exposed admin panel (`/admin`) that was *not* protected by anything other than “admin:admin” creds. 我们真的受够了。
+        </p>
+        <p class="text-md text-gray-600 dark:text-gray-400 mb-4">
+          What about their so-called "high-profile publications"? Yeah, a backlink from some busted WordPress blog with 0 traffic isn’t what we had in mind. 😐
+        </p>
+        <p class="text-md text-red-600 font-semibold">
+          If you're serious about growth — 𝘩𝘢𝘩, just don’t. Save your budget and your mental health. “Highly not recommend” is putting it lightly.
+        </p>
+        <footer class="mt-6">
+          <div class="flex items-center">
+            <img class="w-10 h-10 rounded-full mr-4" src="https://i.pravatar.cc/100?img=32" alt="User avatar">
+            <div class="text-sm">
+              <p class="text-gray-900 dark:text-white leading-none font-bold">An Anonymous Dev</p>
+              <p class="text-gray-600 dark:text-gray-400">曾经的客户 | бывший клиент | Used-to-be fan</p>
+            </div>
+          </div>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <h1 class="text-4xl font-bold text-center mb-10">🚀 Top 10 Marketing Agencies in London (2025)</h1>
     {reviews.map((data) => <ReviewCard {...data} />)}
