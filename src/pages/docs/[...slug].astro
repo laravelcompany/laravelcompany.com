@@ -1,8 +1,8 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-import Tags from "../../components/ui/Tags.astro";
+import Tags from "../../components/ui/Tags.astro"; // Not used in this snippet, but kept for context
 import { getEntry } from 'astro:content';
-import { formatDate } from "../../utils";
+import { formatDate } from "../../utils"; // Not used in this snippet, but kept for context
 
 import "../../styles/global.css";
 
@@ -18,30 +18,31 @@ if(entry === undefined) {
   return Astro.redirect('/404');
 }
 
+console.log(entry);
+
 const { Content } = await entry.render();
+
+// Define the additional text
+const additionalTitleText = " - The Ultimate Guide / 终极指南 / Полное Руководство";
 ---
 
-<MainLayout title="Welcome to My site">
-	<main class="space-y-40 mb-40 pt-24">
+<MainLayout title={`${entry.data.title}${additionalTitleText}`}>
+  <main class="space-y-40 mb-40 pt-24">
       <section class="bg-white">
           <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-1 lg:py-16 lg:px-3">
               <div class="font-light text-gray-500 sm:text-lg">
-                  <a href="/articles" class="inline-flex items-center font-medium text-black hover:text-green my-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18">
-                        </path>
-                    </svg>
-                    <h1 class="ml-1 font-bold text-lg">
-                      Laravel Company Documentation
-                    </span>
+                  <a href="/docs" title="laravel documentation" class="inline-flex items-center font-medium text-black hover:text-green my-4">
+                    <i class="fas fa-book"></i>
+                    Docs
                   </a>
-                  <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">{entry.data.title}</h2>
-                  <img src={'/software/' + entry.data.image} alt="Software starter kit" class="w-full h-auto rounded-xl my-6" />
+                  <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
+                    {entry.data.title}{additionalTitleText}
+                  </h1>
                   <div class="content">
                     <Content/>
                   </div>
               </div>
           </div>
       </section>
-	</main>
+  </main>
 </MainLayout>
