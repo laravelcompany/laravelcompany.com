@@ -1,6 +1,6 @@
 # Laravel Agency 🌐
 
-![Cover](https://raw.githubusercontent.com/laravelcompany/laravelcompany.com/refs/heads/main/public/laravel-company-logo.svg)
+![Cover](https://i.imgur.com/r7ARdVT.png)
 
 **Laravel Agency** is a sleek, responsive Astro theme built for digital marketing agencies, consultancies, and freelancers offering Laravel development services.
 
