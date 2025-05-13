@@ -5,7 +5,7 @@
 @layer base {
   @font-face {
     font-family: "Grotesk";
-    src: url("/fonts/grotesk/SpaceGrotesk-Regular.woff") format("woff");
+    src: url("/fonts/grotesk/SpaceGrotesk-Regular.ttf") format("ttf");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -13,7 +13,7 @@
 
   @font-face {
     font-family: "Grotesk";
-    src: url("/fonts/grotesk/SpaceGrotesk-Medium.woff") format("woff");
+    src: url("/fonts/grotesk/SpaceGrotesk-Medium.ttf") format("ttf");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
