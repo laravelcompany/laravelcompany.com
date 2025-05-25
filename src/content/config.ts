@@ -10,7 +10,6 @@ const blog = defineCollection({
     author: z.string(),
     authImage: z.string().url(),
     image: z.string(),
-    tags: z.array(z.string()),
     summary: z.string(),
     type: z.enum( ['Article', 'Tutorial', 'Magazine']),
   }),
