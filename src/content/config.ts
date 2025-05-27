@@ -60,7 +60,12 @@ const docs = defineCollection({
   }),
 });
 
-
+const products = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+  }),
+});
 
 // Export all collections
 export const collections = {
@@ -68,5 +73,6 @@ export const collections = {
   software: software,
   cars:cars,
   docs: docs,
+  products: products,
 };
 

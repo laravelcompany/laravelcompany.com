@@ -1,0 +1,41 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import SearchForm from "../../components/ui/SearchForm.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import SoftwareCard from "../../components/ui/SoftwareCard.astro";
+
+import Card from "../../components/ui/Card.astro";
+import Section from "../../components/sections/Section.astro";
+import ProductCard from "../../components/ui/ProductCard.astro";
+
+const allSoftware: CollectionEntry<"products">[] =
+  await getCollection("products");
+---
+
+<MainLayout
+  title="Laravel software agency and starter kits for business and developers"
+  description="Discover our laravel software and starter kits for business and developers"
+>
+  <main class="space-y-20">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-3">
+      <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+        <h1 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold">
+          Check our own <a href="https://laravelcompany.com">laravel products</a> and starter kits
+        </h1>
+        <p class="font-light sm:text-xl">
+          We have a wide variety of software that can cover all your <a href="https://laravelcompany.com">Laravel Company</a> and
+          Starter Kit requirements you might have for your next project.
+        </p>
+      </div>
+      <br />
+
+      <br />
+      <div class="grid gap-8 lg:grid-cols-2">
+        {allSoftware.map((soft) => <ProductCard software={soft} />)}
+      </div>
+    </div>
+  </main>
+
+
+</MainLayout>
