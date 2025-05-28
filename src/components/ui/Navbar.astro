@@ -10,8 +10,8 @@ const menuitems = [
 ];
 
 const navButton = { href: '/contact', label: 'Book a video-call' };
-const companyName = "Laravel Agency"; // Add your company name here
-const companyDescription = "Your laravel company."; // Add a brief description of your company
+const companyName = "Laravel Company"; // Add your company name here
+const companyDescription = "laravel consulting company."; // Add a brief description of your company
 ---
 
 <div class="mt-20">
@@ -22,8 +22,7 @@ const companyDescription = "Your laravel company."; // Add a brief description o
         <div class="flex w-full lg:w-auto items-center justify-between">
           <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/logo-light.svg" class="h-8" alt={`${companyName} - ${companyDescription}`} />
-            {/* Added company name and description to the logo alt text for better SEO */}
-
+            <span class="text-2xl font-semibold text-black">{companyName}</span>
           </a>
           <div class="block lg:hidden">
             <div id="menu-icon" class="w-8 h-8 text-black cursor-pointer">
