@@ -42,16 +42,6 @@ const software = defineCollection({
   }),
 });
 
-const cars = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    logo: z.string(),
-    summary: z.string(),
-  }),
-});
-
-
 //todo implement this 
 const docs = defineCollection({
   type: 'content',
@@ -89,7 +79,6 @@ export const products = defineCollection({
 export const collections = {
   blog: blog,
   software: software,
-  cars:cars,
   docs: docs,
   products: products,
 };

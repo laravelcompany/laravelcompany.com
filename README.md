@@ -1,8 +1,8 @@
-# Laravel Agency 🌐
+# Laravel Company 🌐
 
-![Cover](https://i.imgur.com/r7ARdVT.png)
+![logo laravel company](https://i.imgur.com/xD1xl8M.png)
 
-**Laravel Agency** is a sleek, responsive Astro theme built for digital marketing agencies, consultancies, and freelancers offering Laravel development services.
+**Laravel Company** is a sleek, responsive Astro theme built for digital marketing agencies, consultancies, and freelancers offering Laravel development services.
 
 Discover already built solution that you can use today to start building your project with Laravel.
 Laravel Starter Kits for ecommerce, marketing, and more are available for you to use right away.
@@ -23,7 +23,7 @@ Laravel Starter Kits for ecommerce, marketing, and more are available for you to
 
 ## ✨ Theme Highlights
 
-Built with Astro.js and Tailwind CSS, **Laravel Agency** offers a modern foundation to present your brand confidently:
+Built with Astro.js and Tailwind CSS, **Laravel Company** offers a modern foundation to present your brand confidently:
 
 - ⚡ Clean and minimal design
 - 📱 Mobile-first and responsive
