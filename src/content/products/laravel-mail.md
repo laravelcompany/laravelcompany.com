@@ -59,7 +59,7 @@ We don’t just send mail. We make it *smart*.
 
 Whether it’s **fraud protection**, **malware detection**, or **compliance (CAN-SPAM/BEC)** — we’ve got you covered.
 
-> Email is risky biz. Laravel Mail gives you visibility, protection, and trust.
+> Email is a risky biz. Laravel Mail gives you visibility, protection, and trust.
 
 ### ✉️ **Transactional Emails**
 
@@ -88,7 +88,7 @@ Design your email templates with built-in **GrapesJS + Code Editor**, or import 
 
 Try our **demo platform** today. No credit card. No strings. Just vibes.
 
-👉 [Try the Demo](https://laravelmail.com/demo)
+👉 [Try the Demo](https://laravelmail.com/)
 
 ---
 

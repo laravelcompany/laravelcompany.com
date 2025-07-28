@@ -3,14 +3,13 @@ title: "Laravel Shopify"
 image: "/laravel-shopify.png"
 slug: laravel-shopify
 summary: "Inspired by Laravel Boilerplate, Wave, and Shopr – now rebuilt with modern tools and Shopify-like architecture"
-type: "Shopping Carts"
 ---
 
 As a modern reinvention inspired by Laravel Boilerplate, Wave, and Shopr, the Laravel Shopify Starter Kit delivers a clean, extensible foundation tailored for developers building scalable eCommerce platforms with Laravel.
 
 We've taken the best from each – authentication scaffolding from Boilerplate, modular design from Wave, and the Shopify-style product management from Shopr – and merged them into a cohesive, production-ready starter.
 
-Whether you're launching your own store, building client shops, or creating a multi-vendor SaaS, this kit cuts boilerplate out and gets you building.
+Whether you're launching your own store, building client shops, or creating a multivendor SaaS, this kit cuts boilerplate out and gets you building.
 
 # 🛒 Laravel Shopify Starter Kit
 

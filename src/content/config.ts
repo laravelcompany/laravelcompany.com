@@ -21,28 +21,9 @@ const software = defineCollection({
     title: z.string(),
     image: z.string(),
     summary: z.string(),
-    type: z.enum([
-      'Miscellaneous',
-      'Project Management Tools',
-      'Help and Support Tools',
-      'Shopping Carts',
-      'Social Networking',
-      'Images and Media',
-      'Forms',
-      'Loaders and Uploaders',
-      'Calendars',
-      'Database Abstractions',
-      'Search',
-      'Ratings and Charts',
-      'Navigation',
-      'Countdowns',
-      'News Tickers',
-      'Polls',
-    ]),
   }),
 });
 
-//todo implement this 
 const docs = defineCollection({
   type: 'content',
   schema: z.object({

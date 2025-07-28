@@ -1,8 +1,7 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
 import Tags from "../../components/ui/Tags.astro";
-import { getEntry } from 'astro:content';
-import { formatDate } from "../../utils";
+import { getEntry, getCollection } from 'astro:content';
 
 import "../../styles/global.css";
 
@@ -13,7 +12,11 @@ if(slug === undefined) {
 }
 
 const entry = await getEntry('software', slug);
-
+console.log('Slug:', slug);
+console.log('Entry found:', !!entry);
+if (!entry) {
+    console.log('Available software entries:', await getCollection('software'));
+}
 if(entry === undefined) {
   return Astro.redirect('/404');
 }
