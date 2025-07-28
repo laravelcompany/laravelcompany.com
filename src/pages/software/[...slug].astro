@@ -30,7 +30,7 @@ const { Content } = await entry.render();
           <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-1 lg:py-16 lg:px-3">
               <div class="font-light text-gray-500 sm:text-lg">
                   <h1 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">{entry.data.title}</h1>
-                  <img src={'/software/' + entry.data.image} alt="Software starter kit" class="w-full h-auto rounded-xl my-6" />
+                  <img src={ entry.data.image} alt="Software starter kit" class="w-full h-auto rounded-xl my-6" />
                   <div class="content">
                     <Content/>
                   </div>

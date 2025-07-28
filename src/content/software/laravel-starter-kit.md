@@ -1,9 +1,8 @@
 ---
-title: "Laravel Starter"
-image: '/assets/blog/image4.png'
+title: "Laravel Starter KIT"
+image: 'https://i.imgur.com/m2C37kW.png'
 slug: laravel-starter-kit
-summary: "Blade only starter kit for Laravel"
-type: "Project Management Tools"
+summary: "Blade only starter kit for Laravel with authentification and much more."
 ---
 
 
@@ -21,7 +20,7 @@ websites, or launch your next SaaS with ease. Get started now and bring your ide
 
 
 
-## 🌐 What is Laravel Starter?
+## 🌐 What Laravel is Starter?
 
  Build HTML websites and SaaS platforms in minutes with Laravel Starter! 
  Powered by Laravel Agency CMS and PHP 8.3, this open-source, drag-and-drop HTML builder lets you create fully customizable sites for personal projects, client work, or embedded modules – no coding hassle! Slash development time with templates and live preview editing. Start building now and unleash your creativity!
@@ -51,7 +50,7 @@ Includes 20+ ready-to-use templates, plus you can upload any HTML or Bootstrap-b
 Move elements intuitively, reorder sections, or use the right-click context menu for precision edits like adding table rows or duplicating blocks.
 
 ### 🌍 **SaaS Mode**
-Starter is built with monetisation in mind. Enable SaaS features, define subscription plans, restrict access to certain modules, and start earning straight away.
+Starter is built with monetization in mind. Enable SaaS features, define subscription plans, restrict access to certain modules, and start earning straight away.
 
 ### 🌗 **Dark Mode + Appearance Editor**
 Comes with light and dark themes out of the box. Easily change branding, colours, landing page content, and even the site’s logo via the appearance editor.
@@ -70,7 +69,7 @@ Starter is not just a builder – it's a framework. With options to export proje
 ## 📜 Requirements
 
 To run Starter, you’ll need:
-- PHP ≥ 8.1
+- PHP ≥ 8.2
 - MySQL
 - PDO & `fileinfo` extensions enabled (defaults on most setups)
 
