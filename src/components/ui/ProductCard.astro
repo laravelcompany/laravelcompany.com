@@ -1,24 +1,66 @@
 ---
-import { formatDate } from "../../utils";
-import type { CollectionEntry } from "astro:content";
+import {formatDate} from "../../utils";
+import type {CollectionEntry} from "astro:content";
 
 import Card from "../ui/Card.astro";
 
-const { software } = Astro.props;
+const {software} = Astro.props;
 
 interface Props {
-  software: CollectionEntry<'products'>;
+    software: CollectionEntry<'products'>;
 }
 ---
 <Card isUnderline={true}>
-<article class="p-6">
-  <div class="flex justify-between items-center mb-5 text-gray-500">
-    Software 
-  </div>
-  <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{software.data.title}</h2>
-  <p class="mb-5 font-light text-gray-500" style="white-space: pre-line">{software.data.title}</p>
-  <a href={'/products/' + software.data.slug} class="inline-flex items-center font-medium text-black hover:text-green">
-    Read more
-</a>
-</article> 
+    <article class="p-6">
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "{software.data.title}",
+                "description": "{software.data.title}", // Ideally, this should be a more detailed description from software.data.description
+                "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "GBP", // Or your relevant currency, e.g., "USD"
+                    "price": "99.99", // Replace with actual price, dynamically populated
+                    "availability": "https://schema.org/InStock", // Or OutOfStock, PreOrder, etc.
+                    "url": "{'/products/' + software.data.slug}" // The direct URL to the product page
+                },
+                "applicationCategory": "DeveloperApplication", // Or more specific categories like "BusinessApplication", "EducationalApplication", etc.
+                "operatingSystem": "Web", // Or "Windows", "MacOS", "Linux", "Android", "iOS" if specific
+                "url": "{'/products/' + software.data.slug}", // The direct URL to the product page
+                "softwareHelp": {
+                    "@type": "CreativeWork",
+                    "url": "https://laravelcompany.com/documentation" // Link to documentation or support
+                }
+                // You can add more properties as needed, e.g.,:
+                // "aggregateRating": {
+                //   "@type": "AggregateRating",
+                //   "ratingValue": "4.5", // Average rating
+                //   "reviewCount": "123" // Number of reviews
+                // },
+                // "screenshot": [
+                //   {
+                //     "@type": "ImageObject",
+                //     "url": "https://laravelcompany.com/images/product-screenshot-1.jpg"
+                //   },
+                //   {
+                //     "@type": "ImageObject",
+                //     "url": "https://laravelcompany.com/images/product-screenshot-2.jpg"
+                //   }
+                // ],
+                // "author": {
+                //   "@type": "Organization",
+                //   "name": "Laravel Company"
+                // }
+            }
+        </script>
+
+        <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
+            title={software.data.title}>{software.data.title}</h2>
+        <p class="mb-5 font-light text-gray-500" style="white-space: pre-line">{software.data.description}</p>
+        <a title={software.data.title} href={'/products/' + software.data.slug}
+           class="inline-flex items-center font-medium text-black hover:text-green">
+            Read more
+        </a>
+    </article>
 </Card>
