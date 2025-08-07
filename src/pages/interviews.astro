@@ -1,0 +1,226 @@
+---
+// Import the main layout for the page structure
+import MainLayout from "../layouts/MainLayout.astro";
+// Import the Sponsors component to showcase partners or clients
+import Sponsors from "../components/sections/Sponsors.astro";
+
+// Define an array of comprehensive VoIP features to be displayed
+// This makes it easier to manage and render the feature list
+const voipFeatures = [
+  {
+    title: "Cloud PBX Systems",
+    description: "Full-featured cloud-based phone systems with auto-attendant, call forwarding, voicemail-to-email, and more, integrated directly into your Laravel app.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /> </svg>`,
+    link: "https://laravelcompany.com/contact?service=cloud-pbx"
+  },
+  {
+    title: "Unified Communications",
+    description: "Integrate voice, video conferencing, messaging, and file sharing into a single platform accessible within your Laravel environment for enhanced team collaboration.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /> </svg>`,
+    link: "https://laravelcompany.com/contact?service=unified-comms"
+  },
+  {
+    title: "Interactive Voice Response (IVR)",
+    description: "Design and deploy intelligent IVR systems that guide callers, automate responses, and integrate with your Laravel application's database for personalized interactions.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" /> </svg>`,
+    link: "https://laravelcompany.com/contact?service=ivr-solutions"
+  },
+  {
+    title: "CRM & Helpdesk Integration",
+    description: "Seamlessly connect your VoIP system with popular CRMs (Salesforce, HubSpot, etc.) and helpdesks (Zendesk, Freshdesk) through Laravel for streamlined customer interactions.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" /> </svg>`,
+    link: "https://laravelcompany.com/contact?service=crm-integration"
+  },
+  {
+    title: "Advanced Call Analytics",
+    description: "Gain insights into call patterns, agent performance, and customer satisfaction with robust analytics dashboards built into your Laravel application.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /> </svg>`,
+    link: "https://laravelcompany.com/contact?service=call-analytics"
+  },
+  {
+    title: "Secure & Compliant Solutions",
+    description: "Ensure your communication systems meet industry standards like GDPR and HIPAA with our secure VoIP integrations, built with Laravel's robust security features.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /> </svg>`,
+    link: "https://laravelcompany.com/contact?service=secure-voip"
+  }
+];
+---
+
+<MainLayout title="Laravel VoIP Integration Services | Expert Solutions">
+    <main class="space-y-20 md:space-y-28">
+        <section class="relative bg-gradient-to-br from-red-50 via-rose-50 to-pink-50 dark:from-slate-900 dark:via-slate-800 dark:to-gray-900">
+            <div class="container mx-auto px-4  md:py-28">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 text-center md:text-left space-y-8">
+                        <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
+                            Expert <span class="text-red-600">Laravel</span> VoIP Integration
+                        </h1>
+                        <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Accelerate your digital transformation with our comprehensive Laravel solutions, including enterprise-grade VoIP integration. From startups to enterprises, we deliver secure, scalable communication systems that drive business growth.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#voip-solutions" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+                                Discover Solutions
+                            </a>
+                            <a href="#contact-calendly" class="bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+                                Schedule a Call
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 mt-12 md:mt-0">
+                        <img src="https://placehold.co/600x400/FEE2E2/C53030?text=Laravel+VoIP+Illustration" alt="Laravel VoIP Integration Illustration" class="rounded-xl shadow-2xl mx-auto" onerror="this.src='https://placehold.co/600x400/E2E8F0/4A5568?text=Image+Not+Found'; this.onerror=null;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="row bgCover noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" id="row-184" data-trigger="none" data-animate="fade" data-delay="500" data-title="2 column row" style="padding-top: 20px; padding-bottom: 20px; margin: 0px auto; outline: none; width: 100%; max-width: 100%;">		  <div id="col-left-102-144-114" class="col-md-6 innerContent col_left ui-resizable" data-col="left" data-trigger="none" data-animate="fade" data-delay="500" data-title="1st column" style="outline: none;">		  	<div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">			  <div class="de elHeadlineWrapper ui-droppable de-editable" id="headline-52398-184-181" data-de-type="headline" data-de-editing="false" data-title="headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" style="margin-top: 15px; outline: none; cursor: pointer; display: block; font-family: Montserrat, Helvetica, sans-serif !important;" data-htype="headline" aria-disabled="false" data-google-font="Montserrat"> <div class="ne elHeadline hsSize3 lh4 elMargin0 elBGStyle0 hsTextShadow0 mfs_24" style="text-align: left; font-size: 32px; color: rgb(0, 117, 178);" data-bold="inherit" contenteditable="false" spellcheck="false">
+            <b></b><div><b>Luke Salela</b></div>
+        </div>
+        </div>
+            <div class="de elHeadlineWrapper ui-droppable de-editable" id="headline-89391-132-172" data-de-type="headline" data-de-editing="false" data-title="sub-headline" data-ce="true" data-trigger="none" data-animate="fade" data-delay="500" data-gramm="false" style="margin-top: 10px; outline: none; cursor: pointer; font-family: Lato, Helvetica, sans-serif !important;" aria-disabled="false" data-google-font="Lato">
+                <h2 class="ne elHeadline hsSize2 lh3 elMargin0 elBGStyle0 hsTextShadow0 mfs_20" style="text-align: left; font-size: 23px; color: rgb(45, 45, 45);" data-bold="inherit" data-gramm="false" contenteditable="false">New monthly revenue: $180,000<div>New annual revenue: $2,160,000</div>
+                    <div>Timeframe: 20 months</div>
+                    <div><br></div>
+                    <div>Watch the interview here →</div>
+                </h2>
+            </div>			</div>		  </div>		  <div id="col-right-181-106-136" class="col-md-6 innerContent col_right ui-resizable" data-col="right" data-trigger="none" data-animate="fade" data-delay="500" data-title="2nd column" style="outline: none;">		 	 <div class="col-inner bgCover  noBorder borderSolid border3px cornersAll radius0 shadow0 P0-top P0-bottom P0H noTopMargin" style="padding: 0 10px">  <div class="de elVideoWrapper de-video-block elVideoWidth100 elMargin0 ui-droppable de-editable" id="tmp_video-75219-160-162" data-de-type="video" data-de-editing="false" data-title="video" data-ce="false" data-trigger="none" data-animate="fade" data-delay="500" data-video-type="wistia" style="margin-top: 0px; outline: none; cursor: pointer;" data-youtube-url="https://youtu.be/NL0hvQCUcVk" data-youtube-controls="yes" data-youtube-branding="no" data-youtube-unmute-label="true" aria-disabled="false" data-wistia-url="https://charlie-625.wistia.com/medias/6zoogxbulj">    <div class="elVideoplaceholder">      <div class="elVideoplaceholder_inner"></div>    </div>    <div class="elVideo" style="display: none;"><div class="fluid-width-video-wrapper" style="padding-top: 56.25%;"><iframe src="https://fast.wistia.net/embed/iframe/6zoogxbulj?autoplay=0&amp;wmode=transparent" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" wmode="opaque" allow="fullscreen" id="fitvid547109"></iframe></div></div>
+        </div>
+        </div>		  </div>
+        </div>
+        <section id="voip-solutions" class=" bg-gray-50 dark:bg-slate-800">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                            Laravel VoIP Integration Solutions
+                        </h2>
+                        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                            Transform your business communications with our expert <a href="https://laravelcompany.com/voip" class="text-red-600 hover:underline font-medium">Laravel VoIP integration services</a>. We implement cutting-edge voice solutions that integrate seamlessly with your Laravel applications.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-10"> {/* Increased gap */}
+                        <div class="bg-white dark:bg-slate-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"> {/* Enhanced shadow */}
+                            <div class="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-6 ring-4 ring-red-200 dark:ring-red-500/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Twilio Integration</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Leverage the power of Twilio's cloud communications platform with our specialized <a href="https://laravelcompany.com/twilio-integration" class="text-red-600 hover:underline">Twilio Laravel packages</a>. We implement:
+                            </p>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2 mb-6">
+                                <li>Voice & SMS notifications</li>
+                                <li>IVR systems and call tracking</li>
+                                <li>Two-factor authentication via phone</li>
+                                <li>Real-time communication features</li>
+                            </ul>
+                            <a href="https://laravelcompany.com/contact?service=twilio" class="inline-block bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-6 rounded-lg transition duration-300">
+                                Get Twilio Integration →
+                            </a>
+                        </div>
+
+                        <div class="bg-white dark:bg-slate-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"> {/* Enhanced shadow */}
+                            <div class="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-6 ring-4 ring-red-200 dark:ring-red-500/30">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Self-Hosted VoIP Solutions</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                For businesses requiring full control, we develop custom <a href="https://laravelcompany.com/self-hosted-voip" class="text-red-600 hover:underline">Laravel VoIP systems</a> using open-source platforms:
+                            </p>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2 mb-6">
+                                <li>Asterisk/Freeswitch integration</li>
+                                <li>Custom call routing and management</li>
+                                <li>CRM and helpdesk system integration</li>
+                                <li>Call recording and analytics</li>
+                            </ul>
+                            <a href="https://laravelcompany.com/voip-solutions" class="inline-block bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-6 rounded-lg transition duration-300">
+                                Explore On-Premise Solutions →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class=" bg-white dark:bg-slate-900">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                        Comprehensive VoIP Features
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300">
+                        We implement end-to-end communication solutions tailored to your Laravel applications, enhancing connectivity and productivity.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {voipFeatures.map(feature => (
+                        <div class="bg-gray-50 dark:bg-slate-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                            <div class="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-6 ring-4 ring-red-200 dark:ring-red-500/30 self-start">
+                                <Fragment set:html={feature.icon} />
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">{feature.title}</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-5 flex-grow">{feature.description}</p>
+                            <a href={feature.link} target="_blank" rel="noopener noreferrer" class="mt-auto inline-block text-red-600 dark:text-red-400 font-medium hover:underline">
+                                Learn More &rarr;
+                            </a>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact-calendly" class=" bg-gradient-to-r from-red-600 to-red-800 dark:from-red-700 dark:to-red-900">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2 text-center lg:text-left text-white">
+                        <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Communications?</h2>
+                        <p class="text-xl text-red-100 dark:text-red-200 max-w-2xl mx-auto lg:mx-0 mb-8">
+                            Our <a href="https://laravelcompany.com/laravel-voip-developers" class="text-white underline font-medium hover:text-red-200">Laravel VoIP experts</a> will help you design and implement the perfect communication solution for your business needs. Schedule a free consultation today to discuss your project.
+                        </p>
+                         <a href="https://laravelcompany.com/contact" class="inline-block bg-white text-red-600 font-bold py-4 px-10 rounded-lg text-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-md">
+                            Contact Us Directly
+                        </a>
+                    </div>
+                    <div class="lg:w-1/2 w-full mt-12 lg:mt-0 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-xl shadow-2xl">
+                         <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">Schedule Your Free Consultation</h3>
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/laravelagency/30min" style="min-width:320px;height:680px;"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Sponsors /> 
+
+        <footer class="bg-gray-800 dark:bg-black text-gray-300 dark:text-gray-400 py-12">
+            <div class="container mx-auto px-4 text-center">
+                <p class="mb-4">&copy; {new Date().getFullYear()} Laravel VoIP Agency. All rights reserved.</p>
+                <p class="text-sm">
+                    <a href="https://laravelcompany.com/privacy-policy" class="hover:text-white hover:underline">Privacy Policy</a> | 
+                    <a href="https://laravelcompany.com/terms-of-service" class="hover:text-white hover:underline">Terms of Service</a>
+                </p>
+                <div class="mt-6">
+                    <p class="text-xs">Powered by <a href="https://astro.build" class="hover:text-red-400 hover:underline" target="_blank" rel="noopener noreferrer">Astro</a> & <a href="https://tailwindcss.com" class="hover:text-red-400 hover:underline" target="_blank" rel="noopener noreferrer">Tailwind CSS</a></p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+</MainLayout>
+
+<style is:global>
+    /* Custom styles for Calendly to ensure it fits well, if needed */
+    .calendly-inline-widget {
+        border-radius: 0.75rem; /* Corresponds to rounded-xl */
+        overflow: hidden; /* Ensures the content respects the border radius */
+    }
+    /* Smooth scroll for anchor links */
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
