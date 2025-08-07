@@ -1,52 +1,187 @@
 ---
-import Cases from "../components/sections/Cases.astro";
-import Hero from "../components/sections/Hero.astro";
-import Process from "../components/sections/Process.astro";
-import Proposal from "../components/sections/Proposal.astro";
-import Services from "../components/sections/Services.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import LaravelCompany from "../components/sections/laravel-shopify.astro";
-// title="Laravel Development Agency | London, UK - City of London"
-  // description="Experienced Laravel development agency in the UK. Our laravel developers specialise in creating bespoke laravel solutions. Contact our Laravel team noAs experts in Laravel, we design, build and maintain bespoke, human-centric products and applications that scale and perform for your business as it grows."
 
-  import Section from "../components/sections/Section.astro";
-  import Card from "../components/ui/Card.astro";
-  import Mail from "../components/products/Mail.astro";
-import GPT from "../components/products/GPT.astro";
+// Get the redirect URL from query parameters
+const url = Astro.url;
+const redirectUrl = url.searchParams.get('redirect');
+
+// Validate the redirect URL (basic validation)
+let isValidUrl = false;
+if (redirectUrl) {
+    try {
+        new URL(redirectUrl);
+        isValidUrl = true;
+    } catch {
+        isValidUrl = false;
+    }
+}
 ---
 
 <MainLayout
-  title="Laravel Agency"
-  description="Improve your Laravel project with our laravel experts recomandations. We offer a 48h match guarantee. 100% risk-free trial. Custom CMS, eCommerce, CRM, SaaS. Proven delivery, real results."
+        title="Laravel Agency Redirect"
+        description="Improve your Laravel project with our laravel experts recomandations. We offer a 48h match guarantee. 100% risk-free trial. Custom CMS, eCommerce, CRM, SaaS. Proven delivery, real results."
 >
-  
-  <div class="w-full">
-    <footer data-testid="flowbite-footer" class="w-full bg-white shadow dark:bg-gray-800 md:flex md:items-center md:justify-between">
-      <div class="mx-auto flex max-w-screen-xl flex-col items-center p-4 text-center md:p-8 lg:p-10 [&>div]:w-fit">
+    <div class="w-full">
+        {isValidUrl && redirectUrl ? (
+            <!-- Redirect Timer Section -->
+                <div class="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900">
+                    <div class="mx-auto max-w-md rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800">
+                        <div class="text-center">
+                            <div class="mb-6">
+                                <svg class="mx-auto h-16 w-16 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+
+                            <h1 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
+                                Redirecting...
+                            </h1>
+
+                            <p class="mb-6 text-gray-600 dark:text-gray-300">
+                                You will be redirected to your destination in:
+                            </p>
+
+                            <div class="mb-6">
+                                <span id="countdown" class="text-4xl font-bold text-blue-600 dark:text-blue-400">5</span>
+                                <span class="ml-2 text-lg text-gray-600 dark:text-gray-300">seconds</span>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+                                    <div id="progress-bar" class="h-2 rounded-full bg-blue-600 transition-all duration-1000 ease-linear" style="width: 0%"></div>
+                                </div>
+                            </div>
+
+                            <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">
+                                Destination: <span class="font-medium" id="destination-url"></span>
+                            </p>
+
+                            <button
+                                    id="redirect-now"
+                                    class="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                            >
+                                Go Now
+                            </button>
+
+                            <button
+                                    id="cancel-redirect"
+                                    class="ml-2 rounded-lg bg-gray-300 px-4 py-2 text-gray-700 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 dark:bg-gray-600 dark:text-gray-300 dark:hover:bg-gray-500"
+                            >
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            <script define:vars={{ redirectUrl }}>
+                let countdown = 5;
+                let interval;
+                let isRedirectCancelled = false;
+
+                const countdownElement = document.getElementById('countdown');
+                const progressBar = document.getElementById('progress-bar');
+                const destinationUrl = document.getElementById('destination-url');
+                const redirectNowBtn = document.getElementById('redirect-now');
+                const cancelRedirectBtn = document.getElementById('cancel-redirect');
+
+                // Display the destination URL (truncate if too long)
+                const displayUrl = redirectUrl.length > 50 ? redirectUrl.substring(0, 50) + '...' : redirectUrl;
+                destinationUrl.textContent = displayUrl;
+
+                function updateTimer() {
+                    if (isRedirectCancelled) return;
+
+                    countdownElement.textContent = countdown;
+                    const progressPercentage = ((5 - countdown) / 5) * 100;
+                    progressBar.style.width = progressPercentage + '%';
+
+                    if (countdown === 0) {
+                        clearInterval(interval);
+                        window.location.href = redirectUrl;
+                        return;
+                    }
+
+                    countdown--;
+                }
+
+                function startRedirect() {
+                    updateTimer(); // Initial call
+                    interval = setInterval(updateTimer, 1000);
+                }
+
+                function redirectNow() {
+                    clearInterval(interval);
+                    window.location.href = redirectUrl;
+                }
+
+                function cancelRedirect() {
+                    isRedirectCancelled = true;
+                    clearInterval(interval);
+
+                    // Hide the timer section and show the original content
+                    document.querySelector('.min-h-screen').style.display = 'none';
+                    document.getElementById('original-content').style.display = 'block';
+                }
+
+                // Event listeners
+                redirectNowBtn.addEventListener('click', redirectNow);
+                cancelRedirectBtn.addEventListener('click', cancelRedirect);
+
+                // Start the countdown
+                startRedirect();
+                </script>
+        ) : null}
+
+        <!-- Original Content (hidden when redirecting) -->
+        <div id="original-content" style={isValidUrl && redirectUrl ? "display: none;" : ""}>
+        <footer data-testid="flowbite-footer" class="w-full bg-white shadow dark:bg-gray-800 md:flex md:items-center md:justify-between">
+        <div class="mx-auto flex max-w-screen-xl flex-col items-center p-4 text-center md:p-8 lg:p-10 [&>div]:w-fit">
         <!-- Logo + Brand -->
         <div class="flex flex-col items-center">
-          <a data-testid="flowbite-footer-brand" href="https://laravelcompany.com" class="mb-4 flex items-center sm:mb-0" title="laravel development london">
-            <img alt="laravel company logo" src="logo-light.svg" class="mr-3 h-8">
-            <span data-testid="flowbite-footer-brand-span" class="self-center whitespace-nowrap text-2xl font-semibold text-primary">Laravel™ Company</span>
-          </a>
-        
-    
+        <a data-testid="flowbite-footer-brand" href="https://laravelcompany.com" class="mb-4 flex items-center sm:mb-0" title="laravel development london">
+        <img alt="laravel company logo" src="logo-light.svg" class="mr-3 h-8">
+        <span data-testid="flowbite-footer-brand-span" class="self-center whitespace-nowrap text-2xl font-semibold text-primary">Laravel™ Company</span>
+        </a>
         </div>
-  
+
         <!-- Description -->
         <p class="my-6 text-gray-500 dark:text-gray-400">
-          Open-source company with over 200+ developers available for hire today.
+            Open-source company with over 200+ developers available for hire today.
         </p>
-  
+
         <!-- Copyright -->
         <div data-testid="flowbite-footer-copyright" class="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
-          © 2002 <a href="https://laravelcompany.com" title="laravel company " class="ml-1 hover:underline">Laravel™ Company</a>. All Rights Reserved.</a>
+            © 2002 <a href="https://laravelcompany.com" title="laravel company " class="ml-1 hover:underline">Laravel™ Company</a>. All Rights Reserved.
         </div>
-      </div>
+    </div>
     </footer>
-  </div>
-  
+    </div>
 
+    <!-- Show error message for invalid URLs -->
+    {redirectUrl && !isValidUrl ? (
+            <div class="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900">
+                <div class="mx-auto max-w-md rounded-lg bg-white p-8 shadow-lg dark:bg-gray-800">
+                    <div class="text-center">
+                        <div class="mb-6">
+                            <svg class="mx-auto h-16 w-16 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+
+                        <h1 class="mb-4 text-2xl font-bold text-red-600 dark:text-red-400">
+                            Invalid URL
+                        </h1>
+
+                        <p class="mb-6 text-gray-600 dark:text-gray-300">
+                            The provided redirect URL is not valid.
+                        </p>
+
+                        <a href="/" class="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                            Go Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+    ) : null}
+    </div>
 </MainLayout>
-
-
