@@ -4,142 +4,635 @@ image: "https://laravelmail.com/logo.svg"
 slug: laravel-mail
 summary: "Self-hosted multi-channel Laravel marketing platform with visual automation, dynamic content, and Blade-powered templates."
 ---
+<div className="bg-white min-h-screen text-gray-800 antialiased">
+    {/* 🚀 Hero Section */}
+    <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16 px-6 sm:px-10 lg:px-20 text-center">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-indigo-900 mb-4 leading-tight"
+            title="Laravel Marketing Automation">
+            💌 Laravel Mail – 自托管营销平台 | Ларавел Мэйл
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            A dev-first, self-hosted marketing automation platform for Laravel. Create, automate, and track
+            multi-channel campaigns with full Blade integration and zero SaaS lock-in.
+            <br/>
+            在自己的服务器上运行邮件系统。Полный контроль без посредников.
+        </p>
+    </section>
 
-As a modern reinvention of marketing platforms like Mailchimp, Sendinblue, and ConvertKit — **Laravel Mail** delivers a dev-first, privacy-focused automation engine built natively for the Laravel ecosystem.
+    {/* ✨ Core Features */}
+    <section className="py-16 px-6 sm:px-10 lg:px-20 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">✨ What’s Inside?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Automation */}
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200 transition hover:shadow-md">
+                <h3 className="text-xl font-semibold text-indigo-700 mb-3">📬 Visual Automation / 可视化自动化 /
+                    Автоматизация</h3>
+                <ul className="text-gray-600 space-y-2 text-sm">
+                    <li>✅ Drag-and-drop builder (GrapesJS + Livewire)</li>
+                    <li>✅ Trigger-based workflows (Laravel Events!)</li>
+                    <li>✅ Multi-step journeys with conditions</li>
+                    <li>✅ Smart scheduling by timezone</li>
+                </ul>
+            </div>
+            {/* Templates */}
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200 transition hover:shadow-md">
+                <h3 className="text-xl font-semibold text-indigo-700 mb-3">🎨 Blade-Powered Templates / 模板引擎 /
+                    Шаблоны</h3>
+                <ul className="text-gray-600 space-y-2 text-sm">
+                    <li>✅ 2000+ responsive email templates</li>
+                    <li>✅ Full Blade syntax support</li>
+                    <li>✅ Dynamic content blocks</li>
+                    <li>✅ Git-based version control</li>
+                </ul>
+            </div>
+            {/* Security & Compliance */}
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200 transition hover:shadow-md">
+                <h3 className="text-xl font-semibold text-indigo-700 mb-3">🔐 Secure & Compliant</h3>
+                <ul className="text-gray-600 space-y-2 text-sm">
+                    <li>✅ GDPR-safe encrypted analytics</li>
+                    <li>✅ SPF, DKIM, DMARC, BIMI tools</li>
+                    <li>✅ Spam trap & inbox placement alerts</li>
+                    <li>✅ IP reputation monitoring</li>
+                </ul>
+            </div>
+            {/* Dev Tools */}
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200 transition hover:shadow-md">
+                <h3 className="text-xl font-semibold text-indigo-700 mb-3">🚀 Built for Laravel Devs</h3>
+                <ul className="text-gray-600 space-y-2 text-sm">
+                    <li>✅ Artisan CLI & API support</li>
+                    <li>✅ Docker for testing</li>
+                    <li>✅ Mailhog integration</li>
+                    <li>✅ Rollback failed deploys</li>
+                </ul>
+            </div>
+            {/* Testing */}
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200 transition hover:shadow-md">
+                <h3 className="text-xl font-semibold text-indigo-700 mb-3">🧪 Testing & Optimization</h3>
+                <ul className="text-gray-600 space-y-2 text-sm">
+                    <li>✅ A/B split testing</li>
+                    <li>✅ Campaign variants</li>
+                    <li>✅ Visual regression testing</li>
+                    <li>✅ Real-time open/click tracking</li>
+                </ul>
+            </div>
+            {/* Multi-Channel */}
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200 transition hover:shadow-md">
+                <h3 className="text-xl font-semibold text-indigo-700 mb-3">📨 Multi-Channel Support</h3>
+                <ul className="text-gray-600 space-y-2 text-sm">
+                    <li>✅ Email (SMTP, SES, Mailgun, etc.)</li>
+                    <li>✅ SMS & Push notifications (coming)</li>
+                    <li>✅ Webhooks & Laravel Events</li>
+                    <li>✅ Future: WhatsApp, Slack</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-We took the complexity out of ESPs, added the power of Blade, Livewire, and Artisan, and gave you complete control of your marketing stack. 🧠🚀
+    {/* Why Laravel Mail */}
+    <section className="py-16 px-6 sm:px-10 lg:px-20 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">🧠 Why Laravel Mail?</h2>
+        <div className="bg-white p-8 rounded-xl shadow-md border border-gray-200 overflow-x-auto">
+            <table className="min-w-full text-sm">
+                <thead>
+                <tr className="border-b">
+                    <th className="py-3 text-left font-semibold text-gray-900">Feature</th>
+                    <th className="py-3 text-center font-semibold text-green-600">Laravel Mail</th>
+                    <th className="py-3 text-center font-semibold text-red-600">Other ESPs</th>
+                </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                <tr>
+                    <td className="py-3">Native Laravel Integration</td>
+                    <td className="py-3 text-center text-green-600">✅</td>
+                    <td className="py-3 text-center text-red-600">❌</td>
+                </tr>
+                <tr>
+                    <td className="py-3">Blade Templating</td>
+                    <td className="py-3 text-center text-green-600">✅</td>
+                    <td className="py-3 text-center text-red-600">❌</td>
+                </tr>
+                <tr>
+                    <td className="py-3">Self-hosted / On-prem</td>
+                    <td className="py-3 text-center text-green-600">✅</td>
+                    <td className="py-3 text-center text-red-600">❌</td>
+                </tr>
+                <tr>
+                    <td className="py-3">Visual Automation Builder</td>
+                    <td className="py-3 text-center text-green-600">✅</td>
+                    <td className="py-3 text-center text-green-600">✅</td>
+                </tr>
+                <tr>
+                    <td className="py-3">SMTP Control</td>
+                    <td className="py-3 text-center text-green-600">✅</td>
+                    <td className="py-3 text-center text-red-600">❌</td>
+                </tr>
+                <tr>
+                    <td className="py-3">Git-powered Workflow</td>
+                    <td className="py-3 text-center text-green-600">✅</td>
+                    <td className="py-3 text-center text-red-600">❌</td>
+                </tr>
+                <tr>
+                    <td className="py-3">Full Code Access</td>
+                    <td className="py-3 text-center text-green-600">✅</td>
+                    <td className="py-3 text-center text-red-600">❌</td>
+                </tr>
+                <tr>
+                    <td className="py-3">Privacy by Default (GDPR+)</td>
+                    <td className="py-3 text-center text-green-600">✅</td>
+                    <td className="py-3 text-center text-red-600">❌</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    {/* 📝 Competitive Analysis Section */}
+    <section className="py-16 px-6 sm:px-10 lg:px-20 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-6">
+            📝 Survey Note: Competitive Analysis & Feature Summary
+        </h2>
+        <div className="bg-white p-8 rounded-xl shadow-md border border-gray-200 space-y-6 text-gray-700 text-sm leading-relaxed">
+            {/* Overview */}
+            <div>
+                <h3 className="text-xl font-semibold text-indigo-700 mb-2">🧠 Overview</h3>
+                <p>
+                    This strategic note breaks down Laravel-based email platforms, highlighting how Laravel Mail
+                    has already implemented every core feature developers want. It’s the most complete,
+                    developer-focused communication platform for Laravel apps. No cap — it’s ahead of the curve.
+                </p>
+            </div>
 
-Whether you're nurturing leads, triggering transactional emails, or launching multi-language campaigns, **Laravel Mail** helps you do it **on your own infra**. 🐘你控制所有, без посредников.
+            {/* Background & Context */}
+            <div>
+                <h3 className="text-xl font-semibold text-indigo-700 mb-2">🧱 Background & Context</h3>
+                <ul className="list-disc list-inside space-y-1">
+                    <li>📊 Advanced analytics and open/click tracking</li>
+                    <li>📧 A/B testing & scheduling</li>
+                    <li>💌 2,000+ responsive email templates</li>
+                    <li>✅ Instant SMTP verification</li>
+                    <li>🧠 Blade component customization</li>
+                    <li>🔐 GDPR & CAN-SPAM compliance</li>
+                </ul>
+            </div>
 
----
+            {/* Competitive Table */}
+            <div>
+                <h3 className="text-xl font-semibold text-indigo-700 mb-4">🧩 Competitive Landscape</h3>
+                <div className="overflow-x-auto">
+                    <table className="min-w-full text-sm border border-gray-200">
+                        <thead className="bg-gray-50">
+                        <tr>
+                            <th className="py-3 px-4 text-left font-semibold text-gray-800">Competitor</th>
+                            <th className="py-3 px-4 text-left font-semibold text-gray-800">Description</th>
+                            <th className="py-3 px-4 text-left font-semibold text-gray-800">Key Features</th>
+                            <th className="py-3 px-4 text-left font-semibold text-gray-800">Why Competes</th>
+                        </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-100">
+                        <tr>
+                            <td className="px-4 py-3 font-medium text-indigo-600">Mailcoach</td>
+                            <td className="px-4 py-3">Self-hosted Laravel campaigns</td>
+                            <td className="px-4 py-3">Visual workflows, GDPR analytics</td>
+                            <td className="px-4 py-3">Open-source, Laravel-native</td>
+                        </tr>
+                        <tr>
+                            <td className="px-4 py-3 font-medium text-indigo-600">SendPortal</td>
+                            <td className="px-4 py-3">Open-source newsletter tool</td>
+                            <td className="px-4 py-3">Tracking, SMTP support</td>
+                            <td className="px-4 py-3">Cost-efficient Laravel solution</td>
+                        </tr>
+                        <tr>
+                            <td className="px-4 py-3 font-medium text-indigo-600">Acelle Mail</td>
+                            <td className="px-4 py-3">Laravel-based campaign system</td>
+                            <td className="px-4 py-3">Segmentation, SMTP, analytics</td>
+                            <td className="px-4 py-3">Feature-rich Laravel base</td>
+                        </tr>
+                        <tr>
+                            <td className="px-4 py-3 font-medium text-indigo-600">ActiveCampaign</td>
+                            <td className="px-4 py-3">CRM + email automation</td>
+                            <td className="px-4 py-3">A/B, CRM, segmentation</td>
+                            <td className="px-4 py-3">Competes via automation power</td>
+                        </tr>
+                        <tr>
+                            <td className="px-4 py-3 font-medium text-indigo-600">Mailchimp</td>
+                            <td className="px-4 py-3">Mass email platform</td>
+                            <td className="px-4 py-3">Campaigns, analytics</td>
+                            <td className="px-4 py-3">Legacy brand recognition</td>
+                        </tr>
+                        <tr>
+                            <td className="px-4 py-3 font-medium text-indigo-600">Bento</td>
+                            <td className="px-4 py-3">Modern Laravel email stack</td>
+                            <td className="px-4 py-3">Facades, onboarding flows</td>
+                            <td className="px-4 py-3">Laravel-focused, sleek UI</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-# 💌 Laravel Mail Platform
+            {/* Feature List */}
+            <div>
+                <h3 className="text-xl font-semibold text-indigo-700 mb-2">🚀 Already Implemented Features</h3>
+                <ul className="list-disc list-inside space-y-1">
+                    <li>✅ Mailchimp / GetResponse / ActiveCampaign API integrations</li>
+                    <li>✅ Visual builder + Blade editor</li>
+                    <li>✅ Real-time analytics, heatmaps & funnels</li>
+                    <li>✅ Drip workflows with action-based triggers</li>
+                    <li>✅ A/B testing with winner selection</li>
+                    <li>✅ Native CRM sync (HubSpot, Zoho, custom drivers)</li>
+                    <li>✅ Multi-tenant, usage-billing, SES-ready</li>
+                    <li>✅ Email compliance (GDPR + CAN-SPAM)</li>
+                    <li>✅ DNS (SPF, DKIM, DMARC) verification UI</li>
+                    <li>✅ Dual UI: Dev Mode & Marketing Mode</li>
+                </ul>
+            </div>
 
-**Laravel Mail** is a self-hosted, multi-channel marketing & automation platform purpose-built for Laravel apps. Create, track, and automate email campaigns like a boss — no third-party lock-in, no monthly fees, just pure Laravel sauce.
+            {/* Community */}
+            <div>
+                <h3 className="text-xl font-semibold text-indigo-700 mb-2">🧠 Community-Driven Roadmap</h3>
+                <p>
+                    We’ve implemented feedback from Reddit threads on <code>r/laravel</code>, <code>r/webdev</code>, and
+                    <code>r/emailmarketing</code> — focusing on pricing, SMTP pain points, WYSIWYG editors, and Laravel-native flows.
+                    Your pain points became our features. 💯
+                </p>
+            </div>
 
-Craft stunning campaigns with **2000+ responsive templates**, drag-and-drop automation, dynamic content, real-time analytics, and full Blade integration.
+            {/* Conclusion */}
+            <div>
+                <h3 className="text-xl font-semibold text-indigo-700 mb-2">💡 Conclusion</h3>
+                <p>
+                    Laravel Mail isn’t just a Laravel email tool — it’s a next-gen, dev-friendly, marketing-powerful platform
+                    that wins on integration, automation, and cost.
+                </p>
+            </div>
+        </div>
+    </section>
 
----
+    {/* Use Cases */}
+    <section className="py-16 px-6 sm:px-10 lg:px-20 bg-gray-50">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">🎯 Use Cases</h2>
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold text-indigo-700 mb-3">📧 Marketing Campaigns</h3>
+                <p className="text-gray-600">Nurture leads with dynamic, behavior-based emails. Segment users by
+                    activity, location, or custom traits.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold text-indigo-700 mb-3">⚙️ Transactional Emails</h3>
+                <p className="text-gray-600">Send password resets, order confirmations, and alerts directly from your
+                    Laravel app with full branding.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold text-indigo-700 mb-3">🌍 Multi-Language Onboarding</h3>
+                <p className="text-gray-600">Welcome users in their language with automated, localized welcome
+                    sequences.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold text-indigo-700 mb-3">🛒 Abandoned Cart Recovery</h3>
+                <p className="text-gray-600">Re-engage users with dynamic product data and personalized offers.</p>
+            </div>
+        </div>
+    </section>
+    {/* FAQ Section */}
+    <section className="py-16 px-6 sm:px-10 lg:px-20 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-10">❓ Frequently Asked Questions</h2>
+        <div className="space-y-5 text-left text-gray-700 text-sm">
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    Why choose Laravel Mail over Mailchimp or Postmark?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    Laravel Mail is self-hosted, giving you full control over your data and infrastructure—unlike Mailchimp and Postmark, which rely on third-party servers. This means enhanced privacy and customization. Plus, it integrates seamlessly with Laravel’s ecosystem, like Blade templates and events, making it a natural fit for Laravel developers.
+                </p>
+            </details>
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    Is Laravel Mail really cheaper than Mailchimp or Postmark?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    Yes, especially for high-volume email sending! With no subscription fees or per-email charges, you only pay for your server costs. Mailchimp and Postmark often scale up in price with usage, but Laravel Mail lets you control expenses, making it more cost-effective long-term.
+                </p>
+            </details>
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    What unique features does Laravel Mail offer?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    Laravel Mail shines with full Blade template support for dynamic email designs and tight integration with Laravel events and authentication. Unlike competitors, it’s built for extensibility with webhooks and Laravel Events, giving you flexibility that Mailchimp and Postmark can’t match.
+                </p>
+            </details>
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    How does Laravel Mail handle deliverability?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    You’re in charge! Use any SMTP provider or your own mail server to manage your email reputation directly. Unlike Mailchimp or Postmark, where deliverability depends on their systems, Laravel Mail gives you control to optimize without extra fees.
+                </p>
+            </details>
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    Can Laravel Mail handle large-scale email campaigns?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    Absolutely. It scales with your infrastructure, handling high volumes without artificial limits or escalating costs. With proper server setup and Laravel’s queue system, it’s perfect for big campaigns—something third-party services often restrict.
+                </p>
+            </details>
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    Do I need to be a Laravel expert to use it?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    Not at all! Basic Laravel knowledge helps, but the docs and community support make it accessible. If you’re already using Laravel, it’s a breeze—and paid setup services are available if you need extra help.
+                </p>
+            </details>
+        </div>
+    </section>
+    {/* Requirements */}
+    <section className="py-16 px-6 sm:px-10 lg:px-20 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">⚙️ System Requirements</h2>
+        <ul className="bg-white p-8 rounded-xl shadow-md border border-gray-200 space-y-3 text-gray-700 list-disc list-inside">
+            <li>Laravel 10+</li>
+            <li>PHP 8.1+</li>
+            <li>MySQL / PostgreSQL</li>
+            <li>Node.js + Composer</li>
+            <li>Mailhog (for local dev)</li>
+            <li>Docker (optional for testing)</li>
+        </ul>
+    </section>
+    {/* Pricing Section */}
+    <section className="py-20 px-6 sm:px-10 lg:px-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* Text Content (Left) */}
+            <div className="lg:w-1/2 text-left">
+                <h2 className="text-4xl font-extrabold text-gray-900 mb-6">
+                    🛒 Pricing & Licensing
+                </h2>
+                <p className="text-gray-700 text-lg mb-6">
+                    Unlock the full potential of our product with a one-time payment.
+                    No subscriptions. No recurring fees. 100% transparency. 💯
+                </p>
+                <p className="text-gray-500 text-sm mb-6">
+                    Includes full access to the source code, lifetime updates, and six months of support.
+                    Ideal for developers, freelancers, and indie creators building commercial or personal projects.
+                </p>
+                <p className="text-xs text-gray-400 italic">
+                    🔥 终身许可，无需订阅 | Полная лицензия без подписки
+                </p>
+            </div>
 
-## 🧰 What’s Inside?
+            {/* Pricing Card (Right) */}
+            <div className="bg-white p-10 rounded-2xl shadow-md border border-gray-200 hover:shadow-xl transform hover:scale-[1.03] transition-all duration-300">
 
-A full-stack Laravel-powered marketing engine. Built on privacy-first principles, infused with developer DX.
+                <script async
+                        src="https://js.stripe.com/v3/buy-button.js">
+                </script>
 
-- 💥 GDPR-safe, encrypted analytics (open, click, bounce tracking)
-- 📬 Drag-and-drop automation builder (GrapesJS + Livewire)
-- 🧪 A/B split testing & campaign variants
-- 🕒 Smart scheduling (based on timezones & activity)
-- 🎨 Blade-powered responsive templates
-- ✅ Multi-SMTP with threaded verification
-- ⚡ API + Artisan command support
-- 🧰 Full CI/CD support for templates (Git-based)
-- 💽 Mailhog integration for local dev
-- 🧠 ML-based deliverability engine with IP warm-up
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1RtRCzEYoTMW8nQ8LNg17Nrl"
+                    publishable-key="pk_live_51QOVQ4EYoTMW8nQ8NvHF0h9Wqp93segUEDLmNqb6q19L2XdHYLCmwKz6ONehzb7aUTpEtsUWbFxQXhsDbxAgvB2K008VgtShrv"
+                >
+                </stripe-buy-button>
+                <p className="text-gray-500 text-sm mb-6">For one project - personal or commercial use</p>
+                <ul className="text-gray-700 space-y-2 text-sm mb-6">
+                    <li>✅ 6 months email support</li>
+                    <li>✅ Lifetime product updates</li>
+                    <li>✅ Full source code (clean & modular)</li>
+                    <li>✅ Developer documentation (EN/中文/Русский)</li>
+                    <li>✅ One-time payment, forever yours</li>
+                </ul>
 
----
+            </div>
+        </div>
 
-## 🧠 Why Laravel Mail?
+        <div className="mt-16 text-center text-sm text-gray-500">
+            Need custom licensing or team options? <a href="#contact" className="underline hover:text-gray-700">Contact us</a>
+        </div>
+    </section>
 
-| Feature | Laravel Mail | Other ESPs |
-|--------|--------------|-------------|
-| Native Laravel Integration | ✅ | ❌ |
-| Blade Templating | ✅ | ❌ |
-| Self-hosted / On-prem | ✅ | ❌ |
-| Visual Automation Builder | ✅ | ✅ |
-| SMTP Control | ✅ | ❌ |
-| Git-powered Workflow | ✅ | ❌ |
-| Full Code Access | ✅ | ❌ |
-| Privacy by Default (GDPR+) | ✅ | ❌ |
 
----
+    {/* FAQ Section */}
+    <section className="py-16 px-6 sm:px-10 lg:px-20 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-10">❓ Frequently Asked Questions</h2>
+        <div className="space-y-5 text-left text-gray-700 text-sm">
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    Is Laravel Mail really self-hosted?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    Yes! You install it directly on your server or cloud infrastructure. You own all data, emails, and
+                    templates. No third-party servers involved.
+                </p>
+            </details>
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    Can I use Blade templates for emails?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    Absolutely. Laravel Mail supports full Blade syntax, including components, layouts, and dynamic PHP
+                    logic inside your email templates.
+                </p>
+            </details>
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    Does it support multi-channel messaging?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    Currently focused on email, SMS and push notifications in development. You can extend it via
+                    webhooks and Laravel Events.
+                </p>
+            </details>
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    How does automation work?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    Use the drag-and-drop builder to create journeys triggered by Laravel events, user actions, or
+                    schedules. Supports delays, conditions, and multi-step flows.
+                </p>
+            </details>
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    Is it GDPR compliant?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    Yes. All analytics are encrypted, and we provide tools for consent management, data export, and
+                    deletion — fully integrated with Laravel Auth.
+                </p>
+            </details>
+            <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200 group">
+                <summary
+                    className="font-semibold cursor-pointer text-lg text-indigo-800 group-open:text-indigo-900 transition">
+                    Do you offer installation support?
+                </summary>
+                <p className="mt-3 leading-relaxed">
+                    We provide detailed docs and video guides. For hands-on help, we offer paid setup and customization
+                    services. Regular license includes email support.
+                </p>
+            </details>
+        </div>
+    </section>
 
-## 🔐 Secure & Compliant
 
-- Full encryption of analytics & campaign data
-- GDPR / CCPA support baked into Laravel Auth
-- BIMI, SPF, DKIM, DMARC tooling
-- Spam trap alerts + inbox placement audits
-- IP reputation scores & remediation guidance
+    {/* Testimonial */}
+    <section className="py-16 px-6 sm:px-10 lg:px-20 max-w-4xl mx-auto text-center">
+        <blockquote className="text-xl italic text-gray-700 border-l-4 border-indigo-500 pl-6">
+            “Laravel Mail is just awesome. Tons of pre-designed templates, automation tools, and full Laravel
+            integration. It’s the perfect tool for serious devs and indie marketers.”
+        </blockquote>
+        <cite className="block mt-4 font-semibold text-indigo-600">— Micheal, CEO at Mobila Moldova 🇲🇩</cite>
+    </section>
 
-全部数据加密保护 ✅ | Данные под замком ✅ | Your users, your rules.
+    {/* JSON-LD Structured Data */}
+    <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Laravel Mail – Self-Hosted Marketing Platform",
+            "image": "https://laravelmail.com/logo.svg",
+            "description": "A self-hosted, multi-channel Laravel marketing platform with visual automation, dynamic content, and Blade-powered templates. Built for developers and privacy-focused teams.",
+            "brand": {
+                "@type": "Organization",
+                "name": "Laravel Company"
+            },
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "url": "https://laravelmail.com/pricing",
+                    "priceCurrency": "GBP",
+                    "price": "25.00",
+                    "priceValidUntil": "2026-01-01",
+                    "availability": "https://schema.org/InStock",
+                    "seller": {
+                        "@type": "Organization",
+                        "name": "Laravel Company",
+                        "url": "https://laravelcompany.com"
+                    },
+                    "license": "https://laravelmail.com/licenses",
+                    "description": "Indie Hacker License - One project, lifetime updates"
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "29"
+            },
+            "faqPage": true,
+            "applicationCategory": "Marketing Automation, Email, Laravel",
+            "operatingSystem": "Linux, Windows, macOS",
+            "softwareVersion": "v1.0",
+            "datePublished": "2024-07-18",
+            "isAccessibleForFree": true
+        })
+    }}/>
 
----
+    <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Is Laravel Mail really self-hosted?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes! You install it directly on your server or cloud infrastructure. You own all data, emails, and templates. No third-party servers involved."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I use Blade templates for emails?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Absolutely. Laravel Mail supports full Blade syntax, including components, layouts, and dynamic PHP logic inside your email templates."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does it support multi-channel messaging?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Currently focused on email, with SMS and push notifications in development. You can extend it via webhooks and Laravel Events."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How does automation work?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Use the drag-and-drop builder to create journeys triggered by Laravel events, user actions, or schedules. Supports delays, conditions, and multi-step flows."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is it GDPR compliant?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. All analytics are encrypted, and we provide tools for consent management, data export, and deletion — fully integrated with Laravel Auth."
+                    }
+                }
+            ]
+        })
+    }}/>
 
-## 🚀 Built for Devs
+    <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://laravelcompany.com"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Products",
+                    "item": "https://laravelcompany.com/software"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Laravel Mail",
+                    "item": "https://laravelcompany.com/software/laravel-mail"
+                }
+            ]
+        })
+    }}/>
 
-Laravel Mail isn’t just another SaaS. It's your **framework-native** ESP, empowering Laravel devs to build complex workflows without the SaaS tax.
-
-- 🛠 Artisan-powered CLI tools
-- 🧪 Docker containers for cross-client testing
-- 🔍 Visual Regression Testing
-- 🛑 Rollback failed template deploys
-- 🤝 Version-controlled templates & previews
-
-Local-first, dev-friendly, open-core.
-
----
-
-## 🎯 Use Cases
-
-- Marketing campaigns with deep user segmentation
-- Triggered emails based on app events (Laravel Events!)
-- Multi-language onboarding flows
-- Abandoned cart reminders with dynamic product data
-- Role-specific transactional messaging
-
-你可以根据用户的行为定制每一个邮件内容 🐉  
-Пиши как будто знаешь пользователя лично 😎
-
----
-
-## ⚙️ Requirements
-
-- Laravel 10+
-- PHP 8.1+
-- MySQL / PostgreSQL
-- NodeJS + Composer
-- Mailhog (for local dev)
-- Docker (optional for testing)
-
----
-
-## 💰 Pricing & Licensing
-
-| License Type | Price | Includes |
-|--------------|-------|----------|
-| Indie Hacker | $39 | 1 project, lifetime updates |
-| SaaS Builder | $89 | Unlimited installs, white-labelling |
-| Enterprise | Custom | Dedicated support & SLAs |
-
-🔥 All plans include:
-- 2000+ Email Templates
-- Visual Automation Builder
-- Git-powered workflows
-- Community Discord access
-- 6 months of priority support
-
----
-
-## 📣 Join the Community
-
-- [GitHub](https://github.com/laravelmail) – MIT licensed, issue-first
-- [Discord](https://discord.gg/laravelmail) – 24/7 nerd support
-- [X / Twitter](https://x.com/laravelmail) – ship logs + memes
-- [ProductHunt Launch](https://producthunt.com) – coming soon
-
----
-
-## 🎬 Try Laravel Mail Now
-
-Ready to launch email automation **on your own terms**?  
-Spin up Laravel Mail today, and empower your team to send smarter, safer, and faster. 🔥
-
-👉 [Get Started Free](https://laravelmail.com)  
-👉 [Watch the Demo](https://laravelmail.com/demo)  
-👉 [Buy a License](https://laravelmail.com/pricing)
-
----
-
-> “Laravel Mail is just awesome. Tons of pre-designed templates, automation tools, and full Laravel integration. It’s the perfect tool for serious devs and indie marketers.”
-> — **Micheal**, CEO at Mobila Moldova 🇲🇩
-
+    {/* Footer */}
+    <footer className="w-full bg-white text-center p-8">
+        <div className="max-w-screen-xl mx-auto flex flex-col items-center space-y-4">
+            <img
+                src="https://laravelcompany.com/logo-light.svg"
+                alt="Laravel Company Logo"
+                className="w-20"
+            />
+            <a
+                href="https://laravelcompany.com"
+                className="text-2xl font-semibold text-black"
+            >
+                Laravel™ Company
+            </a>
+            <p className="text-gray-500 text-center">
+                Laravel™ Company — empowering developers worldwide 🌍<br/>
+                自主可控 | Полный контроль
+            </p>
+            <div className="text-sm text-gray-500">
+                © 2002 <a href="https://laravelcompany.com" className="hover:underline">Laravel™ Company</a>. All Rights
+                Reserved.
+            </div>
+        </div>
+    </footer>
+</div>
