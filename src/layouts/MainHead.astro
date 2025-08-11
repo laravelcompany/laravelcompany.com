@@ -23,6 +23,12 @@ const { title, description, image, frontmatter, robots } = Astro.props;
     {frontmatter}
     {robots}
   />
+    <script type="speculationrules">
+        {
+          "prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }],
+          "prefetch": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }]
+        }
+    </script>
 
   <script>
     (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
