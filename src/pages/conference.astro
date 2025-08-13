@@ -1,0 +1,354 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Sponsors from "../components/sections/Sponsors.astro";
+
+const talks = [
+    {
+        title: "Scaling Laravel Apps for Millions of Users",
+        speaker: "Andrei Popescu",
+        description: "Learn proven strategies for scaling Laravel applications with queues, caching, and service-oriented architecture.",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[color:var(--swatch-1)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18M3 10h18M3 15h18M3 20h18"/></svg>`
+    },
+    {
+        title: "Modern Laravel & AI Integration",
+        speaker: "Elena Ionescu",
+        description: "Discover how to integrate AI-powered features into your Laravel projects using OpenAI, Python APIs, and event-driven patterns.",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[color:var(--swatch-3)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3"/></svg>`
+    },
+    {
+        title: "Event-Driven Laravel with Kafka",
+        speaker: "Mihai Georgescu",
+        description: "Hands-on guide to building reactive Laravel applications using Apache Kafka and microservices.",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[color:var(--swatch-5)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>`
+    }
+];
+---
+<MainLayout title="Laravel Romania Conference 2025 | Brașov">
+    <main class="font-['Grotesk']">
+
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-red-50 via-pink-50 to-orange-50 dark:from-[color:var(--dark)] dark:via-[color:var(--black)] dark:to-gray-900">
+            <div class="container mx-auto px-4 py-20 md:py-28">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 text-center md:text-left space-y-8">
+                        <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
+                            Laravel Romania Conference <span class="pinkhead">2025</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                            🚀 On <strong>27 October 2025</strong>, Brașov becomes the epicenter of Laravel innovation.
+                            Hosted at <strong>Pensiunea Morii</strong>, this is Romania’s largest Laravel conference, bringing together developers, designers, and tech leaders from across Europe.
+                        </p>
+                        <p class="text-lg text-gray-700 dark:text-gray-400">
+                            Whether you’re here to scale your apps, integrate AI, or master event-driven microservices, you’ll be learning from the very best — and doing it in one of the most beautiful cities in Eastern Europe.
+                            Think code, culture, coffee, and castles. Yeah, it’s that good.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#talks" class="btn-primary text-center">
+                                View Talks
+                            </a>
+                            <a href="#tickets" class="btn-secondary text-center">
+                                Get Tickets
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 mt-12 md:mt-0">
+                        <img src="/images/laravel-romania-2025-hero.jpg" alt="Laravel Romania Conference Illustration" class="rounded-xl shadow-2xl mx-auto" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Attend Section -->
+        <section class="bg-white dark:bg-[color:var(--black)] py-20">
+            <div class="container mx-auto px-4 max-w-5xl space-y-8 text-gray-700 dark:text-gray-300">
+                <h2 class="text-4xl font-bold text-center">Why Attend Laravel Romania Conference 2025?</h2>
+                <p>
+                    The Laravel Romania Conference is more than a calendar event — it’s a catalyst for careers, ideas, and collaborations.
+                    Every year, global Laravel events like Laracon US and Laracon EU have proven that bringing passionate developers together sparks innovation.
+                    In 2025, we’re making that magic happen in the heart of Transylvania.
+                </p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Level Up Your Skills:</strong> Learn advanced Laravel concepts, architecture patterns, and scaling strategies you can apply immediately.</li>
+                    <li><strong>Meet Your Heroes:</strong> Chat face-to-face with developers you’ve followed on GitHub and Twitter for years.</li>
+                    <li><strong>AI & Laravel Fusion:</strong> Discover how machine learning can supercharge your applications.</li>
+                    <li><strong>Event-Driven Everything:</strong> Harness Kafka and microservices to make your apps faster and more resilient.</li>
+                    <li><strong>City Adventure:</strong> Explore Brașov’s medieval streets, mountain views, and food scene.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Schedule Section -->
+        <section id="schedule" class="bg-white dark:bg-[color:var(--black)] py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 dark:text-white">
+                        Conference <span class="text-[color:var(--swatch-1)]">Schedule</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mt-4">
+                        October 27, 2025 - Full day of Laravel insights, workshops, and networking
+                    </p>
+                </div>
+
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1">
+                        <div class="flex flex-col">
+                            <div class="flex flex-col gap-2.5 tracking-tight">
+                                <div class="text-xl font-bold leading-5">October</div>
+                                <div class="flex flex-row justify-start items-end gap-2">
+                                    <div class="text-[50px] font-bold leading-10 text-[color:var(--swatch-1)]">27</div>
+                                    <div class="text-xl font-light leading-5">Monday</div>
+                                </div>
+                            </div>
+                            <div class="h-[1px] w-full bg-gray-300 dark:bg-gray-700 mt-6 mb-8"></div>
+
+                            <ul role="list" class="mt-4">
+                                <!-- Registration -->
+                                <li class="group relative flex flex-col gap-3 pb-12 pl-[50px] last:pb-16">
+                                    <div class="absolute bottom-0 left-[15px] top-0 w-px bg-gradient-to-b from-[color:var(--swatch-5)] to-[color:var(--swatch-1)]"></div>
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-5)] to-[color:var(--swatch-1)]"></div>
+                                    <h3 class="text-2xl font-bold">Registration & Morning Coffee</h3>
+                                    <p class="text-lg text-gray-600 dark:text-gray-400">
+                                        <time>08:30</time> - <time>09:30</time>
+                                    </p>
+                                    <p class="text-gray-500 dark:text-gray-400">
+                                        Network with attendees at our speciality coffee station
+                                    </p>
+                                </li>
+
+                                <!-- Opening Keynote -->
+                                <li class="group relative flex flex-col gap-2 pb-12 pl-[50px]">
+                                    <div class="absolute bottom-0 left-[15px] top-0 w-px bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-1)]"></div>
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-2)]"></div>
+                                    <div class="flex flex-col">
+                                        <span class="text-lg font-bold text-[color:var(--swatch-1)]">Taylor Otwell</span>
+                                        <h3 class="text-2xl font-bold">Laravel 2025: What's Next?</h3>
+                                    </div>
+                                    <p class="text-lg">
+                                        <time>09:30</time> - <time>10:15</time>
+                                    </p>
+                                </li>
+
+                                <!-- Talk 2 -->
+                                <li class="group relative flex flex-col gap-2 pb-12 pl-[50px]">
+                                    <div class="absolute bottom-0 left-[15px] top-0 w-px bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-5)]"></div>
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-2)]"></div>
+                                    <div class="flex flex-col">
+                                        <span class="text-lg font-bold text-[color:var(--swatch-1)]">Marcel Ionescu</span>
+                                        <h3 class="text-2xl font-bold">Advanced Eloquent Patterns</h3>
+                                    </div>
+                                    <p class="text-lg">
+                                        <time>10:15</time> - <time>11:00</time>
+                                    </p>
+                                </li>
+
+                                <!-- Morning Break -->
+                                <li class="group relative flex flex-col gap-3 pb-12 pl-[50px]">
+                                    <div class="absolute bottom-0 left-[15px] top-0 w-px bg-gradient-to-b from-[color:var(--swatch-5)] to-[color:var(--swatch-1)]"></div>
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-5)] to-[color:var(--swatch-1)]"></div>
+                                    <h3 class="text-2xl font-bold">Networking Break</h3>
+                                    <p class="text-lg">
+                                        <time>11:00</time> - <time>11:30</time>
+                                    </p>
+                                    <p class="text-gray-500 dark:text-gray-400">
+                                        Visit sponsor booths and connect with speakers
+                                    </p>
+                                </li>
+
+                                <!-- Workshop 1 -->
+                                <li class="group relative flex flex-col gap-2 pb-12 pl-[50px]">
+                                    <div class="absolute bottom-0 left-[15px] top-0 w-px bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-1)]"></div>
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-2)]"></div>
+                                    <div class="flex flex-col">
+                                        <span class="text-lg font-bold text-[color:var(--swatch-1)]">Cristina Popa</span>
+                                        <h3 class="text-2xl font-bold">Livewire Deep Dive Workshop</h3>
+                                    </div>
+                                    <p class="text-lg">
+                                        <time>11:30</time> - <time>12:30</time>
+                                    </p>
+                                </li>
+
+                                <!-- Lunch -->
+                                <li class="group relative flex flex-col gap-3 pb-12 pl-[50px]">
+                                    <div class="absolute bottom-0 left-[15px] top-0 w-px bg-gradient-to-b from-[color:var(--swatch-5)] to-[color:var(--swatch-1)]"></div>
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-5)] to-[color:var(--swatch-1)]"></div>
+                                    <h3 class="text-2xl font-bold">Lunch & Networking</h3>
+                                    <p class="text-lg">
+                                        <time>12:30</time> - <time>13:30</time>
+                                    </p>
+                                    <p class="text-gray-500 dark:text-gray-400">
+                                        Catered Romanian cuisine with dietary options available
+                                    </p>
+                                </li>
+
+                                <!-- Talk 3 -->
+                                <li class="group relative flex flex-col gap-2 pb-12 pl-[50px]">
+                                    <div class="absolute bottom-0 left-[15px] top-0 w-px bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-1)]"></div>
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-2)]"></div>
+                                    <div class="flex flex-col">
+                                        <span class="text-lg font-bold text-[color:var(--swatch-1)]">Alexandru Vasile</span>
+                                        <h3 class="text-2xl font-bold">Microservices with Laravel</h3>
+                                    </div>
+                                    <p class="text-lg">
+                                        <time>13:30</time> - <time>14:15</time>
+                                    </p>
+                                </li>
+
+                                <!-- Talk 4 -->
+                                <li class="group relative flex flex-col gap-2 pb-12 pl-[50px]">
+                                    <div class="absolute bottom-0 left-[15px] top-0 w-px bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-5)]"></div>
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-2)]"></div>
+                                    <div class="flex flex-col">
+                                        <span class="text-lg font-bold text-[color:var(--swatch-1)]">Andrei Munteanu</span>
+                                        <h3 class="text-2xl font-bold">Laravel Performance at Scale</h3>
+                                    </div>
+                                    <p class="text-lg">
+                                        <time>14:15</time> - <time>15:00</time>
+                                    </p>
+                                </li>
+
+                                <!-- Afternoon Break -->
+                                <li class="group relative flex flex-col gap-3 pb-12 pl-[50px]">
+                                    <div class="absolute bottom-0 left-[15px] top-0 w-px bg-gradient-to-b from-[color:var(--swatch-5)] to-[color:var(--swatch-1)]"></div>
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-5)] to-[color:var(--swatch-1)]"></div>
+                                    <h3 class="text-2xl font-bold">Afternoon Coffee Break</h3>
+                                    <p class="text-lg">
+                                        <time>15:00</time> - <time>15:30</time>
+                                    </p>
+                                    <p class="text-gray-500 dark:text-gray-400">
+                                        Sponsored by Contrast.Hub - specialty coffees served
+                                    </p>
+                                </li>
+
+                                <!-- Panel -->
+                                <li class="group relative flex flex-col gap-2 pb-12 pl-[50px]">
+                                    <div class="absolute bottom-0 left-[15px] top-0 w-px bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-1)]"></div>
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-2)]"></div>
+                                    <div class="flex flex-col">
+                                        <span class="text-lg font-bold text-[color:var(--swatch-1)]">Expert Panel</span>
+                                        <h3 class="text-2xl font-bold">Future of PHP in Romania</h3>
+                                    </div>
+                                    <p class="text-lg">
+                                        <time>15:30</time> - <time>16:30</time>
+                                    </p>
+                                </li>
+
+                                <!-- Closing -->
+                                <li class="group relative flex flex-col gap-3 pb-8 pl-[50px]">
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-5)] to-[color:var(--swatch-1)]"></div>
+                                    <h3 class="text-2xl font-bold">Closing Remarks & Prizes</h3>
+                                    <p class="text-lg">
+                                        <time>16:30</time> - <time>17:00</time>
+                                    </p>
+                                </li>
+
+                                <!-- Social Event -->
+                                <li class="group relative flex flex-col gap-3 pb-8 pl-[50px]">
+                                    <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-5)] to-[color:var(--swatch-1)]"></div>
+                                    <h3 class="text-2xl font-bold">After-Party at Council Square</h3>
+                                    <p class="text-lg">
+                                        <time>18:00</time> onwards
+                                    </p>
+                                    <p class="text-gray-500 dark:text-gray-400">
+                                        Traditional Romanian dinner and drinks (included with VIP tickets)
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="#" class="inline-flex items-center text-lg font-medium text-[color:var(--swatch-1)] hover:text-[color:var(--swatch-5)] transition-colors">
+                        Download Full Schedule (PDF)
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Talks Section -->
+        <section id="talks" class="bg-[color:var(--gray)] dark:bg-[color:var(--gray)] py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                        Featured <span class="bluehead">Talks & Speakers</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                        Inspired by the energy of Laracon events worldwide, our 2025 lineup blends hands-on engineering expertise with forward-looking tech vision.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-10">
+                    {talks.map(talk => (
+                            <div class="bg-white dark:bg-[color:var(--black)] p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                                <div class="w-16 h-16 bg-[color:var(--swatch-1)]/10 rounded-full flex items-center justify-center mb-6 ring-4 ring-[color:var(--swatch-1)]/20 self-start">
+                                    <Fragment set:html={talk.icon} />
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">{talk.title}</h3>
+                                <p class="text-sm text-[color:var(--swatch-3)] mb-4">by {talk.speaker}</p>
+                                <p class="text-gray-600 dark:text-gray-300 mb-5 flex-grow">{talk.description}</p>
+                            </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Brașov Travel Guide -->
+        <section id="brasov-guide" class="bg-white dark:bg-[color:var(--black)] py-20">
+            <div class="container mx-auto px-4 max-w-6xl space-y-8 text-gray-700 dark:text-gray-300">
+                <h2 class="text-4xl font-bold text-center">Explore Brașov During Your Stay</h2>
+                <p>
+                    Brașov is where cobblestone charm meets mountain air. You’ll code during the day and explore gothic architecture, hidden cafés, and epic views in your downtime.
+                </p>
+
+                <h3 class="text-2xl font-semibold">📍 Top Attractions</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>The Black Church:</strong> A Gothic masterpiece with a history as rich as its architecture.</li>
+                    <li><strong>Council Square (Piața Sfatului):</strong> Lined with pastel buildings, outdoor cafés, and street performers.</li>
+                    <li><strong>Tampa Mountain:</strong> Ride the cable car or hike up for panoramic city views.</li>
+                    <li><strong>Catherine’s Gate:</strong> A fairy-tale medieval city entrance dating back to 1559.</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-8">🏨 Where to Stay</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Kronwell Hotel:</strong> Sleek, modern, and steps away from transport links.</li>
+                    <li><strong>Aro Palace:</strong> Five-star comfort right in the city center.</li>
+                    <li><strong>Casa Wagner:</strong> Charming rooms overlooking Council Square.</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-8">☕ Coffee & Work Spots</h3>
+                <p>
+                    If you’re a developer, good coffee isn’t optional — it’s infrastructure.
+                    That’s why you can’t miss <strong>Contrast.Hub</strong>, a café and creative space with a 4.6 rating from over 249 reviews.
+                    Located at Strada Nicolae Bălcescu 10, it’s known for its unique 2D cartoon-world interior, making it the perfect place for brainstorming new app features.
+                </p>
+                <p>
+                    💰 Prices: 20–40 lei.
+                    📍 Directions from Pensiunea Morii: Head southeast on Strada Constantin Dobrogeanu-Gherea, turn right onto Strada Michael Weiss, then left onto Strada Nicolae Bălcescu. It’s about a 10-minute walk.
+                </p>
+            </div>
+        </section>
+
+        <!-- Tickets Section -->
+        <section id="tickets" class="bg-gradient-to-r from-[color:var(--swatch-1)] to-[color:var(--swatch-5)] py-20">
+            <div class="container mx-auto px-4 text-center text-white max-w-4xl">
+                <h2 class="text-4xl font-bold mb-6">🎟 Secure Your Spot</h2>
+                <p class="text-xl mb-8">
+                    Early-bird tickets available now — and once they’re gone, they’re gone.
+                    Join 300+ developers in a city where medieval history meets modern innovation.
+                </p>
+                <a href="https://laravelromania.ro/tickets" target="_blank" class="bg-white text-[color:var(--swatch-1)] font-bold py-4 px-10 rounded-lg text-lg hover:bg-gray-100 transition-all duration-300">
+                    Buy Tickets Now →
+                </a>
+            </div>
+        </section>
+
+        <Sponsors />
+
+        <!-- Footer -->
+        <footer class="bg-[color:var(--black)] dark:bg-black text-gray-300 py-12">
+            <div class="container mx-auto px-4 text-center">
+                <p class="mb-4">&copy; {new Date().getFullYear()} Laravel Romania Conference. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+</MainLayout>
