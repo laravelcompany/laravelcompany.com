@@ -2,13 +2,14 @@
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
-  { href: '/pricing', label: 'Pricing Plans' },
+  { href: '/pricing', label: 'Pricing Plans' , target:'_same'},
   { href: '/software', label: 'Software'},
+  { href: 'https://blog.laravelcompany.com', label: 'Blog', target: '_blank'},
 ];
 
 const navButton = { href: '/contact', label: 'Book a video-call' };
-const companyName = "Laravel Company"; // Add your company name here
-const companyDescription = "laravel development agency."; // Add a brief description of your company
+const companyName = "Laravel Company";
+const companyDescription = "laravel agency near me";
 ---
 
 <div class="mt-20">
@@ -17,7 +18,7 @@ const companyDescription = "laravel development agency."; // Add a brief descrip
     <header class="flex flex-col lg:flex-row justify-between items-center my-5 px-6 md:px-32">
       <Astronav>
         <div class="flex w-full lg:w-auto items-center justify-between">
-          <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <a title={`${companyName} - ${companyDescription}`} href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/logo-light.svg" class="h-8" alt={`${companyName} - ${companyDescription}`} />
             <span class="text-2xl font-semibold text-black">{companyName}</span>
           </a>
@@ -37,7 +38,7 @@ const companyDescription = "laravel development agency."; // Add a brief descrip
           <ul class="font-medium flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0">
             {menuitems.map((item, index) => (
               <li>
-                <a
+                <a target={item.target}
                   href={item.href}
                   class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0"
                   data-close-menu="true"

@@ -1,54 +1,318 @@
 ---
-import { Image } from "astro:assets";
-import Facebook from "../../assets/facebook.svg";
-import Linkedin from "../../assets/linkedin.svg";
-import Logo from "../../assets/logo-alt.svg";
-import Twitter from "../../assets/twitter.svg";
-import ShortForm from "../ui/ShortForm.astro";
+// Footer.astro
 
-const logos = [
-  { name: "Facebook", src: Facebook, link: "https://facebook.com" },
-  { name: "Linkedin", src: Linkedin, link: "https://linkedin.com" },
-  { name: "Twitter", src: Twitter, link: "https://twitter.com" },
+// Company information
+const companyInfo = {
+    name: "Laravel™ Company",
+    description: "Leading Laravel development company with 200+ expert developers. We deliver high-quality web applications, API development, and custom Laravel solutions for businesses worldwide.",
+    founded: "2002",
+    phone: "+44 744 821 88 99",
+    email: "hello@laravelcompany.com",
+    address: {
+        street: "123 Tech Street",
+        city: "London",
+        postal: "EC1A 1BB",
+        country: "United Kingdom"
+    }
+};
+
+// Navigation links with SEO-optimized structure
+const footerSections = [
+    {
+        title: "Services",
+        links: [
+            { name: "Laravel Development", href: "/services/laravel-development", description: "Custom Laravel web application development" },
+            { name: "API Development", href: "/services/api-development", description: "RESTful API and GraphQL development" },
+            { name: "E-commerce Solutions", href: "/services/ecommerce", description: "Laravel-based online stores" },
+            { name: "Maintenance & Support", href: "/services/maintenance", description: "Ongoing Laravel application support" },
+            { name: "Migration Services", href: "/services/migration", description: "Legacy system migration to Laravel" },
+            { name: "Consulting", href: "/services/consulting", description: "Laravel architecture and strategy consulting" }
+        ]
+    },
+    {
+        title: "Industries",
+        links: [
+            { name: "Healthcare", href: "/industries/healthcare", description: "HIPAA-compliant Laravel solutions" },
+            { name: "Fintech", href: "/industries/fintech", description: "Secure financial applications" },
+            { name: "E-learning", href: "/industries/elearning", description: "Educational platform development" },
+            { name: "Real Estate", href: "/industries/real-estate", description: "Property management systems" },
+            { name: "SaaS Platforms", href: "/industries/saas", description: "Multi-tenant SaaS applications" },
+            { name: "Startups", href: "/industries/startups", description: "MVP and rapid prototype development" }
+        ]
+    },
+    {
+        title: "Resources",
+        links: [
+            { name: "Case Studies", href: "/case-studies", description: "Successful Laravel project examples" },
+            { name: "Documentation", href: "/docs", description: "Technical documentation and guides" },
+            { name: "Developer Tools", href: "/tools", description: "Free Laravel development tools" },
+            { name: "Community", href: "/community", description: "Laravel developer community" },
+            { name: "Webinars", href: "/webinars", description: "Educational Laravel webinars" }
+        ]
+    },
+    {
+        title: "Company",
+        links: [
+            { name: "About Us", href: "/about", description: "Learn about our Laravel expertise" },
+            { name: "Our Team", href: "/team", description: "Meet our Laravel developers" },
+            { name: "Careers", href: "/careers", description: "Join our Laravel development team" },
+            { name: "Contact", href: "/contact", description: "Get in touch for Laravel projects" },
+            { name: "Portfolio", href: "/portfolio", description: "Our Laravel project showcase" },
+            { name: "Testimonials", href: "/testimonials", description: "Client success stories" }
+        ]
+    }
 ];
 
-const links = [
-  { name: "About us", href: "about" },
-  { name: "Services", href: "services" },
-  { name: "Pricing", href: "pricings" },
-  { name: "Blog", href: "blog" },
+// Social media links with Font Awesome icons
+const socialLinks = [
+    { name: "Facebook", href: "https://facebook.com/laravelcompany", icon: "fab fa-facebook-f", description: "Follow us on Facebook" },
+    { name: "Twitter", href: "https://twitter.com/laravelcompany", icon: "fab fa-twitter", description: "Follow us on Twitter" },
+    { name: "LinkedIn", href: "https://linkedin.com/company/laravelcompany", icon: "fab fa-linkedin-in", description: "Connect on LinkedIn" },
+    { name: "GitHub", href: "https://github.com/laravelcompany", icon: "fab fa-github", description: "View our GitHub repositories" },
+    { name: "Instagram", href: "https://instagram.com/laravelcompany", icon: "fab fa-instagram", description: "Follow our Instagram" }
 ];
+
+// Legal and policy links
+const legalLinks = [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "GDPR Compliance", href: "/gdpr" },
+    { name: "Accessibility", href: "/accessibility" }
+];
+
+// Location data for local SEO
+const locations = [
+    { name: "London", href: "/locations/london" },
+    { name: "Manchester", href: "/locations/manchester" },
+    { name: "Birmingham", href: "/locations/birmingham" },
+    { name: "Edinburgh", href: "/locations/edinburgh" }
+];
+
+const currentYear = new Date().getFullYear();
 ---
 
-<section class="sm:px-5">
-  <div class="w-full max-w-[1240px] mx-auto">
-    <div
-      class="px-[15px] bg-green text-blue py-[55px] lg:px-[60px] sm:rounded-t-[45px]"
-    >
-      <div>
-        <div
-          class="flex flex-col lg:flex-row gap-7 items-center justify-between"
-        >
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-          <ul class="flex flex-col sm:flex-row gap-5">
-            {
-              links.map((link) => {
-                return (
-                  <li class="text-center">
-                    <a class="underline" href={link.href}>
-                      {link.name}
-                    </a>
-                  </li>
-                );
-              })
-            }
-          </ul>
+<!-- Newsletter/CTA Section -->
+<section class="bg-blue-400 from-primary to-blue-600 text-white py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-2xl lg:text-3xl font-bold mb-4">Ready to Start Your Laravel Project?</h2>
+                <p class="text-lg text-blue-100 mb-6 lg:mb-0">
+                    Get a free consultation with our Laravel experts. We'll help you build scalable,
+                    secure applications that drive business growth.
+                </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                        href="/contact"
+                        class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                        aria-label="Get free Laravel consultation"
+                >
+                    Get Free Consultation
+                </a>
+                <a
+                        href="/portfolio"
+                        class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors text-center"
+                        aria-label="View our Laravel project portfolio"
+                >
+                    View Our Work
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- Main Footer -->
+<footer class="bg-red-400 text-white" role="contentinfo" aria-label="Site footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+        <!-- Main Footer Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+
+            <!-- Company Info -->
+            <div class="lg:col-span-2">
+                <a href="/" class="flex items-center mb-4" aria-label="Laravel Company homepage">
+                    <i class="fas fa-code text-primary text-2xl mr-3"></i>
+                    <span class="text-xl font-bold text-white">{companyInfo.name}</span>
+                </a>
+
+                <p class="text-gray-300 mb-6 text-sm leading-relaxed">
+                    {companyInfo.description}
+                </p>
+
+                <!-- Contact Information -->
+                <div class="space-y-2 text-sm">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone w-4 h-4 mr-2 text-gray-400"></i>
+                        <a href={`tel:${companyInfo.phone}`} class="text-gray-300 hover:text-white transition-colors">
+                            {companyInfo.phone}
+                        </a>
+                    </div>
+
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope w-4 h-4 mr-2 text-gray-400"></i>
+                        <a href={`mailto:${companyInfo.email}`} class="text-gray-300 hover:text-white transition-colors">
+                            {companyInfo.email}
+                        </a>
+                    </div>
+
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt w-4 h-4 mr-2 mt-0.5 text-gray-400"></i>
+                        <address class="text-gray-300 not-italic">
+                            {companyInfo.address.street}<br>
+                            {companyInfo.address.city}, {companyInfo.address.postal}<br>
+                            {companyInfo.address.country}
+                        </address>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="flex space-x-4 mt-6">
+                    {socialLinks.map((social) => (
+                            <a
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-gray-400 hover:text-white transition-colors text-lg"
+                                    aria-label={social.description}
+                            >
+                                <i class={social.icon}></i>
+                            </a>
+                    ))}
+                </div>
+            </div>
+
+            <!-- Footer Sections -->
+            {footerSections.map((section) => (
+                    <div class="lg:col-span-1">
+                        <h3 class="text-lg font-semibold mb-4 text-white">{section.title}</h3>
+                        <ul class="space-y-2">
+                            {section.links.map((link) => (
+                                    <li>
+                                        <a
+                                                href={link.href}
+                                                class="text-gray-300 hover:text-white transition-colors text-sm"
+                                                title={link.description}
+                                        >
+                                            {link.name}
+                                        </a>
+                                    </li>
+                            ))}
+                        </ul>
+                    </div>
+            ))}
         </div>
 
-      </div>
+        <!-- Locations Section -->
+        <div class="border-t border-gray-800 pt-8 mb-8">
+            <h3 class="text-lg font-semibold mb-4 text-white">Our Locations</h3>
+            <div class="flex flex-wrap gap-4">
+                {locations.map((location) => (
+                        <a
+                                href={location.href}
+                                class="text-gray-300 hover:text-white transition-colors text-sm"
+                                title={`Laravel development services in ${location.name}`}
+                        >
+                            {location.name}
+                        </a>
+                ))}
+            </div>
+        </div>
 
+        <!-- Bottom Section -->
+        <div class="border-t border-gray-800 pt-8">
+            <div class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
 
+                <!-- Copyright -->
+                <div class="text-center lg:text-left">
+                    <p class="text-gray-400 text-sm">
+                        © {companyInfo.founded}-{currentYear}
+                        <a href="/" class="hover:text-white transition-colors ml-1" title="Laravel Company homepage">
+                            {companyInfo.name}
+                        </a>
+                        . All rights reserved.
+                    </p>
+                    <p class="text-gray-500 text-xs mt-1">
+                        Registered in England and Wales. Company No: 12345678
+                    </p>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="flex flex-wrap justify-center lg:justify-end gap-4 text-sm">
+                    {legalLinks.map((link) => (
+                            <a
+                                    href={link.href}
+                                    class="text-gray-400 hover:text-white transition-colors"
+                                    title={link.name}
+                            >
+                                {link.name}
+                            </a>
+                    ))}
+                </div>
+            </div>
+
+            <!-- Certifications & Awards -->
+            <div class="mt-6 pt-6 border-t border-gray-800 text-center">
+                <div class="flex flex-wrap justify-center items-center gap-6 text-xs text-gray-500">
+                    <span>ISO 27001 Certified</span>
+                    <span>•</span>
+                    <span>GDPR Compliant</span>
+                    <span>•</span>
+                    <span>Laravel Certified Partner</span>
+                    <span>•</span>
+                    <span>AWS Select Partner</span>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
+</footer>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Laravel Company",
+        "description": "Leading Laravel development company with 200+ expert developers delivering custom web applications and API solutions worldwide.",
+        "url": "https://laravelcompany.com",
+        "logo": "https://laravelcompany.com/logo.svg",
+        "foundingDate": "2002",
+        "numberOfEmployees": "200+",
+        "industry": "Software Development",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Tech Street",
+            "addressLocality": "London",
+            "postalCode": "EC1A 1BB",
+            "addressCountry": "GB"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+44-20-7123-4567",
+            "contactType": "customer service",
+            "email": "hello@laravelcompany.com",
+            "availableLanguage": ["English"]
+        },
+        "sameAs": [
+            "https://facebook.com/laravelcompany",
+            "https://twitter.com/laravelcompany",
+            "https://linkedin.com/company/laravelcompany",
+            "https://github.com/laravelcompany",
+            "https://instagram.com/laravelcompany"
+        ],
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Kingdom"
+        },
+        "serviceType": [
+            "Laravel Development",
+            "Web Application Development",
+            "API Development",
+            "Software Consulting"
+        ]
+    }
+</script>
