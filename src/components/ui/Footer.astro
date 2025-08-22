@@ -83,10 +83,14 @@ const legalLinks = [
 
 // Location data for local SEO
 const locations = [
-    { name: "London", href: "/locations/london" },
-    { name: "Manchester", href: "/locations/manchester" },
-    { name: "Birmingham", href: "/locations/birmingham" },
-    { name: "Edinburgh", href: "/locations/edinburgh" }
+    { name: "London", href: "/contact" },
+    { name: "Manchester", href: "/contact" },
+    { name: "Birmingham", href: "/contact" },
+    { name: "Edinburgh", href: "/contact" },
+    { name: "Bucharest", href: "/contact" },
+    { name: "Iasi", href: "/contact" },
+    { name: "Iasi", href: "/contact" },
+    { name: "Milan", href: "/contact" }
 ];
 
 const currentYear = new Date().getFullYear();
@@ -109,17 +113,17 @@ const currentYear = new Date().getFullYear();
             <div class="flex flex-col sm:flex-row gap-4">
                 <a
                         href="/contact"
-                        class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                        class="bg-red-500 text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                         aria-label="Get free Laravel consultation"
                 >
                     Get Free Consultation
                 </a>
                 <a
                         href="/portfolio"
-                        class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors text-center"
+                        class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-500 hover:text-primary transition-colors text-center"
                         aria-label="View our Laravel project portfolio"
                 >
-                    View Our Work
+                    Demo
                 </a>
             </div>
         </div>
@@ -186,25 +190,7 @@ const currentYear = new Date().getFullYear();
                 </div>
             </div>
 
-            <!-- Footer Sections -->
-            {footerSections.map((section) => (
-                    <div class="lg:col-span-1">
-                        <h3 class="text-lg font-semibold mb-4 text-white">{section.title}</h3>
-                        <ul class="space-y-2">
-                            {section.links.map((link) => (
-                                    <li>
-                                        <a
-                                                href={link.href}
-                                                class="text-gray-300 hover:text-white transition-colors text-sm"
-                                                title={link.description}
-                                        >
-                                            {link.name}
-                                        </a>
-                                    </li>
-                            ))}
-                        </ul>
-                    </div>
-            ))}
+
         </div>
 
         <!-- Locations Section -->
@@ -262,9 +248,9 @@ const currentYear = new Date().getFullYear();
                     <span>•</span>
                     <span>GDPR Compliant</span>
                     <span>•</span>
-                    <span>Laravel Certified Partner</span>
-                    <span>•</span>
                     <span>AWS Select Partner</span>
+                    <span>•</span>
+                    <span>GPC Select Partner</span>
                 </div>
             </div>
         </div>
@@ -285,24 +271,20 @@ const currentYear = new Date().getFullYear();
         "industry": "Software Development",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "123 Tech Street",
+            "streetAddress": "102 High Street",
             "addressLocality": "London",
-            "postalCode": "EC1A 1BB",
+            "postalCode": "SS12 9AT",
             "addressCountry": "GB"
         },
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+44-20-7123-4567",
+            "telephone": "+44-744-821-8899",
             "contactType": "customer service",
             "email": "hello@laravelcompany.com",
             "availableLanguage": ["English"]
         },
         "sameAs": [
-            "https://facebook.com/laravelcompany",
-            "https://twitter.com/laravelcompany",
-            "https://linkedin.com/company/laravelcompany",
-            "https://github.com/laravelcompany",
-            "https://instagram.com/laravelcompany"
+            "https://github.com/laravelcompany"
         ],
         "areaServed": {
             "@type": "Country",
