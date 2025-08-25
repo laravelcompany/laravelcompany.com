@@ -1,11 +1,4 @@
 ---
-import SectionTitle from "../ui/SectionTitle.astro";
-import TeamCard from "../ui/TeamCard.astro";
-import Section from "./Section.astro";
-
-const description =
-  "Meet the skilled and experienced team behind our successful digital marketing strategies";
-
 // Team images
 import p1 from "../../assets/team/t1.png";
 import p2 from "../../assets/team/t2.png";
@@ -15,78 +8,69 @@ import p5 from "../../assets/team/t5.png";
 import p6 from "../../assets/team/t6.png";
 
 const team = [
-  {
-    pic: p1,
-    name: "John Smith",
-    role: "CEO and Founder",
-    description:
-      "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: p2,
-    name: "Jane Doe",
-    role: "Director of Operations",
-    description:
-      "7+ years of experience in project management and team leadership. Strong organizational and communication skills",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: p3,
-    name: "Michael Brown",
-    role: "Senior SEO Specialist",
-    description:
-      "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: p4,
-    name: "Emily Johnson",
-    role: "PPC Manager",
-    description:
-      "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: p5,
-    name: "Brian Williams",
-    role: "Social Media Specialist",
-    description:
-      "4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement",
-    link: "https://linkedin.com",
-  },
-  {
-    pic: p6,
-    name: "Sarah Kim",
-    role: "Content Creator",
-    description:
-      "2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries",
-    link: "https://linkedin.com",
-  },
+    {
+        pic: p1,
+        name: "John Smith",
+        role: "CEO & Founder",
+    },
+    {
+        pic: p2,
+        name: "Jane Doe",
+        role: "Director of Operations",
+    },
+    {
+        pic: p3,
+        name: "Michael Brown",
+        role: "Senior SEO Specialist",
+    },
+    {
+        pic: p4,
+        name: "Emily Johnson",
+        role: "PPC Manager",
+    },
+    {
+        pic: p5,
+        name: "Brian Williams",
+        role: "Social Media Specialist",
+    },
+    {
+        pic: p6,
+        name: "Sarah Kim",
+        role: "Content Creator",
+    },
 ];
 ---
 
-<Section id="about">
-  <div class="mt-[140px]">
-    <SectionTitle sectionTitle="Team" description={description} />
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-2 gap-10"
-    >
-      {
-        team.map((member, index) => (
-          <TeamCard
-            key={index}
-            pic={member.pic}
-            name={member.name}
-            role={member.role}
-            description={member.description}
-            link={member.link}
-          />
-        ))
-      }
-    </div>
-    <div class="flex justify-end mt-10">
-      <button class="btn-primary">See all team</button>
-    </div>
-  </div>
-</Section>
+<div class="w-full border border-gray-100 dark:border-gray-800 rounded-lg">
+    <section class="bg-white dark:bg-gray-900 antialiased">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+            <div class="flex flex-col gap-8 sm:gap-12 xl:gap-16 xl:flex-row xl:items-start">
+                <div>
+                    <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white">Our people make us great</h2>
+                    <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">Here we focus on markets where technology, innovation, can unlock long-term value.</p>
+                    <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">You'll interact with talented professionals, will be challenged to solve difficult problems and think in new and creative ways.</p>
+                    <div class="mt-4">
+                        <a href="#" type="button" class="group relative flex items-stretch justify-center p-0.5 text-center font-medium transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] focus:z-10 focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 rounded-lg w-fit [&>span]:items-center">
+                            <span class="flex items-stretch transition-all duration-200 rounded-md px-4 py-2 text-sm">View more<svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid w-full grid-cols-1 gap-4 xl:max-w-3xl shrink-0 sm:grid-cols-2 md:grid-cols-3">
+                    {
+                        team.map((member) => (
+                                <div class="relative overflow-hidden rounded-lg group">
+                                    <img class="object-cover w-full h-[320px] lg:h-auto scale-100 ease-in duration-300 group-hover:scale-125" src={member.pic.src} alt="" />
+                                    <div class="absolute inset-0 grid items-end justify-center p-4 bg-gradient-to-b from-transparent to-black/60">
+                                        <div class="text-center">
+                                            <p class="text-xl font-bold text-white">{member.name}</p>
+                                            <p class="text-base font-medium text-gray-300">{member.role}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
