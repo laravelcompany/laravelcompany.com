@@ -18,14 +18,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
     "@astrojs/cloudflare": "^12.6.2",
-    "@astrojs/mdx": "^4.3.3",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/mdx": "^4",
+    "@astrojs/tailwind": "^5",
     "astro": "^5",
-    "astro-navbar": "^2.3.3",
-    "swiper": "^11.1.14",
-    "tailwindcss": "^3.4.11",
-    "typescript": "^5.6.2"
+    "astro-navbar": "^2",
+    "swiper": "^11",
+    "tailwindcss": "^3",
+    "typescript": "^5"
   }
 }
