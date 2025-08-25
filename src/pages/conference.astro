@@ -4,8 +4,14 @@ import Sponsors from "../components/sections/Sponsors.astro";
 
 const talks = [
     {
+        title: "Using Laravel Mail for SMS distribution Users",
+        speaker: "Mihai Bogdan",
+        description: "Learn proven strategies for scaling Laravel applications with queues, caching, and service-oriented architecture.",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[color:var(--swatch-1)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18M3 10h18M3 15h18M3 20h18"/></svg>`
+    },
+    {
         title: "Scaling Laravel Apps for Millions of Users",
-        speaker: "Andrei Popescu",
+        speaker: "Stefan Bogdan",
         description: "Learn proven strategies for scaling Laravel applications with queues, caching, and service-oriented architecture.",
         icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[color:var(--swatch-1)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18M3 10h18M3 15h18M3 20h18"/></svg>`
     },
@@ -23,7 +29,7 @@ const talks = [
     }
 ];
 ---
-<MainLayout title="Laravel Romania Conference 2025 | Brașov">
+<MainLayout title="Laravel Romania Conference 2026 | Brașov">
     <main class="font-['Grotesk']">
 
         <!-- Hero Section -->
@@ -32,11 +38,12 @@ const talks = [
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2 text-center md:text-left space-y-8">
                         <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
-                            Laravel Romania Conference <span class="pinkhead">2025</span>
+                            Laravel Love Romania Conference <span class="pinkhead">24 February 2026</span>
                         </h1>
                         <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                            🚀 On <strong>27 October 2025</strong>, Brașov becomes the epicenter of Laravel innovation.
-                            Hosted at <strong>Pensiunea Morii</strong>, this is Romania’s largest Laravel conference, bringing together developers, designers, and tech leaders from across Europe.
+                            🚀 On <strong>27 March 2026</strong>, Brașov becomes the epicenter of Laravel innovation.
+                            Hosted at <strong>Centrul Cultural „Reduta” din Brașov</strong>, this is Romania’s take on a Laravel conference,
+                            bringing together developers, designers, and tech leaders from across Europe.
                         </p>
                         <p class="text-lg text-gray-700 dark:text-gray-400">
                             Whether you’re here to scale your apps, integrate AI, or master event-driven microservices, you’ll be learning from the very best — and doing it in one of the most beautiful cities in Eastern Europe.
@@ -52,7 +59,7 @@ const talks = [
                         </div>
                     </div>
                     <div class="md:w-1/2 mt-12 md:mt-0">
-                        <img src="/images/laravel-romania-2025-hero.jpg" alt="Laravel Romania Conference Illustration" class="rounded-xl shadow-2xl mx-auto" />
+                        <img src="" alt="Laravel Romania Conference Illustration" class="rounded-xl shadow-2xl mx-auto" />
                     </div>
                 </div>
             </div>
@@ -61,9 +68,9 @@ const talks = [
         <!-- Why Attend Section -->
         <section class="bg-white dark:bg-[color:var(--black)] py-20">
             <div class="container mx-auto px-4 max-w-5xl space-y-8 text-gray-700 dark:text-gray-300">
-                <h2 class="text-4xl font-bold text-center">Why Attend Laravel Romania Conference 2025?</h2>
+                <h2 class="text-4xl font-bold text-center">Why Attend Laravel Love Romania Conference 2026?</h2>
                 <p>
-                    The Laravel Romania Conference is more than a calendar event — it’s a catalyst for careers, ideas, and collaborations.
+                    The Laravel Love Romania Conference is more than a calendar event — it’s a catalyst for careers, ideas, and collaborations.
                     Every year, global Laravel events like Laracon US and Laracon EU have proven that bringing passionate developers together sparks innovation.
                     In 2025, we’re making that magic happen in the heart of Transylvania.
                 </p>
@@ -119,7 +126,7 @@ const talks = [
                                     <div class="absolute bottom-0 left-[15px] top-0 w-px bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-1)]"></div>
                                     <div class="absolute left-0 top-0 h-5 w-5 rounded-full bg-gradient-to-b from-[color:var(--swatch-1)] to-[color:var(--swatch-2)]"></div>
                                     <div class="flex flex-col">
-                                        <span class="text-lg font-bold text-[color:var(--swatch-1)]">Taylor Otwell</span>
+                                        <span class="text-lg font-bold text-[color:var(--swatch-1)]">Stefan Bogdan</span>
                                         <h3 class="text-2xl font-bold">Laravel 2025: What's Next?</h3>
                                     </div>
                                     <p class="text-lg">
@@ -255,15 +262,6 @@ const talks = [
                         </div>
                     </div>
                 </div>
-
-                <div class="mt-12 text-center">
-                    <a href="#" class="inline-flex items-center text-lg font-medium text-[color:var(--swatch-1)] hover:text-[color:var(--swatch-5)] transition-colors">
-                        Download Full Schedule (PDF)
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                        </svg>
-                    </a>
-                </div>
             </div>
         </section>
         <!-- Talks Section -->
@@ -323,7 +321,6 @@ const talks = [
                 </p>
                 <p>
                     💰 Prices: 20–40 lei.
-                    📍 Directions from Pensiunea Morii: Head southeast on Strada Constantin Dobrogeanu-Gherea, turn right onto Strada Michael Weiss, then left onto Strada Nicolae Bălcescu. It’s about a 10-minute walk.
                 </p>
             </div>
         </section>
@@ -336,7 +333,7 @@ const talks = [
                     Early-bird tickets available now — and once they’re gone, they’re gone.
                     Join 300+ developers in a city where medieval history meets modern innovation.
                 </p>
-                <a href="https://laravelromania.ro/tickets" target="_blank" class="bg-white text-[color:var(--swatch-1)] font-bold py-4 px-10 rounded-lg text-lg hover:bg-gray-100 transition-all duration-300">
+                <a href="https://laravelcompany.com/tickets" target="_blank" class="bg-white text-[color:var(--swatch-1)] font-bold py-4 px-10 rounded-lg text-lg hover:bg-gray-100 transition-all duration-300">
                     Buy Tickets Now →
                 </a>
             </div>
@@ -347,7 +344,7 @@ const talks = [
         <!-- Footer -->
         <footer class="bg-[color:var(--black)] dark:bg-black text-gray-300 py-12">
             <div class="container mx-auto px-4 text-center">
-                <p class="mb-4">&copy; {new Date().getFullYear()} Laravel Romania Conference. All rights reserved.</p>
+                <p class="mb-4">&copy; {new Date().getFullYear()} Laravel Love Romania Conference. All rights reserved.</p>
             </div>
         </footer>
     </main>

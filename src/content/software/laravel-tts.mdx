@@ -1,0 +1,138 @@
+---
+title: "Laravel TTS"
+image: "https://laravelcompany.com/logo-light.svg"
+slug: laravel-tts
+summary: "Ditch monthly fees. Laravel TTS offers powerful ElevenLabs-style AI voice generation, cloning, and real-time chat—hosted on your server for ultimate control and privacy."
+---
+export default function VoiceStudioPage() {
+return (
+<div className="bg-white min-h-screen text-gray-800 antialiased">
+{/* 🚀 Hero Section */}
+<section className="bg-gradient-to-br from-indigo-50 to-purple-100 py-20 px-6 sm:px-10 lg:px-20 text-center">
+<h1 className="text-4xl md:text-5xl font-extrabold text-indigo-900 mb-6">
+🎙️ Advanced AI Voice Studio
+</h1>
+<p className="text-xl text-gray-600 max-w-3xl mx-auto">
+Generate professional voiceovers, clone your voice, and chat with AI in real-time — all in a
+self-hosted Python app. No SaaS lock-in, full control. 🔥
+</p>
+</section>
+
+      {/* ✨ Features */}
+      <section className="py-20 px-6 sm:px-10 lg:px-20 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+          ✨ Key Features
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200">
+            <h3 className="text-xl font-semibold text-indigo-700 mb-3">🧠 AI Scriptwriter</h3>
+            <p className="text-gray-600 text-sm">Generate engaging scripts from a simple topic using Ollama LLM.</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200">
+            <h3 className="text-xl font-semibold text-indigo-700 mb-3">🎤 Voice Cloning</h3>
+            <p className="text-gray-600 text-sm">Upload a short sample (5s–2min) and clone your own unique voice.</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200">
+            <h3 className="text-xl font-semibold text-indigo-700 mb-3">🔊 High-Quality TTS</h3>
+            <p className="text-gray-600 text-sm">Natural-sounding speech with Coqui TTS & SpeechBrain models.</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200">
+            <h3 className="text-xl font-semibold text-indigo-700 mb-3">⚡ Real-Time AI Chat</h3>
+            <p className="text-gray-600 text-sm">Low-latency streaming conversations powered by FastRTC.</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200">
+            <h3 className="text-xl font-semibold text-indigo-700 mb-3">🗂️ Voice Management</h3>
+            <p className="text-gray-600 text-sm">Manage, tag, and reuse voices via JSON configs with validation.</p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200">
+            <h3 className="text-xl font-semibold text-indigo-700 mb-3">🔐 100% Self-Hosted</h3>
+            <p className="text-gray-600 text-sm">Your voices, scripts, and data stay on your machine — full privacy.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 🧩 Architecture Section */}
+      <section className="py-20 px-6 sm:px-10 lg:px-20 bg-gray-50">
+        <h2 className="text-3xl font-bold text-center mb-10 text-gray-900">🧩 Architecture Highlights</h2>
+        <div className="max-w-5xl mx-auto space-y-4 text-gray-700 text-sm leading-relaxed">
+          <p>Built with a modular Python architecture for flexibility and scaling:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>VoiceManager</strong> → validates and manages custom voices</li>
+            <li><strong>OllamaChat</strong> → generates smart scripts & conversational replies</li>
+            <li><strong>TTSGenerator</strong> → handles preprocessing + model inference</li>
+            <li><strong>EnhancedVoiceChatHandler</strong> → orchestrates STT → LLM → TTS pipeline</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* 🎯 Use Cases */}
+      <section className="py-20 px-6 sm:px-10 lg:px-20">
+        <h2 className="text-3xl font-bold text-center mb-10 text-gray-900">🎯 Use Cases</h2>
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h3 className="text-lg font-semibold text-indigo-700 mb-2">🎬 Content Creators</h3>
+            <p className="text-gray-600 text-sm">Turn blog posts into professional podcasts & YouTube voiceovers.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h3 className="text-lg font-semibold text-indigo-700 mb-2">🎧 Podcasters</h3>
+            <p className="text-gray-600 text-sm">Clone your own voice and save hours of manual recording.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h3 className="text-lg font-semibold text-indigo-700 mb-2">🤖 AI Developers</h3>
+            <p className="text-gray-600 text-sm">Integrate voice cloning & TTS into chatbots or interactive AI apps.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h3 className="text-lg font-semibold text-indigo-700 mb-2">🏫 Education</h3>
+            <p className="text-gray-600 text-sm">Generate lectures or training modules in multiple voices & styles.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 💸 Pricing */}
+      <section className="py-20 px-6 sm:px-10 lg:px-20 bg-gray-50">
+        <h2 className="text-3xl font-bold text-center mb-10 text-gray-900">💸 Pricing & Licensing</h2>
+        <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-md border border-gray-200 p-10 text-center">
+          <h3 className="text-2xl font-bold text-indigo-700 mb-4">One-Time Payment</h3>
+          <p className="text-gray-600 mb-6">Lifetime updates, full source code, 6 months support.</p>
+          <p className="text-4xl font-extrabold text-gray-900 mb-6">£49</p>
+          <ul className="text-sm text-gray-700 space-y-2 mb-8">
+            <li>✅ Full Python source code</li>
+            <li>✅ Developer docs</li>
+            <li>✅ Lifetime product updates</li>
+            <li>✅ 6 months support</li>
+            <li>✅ One project license</li>
+          </ul>
+          <button className="bg-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition">
+            Buy Now
+          </button>
+        </div>
+      </section>
+
+      {/* 📝 FAQ */}
+      <section className="py-20 px-6 sm:px-10 lg:px-20 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-10">❓ Frequently Asked Questions</h2>
+        <div className="space-y-5 text-left text-gray-700 text-sm">
+          <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200">
+            <summary className="font-semibold cursor-pointer text-lg text-indigo-800">Is it really self-hosted?</summary>
+            <p className="mt-3 leading-relaxed">Yes. Run it locally or on your private server. All voices & audio stay with you.</p>
+          </details>
+          <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200">
+            <summary className="font-semibold cursor-pointer text-lg text-indigo-800">Can I clone any voice?</summary>
+            <p className="mt-3 leading-relaxed">You can clone your own voice for personal/commercial projects. Make sure you have rights to use any voice you train.</p>
+          </details>
+          <details className="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200">
+            <summary className="font-semibold cursor-pointer text-lg text-indigo-800">Does it work offline?</summary>
+            <p className="mt-3 leading-relaxed">Yes. Once models are downloaded, you can run the entire stack without internet.</p>
+          </details>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="w-full bg-white text-center p-8 border-t border-gray-200">
+        <p className="text-gray-500 text-sm">
+          © 2025 Advanced AI Voice Studio. Built with ❤️ using Python, Coqui, SpeechBrain, and FastRTC.
+        </p>
+      </footer>
+    </div>
+);
+}
