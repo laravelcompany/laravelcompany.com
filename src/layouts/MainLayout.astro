@@ -1,5 +1,4 @@
 ---
-import Footer from "../components/ui/Footer.astro";
 import Navbar from "../components/ui/Navbar.astro";
 import MainHead from "./MainHead.astro";
 import "../styles/global.css";
@@ -79,6 +78,16 @@ const { ...props } = Astro.props;
               clientOptions: { theme: "light", lang: "en-GB" },
           });
       });
+  </script>
+
+  <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://laravelcompany.com/",
+          "name": "Laravel Development Company",
+          "description": "Laravel development experts in London offering custom Laravel builds, API integrations, performance optimization, and strategic consulting services.",
+      }
   </script>
     </main>
   </body>
