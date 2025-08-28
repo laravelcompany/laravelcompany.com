@@ -62,61 +62,70 @@ const laravelServices = [
 ];
 
 // 🔹 Дополнительные сервисы
+
 const services = [
     {
-        name: "Serverless Laravel on AWS (Bref)",
-        slug: "serverless-laravel-bref",
-        description: "Run Laravel on AWS Lambda using Bref...",
+        name: "Laravel TTS",
+        slug: "laravel-tts",
+        description: "Text-to-speech integration for Laravel applications",
         benefits: [
-            "Massive horizontal scale with no server patching",
-            "Blue/green deploys with traffic shifting",
-            "Observability baked-in (CloudWatch + X-Ray)"
+            "Multiple voice providers (AWS Polly, Google Cloud TTS, Azure)",
+            "Real-time streaming and batch processing",
+            "SSML support for advanced voice control"
         ]
     },
     {
-        name: "Event-Driven Architectures (Kafka/SNS/SQS)",
-        slug: "event-driven-laravel",
-        description: "Decouple your monolith using domain events...",
+        name: "Laravel GPT",
+        slug: "laravel-gpt",
+        description: "OpenAI GPT integration made simple for Laravel",
         benefits: [
-            "Lower coupling, higher throughput",
-            "Replayable streams for audit & recovery",
-            "Back-pressure and DLQ strategies"
+            "Pre-built prompts and conversation management",
+            "Token usage tracking and cost optimization",
+            "Function calling and structured outputs"
         ]
     },
     {
-        name: "CQRS + Event Sourcing for Laravel",
-        slug: "cqrs-es-laravel",
-        description: "When auditability and complex workflows matter...",
+        name: "Laravel Mail",
+        slug: "laravel-mail",
+        description: "Enhanced email delivery and campaign management",
         benefits: [
-            "Full history and audit logs",
-            "Optimized read models for UX speed",
-            "Easier change-tracking and rollbacks"
+            "Multi-provider failover (SES, SendGrid, Mailgun)",
+            "Advanced templating with A/B testing",
+            "Bounce handling and reputation monitoring"
         ]
     },
     {
-        name: "Laravel ↔ Go/Python Microservice Interop",
-        slug: "polyglot-microservices",
-        description: "Polyglot FTW: keep Laravel for product velocity...",
+        name: "Laravel Queue Pro",
+        slug: "laravel-queue-pro",
+        description: "Advanced queue management and monitoring",
         benefits: [
-            "Right tool for the job (perf + ML)",
-            "Clear SLAs and SLOs",
-            "Versioned contracts and backward compatibility"
+            "Dead letter queues with automatic retry logic",
+            "Queue analytics and performance metrics",
+            "Horizontal scaling with auto-provisioning"
+        ]
+    },
+    {
+        name: "Laravel Security Suite",
+        slug: "laravel-security",
+        description: "Comprehensive security tools and monitoring",
+        benefits: [
+            "Real-time threat detection and blocking",
+            "Automated security audits and reporting",
+            "OWASP compliance and vulnerability scanning"
+        ]
+    },
+    {
+        name: "Laravel API Gateway",
+        slug: "laravel-api-gateway",
+        description: "Centralized API management and routing",
+        benefits: [
+            "Rate limiting and API key management",
+            "Request/response transformation",
+            "GraphQL federation and REST proxy"
         ]
     }
 ];
 
-// 🔹 Structured Data
-const org = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Laravel Agency",
-    "url": "https://laravelcompany.com",
-    "logo": "https://laravelcompany.com/logo-light.svg",
-    "sameAs": [
-        "https://www.linkedin.com/company/laravel-agency/",
-        "https://github.com/laravelcompany"
-    ]
-};
 
 const listLd = {
     "@context": "https://schema.org",
@@ -127,7 +136,7 @@ const listLd = {
         "item": {
             "@type": "Service",
             "name": s.name,
-            "url": `https://example.com/services/${s.slug}`,
+            "url": `https://laravelcompany.com/software/${s.slug}`,
             "description": s.description
         }
     }))
@@ -151,6 +160,70 @@ const faqLd = {
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Absolutely. We design gRPC/REST contracts, async queues, and schema evolution so Laravel plays nicely with Go or Python data/ML services."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you offer website optimization services?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We provide comprehensive website optimization including Core Web Vitals improvements, database query optimization, caching strategies, CDN setup, and performance monitoring to ensure your Laravel applications run at peak efficiency."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you offer hosting solutions?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We provide managed hosting solutions on AWS, DigitalOcean, and other cloud platforms. Our hosting includes automated deployments, monitoring, backups, SSL management, and 24/7 support with scalable infrastructure."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can you integrate AI and machine learning into Laravel applications?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. We integrate OpenAI, AWS Bedrock, Google AI, and custom ML models into Laravel applications. We handle API integrations, data pipelines, vector databases, and real-time AI features like chatbots and content generation."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you offer Shopify integration with Laravel?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We build custom Shopify apps, integrate Laravel backends with Shopify stores via APIs, handle webhook processing, sync product catalogs, manage orders, and create headless commerce solutions using Shopify as a backend."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What payment gateways do you integrate with Laravel?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We integrate all major payment gateways including Stripe, PayPal, Square, Authorize.net, and regional providers. We handle subscription billing, webhooks, PCI compliance, and complex payment flows with Laravel Cashier and custom solutions."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you provide ongoing maintenance and support?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We offer comprehensive maintenance packages including security updates, Laravel version upgrades, performance monitoring, bug fixes, feature enhancements, and 24/7 emergency support with guaranteed response times."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can you build mobile APIs with Laravel?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. We specialize in building robust REST and GraphQL APIs with Laravel for mobile apps. We handle authentication, rate limiting, documentation, versioning, and real-time features using Laravel Sanctum, Passport, and WebSockets."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you work with existing Laravel codebases?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We audit, refactor, and enhance existing Laravel applications. We modernize legacy code, improve performance, add new features, fix security issues, and upgrade to newer Laravel versions while maintaining backward compatibility."
             }
         }
     ]
