@@ -3,92 +3,230 @@ import Navbar from "../components/ui/Navbar.astro";
 import MainHead from "./MainHead.astro";
 import "../styles/global.css";
 
-const { ...props } = Astro.props;
+const {
+    // Organization props
+    organizationName = "Laravel Development Company",
+    organizationUrl = "https://laravelcompany.com",
+    organizationLogo = "https://laravelcompany.com/logo-light.svg",
+    organizationDescription = "London based Laravel development company that can help with your laravel software needs.",
+    organizationAddress = {
+        streetAddress: "102 High Street",
+        addressLocality: "Wickford",
+        addressRegion: "Essex",
+        postalCode: "SS120AT",
+        addressCountry: "GB"
+    },
+    organizationPhone = "+44 744 821 8899",
+    organizationEmail = "hello@laravelcompany.com",
+    socialMediaProfiles = [
+        "https://linkedin.com/company/laravel-agency"
+    ],
+
+    // Product props
+    productName,
+    productDescription,
+    productImage,
+    productUrl,
+    productPrice = 45,
+    productCurrency = "GBP",
+    productBrand,
+    productSku,
+    productAvailability = "InStock",
+    productCondition = "NewCondition",
+
+    // Reviews props
+    reviews = [],
+    aggregateRating,
+
+    ...props
+} = Astro.props;
+
+// Generate Organization JSON-LD
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": organizationName,
+    "url": organizationUrl,
+    "logo": organizationLogo,
+    "description": organizationDescription,
+    "address": {
+        "@type": "PostalAddress",
+        ...organizationAddress
+    },
+    "telephone": organizationPhone,
+    "email": organizationEmail,
+    "sameAs": socialMediaProfiles
+};
+
+// Generate Product JSON-LD (if product data is provided)
+const productSchema = productName ? {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": productName,
+    "description": productDescription,
+    "image": productImage,
+    "url": productUrl,
+    "brand": {
+        "@type": "Brand",
+        "name": productBrand || organizationName
+    },
+    "sku": productSku,
+    "offers": {
+        "@type": "Offer",
+        "price": productPrice,
+        "priceCurrency": productCurrency,
+        "availability": `https://schema.org/${productAvailability}`,
+        "itemCondition": `https://schema.org/${productCondition}`,
+        "seller": {
+            "@type": "Organization",
+            "name": organizationName
+        }
+    },
+    ...(aggregateRating && {
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": aggregateRating.ratingValue,
+            "reviewCount": aggregateRating.reviewCount,
+            "bestRating": aggregateRating.bestRating || 5,
+            "worstRating": aggregateRating.worstRating || 1
+        }
+    }),
+    ...(reviews.length > 0 && {
+        "review": reviews.map(review => ({
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": review.rating,
+                "bestRating": review.bestRating || 5,
+                "worstRating": review.worstRating || 1
+            },
+            "author": {
+                "@type": "Person",
+                "name": review.author
+            },
+            "reviewBody": review.reviewBody,
+            "datePublished": review.datePublished,
+            "publisher": {
+                "@type": "Organization",
+                "name": organizationName
+            }
+        }))
+    })
+} : null;
+
+// Generate Reviews JSON-LD (standalone reviews if no product)
+const reviewsSchema = !productName && reviews.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": reviews.map((review, index) => ({
+        "@type": "Review",
+        "position": index + 1,
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": review.rating,
+            "bestRating": review.bestRating || 5,
+            "worstRating": review.worstRating || 1
+        },
+        "author": {
+            "@type": "Person",
+            "name": review.author
+        },
+        "reviewBody": review.reviewBody,
+        "datePublished": review.datePublished,
+        "itemReviewed": {
+            "@type": "Organization",
+            "name": organizationName
+        }
+    }))
+} : null;
 ---
 
 <html lang="en">
-  <MainHead {...props} />
-  <style>
-    html.lenis {
-      height: auto;
-    }
-    .lenis.lenis-smooth {
-      scroll-behavior: auto;
-    }
-    .lenis.lenis-smooth [data-lenis-prevent] {
-      overscroll-behavior: contain;
-    }
-    .lenis.lenis-stopped {
-      overflow: hidden;
-    }
-  </style>
-  <script src="../utils/lenis"></script>
-  <body class="bg-white font-grotesk">
-    <main>
-      <Navbar />
-      <slot />
+<MainHead {...props} />
 
-      <script is:inline>
-        const year = new Date().getFullYear();
-        document.getElementById("currentYear").innerHTML = `${year}`;
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
+
+{productSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(productSchema)}></script>
+    )}
+
+{reviewsSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(reviewsSchema)}></script>
+    )}
+
+<style>
+html.lenis {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+</style>
+<script src="../utils/lenis"></script>
+<body class="bg-white font-grotesk">
+<main>
+    <Navbar />
+    <slot />
+
+    <script is:inline>
+    const year = new Date().getFullYear();
+    document.getElementById("currentYear").innerHTML = `${year}`;
     </script>
-      <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/76601afc215ab.js" 
-        data-cmp-host="b.delivery.consentmanager.net" 
-        data-cmp-cdn="cdn.consentmanager.net" 
-        data-cmp-codesrc="16">
-        </script>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TL0ML695T"></script>
-        <script is:inline>
-            window.dataLayer = window.dataLayer || [];
-        
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-        
-            gtag('js', new Date());
-        
-            gtag('config', 'G-8TL0ML695T');
-        </script>
-        <script is:inline>
-          (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
-              a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
-              f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
-              tp('register', 'YnVHQz5MrTjJ4MCC');
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/76601afc215ab.js"
+    data-cmp-host="b.delivery.consentmanager.net"
+    data-cmp-cdn="cdn.consentmanager.net"
+    data-cmp-codesrc="16">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TL0ML695T"></script>
+    <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-8TL0ML695T');
+    </script>
+    <script is:inline>
+        (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+            a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
+            f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
+        tp('register', 'YnVHQz5MrTjJ4MCC');
     </script>
     <!-- Hotjar Tracking Code for Laravel Company -->
     <script is:inline>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:5321462,hjsv:6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:5321462,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
-  <script async type="application/javascript"
-          src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
-  <script>
-      (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
-          basicSubscriptions.init({
-              type: "NewsArticle",
-              isPartOfType: ["Product"],
-              isPartOfProductId: "CAowpOnADA:openaccess",
-              clientOptions: { theme: "light", lang: "en-GB" },
-          });
-      });
-  </script>
+    <script async type="application/javascript"
+            src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
+    <script>
+        (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
+            basicSubscriptions.init({
+                type: "NewsArticle",
+                isPartOfType: ["Product"],
+                isPartOfProductId: "CAowpOnADA:openaccess",
+                clientOptions: { theme: "light", lang: "en-GB" },
+            });
+        });
+    </script>
 
-  <script type="application/ld+json">
-      {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "url": "https://laravelcompany.com/",
-          "name": "Laravel Development Company",
-          "description": "Laravel development experts in London offering custom Laravel builds, API integrations, performance optimization, and strategic consulting services.",
-      }
-  </script>
-    </main>
-  </body>
+</main>
+</body>
 </html>
