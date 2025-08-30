@@ -17,20 +17,50 @@ const allSoftware: CollectionEntry<"software">[] =
   <main class="space-y-20">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-3">
       <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-        <h1 title="laravel software kits" class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold">
+        <h1 title="laravel software kits" class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold dark:text-white">
           Out of the box software kits
         </h1>
-        <p class="font-light sm:text-xl">
+        <p class="font-light sm:text-xl dark:text-white">
             Explore our wide variety of software products and starter kits, perfect for tackling all your business challenges and jumpstarting your upcoming projects.
         </p>
       </div>
       <br />
       <SearchForm />
       <br />
-      <div class="grid gap-8 lg:grid-cols-2">
+      <div id="special-offer" class="grid gap-8 lg:grid-cols-2">
         {allSoftware.map((soft) => <SoftwareCard software={soft} />)}
       </div>
     </div>
       <!--<Team />-->
+      <script>
+          // GA4 event trigger when a certain div is visible
+          document.addEventListener("DOMContentLoaded", () => {
+              const target = document.querySelector("#special-offer");
+
+              if (!target) return;
+
+              const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                          // Fire GA4 event
+                          gtag('event', 'view_special_offer', {
+                              event_category: 'engagement',
+                              event_label: 'View All Software',
+                              value: 1
+                          });
+
+                          console.log("GA event sent: view_special_offer");
+
+                          // Optional: disconnect so it only fires once
+                          observer.unobserve(entry.target);
+                      }
+                  });
+              }, {
+                  threshold: 0.5 // at least 50% of the div must be visible
+              });
+
+              observer.observe(target);
+          });
+      </script>
   </main>
 </MainLayout>
