@@ -7,12 +7,10 @@ import Services from "../components/sections/Services.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import LaravelCompany from "../components/sections/laravel-shopify.astro";
 import Footer from "../components/ui/Footer.astro";
+import SectionTitle from "../components/ui/SectionTitle.astro";
 ---
 
-<MainLayout
-        title="Laravel Development Company London"
-        description="Improve your Laravel™ project with our Laravel™ agency recomandations. We offer a 48h match guarantee. 100% risk-free trial. Custom CMS, eCommerce, CRM, SaaS. Proven delivery, real results."
->
+<MainLayout>
     <Hero/>
 
     <Process/>
@@ -24,7 +22,7 @@ import Footer from "../components/ui/Footer.astro";
     <div class="container mx-auto px-4 py-8 max-w-screen-xl">
 
         <!-- Intro Paragraph -->
-        <p class="mb-8 text-lg text-gray-700 leading-relaxed">
+        <p class="mb-8 text-lg text-gray-700 leading-relaxed dark:text-white">
             Already have a brilliant idea brewing in your mind, or maybe a project that's hitting roadblocks?
             Whether you're building the next unicorn SaaS, upgrading an old dusty legacy system, or just wanna optimise
             your current <a href="https://laravelcompany.com" class="text-blue-600 underline">Laravel™</a> stack, we're
@@ -32,7 +30,7 @@ import Footer from "../components/ui/Footer.astro";
         </p>
 
         <!-- Services Heading -->
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Laravel™ Services</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 dark:text-white">Our Laravel™ Services</h2>
 
         <!-- Services Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -136,7 +134,7 @@ import Footer from "../components/ui/Footer.astro";
 
         <!-- Highlighted Quote -->
         <blockquote class="bg-gray-100 p-6 rounded-lg mb-8">
-            <p class="text-lg text-gray-700 leading-relaxed">
+            <p class="text-lg text-gray-700 leading-relaxed dark:text-white">
                 <strong>And the best bit?</strong> Everything is built around <strong>SOLID</strong>,
                 <strong>KISS</strong>, and <strong>DRY</strong> principles, meaning you’re getting a future-proof,
                 easy-to-maintain codebase that your next dev team will actually thank you for. No spaghetti, no
@@ -145,7 +143,7 @@ import Footer from "../components/ui/Footer.astro";
         </blockquote>
 
         <!-- Concluding Paragraph -->
-        <p class="text-lg text-gray-700 leading-relaxed">
+        <p class="text-lg text-gray-700 leading-relaxed dark:text-white">
             <strong>Let's be real: <a href="https://laravelcompany.com" class="text-blue-600 underline">Laravel™</a> is
                 evolving crazy fast</strong> — and so are user expectations.
             Old-school PHP apps? 💤 Dead.

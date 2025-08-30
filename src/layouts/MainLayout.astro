@@ -3,157 +3,10 @@ import Navbar from "../components/ui/Navbar.astro";
 import MainHead from "./MainHead.astro";
 import "../styles/global.css";
 
-const {
-    // Organization props
-    organizationName = "Laravel Development Company",
-    organizationUrl = "https://laravelcompany.com",
-    organizationLogo = "https://laravelcompany.com/logo-light.svg",
-    organizationDescription = "London based Laravel development company that can help with your laravel software needs.",
-    organizationAddress = {
-        streetAddress: "102 High Street",
-        addressLocality: "Wickford",
-        addressRegion: "Essex",
-        postalCode: "SS120AT",
-        addressCountry: "GB"
-    },
-    organizationPhone = "+44 744 821 8899",
-    organizationEmail = "hello@laravelcompany.com",
-    socialMediaProfiles = [
-        "https://linkedin.com/company/laravel-agency"
-    ],
-
-    // Product props
-    productName,
-    productDescription,
-    productImage,
-    productUrl,
-    productPrice = 45,
-    productCurrency = "GBP",
-    productBrand,
-    productSku,
-    productAvailability = "InStock",
-    productCondition = "NewCondition",
-
-    // Reviews props
-    reviews = [],
-    aggregateRating,
-
-    ...props
-} = Astro.props;
-
-// Generate Organization JSON-LD
-const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": organizationName,
-    "url": organizationUrl,
-    "logo": organizationLogo,
-    "description": organizationDescription,
-    "address": {
-        "@type": "PostalAddress",
-        ...organizationAddress
-    },
-    "telephone": organizationPhone,
-    "email": organizationEmail,
-    "sameAs": socialMediaProfiles
-};
-
-// Generate Product JSON-LD (if product data is provided)
-const productSchema = productName ? {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": productName,
-    "description": productDescription,
-    "image": productImage,
-    "url": productUrl,
-    "brand": {
-        "@type": "Brand",
-        "name": productBrand || organizationName
-    },
-    "sku": productSku,
-    "offers": {
-        "@type": "Offer",
-        "price": productPrice,
-        "priceCurrency": productCurrency,
-        "availability": `https://schema.org/${productAvailability}`,
-        "itemCondition": `https://schema.org/${productCondition}`,
-        "seller": {
-            "@type": "Organization",
-            "name": organizationName
-        }
-    },
-    ...(aggregateRating && {
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": aggregateRating.ratingValue,
-            "reviewCount": aggregateRating.reviewCount,
-            "bestRating": aggregateRating.bestRating || 5,
-            "worstRating": aggregateRating.worstRating || 1
-        }
-    }),
-    ...(reviews.length > 0 && {
-        "review": reviews.map(review => ({
-            "@type": "Review",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": review.rating,
-                "bestRating": review.bestRating || 5,
-                "worstRating": review.worstRating || 1
-            },
-            "author": {
-                "@type": "Person",
-                "name": review.author
-            },
-            "reviewBody": review.reviewBody,
-            "datePublished": review.datePublished,
-            "publisher": {
-                "@type": "Organization",
-                "name": organizationName
-            }
-        }))
-    })
-} : null;
-
-// Generate Reviews JSON-LD (standalone reviews if no product)
-const reviewsSchema = !productName && reviews.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": reviews.map((review, index) => ({
-        "@type": "Review",
-        "position": index + 1,
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": review.rating,
-            "bestRating": review.bestRating || 5,
-            "worstRating": review.worstRating || 1
-        },
-        "author": {
-            "@type": "Person",
-            "name": review.author
-        },
-        "reviewBody": review.reviewBody,
-        "datePublished": review.datePublished,
-        "itemReviewed": {
-            "@type": "Organization",
-            "name": organizationName
-        }
-    }))
-} : null;
 ---
 
 <html lang="en">
-<MainHead {...props} />
-
-<!-- JSON-LD Structured Data -->
-<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
-
-{productSchema && (
-    <script type="application/ld+json" set:html={JSON.stringify(productSchema)}></script>
-    )}
-
-{reviewsSchema && (
-    <script type="application/ld+json" set:html={JSON.stringify(reviewsSchema)}></script>
-    )}
+<MainHead />
 
 <style>
 html.lenis {
@@ -169,8 +22,8 @@ html.lenis {
     overflow: hidden;
 }
 </style>
-<script src="../utils/lenis"></script>
-<body class="bg-white font-grotesk">
+<script src="../utils/lenis.js"></script>
+<body class="bg-white dark:bg-blue-950 font-grotesk">
 <main>
     <Navbar />
     <slot />
@@ -226,7 +79,24 @@ html.lenis {
             });
         });
     </script>
+    <script>
+        (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+            a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
+            f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
+        tp('register', 'YnVHQz5MrTjJ4MCC');
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTWW0CXPP2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DTWW0CXPP2');
+    </script>
 
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="spvLM5BnOhDu5NdXU2H2cA" async></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836700493760647"
+            crossorigin="anonymous"></script>
 </main>
 </body>
 </html>

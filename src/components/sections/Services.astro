@@ -62,7 +62,6 @@ const laravelServices = [
 ];
 
 // 🔹 Дополнительные сервисы
-
 const services = [
     {
         name: "Laravel TTS",
@@ -125,7 +124,6 @@ const services = [
         ]
     }
 ];
-
 
 const listLd = {
     "@context": "https://schema.org",
@@ -232,7 +230,6 @@ const faqLd = {
 
 <Section id="services" aria-label="Laravel Services">
     <div class="mt-24 mb-10">
-
         <!-- Laravel Services Grid -->
         <div class="grid gap-8 md:grid-cols-2">
             {laravelServices.map((service) => {
@@ -245,78 +242,60 @@ const faqLd = {
                 };
                 const textClass = service.isDark ? "text-white" : "";
                 return (
-                        <Card isUnderline={true}>
-                            <a
-                                    href={service.link}
-                                    class={`group block h-full p-6 sm:p-10 rounded-3xl ${service.bgColor} ${textClass} hover:shadow-xl hover:shadow-indigo-100/50 hover:scale-[1.01] transition-all duration-300`}
-                                    aria-labelledby={`service-${service.id}`}
+                        <a
+                                href={service.link}
+                                class={`group block h-full p-6 sm:p-10 rounded-3xl ${service.bgColor} ${textClass} hover:shadow-xl hover:shadow-indigo-100/50 hover:scale-[1.01] transition-all duration-300`}
+                                aria-labelledby={`service-${service.id}`}
+                        >
+                            <div
+                                    class="grid h-full gap-6 md:grid-cols-[1fr_auto] md:grid-rows-[auto_1fr]"
+                                    itemscope
+                                    itemtype="http://schema.org/Service"
                             >
-                                <div
-                                        class="grid h-full gap-6 md:grid-cols-[1fr_auto] md:grid-rows-2"
-                                        itemscope
-                                        itemtype="http://schema.org/Service"
-                                >
-                                    <div class="flex flex-col justify-between">
-                                        <h2
-                                                id={`service-${service.id}`}
-                                                class="text-2xl font-semibold tracking-tight leading-snug mb-2 group-hover:text-indigo-400 transition-colors duration-300"
-                                                itemprop="name"
-                                        >
-                                            {service.title}
-                                        </h2>
-                                        <p class="text-base text-muted-foreground leading-relaxed line-clamp-3" itemprop="description">
-                                            {service.description}
-                                        </p>
-                                    </div>
-
-                                    <div class="flex flex-col items-end justify-end">
-                                        <div class="mb-4 transform translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <img
-                                                    src="/logo-light.svg"
-                                                    alt="Laravel agency Logo"
-                                                    width="48" height="48"
-                                                    class="w-auto h-8 filter brightness-125 contrast-125 drop-shadow-sm"
-                                            />
-                                        </div>
-                                        <span class="inline-flex items-center px-4 py-1.5 text-sm font-medium bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-sm hover:bg-white/20 transition-colors duration-300" itemprop="category">
-                                            {categoryMap[service.category] || service.category}
-                                          </span>
-                                    </div>
-                                    <meta itemprop="serviceType" content={service.category} />
+                                {/* 🖼️ Image now on top */}
+                                <div class="mb-4 transform translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                    <img
+                                            src="/logo-light.svg"
+                                            alt="Laravel agency Logo"
+                                            width="48"
+                                            height="48"
+                                            class="w-auto h-10 filter brightness-125 contrast-125 drop-shadow-sm"
+                                    />
                                 </div>
-                            </a>
-                        </Card>
+
+                                {/* 📌 Title + description */}
+                                <div class="flex flex-col justify-between">
+                                    <h2
+                                            id={`service-${service.id}`}
+                                            class="text-2xl font-semibold tracking-tight leading-snug mb-2 group-hover:text-indigo-400 transition-colors duration-300"
+                                            itemprop="name"
+                                    >
+                                        {service.title}
+                                    </h2>
+                                    <p
+                                            class="text-base text-muted-foreground leading-relaxed line-clamp-3"
+                                            itemprop="description"
+                                    >
+                                        {service.description}
+                                    </p>
+                                </div>
+
+                                {/* 🏷️ Category pill bottom-right */}
+                                <div class="flex items-end justify-end">
+                <span
+                        class="inline-flex items-center px-4 py-1.5 text-sm font-medium bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-sm hover:bg-white/20 transition-colors duration-300"
+                        itemprop="category"
+                >
+                  {categoryMap[service.category] || service.category}
+                </span>
+                                </div>
+                                <meta itemprop="serviceType" content={service.category} />
+                            </div>
+                        </a>
                 );
             })}
         </div>
-
-        <!-- Extra Laravel 2025 Services -->
-        <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-            <div class="mb-10 text-center">
-                <span class="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-200">New for 2025</span>
-                <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Laravel, Leveled Up</h2>
-                <p class="mt-4 text-lg text-gray-600">Serverless, evented, observable, and audit-ready Laravel.</p>
-            </div>
-
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {services.map((s) => (
-                        <article id={s.slug} class="flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-                            <header>
-                                <h3 class="text-xl font-semibold text-gray-900">{s.name}</h3>
-                                <p class="mt-2 text-sm text-gray-600">{s.description}</p>
-                            </header>
-                            <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside">
-                                {s.benefits.map((b) => <li>{b}</li>)}
-                            </ul>
-                        </article>
-                ))}
-            </div>
-        </section>
-
     </div>
 </Section>
 
-<!-- SEO Structured Data -->
 
-<script type="application/ld+json">{JSON.stringify(listLd)}</script>
-<script type="application/ld+json">{JSON.stringify(faqLd)}</script>

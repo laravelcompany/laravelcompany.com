@@ -2,25 +2,24 @@
 import Seo from "../components/seo/Seo.astro";
 
 // Pass the contents to create SEO for the page
-const { title, description, image, frontmatter, robots } = Astro.props;
+const {title, description, image, frontmatter, robots} = Astro.props;
 ---
 
 <head>
-  <meta charset="utf-8" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="author" content="Laravel Company"/>
+    <meta name="generator" content={Astro.generator}/>
 
-  <meta name="viewport" content="width=device-width" />
-  <meta name="generator" content={Astro.generator} />
 
-  <title>{title}</title>
-
-  <Seo
-    {title}
-    {description}
-    url={Astro.url.toString()}
-    {image}
-    {frontmatter}
-    {robots}
-  />
+    <Seo
+        {title}
+        {description}
+        url={Astro.url.toString()}
+        {image}
+        {frontmatter}
+        {robots}
+    />
     <script type="speculationrules">
         {
           "prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }],
@@ -28,22 +27,3 @@ const { title, description, image, frontmatter, robots } = Astro.props;
         }
     </script>
 
-  <script>
-    (function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
-        a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
-        f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
-        tp('register', 'YnVHQz5MrTjJ4MCC');
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DTWW0CXPP2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-DTWW0CXPP2');
-</script>
-
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="spvLM5BnOhDu5NdXU2H2cA" async></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6836700493760647"
-            crossorigin="anonymous"></script>
-</head>
