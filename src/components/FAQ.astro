@@ -1,0 +1,289 @@
+---
+
+const faqs = [
+{
+    question: "How long does it take to build a Laravel application?",
+    answer: "Most Laravel projects launch within 6-12 weeks, depending on complexity and requirements. Simple applications can be delivered in 4-6 weeks, while enterprise solutions typically take 3-6 months."
+    },
+{
+    question: "Do you follow Laravel best practices and coding standards?",
+    answer: "Absolutely! Our team follows PSR standards, Laravel conventions, and industry best practices. We implement clean architecture, comprehensive testing, and maintain code quality through rigorous review processes."
+    },
+{
+    question: "How do you handle application security?",
+    answer: "We implement Laravel's built-in security features including CSRF protection, SQL injection prevention, and XSS protection. Additionally, we conduct security audits, use encrypted data storage, and follow OWASP guidelines."
+    },
+{
+    question: "Can you integrate with our existing systems?",
+    answer: "Yes! Laravel's flexible architecture allows seamless integration with CRMs, ERPs, payment gateways, and third-party APIs. We build custom connectors and ensure smooth data flow between systems."
+    },
+{
+    question: "What kind of ongoing support do you provide?",
+    answer: "We offer comprehensive post-launch support including bug fixes, security updates, performance optimization, feature enhancements, and 24/7 monitoring. Our support packages are tailored to your needs."
+    },
+{
+    question: "How do you price Laravel development projects?",
+    answer: "Our pricing is transparent and project-based. We provide detailed estimates after understanding your requirements. Typical projects range from $10K-$100K+ depending on complexity and scope."
+    },
+{
+    question: "Do you provide Laravel maintenance and updates?",
+    answer: "Yes, we offer ongoing maintenance packages that include Laravel version updates, security patches, performance monitoring, database optimization, and feature additions as your business grows."
+    },
+{
+    question: "Can you migrate our existing application to Laravel?",
+    answer: "Absolutely! We specialize in migrating applications from various platforms to Laravel. We ensure zero downtime, data integrity, and improved performance throughout the migration process."
+    }
+];
+
+// Alternative FAQ sets for different business focuses:
+
+const ecommerceFaqs = [
+{
+    question: "How quickly can you launch our Laravel e-commerce store?",
+    answer: "Most e-commerce stores launch within 8-12 weeks, including payment integration, inventory management, and custom features. Simple stores can go live in 6-8 weeks."
+    },
+{
+    question: "Which payment gateways do you integrate?",
+    answer: "We integrate all major payment gateways including Stripe, PayPal, Square, and regional providers. We also handle subscription billing, multi-currency support, and PCI compliance requirements."
+    },
+{
+    question: "Can you handle high-traffic e-commerce sites?",
+    answer: "Yes! Our Laravel e-commerce solutions are built for scale. We implement caching strategies, database optimization, and CDN integration to handle thousands of concurrent users and transactions."
+    },
+{
+    question: "Do you provide inventory management systems?",
+    answer: "Absolutely! We build comprehensive inventory management systems with real-time tracking, automated reordering, multi-warehouse support, and integration with shipping providers."
+    }
+];
+
+const saasFaqs = [
+{
+    question: "How do you handle multi-tenancy in Laravel SaaS applications?",
+    answer: "We implement robust multi-tenant architectures using Laravel's database design patterns, ensuring complete data isolation, scalable user management, and customizable tenant features."
+    },
+{
+    question: "Can you build subscription and billing systems?",
+    answer: "Yes! We integrate Laravel Cashier with Stripe or other providers to handle subscriptions, invoicing, tax calculations, dunning management, and revenue recognition for SaaS businesses."
+    },
+{
+    question: "How do you ensure SaaS application performance at scale?",
+    answer: "We implement Redis caching, database indexing, queue systems, and horizontal scaling strategies. Our Laravel SaaS applications can handle millions of users with sub-second response times."
+    },
+{
+    question: "Do you provide API development for SaaS integrations?",
+    answer: "Absolutely! We build comprehensive RESTful APIs with Laravel, including rate limiting, authentication, documentation, and webhooks for seamless third-party integrations."
+    }
+];
+
+const enterpriseFaqs = [
+{
+    question: "Can Laravel handle enterprise-level applications?",
+    answer: "Absolutely! Laravel powers enterprise applications for Fortune 500 companies. We implement enterprise architecture patterns, microservices, and scalable infrastructure to meet enterprise demands."
+    },
+{
+    question: "How do you ensure compliance with enterprise security standards?",
+    answer: "We implement SOC 2, GDPR, and industry-specific compliance requirements. Our Laravel applications include audit trails, role-based access control, and encrypted data handling."
+    },
+{
+    question: "Can you integrate with enterprise systems like SAP or Salesforce?",
+    answer: "Yes! We build custom Laravel integrations with enterprise systems, handling complex data synchronization, real-time updates, and maintaining data consistency across platforms."
+    },
+{
+    question: "What's your process for enterprise Laravel development?",
+    answer: "We follow enterprise development methodologies including detailed requirements gathering, architectural planning, iterative development, comprehensive testing, and staged deployment processes."
+    }
+];
+---
+
+<section class="py-20 bg-gray-50 relative overflow-hidden">
+  <!-- Subtle background pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0 bg-repeat" style="background-image: url('/grid-pattern.svg');"></div>
+  </div>
+
+  <!-- Laravel-themed accent elements -->
+  <div class="absolute top-20 right-10 opacity-5">
+    <svg class="h-20 w-20 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.027c-.008.002-.016.008-.024.01a.348.348 0 01-.192 0c-.011-.002-.02-.008-.03-.012-.02-.008-.042-.014-.062-.025L.533 18.755a.376.376 0 01-.189-.326V2.974c0-.033.005-.066.014-.098.003-.012.01-.02.014-.032a.369.369 0 01.023-.058c.004-.013.015-.022.023-.033l.033-.045c.012-.01.025-.018.037-.027.014-.012.027-.024.041-.034L5.527.06a.375.375 0 01.375 0L10.9 2.647c.016.01.03.021.044.033.012.009.022.018.034.027.008.006.019.01.026.018.015.011.024.027.038.041.008.01.018.017.024.027.016.021.028.049.035.075.001.013.007.025.008.038v9.652l3.76-2.164V5.527c0-.033.004-.066.013-.098.003-.01.01-.02.013-.032.007-.02.018-.04.024-.058.007-.013.016-.021.024-.033.007-.013.021-.02.033-.045.012-.01.025-.018.037-.027.014-.011.027-.024.041-.034L19.469.06a.375.375 0 01.375 0l4.998 2.876c.017.01.031.021.045.033.012.009.021.018.033.027.008.006.018.01.025.018.015.011.025.027.039.041.007.01.017.017.024.027.015.021.028.049.034.075.002.013.007.025.009.038zM1.906 3.71v12.007l3.36 1.93V7.64zm4.736 14.97L15.91 22.05V9.984l-1.589-.914-7.679-4.426v13.037zm9.275-15.32L6.643 6.845l9.274 5.341 9.271-5.341-9.271-5.484zm6.388 5.341v12.007l3.36 1.93V7.64l-3.36-1.93zm-1.376-.79L11.655 9.984v12.066l8.268-4.37V5.54l-8.268 4.37z"/>
+    </svg>
+  </div>
+
+  <div class="container-custom relative">
+    <div class="text-center max-w-4xl mx-auto animate-on-scroll">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+        Frequently Asked Questions
+      </h2>
+      <p class="mt-6 text-xl md:text-2xl text-gray-600 leading-relaxed">
+        Everything you need to know about our Laravel development services and process.
+      </p>
+
+      <!-- Optional trust indicators -->
+      <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+        <span class="flex items-center gap-2">
+          <svg class="h-5 w-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          100+ Laravel Projects Delivered
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="h-5 w-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Average 8-Week Delivery
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="h-5 w-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+          Laravel Certified Team
+        </span>
+      </div>
+    </div>
+
+    <div class="mt-16 max-w-4xl mx-auto">
+      {faqs.map((faq, index) => (
+          <div
+              class="mb-6 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden animate-on-scroll faq-item hover:shadow-lg hover:border-red-200 transition-all duration-300"
+              style={`animation-delay: ${index * 0.1}s`}
+          >
+            <details class="group">
+              <summary class="flex justify-between items-center cursor-pointer p-8 transition-all duration-300 hover:bg-red-50">
+                <h3 class="text-lg lg:text-xl font-semibold text-gray-900 transition-colors duration-300 group-hover:text-red-600 pr-4">
+                  {faq.question}
+                </h3>
+                <div class="flex-shrink-0">
+                  <div class="h-8 w-8 rounded-full bg-red-100 flex items-center justify-center group-hover:bg-red-200 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 group-open:rotate-180 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+              </summary>
+              <div class="px-8 pb-8 text-gray-600 leading-relaxed faq-content border-t border-gray-50">
+                <div class="pt-6">
+                  <p>{faq.answer}</p>
+                </div>
+              </div>
+            </details>
+          </div>
+      ))}
+    </div>
+
+    <!-- Enhanced CTA section -->
+    <div class="mt-16 text-center animate-on-scroll">
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-2xl mx-auto">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+          Still have questions about Laravel development?
+        </h3>
+        <p class="text-gray-600 mb-6">
+          Our Laravel experts are here to discuss your project requirements and provide detailed answers.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+              href="/contact"
+              class="inline-flex items-center justify-center px-6 py-3 bg-red-500 text-white font-medium rounded-lg hover:bg-red-600 transition-colors duration-300 group"
+          >
+            Schedule a Consultation
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </a>
+
+          <a
+              href="/software"
+              class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:border-red-300 hover:text-red-600 transition-colors duration-300 group"
+          >
+            View Our Work
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Contact info -->
+        <div class="mt-6 pt-6 border-t border-gray-100 flex flex-col sm:flex-row justify-center gap-6 text-sm text-gray-500">
+          <span class="flex items-center gap-2">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            info@laravelcompany.com
+          </span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Enhanced CSS for better interactions -->
+<style>
+  .faq-item {
+    transform: translateY(0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .faq-item:hover {
+    transform: translateY(-2px);
+  }
+
+  details[open] .faq-content {
+    animation: slideDown 0.5s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-item:hover {
+      transform: none;
+    }
+
+    .animate-on-scroll {
+      opacity: 1;
+      transform: none;
+    }
+
+    details[open] .faq-content {
+      animation: none;
+    }
+  }
+
+  /* Custom scrollbar for better UX */
+  .faq-content::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .faq-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  .faq-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+  }
+
+  .faq-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+</style>

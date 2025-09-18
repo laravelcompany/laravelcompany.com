@@ -1,0 +1,215 @@
+---
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+import featureImage1 from '../assets/logo.svg';
+import featureImage2 from '../assets/logo.svg';
+import featureImage3 from '../assets/logo.svg';
+
+const features = [
+{
+    title: "Become mission-critical",
+    description: "Adding Laravel-powered solutions on top of your existing business processes means your operations run seamlessly inside one robust, scalable platform that grows with your success.",
+    icon: "ph:star-duotone",
+    image: featureImage1,
+    },
+{
+    title: "Access cutting-edge Laravel tools",
+    description: "We don't just build standard applications – we architect excellence. Our Laravel expertise delivers faster development, cleaner code, better security, and more maintainable solutions.",
+    icon: "ph:lightning-duotone",
+    image: featureImage2,
+    },
+{
+    title: "Ready to scale globally",
+    description: "Launch your Laravel application worldwide within weeks, not months. Get rapid market validation and user feedback to accelerate your growth and market penetration.",
+    icon: "ph:globe-duotone",
+    image: featureImage3,
+    },
+];
+
+// Alternative feature sets for different business focuses:
+
+const ecommerceFeatures = [
+{
+    title: "Become their go-to platform",
+    description: "Integrating custom e-commerce functionality means customers complete their entire shopping journey within your Laravel-powered ecosystem, increasing retention and lifetime value.",
+    icon: "ph:shopping-cart-duotone",
+    image: featureImage1,
+    },
+{
+    title: "Leverage modern e-commerce tech",
+    description: "Our Laravel e-commerce solutions aren't just online stores – they're conversion machines. Built with performance, security, and scalability at the core.",
+    icon: "ph:rocket-duotone",
+    image: featureImage2,
+    },
+{
+    title: "Multi-market ready",
+    description: "Deploy across multiple markets with localized payment gateways, currencies, and compliance. Launch in new regions within weeks, not quarters.",
+    icon: "ph:globe-hemisphere-west-duotone",
+    image: featureImage3,
+    },
+];
+
+const saasFeatures = [
+{
+    title: "Become indispensable to users",
+    description: "Building SaaS features with Laravel means customers accomplish everything within your platform ecosystem – from onboarding to advanced workflows – maximizing stickiness.",
+    icon: "ph:users-duotone",
+    image: featureImage1,
+    },
+{
+    title: "Access enterprise-grade tools",
+    description: "We build SaaS applications that enterprise clients trust. Multi-tenancy, advanced security, API-first architecture, and seamless integrations come standard.",
+    icon: "ph:shield-check-duotone",
+    image: featureImage2,
+    },
+{
+    title: "Scale to millions of users",
+    description: "Launch your SaaS globally with Laravel's proven architecture. Handle massive user bases, process millions of transactions, and maintain 99.9% uptime from day one.",
+    icon: "ph:chart-line-up-duotone",
+    image: featureImage3,
+    },
+];
+
+const enterpriseFeatures = [
+{
+    title: "Become the system of record",
+    description: "Custom Laravel applications become the central hub where all your business processes converge – from CRM to inventory management – eliminating data silos.",
+    icon: "ph:database-duotone",
+    image: featureImage1,
+    },
+{
+    title: "Enterprise-grade architecture",
+    description: "We build Laravel solutions that integrate seamlessly with existing enterprise systems. Advanced security, compliance, and performance that IT departments trust.",
+    icon: "ph:buildings-duotone",
+    image: featureImage2,
+    },
+{
+    title: "Future-proof your operations",
+    description: "Deploy Laravel applications that evolve with your business. Modular architecture means adding new features, integrations, and capabilities as you grow.",
+    icon: "ph:gear-duotone",
+    image: featureImage3,
+    },
+];
+---
+
+<section class="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+  <!-- Subtle background pattern with parallax effect -->
+  <div class="absolute inset-0 opacity-5 parallax" data-speed="0.1">
+    <div class="absolute inset-0 bg-repeat" style="background-image: url('/grid-pattern.svg');"></div>
+  </div>
+
+  <!-- Optional Laravel-themed accent elements -->
+  <div class="absolute top-10 right-10 opacity-10">
+
+  </div>
+  <div class="absolute bottom-10 left-10 opacity-5">
+
+  </div>
+
+  <div class="container-custom relative">
+    <div class="text-center max-w-4xl mx-auto">
+      <h2 class="animate-on-scroll delay-0 text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+        Laravel Development Agency
+      </h2>
+      <p class="animate-on-scroll delay-1 mt-6 text-xl md:text-2xl text-gray-600 leading-relaxed">
+        Our approach merges Laravel's elegant simplicity with complete customization freedom.
+        We ensure rapid deployment and exceptional user experiences that scale with your growth and drive real business results.
+      </p>
+
+      <!-- Optional CTA or trust indicators -->
+      <div class="animate-on-scroll delay-2 mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+        <span class="flex items-center gap-2">
+
+          Laravel Certified Developers
+        </span>
+        <span class="flex items-center gap-2">
+
+          2-3 Week Launch Times
+        </span>
+        <span class="flex items-center gap-2">
+          <Icon name="ph:shield-check-duotone" class="h-5 w-5 text-purple-500" />
+          Enterprise Security Standards
+        </span>
+      </div>
+    </div>
+
+    <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+      {features.map((feature, index) => (
+          <div class={`feature-card animate-on-scroll delay-${index + 3} group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100`}>
+            <div class="h-14 w-14 rounded-xl bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center text-white mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+              <Icon name={feature.icon} class="h-7 w-7 transition-transform duration-300 group-hover:rotate-12" />
+            </div>
+            <h3 class="text-xl lg:text-2xl font-semibold text-gray-900 transition-colors duration-300 group-hover:text-red-600 mb-4">
+              {feature.title}
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              {feature.description}
+            </p>
+            <div class="hover-zoom rounded-lg overflow-hidden">
+              <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  class="w-full h-auto rounded-lg transition-all duration-500 filter group-hover:brightness-105"
+                  width={350}
+                  height={220}
+              />
+            </div>
+
+            <!-- Optional feature link/CTA -->
+            <div class="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a href="#" class="text-red-600 font-medium flex items-center gap-2 text-sm hover:text-red-700">
+                Learn more
+
+              </a>
+            </div>
+          </div>
+      ))}
+    </div>
+
+    <!-- Optional bottom CTA section -->
+    <div class="animate-on-scroll delay-6 mt-16 text-center">
+      <div class="inline-flex items-center gap-4 bg-white rounded-full px-6 py-3 shadow-sm border border-gray-200">
+
+        <span class="text-gray-700 font-medium">Ready to build with Laravel?</span>
+        <a href="#contact" class="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-red-600 transition-colors">
+          Start Your Project
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Additional CSS for enhanced animations -->
+<style>
+  .feature-card {
+    transform: translateY(0);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .hover-zoom img {
+    transition: transform 0.5s ease;
+  }
+
+  .hover-zoom:hover img {
+    transform: scale(1.05);
+  }
+
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .feature-card:hover {
+      transform: none;
+    }
+
+    .hover-zoom:hover img {
+      transform: none;
+    }
+  }
+</style>

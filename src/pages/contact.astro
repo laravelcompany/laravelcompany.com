@@ -1,0 +1,133 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+
+const contactMethods = [
+  {
+    title: "Sales",
+    description: "Talk to our team about custom software development and automation solutions.",
+    icon: "ph:currency-dollar-duotone",
+    email: "info@laravelcompany.com"
+  },
+  {
+    title: "Support",
+    description: "Get help with technical questions or implementation issues.",
+    icon: "ph:lifebuoy-duotone",
+    email: "support@laravelcompany.com"
+  },
+
+];
+---
+
+<Layout
+    title="Contact Us - Laravel Company"
+    description="Get in touch with our team for software development, automation solutions, or partnership opportunities."
+>
+  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto animate-on-scroll">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          Get in <span class="gradient-text">Touch</span>
+        </h1>
+        <p class="mt-6 text-xl text-gray-600">
+          Ready to transform your business with custom software solutions? Let's discuss your project and automation needs.
+        </p>
+      </div>
+      <div class="mt-8 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl p-8 text-white">
+        <h3 class="text-2xl font-bold mb-6">The Workspace</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="text-left">
+            <address class="not-italic text-white/90 text-lg leading-relaxed">
+              <strong class="text-white block mb-2">Laravel Company</strong>
+              7 High Street<br>
+              Basildon, United Kingdom
+            </address>
+
+            <div class="mt-6">
+              <h4 class="text-lg font-semibold text-white mb-2">Business Hours</h4>
+              <p class="text-white/90">Monday - Friday<br>9:00 AM - 6:00 PM GMT</p>
+            </div>
+
+            <div class="mt-6">
+              <h4 class="text-lg font-semibold text-white mb-2">Get In Touch</h4>
+              <a href="mailto:info@laravelcompany.com" class="text-white/90 hover:text-white underline text-lg">
+                info@laravelcompany.com
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-white/10 rounded-lg p-6 backdrop-blur">
+              <svg class="w-12 h-12 text-white mx-auto mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="text-white/90">Located in the heart of<br>Basildon's business district</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+        {contactMethods.map((method, index) => (
+            <div
+                class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 text-center animate-on-scroll"
+                style={`animation-delay: ${index * 0.15}s`}
+            >
+              <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-600 mb-6">
+                <Icon name={method.icon} class="h-8 w-8" />
+              </div>
+              <h3 class="text-xl font-semibold">{method.title}</h3>
+              <p class="mt-3 text-gray-600">{method.description}</p>
+              <a href={`mailto:${method.email}`} class="mt-4 block text-red-600 font-medium hover:underline">
+                {method.email}
+              </a>
+            </div>
+        ))}
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold">Visit Our Headquarters</h2>
+        <p class="mt-4 text-xl text-gray-600">
+          Where lead generation strategies come to life.
+        </p>
+
+
+      </div>
+
+      <div class="mt-12 h-96 rounded-xl overflow-hidden animate-on-scroll shadow-lg">
+        <!-- Placeholder for map iframe - you can replace this with an actual Google Maps embed -->
+        <div class="w-full h-full bg-gray-200 flex items-center justify-center relative">
+          <div class="text-center">
+            <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="text-gray-500 text-lg">7 High Street, Basildon, United Kingdom</p>
+            <p class="text-gray-400 mt-2">Interactive Map Coming Soon</p>
+          </div>
+          <!-- You can replace the above placeholder with:
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2468.123456789!2d0.123456!3d51.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s7%20High%20Street%2C%20Basildon!5e0!3m2!1sen!2suk!4v1234567890"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
