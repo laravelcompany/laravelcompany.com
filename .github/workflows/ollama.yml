@@ -123,105 +123,105 @@ jobs:
           # Initialize the complete message file
           MESSAGE_FILE="/tmp/pr_analysis_request.txt"
           
-          cat > "$MESSAGE_FILE" << EOF
-  Pull Request Analysis Request
+          cat > "$MESSAGE_FILE" << 'EOF'
+          Pull Request Analysis Request
 
-PR Title: $PR_TITLE
-PR Description: $PR_DESCRIPTION
-Repository: ${{ github.repository }}
-PR Number: ${{ github.event.pull_request.number }}
-Files Changed: $FILE_COUNT
+          PR Title: $PR_TITLE
+          PR Description: $PR_DESCRIPTION
+          Repository: ${{ github.repository }}
+          PR Number: ${{ github.event.pull_request.number }}
+          Files Changed: $FILE_COUNT
 
-Changed Files and Diffs:
-  EOF
+          Changed Files and Diffs:
+          EOF
 
-echo "=== DEBUG: Processing Files ==="
+          echo "=== DEBUG: Processing Files ==="
 
-# Process each file and add to message file
-  FILE_INDEX=0
-  echo "$RESPONSE_BODY" | jq -c '.[]' | while IFS= read -r file; do
-  FILE_INDEX=$((FILE_INDEX + 1))
-  FILENAME=$(echo "$file" | jq -r '.filename')
-  STATUS=$(echo "$file" | jq -r '.status')
-  ADDITIONS=$(echo "$file" | jq -r '.additions // 0')
-  DELETIONS=$(echo "$file" | jq -r '.deletions // 0')
-  PATCH=$(echo "$file" | jq -r '.patch // "No diff available"')
-  
-  echo "Processing File #$FILE_INDEX: $FILENAME ($STATUS, +$ADDITIONS -$DELETIONS)"
-echo "Patch length: ${#PATCH} characters"
+          # Process each file and add to message file
+          FILE_INDEX=0
+          echo "$RESPONSE_BODY" | jq -c '.[]' | while IFS= read -r file; do
+            FILE_INDEX=$((FILE_INDEX + 1))
+            FILENAME=$(echo "$file" | jq -r '.filename')
+            STATUS=$(echo "$file" | jq -r '.status')
+            ADDITIONS=$(echo "$file" | jq -r '.additions // 0')
+            DELETIONS=$(echo "$file" | jq -r '.deletions // 0')
+            PATCH=$(echo "$file" | jq -r '.patch // "No diff available"')
+          
+            echo "Processing File #$FILE_INDEX: $FILENAME ($STATUS, +$ADDITIONS -$DELETIONS)"
+            echo "Patch length: ${#PATCH} characters"
 
-# Show first 200 chars of patch for debugging
-echo "Patch preview: ${PATCH:0:200}..."
+            # Show first 200 chars of patch for debugging
+            echo "Patch preview: ${PATCH:0:200}..."
 
-# Truncate very large patches to avoid overwhelming the LLM
-  if [ ${#PATCH} -gt 8000 ]; then
-  PATCH="${PATCH:0:8000}... [TRUNCATED - diff too long]"
-  echo "Truncated patch to 8000 characters"
-  fi
-  
-  # Append to message file
-  cat >> "$MESSAGE_FILE" << EOF
+            # Truncate very large patches to avoid overwhelming the LLM
+            if [ ${#PATCH} -gt 8000 ]; then
+              PATCH="${PATCH:0:8000}... [TRUNCATED - diff too long]"
+              echo "Truncated patch to 8000 characters"
+            fi
+          
+            # Append to message file
+            cat >> "$MESSAGE_FILE" << EOF
 
-File: $FILENAME
-Status: $STATUS
-Changes: +$ADDITIONS -$DELETIONS lines
+          File: $FILENAME
+          Status: $STATUS
+          Changes: +$ADDITIONS -$DELETIONS lines
 
-Diff:
-  $PATCH
+          Diff:
+          $PATCH
 
----
-  EOF
-  
-  done
-  
-  # Add analysis instructions to the message file
-  cat >> "$MESSAGE_FILE" << 'EOF'
+          ---
+          EOF
+          
+          done
+          
+          # Add analysis instructions to the message file
+          cat >> "$MESSAGE_FILE" << 'EOF'
 
-Analysis Request:
-Please analyze all the above code changes and provide:
-1. Overall code quality assessment: Assess readability, maintainability, modularity, and adherence to coding standards. Use a 1–5 rating scale (⭐) and justify the score.
-2. Potential bugs or issues found: List in a table format with file, line, issue, and severity.
-3. Security concerns if any: Identify possible vulnerabilities, unsafe practices, or data leaks and rate each by severity and provide mitigation steps.
-4. Performance considerations: Highlight scalability issues, efficiency concerns, and bottlenecks. Recommend optimizations where applicable.
-5. Best practice recommendations: Check against SOLID, DRY, KISS, YAGNI principles. Suggest language/framework-specific improvements.
-6. Summary of what this PR accomplishes: Concisely state what the PR accomplishes, its intended impact, and any risks to merging.
-  
-  Please be thorough but concise in your analysis.
-  EOF
-  
-  # Read the complete message and show debug info
-  FINAL_MESSAGE=$(cat "$MESSAGE_FILE")
-echo "=== DEBUG: Final Message Statistics ==="
-echo "Total message length: ${#FINAL_MESSAGE} characters"
-echo "Message line count: $(echo "$FINAL_MESSAGE" | wc -l)"
-  echo ""
-echo "=== DEBUG: Message Preview (First 1000 chars) ==="
-  echo "${FINAL_MESSAGE:0:1000}"
-  echo "... [TRUNCATED FOR DEBUG]"
-  echo ""
+          Analysis Request:
+          Please analyze all the above code changes and provide:
+          1. Overall code quality assessment: Assess readability, maintainability, modularity, and adherence to coding standards. Use a 1–5 rating scale (⭐) and justify the score.
+          2. Potential bugs or issues found: List in a table format with file, line, issue, and severity.
+          3. Security concerns if any: Identify possible vulnerabilities, unsafe practices, or data leaks and rate each by severity and provide mitigation steps.
+          4. Performance considerations: Highlight scalability issues, efficiency concerns, and bottlenecks. Recommend optimizations where applicable.
+          5. Best practice recommendations: Check against SOLID, DRY, KISS, YAGNI principles. Suggest language/framework-specific improvements.
+          6. Summary of what this PR accomplishes: Concisely state what the PR accomplishes, its intended impact, and any risks to merging.
+          
+          Please be thorough but concise in your analysis.
+          EOF
+          
+          # Read the complete message and show debug info
+          FINAL_MESSAGE=$(cat "$MESSAGE_FILE")
+          echo "=== DEBUG: Final Message Statistics ==="
+          echo "Total message length: ${#FINAL_MESSAGE} characters"
+          echo "Message line count: $(echo "$FINAL_MESSAGE" | wc -l)"
+          echo ""
+          echo "=== DEBUG: Message Preview (First 1000 chars) ==="
+          echo "${FINAL_MESSAGE:0:1000}"
+          echo "... [TRUNCATED FOR DEBUG]"
+          echo ""
 
-# Show the tail of the message to verify analysis instructions
-echo "=== DEBUG: Message End (Last 500 chars) ==="
-echo "${FINAL_MESSAGE: -500}"
-  echo ""
-  
-  echo "=== Sending to Local LLM ==="
-echo "Message length: ${#FINAL_MESSAGE} characters"
+          # Show the tail of the message to verify analysis instructions
+          echo "=== DEBUG: Message End (Last 500 chars) ==="
+          echo "${FINAL_MESSAGE: -500}"
+          echo ""
+          
+          echo "=== Sending to Local LLM ==="
+          echo "Message length: ${#FINAL_MESSAGE} characters"
 
-# Create a more robust JSON request with proper escaping
-  REQUEST_JSON=$(jq -n \
-  --arg model "$LLM_MODEL" \
-  --arg prompt "$FINAL_MESSAGE" \
-  '{
-"model": $model,
-"prompt": $prompt,
-"options": {
-  "temperature": 0.3,
-  "top_p": 0.9,
-  "max_tokens": 3000
-},
-"stream": false
-}')
+          # Create a more robust JSON request with proper escaping
+          REQUEST_JSON=$(jq -n \
+            --arg model "$LLM_MODEL" \
+            --arg prompt "$FINAL_MESSAGE" \
+            '{
+              "model": $model,
+              "prompt": $prompt,
+              "options": {
+                "temperature": 0.3,
+                "top_p": 0.9,
+                "max_tokens": 3000
+              },
+              "stream": false
+            }')
           
           echo "Request JSON size: ${#REQUEST_JSON} characters"
           
@@ -296,174 +296,174 @@ echo "Message length: ${#FINAL_MESSAGE} characters"
           # Parse LLM response
           echo "=== DEBUG: Parsing LLM Response ==="
           LLM_HTTP_STATUS=$(echo "$LLM_RESPONSE" | tail -n 1 | grep "^HTTP_STATUS:" | cut -d':' -f2)
-  LLM_RESPONSE_BODY=$(echo "$LLM_RESPONSE" | head -n -1)
+          LLM_RESPONSE_BODY=$(echo "$LLM_RESPONSE" | head -n -1)
 
-echo "Extracted HTTP Status: '$LLM_HTTP_STATUS'"
+          echo "Extracted HTTP Status: '$LLM_HTTP_STATUS'"
           echo "Response Body Length: ${#LLM_RESPONSE_BODY} characters"
-  echo "Response Body (first 1000 chars):"
-  echo "${LLM_RESPONSE_BODY:0:1000}"
-  if [ ${#LLM_RESPONSE_BODY} -gt 1000 ]; then
-  echo "... [TRUNCATED FOR DEBUG]"
-  fi
-  echo ""
-  
-  if [ "$LLM_HTTP_STATUS" -eq 200 ]; then
-echo "=== DEBUG: Processing Successful LLM Response ==="
-# Validate LLM response JSON
-  if ! echo "$LLM_RESPONSE_BODY" | jq empty 2>/dev/null; then
-  echo "❌ Invalid JSON response from LLM"
-echo "=== DEBUG: Invalid JSON Analysis ==="
-  echo "Raw response body:"
-  echo "$LLM_RESPONSE_BODY"
-  
-  ERROR_MSG="🚨 **LLM Response Error**\n\nReceived invalid response from LLM service.\n\n*Please check the LLM service configuration.*"
-  
-  curl -s -X POST \
--H "Authorization: Bearer $GITHUB_TOKEN" \
--H "Accept: application/vnd.github.v3+json" \
--H "Content-Type: application/json" \
--d "{\"body\": \"$ERROR_MSG\"}" \
-  "${{ github.event.pull_request.comments_url }}"
-  
-  exit 1
-  fi
-  
-  echo "✅ LLM response is valid JSON"
+          echo "Response Body (first 1000 chars):"
+          echo "${LLM_RESPONSE_BODY:0:1000}"
+          if [ ${#LLM_RESPONSE_BODY} -gt 1000 ]; then
+            echo "... [TRUNCATED FOR DEBUG]"
+          fi
+          echo ""
+          
+          if [ "$LLM_HTTP_STATUS" -eq 200 ]; then
+            echo "=== DEBUG: Processing Successful LLM Response ==="
+            # Validate LLM response JSON
+            if ! echo "$LLM_RESPONSE_BODY" | jq empty 2>/dev/null; then
+              echo "❌ Invalid JSON response from LLM"
+              echo "=== DEBUG: Invalid JSON Analysis ==="
+              echo "Raw response body:"
+              echo "$LLM_RESPONSE_BODY"
+          
+              ERROR_MSG="🚨 **LLM Response Error**\n\nReceived invalid response from LLM service.\n\n*Please check the LLM service configuration.*"
+          
+              curl -s -X POST \
+                -H "Authorization: Bearer $GITHUB_TOKEN" \
+                -H "Accept: application/vnd.github.v3+json" \
+                -H "Content-Type: application/json" \
+                -d "{\"body\": \"$ERROR_MSG\"}" \
+                "${{ github.event.pull_request.comments_url }}"
+          
+              exit 1
+            fi
+          
+            echo "✅ LLM response is valid JSON"
 
-# Debug: Show JSON structure
-echo "=== DEBUG: JSON Structure Analysis ==="
-  echo "Available fields in response:"
-  echo "$LLM_RESPONSE_BODY" | jq 'keys // "Not an object"'
-  echo ""
-  
-  # Show the actual content of each possible field
-  echo "Field contents:"
-echo "- .response: $(echo "$LLM_RESPONSE_BODY" | jq -r '.response // "not found"' | head -c 100)..."
-echo "- .text: $(echo "$LLM_RESPONSE_BODY" | jq -r '.text // "not found"' | head -c 100)..."
-echo "- .content: $(echo "$LLM_RESPONSE_BODY" | jq -r '.content // "not found"' | head -c 100)..."
-echo "- .message: $(echo "$LLM_RESPONSE_BODY" | jq -r '.message // "not found"' | head -c 100)..."
-  echo ""
+            # Debug: Show JSON structure
+            echo "=== DEBUG: JSON Structure Analysis ==="
+            echo "Available fields in response:"
+            echo "$LLM_RESPONSE_BODY" | jq 'keys // "Not an object"'
+            echo ""
+          
+            # Show the actual content of each possible field
+            echo "Field contents:"
+            echo "- .response: $(echo "$LLM_RESPONSE_BODY" | jq -r '.response // "not found"' | head -c 100)..."
+            echo "- .text: $(echo "$LLM_RESPONSE_BODY" | jq -r '.text // "not found"' | head -c 100)..."
+            echo "- .content: $(echo "$LLM_RESPONSE_BODY" | jq -r '.content // "not found"' | head -c 100)..."
+            echo "- .message: $(echo "$LLM_RESPONSE_BODY" | jq -r '.message // "not found"' | head -c 100)..."
+            echo ""
 
-# Extract the analysis from LLM response
-echo "=== DEBUG: Extracting Analysis Content ==="
-  ANALYSIS_RESPONSE=$(echo "$LLM_RESPONSE_BODY" | jq -r '.response // empty')
-  ANALYSIS_TEXT=$(echo "$LLM_RESPONSE_BODY" | jq -r '.text // empty')
-  ANALYSIS_CONTENT=$(echo "$LLM_RESPONSE_BODY" | jq -r '.content // empty')
-  ANALYSIS_MESSAGE=$(echo "$LLM_RESPONSE_BODY" | jq -r '.message // empty')
-  
-  # Use the first non-empty field
-  if [ -n "$ANALYSIS_RESPONSE" ] && [ "$ANALYSIS_RESPONSE" != "null" ]; then
-  ANALYSIS="$ANALYSIS_RESPONSE"
-  echo "✅ Using .response field for analysis"
-  elif [ -n "$ANALYSIS_TEXT" ] && [ "$ANALYSIS_TEXT" != "null" ]; then
-  ANALYSIS="$ANALYSIS_TEXT"
-  echo "✅ Using .text field for analysis"
-  elif [ -n "$ANALYSIS_CONTENT" ] && [ "$ANALYSIS_CONTENT" != "null" ]; then
-  ANALYSIS="$ANALYSIS_CONTENT"
-  echo "✅ Using .content field for analysis"
-  elif [ -n "$ANALYSIS_MESSAGE" ] && [ "$ANALYSIS_MESSAGE" != "null" ]; then
-  ANALYSIS="$ANALYSIS_MESSAGE"
-  echo "✅ Using .message field for analysis"
-  else
-  ANALYSIS="❌ No analysis content found in LLM response.
+            # Extract the analysis from LLM response
+            echo "=== DEBUG: Extracting Analysis Content ==="
+            ANALYSIS_RESPONSE=$(echo "$LLM_RESPONSE_BODY" | jq -r '.response // empty')
+            ANALYSIS_TEXT=$(echo "$LLM_RESPONSE_BODY" | jq -r '.text // empty')
+            ANALYSIS_CONTENT=$(echo "$LLM_RESPONSE_BODY" | jq -r '.content // empty')
+            ANALYSIS_MESSAGE=$(echo "$LLM_RESPONSE_BODY" | jq -r '.message // empty')
+          
+            # Use the first non-empty field
+            if [ -n "$ANALYSIS_RESPONSE" ] && [ "$ANALYSIS_RESPONSE" != "null" ]; then
+              ANALYSIS="$ANALYSIS_RESPONSE"
+              echo "✅ Using .response field for analysis"
+            elif [ -n "$ANALYSIS_TEXT" ] && [ "$ANALYSIS_TEXT" != "null" ]; then
+              ANALYSIS="$ANALYSIS_TEXT"
+              echo "✅ Using .text field for analysis"
+            elif [ -n "$ANALYSIS_CONTENT" ] && [ "$ANALYSIS_CONTENT" != "null" ]; then
+              ANALYSIS="$ANALYSIS_CONTENT"
+              echo "✅ Using .content field for analysis"
+            elif [ -n "$ANALYSIS_MESSAGE" ] && [ "$ANALYSIS_MESSAGE" != "null" ]; then
+              ANALYSIS="$ANALYSIS_MESSAGE"
+              echo "✅ Using .message field for analysis"
+            else
+              ANALYSIS="❌ No analysis content found in LLM response.
 
-Available fields: $(echo "$LLM_RESPONSE_BODY" | jq 'keys // "none"')
+          Available fields: $(echo "$LLM_RESPONSE_BODY" | jq 'keys // "none"')
 
-Raw response:
-  \`\`\`json
-  $LLM_RESPONSE_BODY
-  \`\`\`"
-  echo "❌ No analysis content found in any expected field"
-  fi
+          Raw response:
+          \`\`\`json
+          $LLM_RESPONSE_BODY
+          \`\`\`"
+              echo "❌ No analysis content found in any expected field"
+            fi
 
-echo "=== DEBUG: Final Analysis Content ==="
-echo "Analysis length: ${#ANALYSIS} characters"
-  echo "Analysis preview (first 500 chars):"
-  echo "${ANALYSIS:0:500}"
-  if [ ${#ANALYSIS} -gt 500 ]; then
-  echo "... [TRUNCATED FOR DEBUG]"
-  fi
-  echo ""
-  
-  # Post the analysis as a PR comment
-  COMMENT_BODY="🤖 **Automated Code Analysis**
-  
-  $ANALYSIS
+            echo "=== DEBUG: Final Analysis Content ==="
+            echo "Analysis length: ${#ANALYSIS} characters"
+            echo "Analysis preview (first 500 chars):"
+            echo "${ANALYSIS:0:500}"
+            if [ ${#ANALYSIS} -gt 500 ]; then
+              echo "... [TRUNCATED FOR DEBUG]"
+            fi
+            echo ""
+          
+            # Post the analysis as a PR comment
+            COMMENT_BODY="🤖 **Automated Code Analysis**
+          
+            $ANALYSIS
 
----
-*Analysis performed by Local LLM (\`$LLM_MODEL\`) on $(date -u '+%Y-%m-%d %H:%M:%S UTC')*
-  
-  <details>
-  <summary>📊 Request Details</summary>
+          ---
+          *Analysis performed by Local LLM (\`$LLM_MODEL\`) on $(date -u '+%Y-%m-%d %H:%M:%S UTC')*
+          
+            <details>
+            <summary>📊 Request Details</summary>
 
-- **Files Analyzed:** $FILE_COUNT
-- **Request Size:** ${#FINAL_MESSAGE} characters
-- **Response Size:** ${#LLM_RESPONSE_BODY} characters
-- **LLM Model:** $LLM_MODEL
-- **Endpoint:** $LLM_ENDPOINT
-  
-  </details>"
+          - **Files Analyzed:** $FILE_COUNT
+          - **Request Size:** ${#FINAL_MESSAGE} characters
+          - **Response Size:** ${#LLM_RESPONSE_BODY} characters
+          - **LLM Model:** $LLM_MODEL
+          - **Endpoint:** $LLM_ENDPOINT
+          
+            </details>"
 
-  # Create JSON for comment with proper escaping
-COMMENT_JSON=$(jq -n --arg body "$COMMENT_BODY" '{body: $body}')
+            # Create JSON for comment with proper escaping
+            COMMENT_JSON=$(jq -n --arg body "$COMMENT_BODY" '{body: $body}')
 
-echo "=== DEBUG: Posting Comment to PR ==="
-echo "Comment URL: ${{ github.event.pull_request.comments_url }}"
-echo "Comment size: ${#COMMENT_BODY} characters"
-  
-  COMMENT_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" -X POST \
--H "Authorization: Bearer $GITHUB_TOKEN" \
--H "Accept: application/vnd.github.v3+json" \
--H "Content-Type: application/json" \
-  -d "$COMMENT_JSON" \
-  "${{ github.event.pull_request.comments_url }}")
-  
-  COMMENT_HTTP_STATUS=$(echo "$COMMENT_RESPONSE" | tail -n 1 | grep "^HTTP_STATUS:" | cut -d':' -f2)
-  
-  if [ "$COMMENT_HTTP_STATUS" -eq 201 ]; then
-  echo "✅ Successfully posted LLM analysis to PR"
-  else
-echo "❌ Failed to post comment. Status: $COMMENT_HTTP_STATUS"
-echo "Comment response: $(echo "$COMMENT_RESPONSE" | head -n -1)"
-  fi
-  
-  else
-echo "❌ LLM request failed with status: $LLM_HTTP_STATUS"
-  
-  # Post detailed error message to PR
-  ERROR_COMMENT="🚨 **LLM Analysis Failed**
-  
-  The automated code analysis could not be completed.
-  
-  **Error Details:**
-- HTTP Status: $LLM_HTTP_STATUS
-- LLM Model: $LLM_MODEL
-- Endpoint: $LLM_ENDPOINT
-- Request Size: ${#FINAL_MESSAGE} characters
-- Response Size: ${#LLM_RESPONSE_BODY} characters
+            echo "=== DEBUG: Posting Comment to PR ==="
+            echo "Comment URL: ${{ github.event.pull_request.comments_url }}"
+            echo "Comment size: ${#COMMENT_BODY} characters"
+          
+            COMMENT_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" -X POST \
+              -H "Authorization: Bearer $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              -H "Content-Type: application/json" \
+              -d "$COMMENT_JSON" \
+              "${{ github.event.pull_request.comments_url }}")
+          
+            COMMENT_HTTP_STATUS=$(echo "$COMMENT_RESPONSE" | tail -n 1 | grep "^HTTP_STATUS:" | cut -d':' -f2)
+          
+            if [ "$COMMENT_HTTP_STATUS" -eq 201 ]; then
+              echo "✅ Successfully posted LLM analysis to PR"
+            else
+              echo "❌ Failed to post comment. Status: $COMMENT_HTTP_STATUS"
+              echo "Comment response: $(echo "$COMMENT_RESPONSE" | head -n -1)"
+            fi
+          
+          else
+            echo "❌ LLM request failed with status: $LLM_HTTP_STATUS"
+          
+            # Post detailed error message to PR
+            ERROR_COMMENT="🚨 **LLM Analysis Failed**
+          
+            The automated code analysis could not be completed.
+          
+            **Error Details:**
+          - HTTP Status: $LLM_HTTP_STATUS
+          - LLM Model: $LLM_MODEL
+          - Endpoint: $LLM_ENDPOINT
+          - Request Size: ${#FINAL_MESSAGE} characters
+          - Response Size: ${#LLM_RESPONSE_BODY} characters
 
-  **Response Preview:**
-  \`\`\`
-  ${LLM_RESPONSE_BODY:0:1000}
-  \`\`\`
+            **Response Preview:**
+            \`\`\`
+            ${LLM_RESPONSE_BODY:0:1000}
+            \`\`\`
 
-  **Troubleshooting:**
-- Check if the LLM service is running
-- Verify the model name is correct
-- Check service logs for errors
-- Ensure the model can handle the request size
+            **Troubleshooting:**
+          - Check if the LLM service is running
+          - Verify the model name is correct
+          - Check service logs for errors
+          - Ensure the model can handle the request size
 
----
-*Failed on $(date -u '+%Y-%m-%d %H:%M:%S UTC')*"
+          ---
+          *Failed on $(date -u '+%Y-%m-%d %H:%M:%S UTC')*"
 
-ERROR_JSON=$(jq -n --arg body "$ERROR_COMMENT" '{body: $body}')
-  
-  curl -s -X POST \
--H "Authorization: Bearer $GITHUB_TOKEN" \
--H "Accept: application/vnd.github.v3+json" \
--H "Content-Type: application/json" \
-  -d "$ERROR_JSON" \
-  "${{ github.event.pull_request.comments_url }}"
-  
-  exit 1
-  fi
+            ERROR_JSON=$(jq -n --arg body "$ERROR_COMMENT" '{body: $body}')
+          
+            curl -s -X POST \
+              -H "Authorization: Bearer $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              -H "Content-Type: application/json" \
+              -d "$ERROR_JSON" \
+              "${{ github.event.pull_request.comments_url }}"
+          
+            exit 1
+          fi
