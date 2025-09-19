@@ -54,10 +54,10 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             -H "User-Agent: GitHub-Actions")
           
-          # Extract HTTP status and response body
-          HTTP_STATUS=$(echo "$FILES_RESPONSE" | grep "HTTP_STATUS:" | cut -d':' -f2)
-          RESPONSE_SIZE=$(echo "$FILES_RESPONSE" | grep "HTTP_SIZE:" | cut -d':' -f2)
-          RESPONSE_BODY=$(echo "$FILES_RESPONSE" | sed '/HTTP_STATUS:/,$d')
+          # Extract HTTP status and response body using more reliable method
+          HTTP_STATUS=$(echo "$FILES_RESPONSE" | tail -n 2 | grep "^HTTP_STATUS:" | cut -d':' -f2)
+          RESPONSE_SIZE=$(echo "$FILES_RESPONSE" | tail -n 1 | grep "^HTTP_SIZE:" | cut -d':' -f2)
+          RESPONSE_BODY=$(echo "$FILES_RESPONSE" | head -n -2)
           
           echo "HTTP Status: $HTTP_STATUS"
           echo "Response Size: $RESPONSE_SIZE bytes"
@@ -258,8 +258,8 @@ jobs:
           fi
           
           # Parse LLM response
-          LLM_HTTP_STATUS=$(echo "$LLM_RESPONSE" | grep "HTTP_STATUS:" | cut -d':' -f2)
-          LLM_RESPONSE_BODY=$(echo "$LLM_RESPONSE" | sed '/HTTP_STATUS:/,$d')
+          LLM_HTTP_STATUS=$(echo "$LLM_RESPONSE" | tail -n 1 | grep "^HTTP_STATUS:" | cut -d':' -f2)
+          LLM_RESPONSE_BODY=$(echo "$LLM_RESPONSE" | head -n -1)
           
           echo "LLM Response Status: $LLM_HTTP_STATUS"
           echo "LLM Response Size: ${#LLM_RESPONSE_BODY} characters"
@@ -310,13 +310,13 @@ jobs:
               -d "$COMMENT_JSON" \
               "${{ github.event.pull_request.comments_url }}")
           
-            COMMENT_HTTP_STATUS=$(echo "$COMMENT_RESPONSE" | grep "HTTP_STATUS:" | cut -d':' -f2)
+            COMMENT_HTTP_STATUS=$(echo "$COMMENT_RESPONSE" | tail -n 1 | grep "^HTTP_STATUS:" | cut -d':' -f2)
           
             if [ "$COMMENT_HTTP_STATUS" -eq 201 ]; then
               echo "✅ Successfully posted LLM analysis to PR"
             else
               echo "❌ Failed to post comment. Status: $COMMENT_HTTP_STATUS"
-              echo "Comment response: $(echo "$COMMENT_RESPONSE" | sed '/HTTP_STATUS:/,$d')"
+              echo "Comment response: $(echo "$COMMENT_RESPONSE" | head -n -1)"
             fi
           
           else
