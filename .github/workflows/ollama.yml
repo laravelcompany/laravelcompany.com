@@ -212,10 +212,30 @@ jobs:
           
           echo "Request JSON size: ${#REQUEST_JSON} characters"
           
+          # DEBUG: Show the complete request being sent
+          echo "=== DEBUG: Complete LLM Request ==="
+          echo "Endpoint: $LLM_ENDPOINT"
+          echo "Model: $LLM_MODEL"
+          echo "Request Headers:"
+          echo "  - Content-Type: application/json"
+          echo ""
+          echo "Request Body (formatted):"
+          echo "$REQUEST_JSON" | jq '.'
+          echo ""
+          echo "Request Body (first 1000 chars of prompt):"
+          echo "$FINAL_MESSAGE" | head -c 1000
+          if [ ${#FINAL_MESSAGE} -gt 1000 ]; then
+            echo "... [TRUNCATED FOR DEBUG - total length: ${#FINAL_MESSAGE} chars]"
+          fi
+          echo ""
+          
           # Test LLM endpoint connectivity first
-          echo "Testing LLM endpoint connectivity..."
+          echo "=== DEBUG: Testing LLM Connectivity ==="
+          echo "Testing endpoint: $LLM_ENDPOINT"
           PING_RESPONSE=$(curl -s -w "HTTP_STATUS:%{http_code}" --max-time 10 \
             -X GET "$LLM_ENDPOINT" 2>/dev/null || echo "CURL_FAILED")
+          
+          echo "Ping response: $PING_RESPONSE"
           
           if echo "$PING_RESPONSE" | grep -q "CURL_FAILED"; then
             echo "❌ Cannot reach LLM endpoint: $LLM_ENDPOINT"
@@ -235,12 +255,29 @@ jobs:
           echo "✅ LLM endpoint is reachable"
           
           # Send to LLM with timeout and better error handling
+          echo "=== DEBUG: Sending Request to LLM ==="
           echo "Sending analysis request to LLM..."
+          echo "Curl command being executed:"
+          echo "curl -s -w \"\\nHTTP_STATUS:%{http_code}\" --max-time 120 \\"
+          echo "  -X POST \\"
+          echo "  -H \"Content-Type: application/json\" \\"
+          echo "  -d \"\$REQUEST_JSON\" \\"
+          echo "  \"$LLM_ENDPOINT\""
+          echo ""
+          
           LLM_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" --max-time 120 \
             -X POST \
             -H "Content-Type: application/json" \
             -d "$REQUEST_JSON" \
             "$LLM_ENDPOINT" 2>/dev/null || echo "CURL_FAILED")
+          
+          echo "=== DEBUG: Raw LLM Response ==="
+          echo "Raw response (first 2000 chars):"
+          echo "${LLM_RESPONSE:0:2000}"
+          if [ ${#LLM_RESPONSE} -gt 2000 ]; then
+            echo "... [TRUNCATED FOR DEBUG - total length: ${#LLM_RESPONSE} chars]"
+          fi
+          echo ""
           
           if echo "$LLM_RESPONSE" | grep -q "CURL_FAILED"; then
             echo "❌ LLM request failed (curl error)"
@@ -258,17 +295,41 @@ jobs:
           fi
           
           # Parse LLM response
+          echo "=== DEBUG: Parsing LLM Response ==="
           LLM_HTTP_STATUS=$(echo "$LLM_RESPONSE" | tail -n 1 | grep "^HTTP_STATUS:" | cut -d':' -f2)
           LLM_RESPONSE_BODY=$(echo "$LLM_RESPONSE" | head -n -1)
+          
+          echo "Extracted HTTP Status: '$LLM_HTTP_STATUS'"
+          echo "Response Body Length: ${#LLM_RESPONSE_BODY} characters"
+          echo "Response Body (first 1000 chars):"
+          echo "${LLM_RESPONSE_BODY:0:1000}"
+          if [ ${#LLM_RESPONSE_BODY} -gt 1000 ]; then
+            echo "... [TRUNCATED FOR DEBUG]"
+          fi
+          echo ""
           
           echo "LLM Response Status: $LLM_HTTP_STATUS"
           echo "LLM Response Size: ${#LLM_RESPONSE_BODY} characters"
           
           if [ "$LLM_HTTP_STATUS" -eq 200 ]; then
+            echo "=== DEBUG: Processing Successful LLM Response ==="
             # Validate LLM response JSON
             if ! echo "$LLM_RESPONSE_BODY" | jq empty 2>/dev/null; then
               echo "❌ Invalid JSON response from LLM"
-              echo "Response: ${LLM_RESPONSE_BODY:0:500}"
+              echo "=== DEBUG: Invalid JSON Analysis ==="
+              echo "Raw response body:"
+              echo "$LLM_RESPONSE_BODY"
+              echo ""
+              echo "Attempting to identify response format..."
+              if echo "$LLM_RESPONSE_BODY" | grep -q "html"; then
+                echo "- Appears to be HTML content"
+              elif echo "$LLM_RESPONSE_BODY" | grep -q "error"; then
+                echo "- Contains 'error' - likely error message"
+              elif [ -z "$LLM_RESPONSE_BODY" ]; then
+                echo "- Response body is empty"
+              else
+                echo "- Unknown format"
+              fi
           
               ERROR_MSG="🚨 **LLM Response Error**\n\nReceived invalid response from LLM service.\n\n*Please check the LLM service configuration.*"
           
@@ -282,15 +343,47 @@ jobs:
               exit 1
             fi
           
-            # Extract the analysis from LLM response
-            ANALYSIS=$(echo "$LLM_RESPONSE_BODY" | jq -r '.response // .text // .content // "No analysis content found"')
+            echo "✅ LLM response is valid JSON"
           
-            if [ "$ANALYSIS" = "null" ] || [ -z "$ANALYSIS" ]; then
-              ANALYSIS="No analysis was returned by the LLM service."
+            # Debug: Show JSON structure
+            echo "=== DEBUG: JSON Structure Analysis ==="
+            echo "Available fields in response:"
+            echo "$LLM_RESPONSE_BODY" | jq 'keys // "Not an object"'
+            echo ""
+          
+            # Extract the analysis from LLM response
+            echo "=== DEBUG: Extracting Analysis Content ==="
+            ANALYSIS_RESPONSE=$(echo "$LLM_RESPONSE_BODY" | jq -r '.response // empty')
+            ANALYSIS_TEXT=$(echo "$LLM_RESPONSE_BODY" | jq -r '.text // empty') 
+            ANALYSIS_CONTENT=$(echo "$LLM_RESPONSE_BODY" | jq -r '.content // empty')
+          
+            echo "Checking .response field: '${ANALYSIS_RESPONSE:0:100}...'"
+            echo "Checking .text field: '${ANALYSIS_TEXT:0:100}...'"
+            echo "Checking .content field: '${ANALYSIS_CONTENT:0:100}...'"
+          
+            # Use the first non-empty field
+            if [ -n "$ANALYSIS_RESPONSE" ] && [ "$ANALYSIS_RESPONSE" != "null" ]; then
+              ANALYSIS="$ANALYSIS_RESPONSE"
+              echo "Using .response field for analysis"
+            elif [ -n "$ANALYSIS_TEXT" ] && [ "$ANALYSIS_TEXT" != "null" ]; then
+              ANALYSIS="$ANALYSIS_TEXT"
+              echo "Using .text field for analysis"
+            elif [ -n "$ANALYSIS_CONTENT" ] && [ "$ANALYSIS_CONTENT" != "null" ]; then
+              ANALYSIS="$ANALYSIS_CONTENT"
+              echo "Using .content field for analysis"
+            else
+              ANALYSIS="No analysis content found in LLM response. Available fields: $(echo "$LLM_RESPONSE_BODY" | jq 'keys // "none"')"
+              echo "❌ No analysis content found in any expected field"
             fi
           
-            echo "=== LLM Analysis Received ==="
+            echo "=== DEBUG: Final Analysis Content ==="
             echo "Analysis length: ${#ANALYSIS} characters"
+            echo "Analysis preview (first 500 chars):"
+            echo "${ANALYSIS:0:500}"
+            if [ ${#ANALYSIS} -gt 500 ]; then
+              echo "... [TRUNCATED FOR DEBUG]"
+            fi
+            echo ""
           
             # Post the analysis as a PR comment
             COMMENT_BODY="🤖 **Automated Code Analysis**
@@ -301,7 +394,15 @@ jobs:
           *Analysis performed by Local LLM (\`$LLM_MODEL\`) on $(date -u '+%Y-%m-%d %H:%M:%S UTC')*"
           
             # Create JSON for comment
+            echo "=== DEBUG: Creating PR Comment ==="
             COMMENT_JSON=$(jq -n --arg body "$COMMENT_BODY" '{body: $body}')
+            echo "Comment JSON size: ${#COMMENT_JSON} characters"
+            echo "Comment JSON preview:"
+            echo "$COMMENT_JSON" | jq '.'
+            echo ""
+          
+            echo "=== DEBUG: Posting Comment to PR ==="
+            echo "Comment URL: ${{ github.event.pull_request.comments_url }}"
           
             COMMENT_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" -X POST \
               -H "Authorization: Bearer $GITHUB_TOKEN" \
@@ -312,16 +413,46 @@ jobs:
           
             COMMENT_HTTP_STATUS=$(echo "$COMMENT_RESPONSE" | tail -n 1 | grep "^HTTP_STATUS:" | cut -d':' -f2)
           
+            echo "=== DEBUG: Comment Post Result ==="
+            echo "Comment HTTP Status: '$COMMENT_HTTP_STATUS'"
+            echo "Comment Response Body:"
+            echo "$(echo "$COMMENT_RESPONSE" | head -n -1)"
+            echo ""
+          
             if [ "$COMMENT_HTTP_STATUS" -eq 201 ]; then
               echo "✅ Successfully posted LLM analysis to PR"
             else
               echo "❌ Failed to post comment. Status: $COMMENT_HTTP_STATUS"
-              echo "Comment response: $(echo "$COMMENT_RESPONSE" | head -n -1)"
             fi
           
           else
+            echo "=== DEBUG: LLM Request Failed ==="
             echo "❌ LLM request failed with status: $LLM_HTTP_STATUS"
-            echo "Response: ${LLM_RESPONSE_BODY:0:1000}"
+            echo "Full response analysis:"
+            echo "- HTTP Status: '$LLM_HTTP_STATUS'"
+            echo "- Response Length: ${#LLM_RESPONSE_BODY} characters"
+            echo "- Response Body (first 1000 chars):"
+            echo "${LLM_RESPONSE_BODY:0:1000}"
+            if [ ${#LLM_RESPONSE_BODY} -gt 1000 ]; then
+              echo "... [TRUNCATED]"
+            fi
+            echo ""
+          
+            # Try to identify error type
+            echo "Error type analysis:"
+            if echo "$LLM_RESPONSE_BODY" | grep -q "model"; then
+              echo "- Response mentions 'model' - possibly model not found"
+            fi
+            if echo "$LLM_RESPONSE_BODY" | grep -q "error"; then
+              echo "- Response contains 'error'"
+            fi
+            if echo "$LLM_RESPONSE_BODY" | grep -q "timeout"; then
+              echo "- Response mentions timeout"
+            fi
+            if [ -z "$LLM_RESPONSE_BODY" ]; then
+              echo "- Empty response body"
+            fi
+            echo ""
           
             # Post error message to PR
             ERROR_COMMENT="🚨 **LLM Analysis Failed**
