@@ -1,0 +1,184 @@
+name: 'Send PR Files to Local LLM'
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  analyze_pr:
+    name: 'Send All PR Files to Local LLM'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get Changed Files and Send to LLM
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_ENDPOINT: "https://ai.izdrail.com/api/generate"  # Your local LLM endpoint
+          LLM_MODEL: "gemma3:270m"
+        run: |
+          echo "=== Getting all changed files in PR #${{ github.event.pull_request.number }} ==="
+          
+          # Get all changed files with their content
+          FILES_RESPONSE=$(curl -s \
+            "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json")
+          
+          # Check if we got a valid response
+          if ! echo "$FILES_RESPONSE" | jq empty 2>/dev/null; then
+            echo "Error: Invalid JSON response from GitHub API"
+            echo "$FILES_RESPONSE"
+            exit 1
+          fi
+          
+          # Build the complete message with all files
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          PR_DESCRIPTION="${{ github.event.pull_request.body }}"
+          
+          MESSAGE="# Pull Request Analysis Request
+          
+          **PR Title:** $PR_TITLE
+          **PR Description:** $PR_DESCRIPTION
+          **Repository:** ${{ github.repository }}
+          **PR Number:** ${{ github.event.pull_request.number }}
+          
+          ## Changed Files:
+          
+          "
+          
+          # Process each file and add to message
+          FILE_COUNT=0
+          echo "$FILES_RESPONSE" | jq -c '.[]' | while read -r file; do
+            FILENAME=$(echo "$file" | jq -r '.filename')
+            STATUS=$(echo "$file" | jq -r '.status')
+            ADDITIONS=$(echo "$file" | jq -r '.additions')
+            DELETIONS=$(echo "$file" | jq -r '.deletions')
+            PATCH=$(echo "$file" | jq -r '.patch // ""')
+          
+            echo "Processing: $FILENAME ($STATUS, +$ADDITIONS -$DELETIONS)"
+          
+            FILE_SECTION="
+          ### File: $FILENAME
+          - **Status:** $STATUS
+          - **Changes:** +$ADDITIONS -$DELETIONS lines
+          
+          **Diff:**
+          \`\`\`diff
+          $PATCH
+          \`\`\`
+          
+          ---
+          "
+          
+            MESSAGE="$MESSAGE$FILE_SECTION"
+            ((FILE_COUNT++))
+          done
+          
+          # Add analysis instructions
+          FINAL_MESSAGE="$MESSAGE
+          
+          ## Analysis Request:
+          Please analyze all the above code changes and provide:
+          1. Overall code quality assessment
+          2. Potential bugs or issues
+          3. Security concerns
+          4. Performance considerations  
+          5. Best practice recommendations
+          6. Summary of what this PR accomplishes
+          
+          Please be thorough in your analysis and provide specific feedback for each file where relevant."
+          
+          echo "=== Sending to Local LLM ==="
+          echo "Total files to analyze: $FILE_COUNT"
+          
+          # Prepare request for LLM
+          REQUEST_BODY=$(jq -n \
+            --arg model "$LLM_MODEL" \
+            --arg prompt "$FINAL_MESSAGE" \
+            '{
+              model: $model,
+              prompt: $prompt,
+              options: { temperature: 0.3 },
+              stream: false
+            }')
+          
+          # Send to LLM
+          LLM_RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+            -H "Content-Type: application/json" \
+            -d "$REQUEST_BODY" \
+            "$LLM_ENDPOINT")
+          
+          LLM_HTTP_STATUS=$(echo "$LLM_RESPONSE" | tail -n1)
+          LLM_RESPONSE_BODY=$(echo "$LLM_RESPONSE" | head -n-1)
+          
+          echo "LLM Response Status: $LLM_HTTP_STATUS"
+          
+          if [ "$LLM_HTTP_STATUS" -eq 200 ]; then
+            # Extract the analysis from LLM response
+            ANALYSIS=$(echo "$LLM_RESPONSE_BODY" | jq -r '.response // "No analysis received"')
+          
+            echo "=== LLM Analysis Received ==="
+            echo "$ANALYSIS"
+          
+            # Post the analysis as a PR comment
+            COMMENT_BODY="🤖 **Automated Code Analysis**
+
+          $ANALYSIS
+
+          ---
+          *Analysis performed by Local LLM ($LLM_MODEL) on $(date)*"
+          
+            COMMENT_RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+              -H "Authorization: Bearer $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg body "$COMMENT_BODY" '{body: $body}')" \
+              "${{ github.event.pull_request.comments_url }}")
+          
+            COMMENT_HTTP_STATUS=$(echo "$COMMENT_RESPONSE" | tail -n1)
+          
+            if [ "$COMMENT_HTTP_STATUS" -eq 201 ]; then
+              echo "✅ Successfully posted LLM analysis to PR"
+            else
+              echo "❌ Failed to post comment. Status: $COMMENT_HTTP_STATUS"
+              echo "$COMMENT_RESPONSE"
+            fi
+          
+          else
+            echo "❌ LLM request failed with status: $LLM_HTTP_STATUS"
+            echo "Response: $LLM_RESPONSE_BODY"
+          
+            # Post error message to PR
+            ERROR_COMMENT="🚨 **LLM Analysis Failed**
+          
+          The automated code analysis could not be completed due to an LLM service error.
+          
+          **Error Details:**
+          - Status Code: $LLM_HTTP_STATUS
+          - Response: $LLM_RESPONSE_BODY
+          
+          ---
+          *Attempted on $(date)*"
+          
+            curl -s -X POST \
+              -H "Authorization: Bearer $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg body "$ERROR_COMMENT" '{body: $body}')" \
+              "${{ github.event.pull_request.comments_url }}"
+          
+            exit 1
+          fi
