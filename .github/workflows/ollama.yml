@@ -181,13 +181,12 @@ jobs:
           
           Analysis Request:
           Please analyze all the above code changes and provide:
-          1. Overall code quality assessment
-          2. Potential bugs or issues found
-          3. Security concerns if any
-          4. Performance considerations
-          5. Best practice recommendations
-          6. Summary of what this PR accomplishes
-          
+          1. Overall code quality assessment: Assess readability, maintainability, modularity, and adherence to coding standards.Use a 1–5 rating scale (⭐) and justify the score.
+          2. Potential bugs or issues found: List in a table format:
+          3. Security concerns if any: Identify possible vulnerabilities, unsafe practices, or data leaks and Rate each by severity and provide mitigation steps.
+          4. Performance considerations: Highlight scalability issues, efficiency concerns, and bottlenecks.Recommend optimisations where applicable.
+          5. Best practice recommendations: Check against SOLID, DRY, KISS, YAGNI principles.Suggest language/framework-specific improvements (e.g., Laravel, Python, Go idioms).
+          6. Summary of what this PR accomplishes: Concisely state what the PR accomplishes, its intended impact, and any risks to merging.Use clear markdown sections.
           Please be thorough but concise in your analysis." >> /tmp/pr_analysis_request.txt
           
           FINAL_MESSAGE=$(cat /tmp/pr_analysis_request.txt)
