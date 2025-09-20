@@ -5,7 +5,7 @@ import logoSrc from '../assets/logo.svg';
 const navItems = [
     { name: 'About Us', href: '/about-us' },
     { name: 'Software', href: '/software' },
-    { name: 'Blog', href: 'https://blog.laravelcompany.com' },
+    { name: 'Blog', target:'_blank', href: 'https://blog.laravelcompany.com' },
 ];
 ---
 
@@ -20,6 +20,8 @@ const navItems = [
         <nav class="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
             {navItems.map(item => (
                     <a
+                            title={item.name}
+                            target={item.target ?? '_self'}
                             href={item.href}
                             class="text-gray-700 hover:text-payflo-purple focus:text-payflo-purple transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2 rounded px-2 py-1"
                     >
@@ -38,67 +40,175 @@ const navItems = [
             <!-- Mobile Menu Button -->
             <button
                     id="menu-toggle"
-                    class="md:hidden flex items-center transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2 rounded p-1"
+                    class="md:hidden flex flex-col items-center justify-center w-8 h-8 focus:outline-none"
                     aria-label="Toggle navigation menu"
                     aria-expanded="false"
-                    aria-controls="mobile-menu"
             >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
             </button>
         </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <nav id="mobile-menu" class="hidden md:hidden bg-white w-full border-t border-gray-100" role="navigation" aria-label="Mobile navigation">
-        <div class="container-custom py-4 space-y-4">
-            {navItems.map((item, index) => (
-                    <a
-                            href={item.href}
-                            class="block py-2 px-2 text-gray-700 hover:text-payflo-purple focus:text-payflo-purple transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2 rounded"
-                            style={`transition-delay: ${index * 50}ms;`}
-                    >
-                        {item.name}
-                    </a>
-            ))}
-            <a href="/login" class="block py-2 px-2 text-gray-700 hover:text-payflo-purple focus:text-payflo-purple transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2 rounded">Log In</a>
+    <!-- Mobile Dropdown Menu - Right below header -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="container-custom py-6">
+            <nav class="flex flex-col space-y-4">
+                {navItems.map(item => (
+                        <a href={item.href} class="mobile-menu-item">
+                            {item.name}
+                        </a>
+                ))}
+                <a href="/login" class="mobile-menu-item">
+                    Log In
+                </a>
+                <a href="/contact" class="mobile-menu-cta">
+                    Book a Demo
+                </a>
+            </nav>
         </div>
-    </nav>
+    </div>
 </header>
 
+<style>
+    /* Hamburger menu styles */
+    .hamburger-line {
+        width: 100%;
+        height: 2px;
+        background-color: #374151;
+        margin: 2px 0;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+
+    #menu-toggle.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #menu-toggle.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Mobile menu styles */
+    .mobile-menu {
+        display: none;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(10px);
+    }
+
+    .mobile-menu.active {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .mobile-menu-item {
+        display: block;
+        color: white;
+        font-size: 1.125rem;
+        font-weight: 500;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+    }
+
+    .mobile-menu-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateX(8px);
+    }
+
+    .mobile-menu-cta {
+        display: block;
+        color: white;
+        font-size: 1.125rem;
+        font-weight: 600;
+        padding: 1rem 1.5rem;
+        border-radius: 2rem;
+        background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+        text-decoration: none;
+        text-align: center;
+        margin-top: 1rem;
+        box-shadow: 0 4px 15px rgba(238, 90, 36, 0.4);
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(238, 90, 36, 0.6);
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Hide mobile menu on desktop */
+    @media (min-width: 768px) {
+        .mobile-menu {
+            display: none !important;
+        }
+    }
+</style>
+
 <script>
-    // Mobile menu toggle functionality
     document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
 
+        console.log('Menu elements:', { menuToggle, mobileMenu });
+
         if (menuToggle && mobileMenu) {
             menuToggle.addEventListener('click', function() {
-                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                console.log('Menu button clicked');
 
-                // Toggle the menu visibility
-                if (isExpanded) {
-                    mobileMenu.classList.add('hidden');
+                // Toggle active class on button
+                menuToggle.classList.toggle('active');
+
+                // Toggle menu visibility
+                if (mobileMenu.classList.contains('active')) {
+                    console.log('Hiding menu');
+                    mobileMenu.classList.remove('active');
                     menuToggle.setAttribute('aria-expanded', 'false');
                 } else {
-                    mobileMenu.classList.remove('hidden');
+                    console.log('Showing menu');
+                    mobileMenu.classList.add('active');
                     menuToggle.setAttribute('aria-expanded', 'true');
                 }
             });
 
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
-                    mobileMenu.classList.add('hidden');
+            // Close menu when clicking on links
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('Menu link clicked, closing menu');
+                    mobileMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
                     menuToggle.setAttribute('aria-expanded', 'false');
-                }
+                });
             });
 
-            // Close menu when pressing Escape key
+            // Close menu on escape key
             document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape') {
-                    mobileMenu.classList.add('hidden');
+                if (event.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    console.log('Escape pressed, closing menu');
+                    mobileMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
                     menuToggle.setAttribute('aria-expanded', 'false');
                 }
             });
