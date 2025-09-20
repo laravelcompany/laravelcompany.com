@@ -27,11 +27,11 @@ const faviconImg = await getImage({src: '/logo.svg', width: 32, height: 32});
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href={faviconImg.src} />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | Laravel Agency</title>
+    <title>{title} | Laravel Development Company</title>
     <ViewTransitions />
     
     <!-- Preload critical resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
     <!-- Structured data -->
@@ -42,10 +42,6 @@ const faviconImg = await getImage({src: '/logo.svg', width: 32, height: 32});
         "name": "Laravel Company",
         "url": "https://laravelcompany.com",
         "logo": "https://laravelcompany.com/logo.svg",
-        "sameAs": [
-          "https://twitter.com/#",
-          "https://www.linkedin.com/#"
-        ]
       }
     </script>
     
@@ -63,7 +59,7 @@ const faviconImg = await getImage({src: '/logo.svg', width: 32, height: 32});
     <meta name="twitter:description" content={description} />
   </head>
   <body class="min-h-screen flex flex-col">
-    <a href="#main-content" class="skip-link">laravel development services</a>
+    <a href="#main-content" class="skip-link">laravel development company</a>
     <Header />
     <main id="main-content" class="flex-grow">
       <slot />
