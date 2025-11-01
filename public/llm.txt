@@ -1,0 +1,93 @@
+# Laravel Company | Expert Laravel Development Agency
+
+**UK’s leading Laravel development agency** with over 10 years of experience delivering custom PHP solutions, scalable web applications, and enterprise-grade software. Specializing in secure, high-performance Laravel systems, business process automation, and AI-integrated platforms.
+
+---
+
+## Company Overview
+
+- **[About Us](https://laravelcompany.com/about-us)**
+  Discover our mission, values, and technical expertise—crafted to deliver robust, future-ready Laravel solutions.
+
+- **[Contact Us](https://laravelcompany.com/contact/?srsltid=AfmBOopE488GUoR2zyh5Qs0TimoR_GW7nYniRGMy5jWCozeAkaP4DBUd)**
+  Reach out for project inquiries, technical support, or to schedule a consultation.
+
+---
+
+## Services Offered
+
+- **[Custom Software Development](https://laravelcompany.com/software/?srsltid=AfmBOookbHmt5Na05nLSAlytMTBQJYUGRA0bwPL6EEjrthwBSI6IbKmO)**
+  End-to-end Laravel development—from MVPs to complex enterprise systems.
+
+- **[Laravel Mail – Marketing Automation](https://laravelcompany.com/software/laravel-mail/?srsltid=AfmBOooN4BouJsFgvk6pPvl0eqhoo0Yb85K9uc2N_4BJoVIzEjtDCPbB)**
+  Advanced email marketing platform with campaign management, subscriber segmentation, and real-time analytics.
+
+- **[Business Process Automation & API Integration](https://laravelcompany.com/about-us#services)**
+  Streamline operations with intelligent workflows and seamless third-party integrations using RESTful APIs and microservices.
+
+---
+
+## Portfolio & Projects
+
+- **[View Our Laravel Portfolio](https://laravelcompany.com/portfolio)**
+  Explore real-world applications we’ve built—from SaaS platforms to internal automation tools—showcasing our technical depth and design excellence.
+
+---
+
+## Resources & Developer Tools
+
+- **[Free Laravel UI Kit](https://ui.laravelcompany.com/)**
+  A curated library of responsive, production-ready UI components built for Laravel and modern frontend stacks (Vue.js, React).
+
+- **[React Popup Components – Flowbite Integration](https://ui.laravelcompany.com/marketing-ui/popups)**
+  Enhance user engagement with lightweight, accessible popup modals designed for Laravel-powered marketing interfaces.
+
+---
+
+## Blog & Insights
+
+- **[Engineering Blog](https://blog.laravelcompany.com/)**
+  In-depth technical articles, Laravel best practices, and case studies from our development team.
+
+- **[Company Blog](https://laravelcompany.com/blog)**
+  News, product updates (including **Payflo**—our modern payroll infrastructure), and industry insights.
+
+---
+
+## Legal & Policies
+
+- **[Privacy Policy](https://laravelcompany.com/privacy-policy)**
+  Transparent data handling practices in compliance with GDPR and global privacy standards.
+
+- **[Terms of Service](https://laravelcompany.com/terms-of-service)**
+  Governing terms for using our platforms and services.
+
+- **[Cookie Policy](https://laravelcompany.com/cookie-policy)**
+  Details on how we use cookies to improve your experience.
+
+---
+
+## Get Started
+
+- **[Log In](https://laravelcompany.com/login)**
+  Access your dashboard, manage projects, and monitor service usage.
+
+- **[Book a Demo](https://laravelcompany.com/contact)**
+  See our solutions in action with a personalized walkthrough.
+
+- **[Start Your Project](https://laravelcompany.com/#contact)**
+  Begin your journey with a free consultation and technical discovery session.
+
+---
+
+## Additional Links
+
+- **[Laravel Company Homepage](https://laravelcompany.com/?srsltid=AfmBOopYR3HsTDbZiJuNMx7HD63Pokwg-kSsihDT5FS787eVcG8eH9m3)**
+  Overview of our agency, products, and client success stories.
+
+- **[Payflo – Pricing](https://laravelcompany.com/pricing/?srsltid=AfmBOop8Q4KE6zK-G69L6dajPtoYJ0bCVFUGQBYKL2kLDKOJRAl0YAO0)**
+  Transparent pricing for Payflo, our developer-first payroll infrastructure platform.
+
+---
+
+*Built with precision. Powered by Laravel.*
