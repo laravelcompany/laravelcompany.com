@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Software Development Services">
+<Layout title="Laravel Software Development Services">
 	<main>
 		<!-- Hero Section -->
 		<section class="pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden">
@@ -77,30 +77,43 @@ import Layout from '../../layouts/Layout.astro';
 				<h2 class="animate-on-scroll delay-0 text-3xl md:text-4xl font-bold text-center mb-16">
 					Our <span class="gradient-text">Software Products</span>
 				</h2>
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-					<div class="animate-on-scroll delay-2 feature-card">
+					<div class="animate-on-scroll delay-1 feature-card">
 						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-5">
 							<svg class="w-6 h-6 text-orange-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
 						</div>
 						<h3 class="text-xl font-semibold mb-3">Laravel Mail</h3>
-						<p class="text-gray-600">Advanced email marketing and automation platform. Send campaigns, manage subscribers, and track performance.</p>
-						<a href="/software/laravel-mail" class="mt-4 inline-block text-red-600 hover:text-orange-600">
+						<p class="text-gray-600">Advanced email marketing and automation platform. Send campaigns, manage subscribers, and track performance with powerful analytics.</p>
+						<a href="/software/laravel-mail" class="mt-4 inline-block text-red-600 hover:text-orange-600 font-medium">
+							Learn more →
+						</a>
+					</div>
+
+					<div class="animate-on-scroll delay-2 feature-card">
+						<div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-5">
+							<svg class="w-6 h-6 text-red-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold mb-3">Laravel SEO</h3>
+						<p class="text-gray-600">Comprehensive SEO toolkit for Laravel applications. Optimize meta tags, sitemaps, schema markup, and improve search rankings effortlessly.</p>
+						<a href="/software/laravel-seo" class="mt-4 inline-block text-red-600 hover:text-orange-600 font-medium">
 							Learn more →
 						</a>
 					</div>
 
 					<div class="animate-on-scroll delay-3 feature-card">
-						<div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-5">
-							<svg class="w-6 h-6 text-red-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-5">
+							<svg class="w-6 h-6 text-orange-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
 						</div>
 						<h3 class="text-xl font-semibold mb-3">Laravel GPT</h3>
-						<p class="text-gray-600">AI-powered Laravel application with GPT integration. Intelligent content generation and automated responses.</p>
-						<a href="/software/laravel-gpt" class="mt-4 inline-block text-red-600 hover:text-orange-600">
+						<p class="text-gray-600">AI-powered Laravel application with GPT integration. Intelligent content generation, automated responses, and smart chatbot capabilities.</p>
+						<a href="/software/laravel-gpt" class="mt-4 inline-block text-red-600 hover:text-orange-600 font-medium">
 							Learn more →
 						</a>
 					</div>
@@ -125,12 +138,12 @@ import Layout from '../../layouts/Layout.astro';
 							<div>
 								<h3 class="text-xl font-semibold mb-2" title="custom laravel software development">Custom Software Development</h3>
 								<p class="text-gray-600 text-lg mb-4">
-									UK’s <b class="text-red-600">leading Laravel development agency</b> with 10+ years of expertise in Laravel web development, custom PHP solutions, and scalable software applications.
+									UK's <b class="text-red-600">leading Laravel development agency</b> with 10+ years of expertise in Laravel web development, custom PHP solutions, and scalable software applications.
 									<br>
 									We specialise in Laravel enterprise solutions, and open source business software development.
 									Company software solutions with Laravel — from  web applications to complex systems.
 								</p>
-								<a title="laravel software solution company" href="/software" class="text-red-600 hover:text-orange-600">Learn more →</a>
+								<a title="laravel software solution company" href="/software" class="text-red-600 hover:text-orange-600 font-medium">Learn more →</a>
 							</div>
 						</div>
 					</div>
@@ -145,7 +158,7 @@ import Layout from '../../layouts/Layout.astro';
 							<div>
 								<h3 class="text-xl font-semibold mb-2">Business Process Automation</h3>
 								<p class="text-gray-600 text-lg mb-4">Streamline your operations with intelligent automation solutions. Reduce manual work and increase efficiency across your organization.</p>
-								<a href="/services/automation" class="text-red-600 hover:text-orange-600">Learn more →</a>
+								<a href="/services/automation" class="text-red-600 hover:text-orange-600 font-medium">Learn more →</a>
 							</div>
 						</div>
 					</div>
@@ -160,7 +173,7 @@ import Layout from '../../layouts/Layout.astro';
 							<div>
 								<h3 class="text-xl font-semibold mb-2">API Development & Integration</h3>
 								<p class="text-gray-600 text-lg mb-4">Connect your systems with robust APIs and seamless third-party integrations. RESTful services and microservices architecture.</p>
-								<a href="/services/api-development" class="text-red-600 hover:text-orange-600">Learn more →</a>
+								<a href="/services/api-development" class="text-red-600 hover:text-orange-600 font-medium">Learn more →</a>
 							</div>
 						</div>
 					</div>
@@ -174,37 +187,77 @@ import Layout from '../../layouts/Layout.astro';
 				<h2 class="animate-on-scroll delay-0 text-3xl md:text-4xl font-bold text-center mb-16">
 					Our <span class="gradient-text">Technology Stack</span>
 				</h2>
+
+				<p class="max-w-3xl mx-auto text-center text-gray-600 mb-12">
+					We build high-performance, scalable, and secure digital products using a carefully selected set of modern
+					technologies. Our expertise spans backend development, frontend engineering, cloud infrastructure, databases,
+					DevOps, and artificial intelligence — ensuring your application is optimized for speed, reliability, and long-term growth.
+				</p>
+
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					<a href="/technologies/laravel" class="animate-on-scroll delay-1 feature-card hover:shadow-xl transition-shadow duration-300">
-						<h3 class="text-lg font-semibold mb-2">Laravel Framework</h3>
-						<p class="text-gray-600">Elegant PHP framework for rapid application development with clean, expressive syntax.</p>
+
+					<!-- Laravel -->
+					<a href="/" class="animate-on-scroll delay-1 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Laravel Framework Development</h3>
+						<p class="text-gray-600">
+							We specialize in building secure, scalable, and maintainable web applications using the Laravel PHP
+							framework. Its elegant syntax, built-in tools, and MVC architecture allow rapid development and clean,
+							future-ready applications.
+						</p>
 					</a>
 
-					<a href="/technologies/php" class="animate-on-scroll delay-2 feature-card hover:shadow-xl transition-shadow duration-300">
-						<h3 class="text-lg font-semibold mb-2">PHP Development</h3>
-						<p class="text-gray-600">Modern PHP development with best practices and performance optimization.</p>
+					<!-- PHP -->
+					<a href="/" class="animate-on-scroll delay-2 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Advanced PHP Development</h3>
+						<p class="text-gray-600">
+							Our team uses modern PHP practices, including the latest PHP versions, strict typing, optimized
+							architectures, and best-in-class security standards to deliver fast and reliable backend systems.
+						</p>
 					</a>
 
-					<a href="/technologies/vue-react" class="animate-on-scroll delay-3 feature-card hover:shadow-xl transition-shadow duration-300">
-						<h3 class="text-lg font-semibold mb-2">Frontend Technologies</h3>
-						<p class="text-gray-600">Vue.js, React, and modern JavaScript for dynamic user interfaces.</p>
+					<!-- Frontend -->
+					<a href="/" class="animate-on-scroll delay-3 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Modern Frontend Technologies (Vue.js & React)</h3>
+						<p class="text-gray-600">
+							We craft lightning-fast, interactive user interfaces using Vue.js, React, and modern JavaScript tooling.
+							Our frontend work focuses on exceptional user experience, accessibility, performance, and responsive design.
+						</p>
 					</a>
 
-					<a href="/technologies/databases" class="animate-on-scroll delay-4 feature-card hover:shadow-xl transition-shadow duration-300">
-						<h3 class="text-lg font-semibold mb-2">Database Solutions</h3>
-						<p class="text-gray-600">MySQL, PostgreSQL, MongoDB, and Redis for data management.</p>
+					<!-- Databases -->
+					<a href="/" class="animate-on-scroll delay-4 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Database & Storage Solutions</h3>
+						<p class="text-gray-600">
+							From relational databases like MySQL and PostgreSQL to NoSQL systems such as MongoDB and Redis, we design
+							optimized data architectures that ensure consistency, high availability, and scalable performance.
+						</p>
 					</a>
 
-					<a href="/technologies/cloud" class="animate-on-scroll delay-5 feature-card hover:shadow-xl transition-shadow duration-300">
-						<h3 class="text-lg font-semibold mb-2">Cloud & DevOps</h3>
-						<p class="text-gray-600">AWS, Docker, CI/CD pipelines for scalable deployment solutions.</p>
+					<!-- Cloud & DevOps -->
+					<a href="/" class="animate-on-scroll delay-5 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Cloud Infrastructure & DevOps</h3>
+						<p class="text-gray-600">
+							Our DevOps experts implement CI/CD pipelines, Docker containerization, Kubernetes orchestration, and
+							cloud-native deployments using AWS, DigitalOcean, and other industry-leading platforms — ensuring faster
+							releases and zero-downtime scalability.
+						</p>
 					</a>
 
-					<a href="/technologies/ai" class="animate-on-scroll delay-5 feature-card hover:shadow-xl transition-shadow duration-300">
-						<h3 class="text-lg font-semibold mb-2">AI Integration</h3>
-						<p class="text-gray-600">Machine learning and AI integration for intelligent applications.</p>
+					<!-- AI -->
+					<a href="/" class="animate-on-scroll delay-5 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">AI, Machine Learning & Automation</h3>
+						<p class="text-gray-600">
+							We integrate advanced AI tools, machine learning models, natural language processing, and automation
+							workflows to help businesses leverage intelligent, data-driven software solutions.
+						</p>
 					</a>
+
 				</div>
+
+				<p class="max-w-3xl mx-auto text-center text-gray-600 mt-14">
+					Whether you're building an enterprise platform, SaaS product, mobile-friendly web application, or AI-powered
+					system, our full-stack technology expertise ensures your project is built using the best tools in the industry.
+				</p>
 			</div>
 		</section>
 
