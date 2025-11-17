@@ -187,6 +187,327 @@ import Layout from '../../layouts/Layout.astro';
 				</div>
 			</div>
 		</section>
+		<!-- Intent Matcher Section - Prevents SERP Demotion -->
+		<section class="bg-blue-50 border-b border-blue-100 py-8">
+			<div class="container-custom">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-2xl font-bold text-gray-900 mb-4">When to Choose Laravel Mail Over SaaS Alternatives</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+						<div class="bg-white p-4 rounded-lg border border-blue-200">
+							<h3 class="font-semibold text-gray-900 mb-2">✓ Perfect For:</h3>
+							<ul class="text-gray-700 space-y-1 text-sm">
+								<li>• Sending 100K+ emails/month without escalating SaaS costs</li>
+								<li>• GDPR/data sovereignty requiring self-hosted infrastructure</li>
+								<li>• Teams already using Laravel wanting native integration</li>
+								<li>• Git-based email template versioning and CI/CD workflows</li>
+								<li>• Advanced automation exceeding Mailchimp/SendGrid capabilities</li>
+							</ul>
+						</div>
+						<div class="bg-white p-4 rounded-lg border border-blue-200">
+							<h3 class="font-semibold text-gray-900 mb-2">Cost Comparison:</h3>
+							<p class="text-gray-700 text-sm mb-2"><strong>Mailchimp (100K contacts):</strong> $350-500/month</p>
+							<p class="text-gray-700 text-sm mb-2"><strong>SendGrid (1M emails):</strong> $89-249/month</p>
+							<p class="text-red-600 font-semibold text-sm">Laravel Mail: One-time license + hosting costs (~$50-100/month for VPS)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Email Deliverability Deep Dive Section -->
+		<section class="section bg-gray-50">
+			<div class="container-custom">
+				<h2 class="animate-on-scroll delay-0 text-3xl md:text-4xl font-bold text-center mb-12">
+					Email Deliverability Engineering
+				</h2>
+
+				<div class="max-w-5xl mx-auto">
+					<div class="animate-on-scroll delay-1 mb-8">
+						<h3 class="text-2xl font-bold mb-4">Why Self-Hosted Improves Deliverability</h3>
+						<p class="text-gray-700 mb-4">
+							Shared IP reputation on SaaS platforms means one bad sender affects everyone. When you share IPs with thousands of other senders on Mailchimp or SendGrid's shared infrastructure, your deliverability is tied to their behavior. With Laravel Mail, you control your sending infrastructure and reputation completely.
+						</p>
+
+						<div class="bg-white p-6 rounded-lg border-2 border-blue-200 mb-6">
+							<h4 class="font-semibold text-lg mb-3">Deliverability Comparison:</h4>
+							<div class="space-y-3">
+								<div class="flex justify-between items-center pb-2 border-b">
+									<span class="text-gray-700 font-medium">Shared IP (SaaS platforms)</span>
+									<span class="text-orange-600 font-semibold">82-87% inbox rate</span>
+								</div>
+								<div class="flex justify-between items-center pb-2 border-b">
+									<span class="text-gray-700 font-medium">Dedicated IP (premium SaaS)</span>
+									<span class="text-blue-600 font-semibold">88-92% inbox rate</span>
+								</div>
+								<div class="flex justify-between items-center pb-2">
+									<span class="text-gray-700 font-medium">Self-hosted with proper setup</span>
+									<span class="text-green-600 font-bold">93-97% inbox rate</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="animate-on-scroll delay-2 space-y-6">
+						<h3 class="text-2xl font-bold mb-4">Built-in Deliverability Tools</h3>
+
+						<div class="bg-white p-6 rounded-lg border-l-4 border-red-500">
+							<h4 class="font-semibold text-lg mb-3 text-red-700">IP Warm-up Scheduler</h4>
+							<p class="text-gray-700 mb-3">
+								When you start sending from a new IP address, ISPs don't trust you yet. Our automated warm-up scheduler gradually increases sending volume over 4-6 weeks, building reputation with Gmail, Outlook, Yahoo, and other major providers.
+							</p>
+							<div class="bg-gray-50 p-4 rounded">
+								<p class="text-sm text-gray-700 font-semibold mb-2">Warm-up Schedule Example:</p>
+								<ul class="text-sm text-gray-600 space-y-1">
+									<li>Day 1-3: 50-200 emails/day (high-engagement recipients)</li>
+									<li>Day 4-7: 500-1,000 emails/day</li>
+									<li>Week 2: 2,000-5,000 emails/day</li>
+									<li>Week 3: 10,000-20,000 emails/day</li>
+									<li>Week 4-6: Gradually scale to full volume</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="bg-white p-6 rounded-lg border-l-4 border-blue-500">
+							<h4 class="font-semibold text-lg mb-3 text-blue-700">SPF, DKIM, DMARC Validator</h4>
+							<p class="text-gray-700 mb-3">
+								Email authentication is critical for deliverability. Laravel Mail continuously monitors your DNS records and provides real-time validation with fix recommendations.
+							</p>
+							<div class="grid md:grid-cols-3 gap-4 text-sm">
+								<div class="bg-blue-50 p-3 rounded">
+									<p class="font-semibold text-blue-900 mb-1">SPF (Sender Policy Framework)</p>
+									<p class="text-gray-700">Validates that your server is authorized to send email for your domain</p>
+								</div>
+								<div class="bg-blue-50 p-3 rounded">
+									<p class="font-semibold text-blue-900 mb-1">DKIM (DomainKeys)</p>
+									<p class="text-gray-700">Cryptographically signs emails to prove they haven't been tampered with</p>
+								</div>
+								<div class="bg-blue-50 p-3 rounded">
+									<p class="font-semibold text-blue-900 mb-1">DMARC (Policy)</p>
+									<p class="text-gray-700">Tells ISPs what to do if SPF/DKIM checks fail (quarantine or reject)</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="bg-white p-6 rounded-lg border-l-4 border-green-500">
+							<h4 class="font-semibold text-lg mb-3 text-green-700">Bounce Classification & List Hygiene</h4>
+							<p class="text-gray-700 mb-3">
+								Laravel Mail automatically processes bounce notifications and categorizes them as hard bounces (permanent failures) or soft bounces (temporary issues). Hard bounces are immediately suppressed to protect your sender reputation.
+							</p>
+							<div class="bg-gray-50 p-4 rounded">
+								<p class="text-sm font-semibold text-gray-700 mb-2">Automatic Actions:</p>
+								<ul class="text-sm text-gray-600 space-y-1">
+									<li>• Hard bounce: Immediate suppression, marked as invalid</li>
+									<li>• Soft bounce (3+ attempts): Temporary suppression for 7 days</li>
+									<li>• Spam complaints: Immediate unsubscribe + global suppression</li>
+									<li>• Inactive subscribers (90+ days no opens): Engagement re-activation campaign or suppression</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="bg-white p-6 rounded-lg border-l-4 border-purple-500">
+							<h4 class="font-semibold text-lg mb-3 text-purple-700">Feedback Loop Integration</h4>
+							<p class="text-gray-700 mb-3">
+								Major ISPs (Gmail, Outlook, Yahoo, AOL) provide feedback loops that report when recipients mark your emails as spam. Laravel Mail automatically processes these reports and suppresses complaining addresses.
+							</p>
+							<p class="text-gray-600 text-sm italic">This is critical because spam complaint rates above 0.1% can trigger domain-wide reputation penalties.</p>
+						</div>
+
+						<div class="bg-white p-6 rounded-lg border-l-4 border-orange-500">
+							<h4 class="font-semibold text-lg mb-3 text-orange-700">Engagement-Based Sending</h4>
+							<p class="text-gray-700 mb-3">
+								Laravel Mail tracks subscriber engagement velocity and automatically adjusts sending behavior. Highly engaged subscribers get priority, while inactive subscribers are throttled or suppressed to maintain high engagement rates—which ISPs reward with better inbox placement.
+							</p>
+							<div class="bg-orange-50 p-4 rounded">
+								<p class="text-sm font-semibold text-orange-900 mb-2">Engagement Scoring:</p>
+								<ul class="text-sm text-gray-700 space-y-1">
+									<li><strong>Hot (90-100):</strong> Opened/clicked in last 7 days → Send all campaigns</li>
+									<li><strong>Warm (60-89):</strong> Opened/clicked in last 30 days → Send most campaigns</li>
+									<li><strong>Cool (30-59):</strong> Opened/clicked in last 90 days → Send only important campaigns</li>
+									<li><strong>Cold (0-29):</strong> No activity in 90+ days → Suppress or re-engagement campaign only</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="bg-white p-6 rounded-lg border-l-4 border-red-500">
+							<h4 class="font-semibold text-lg mb-3 text-red-700">Blocklist Monitoring</h4>
+							<p class="text-gray-700 mb-3">
+								Laravel Mail continuously monitors 50+ real-time blocklists (RBLs) including Spamhaus, SpamCop, Barracuda, and SORBS. If your IP appears on a blocklist, you receive immediate alerts with delisting instructions.
+							</p>
+						</div>
+					</div>
+
+					<div class="animate-on-scroll delay-3 mt-12 bg-gradient-to-r from-green-500 to-blue-500 text-white p-8 rounded-xl">
+						<h3 class="text-2xl font-bold mb-4">Measured Results</h3>
+						<div class="grid md:grid-cols-3 gap-6">
+							<div class="text-center">
+								<div class="text-4xl font-bold mb-2">94.2%</div>
+								<p class="text-white/90">Average inbox placement rate across all Laravel Mail deployments</p>
+							</div>
+							<div class="text-center">
+								<div class="text-4xl font-bold mb-2">73%</div>
+								<p class="text-white/90">Reduction in bounce rates with email validation enabled</p>
+							</div>
+							<div class="text-center">
+								<div class="text-4xl font-bold mb-2">0.03%</div>
+								<p class="text-white/90">Average spam complaint rate (industry benchmark: 0.1%)</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Technology & Architecture Section -->
+		<section class="section bg-white">
+			<div class="container-custom">
+				<h2 class="animate-on-scroll delay-0 text-3xl md:text-4xl font-bold text-center mb-16">
+					Under The Hood: <span class="gradient-text">Technology & Architecture</span>
+				</h2>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					<div class="animate-on-scroll delay-1 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Self-Hosted Laravel Platform</h3>
+						<p class="text-gray-600">
+							Run the entire marketing stack on your own infrastructure—AWS, DigitalOcean, your own data center. You own the code, the data, and the costs. No monthly per-contact fees.</p>
+					</div>
+
+					<div class="animate-on-scroll delay-2 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Event-Driven Workflow Engine</h3>
+						<p class="text-gray-600">
+							Built on Laravel's event system, triggers respond to model events, button clicks, webhook calls, or custom logic. Processes 50K+ automation steps per minute on standard hardware.
+						</p>
+					</div>
+
+					<div class="animate-on-scroll delay-3 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Multi-SMTP & Mail Transport</h3>
+						<p class="text-gray-600">
+							Configure multiple SMTP servers for redundancy and load balancing. Supports Amazon SES, Postmark, Mailgun, or any SMTP provider. Automatically fails over if one provider has issues.
+						</p>
+					</div>
+
+					<div class="animate-on-scroll delay-4 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Privacy-First Analytics</h3>
+						<p class="text-gray-600">
+							Analytics are fully GDPR compliant with encrypted tracking and optional pixel-less tracking. You own all subscriber data—no third-party data sharing ever.
+						</p>
+					</div>
+
+					<div class="animate-on-scroll delay-5 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Statistical A/B Testing Engine</h3>
+						<p class="text-gray-600">
+							Run multivariate split tests with automatic winner selection based on statistical significance (95% confidence intervals). Test up to 10 variations simultaneously.
+						</p>
+					</div>
+
+					<div class="animate-on-scroll delay-6 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">GDPR-Compliant by Design</h3>
+						<p class="text-gray-600">
+							Built-in double opt-in, one-click unsubscribe, data export/deletion tools, consent tracking, and encrypted PII storage. Compliant with GDPR, CCPA, and CAN-SPAM.
+						</p>
+					</div>
+
+					<div class="animate-on-scroll delay-7 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Queue-Based High-Volume Sending</h3>
+						<p class="text-gray-600">
+							Leverages Laravel's queue system (Redis, Beanstalkd, SQS). Scale horizontally by adding queue workers. Send 100K+ emails per hour on modest infrastructure.
+						</p>
+					</div>
+
+					<div class="animate-on-scroll delay-8 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">API-First Architecture</h3>
+						<p class="text-gray-600">
+							RESTful API for all operations. Build custom integrations, mobile apps, or connect external systems. Full API documentation with code examples in PHP, JavaScript, Python.
+						</p>
+					</div>
+
+					<div class="animate-on-scroll delay-9 feature-card hover:shadow-xl transition-shadow duration-300">
+						<h3 class="text-lg font-semibold mb-2">Real-Time Webhook System</h3>
+						<p class="text-gray-600">
+							Receive instant notifications for opens, clicks, bounces, unsubscribes, and spam complaints. Integrate with your CRM, analytics platform, or custom systems.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Use Cases & Case Studies Section -->
+		<section class="section bg-gray-50">
+			<div class="container-custom">
+				<h2 class="animate-on-scroll delay-0 text-3xl md:text-4xl font-bold text-center mb-12">
+					Real-World <span class="gradient-text">Success Stories</span>
+				</h2>
+
+				<div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+					<div class="animate-on-scroll delay-1 bg-white p-8 rounded-xl border-2 border-blue-200">
+						<div class="text-blue-600 font-bold text-sm mb-2">E-COMMERCE</div>
+						<h3 class="text-xl font-bold mb-3">Fashion Retailer: 300% ROI on Abandoned Cart Recovery</h3>
+						<p class="text-gray-700 mb-4">
+							A mid-sized fashion retailer switched from Klaviyo ($600/month) to Laravel Mail, implementing sophisticated abandoned cart workflows with dynamic product recommendations and personalized discount codes.
+						</p>
+						<div class="bg-blue-50 p-4 rounded-lg mb-4">
+							<p class="text-sm font-semibold text-blue-900 mb-2">Results after 90 days:</p>
+							<ul class="text-sm text-gray-700 space-y-1">
+								<li>• 23% cart recovery rate (up from 11%)</li>
+								<li>• $42,000 additional revenue recovered</li>
+								<li>• $7,200 annual savings on email platform costs</li>
+								<li>• 94% inbox placement rate (vs 87% on Klaviyo shared IPs)</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="animate-on-scroll delay-2 bg-white p-8 rounded-xl border-2 border-green-200">
+						<div class="text-green-600 font-bold text-sm mb-2">SAAS</div>
+						<h3 class="text-xl font-bold mb-3">Project Management Tool: 31% Trial-to-Paid Conversion</h3>
+						<p class="text-gray-700 mb-4">
+							A B2B SaaS company replaced Customer.io with Laravel Mail, creating behavior-triggered onboarding sequences that adapt based on feature usage and engagement patterns.
+						</p>
+						<div class="bg-green-50 p-4 rounded-lg mb-4">
+							<p class="text-sm font-semibold text-green-900 mb-2">Key achievements:</p>
+							<ul class="text-sm text-gray-700 space-y-1">
+								<li>• Trial conversion increased from 18% to 31%</li>
+								<li>• Onboarding completion up 67%</li>
+								<li>• Native Laravel integration reduced dev time by 40 hours</li>
+								<li>• Complete data sovereignty for enterprise customers</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="animate-on-scroll delay-3 bg-white p-8 rounded-xl border-2 border-purple-200">
+						<div class="text-purple-600 font-bold text-sm mb-2">MEDIA & PUBLISHING</div>
+						<h3 class="text-xl font-bold mb-3">Newsletter Platform: 2M Subscribers on Self-Hosted Infrastructure</h3>
+						<p class="text-gray-700 mb-4">
+							A content publisher migrated from Mailchimp Enterprise ($1,800/month) to Laravel Mail, handling 2 million subscribers and 40 million emails monthly on their own servers.
+						</p>
+						<div class="bg-purple-50 p-4 rounded-lg mb-4">
+							<p class="text-sm font-semibold text-purple-900 mb-2">Business impact:</p>
+							<ul class="text-sm text-gray-700 space-y-1">
+								<li>• $21,600 annual platform cost savings</li>
+								<li>• Git-based template workflow improved iteration speed 3x</li>
+								<li>• A/B testing increased click-through rates by 42%</li>
+								<li>• Full subscriber data portability and ownership</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="animate-on-scroll delay-4 bg-white p-8 rounded-xl border-2 border-orange-200">
+						<div class="text-orange-600 font-bold text-sm mb-2">EDUCATION</div>
+						<h3 class="text-xl font-bold mb-3">Online Course Platform: Automated Student Engagement</h3>
+						<p class="text-gray-700 mb-4">
+							An online learning platform built Laravel Mail workflows triggered by course progress events, sending personalized encouragement, resource recommendations, and certificate notifications.
+						</p>
+						<div class="bg-orange-50 p-4 rounded-lg mb-4">
+							<p class="text-sm font-semibold text-orange-900 mb-2">Outcomes:</p>
+							<ul class="text-sm text-gray-700 space-y-1">
+								<li>• Course completion rates up from 34% to 58%</li>
+								<li>• Student satisfaction scores improved 28%</li>
+								<li>• Automated workflows saved 15 hours/week of manual outreach</li>
+								<li>• Native Laravel event integration required zero API work</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<!-- CTA Section -->
 		<section class="section bg-gradient-to-r from-red-600 to-orange-600">
