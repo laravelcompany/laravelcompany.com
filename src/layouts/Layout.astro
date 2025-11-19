@@ -29,6 +29,13 @@ const faviconImg = await getImage({src: '/favicon.png', width: 32, height: 32});
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Laravel Development Company</title>
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Laravel Company" />
+
     <ViewTransitions />
     
     <!-- Preload critical resources -->
@@ -43,6 +50,11 @@ const faviconImg = await getImage({src: '/favicon.png', width: 32, height: 32});
         "name": "Laravel Company",
         "url": "https://laravelcompany.com",
         "logo": "https://laravelcompany.com/logo.svg",
+        "sameAs": [
+          "https://twitter.com/laravelcompany",
+          "https://github.com/laravelcompany",
+          "https://linkedin.com/company/laravelcompany"
+        ]
       }
     </script>
     
@@ -50,14 +62,18 @@ const faviconImg = await getImage({src: '/favicon.png', width: 32, height: 32});
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:image" content={new URL('/logo.svg', Astro.site)} />
+    <meta property="og:site_name" content="Laravel Development Company" />
 
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@laravelcompany" />
+    <meta name="twitter:creator" content="@laravelcompany" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL('/logo.svg', Astro.site)} />
   </head>
   <body class="min-h-screen flex flex-col">
     <a title="Laravel development company" href="#main-content" class="skip-link">laravel development company</a>
