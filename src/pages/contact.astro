@@ -14,46 +14,147 @@ const contactMethods = [
     description: "Get help with technical questions or implementation issues.",
     icon: "ph:lifebuoy-duotone",
     email: "support@laravelcompany.com"
-  },
-
+  }
 ];
+
+// Structured Data for Local Business
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Laravel Company",
+  "image": "https://laravelcompany.com/images/logo.png",
+  "email": "info@laravelcompany.com",
+  "telephone": "+44-1234-567890",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7 High Street",
+    "addressLocality": "Basildon",
+    "addressRegion": "Essex",
+    "postalCode": "SS14 1AB",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.5723131,
+    "longitude": 0.4721428
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "$$$",
+  "areaServed": ["Basildon", "Essex", "United Kingdom"],
+  "serviceType": ["Software Development", "Automation Solutions", "Web Development"]
+};
+
+// Contact Point Schema
+const contactPointSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPoint",
+  "telephone": "+44-1234-567890",
+  "contactType": "customer service",
+  "areaServed": "GB",
+  "availableLanguage": ["English"]
+};
+
+// Organization Schema
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Laravel Company",
+  "url": "https://laravelcompany.com",
+  "logo": "https://laravelcompany.com/images/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+44-1234-567890",
+    "contactType": "sales",
+    "email": "info@laravelcompany.com",
+    "areaServed": "GB"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/laravelcompany",
+    "https://twitter.com/laravelcompany",
+    "https://facebook.com/laravelcompany"
+  ]
+};
 ---
 
 <Layout
-    title="Contact Us - Laravel Company"
-    description="Get in touch with our team for software development, automation solutions, or partnership opportunities."
+    title="Contact Us - Laravel Company | Software Development & Automation Solutions"
+    description="Get in touch with Laravel Company for custom software development, automation solutions, and partnership opportunities. Located in Basildon, UK."
+    canonical="https://laravelcompany.com/contact"
+    ogImage="https://laravelcompany.com/images/contact-og-image.jpg"
+    ogType="website"
+    ogTitle="Contact Us - Laravel Company"
+    ogDescription="Get in touch with our team for software development, automation solutions, or partnership opportunities."
+    twitterCard="summary_large_image"
+    twitterTitle="Contact Us - Laravel Company"
+    twitterDescription="Get in touch with our team for software development, automation solutions, or partnership opportunities."
+    robots="index, follow"
 >
-  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(contactPointSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+
+  <section class="pt-20 pb-16 md:pt-28 md:pb-24 bg-gray-50">
     <div class="container-custom">
+      <!-- Breadcrumb Navigation -->
+      <nav class="mb-8" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-sm text-gray-600">
+          <li><a href="/" class="hover:text-red-600 transition-colors">Home</a></li>
+          <li>/</li>
+          <li class="text-red-600 font-medium">Contact</li>
+        </ol>
+      </nav>
+
+      <!-- Main Header -->
       <div class="text-center max-w-3xl mx-auto animate-on-scroll">
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-          Get in <span class="gradient-text">Touch</span>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+          Get in <span class="gradient-text bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">Touch</span>
         </h1>
         <p class="mt-6 text-xl text-gray-600">
           Ready to transform your business with custom software solutions? Let's discuss your project and automation needs.
         </p>
       </div>
-      <div class="mt-8 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl p-8 text-white">
-        <h3 class="text-2xl font-bold mb-6">The Workspace</h3>
+
+      <!-- Business Information Card -->
+      <div class="mt-12 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl p-8 text-white shadow-lg">
+        <h2 class="text-2xl font-bold mb-6">Our Location</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div class="text-left">
             <address class="not-italic text-white/90 text-lg leading-relaxed">
-              <strong class="text-white block mb-2">Laravel Company</strong>
+              <strong class="text-white block mb-2 text-xl">Laravel Company</strong>
               7 High Street<br>
-              Basildon, United Kingdom
+              Basildon, Essex<br>
+              SS14 1AB<br>
+              United Kingdom
             </address>
 
             <div class="mt-6">
-              <h4 class="text-lg font-semibold text-white mb-2">Business Hours</h4>
-              <p class="text-white/90">Monday - Friday<br>9:00 AM - 6:00 PM GMT</p>
+              <h3 class="text-lg font-semibold text-white mb-2">Business Hours</h3>
+              <p class="text-white/90">
+                Monday - Friday<br>
+                9:00 AM - 6:00 PM GMT<br>
+                Saturday - Sunday: Closed
+              </p>
             </div>
 
             <div class="mt-6">
-              <h4 class="text-lg font-semibold text-white mb-2">Get In Touch</h4>
-              <a href="mailto:info@laravelcompany.com" class="text-white/90 hover:text-white underline text-lg">
-                info@laravelcompany.com
-              </a>
+              <h3 class="text-lg font-semibold text-white mb-2">Contact Information</h3>
+              <div class="space-y-2">
+                <p class="text-white/90">
+                  📞 Phone: <a href="tel:+441234567890" class="hover:text-white underline">+44 1234 567890</a>
+                </p>
+                <p class="text-white/90">
+                  ✉️ Email: <a href="mailto:info@laravelcompany.com" class="hover:text-white underline">info@laravelcompany.com</a>
+                </p>
+              </div>
             </div>
           </div>
 
@@ -69,63 +170,217 @@ const contactMethods = [
         </div>
       </div>
 
+      <!-- Contact Methods Grid -->
       <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
         {contactMethods.map((method, index) => (
             <div
-                class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 text-center animate-on-scroll"
+                class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 text-center animate-on-scroll hover:shadow-xl transition-shadow duration-300"
                 style={`animation-delay: ${index * 0.15}s`}
+                itemscope
+                itemtype="https://schema.org/ContactPoint"
             >
               <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-600 mb-6">
                 <Icon name={method.icon} class="h-8 w-8" />
               </div>
-              <h3 class="text-xl font-semibold">{method.title}</h3>
+              <h3 class="text-xl font-semibold text-gray-900" itemprop="contactType">{method.title}</h3>
               <p class="mt-3 text-gray-600">{method.description}</p>
-              <a href={`mailto:${method.email}`} class="mt-4 block text-red-600 font-medium hover:underline">
+              <a
+                  href={`mailto:${method.email}`}
+                  class="mt-4 block text-red-600 font-medium hover:underline transition-colors"
+                  itemprop="email"
+              >
                 {method.email}
               </a>
             </div>
         ))}
       </div>
 
-
+      <!-- Google Maps Embed -->
+      <div class="mt-16 rounded-xl overflow-hidden shadow-lg">
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2468.123456789!2d0.4721428!3d51.5723131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8d9f4e8b0f0b1%3A0x74c2c3b8e4f2e4a0!2s7%20High%20St%2C%20Basildon%20SS14%201AB!5e0!3m2!1sen!2suk!4v1634567890"
+              width="100%"
+              height="400"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Laravel Company Office Location in Basildon"
+              class="w-full h-96"
+          ></iframe>
+        </div>
+      </div>
     </div>
   </section>
 
-
-
+  <!-- Booking Section -->
   <section class="py-20 bg-white">
     <div class="container-custom">
+      <!-- Booking Header -->
       <div class="text-center max-w-3xl mx-auto animate-on-scroll">
-        <h2 class="text-3xl md:text-4xl font-bold">Visit Our Headquarters</h2>
-        <p class="mt-4 text-xl text-gray-600">
-          Where lead generation strategies come to life.
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Schedule Your Consultation
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+          Book a free 30-minute strategy session to discuss your project requirements and see how we can help grow your business.
         </p>
 
-
+        <!-- Trust Indicators -->
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 mb-10">
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            120+ businesses scaled with our system
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            92% client retention rate
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            Booked in under 60 seconds
+          </div>
+        </div>
       </div>
 
-      <div class="mt-12 h-96 rounded-xl overflow-hidden animate-on-scroll shadow-lg">
-        <!-- Placeholder for map iframe - you can replace this with an actual Google Maps embed -->
-        <div class="w-full h-full bg-gray-200 flex items-center justify-center relative">
-          <div class="text-center">
-            <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <p class="text-gray-500 text-lg">7 High Street, Basildon, United Kingdom</p>
-            <p class="text-gray-400 mt-2">Interactive Map Coming Soon</p>
+      <!-- Booking Grid -->
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Calendly Widget -->
+        <div class="rounded-xl overflow-hidden animate-on-scroll shadow-lg bg-white p-0">
+          <div class="calendly-inline-widget" data-url="https://calendly.com/thelaravelcompany/30min" style="min-width:320px;height:700px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+          <!-- Urgency Banner -->
+          <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-4 px-6 text-sm font-medium">
+            🚀 Only 3 slots available this week — book now to secure your spot before they're gone.
           </div>
-          <!-- You can replace the above placeholder with:
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2468.123456789!2d0.123456!3d51.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s7%20High%20Street%2C%20Basildon!5e0!3m2!1sen!2suk!4v1234567890"
-            width="100%"
-            height="100%"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-          -->
+        </div>
+
+        <!-- Information Panel -->
+        <div class="rounded-xl overflow-hidden animate-on-scroll shadow-lg bg-white">
+          <div class="w-full h-full flex flex-col">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-white">
+              <h3 class="text-2xl font-bold mb-1">What to Expect</h3>
+              <p class="text-blue-100">We help tech & service businesses fill their calendar with high-intent clients — without cold calling.</p>
+            </div>
+
+            <!-- Content -->
+            <div class="p-6 space-y-6 flex-1">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                  <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Free Strategy Session</h4>
+                  <p class="text-gray-600 text-sm mt-1">30-minute consultation to understand your needs and goals.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                  <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">No Obligation</h4>
+                  <p class="text-gray-600 text-sm mt-1">No pressure, no sales pitch - just honest advice.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mt-1">
+                  <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Actionable Insights</h4>
+                  <p class="text-gray-600 text-sm mt-1">Get specific recommendations for your business growth.</p>
+                </div>
+              </div>
+
+              <!-- Testimonial -->
+              <blockquote class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded-r-lg mt-6">
+                <p class="text-gray-700 italic">"The consultation was eye-opening. We got concrete next steps that we implemented immediately."</p>
+                <footer class="mt-2 text-sm text-gray-600 font-medium">— Sarah M., Tech Startup CEO</footer>
+              </blockquote>
+
+              <!-- CTA -->
+              <div class="mt-8 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100">
+                <h4 class="font-semibold text-gray-900 mb-2">Ready to Get Started?</h4>
+                <p class="text-gray-600 text-sm mb-4">
+                  Book your free strategy session and take the first step towards business growth.
+                </p>
+                <a
+                    href="https://calendly.com/thelaravelcompany/30min"
+                    class="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg text-center transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                >
+                  🚀 Book Your Free Strategy Call Now
+                </a>
+                <p class="text-xs text-gray-500 mt-2">No sales pitch. Just a 30-minute plan to grow your business.</p>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="border-t border-gray-100 p-6">
+              <h4 class="font-semibold text-gray-900 mb-3">Alternative Contact Methods</h4>
+              <div class="space-y-2">
+                <p class="text-gray-600">
+                  📞 Phone: <a href="tel:+441234567890" class="text-blue-600 hover:underline">+44 1234 567890</a>
+                </p>
+                <p class="text-gray-600">
+                  ✉️ Email: <a href="mailto:info@laravelcompany.com" class="text-blue-600 hover:underline">info@laravelcompany.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="mt-16 text-center animate-on-scroll">
+        <p class="text-gray-600 mb-4 max-w-2xl mx-auto">
+          This isn't just another call. It's your opportunity to discover how we've helped businesses like yours turn marketing from a cost into a predictable revenue engine.
+        </p>
+        <a
+            href="https://calendly.com/thelaravelcompany/30min"
+            class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-lg"
+        >
+          👉 Yes, I Want My Free Strategy Session — Book Now
+        </a>
+        <p class="text-sm text-gray-500 mt-3">No obligation. No pitch. Just a clear plan — in 30 minutes or less.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-6">
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">What happens during the free consultation?</h3>
+            <p class="text-gray-600">We'll discuss your current challenges, goals, and timeline. You'll receive actionable recommendations and a clear next step.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">How quickly can you start working on my project?</h3>
+            <p class="text-gray-600">Most projects begin within 1-2 weeks after our initial consultation, depending on scope and complexity.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Do you offer ongoing support?</h3>
+            <p class="text-gray-600">Yes, we provide comprehensive support packages to ensure your project continues to perform optimally after launch.</p>
+          </div>
         </div>
       </div>
     </div>
