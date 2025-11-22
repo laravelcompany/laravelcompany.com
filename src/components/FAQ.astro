@@ -2,297 +2,405 @@
 const faqs = [
   {
     question: "How long does it take to build a custom Laravel application?",
-    answer: "Most Laravel development projects launch within 6-12 weeks, depending on complexity and specific business requirements. Simple web applications and MVPs can be delivered in 4-6 weeks, while enterprise-level solutions with advanced features typically require 3-6 months of development time.",
-    keywords: "laravel development timeline, custom laravel application, laravel project duration",
-    category: "timeline"
+    answer:
+      "Most Laravel development projects launch within 6-12 weeks, depending on complexity and specific business requirements. Simple web applications and MVPs can be delivered in 4-6 weeks, while enterprise-level solutions with advanced features typically require 3-6 months of development time.",
+    keywords:
+      "laravel development timeline, custom laravel application, laravel project duration",
+    category: "timeline",
   },
   {
     question: "Do you follow Laravel best practices and PSR coding standards?",
-    answer: "Absolutely! Our certified Laravel development team strictly adheres to PSR standards, Laravel conventions, and industry best practices. We implement clean architecture principles, comprehensive PHPUnit testing, code reviews, and maintain high-quality standards through automated CI/CD pipelines.",
-    keywords: "laravel best practices, PSR standards, laravel coding standards, clean code",
-    category: "quality"
+    answer:
+      "Absolutely! Our certified Laravel development team strictly adheres to PSR standards, Laravel conventions, and industry best practices. We implement clean architecture principles, comprehensive PHPUnit testing, code reviews, and maintain high-quality standards through automated CI/CD pipelines.",
+    keywords:
+      "laravel best practices, PSR standards, laravel coding standards, clean code",
+    category: "quality",
   },
   {
-    question: "How do you ensure Laravel application security and data protection?",
-    answer: "We implement Laravel's built-in security features including CSRF protection, SQL injection prevention, XSS protection, and authentication systems. Additionally, we conduct comprehensive security audits, use encrypted data storage, implement rate limiting, and follow OWASP security guidelines for enterprise-grade protection.",
-    keywords: "laravel security, web application security, data protection, OWASP guidelines",
-    category: "security"
+    question:
+      "How do you ensure Laravel application security and data protection?",
+    answer:
+      "We implement Laravel's built-in security features including CSRF protection, SQL injection prevention, XSS protection, and authentication systems. Additionally, we conduct comprehensive security audits, use encrypted data storage, implement rate limiting, and follow OWASP security guidelines for enterprise-grade protection.",
+    keywords:
+      "laravel security, web application security, data protection, OWASP guidelines",
+    category: "security",
   },
   {
-    question: "Can you integrate Laravel with existing systems and third-party APIs?",
-    answer: "Yes! Laravel's flexible architecture enables seamless integration with CRMs (Salesforce, HubSpot), ERPs (SAP, Oracle), payment gateways (Stripe, PayPal), and hundreds of third-party APIs. We build custom connectors, webhooks, and ensure reliable data synchronization between systems.",
-    keywords: "laravel integration, API integration, third-party integration, system integration",
-    category: "integration"
+    question:
+      "Can you integrate Laravel with existing systems and third-party APIs?",
+    answer:
+      "Yes! Laravel's flexible architecture enables seamless integration with CRMs (Salesforce, HubSpot), ERPs (SAP, Oracle), payment gateways (Stripe, PayPal), and hundreds of third-party APIs. We build custom connectors, webhooks, and ensure reliable data synchronization between systems.",
+    keywords:
+      "laravel integration, API integration, third-party integration, system integration",
+    category: "integration",
   },
   {
     question: "What ongoing Laravel support and maintenance do you provide?",
-    answer: "We offer comprehensive post-launch Laravel support including 24/7 monitoring, security updates, performance optimization, bug fixes, feature enhancements, and Laravel version upgrades. Our maintenance packages include regular backups, database optimization, and proactive issue resolution.",
-    keywords: "laravel maintenance, laravel support, ongoing support, laravel updates",
-    category: "support"
+    answer:
+      "We offer comprehensive post-launch Laravel support including 24/7 monitoring, security updates, performance optimization, bug fixes, feature enhancements, and Laravel version upgrades. Our maintenance packages include regular backups, database optimization, and proactive issue resolution.",
+    keywords:
+      "laravel maintenance, laravel support, ongoing support, laravel updates",
+    category: "support",
   },
   {
-    question: "How do you price Laravel development projects and what's included?",
-    answer: "Our Laravel development pricing is transparent and project-based, ranging from $10K-$100K+ depending on complexity, features, and scope. We provide detailed estimates including development, testing, deployment, documentation, and initial support. No hidden fees or surprise costs.",
-    keywords: "laravel development cost, laravel pricing, web development pricing, project estimates",
-    category: "pricing"
+    question:
+      "How do you price Laravel development projects and what's included?",
+    answer:
+      "Our Laravel development pricing is transparent and project-based, ranging from $10K-$100K+ depending on complexity, features, and scope. We provide detailed estimates including development, testing, deployment, documentation, and initial support. No hidden fees or surprise costs.",
+    keywords:
+      "laravel development cost, laravel pricing, web development pricing, project estimates",
+    category: "pricing",
   },
   {
-    question: "Do you provide Laravel version upgrades and legacy system modernization?",
-    answer: "Yes! We specialize in Laravel maintenance packages that include framework upgrades, security patches, performance monitoring, database optimization, and feature additions. We ensure your Laravel application stays current with the latest PHP and Laravel versions for optimal security and performance.",
-    keywords: "laravel upgrades, laravel maintenance, legacy modernization, framework updates",
-    category: "maintenance"
+    question:
+      "Do you provide Laravel version upgrades and legacy system modernization?",
+    answer:
+      "Yes! We specialize in Laravel maintenance packages that include framework upgrades, security patches, performance monitoring, database optimization, and feature additions. We ensure your Laravel application stays current with the latest PHP and Laravel versions for optimal security and performance.",
+    keywords:
+      "laravel upgrades, laravel maintenance, legacy modernization, framework updates",
+    category: "maintenance",
   },
   {
     question: "Can you migrate our existing application to Laravel framework?",
-    answer: "Absolutely! We excel at migrating applications from various platforms (WordPress, CodeIgniter, Symfony, custom PHP) to Laravel. Our migration process ensures zero downtime, complete data integrity, improved performance, and enhanced security throughout the transition.",
-    keywords: "laravel migration, platform migration, application migration, framework migration",
-    category: "migration"
-  }
+    answer:
+      "Absolutely! We excel at migrating applications from various platforms (WordPress, CodeIgniter, Symfony, custom PHP) to Laravel. Our migration process ensures zero downtime, complete data integrity, improved performance, and enhanced security throughout the transition.",
+    keywords:
+      "laravel migration, platform migration, application migration, framework migration",
+    category: "migration",
+  },
 ];
 
-// Enhanced FAQ schema for different business focuses
-const ecommerceFaqs = [
-  {
-    question: "How quickly can you develop a Laravel e-commerce platform?",
-    answer: "Most Laravel e-commerce platforms launch within 8-12 weeks, including payment gateway integration, inventory management, order processing, and custom features. Simple online stores can go live in 6-8 weeks, while complex multi-vendor marketplaces require 3-4 months.",
-    keywords: "laravel ecommerce, ecommerce development, online store development",
-    category: "ecommerce"
-  },
-  {
-    question: "Which payment gateways can you integrate with Laravel e-commerce?",
-    answer: "We integrate all major payment gateways including Stripe, PayPal, Square, Authorize.Net, and regional providers. Our Laravel e-commerce solutions handle subscription billing, multi-currency support, recurring payments, and maintain full PCI DSS compliance for secure transactions.",
-    keywords: "payment gateway integration, laravel payments, ecommerce payments",
-    category: "payments"
-  },
-  {
-    question: "Can your Laravel e-commerce solutions handle high-traffic online stores?",
-    answer: "Yes! Our Laravel e-commerce platforms are architected for scale, handling thousands of concurrent users and transactions. We implement Redis caching, database optimization, CDN integration, and load balancing to ensure fast page loads even during traffic spikes.",
-    keywords: "scalable ecommerce, high-traffic laravel, performance optimization",
-    category: "performance"
-  },
-  {
-    question: "Do you develop custom inventory management systems with Laravel?",
-    answer: "Absolutely! We build comprehensive Laravel-based inventory management systems featuring real-time stock tracking, automated reordering, multi-warehouse support, barcode scanning, and seamless integration with shipping providers and fulfillment centers.",
-    keywords: "inventory management, warehouse management, stock tracking system",
-    category: "inventory"
-  }
-];
-
-// Schema.org structured data for enhanced SEO
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
+  mainEntity: faqs.map((faq) => ({
     "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
+    name: faq.question,
+    acceptedAnswer: {
       "@type": "Answer",
-      "text": faq.answer
-    }
-  }))
+      text: faq.answer,
+    },
+  })),
 };
 
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Laravel Development Company",
-  "description": "Professional Laravel development services for custom web applications, e-commerce platforms, and enterprise solutions",
-  "url": "https://laravelcompany.com",
-  "logo": "https://laravelcompany.com/images/logo.png",
-  "contactPoint": {
+  name: "Laravel Development Company",
+  description:
+    "Professional Laravel development services for custom web applications, e-commerce platforms, and enterprise solutions",
+  url: "https://laravelcompany.com",
+  logo: "https://laravelcompany.com/logo.svg",
+  contactPoint: {
     "@type": "ContactPoint",
-    "telephone": "+1-XXX-XXX-XXXX",
-    "contactType": "customer service",
-    "areaServed": "US",
-    "availableLanguage": "English"
+    telephone: "+44 744 821 88 99",
+    contactType: "customer service",
+    areaServed: "GB",
+    availableLanguage: "English",
   },
-  "sameAs": [
+  sameAs: [
     "https://twitter.com/laravelcompany",
-    "https://linkedin.com/company/laravelcompany",
-    "https://github.com/laravelcompany"
-  ]
+    "https://www.linkedin.com/company/laravel-company-official",
+    "https://github.com/laravelcompany",
+  ],
 };
 ---
 
-<!-- Enhanced Schema.org structured data -->
-<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
-<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(organizationSchema)}
+/>
 
 <section
-    class="py-20 bg-gray-50 relative overflow-hidden"
-    aria-labelledby="faq-heading"
-    itemscope
-    itemtype="https://schema.org/FAQPage"
+  class="py-20 bg-gray-50 relative overflow-hidden"
+  aria-labelledby="faq-heading"
+  itemscope
+  itemtype="https://schema.org/FAQPage"
 >
-  <!-- Enhanced meta content for SEO -->
-  <meta itemprop="name" content="Laravel Development FAQ - Professional Laravel Services" />
-  <meta itemprop="description" content="Get answers to common questions about Laravel development, pricing, timelines, and our professional PHP web development services." />
+  <meta
+    itemprop="name"
+    content="Laravel Development FAQ - Professional Laravel Services"
+  />
+  <meta
+    itemprop="description"
+    content="Get answers to common questions about Laravel development, pricing, timelines, and our professional PHP web development services."
+  />
 
-  <!-- Subtle background pattern with better accessibility -->
-  <div class="absolute inset-0 opacity-5" aria-hidden="true" role="presentation">
-  <div class="absolute inset-0 bg-repeat" style="background-image: url('/grid-pattern.svg');"></div>
+  <div
+    class="absolute inset-0 opacity-5"
+    aria-hidden="true"
+    role="presentation"
+  >
+    <div
+      class="absolute inset-0 bg-repeat"
+      style="background-image: url('/grid-pattern.svg');"
+    >
+    </div>
   </div>
 
-  <!-- Laravel-themed accent elements with enhanced positioning -->
-  <div class="absolute top-20 right-10 opacity-5" aria-hidden="true" role="presentation">
-    <svg class="h-24 w-24 text-red-500" fill="currentColor" viewBox="0 0 24 24" aria-label="Laravel framework logo">
-      <path d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.027c-.008.002-.016.008-.024.01a.348.348 0 01-.192 0c-.011-.002-.02-.008-.03-.012-.02-.008-.042-.014-.062-.025L.533 18.755a.376.376 0 01-.189-.326V2.974c0-.033.005-.066.014-.098.003-.012.01-.02.014-.032a.369.369 0 01.023-.058c.004-.013.015-.022.023-.033l.033-.045c.012-.01.025-.018.037-.027.014-.012.027-.024.041-.034L5.527.06a.375.375 0 01.375 0L10.9 2.647c.016.01.03.021.044.033.012.009.022.018.034.027.008.006.019.01.026.018.015.011.024.027.038.041.008.01.018.017.024.027.016.021.028.049.035.075.001.013.007.025.008.038v9.652l3.76-2.164V5.527c0-.033.004-.066.013-.098.003-.01.01-.02.013-.032.007-.02.018-.04.024-.058.007-.013.016-.021.024-.033.007-.013.021-.02.033-.045.012-.01.025-.018.037-.027.014-.011.027-.024.041-.034L19.469.06a.375.375 0 01.375 0l4.998 2.876c.017.01.031.021.045.033.012.009.021.018.033.027.008.006.018.01.025.018.015.011.025.027.039.041.007.01.017.017.024.027.015.021.028.049.034.075.002.013.007.025.009.038z"/>
+  <div
+    class="absolute top-20 right-10 opacity-5"
+    aria-hidden="true"
+    role="presentation"
+  >
+    <svg class="h-24 w-24 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M23.642 5.43a.364.364 0 01.014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 01-.188.326L9.93 23.949a.316.316 0 01-.066.027c-.008.002-.016.008-.024.01a.348.348 0 01-.192 0c-.011-.002-.02-.008-.03-.012-.02-.008-.042-.014-.062-.025L.533 18.755a.376.376 0 01-.189-.326V2.974c0-.033.005-.066.014-.098.003-.012.01-.02.014-.032a.369.369 0 01.023-.058c.004-.013.015-.022.023-.033l.033-.045c.012-.01.025-.018.037-.027.014-.012.027-.024.041-.034L5.527.06a.375.375 0 01.375 0L10.9 2.647c.016.01.03.021.044.033.012.009.022.018.034.027.008.006.019.01.026.018.015.011.024.027.038.041.008.01.018.017.024.027.016.021.028.049.035.075.001.013.007.025.008.038v9.652l3.76-2.164V5.527c0-.033.004-.066.013-.098.003-.01.01-.02.013-.032.007-.02.018-.04.024-.058.007-.013.016-.021.024-.033.007-.013.021-.02.033-.045.012-.01.025-.018.037-.027.014-.011.027-.024.041-.034L19.469.06a.375.375 0 01.375 0l4.998 2.876c.017.01.031.021.045.033.012.009.021.018.033.027.008.006.018.01.025.018.015.011.025.027.039.041.007.01.017.017.024.027.015.021.028.049.034.075.002.013.007.025.009.038z"
+      ></path>
     </svg>
   </div>
 
   <div class="container-custom relative">
-    <!-- Enhanced header section -->
     <header class="text-center max-w-5xl mx-auto animate-on-scroll">
       <h1
-          id="faq-heading"
-          class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight"
-          itemprop="name"
+        title="Laravel Development FAQ: Your Questions Answered"
+        id="faq-heading"
+        class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight"
+        itemprop="name"
       >
         Laravel Development FAQ: Your Questions Answered
       </h1>
       <p
-          class="mt-6 text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto"
-          itemprop="description"
+        class="mt-6 text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto"
+        itemprop="description"
       >
-        Everything you need to know about our professional Laravel development services, pricing, timelines, and enterprise PHP web application development process.
+        Everything you need to know about our professional Laravel development
+        services, pricing, timelines, and enterprise PHP web application
+        development process.
       </p>
 
-      <!-- Enhanced trust indicators with more detail -->
-      <div class="mt-10 flex flex-wrap justify-center gap-6 lg:gap-8 text-sm lg:text-base">
-        <span class="flex items-center gap-3 px-4 py-2 bg-white rounded-full shadow-sm border border-gray-100">
-          <svg class="h-6 w-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      <div
+        class="mt-10 flex flex-wrap justify-center gap-6 lg:gap-8 text-sm lg:text-base"
+      >
+        <span
+          class="flex items-center gap-3 px-4 py-2 bg-white rounded-full shadow-sm border border-gray-100"
+        >
+          <svg
+            class="h-6 w-6 text-green-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          <span class="font-medium text-gray-700">500+ Laravel Projects Delivered</span>
+          <span class="font-medium text-gray-700"
+            >500+ Laravel Projects Delivered</span
+          >
         </span>
-        <span class="flex items-center gap-3 px-4 py-2 bg-white rounded-full shadow-sm border border-gray-100">
-          <svg class="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        <span
+          class="flex items-center gap-3 px-4 py-2 bg-white rounded-full shadow-sm border border-gray-100"
+        >
+          <svg
+            class="h-6 w-6 text-blue-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          <span class="font-medium text-gray-700">Average 8-Week Delivery Time</span>
+          <span class="font-medium text-gray-700"
+            >Average 8-Week Delivery Time</span
+          >
         </span>
-        <span class="flex items-center gap-3 px-4 py-2 bg-white rounded-full shadow-sm border border-gray-100">
-          <svg class="h-6 w-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+        <span
+          class="flex items-center gap-3 px-4 py-2 bg-white rounded-full shadow-sm border border-gray-100"
+        >
+          <svg
+            class="h-6 w-6 text-purple-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+            ></path>
           </svg>
-          <span class="font-medium text-gray-700">Laravel Certified Development Team</span>
+          <span class="font-medium text-gray-700"
+            >Laravel Certified Development Team</span
+          >
         </span>
       </div>
     </header>
 
-    <!-- Enhanced FAQ section with better semantic HTML -->
     <main class="mt-20 max-w-5xl mx-auto" role="main">
-    <div class="space-y-6" itemscope itemtype="https://schema.org/FAQPage">
-    {faqs.map((faq, index) => (
-        <article
-      class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden animate-on-scroll faq-item hover:shadow-lg hover:border-red-200 transition-all duration-300 group"
-      style={`animation-delay: ${index * 0.1}s`}
-      itemscope
-      itemtype="https://schema.org/Question"
-      id={`faq-${index + 1}`}
-      >
-      <details class="group/details">
-        <summary class="flex justify-between items-center cursor-pointer p-8 lg:p-10 transition-all duration-300 hover:bg-red-50 focus:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-200 focus:ring-inset">
-        <h3
-      class="text-lg lg:text-xl xl:text-2xl font-semibold text-gray-900 transition-colors duration-300 group-hover:text-red-600 pr-6 leading-tight"
-      itemprop="name"
-          >
-          {faq.question}
-          </h3>
-          <div class="flex-shrink-0">
-        <div class="h-10 w-10 lg:h-12 lg:w-12 rounded-full bg-red-100 flex items-center justify-center group-hover:bg-red-200 group/details-open:bg-red-500 transition-all duration-300">
-        <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-6 w-6 lg:h-7 lg:w-7 text-red-500 group/details-open:text-white group/details-open:rotate-180 transition-all duration-500"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      aria-hidden="true"
-          >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-        </div>
-        </div>
-        </summary>
+      <div class="space-y-6" itemscope itemtype="https://schema.org/FAQPage">
+        {
+          faqs.map((faq, index) => (
+            <article
+              class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden animate-on-scroll faq-item hover:shadow-lg hover:border-red-200 transition-all duration-300 group"
+              style={`animation-delay: ${index * 0.1}s`}
+              itemscope
+              itemtype="https://schema.org/Question"
+              id={`faq-${index + 1}`}
+            >
+              <details class="group/details w-full">
+                <summary class="flex justify-between items-center cursor-pointer p-8 lg:p-10 transition-all duration-300 hover:bg-red-50 focus:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-200 focus:ring-inset w-full">
+                  <h3
+                    class="text-lg lg:text-xl xl:text-2xl font-semibold text-gray-900 transition-colors duration-300 group-hover:text-red-600 pr-6 leading-tight text-left"
+                    itemprop="name"
+                  >
+                    {faq.question}
+                  </h3>
+                  <div class="flex-shrink-0">
+                    <div class="h-10 w-10 lg:h-12 lg:w-12 rounded-full bg-red-100 flex items-center justify-center group-hover:bg-red-200 group-open:bg-red-500 transition-all duration-300">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 lg:h-7 lg:w-7 text-red-500 group-open:text-white group-open:rotate-180 transition-all duration-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </summary>
 
-        <div
-      class="px-8 lg:px-10 pb-8 lg:pb-10 text-gray-600 leading-relaxed faq-content border-t border-gray-50"
-      itemscope
-      itemtype="https://schema.org/Answer"
-          >
-          <div class="pt-6 lg:pt-8">
-        <p class="text-base lg:text-lg leading-relaxed" itemprop="text">{faq.answer}</p>
-
-        <!-- Hidden keywords for SEO -->
-        <span class="sr-only" itemprop="keywords">{faq.keywords}</span>
-        </div>
-        </div>
-        </details>
-        </article>
-      ))}
-    </div>
+                <div
+                  class="px-8 lg:px-10 pt-6 lg:pt-8 pb-8 lg:pb-10 text-gray-600 leading-relaxed faq-content border-t border-gray-50"
+                  itemscope
+                  itemtype="https://schema.org/Answer"
+                >
+                  <p
+                    class="text-base lg:text-lg leading-relaxed"
+                    itemprop="text"
+                  >
+                    {faq.answer}
+                  </p>
+                  <span class="sr-only" itemprop="keywords">
+                    {faq.keywords}
+                  </span>
+                </div>
+              </details>
+            </article>
+          ))
+        }
+      </div>
     </main>
 
-    <!-- Enhanced CTA section with better conversion optimization -->
     <footer class="mt-20 text-center animate-on-scroll" role="contentinfo">
-      <div class="bg-white rounded-3xl p-10 lg:p-12 shadow-lg border border-gray-100 max-w-4xl mx-auto relative overflow-hidden">
-        <!-- Background accent -->
-        <div class="absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 bg-red-50 rounded-full opacity-50" aria-hidden="true"></div>
-        <div class="absolute bottom-0 left-0 -mb-4 -ml-4 h-32 w-32 bg-blue-50 rounded-full opacity-30" aria-hidden="true"></div>
+      <div
+        class="bg-white rounded-3xl p-10 lg:p-12 shadow-lg border border-gray-100 max-w-4xl mx-auto relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 right-0 -mt-4 -mr-4 h-24 w-24 bg-red-50 rounded-full opacity-50"
+          aria-hidden="true"
+        >
+        </div>
+        <div
+          class="absolute bottom-0 left-0 -mb-4 -ml-4 h-32 w-32 bg-blue-50 rounded-full opacity-30"
+          aria-hidden="true"
+        >
+        </div>
 
         <div class="relative">
           <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-            Ready to Start Your Laravel Development Project?
+            Ready to Start Your <b>Laravel Development</b> Project?
           </h2>
-          <p class="text-gray-600 text-lg lg:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-            Our Laravel development experts are ready to discuss your custom web application requirements and provide detailed project estimates.
+          <p
+            class="text-gray-600 text-lg lg:text-xl mb-8 max-w-2xl mx-auto leading-relaxed"
+          >
+            Our <b>Laravel development</b> experts are ready to discuss your custom
+            web application requirements and provide detailed project estimates.
           </p>
 
-          <!-- Enhanced CTA buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center mb-10">
+          <div
+            class="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center mb-10"
+          >
             <a
-                href="/contact"
-                class="inline-flex items-center justify-center px-8 py-4 bg-red-500 text-white font-semibold text-lg rounded-xl hover:bg-red-600 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 group"
-                title="Schedule a free Laravel development consultation"
+              title="Schedule a free Laravel development consultation"
+              href="/contact"
+              class="inline-flex items-center justify-center px-8 py-4 bg-red-500 text-white font-semibold text-lg rounded-xl hover:bg-red-600 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 group"
             >
               Schedule Free Consultation
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            </a>
-
-            <a
-                href="/portfolio"
-                class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold text-lg rounded-xl hover:border-red-300 hover:text-red-600 hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-300 group"
-                title="View our Laravel development portfolio and case studies"
-            >
-              View Laravel Portfolio
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 ml-3 transition-transform duration-300 group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                ></path>
               </svg>
             </a>
           </div>
 
-          <!-- Enhanced contact information -->
           <div class="pt-8 border-t border-gray-100">
-            <div class="flex flex-col lg:flex-row justify-center gap-8 text-gray-500">
+            <div
+              class="flex flex-col lg:flex-row justify-center gap-8 text-gray-500"
+            >
               <span class="flex items-center gap-3 text-base">
-                <svg class="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                <svg
+                  class="h-5 w-5 text-red-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
                 </svg>
-                <a href="mailto:info@laravelcompany.com" class="hover:text-red-600 transition-colors duration-300">
+                <a
+                  href="mailto:info@laravelcompany.com"
+                  class="hover:text-red-600 transition-colors duration-300"
+                >
                   info@laravelcompany.com
                 </a>
               </span>
               <span class="flex items-center gap-3 text-base">
-                <svg class="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                <svg
+                  class="h-5 w-5 text-red-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <span>Response within 24 hours</span>
               </span>
               <span class="flex items-center gap-3 text-base">
-                <svg class="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                <svg
+                  class="h-5 w-5 text-red-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <span>Free project estimation</span>
               </span>
@@ -302,24 +410,50 @@ const organizationSchema = {
       </div>
     </footer>
 
-    <!-- Additional SEO content section -->
-    <aside class="mt-16 max-w-4xl mx-auto animate-on-scroll" aria-labelledby="related-services">
+    <aside
+      class="mt-16 max-w-4xl mx-auto animate-on-scroll"
+      aria-labelledby="related-services"
+    >
       <div class="rounded-2xl p-8 lg:p-10">
-        <h3 id="related-services" class="text-xl lg:text-2xl font-bold text-gray-900 mb-6 text-center">
+        <h3
+          title="Related Laravel Development Services"
+          id="related-services"
+          class="text-xl lg:text-2xl font-bold text-gray-900 mb-6 text-center"
+        >
           Related Laravel Development Services
         </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
-          <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <h4 title="custom laravel development company" class="font-semibold text-gray-900 mb-2">Custom Laravel Development</h4>
-            <p class="text-sm text-gray-600">Tailored web applications built with Laravel framework</p>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center"
+        >
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <h4 class="font-semibold text-gray-900 mb-2">
+              Custom Laravel Development
+            </h4>
+            <p class="text-sm text-gray-600">
+              Tailored web applications built with Laravel framework
+            </p>
           </div>
-          <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <h4 title="open source laravel ecommerce" class="font-semibold text-gray-900 mb-2">Laravel E-commerce Solutions</h4>
-            <p class="text-sm text-gray-600">Scalable online stores and marketplace platforms</p>
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <h4 class="font-semibold text-gray-900 mb-2">
+              Laravel E-commerce Solutions
+            </h4>
+            <p class="text-sm text-gray-600">
+              Scalable online stores and marketplace platforms
+            </p>
           </div>
-          <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <h4 class="font-semibold text-gray-900 mb-2">Laravel API Development</h4>
-            <p class="text-sm text-gray-600">RESTful APIs and microservices architecture</p>
+          <div
+            class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+          >
+            <h4 class="font-semibold text-gray-900 mb-2">
+              Laravel API Development
+            </h4>
+            <p class="text-sm text-gray-600">
+              RESTful APIs and microservices architecture
+            </p>
           </div>
         </div>
       </div>
@@ -327,7 +461,6 @@ const organizationSchema = {
   </div>
 </section>
 
-<!-- Enhanced CSS with improved accessibility and performance -->
 <style>
   .faq-item {
     transform: translateY(0);
@@ -338,7 +471,6 @@ const organizationSchema = {
     transform: translateY(-3px);
   }
 
-  /* Enhanced details/summary styling */
   details summary::-webkit-details-marker {
     display: none;
   }
@@ -348,25 +480,45 @@ const organizationSchema = {
   }
 
   details[open] .faq-content {
-    animation: slideDown 0.5s ease-out;
+    animation: slideDown 0.5s ease-out forwards;
+    display: block !important;
   }
 
   details[open] summary {
     border-bottom: 1px solid #f3f4f6;
   }
 
+  .faq-content {
+    display: none;
+  }
+
+  details[open] .faq-content {
+    display: block;
+  }
+
   @keyframes slideDown {
     from {
       opacity: 0;
       transform: translateY(-15px);
+      max-height: 0;
     }
     to {
       opacity: 1;
       transform: translateY(0);
+      max-height: 1000px;
     }
   }
 
-  /* Enhanced scroll animations */
+  .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  details[open] .faq-content {
+    max-height: 1000px;
+  }
+
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(40px);
@@ -378,7 +530,6 @@ const organizationSchema = {
     transform: translateY(0);
   }
 
-  /* Accessibility improvements */
   @media (prefers-reduced-motion: reduce) {
     .faq-item:hover {
       transform: none;
@@ -399,13 +550,11 @@ const organizationSchema = {
     }
   }
 
-  /* Enhanced focus states for accessibility */
   details summary:focus-visible {
     outline: 2px solid #ef4444;
     outline-offset: 2px;
   }
 
-  /* Improved mobile experience */
   @media (max-width: 768px) {
     .faq-item {
       margin-bottom: 1rem;
@@ -420,7 +569,6 @@ const organizationSchema = {
     }
   }
 
-  /* Loading state optimization */
   .container-custom {
     contain: layout style paint;
   }
@@ -430,37 +578,33 @@ const organizationSchema = {
   }
 </style>
 
-<!-- Enhanced JavaScript for scroll animations and accessibility -->
 <script>
-  // Intersection Observer for scroll animations
   const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: "0px 0px -50px 0px",
   };
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add("visible");
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  // Observe all animated elements
-  document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    animatedElements.forEach(el => observer.observe(el));
+  document.addEventListener("DOMContentLoaded", () => {
+    const animatedElements = document.querySelectorAll(".animate-on-scroll");
+    animatedElements.forEach((el) => observer.observe(el));
 
-    // Enhanced keyboard navigation for FAQ items
-    const summaries = document.querySelectorAll('details summary');
+    const summaries = document.querySelectorAll("details summary");
     summaries.forEach((summary, index) => {
-      summary.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowDown' && index < summaries.length - 1) {
+      summary.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown" && index < summaries.length - 1) {
           e.preventDefault();
           summaries[index + 1].focus();
         }
-        if (e.key === 'ArrowUp' && index > 0) {
+        if (e.key === "ArrowUp" && index > 0) {
           e.preventDefault();
           summaries[index - 1].focus();
         }
