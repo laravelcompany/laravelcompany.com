@@ -1,44 +1,72 @@
 ---
-import { Image } from 'astro:assets';
-import logoSrc from '../assets/logo.svg';
+import { Image } from "astro:assets";
+import logoSrc from "../assets/logo.svg";
 
-const navItems = [
-    { name: 'About Us', href: '/about-us' },
-    { name: 'Software', href: '/software' },
+interface NavItem {
+    name: string;
+    href: string;
+    target?: string;
+}
+
+const navItems: NavItem[] = [
+    { name: "About Us", href: "/about-us" },
+    { name: "Software", href: "/software" },
+    { name: "Shop", href: "/shop" },
 ];
 ---
 
-<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100" role="banner">
+<header
+    class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100"
+    role="banner"
+>
     <div class="container-custom flex items-center justify-between h-20">
-        <a title="laravel development agency" href="/" class="flex items-center transition-transform duration-300 hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2 rounded" aria-label="Payflo home">
-            <Image src={logoSrc} alt="laravel development company logo" width={42} class="rounded-full object-cover transition-all duration-300 hover:brightness-110 focus:brightness-110"
+        <a
+            title="laravel development agency"
+            href="/"
+            class="flex items-center transition-transform duration-300 hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2 rounded"
+            aria-label="Payflo home"
+        >
+            <Image
+                src={logoSrc}
+                alt="laravel development company logo"
+                width={42}
+                class="rounded-full object-cover transition-all duration-300 hover:brightness-110 focus:brightness-110"
             />
         </a>
 
         <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
-            {navItems.map(item => (
+        <nav
+            class="hidden md:flex items-center space-x-8"
+            role="navigation"
+            aria-label="Main navigation"
+        >
+            {
+                navItems.map((item) => (
                     <a
-                            title={item.name}
-                            target={item.target ?? '_self'}
-                            href={item.href}
-                            class="text-gray-700 hover:text-payflo-purple focus:text-payflo-purple transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2 rounded px-2 py-1"
+                        title={item.name}
+                        target={item.target ?? "_self"}
+                        href={item.href}
+                        class="text-gray-700 hover:text-payflo-purple focus:text-payflo-purple transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2 rounded px-2 py-1"
                     >
                         {item.name}
                     </a>
-            ))}
+                ))
+            }
         </nav>
 
         <div class="flex items-center space-x-4">
-
-            <a href="/contact" class="btn btn-primary focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2">Book Call</a>
+            <a
+                href="/contact"
+                class="btn btn-primary focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2"
+                >Book Call</a
+            >
 
             <!-- Mobile Menu Button -->
             <button
-                    id="menu-toggle"
-                    class="md:hidden flex flex-col items-center justify-center w-8 h-8 focus:outline-none"
-                    aria-label="Toggle navigation menu"
-                    aria-expanded="false"
+                id="menu-toggle"
+                class="md:hidden flex flex-col items-center justify-center w-8 h-8 focus:outline-none"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
             >
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -51,17 +79,15 @@ const navItems = [
     <div id="mobile-menu" class="mobile-menu">
         <div class="container-custom py-6">
             <nav class="flex flex-col space-y-4">
-                {navItems.map(item => (
+                {
+                    navItems.map((item) => (
                         <a href={item.href} class="mobile-menu-item">
                             {item.name}
                         </a>
-                ))}
-                <a href="/login" class="mobile-menu-item">
-                    Log In
-                </a>
-                <a href="/contact" class="mobile-menu-cta">
-                    Book a Demo
-                </a>
+                    ))
+                }
+                <a href="/login" class="mobile-menu-item"> Log In </a>
+                <a href="/contact" class="mobile-menu-cta"> Book a Demo </a>
             </nav>
         </div>
     </div>
@@ -163,49 +189,52 @@ const navItems = [
 </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
 
-        console.log('Menu elements:', { menuToggle, mobileMenu });
+        console.log("Menu elements:", { menuToggle, mobileMenu });
 
         if (menuToggle && mobileMenu) {
-            menuToggle.addEventListener('click', function() {
-                console.log('Menu button clicked');
+            menuToggle.addEventListener("click", function () {
+                console.log("Menu button clicked");
 
                 // Toggle active class on button
-                menuToggle.classList.toggle('active');
+                menuToggle.classList.toggle("active");
 
                 // Toggle menu visibility
-                if (mobileMenu.classList.contains('active')) {
-                    console.log('Hiding menu');
-                    mobileMenu.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
+                if (mobileMenu.classList.contains("active")) {
+                    console.log("Hiding menu");
+                    mobileMenu.classList.remove("active");
+                    menuToggle.setAttribute("aria-expanded", "false");
                 } else {
-                    console.log('Showing menu');
-                    mobileMenu.classList.add('active');
-                    menuToggle.setAttribute('aria-expanded', 'true');
+                    console.log("Showing menu");
+                    mobileMenu.classList.add("active");
+                    menuToggle.setAttribute("aria-expanded", "true");
                 }
             });
 
             // Close menu when clicking on links
-            const menuLinks = mobileMenu.querySelectorAll('a');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    console.log('Menu link clicked, closing menu');
-                    mobileMenu.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
+            const menuLinks = mobileMenu.querySelectorAll("a");
+            menuLinks.forEach((link) => {
+                link.addEventListener("click", function () {
+                    console.log("Menu link clicked, closing menu");
+                    mobileMenu.classList.remove("active");
+                    menuToggle.classList.remove("active");
+                    menuToggle.setAttribute("aria-expanded", "false");
                 });
             });
 
             // Close menu on escape key
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape' && mobileMenu.classList.contains('active')) {
-                    console.log('Escape pressed, closing menu');
-                    mobileMenu.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
+            document.addEventListener("keydown", function (event) {
+                if (
+                    event.key === "Escape" &&
+                    mobileMenu.classList.contains("active")
+                ) {
+                    console.log("Escape pressed, closing menu");
+                    mobileMenu.classList.remove("active");
+                    menuToggle.classList.remove("active");
+                    menuToggle.setAttribute("aria-expanded", "false");
                 }
             });
         }
