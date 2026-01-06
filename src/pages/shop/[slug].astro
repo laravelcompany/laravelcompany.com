@@ -1,0 +1,298 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroSection from "../../components/HeroSection.astro";
+
+export const prerender = true;
+
+interface Product {
+    id: number;
+    title: string;
+    price: string;
+    category: string;
+    image_urls: string[];
+    description: string;
+    aff_code: string;
+}
+
+interface ApiResponse {
+    success: boolean;
+    data: Product[];
+    pagination: {
+        current_page: number;
+        per_page: number;
+        total: number;
+        last_page: number;
+    };
+}
+
+export async function getStaticPaths() {
+    const apiUrl =
+        import.meta.env.PUBLIC_API_URL || "https://app.laravelmail.com/api";
+    const allProducts: Product[] = [];
+    const perPage = 250;
+
+    try {
+        const response = await fetch(
+            `${apiUrl}/v1/products?per_page=${perPage}&page=1`,
+            {
+                headers: {
+                    "User-Agent": "Astro-Build/1.0",
+                    Accept: "application/json",
+                },
+            },
+        );
+
+        if (response.ok) {
+            const data: ApiResponse = await response.json();
+            if (data.success && Array.isArray(data.data)) {
+                allProducts.push(...data.data);
+
+                const totalPages = data.pagination?.last_page || 1;
+                for (let page = 2; page <= totalPages; page++) {
+                    const nextResponse = await fetch(
+                        `${apiUrl}/v1/products?per_page=${perPage}&page=${page}`,
+                        {
+                            headers: {
+                                "User-Agent": "Astro-Build/1.0",
+                                Accept: "application/json",
+                            },
+                        },
+                    );
+                    if (nextResponse.ok) {
+                        const nextData: ApiResponse = await nextResponse.json();
+                        if (nextData.success && Array.isArray(nextData.data)) {
+                            allProducts.push(...nextData.data);
+                        }
+                    }
+                }
+            }
+        }
+    } catch (error) {
+        console.error("Error fetching products for static paths:", error);
+    }
+
+    function generateSlug(title: string): string {
+        return title
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, "")
+            .replace(/\s+/g, "-")
+            .replace(/-+/g, "-")
+            .trim();
+    }
+
+    return allProducts.map((product) => ({
+        params: { slug: generateSlug(product.title) },
+        props: { product },
+    }));
+}
+
+const { product } = Astro.props;
+
+function getProductImage(imageUrls: string[]): string {
+    return Array.isArray(imageUrls) && imageUrls.length > 0
+        ? imageUrls[0]
+        : "/logo.svg";
+}
+
+function formatPrice(price: string | number): string {
+    const num = typeof price === "string" ? parseFloat(price) : price;
+    return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+    }).format(num);
+}
+---
+
+<Layout title={`${product.title} - Laravel Company Shop`}>
+    <main>
+        <HeroSection
+            title={product.title}
+            highlightText={product.category}
+            description={`Premium tools and solutions by Laravel Company.`}
+        />
+
+        <section class="py-16 md:py-24 bg-white dark:bg-gray-800">
+            <div class="container-custom">
+                <div class="mb-8">
+                    <a
+                        href="/shop"
+                        class="text-payflo-purple hover:underline flex items-center gap-2"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        Back to Shop
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Product Visual -->
+                    <div class="animate-on-scroll">
+                        <div class="relative group">
+                            <div
+                                class="absolute -inset-1 bg-gradient-to-r from-payflo-purple to-payflo-blue rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-300"
+                            >
+                            </div>
+                            <div
+                                class="relative bg-white dark:bg-gray-700 rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-600"
+                            >
+                                <img
+                                    src={getProductImage(product.image_urls)}
+                                    alt={product.title}
+                                    class="w-full h-auto object-cover"
+                                />
+                            </div>
+                        </div>
+
+                        {
+                            product.image_urls.length > 1 && (
+                                <div class="grid grid-cols-4 gap-4 mt-6">
+                                    {product.image_urls
+                                        .slice(1, 5)
+                                        .map((url) => (
+                                            <div class="rounded-lg overflow-hidden border border-gray-100 dark:border-gray-600 shadow-sm aspect-square bg-gray-50 dark:bg-gray-700">
+                                                <img
+                                                    src={url}
+                                                    alt={`${product.title} screenshot`}
+                                                    class="w-full h-full object-cover"
+                                                />
+                                            </div>
+                                        ))}
+                                </div>
+                            )
+                        }
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="animate-on-scroll">
+                        <div
+                            class="inline-block px-4 py-1 rounded-full bg-payflo-purple/10 text-payflo-purple font-semibold text-sm mb-6"
+                        >
+                            {product.category}
+                        </div>
+
+                        <h1
+                            class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6"
+                        >
+                            {product.title}
+                        </h1>
+
+                        <div class="flex items-center gap-4 mb-8">
+                            <span class="text-3xl font-bold text-payflo-purple">
+                                {formatPrice(product.price)}
+                            </span>
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-bold rounded-full"
+                            >
+                                INSTANT ACCESS
+                            </span>
+                        </div>
+
+                        <div
+                            class="prose prose-lg dark:prose-invert max-w-none mb-10 text-gray-600 dark:text-gray-300"
+                        >
+                            {
+                                product.description
+                                    .split("\n")
+                                    .map((para) => <p class="mb-4">{para}</p>)
+                            }
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                            <a
+                                href={product.aff_code || "#"}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-primary text-center px-10 py-4 text-lg"
+                            >
+                                Purchase Product
+                            </a>
+                            <a
+                                href="/contact"
+                                class="btn btn-secondary text-center px-10 py-4 text-lg"
+                            >
+                                Contact Support
+                            </a>
+                        </div>
+
+                        <div
+                            class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 border border-gray-100 dark:border-gray-700"
+                        >
+                            <h3
+                                class="font-bold text-gray-900 dark:text-white mb-4"
+                            >
+                                What's Included?
+                            </h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <svg
+                                        class="h-5 w-5 text-green-500 mt-0.5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span
+                                        class="text-gray-600 dark:text-gray-300 text-sm"
+                                        >Full version of {product.title}</span
+                                    >
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg
+                                        class="h-5 w-5 text-green-500 mt-0.5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span
+                                        class="text-gray-600 dark:text-gray-300 text-sm"
+                                        >Lifetime security updates</span
+                                    >
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg
+                                        class="h-5 w-5 text-green-500 mt-0.5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span
+                                        class="text-gray-600 dark:text-gray-300 text-sm"
+                                        >Priority developer support</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

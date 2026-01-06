@@ -136,6 +136,15 @@ function truncateDescription(desc: string, length: number = 100): string {
   if (!desc) return '';
   return desc.length > length ? desc.substring(0, length) + '...' : desc;
 }
+
+function generateSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .trim();
+}
 ---
 
 <Layout title="Shop - Laravel Company Products">
@@ -190,12 +199,14 @@ function truncateDescription(desc: string, length: number = 100): string {
                 {products.slice(0, 250).map((product) => (
                     <div class="feature-card border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden flex flex-col h-full !p-0">
                       <div class="relative w-full h-48 bg-gray-50 dark:bg-gray-700 overflow-hidden group">
-                        <img
-                            src={getProductImage(product.image_urls)}
-                            alt={product.title}
-                            loading="lazy"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        />
+                        <a href={`/shop/${generateSlug(product.title)}`} class="block w-full h-full">
+                          <img
+                              src={getProductImage(product.image_urls)}
+                              alt={product.title}
+                              loading="lazy"
+                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          />
+                        </a>
                         <div class="absolute top-2 right-2 bg-payflo-purple text-white px-3 py-1 rounded-full text-xs font-semibold">
                           {product.category}
                         </div>
@@ -203,7 +214,9 @@ function truncateDescription(desc: string, length: number = 100): string {
 
                       <div class="p-6 flex flex-col flex-grow">
                         <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">
-                          {product.title}
+                          <a href={`/shop/${generateSlug(product.title)}`} class="hover:text-payflo-purple transition-colors">
+                            {product.title}
+                          </a>
                         </h3>
 
                         <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2 flex-grow">
@@ -215,9 +228,7 @@ function truncateDescription(desc: string, length: number = 100): string {
                             {formatPrice(product.price)}
                           </span>
                           <a
-                              href={product.aff_code || '#'}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                              href={`/shop/${generateSlug(product.title)}`}
                               class="btn btn-primary !py-2 !px-4 text-sm"
                           >
                             View Details
