@@ -101,9 +101,28 @@ function formatPrice(price: string | number): string {
         currency: "USD",
     }).format(num);
 }
+const jsonLd = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    name: product.title,
+    image: product.image_urls,
+    description: product.description,
+    brand: {
+        "@type": "Brand",
+        name: "Laravel Company",
+    },
+    offers: {
+        "@type": "Offer",
+        url: Astro.url.href,
+        priceCurrency: "USD",
+        price: product.price,
+        availability: "https://schema.org/InStock",
+    },
+};
 ---
 
 <Layout title={`${product.title} - Laravel Company Shop`}>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <main>
         <HeroSection
             title={product.title}
