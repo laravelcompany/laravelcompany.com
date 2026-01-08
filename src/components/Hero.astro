@@ -1,43 +1,56 @@
 ---
-import { Image } from 'astro:assets';
-import heroImage from '../assets/logo.svg';
+import { Image } from "astro:assets";
+import heroImage from "../assets/logo.svg";
 ---
 
-<section class="pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden relative">
-    <!-- Background grid -->
-    <div class="absolute inset-0 opacity-5 parallax" data-speed="0.2">
-        <div class="absolute inset-0 bg-repeat" style="background-image: url('/grid-pattern.svg');"></div>
-    </div>
+<section
+    class="pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden relative min-h-[80vh] flex items-center"
+>
+    <!-- Background blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
 
     <div class="container-custom relative">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <!-- Left: Messaging -->
             <div>
-                <h1 class="animate-on-scroll delay-0 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                    <span class="gradient-text">Laravel™ Company</span><br/> Solutions for You
+                <h1
+                    class="animate-on-scroll delay-0 text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight"
+                >
+                    <span class="gradient-text">Laravel™ Company</span><br /> Solutions
+                    for You
                 </h1>
-                <p class="animate-on-scroll delay-1 mt-6 text-xl text-gray-600 max-w-lg">
-                    Since 2004, our 100% employee-owned team has delivered ESOP-aligned technical solutions,
-                    building <strong>equity platforms, succession systems, and enterprise-grade Laravel™ software</strong>
-                    for Fortune 500 leaders.
+                <p
+                    class="animate-on-scroll delay-1 mt-6 text-xl text-white/70 max-w-lg leading-relaxed"
+                >
+                    Laravel Company develops open-source Laravel tools for UI,
+                    Mail, SEO, and GPT — <strong class="text-white italic"
+                        >no lock-in, no fluff, just solid engineering.</strong
+                    >
                 </p>
-                <div class="animate-on-scroll delay-2 mt-8 flex flex-col sm:flex-row gap-4">
+                <div
+                    class="animate-on-scroll delay-2 mt-8 flex flex-col sm:flex-row gap-4"
+                >
                     <a href="/contact" class="btn btn-primary">Talk to Us</a>
                 </div>
-
             </div>
 
             <!-- Right: Hero Image -->
             <div class="animate-on-scroll delay-4">
                 <div class="relative hover-zoom">
-                    <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-500 rounded-xl blur opacity-30 transition-opacity duration-300 hover:opacity-50"></div>
-                    <div class="relative bg-white rounded-xl shadow-xl overflow-hidden">
+                    <div
+                        class="absolute -inset-2 bg-gradient-to-r from-payflo-purple to-payflo-pink rounded-2xl blur-2xl opacity-20 transition-opacity duration-300 hover:opacity-40"
+                    >
+                    </div>
+                    <div
+                        class="relative glass-card border-white/20 p-2 overflow-hidden"
+                    >
                         <Image
-                                src={heroImage}
-                                alt="Laravel™ Enterprise Solutions Dashboard"
-                                class="w-full h-auto transition-all duration-500"
-                                width={700}
-                                height={500}
+                            src={heroImage}
+                            alt="Laravel™ Enterprise Solutions Dashboard"
+                            class="w-full h-auto transition-all duration-500 rounded-xl"
+                            width={700}
+                            height={500}
                         />
                     </div>
                 </div>

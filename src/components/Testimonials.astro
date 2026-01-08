@@ -26,22 +26,25 @@ const testimonials = [
 ];
 ---
 
-<section class="py-20 bg-white relative overflow-hidden">
-  <!-- Subtle background pattern with parallax effect -->
-  <div class="absolute inset-0 opacity-5 parallax" data-speed="0.15">
-    <div
-      class="absolute inset-0 bg-repeat"
-      style="background-image: url('/grid-pattern.svg');"
-    >
-    </div>
+<section class="py-24 relative overflow-hidden">
+  <!-- Subtle background decoration -->
+  <div
+    class="absolute top-1/2 left-0 w-80 h-80 bg-payflo-purple/10 blur-[100px] rounded-full -z-10"
+  >
+  </div>
+  <div
+    class="absolute top-0 right-0 w-80 h-80 bg-payflo-pink/10 blur-[100px] rounded-full -z-10"
+  >
   </div>
 
   <div class="container-custom relative">
     <div class="text-center max-w-3xl mx-auto animate-on-scroll">
-      <h2 class="text-3xl md:text-4xl font-bold">
-        Trusted by businesses that demand quality software
+      <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
+        Trusted by businesses that demand <span class="gradient-text"
+          >quality software</span
+        >
       </h2>
-      <p class="mt-4 text-xl text-gray-600">
+      <p class="mt-6 text-xl text-white/70 font-medium">
         Hear from clients who built their platforms with our Laravel development
         & consulting services.
       </p>
@@ -56,18 +59,20 @@ const testimonials = [
           >
             <div class="flex items-center mb-6">
               <div>
-                <h6 class="font-semibold transition-colors duration-300 group-hover:text-purple-600">
+                <h6 class="font-black text-white text-lg transition-colors duration-300 group-hover:text-payflo-purple">
                   {testimonial.author}
                 </h6>
-                <p class="text-sm text-gray-600">{testimonial.role}</p>
+                <p class="text-sm text-white/50 font-bold uppercase tracking-wider">
+                  {testimonial.role}
+                </p>
               </div>
             </div>
-            <p class="text-gray-700 italic relative">
-              <span class="absolute -top-2 -left-1 text-4xl text-purple-600 opacity-20 transition-all duration-300 group-hover:opacity-40 group-hover:scale-110">
+            <p class="text-white/80 italic relative font-medium leading-relaxed">
+              <span class="absolute -top-4 -left-2 text-6xl text-payflo-purple opacity-20 transition-all duration-300 group-hover:opacity-40 group-hover:scale-110 font-serif">
                 "
               </span>
               {testimonial.quote}
-              <span class="absolute -bottom-2 -right-1 text-4xl text-purple-600 opacity-20 transition-all duration-300 group-hover:opacity-40 group-hover:scale-110">
+              <span class="absolute -bottom-6 -right-2 text-6xl text-payflo-pink opacity-20 transition-all duration-300 group-hover:opacity-40 group-hover:scale-110 font-serif">
                 "
               </span>
             </p>

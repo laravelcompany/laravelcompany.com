@@ -10,9 +10,9 @@ const companyLinks = [
 ];
 
 const productLinks = [
-  { name: "Laravel Seo", href: "/software" },
-  { name: "Laravel Mail", href: "/software" },
-  { name: "Laravel GPT", href: "/software" },
+  { name: "Laravel Seo", href: "/software/laravel-seo" },
+  { name: "Laravel Mail", href: "/software/laravel-mail" },
+  { name: "Laravel GPT", href: "/software/laravel-gpt" },
 ];
 
 const legalLinks = [
@@ -31,25 +31,18 @@ const socialLinks = [
 ];
 ---
 
-<footer class="bg-gray-900 text-white pt-16 pb-8 relative overflow-hidden">
-  <!-- Subtle background pattern -->
-  <div class="absolute inset-0 opacity-5">
-    <div
-      class="absolute inset-0 bg-repeat"
-      style="background-image: url('/grid-pattern.svg');"
-    >
-    </div>
-  </div>
-
-  <!-- Animated gradient background -->
+<footer
+  class="bg-payflo-darker/50 backdrop-blur-xl text-white pt-24 pb-12 relative overflow-hidden border-t border-white/10"
+>
+  <!-- Subtle background blobs -->
   <div
-    class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-payflo-purple via-payflo-blue to-payflo-purple bg-[length:200%_auto] animate-gradient-x"
+    class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-payflo-purple/50 to-transparent"
   >
   </div>
 
   <div class="container-custom relative">
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-gray-800"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10"
     >
       <div class="lg:col-span-2">
         <a
@@ -64,11 +57,13 @@ const socialLinks = [
             height={40}
           />
         </a>
-        <p class="mt-4 text-gray-400 max-w-md">
-          Laravel Company delivers <a href="https://laravelcompany.com"
-            >software development services</a
-          > with automation solutions, featuring Laravel Ecommerce, Laravel Mail,
-          and Laravel GPT platforms.
+        <p class="mt-6 text-white/50 font-medium leading-relaxed max-w-sm">
+          Laravel Company delivers <a
+            href="https://laravelcompany.com"
+            class="text-white hover:text-payflo-purple transition-colors"
+            >premier software development</a
+          > with automation solutions, featuring Laravel Ecommerce, Mail, and GPT
+          platforms.
         </p>
         <div class="mt-6 flex space-x-4">
           {
@@ -77,7 +72,7 @@ const socialLinks = [
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 transform"
+                class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-payflo-purple hover:border-payflo-purple transition-all duration-300"
                 aria-label={social.name}
               >
                 {social.icon === "twitter" && (
@@ -122,18 +117,17 @@ const socialLinks = [
 
       <div>
         <h3
-          class="text-lg font-semibold mb-4 text-white/90 hover:text-white transition-colors duration-300"
+          class="text-sm font-black uppercase tracking-widest mb-6 text-white"
         >
           Company
         </h3>
         <ul class="space-y-3">
           {
-            companyLinks.map((link, index) => (
-              <li class="transform transition-all duration-300 hover:translate-x-1">
+            companyLinks.map((link) => (
+              <li>
                 <a
                   href={link.href}
-                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-block"
-                  style={`transition-delay: ${index * 50}ms;`}
+                  class="text-white/50 hover:text-white transition-colors duration-200 font-medium"
                 >
                   {link.name}
                 </a>
@@ -145,18 +139,17 @@ const socialLinks = [
 
       <div>
         <h3
-          class="text-lg font-semibold mb-4 text-white/90 hover:text-white transition-colors duration-300"
+          class="text-sm font-black uppercase tracking-widest mb-6 text-white"
         >
           Products
         </h3>
         <ul class="space-y-3">
           {
-            productLinks.map((link, index) => (
-              <li class="transform transition-all duration-300 hover:translate-x-1">
+            productLinks.map((link) => (
+              <li>
                 <a
                   href={link.href}
-                  class="text-gray-400 hover:text-white transition-colors duration-300 inline-block"
-                  style={`transition-delay: ${index * 50}ms;`}
+                  class="text-white/50 hover:text-white transition-colors duration-200 font-medium"
                 >
                   {link.name}
                 </a>
@@ -168,20 +161,17 @@ const socialLinks = [
     </div>
 
     <div
-      class="pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm"
+      class="pt-12 flex flex-col md:flex-row justify-between items-center text-white/40 text-sm font-medium"
     >
-      <p
-        class="hover:text-gray-300 transition-colors duration-300 mb-4 md:mb-0"
-      >
-        &copy; {new Date().getFullYear()} Laravel Company. All rights reserved.
+      <p>
+        &copy; {new Date().getFullYear()} Laravel Company. Delivered with ❤️
       </p>
-      <div class="flex flex-wrap gap-4">
+      <div class="flex flex-wrap gap-8">
         {
-          legalLinks.map((link, index) => (
+          legalLinks.map((link) => (
             <a
               href={link.href}
-              class="text-gray-400 hover:text-white transition-colors duration-300"
-              style={`transition-delay: ${index * 50}ms;`}
+              class="hover:text-white transition-colors duration-200"
             >
               {link.name}
             </a>

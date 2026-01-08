@@ -1,22 +1,26 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import { getImage } from 'astro:assets';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import { ViewTransitions } from "astro:transitions";
+import { getImage } from "astro:assets";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 
 interface Props {
   title: string;
   description?: string;
 }
 
-const { 
-  title, 
-  description = "UK’s leading Laravel development agency with 10+ years of experience in Laravel web development, custom PHP solutions, and scalable software applications. Experts in bespoke web app design, Laravel enterprise solutions, and secure business software development."
+const {
+  title,
+  description = "Laravel Company develops open-source Laravel tools for UI, Mail, SEO, and GPT — no lock-in, no fluff, just solid engineering.",
 } = Astro.props;
 
 // Preload critical assets
-const faviconImg = await getImage({src: '/favicon.png', width: 32, height: 32});
+const faviconImg = await getImage({
+  src: "/favicon.png",
+  width: 32,
+  height: 32,
+});
 ---
 
 <!doctype html>
@@ -37,11 +41,15 @@ const faviconImg = await getImage({src: '/favicon.png', width: 32, height: 32});
     <meta name="author" content="Laravel Company" />
 
     <ViewTransitions />
-    
+
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Structured data -->
     <script type="application/ld+json">
       {
@@ -57,47 +65,57 @@ const faviconImg = await getImage({src: '/favicon.png', width: 32, height: 32});
         ]
       }
     </script>
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
-    <meta property="og:image" content={new URL('/logo.svg', Astro.site)} />
+    <meta property="og:image" content={new URL("/logo.svg", Astro.site)} />
     <meta property="og:site_name" content="Laravel Development Company" />
 
-    
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@laravelcompany" />
     <meta name="twitter:creator" content="@laravelcompany" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL('/logo.svg', Astro.site)} />
+    <meta name="twitter:image" content={new URL("/logo.svg", Astro.site)} />
   </head>
-  <body class="min-h-screen flex flex-col">
-    <a title="Laravel development company" href="#main-content" class="skip-link">laravel development company</a>
+  <body
+    class="min-h-screen flex flex-col bg-payflo-dark text-white selection:bg-payflo-purple/30"
+  >
+    <a
+      title="Laravel development company"
+      href="#main-content"
+      class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-1/2 focus:-translate-x-1/2 focus:z-50 focus:bg-payflo-purple focus:text-white focus:px-6 focus:py-3 focus:rounded-lg shadow-xl shadow-payflo-purple/20"
+      >laravel development company</a
+    >
     <Header />
     <main id="main-content" class="flex-grow">
       <slot />
     </main>
     <Footer />
-    
+
     <!-- Intersection Observer for animations on scroll -->
     <script>
-      document.addEventListener('astro:page-load', () => {
-        const animatedElements = document.querySelectorAll('.animate-on-scroll');
-        
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animated');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1 });
-        
-        animatedElements.forEach(element => {
+      document.addEventListener("astro:page-load", () => {
+        const animatedElements =
+          document.querySelectorAll(".animate-on-scroll");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animated");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+
+        animatedElements.forEach((element) => {
           observer.observe(element);
         });
       });

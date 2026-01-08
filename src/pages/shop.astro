@@ -44,7 +44,7 @@ async function fetchAllProducts() {
   const apiUrl = import.meta.env.PUBLIC_API_URL || 'https://app.laravelmail.com/api';
   const allProducts: Product[] = [];
   const delayBetweenRequests = 500;
-  const perPage = 250;
+  const perPage = 10;
   
   try {
     console.log(`📡 Fetching products from: ${apiUrl}/v1/products`);
@@ -71,6 +71,7 @@ async function fetchAllProducts() {
     console.log(`✓ Loaded page 1/${totalPages} - ${data.data?.length || 0} products`);
 
     // Fetch remaining pages if any
+    /*
     for (let page = 2; page <= totalPages; page++) {
       try {
         await delay(delayBetweenRequests);
@@ -92,6 +93,7 @@ async function fetchAllProducts() {
         console.error(`✗ Page ${page} error:`, error);
       }
     }
+    */
 
     console.log(`\n📊 Shop Build Summary: ${allProducts.length} total products loaded`);
     return allProducts;
