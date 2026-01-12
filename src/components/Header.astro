@@ -148,6 +148,17 @@ const navItems: NavItem[] = [
         transform: scale(1.02);
     }
 
+    /* Hide desktop nav on scroll */
+    #main-header.scrolled nav[aria-label="Main navigation"] {
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+    }
+
+    nav[aria-label="Main navigation"] {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
     .mobile-menu-cta {
         display: block;
         color: white;

@@ -1,8 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import { Icon } from 'astro-icon/components';
-import teamImage from '../assets/team-photo.jpg';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import teamImage from "../assets/team-photo.jpg";
 
 const teamMembers = [
   {
@@ -28,59 +28,67 @@ const teamMembers = [
     role: "Project Manager & Client Relations",
     bio: "Experienced project manager specializing in software development lifecycle and client communication for custom development projects.",
     avatar: "/avatar-sarah.jpg",
-  }
+  },
 ];
 
 const values = [
   {
     title: "Innovation Through Automation",
-    description: "We leverage cutting-edge automation technologies to build software solutions that work smarter, not harder, saving time and resources.",
-    icon: "ph:robot-duotone"
+    description:
+      "We leverage cutting-edge automation technologies to build software solutions that work smarter, not harder, saving time and resources.",
+    icon: "ph:robot-duotone",
   },
   {
     title: "Laravel Expertise",
-    description: "Deep specialization in Laravel framework enables us to deliver robust, scalable, and maintainable web applications quickly and efficiently.",
-    icon: "ph:code-duotone"
+    description:
+      "Deep specialization in Laravel framework enables us to deliver robust, scalable, and maintainable web applications quickly and efficiently.",
+    icon: "ph:code-duotone",
   },
   {
     title: "Client-Focused Solutions",
-    description: "Every project is tailored to meet specific business needs, ensuring our software solutions directly contribute to your success and growth.",
-    icon: "ph:users-duotone"
+    description:
+      "Every project is tailored to meet specific business needs, ensuring our software solutions directly contribute to your success and growth.",
+    icon: "ph:users-duotone",
   },
   {
     title: "Quality & Reliability",
-    description: "We maintain the highest standards in code quality, security, and performance to deliver software solutions you can depend on.",
-    icon: "ph:shield-check-duotone"
-  }
+    description:
+      "We maintain the highest standards in code quality, security, and performance to deliver software solutions you can depend on.",
+    icon: "ph:shield-check-duotone",
+  },
 ];
 
 const timeline = [
   {
     year: "2019",
     title: "Company Founded",
-    description: "Laravel Company established with a vision to provide modern software development services with automation at the core."
+    description:
+      "Laravel Company established with a vision to provide modern software development services with automation at the core.",
   },
   {
     year: "2020",
     title: "Laravel Ecommerce Launch",
-    description: "Released our flagship Laravel Ecommerce platform, helping businesses build powerful online stores with advanced features."
+    description:
+      "Released our flagship Laravel Ecommerce platform, helping businesses build powerful online stores with advanced features.",
   },
   {
     year: "2022",
     title: "Laravel Mail Integration",
-    description: "Developed Laravel Mail solution for seamless email automation and marketing campaigns integrated with web applications."
+    description:
+      "Developed Laravel Mail solution for seamless email automation and marketing campaigns integrated with web applications.",
   },
   {
     year: "2024",
     title: "Laravel GPT Revolution",
-    description: "Pioneered Laravel GPT integration, bringing AI-powered features and automation to web applications and business processes."
-  }
+    description:
+      "Pioneered Laravel GPT integration, bringing AI-powered features and automation to web applications and business processes.",
+  },
 ];
 ---
 
 <Layout
-    title="About Us"
-    description="Learn about Laravel Company's mission to deliver cutting-edge software development services with automation, featuring Laravel Ecommerce, Laravel Mail, and Laravel GPT solutions."
+  title="About Us"
+  description="Learn about Laravel Company's mission to deliver cutting-edge software development services with automation, featuring Laravel Ecommerce, Laravel Mail, and Laravel GPT solutions."
 >
   <section class="pt-20 pb-16 md:pt-28 md:pb-24">
     <div class="container-custom">
@@ -88,84 +96,99 @@ const timeline = [
         <h1 class="text-4xl md:text-5xl font-bold leading-tight">
           About <span class="gradient-text">Laravel Company</span>
         </h1>
-        <p class="mt-6 text-xl text-gray-600">
-          We help businesses transform through modern software development services, automation solutions, and cutting-edge Laravel applications.
+        <p class="mt-6 text-xl text-white/70">
+          We help businesses transform through modern software development
+          services, automation solutions, and cutting-edge Laravel applications.
         </p>
       </div>
     </div>
   </section>
 
-  <section class="py-20 bg-payflo-gray">
+  <section class="py-20">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto animate-on-scroll">
-        <h2 class="text-3xl md:text-4xl font-bold">
-          Our Values
-        </h2>
-        <p class="mt-4 text-xl text-gray-600">
+        <h2 class="text-3xl md:text-4xl font-bold">Our Values</h2>
+        <p class="mt-4 text-xl text-white/70">
           The principles that drive our software development approach.
         </p>
       </div>
 
       <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {values.map((value, index) => (
+        {
+          values.map((value, index) => (
             <div
-                class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 animate-on-scroll"
-                style={`animation-delay: ${index * 0.1}s`}
+              class="glass-card animate-on-scroll"
+              style={`animation-delay: ${index * 0.1}s`}
             >
-
-              <h3 class="text-xl font-semibold">{value.title}</h3>
-              <p class="mt-3 text-gray-600">{value.description}</p>
+              <h3 class="text-xl font-semibold text-white">{value.title}</h3>
+              <p class="mt-3 text-white/70">{value.description}</p>
             </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
 
-  <section class="py-20 bg-white">
+  <section class="py-20">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto animate-on-scroll">
-        <h2 class="text-3xl md:text-4xl font-bold">
-          Our Journey
-        </h2>
+        <h2 class="text-3xl md:text-4xl font-bold">Our Journey</h2>
       </div>
 
       <div class="mt-12 max-w-4xl mx-auto">
         <div class="relative">
-          {timeline.map((event, index) => (
-              <div class="relative pl-8 pb-12 animate-on-scroll" style={`animation-delay: ${index * 0.15}s`}>
-                <div class="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-payflo-purple to-payflo-blue"></div>
-                <div class="absolute left-[-4px] top-2 h-2 w-2 rounded-full bg-payflo-purple"></div>
-                <div class="text-sm font-semibold text-payflo-purple">{event.year}</div>
-                <h3 class="mt-2 text-xl font-semibold">{event.title}</h3>
-                <p class="mt-2 text-gray-600">{event.description}</p>
+          {
+            timeline.map((event, index) => (
+              <div
+                class="relative pl-8 pb-12 animate-on-scroll"
+                style={`animation-delay: ${index * 0.15}s`}
+              >
+                <div class="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-payflo-purple to-payflo-blue" />
+                <div class="absolute left-[-4px] top-2 h-2 w-2 rounded-full bg-payflo-purple" />
+                <div class="text-sm font-semibold text-payflo-purple">
+                  {event.year}
+                </div>
+                <h3 class="mt-2 text-xl font-semibold text-white">
+                  {event.title}
+                </h3>
+                <p class="mt-2 text-white/70">{event.description}</p>
               </div>
-          ))}
+            ))
+          }
         </div>
         <div class="mt-12 text-center">
-          <p class="text-xl font-medium text-gray-700">
-            From custom software development to innovative Laravel solutions, we're building the
-            automated future of web applications with Laravel Ecommerce, Laravel Mail, and Laravel GPT.
+          <p class="text-xl font-medium text-white/80">
+            From custom software development to innovative Laravel solutions,
+            we're building the automated future of web applications with Laravel
+            Ecommerce, Laravel Mail, and Laravel GPT.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-20 bg-gradient-to-r from-payflo-purple to-payflo-blue text-white relative overflow-hidden">
-    <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+  <section
+    class="py-20 bg-gradient-to-r from-payflo-purple to-payflo-blue text-white relative overflow-hidden"
+  >
+    <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10">
+    </div>
     <div class="container-custom relative">
       <div class="max-w-3xl mx-auto text-center animate-on-scroll">
-        <span class="inline-block px-4 py-1 bg-white/10 rounded-full text-sm font-medium mb-6">
+        <span
+          class="inline-block px-4 py-1 bg-white/10 rounded-full text-sm font-medium mb-6"
+        >
           Ready to Build?
         </span>
-        <h2 class="text-3xl md:text-4xl font-bold">
-          Start Your Project Today
-        </h2>
+        <h2 class="text-3xl md:text-4xl font-bold">Start Your Project Today</h2>
         <p class="mt-6 text-xl opacity-90">
-          Let's discuss how our <b>software development services</b> and Laravel solutions can transform your business with automation and innovation.
+          Let's discuss how our <b>software development services</b> and Laravel solutions
+          can transform your business with automation and innovation.
         </p>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contact" class="btn bg-white text-payflo-purple hover:bg-opacity-90">
+          <a
+            href="/contact"
+            class="btn bg-white text-payflo-purple hover:bg-opacity-90"
+          >
             Get Started
           </a>
         </div>
