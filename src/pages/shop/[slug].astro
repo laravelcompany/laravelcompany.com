@@ -29,7 +29,7 @@ export async function getStaticPaths() {
     const apiUrl =
         import.meta.env.PUBLIC_API_URL || "https://app.laravelmail.com/api";
     const allProducts: Product[] = [];
-    const perPage = 250;
+    const perPage = 100;
 
     try {
         const response = await fetch(
@@ -46,25 +46,6 @@ export async function getStaticPaths() {
             const data: ApiResponse = await response.json();
             if (data.success && Array.isArray(data.data)) {
                 allProducts.push(...data.data);
-
-                const totalPages = data.pagination?.last_page || 1;
-                for (let page = 2; page <= totalPages; page++) {
-                    const nextResponse = await fetch(
-                        `${apiUrl}/v1/products?per_page=${perPage}&page=${page}`,
-                        {
-                            headers: {
-                                "User-Agent": "Astro-Build/1.0",
-                                Accept: "application/json",
-                            },
-                        },
-                    );
-                    if (nextResponse.ok) {
-                        const nextData: ApiResponse = await nextResponse.json();
-                        if (nextData.success && Array.isArray(nextData.data)) {
-                            allProducts.push(...nextData.data);
-                        }
-                    }
-                }
             }
         }
     } catch (error) {

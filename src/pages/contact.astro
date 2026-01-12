@@ -89,17 +89,8 @@ const organizationSchema = {
 ---
 
 <Layout
-  title="Contact Us - Laravel Company | Software Development & Automation Solutions"
-  description="Get in touch with Laravel Company for custom software development, automation solutions, and partnership opportunities. Located in Basildon, UK."
-  canonical="https://laravelcompany.com/contact"
-  ogImage="https://laravelcompany.com/images/contact-og-image.jpg"
-  ogType="website"
-  ogTitle="Contact Us - Laravel Company"
-  ogDescription="Get in touch with our team for software development, automation solutions, or partnership opportunities."
-  twitterCard="summary_large_image"
-  twitterTitle="Contact Us - Laravel Company"
-  twitterDescription="Get in touch with our team for software development, automation solutions, or partnership opportunities."
-  robots="index, follow"
+  title="Schedule Your Consultation - Laravel Company"
+  description="Book a free strategy session with Laravel Company. We help businesses scale with custom software and automation solutions."
 >
   <!-- JSON-LD Structured Data -->
   <script
@@ -131,165 +122,19 @@ const organizationSchema = {
       <!-- Main Header -->
       <div class="text-center max-w-3xl mx-auto animate-on-scroll">
         <h1 class="text-4xl md:text-5xl font-bold leading-tight text-white">
-          Get in <span
+          Schedule Your <span
             class="gradient-text bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent"
-            >Touch</span
+            >Consultation</span
           >
         </h1>
         <p class="mt-6 text-xl text-gray-400">
-          Ready to transform your business with custom software solutions? Let's
-          discuss your project and automation needs.
-        </p>
-      </div>
-
-      <!-- Business Information Card -->
-      <div
-        class="mt-12 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl p-8 text-white shadow-lg"
-      >
-        <h2 class="text-2xl font-bold mb-6">Our Location</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div class="text-left">
-            <address class="not-italic text-white/90 text-lg leading-relaxed">
-              <strong class="text-white block mb-2 text-xl"
-                >Laravel Company</strong
-              >
-              7 High Street<br />
-              Basildon, Essex<br />
-              SS14 1AB<br />
-              United Kingdom
-            </address>
-
-            <div class="mt-6">
-              <h3 class="text-lg font-semibold text-white mb-2">
-                Business Hours
-              </h3>
-              <p class="text-white/90">
-                Monday - Friday<br />
-                9:00 AM - 6:00 PM GMT<br />
-                Saturday - Sunday: Closed
-              </p>
-            </div>
-
-            <div class="mt-6">
-              <h3 class="text-lg font-semibold text-white mb-2">
-                Contact Information
-              </h3>
-              <div class="space-y-2">
-                <p class="text-white/90">
-                  📞 Phone: <a
-                    href="tel:+441234567890"
-                    class="hover:text-white underline">+44 1234 567890</a
-                  >
-                </p>
-                <p class="text-white/90">
-                  ✉️ Email: <a
-                    href="mailto:info@laravelcompany.com"
-                    class="hover:text-white underline"
-                    >info@laravelcompany.com</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="text-center">
-            <div class="bg-white/10 rounded-lg p-6 backdrop-blur">
-              <svg
-                class="w-12 h-12 text-white mx-auto mb-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-                <circle
-                  cx="12"
-                  cy="10"
-                  r="3"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></circle>
-              </svg>
-              <p class="text-white/90">
-                Located in the heart of<br />Basildon's business district
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contact Methods Grid -->
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {
-          contactMethods.map((method, index) => (
-            <div
-              class="bg-white/10 rounded-xl p-8 shadow-lg border border-white/10 text-center animate-on-scroll hover:shadow-xl transition-shadow duration-300"
-              style={`animation-delay: ${index * 0.15}s`}
-              itemscope
-              itemtype="https://schema.org/ContactPoint"
-            >
-              <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-red-900/20 text-red-400 mb-6">
-                <Icon name={method.icon} class="h-8 w-8" />
-              </div>
-              <h3
-                class="text-xl font-semibold text-white"
-                itemprop="contactType"
-              >
-                {method.title}
-              </h3>
-              <p class="mt-3 text-gray-400">{method.description}</p>
-              <a
-                href={`mailto:${method.email}`}
-                class="mt-4 block text-red-400 font-medium hover:underline transition-colors"
-                itemprop="email"
-              >
-                {method.email}
-              </a>
-            </div>
-          ))
-        }
-      </div>
-
-      <!-- Google Maps Embed -->
-      <div class="mt-16 rounded-xl overflow-hidden shadow-lg">
-        <div class="aspect-w-16 aspect-h-9">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2468.123456789!2d0.4721428!3d51.5723131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8d9f4e8b0f0b1%3A0x74c2c3b8e4f2e4a0!2s7%20High%20St%2C%20Basildon%20SS14%201AB!5e0!3m2!1sen!2suk!4v1634567890"
-            width="100%"
-            height="400"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Laravel Company Office Location in Basildon"
-            class="w-full h-96"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Booking Section -->
-  <section class="py-20 bg-white/5">
-    <div class="container-custom">
-      <!-- Booking Header -->
-      <div class="text-center max-w-3xl mx-auto animate-on-scroll">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-          Schedule Your Consultation
-        </h2>
-        <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-          Book a free 30-minute strategy session to discuss your project
-          requirements and see how we can help grow your business.
+          Ready to transform your business? Select a time below to discuss your
+          project and automation needs.
         </p>
 
         <!-- Trust Indicators -->
         <div
-          class="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mb-10"
+          class="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mt-8 mb-10"
         >
           <div class="flex items-center">
             <svg
@@ -349,14 +194,6 @@ const organizationSchema = {
             type="text/javascript"
             src="https://assets.calendly.com/assets/external/widget.js"
             async></script>
-
-          <!-- Urgency Banner -->
-          <div
-            class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-4 px-6 text-sm font-medium"
-          >
-            🚀 Only 3 slots available this week — book now to secure your spot
-            before they're gone.
-          </div>
         </div>
 
         <!-- Information Panel -->
@@ -516,23 +353,150 @@ const organizationSchema = {
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Final CTA -->
-    <div class="mt-16 text-center animate-on-scroll">
-      <p class="text-gray-400 mb-4 max-w-2xl mx-auto">
-        This isn't just another call. It's your opportunity to discover how
-        we've helped businesses like yours turn marketing from a cost into a
-        predictable revenue engine.
-      </p>
-      <a
-        href="https://calendly.com/thelaravelcompany/30min"
-        class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-lg"
+  <!-- Location & Contact Section -->
+  <section class="py-20 bg-white/5">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          Visit Our Offices
+        </h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+          Prefer to meet in person? We'd love to welcome you to our HQ in
+          Basildon.
+        </p>
+      </div>
+
+      <!-- Business Information Card -->
+      <div
+        class="bg-gradient-to-r from-red-600 to-orange-600 rounded-xl p-8 text-white shadow-lg"
       >
-        👉 Yes, I Want My Free Strategy Session — Book Now
-      </a>
-      <p class="text-sm text-gray-500 mt-3">
-        No obligation. No pitch. Just a clear plan — in 30 minutes or less.
-      </p>
+        <h2 class="text-2xl font-bold mb-6">Our Location</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="text-left">
+            <address class="not-italic text-white/90 text-lg leading-relaxed">
+              <strong class="text-white block mb-2 text-xl"
+                >Laravel Company</strong
+              >
+              7 High Street<br />
+              Basildon, Essex<br />
+              SS14 1AB<br />
+              United Kingdom
+            </address>
+
+            <div class="mt-6">
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Business Hours
+              </h3>
+              <p class="text-white/90">
+                Monday - Friday<br />
+                9:00 AM - 6:00 PM GMT<br />
+                Saturday - Sunday: Closed
+              </p>
+            </div>
+
+            <div class="mt-6">
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Contact Information
+              </h3>
+              <div class="space-y-2">
+                <p class="text-white/90">
+                  📞 Phone: <a
+                    href="tel:+441234567890"
+                    class="hover:text-white underline">+44 1234 567890</a
+                  >
+                </p>
+                <p class="text-white/90">
+                  ✉️ Email: <a
+                    href="mailto:info@laravelcompany.com"
+                    class="hover:text-white underline"
+                    >info@laravelcompany.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-white/10 rounded-lg p-6 backdrop-blur">
+              <svg
+                class="w-12 h-12 text-white mx-auto mb-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <circle
+                  cx="12"
+                  cy="10"
+                  r="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></circle>
+              </svg>
+              <p class="text-white/90">
+                Located in the heart of<br />Basildon's business district
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Methods Grid -->
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+        {
+          contactMethods.map((method, index) => (
+            <div
+              class="bg-white/10 rounded-xl p-8 shadow-lg border border-white/10 text-center animate-on-scroll hover:shadow-xl transition-shadow duration-300"
+              style={`animation-delay: ${index * 0.15}s`}
+              itemscope
+              itemtype="https://schema.org/ContactPoint"
+            >
+              <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-red-900/20 text-red-400 mb-6">
+                <Icon name={method.icon} class="h-8 w-8" />
+              </div>
+              <h3
+                class="text-xl font-semibold text-white"
+                itemprop="contactType"
+              >
+                {method.title}
+              </h3>
+              <p class="mt-3 text-gray-400">{method.description}</p>
+              <a
+                href={`mailto:${method.email}`}
+                class="mt-4 block text-red-400 font-medium hover:underline transition-colors"
+                itemprop="email"
+              >
+                {method.email}
+              </a>
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Google Maps Embed -->
+      <div class="mt-16 rounded-xl overflow-hidden shadow-lg">
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2468.123456789!2d0.4721428!3d51.5723131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8d9f4e8b0f0b1%3A0x74c2c3b8e4f2e4a0!2s7%20High%20St%2C%20Basildon%20SS14%201AB!5e0!3m2!1sen!2suk!4v1634567890"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Laravel Company Office Location in Basildon"
+            class="w-full h-96"></iframe>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
