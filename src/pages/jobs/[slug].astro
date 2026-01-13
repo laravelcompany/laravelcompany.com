@@ -1,0 +1,532 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import { getJobs, type Job } from "../../utils/jobsCache";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+    const defaultKeyword = "laravel";
+    let allJobs: Job[] = [];
+
+    try {
+        allJobs = await getJobs(defaultKeyword);
+    } catch (error) {
+        console.error("Error fetching jobs for static paths:", error);
+    }
+
+    function generateSlug(title: string, id: string): string {
+        const titleSlug = title
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, "")
+            .replace(/\s+/g, "-")
+            .replace(/-+/g, "-")
+            .trim();
+        return `${titleSlug}-${id}`;
+    }
+
+    return allJobs.map((job) => ({
+        params: { slug: generateSlug(job.title, job.id) },
+        props: { job },
+    }));
+}
+
+const { job } = Astro.props;
+
+function formatDate(dateStr?: string | null): string {
+    if (!dateStr) return "Recently posted";
+    try {
+        const date = new Date(dateStr);
+        return date.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        });
+    } catch {
+        return "Recently posted";
+    }
+}
+
+const jsonLd = {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    title: job.title,
+    description: job.description,
+    hiringOrganization: {
+        "@type": "Organization",
+        name: job.company,
+    },
+    jobLocation: {
+        "@type": "Place",
+        address: job.location,
+    },
+    datePosted: job.posted_date || new Date().toISOString(),
+    employmentType: job.type || "FULL_TIME",
+};
+---
+
+<Layout title={`${job.title} at ${job.company} - Laravel Jobs`}>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <main>
+        <HeroSection
+            title={job.title}
+            highlightText={job.company}
+            description={`Join ${job.company} and take your Laravel career to the next level.`}
+        />
+
+        <section class="py-16 md:py-24 bg-white dark:bg-gray-800">
+            <div class="container-custom">
+                <div class="mb-8">
+                    <a
+                        href="/jobs"
+                        class="text-payflo-purple hover:underline flex items-center gap-2"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        Back to Jobs
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- Main Content -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <!-- Job Header -->
+                        <div class="animate-on-scroll">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                {
+                                    job.type && (
+                                        <span class="px-3 py-1 bg-payflo-purple/10 text-payflo-purple rounded-full text-sm font-semibold">
+                                            {job.type}
+                                        </span>
+                                    )
+                                }
+                                {
+                                    job.salary && (
+                                        <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-sm font-semibold">
+                                            {job.salary}
+                                        </span>
+                                    )
+                                }
+                            </div>
+
+                            <h1
+                                class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+                            >
+                                {job.title}
+                            </h1>
+
+                            <div
+                                class="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-400 mb-6"
+                            >
+                                <div class="flex items-center gap-2">
+                                    <svg
+                                        class="w-5 h-5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                                        ></path>
+                                    </svg>
+                                    <span class="font-medium text-lg"
+                                        >{job.company}</span
+                                    >
+                                </div>
+                                {
+                                    job.location && (
+                                        <div class="flex items-center gap-2">
+                                            <svg
+                                                class="w-5 h-5"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                                />
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                                />
+                                            </svg>
+                                            <span>{job.location}</span>
+                                        </div>
+                                    )
+                                }
+                                <div class="flex items-center gap-2">
+                                    <svg
+                                        class="w-5 h-5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        ></path>
+                                    </svg>
+                                    <span>{formatDate(job.posted_date)}</span>
+                                </div>
+                            </div>
+
+                            {
+                                job.url && (
+                                    <div class="flex flex-col sm:flex-row gap-4">
+                                        <a
+                                            href={job.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="btn btn-primary text-center px-10 py-4 text-lg"
+                                        >
+                                            Apply for this Position
+                                        </a>
+                                        <a
+                                            href="/contact"
+                                            class="btn btn-secondary text-center px-10 py-4 text-lg"
+                                        >
+                                            Contact Us
+                                        </a>
+                                    </div>
+                                )
+                            }
+                        </div>
+
+                        <!-- Job Description -->
+                        <div
+                            class="animate-on-scroll bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-100 dark:border-gray-700"
+                        >
+                            <h2
+                                class="text-2xl font-bold text-gray-900 dark:text-white mb-4"
+                            >
+                                Job Description
+                            </h2>
+                            <div
+                                class="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300"
+                            >
+                                {
+                                    (
+                                        job.full_description ||
+                                        job.description ||
+                                        "No description available"
+                                    )
+                                        .split("\n")
+                                        .map((para) => (
+                                            <p class="mb-4">{para}</p>
+                                        ))
+                                }
+                            </div>
+                        </div>
+
+                        <!-- Requirements -->
+                        {
+                            job.requirements && job.requirements.length > 0 && (
+                                <div class="animate-on-scroll bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-100 dark:border-gray-700">
+                                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                                        Requirements
+                                    </h2>
+                                    <ul class="space-y-3">
+                                        {job.requirements.map((req) => (
+                                            <li class="flex items-start gap-3">
+                                                <svg
+                                                    class="h-5 w-5 text-payflo-purple mt-0.5 flex-shrink-0"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                                    />
+                                                </svg>
+                                                <span class="text-gray-600 dark:text-gray-300">
+                                                    {req}
+                                                </span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )
+                        }
+
+                        <!-- Benefits -->
+                        {
+                            job.benefits && job.benefits.length > 0 && (
+                                <div class="animate-on-scroll bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-100 dark:border-gray-700">
+                                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                                        Benefits
+                                    </h2>
+                                    <ul class="space-y-3">
+                                        {job.benefits.map((benefit) => (
+                                            <li class="flex items-start gap-3">
+                                                <svg
+                                                    class="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke="currentColor"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M5 13l4 4L19 7"
+                                                    />
+                                                </svg>
+                                                <span class="text-gray-600 dark:text-gray-300">
+                                                    {benefit}
+                                                </span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )
+                        }
+
+                        <!-- Tags -->
+                        {
+                            job.tags && job.tags.length > 0 && (
+                                <div class="animate-on-scroll">
+                                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">
+                                        Skills & Technologies
+                                    </h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        {job.tags.map((tag) => (
+                                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="lg:col-span-1">
+                        <div class="sticky top-8 space-y-6">
+                            <!-- Company Info -->
+                            <div
+                                class="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-100 dark:border-gray-700"
+                            >
+                                <h3
+                                    class="font-bold text-gray-900 dark:text-white mb-4"
+                                >
+                                    About {job.company}
+                                </h3>
+                                <div class="space-y-3 text-sm">
+                                    <div class="flex items-start gap-2">
+                                        <svg
+                                            class="w-4 h-4 text-gray-400 mt-0.5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                                            ></path>
+                                        </svg>
+                                        <div>
+                                            <p
+                                                class="text-gray-500 dark:text-gray-400"
+                                            >
+                                                Company
+                                            </p>
+                                            <p
+                                                class="text-gray-900 dark:text-white font-medium"
+                                            >
+                                                {job.company}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    {
+                                        job.location && (
+                                            <div class="flex items-start gap-2">
+                                                <svg
+                                                    class="w-4 h-4 text-gray-400 mt-0.5"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                                    />
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                                    />
+                                                </svg>
+                                                <div>
+                                                    <p class="text-gray-500 dark:text-gray-400">
+                                                        Location
+                                                    </p>
+                                                    <p class="text-gray-900 dark:text-white font-medium">
+                                                        {job.location}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                    {
+                                        job.type && (
+                                            <div class="flex items-start gap-2">
+                                                <svg
+                                                    class="w-4 h-4 text-gray-400 mt-0.5"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                                    />
+                                                </svg>
+                                                <div>
+                                                    <p class="text-gray-500 dark:text-gray-400">
+                                                        Job Type
+                                                    </p>
+                                                    <p class="text-gray-900 dark:text-white font-medium">
+                                                        {job.type}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                    {
+                                        job.salary && (
+                                            <div class="flex items-start gap-2">
+                                                <svg
+                                                    class="w-4 h-4 text-gray-400 mt-0.5"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                                    />
+                                                </svg>
+                                                <div>
+                                                    <p class="text-gray-500 dark:text-gray-400">
+                                                        Salary
+                                                    </p>
+                                                    <p class="text-gray-900 dark:text-white font-medium">
+                                                        {job.salary}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                            </div>
+
+                            <!-- Apply CTA -->
+                            {
+                                job.url && (
+                                    <div class="bg-gradient-to-br from-payflo-purple to-payflo-blue rounded-xl p-6 text-white">
+                                        <h3 class="font-bold text-lg mb-2">
+                                            Ready to Apply?
+                                        </h3>
+                                        <p class="text-sm mb-4 opacity-90">
+                                            Take the next step in your career
+                                            and join {job.company}.
+                                        </p>
+                                        <a
+                                            href={job.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="block w-full text-center bg-white text-payflo-purple font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                                        >
+                                            Apply Now
+                                        </a>
+                                    </div>
+                                )
+                            }
+
+                            <!-- Share -->
+                            <div
+                                class="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-100 dark:border-gray-700"
+                            >
+                                <h3
+                                    class="font-bold text-gray-900 dark:text-white mb-4"
+                                >
+                                    Share this Job
+                                </h3>
+                                <div class="flex gap-2">
+                                    <a
+                                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(job.title + " at " + job.company)}&url=${encodeURIComponent(Astro.url.href)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="flex-1 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 p-2 rounded-lg transition-colors text-center"
+                                        title="Share on Twitter"
+                                    >
+                                        <svg
+                                            class="w-5 h-5 mx-auto"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                    <a
+                                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url.href)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="flex-1 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 p-2 rounded-lg transition-colors text-center"
+                                        title="Share on LinkedIn"
+                                    >
+                                        <svg
+                                            class="w-5 h-5 mx-auto"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
