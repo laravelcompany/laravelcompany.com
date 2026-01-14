@@ -31,10 +31,10 @@ const faviconImg = await getImage({
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | Laravel Development Company</title>
+    <title>{title}</title>
 
     <!-- Canonical URL -->
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
 
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
@@ -58,6 +58,21 @@ const faviconImg = await getImage({
         "name": "Laravel Company",
         "url": "https://laravelcompany.com",
         "logo": "https://laravelcompany.com/logo.svg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "7 High Street",
+          "addressLocality": "Basildon",
+          "addressRegion": "Essex",
+          "postalCode": "SS14 1AB",
+          "addressCountry": "GB"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44-1234-567890",
+          "contactType": "customer service",
+          "areaServed": "GB",
+          "availableLanguage": "English"
+        },
         "sameAs": [
           "https://twitter.com/laravelcompany",
           "https://github.com/laravelcompany",
@@ -98,7 +113,7 @@ const faviconImg = await getImage({
     <Footer />
 
     <!-- Intersection Observer for animations on scroll -->
-    <script>
+    <script is:inline defer>
       document.addEventListener("astro:page-load", () => {
         const animatedElements =
           document.querySelectorAll(".animate-on-scroll");

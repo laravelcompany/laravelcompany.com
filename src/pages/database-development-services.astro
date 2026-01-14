@@ -1,0 +1,383 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const dbExpertise = [
+    {
+        title: "PostgreSQL & MySQL",
+        description:
+            "Expert design and optimization of relational databases for data integrity and complex querying.",
+        icon: "ph:database-duotone",
+    },
+    {
+        title: "AWS Aurora & RDS",
+        description:
+            "Cloud-native database management for infinite scaling and automated failure recovery.",
+        icon: "ph:cloud-duotone",
+    },
+    {
+        title: "DynamoDB & NoSQL",
+        description:
+            "High-performance key-value and document stores for global, low-latency applications.",
+        icon: "ph:lightning-duotone",
+    },
+    {
+        title: "Redis Caching",
+        description:
+            "Implementing advanced caching layers to slash response times and server load.",
+        icon: "ph:gauge-duotone",
+    },
+];
+---
+
+<Layout
+    title="Database Development Services | SQL, NoSQL & Cloud Management"
+    description="Professional database development and optimization services. Specializing in PostgreSQL, MySQL, and AWS RDS for high-performance applications."
+>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section
+            class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark"
+        >
+            <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(120,119,198,0.1),transparent)] -z-10"
+            >
+            </div>
+            <div class="container-custom relative">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 animate-on-scroll"
+                    >
+                        <Icon
+                            name="ph:database-duotone"
+                            class="w-5 h-5 text-payflo-purple"
+                        />
+                        <span
+                            class="text-sm font-bold uppercase tracking-widest text-white/70"
+                            >Database Architecture Experts</span
+                        >
+                    </div>
+                    <h1
+                        class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white"
+                    >
+                        Enterprise <span class="gradient-text">Database</span> Development
+                    </h1>
+                    <p
+                        class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium"
+                    >
+                        Your data layer is the heart of your application. We
+                        engineer high-performance, secure, and resilient
+                        database architectures that scale with your ambitions.
+                    </p>
+                    <div
+                        class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6"
+                    >
+                        <a
+                            href="/contact"
+                            class="btn btn-primary px-10 py-5 text-lg shadow-2xl"
+                            >Optimize Your Data Layer</a
+                        >
+                        <a
+                            href="#expertise"
+                            class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold"
+                            >Our Tech Stack</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Expertise Grid -->
+        <section id="expertise" class="py-24 border-y border-white/5">
+            <div class="container-custom">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
+                    {
+                        dbExpertise.map((item, index) => (
+                            <div
+                                class={`animate-on-scroll delay-${index} p-10 bg-white/5 rounded-3xl border border-white/10 hover:border-payflo-purple/50 transition-all group`}
+                            >
+                                <div class="w-14 h-14 bg-payflo-purple/10 rounded-2xl flex items-center justify-center mb-8 border border-payflo-purple/20 group-hover:scale-110 transition-transform">
+                                    <Icon
+                                        name={item.icon}
+                                        class="w-8 h-8 text-payflo-purple"
+                                    />
+                                </div>
+                                <h4 class="text-xl font-black text-white mb-4">
+                                    {item.title}
+                                </h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">
+                                    {item.description}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Focus Section -->
+        <section class="py-24 relative overflow-hidden">
+            <div class="container-custom">
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+                >
+                    <div class="animate-on-scroll">
+                        <h2
+                            class="text-4xl md:text-5xl font-black mb-8 leading-tight"
+                        >
+                            Solving Your Most <span
+                                class="gradient-text text-payflo-pink"
+                                >Complex Data</span
+                            > Challenges
+                        </h2>
+                        <div
+                            class="prose prose-invert text-gray-400 text-lg leading-relaxed"
+                        >
+                            <p class="mb-6">
+                                Slow queries and database bottlenecks are the
+                                primary cause of application latency. Our <strong
+                                    >database development services</strong
+                                > focus on identifying and eliminating these performance
+                                killers through rigorous optimization and modern architecture.
+                            </p>
+                            <ul
+                                class="space-y-4 not-prose text-white font-bold my-10"
+                            >
+                                <li class="flex items-center gap-4">
+                                    <Icon
+                                        name="ph:check-circle-duotone"
+                                        class="w-6 h-6 text-payflo-purple"
+                                    />
+                                    Index Strategy & Query Optimization
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <Icon
+                                        name="ph:check-circle-duotone"
+                                        class="w-6 h-6 text-payflo-purple"
+                                    />
+                                    Database Sharding & Partitioning
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <Icon
+                                        name="ph:check-circle-duotone"
+                                        class="w-6 h-6 text-payflo-purple"
+                                    />
+                                    Read/Write Replication for Scale
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <Icon
+                                        name="ph:check-circle-duotone"
+                                        class="w-6 h-6 text-payflo-purple"
+                                    />
+                                    Data Migration & Schema Modernization
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll delay-2">
+                        <div
+                            class="glass-card p-2 rounded-3xl border-white/10 relative"
+                        >
+                            <div
+                                class="bg-gray-900 rounded-2xl p-10 font-mono text-xs md:text-sm text-gray-300"
+                            >
+                                <p class="text-payflo-purple mb-4">
+                                    // Optimizing Database Performance
+                                </p>
+                                <p>
+                                    <span class="text-blue-400"
+                                        >EXPLAIN ANALYZE</span
+                                    > SELECT * FROM orders
+                                </p>
+                                <p>
+                                    <span class="text-blue-400">WHERE</span> status
+                                    = 'pending'
+                                </p>
+                                <p>
+                                    <span class="text-blue-400">AND</span> created_at
+                                    > NOW() - INTERVAL '30 days';
+                                </p>
+                                <p class="text-green-400 mt-4">
+                                    >> Result: Filtered 2M rows to 5 ms
+                                </p>
+                                <p class="text-payflo-pink mt-6">
+                                    {
+                                        'db_optimize({ index: "orders_status_created_at_idx" });'
+                                    }
+                                </p>
+                            </div>
+                            <!-- Floating labels -->
+                            <div
+                                class="absolute -top-5 -right-5 bg-payflo-purple px-4 py-2 rounded-lg font-bold text-xs shadow-xl"
+                            >
+                                5ms Execution
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Detailed -->
+        <section class="py-24 bg-white/5">
+            <div class="container-custom">
+                <div
+                    class="max-w-4xl mx-auto prose prose-invert prose-purple text-lg leading-relaxed"
+                >
+                    <h2 class="text-4xl font-black text-white mb-10">
+                        Full-Lifecycle Database Engineering
+                    </h2>
+                    <p>
+                        Whether you're building a new SaaS product or
+                        modernizing a heritage legacy system, our <i
+                            >database developers</i
+                        > provide the deep expertise required to ensure data integrity,
+                        security, and performance.
+                    </p>
+
+                    <h3 class="text-2xl font-black text-white mt-12 mb-6">
+                        Database Design & Architecture
+                    </h3>
+                    <p>
+                        We believe in getting it right the first time. Our <strong
+                            >database architecture</strong
+                        >
+                        process involves normalization analysis, relationship mapping,
+                        and selecting the optimal primary keys to ensure your database
+                        remains performant as it grows from thousands to billions
+                        of rows.
+                    </p>
+
+                    <div
+                        class="bg-gradient-to-br from-payflo-purple/10 to-payflo-pink/5 border border-white/5 p-8 my-12 rounded-2xl relative"
+                    >
+                        <h4 class="text-2xl font-black text-white mb-4">
+                            Cloud Migration & AWS RDS
+                        </h4>
+                        <p class="text-gray-300">
+                            Stop managing hardware. We specialize in migrating
+                            on-premise databases to
+                            <strong>AWS RDS</strong> and <strong
+                                >Amazon Aurora</strong
+                            >. We handle the DMS (Database Migration Service)
+                            setup, ensuring multi-AZ high availability and
+                            automated backup strategies are baked in from day
+                            one.
+                        </p>
+                    </div>
+
+                    <h3 class="text-2xl font-black text-white mt-12 mb-6">
+                        Security & Resilience
+                    </h3>
+                    <p>
+                        Data is your most valuable asset. We implement <strong
+                            >Point-in-Time Recovery (PITR)</strong
+                        >, encryption at rest and in transit, and strict IAM
+                        access controls. Your data layer will be compliant with
+                        GDPR and other international standards by default.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-24">
+            <div class="container-custom">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-black text-center mb-16">
+                        Database Services <span class="gradient-text">FAQ</span>
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="p-8 glass-card border-white/5">
+                            <h4 class="text-xl font-bold mb-4 text-white">
+                                How do you handle migrations without downtime?
+                            </h4>
+                            <p class="text-gray-400">
+                                We use a 'Blue-Green' deployment strategy or CDC
+                                (Change Data Capture) tools to synchronize data
+                                in real-time between your old and new databases,
+                                allowing for a seamless cutover with zero impact
+                                on your users.
+                            </p>
+                        </div>
+                        <div class="p-8 glass-card border-white/5">
+                            <h4 class="text-xl font-bold mb-4 text-white">
+                                SQL vs NoSQL: Which one do I need?
+                            </h4>
+                            <p class="text-gray-400">
+                                It depends on your access patterns. Relational
+                                databases (SQL) are best for complex business
+                                logic and relationships. NoSQL is superior for
+                                high-velocity data and horizontal scaling. We
+                                often recommend a 'Polyglot' approach using both
+                                where appropriate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "serviceType": "Database Development & Optimization",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Laravel Company",
+                    "url": "https://laravelcompany.com"
+                },
+                "description": "Professional database development, architecture, and performance tuning services.",
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Database Services",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Database Architecture Design"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Query Optimization & Performance Tuning"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Cloud Database Migration (AWS RDS/Aurora)"
+                            }
+                        }
+                    ]
+                }
+            }
+        </script>
+
+        <CTASection />
+    </main>
+</Layout>
+
+<style>
+    .btn {
+        @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl;
+    }
+    .btn-primary {
+        @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1;
+    }
+    .glass-card {
+        @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl;
+    }
+    .gradient-text {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink;
+    }
+</style>

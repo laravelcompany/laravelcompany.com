@@ -25,10 +25,15 @@ body {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@layer utilities {
+  /* Removed .animate-fade-in-up as it's redundant with .animate-on-scroll */
 }
 
 .animate-on-scroll {
@@ -43,12 +48,29 @@ body {
 }
 
 /* Animation delays */
-.delay-0 { animation-delay: 0s; }
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
-.delay-4 { animation-delay: 0.4s; }
-.delay-5 { animation-delay: 0.5s; }
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
 
 .gradient-text {
   @apply bg-clip-text text-transparent font-black;
@@ -152,5 +174,12 @@ nav a {
   pointer-events: none;
 }
 
-.blob-1 { top: -10%; right: -10%; }
-.blob-2 { bottom: -10%; left: -10%; }
+.blob-1 {
+  top: -10%;
+  right: -10%;
+}
+
+.blob-2 {
+  bottom: -10%;
+  left: -10%;
+}

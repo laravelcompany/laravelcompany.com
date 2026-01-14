@@ -1,0 +1,461 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const consultationSteps = [
+    {
+        title: "Discovery & Audit",
+        description:
+            "We deep-dive into your codebase, infrastructure, and business logic to identify bottlenecks and risks.",
+        icon: "ph:magnifying-glass-duotone",
+    },
+    {
+        title: "Strategic Roadmap",
+        description:
+            "A comprehensive technical plan aligning your software architecture with your growth targets.",
+        icon: "ph:map-trifold-duotone",
+    },
+    {
+        title: "Architectural Oversight",
+        description:
+            "Guidance on implementing high-scale patterns (Event Sourcing, Microservices, Multi-tenancy).",
+        icon: "ph:blueprint-duotone",
+    },
+    {
+        title: "Performance Tuning",
+        description:
+            "Deep-level optimization of queries, caching layers, and server-side performance.",
+        icon: "ph:gauge-duotone",
+    },
+];
+---
+
+<Layout
+    title="Laravel Consulting Services | Expert Technical Audits & Strategy"
+    description="Professional Laravel consulting for businesses. Get expert technical audits, architecture planning, and performance optimization from senior Laravel consultants."
+>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative">
+            <div
+                class="absolute inset-0 bg-gradient-to-tr from-payflo-purple/5 to-transparent -z-10"
+            >
+            </div>
+            <div class="container-custom relative">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll"
+                    >
+                        <Icon
+                            name="ph:seal-check-duotone"
+                            class="w-5 h-5 text-payflo-purple"
+                        />
+                        <span
+                            class="text-sm font-bold uppercase tracking-widest text-payflo-purple/80"
+                            >Senior Laravel Architects</span
+                        >
+                    </div>
+                    <h1
+                        class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight"
+                    >
+                        Strategic <span class="gradient-text"
+                            >Laravel Consulting</span
+                        >
+                    </h1>
+                    <p
+                        class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium"
+                    >
+                        Turn technical debt into a competitive advantage. Our
+                        senior consultants provide the architectural maturity
+                        and performance mastery your enterprise demands.
+                    </p>
+                    <div
+                        class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6"
+                    >
+                        <a
+                            href="/contact"
+                            class="btn btn-primary px-10 py-5 text-lg shadow-2xl"
+                            >Book Technical Audit</a
+                        >
+                        <a
+                            href="#process"
+                            class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold"
+                            >Our Consulting Process</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section class="py-24 bg-white/5 border-y border-white/10">
+            <div class="container-custom">
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+                >
+                    <div class="animate-on-scroll">
+                        <h2 class="text-4xl font-black mb-8 leading-tight">
+                            When Does Your Business Need a <span
+                                class="gradient-text">Laravel Consultant</span
+                            >?
+                        </h2>
+                        <div class="space-y-6">
+                            <div
+                                class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                            >
+                                <h4
+                                    class="text-xl font-bold text-white mb-2 flex items-center gap-3"
+                                >
+                                    <Icon
+                                        name="ph:trend-up-duotone"
+                                        class="w-6 h-6 text-payflo-purple group-hover:scale-110 transition-transform"
+                                    />
+                                    Scaling Bottlenecks
+                                </h4>
+                                <p class="text-gray-400">
+                                    Your application is slowing down as users
+                                    increase. Database queries are timing out
+                                    and the server is struggling to keep up.
+                                </p>
+                            </div>
+                            <div
+                                class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                            >
+                                <h4
+                                    class="text-xl font-bold text-white mb-2 flex items-center gap-3"
+                                >
+                                    <Icon
+                                        name="ph:warning-octagon-duotone"
+                                        class="w-6 h-6 text-payflo-pink group-hover:scale-110 transition-transform"
+                                    />
+                                    High Technical Debt
+                                </h4>
+                                <p class="text-gray-400">
+                                    Features take weeks instead of days to ship.
+                                    The code is brittle, lacks tests, and is
+                                    causing frequent production outages.
+                                </p>
+                            </div>
+                            <div
+                                class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                            >
+                                <h4
+                                    class="text-xl font-bold text-white mb-2 flex items-center gap-3"
+                                >
+                                    <Icon
+                                        name="ph:shield-warning-duotone"
+                                        class="w-6 h-6 text-payflo-purple group-hover:scale-110 transition-transform"
+                                    />
+                                    Security Concerns
+                                </h4>
+                                <p class="text-gray-400">
+                                    You're worried about outdated dependencies,
+                                    insecure data handling, or lack of
+                                    compliance with industry standards.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll delay-2 relative">
+                        <div class="glass-card p-12 relative overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-payflo-purple/10 blur-3xl"
+                            >
+                            </div>
+                            <h3 class="text-2xl font-black text-white mb-6">
+                                The Cost of Inaction
+                            </h3>
+                            <p class="text-gray-400 text-lg mb-8 italic">
+                                "Ignoring architectural flaws in the early
+                                stages leads to a 'technical bankruptcy' where
+                                the cost of maintenance exceeds the value of new
+                                features."
+                            </p>
+                            <div class="pt-8 border-t border-white/10">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-full bg-payflo-purple/20 flex items-center justify-center"
+                                    >
+                                        <Icon
+                                            name="ph:lightbulb-duotone"
+                                            class="w-6 h-6 text-payflo-purple"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-bold">
+                                            Invest in Strategy
+                                        </p>
+                                        <p class="text-sm text-gray-500">
+                                            Save 10x on future development
+                                            costs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consulting Process -->
+        <section id="process" class="py-24">
+            <div class="container-custom">
+                <div
+                    class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll"
+                >
+                    <h2 class="text-4xl md:text-6xl font-black mb-6">
+                        Our Consulting <span class="gradient-text"
+                            >Methodology</span
+                        >
+                    </h2>
+                    <p class="text-gray-400 text-xl">
+                        A rigorous, data-driven approach to architectural
+                        excellence.
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
+                    {
+                        consultationSteps.map((step, index) => (
+                            <div
+                                class={`animate-on-scroll delay-${index} feature-card`}
+                            >
+                                <div class="w-14 h-14 bg-payflo-purple/10 rounded-xl flex items-center justify-center mb-8 border border-white/10">
+                                    <Icon
+                                        name={step.icon}
+                                        class="w-8 h-8 text-payflo-purple"
+                                    />
+                                </div>
+                                <h4 class="text-xl font-black mb-4 text-white uppercase tracking-tight">
+                                    {step.title}
+                                </h4>
+                                <p class="text-gray-400 leading-relaxed text-sm">
+                                    {step.description}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Audit Deliverables -->
+        <section class="py-24 bg-payflo-dark/40">
+            <div class="container-custom">
+                <div
+                    class="max-w-4xl mx-auto prose prose-invert prose-purple text-lg leading-relaxed"
+                >
+                    <h2
+                        class="text-4xl font-black text-white mb-10 text-center"
+                    >
+                        What's Inside Our Technical Audit?
+                    </h2>
+                    <p class="text-center text-gray-400 mb-16">
+                        Our audits aren't just a list of files. They are a
+                        deep-dive business document designed to give your
+                        stakeholders the confidence to move forward.
+                    </p>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-10 not-prose"
+                    >
+                        <div
+                            class="glass-card p-8 border-white/5 hover:border-payflo-purple/30 transition-all"
+                        >
+                            <h5
+                                class="text-payflo-purple font-black mb-4 flex items-center gap-2 uppercase tracking-widest text-xs"
+                            >
+                                <Icon name="ph:gauge-duotone" class="w-4 h-4" /> Performance
+                                Audit
+                            </h5>
+                            <p class="text-sm text-gray-400">
+                                Analysis of N+1 queries, Redis caching
+                                efficiency, and server-side processing times. We
+                                provide a benchmark report before and after
+                                recommendations.
+                            </p>
+                        </div>
+                        <div
+                            class="glass-card p-8 border-white/5 hover:border-payflo-pink/30 transition-all"
+                        >
+                            <h5
+                                class="text-payflo-pink font-black mb-4 flex items-center gap-2 uppercase tracking-widest text-xs"
+                            >
+                                <Icon
+                                    name="ph:shield-check-duotone"
+                                    class="w-4 h-4"
+                                /> Security Audit
+                            </h5>
+                            <p class="text-sm text-gray-400">
+                                Exhaustive scan for CSRF/XSS vulnerabilities,
+                                insecure data storage, and third-party package
+                                security risks.
+                            </p>
+                        </div>
+                        <div
+                            class="glass-card p-8 border-white/5 hover:border-payflo-purple/30 transition-all"
+                        >
+                            <h5
+                                class="text-payflo-purple font-black mb-4 flex items-center gap-2 uppercase tracking-widest text-xs"
+                            >
+                                <Icon
+                                    name="ph:tree-structure-duotone"
+                                    class="w-4 h-4"
+                                /> Architecture Audit
+                            </h5>
+                            <p class="text-sm text-gray-500">
+                                Review of application design patterns (SOLID,
+                                Clean Architecture). We identify where the
+                                system is too coupled or too complex.
+                            </p>
+                        </div>
+                        <div
+                            class="glass-card p-8 border-white/5 hover:border-payflo-pink/30 transition-all"
+                        >
+                            <h5
+                                class="text-payflo-pink font-black mb-4 flex items-center gap-2 uppercase tracking-widest text-xs"
+                            >
+                                <Icon
+                                    name="ph:database-duotone"
+                                    class="w-4 h-4"
+                                /> Database Audit
+                            </h5>
+                            <p class="text-sm text-gray-500">
+                                Checking indexing strategies, normalization
+                                versus denormalization needs, and overall data
+                                integrity checks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ for Consulting -->
+        <section class="py-24">
+            <div class="container-custom">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-black text-center mb-16">
+                        Consulting <span class="gradient-text">FAQ</span>
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="p-10 glass-card border-white/10 group">
+                            <h4
+                                class="text-xl font-bold mb-4 text-white flex items-center gap-4"
+                            >
+                                <span class="text-payflo-purple">Q:</span> How long
+                                does a typical technical audit take?
+                            </h4>
+                            <p class="text-gray-400 text-lg ml-9">
+                                Most audits are completed within 7-10 business
+                                days. We provide a preliminary report within 48
+                                hours focusing on critical security or
+                                performance issues.
+                            </p>
+                        </div>
+                        <div class="p-10 glass-card border-white/10 group">
+                            <h4
+                                class="text-xl font-bold mb-4 text-white flex items-center gap-4"
+                            >
+                                <span class="text-payflo-purple">Q:</span> Can you
+                                help our internal team implement the changes?
+                            </h4>
+                            <p class="text-gray-400 text-lg ml-9">
+                                Absolutely. Our consultants often act as
+                                'fractional CTOs' or senior mentors, guiding
+                                your in-house team through the modernization
+                                process and ensuring best practices are
+                                maintained.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How long does a typical technical audit take?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Most audits are completed within 7-10 business days. We provide a preliminary report within 48 hours focusing on critical security or performance issues."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can you help our internal team implement the changes?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Absolutely. Our consultants often act as 'fractional CTOs' or senior mentors, guiding your in-house team through the modernization process and ensuring best practices are maintained."
+                        }
+                    }
+                ]
+            }
+        </script>
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "serviceType": "Laravel Consulting",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Laravel Company",
+                    "url": "https://laravelcompany.com"
+                },
+                "description": "Professional Laravel consulting and technical audit services for enterprise applications.",
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Consulting Services",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Technical Codebase Audit"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Performance Optimization"
+                            }
+                        }
+                    ]
+                }
+            }
+        </script>
+
+        <CTASection />
+    </main>
+</Layout>
+
+<style>
+    .btn {
+        @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl;
+    }
+    .btn-primary {
+        @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1;
+    }
+    .glass-card {
+        @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl;
+    }
+    .feature-card {
+        @apply p-8 bg-white/5 rounded-3xl border border-white/10 transition-all duration-500 hover:bg-white/10 hover:-translate-y-2;
+    }
+    .gradient-text {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink;
+    }
+</style>

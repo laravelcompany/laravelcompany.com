@@ -5,7 +5,6 @@ import logoSrc from "../assets/logo.svg";
 const companyLinks = [
   { name: "About Us", href: "/about-us" },
   { name: "Software", href: "/software" },
-  { name: "Shop", href: "/shop" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -14,6 +13,16 @@ const productLinks = [
   { name: "Laravel Mail", href: "/software/laravel-mail" },
   { name: "Laravel GPT", href: "/software/laravel-gpt" },
   { name: "Laravel UI", href: "/software/laravel-ui" },
+];
+
+const serviceLinks = [
+  {
+    name: "Bespoke Software London",
+    href: "/software-development-agency-london",
+  },
+  { name: "Hire AWS Consultant", href: "/hire-aws-consultant" },
+  { name: "Magento Agency London", href: "/magento-agency-london" },
+  { name: "Laravel Consulting", href: "/laravel-consulting" },
 ];
 
 const legalLinks = [
@@ -125,6 +134,28 @@ const socialLinks = [
         <ul class="space-y-3">
           {
             companyLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-white/50 hover:text-white transition-colors duration-200 font-medium"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3
+          class="text-sm font-black uppercase tracking-widest mb-6 text-white"
+        >
+          Services
+        </h3>
+        <ul class="space-y-3">
+          {
+            serviceLinks.map((link) => (
               <li>
                 <a
                   href={link.href}
