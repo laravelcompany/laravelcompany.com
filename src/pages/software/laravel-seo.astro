@@ -1,5 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import seoLogo from "../../assets/logos/laravel-seo.svg";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Laravel SEO - Professional SEO Reports and Tools">
@@ -36,8 +38,8 @@ import Layout from "../../layouts/Layout.astro";
 					</div>
 
 					<div class="animate-on-scroll delay-3">
-						<img
-							src="logos/laravel-seo.svg"
+						<Image
+							src={seoLogo}
 							alt="Laravel SEO Dashboard"
 							class="w-full rounded-xl shadow-xl"
 						/>

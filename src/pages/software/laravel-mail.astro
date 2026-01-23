@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Logo from "../../../public/logos/laravel-mail.svg";
+import Logo from "../../assets/logos/laravel-mail.svg";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Scale Your Email Marketing with our self hosted tool">
@@ -48,7 +49,7 @@ import Logo from "../../../public/logos/laravel-mail.svg";
 							<div
 								class="relative bg-white/10 rounded-xl shadow-xl overflow-hidden p-8"
 							>
-								<img src="{Logo} title=" logo laravel mail" />
+								<Image src={Logo} alt="logo laravel mail" />
 								<div class="space-y-6">
 									<div class="flex items-center gap-4">
 										<div
