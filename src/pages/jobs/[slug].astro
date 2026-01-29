@@ -25,13 +25,29 @@ export async function getStaticPaths() {
         return `${titleSlug}-${id}`;
     }
 
-    return allJobs.map((job) => ({
-        params: { slug: generateSlug(job.title, job.id) },
-        props: { job },
-    }));
+    return allJobs.map((job) => {
+        // Ensure job has an id and url for consistent behavior
+        // @ts-ignore - mapping API specific field
+        if (!job.url && job.job_url) job.url = job.job_url;
+        if (!job.id) {
+            // @ts-ignore - using url as fallback for id
+            job.id = job.url ? btoa(job.url).substring(0, 8) : "unknown";
+        }
+        if (!job.company) job.company = "Laravel Company Partner";
+
+        return {
+            params: { slug: generateSlug(job.title, job.id) },
+            props: { job },
+        };
+    });
 }
 
 const { job } = Astro.props;
+
+// Use Calendly for all job applications
+const applyUrl = "https://calendly.com/laravelagency/30min";
+const applyText = "Book an Interview to Apply";
+const contactUrl = "/contact";
 
 function formatDate(dateStr?: string | null): string {
     if (!dateStr) return "Recently posted";
@@ -195,12 +211,12 @@ const jsonLd = {
                                 job.url && (
                                     <div class="flex flex-col sm:flex-row gap-4">
                                         <a
-                                            href={job.url}
+                                            href={applyUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             class="btn btn-primary text-center px-10 py-4 text-lg"
                                         >
-                                            Apply for this Position
+                                            {applyText}
                                         </a>
                                         <a
                                             href="/contact"
@@ -236,6 +252,26 @@ const jsonLd = {
                                             <p class="mb-4">{para}</p>
                                         ))
                                 }
+                            </div>
+
+                            <div
+                                class="mt-12 pt-12 border-t border-gray-100 dark:border-gray-700"
+                            >
+                                <h3
+                                    class="text-2xl font-bold text-gray-900 dark:text-white mb-6"
+                                >
+                                    Book your interview directly
+                                </h3>
+                                <div
+                                    class="calendly-inline-widget"
+                                    data-url="https://calendly.com/laravelagency/30min"
+                                    style="min-width:320px;height:700px;"
+                                >
+                                </div>
+                                <script
+                                    type="text/javascript"
+                                    src="https://assets.calendly.com/assets/external/widget.js"
+                                    async></script>
                             </div>
                         </div>
 
@@ -466,12 +502,12 @@ const jsonLd = {
                                             and join {job.company}.
                                         </p>
                                         <a
-                                            href={job.url}
+                                            href={applyUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             class="block w-full text-center bg-white text-payflo-purple font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
                                         >
-                                            Apply Now
+                                            Book Meeting
                                         </a>
                                     </div>
                                 )

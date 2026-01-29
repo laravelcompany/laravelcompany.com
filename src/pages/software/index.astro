@@ -4,6 +4,7 @@ import mailLogo from "../../assets/logos/laravel-mail.svg";
 import seoLogo from "../../assets/logos/laravel-seo.svg";
 import gptLogo from "../../assets/logos/laravel-gpt.svg";
 import uiLogo from "../../assets/logos/laravel-ui.svg";
+import leadsLogo from "../../assets/logos/leads-captain.png";
 import { Image } from "astro:assets";
 ---
 
@@ -32,9 +33,9 @@ import { Image } from "astro:assets";
 							Professional <i>software development services</i> with
 							powerful Laravel packages: <strong
 								>Laravel SEO</strong
-							>, <strong>Laravel Mail</strong>, and <strong
+							>, <strong>Laravel Mail</strong>, <strong
 								>Laravel GPT</strong
-							>
+							> and <strong>Leads Captain</strong>
 						</p>
 						<div class="animate-on-scroll delay-2 mt-8">
 							<a href="#our-services" class="btn btn-primary"
@@ -152,6 +153,45 @@ import { Image } from "astro:assets";
 											</h3>
 											<p class="text-gray-400">
 												AI-powered automation
+											</p>
+										</div>
+									</div>
+									<div class="flex items-center gap-4">
+										<div
+											class="w-12 h-12 bg-cyan-900/20 rounded-lg flex items-center justify-center"
+										>
+											<svg
+												class="w-6 h-6 text-cyan-400"
+												viewBox="0 0 24 24"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												></path>
+												<circle
+													cx="9"
+													cy="7"
+													r="4"
+													stroke="currentColor"
+													stroke-width="2"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												></circle>
+											</svg>
+										</div>
+										<div>
+											<h3
+												class="font-semibold text-white"
+											>
+												Leads Captain
+											</h3>
+											<p class="text-gray-400">
+												Leads Management Solution
 											</p>
 										</div>
 									</div>
@@ -309,17 +349,55 @@ import { Image } from "astro:assets";
 								Laravel. High-quality Marketing and Application
 								UI blocks built for conversion-driven
 								applications.
-							</p>
-							<a
-								href="/software/laravel-ui"
-								class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors group/link"
-							>
-								Learn more
-								<span
-									class="group-hover/link:translate-x-1 transition-transform"
-									>→</span
+								<a
+									href="/software/laravel-ui"
+									class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors group/link"
 								>
-							</a>
+									Learn more
+									<span
+										class="group-hover/link:translate-x-1 transition-transform"
+										>→</span
+									>
+								</a>
+							</p>
+						</div>
+
+						<!-- Leads Captain Card -->
+						<div class="animate-on-scroll delay-5">
+							<div class="group cursor-pointer">
+								<div
+									class="relative mb-8 h-80 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+								>
+									<Image
+										src={leadsLogo}
+										alt="Leads Captain"
+										class="w-full h-full object-cover drop-shadow-lg"
+									/>
+								</div>
+								<h3
+									class="text-3xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors"
+								>
+									Leads Captain
+								</h3>
+								<p
+									class="text-gray-300 mb-6 leading-relaxed text-lg"
+								>
+									Professional leads management solution.
+									Capture, track, and qualify leads with
+									automated workflows and real-time
+									performance analytics.
+								</p>
+								<a
+									href="/software/leads-captain"
+									class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors group/link"
+								>
+									Learn more
+									<span
+										class="group-hover/link:translate-x-1 transition-transform"
+										>→</span
+									>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
