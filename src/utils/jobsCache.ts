@@ -11,6 +11,7 @@ export interface Job {
     type?: string;
     posted_date?: string;
     url?: string;
+    job_url?: string;
     tags?: string[];
     requirements?: string[];
     benefits?: string[];

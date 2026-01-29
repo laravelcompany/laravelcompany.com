@@ -59,6 +59,7 @@ export default defineConfig({
           "trend-up-duotone",
           "truck-duotone",
           "users-duotone",
+          "user-circle-duotone",
           "warning-octagon-duotone",
           "x-circle-duotone",
           "linkedin-logo-duotone",

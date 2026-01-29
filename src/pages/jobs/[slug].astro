@@ -15,28 +15,32 @@ export async function getStaticPaths() {
         console.error("Error fetching jobs for static paths:", error);
     }
 
-    function generateSlug(title: string, id: string): string {
+    function generateSlug(title: string, id: any, url?: string): string {
+        let safeId = id;
+        if (!safeId || safeId === "undefined" || safeId === "null") {
+            safeId = url
+                ? btoa(url).substring(0, 8)
+                : Math.random().toString(36).substring(2, 7);
+        }
         const titleSlug = title
             .toLowerCase()
             .replace(/[^\w\s-]/g, "")
             .replace(/\s+/g, "-")
             .replace(/-+/g, "-")
             .trim();
-        return `${titleSlug}-${id}`;
+        return `${titleSlug}-${safeId}`;
     }
 
     return allJobs.map((job) => {
         // Ensure job has an id and url for consistent behavior
-        // @ts-ignore - mapping API specific field
         if (!job.url && job.job_url) job.url = job.job_url;
-        if (!job.id) {
-            // @ts-ignore - using url as fallback for id
+        if (!job.id || job.id === "undefined") {
             job.id = job.url ? btoa(job.url).substring(0, 8) : "unknown";
         }
         if (!job.company) job.company = "Laravel Company Partner";
 
         return {
-            params: { slug: generateSlug(job.title, job.id) },
+            params: { slug: generateSlug(job.title, job.id, job.url) },
             props: { job },
         };
     });
@@ -45,9 +49,21 @@ export async function getStaticPaths() {
 const { job } = Astro.props;
 
 // Use Calendly for all job applications
-const applyUrl = "https://calendly.com/laravelagency/30min";
+const applyUrl = `https://calendly.com/laravelagency/30min?utm_source=website&utm_medium=job_application&utm_campaign=${encodeURIComponent(job.title)}`;
 const applyText = "Book an Interview to Apply";
 const contactUrl = "/contact";
+
+function stripHtml(html: string): string {
+    if (!html) return "";
+    return html
+        .replace(/<[^>]*>?/gm, "")
+        .replace(/&nbsp;/g, " ")
+        .replace(/&rsquo;/g, "'")
+        .replace(/&amp;/g, "&")
+        .replace(/&quot;/g, '"')
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">");
+}
 
 function formatDate(dateStr?: string | null): string {
     if (!dateStr) return "Recently posted";
@@ -67,7 +83,7 @@ const jsonLd = {
     "@context": "https://schema.org/",
     "@type": "JobPosting",
     title: job.title,
-    description: job.description,
+    description: stripHtml(job.description),
     hiringOrganization: {
         "@type": "Organization",
         name: job.company,
@@ -242,12 +258,13 @@ const jsonLd = {
                                 class="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300"
                             >
                                 {
-                                    (
+                                    stripHtml(
                                         job.full_description ||
-                                        job.description ||
-                                        "No description available"
+                                            job.description ||
+                                            "No description available",
                                     )
                                         .split("\n")
+                                        .filter((para) => para.trim())
                                         .map((para) => (
                                             <p class="mb-4">{para}</p>
                                         ))
@@ -264,7 +281,7 @@ const jsonLd = {
                                 </h3>
                                 <div
                                     class="calendly-inline-widget"
-                                    data-url="https://calendly.com/laravelagency/30min"
+                                    data-url={`https://calendly.com/laravelagency/30min?background_color=0f172a&text_color=ffffff&primary_color=7c3aed&utm_source=website&utm_medium=job_application&utm_campaign=${encodeURIComponent(job.title)}`}
                                     style="min-width:320px;height:700px;"
                                 >
                                 </div>

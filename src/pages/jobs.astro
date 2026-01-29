@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/HeroSection.astro";
 import { getJobs, type Job } from "../utils/jobsCache";
+import { Icon } from "astro-icon/components";
 
 export const prerender = true;
 
@@ -12,7 +13,17 @@ const defaultKeyword = "laravel";
 // Load jobs using cache utility
 if (import.meta.env.SSR) {
     try {
-        jobs = await getJobs(defaultKeyword);
+        const rawJobs = await getJobs(defaultKeyword);
+        jobs = rawJobs.map((job) => {
+            // Ensure job has an id and url for consistent behavior
+            if (!job.url && job.job_url) job.url = job.job_url;
+            // Robust check for missing or 'undefined' string ID
+            if (!job.id || job.id === "undefined") {
+                job.id = job.url ? btoa(job.url).substring(0, 8) : "unknown";
+            }
+            if (!job.company) job.company = "Laravel Agency Partner";
+            return job;
+        });
         if (jobs.length === 0) {
             apiError = true;
         }
@@ -23,19 +34,40 @@ if (import.meta.env.SSR) {
 }
 
 // Helper functions
-function truncateDescription(desc: string, length: number = 150): string {
-    if (!desc) return "";
-    return desc.length > length ? desc.substring(0, length) + "..." : desc;
+function stripHtml(html: string): string {
+    if (!html) return "";
+    return html
+        .replace(/<[^>]*>?/gm, "")
+        .replace(/&nbsp;/g, " ")
+        .replace(/&rsquo;/g, "'")
+        .replace(/&amp;/g, "&")
+        .replace(/&quot;/g, '"')
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">");
 }
 
-function generateSlug(title: string, id: string): string {
+function truncateDescription(desc: string, length: number = 150): string {
+    if (!desc) return "";
+    const cleanDesc = stripHtml(desc);
+    return cleanDesc.length > length
+        ? cleanDesc.substring(0, length) + "..."
+        : cleanDesc;
+}
+
+function generateSlug(title: string, id: any, url?: string): string {
+    let safeId = id;
+    if (!safeId || safeId === "undefined" || safeId === "null") {
+        safeId = url
+            ? btoa(url).substring(0, 8)
+            : Math.random().toString(36).substring(2, 7);
+    }
     const titleSlug = title
         .toLowerCase()
         .replace(/[^\w\s-]/g, "")
         .replace(/\s+/g, "-")
         .replace(/-+/g, "-")
         .trim();
-    return `${titleSlug}-${id}`;
+    return `${titleSlug}-${safeId}`;
 }
 
 function formatDate(dateStr?: string | null): string {
@@ -66,10 +98,190 @@ const locations = [
 <Layout title="Laravel Jobs - Find Your Next Opportunity">
     <main>
         <HeroSection
-            title="Laravel Job Opportunities"
-            highlightText="Find Your Dream Job"
-            description="Discover the latest Laravel job openings from companies around the world. Start your next career adventure today."
+            title="Tech Recruiting & Premium Jobs"
+            highlightText="Talent Solutions"
+            description="Connecting top-tier Laravel talent with visionary companies. Whether you're a developer looking for your next challenge or a company scaling your team, we are your strategic partner."
         />
+
+        <!-- Recruiting Services Section -->
+        <section
+            class="py-24 relative overflow-hidden bg-white/5 border-b border-white/10"
+        >
+            <div class="container-custom">
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+                >
+                    <div class="animate-on-scroll">
+                        <h2
+                            class="text-3xl md:text-5xl font-bold mb-8 leading-tight"
+                        >
+                            Talent Solutions for <span class="gradient-text"
+                                >Both Sides</span
+                            >
+                        </h2>
+                        <div class="space-y-8">
+                            <div class="glass-card p-6 border-white/10">
+                                <h3
+                                    class="text-2xl font-bold text-payflo-purple mb-4 flex items-center gap-3"
+                                >
+                                    <Icon
+                                        name="ph:buildings-duotone"
+                                        class="w-8 h-8"
+                                    />
+                                    For Companies
+                                </h3>
+                                <p class="text-gray-400 leading-relaxed mb-4">
+                                    Stop sifting through hundreds of unqualified
+                                    resumes. We leverage our deep technical
+                                    Laravel expertise to vet and source only the
+                                    top 1% of developers.
+                                </p>
+                                <ul
+                                    class="text-sm text-gray-400 space-y-2 mb-6"
+                                >
+                                    <li class="flex items-center gap-2">
+                                        <Icon
+                                            name="ph:check-circle-duotone"
+                                            class="text-green-500 w-5 h-5"
+                                        /> Technical Vetting by Senior Leads
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <Icon
+                                            name="ph:check-circle-duotone"
+                                            class="text-green-500 w-5 h-5"
+                                        /> Cultural Alignment & Soft Skills
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <Icon
+                                            name="ph:check-circle-duotone"
+                                            class="text-green-500 w-5 h-5"
+                                        /> Rapid Placement for Critical Roles
+                                    </li>
+                                </ul>
+                                <a
+                                    href="https://calendly.com/laravelagency/30min?background_color=0f172a&text_color=ffffff&primary_color=7c3aed&utm_source=website&utm_medium=job_inquiry&utm_campaign=hire_talent"
+                                    target="_blank"
+                                    class="btn btn-primary w-full text-center"
+                                    >Hire Top Talent</a
+                                >
+                            </div>
+
+                            <div class="glass-card p-6 border-white/10">
+                                <h3
+                                    class="text-2xl font-bold text-payflo-pink mb-4 flex items-center gap-3"
+                                >
+                                    <Icon
+                                        name="ph:users-duotone"
+                                        class="w-8 h-8"
+                                    />
+                                    For Individuals
+                                </h3>
+                                <p class="text-gray-400 leading-relaxed mb-4">
+                                    Don't just find a job—build a career. We
+                                    represent elite Laravel developers, helping
+                                    you land roles in companies that value
+                                    high-level engineering and solid
+                                    architecture.
+                                </p>
+                                <ul
+                                    class="text-sm text-gray-400 space-y-2 mb-6"
+                                >
+                                    <li class="flex items-center gap-2">
+                                        <Icon
+                                            name="ph:check-circle-duotone"
+                                            class="text-green-500 w-5 h-5"
+                                        /> Exclusive Access to Unlisted Roles
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <Icon
+                                            name="ph:check-circle-duotone"
+                                            class="text-green-500 w-5 h-5"
+                                        /> Salary Negotiation & Career Coaching
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <Icon
+                                            name="ph:check-circle-duotone"
+                                            class="text-green-500 w-5 h-5"
+                                        /> Direct Intro to CTOs & Founders
+                                    </li>
+                                </ul>
+                                <a
+                                    href="https://calendly.com/laravelagency/30min?background_color=0f172a&text_color=ffffff&primary_color=7c3aed&utm_source=website&utm_medium=job_inquiry&utm_campaign=individual_strategy"
+                                    target="_blank"
+                                    class="btn glass-card border-white/20 w-full text-center hover:bg-white/10 text-white"
+                                    >Strategy Session</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="animate-on-scroll delay-2 relative">
+                        <div
+                            class="relative z-10 p-2 glass-card border-white/20 overflow-hidden shadow-2xl"
+                        >
+                            <div
+                                class="bg-gray-900 rounded-2xl p-8 font-mono text-sm border border-white/5"
+                            >
+                                <div class="flex gap-2 mb-8">
+                                    <div
+                                        class="w-3 h-3 rounded-full bg-red-500"
+                                    >
+                                    </div>
+                                    <div
+                                        class="w-3 h-3 rounded-full bg-yellow-500"
+                                    >
+                                    </div>
+                                    <div
+                                        class="w-3 h-3 rounded-full bg-green-500"
+                                    >
+                                    </div>
+                                </div>
+                                <p class="text-payflo-purple">
+                                    RecruitingEngine.init({}
+                                    <p class="pl-4 text-white">
+                                        focus: "Laravel ecosystem",
+                                    </p>
+                                    <p class="pl-4 text-white">
+                                        sides: ["Companies", "Individuals"],
+                                    </p>
+                                    <p class="pl-4 text-white font-bold">
+                                        vetting: "Senior Technical Lead
+                                        peer-review",
+                                    </p>
+                                    <p class="pl-4 text-payflo-pink">
+                                        mission: "Zero-fluff engineering teams"
+                                    </p>
+                                    <p class="text-payflo-purple"></p>);
+                                </p>
+
+                                <div class="mt-12 space-y-4">
+                                    <div
+                                        class="h-2 w-3/4 bg-white/5 rounded-full overflow-hidden"
+                                    >
+                                        <div
+                                            class="h-full w-full animate-pulse bg-gradient-to-r from-payflo-purple to-payflo-pink opacity-40"
+                                        >
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="h-2 w-1/2 bg-white/5 rounded-full overflow-hidden"
+                                    >
+                                        <div
+                                            class="h-full w-1/2 bg-payflo-purple opacity-30"
+                                        >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -inset-10 bg-payflo-purple/20 blur-[100px] -z-10 rounded-full"
+                        >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="py-16 bg-white dark:bg-gray-800">
             <div class="container-custom">
@@ -195,7 +407,7 @@ const locations = [
                                             <div class="flex-1">
                                                 <h3 class="text-xl font-bold mb-2">
                                                     <a
-                                                        href={`/jobs/${generateSlug(job.title, job.id)}`}
+                                                        href={`/jobs/${generateSlug(job.title, job.id, job.url || job.job_url)}`}
                                                         class="text-gray-900 dark:text-white hover:text-payflo-purple transition-colors"
                                                     >
                                                         {job.title}
@@ -302,7 +514,7 @@ const locations = [
 
                                         <div class="flex gap-3">
                                             <a
-                                                href={`/jobs/${generateSlug(job.title, job.id)}`}
+                                                href={`/jobs/${generateSlug(job.title, job.id, job.url || job.job_url)}`}
                                                 class="btn btn-primary !py-2 !px-4 text-sm"
                                             >
                                                 View Details
@@ -520,8 +732,18 @@ const locations = [
 
                 if (response.ok) {
                     const data = await response.json();
-                    const jobs = data.jobs || data.results || data.data || [];
-                    renderJobs(jobs);
+                    const rawJobs =
+                        data.jobs || data.results || data.data || [];
+                    const processedJobs = rawJobs.map((job: any) => {
+                        if (!job.url && job.job_url) job.url = job.job_url;
+                        if (!job.id || job.id === "undefined") {
+                            job.id = job.url
+                                ? btoa(job.url).substring(0, 8)
+                                : "unknown";
+                        }
+                        return job;
+                    });
+                    renderJobs(processedJobs);
                 }
             } catch (error) {
                 console.error("Search failed:", error);
@@ -581,7 +803,7 @@ const locations = [
                         </div>
                         <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">${truncate(job.description, 150)}</p>
                         <div class="flex gap-3">
-                            <a href="/jobs/${generateSlug(job.title, job.id)}" class="btn btn-primary !py-2 !px-4 text-sm">View Details</a>
+                            <a href="/jobs/${generateSlug(job.title, job.id, job.url || job.job_url)}" class="btn btn-primary !py-2 !px-4 text-sm">View Details</a>
                             ${job.url ? `<a href="${job.url}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary !py-2 !px-4 text-sm">Apply Now</a>` : ""}
                         </div>
                     </div>
@@ -591,7 +813,13 @@ const locations = [
                 .join("");
         };
 
-        const generateSlug = (title: string, id: string) => {
+        const generateSlug = (title: string, id: any, url?: string) => {
+            let safeId = id;
+            if (!safeId || safeId === "undefined" || safeId === "null") {
+                safeId = url
+                    ? btoa(url).substring(0, 8)
+                    : Math.random().toString(36).substring(2, 7);
+            }
             return (
                 title
                     .toLowerCase()
@@ -600,13 +828,28 @@ const locations = [
                     .replace(/-+/g, "-")
                     .trim() +
                 "-" +
-                id
+                safeId
             );
+        };
+
+        const stripHtml = (html: string) => {
+            if (!html) return "";
+            return html
+                .replace(/<[^>]*>?/gm, "")
+                .replace(/&nbsp;/g, " ")
+                .replace(/&rsquo;/g, "'")
+                .replace(/&amp;/g, "&")
+                .replace(/&quot;/g, '"')
+                .replace(/&lt;/g, "<")
+                .replace(/&gt;/g, ">");
         };
 
         const truncate = (str: string, len: number) => {
             if (!str) return "";
-            return str.length > len ? str.substring(0, len) + "..." : str;
+            const cleanStr = stripHtml(str);
+            return cleanStr.length > len
+                ? cleanStr.substring(0, len) + "..."
+                : cleanStr;
         };
 
         if (searchBtn) searchBtn.addEventListener("click", performSearch);
