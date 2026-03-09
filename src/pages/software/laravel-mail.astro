@@ -4,7 +4,37 @@ import Logo from "../../assets/logos/laravel-mail.svg";
 import { Image } from "astro:assets";
 ---
 
-<Layout title="Scale Your Email Marketing with our self hosted tool">
+<Layout title="Laravel Mail - Self-Hosted Email Marketing Software">
+	<!-- SoftwareApplication Schema -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "SoftwareApplication",
+			"name": "Laravel Mail",
+			"applicationCategory": "BusinessApplication",
+			"operatingSystem": "Web",
+			"url": "https://laravelmail.com",
+			"description": "Self-hosted email marketing and automation platform for Laravel. Send campaigns, manage subscribers, and track performance with powerful analytics.",
+			"creator": {
+				"@type": "Organization",
+				"name": "Laravel Company",
+				"url": "https://laravelcompany.com"
+			},
+			"offers": {
+				"@type": "Offer",
+				"price": "99",
+				"priceCurrency": "GBP"
+			},
+			"featureList": [
+				"Campaign management",
+				"Subscriber segmentation",
+				"Automated drip campaigns",
+				"Drag-and-drop email builder",
+				"API integrations",
+				"Analytics and tracking"
+			]
+		}
+	</script>
 	<main>
 		<!-- Hero Section -->
 		<section class="pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden">
