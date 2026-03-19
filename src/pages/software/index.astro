@@ -1,11 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import mailLogo from "../../assets/logos/laravel-mail.svg";
-import seoLogo from "../../assets/logos/laravel-seo.svg";
-import gptLogo from "../../assets/logos/laravel-gpt.svg";
-import uiLogo from "../../assets/logos/laravel-ui.svg";
-import leadsLogo from "../../assets/logos/leads-captain.png";
-import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout
@@ -100,7 +95,6 @@ import { Image } from "astro:assets";
 	<!-- CTA Event Tracking -->
 	<script is:inline>
 		document.addEventListener('astro:page-load', function() {
-			// Track all CTA clicks on the software page
 			const ctaButtons = document.querySelectorAll('a[href*="/contact"], a[href*="/software/laravel-"], a[href*="laravelmail.com"], a[href*="laravelseo.com"], a[href*="laravelgpt.dev"]');
 			
 			ctaButtons.forEach(function(button) {
@@ -118,7 +112,6 @@ import { Image } from "astro:assets";
 						ctaType = 'contact_cta';
 					}
 					
-					// Google Analytics 4 event tracking
 					if (typeof gtag !== 'undefined') {
 						gtag('event', 'software_click', {
 							software: ctaType,
@@ -131,114 +124,483 @@ import { Image } from "astro:assets";
 		});
 	</script>
 
-	<section class="py-20 bg-slate-900/50">
-		<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-			<h1 title="Laravel Software Products" class="text-3xl md:text-4xl font-bold text-center mb-20 text-white animate-fadeInUp">
-				Our <span class="gradient-text">Software Products</span>
-			</h1>
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-				<!-- Laravel Mail Card -->
-				<div class="animate-fadeInUp delay-100">
-					<div class="group cursor-pointer">
-						<div class="relative mb-8 h-80 bg-linear-to-br from-violet-600 to-violet-800 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 transform hover:scale-105">
-							<!-- Replaced Image with Icon/Placeholder as assets don't exist yet -->
-							<div class="text-white text-center">
-								<svg class="w-24 h-24 mx-auto mb-4 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-								</svg>
-								<span class="text-2xl font-bold">Laravel Mail</span>
+	<!-- Hero Section -->
+	<section class="pt-32 pb-20 relative overflow-hidden">
+		<div class="absolute top-20 left-1/4 w-[500px] h-[500px] bg-payflo-purple/20 blur-[150px] rounded-full -z-10"></div>
+		<div class="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-payflo-pink/15 blur-[120px] rounded-full -z-10"></div>
+		<div class="absolute top-40 right-1/3 w-[300px] h-[300px] bg-payflo-blue/10 blur-[100px] rounded-full -z-10"></div>
+		
+		<div class="container-custom relative">
+			<div class="text-center max-w-4xl mx-auto">
+				<div class="animate-on-scroll inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8">
+					<Icon name="ph:package-duotone" class="w-5 h-5 text-payflo-purple" />
+					<span class="text-sm font-semibold text-white/80">Premium Laravel Solutions</span>
+				</div>
+				
+				<h1 class="animate-on-scroll delay-1 text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+					Powerful <span class="gradient-text">Software</span> for Modern Businesses
+				</h1>
+				
+				<p class="animate-on-scroll delay-2 text-xl md:text-2xl text-white/70 leading-relaxed font-medium max-w-3xl mx-auto mb-10">
+					Self-hosted Laravel packages that give you complete control. No subscriptions, no SaaS lock-in. 
+					One-time purchase, lifetime access.
+				</p>
+				
+				<div class="animate-on-scroll delay-3 flex flex-wrap justify-center gap-8 text-sm text-white/60 font-bold uppercase tracking-widest">
+					<span class="flex items-center gap-2">
+						<Icon name="ph:check-circle-duotone" class="w-5 h-5 text-emerald-400" />
+						One-Time Purchase
+					</span>
+					<span class="flex items-center gap-2">
+						<Icon name="ph:check-circle-duotone" class="w-5 h-5 text-emerald-400" />
+						Lifetime Updates
+					</span>
+					<span class="flex items-center gap-2">
+						<Icon name="ph:check-circle-duotone" class="w-5 h-5 text-emerald-400" />
+						Priority Support
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Software Products Grid -->
+	<section class="pb-32 relative overflow-hidden">
+		<div class="container-custom">
+			<!-- Laravel Mail -->
+			<div class="animate-on-scroll delay-0 mb-16 group">
+				<div class="glass-card p-8 md:p-10 hover:border-payflo-purple/30 transition-all duration-500">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+						<div class="lg:col-span-5">
+							<div class="relative">
+								<div class="absolute inset-0 bg-gradient-to-br from-violet-600 to-violet-800 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+								<div class="relative h-64 bg-gradient-to-br from-violet-600 to-violet-800 rounded-2xl flex items-center justify-center">
+									<div class="text-center text-white/90">
+										<Icon name="ph:envelope-simple-duotone" class="w-20 h-20 mx-auto mb-4 opacity-80" />
+										<span class="text-xl font-bold">Laravel Mail</span>
+									</div>
+								</div>
 							</div>
 						</div>
-						<h3 class="text-3xl font-bold mb-4 text-white group-hover:text-violet-400 transition-colors">
-							Laravel Mail
-						</h3>
-						<p class="text-slate-400 mb-6 leading-relaxed text-lg">
-							Advanced email <a href="https://laravelmail.com" class="text-violet-400 hover:text-violet-300 underline">marketing and automation platform</a> Send campaigns,
-							manage subscribers, and track performance with powerful analytics.
-						</p>
-						<a href="/software/laravel-mail/" class="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-semibold transition-colors group/link">
-							Learn more
-							<span class="group-hover/link:translate-x-1 transition-transform">→</span>
-						</a>
+						<div class="lg:col-span-7">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="h-10 w-10 rounded-xl bg-gradient-to-br from-violet-600 to-violet-800 flex items-center justify-center">
+									<Icon name="ph:envelope-simple-duotone" class="w-5 h-5 text-white" />
+								</div>
+								<h2 class="text-3xl font-black text-white">Laravel Mail</h2>
+							</div>
+							
+							<p class="text-lg text-white/70 leading-relaxed mb-6">
+								A comprehensive email marketing and automation platform built for Laravel. Send beautiful campaigns, 
+								manage subscriber lists, and track performance with real-time analytics—all from your own server.
+							</p>
+							
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+								<div class="flex items-start gap-3">
+									<Icon name="ph:magic-wand-duotone" class="w-5 h-5 text-violet-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Drag & Drop Editor</span>
+										<span class="text-white/50 text-sm">Create stunning emails without code</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:users-three-duotone" class="w-5 h-5 text-violet-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Smart Segmentation</span>
+										<span class="text-white/50 text-sm">Target the right audience</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:chart-line-up-duotone" class="w-5 h-5 text-violet-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Advanced Analytics</span>
+										<span class="text-white/50 text-sm">Open, click, and conversion tracking</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:robot-duotone" class="w-5 h-5 text-violet-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Automation Flows</span>
+										<span class="text-white/50 text-sm">Welcome, follow-up, and nurture sequences</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="flex flex-wrap items-center gap-4">
+								<a href="/software/laravel-mail/" class="btn btn-primary inline-flex items-center gap-2">
+									Learn More
+									<Icon name="ph:arrow-right" class="w-5 h-5" />
+								</a>
+								<a href="https://laravelmail.com" target="_blank" class="text-white/60 hover:text-white font-semibold transition-colors flex items-center gap-2">
+									<Icon name="ph:globe-duotone" class="w-4 h-4" />
+									laravelmail.com
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
-				<!-- Laravel SEO Card -->
-				<div class="animate-fadeInUp delay-200">
-					<div class="group cursor-pointer">
-						<div class="relative mb-8 h-80 bg-linear-to-br from-pink-600 to-pink-800 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-300 transform hover:scale-105">
-							<!-- Replaced with Icon -->
-							<div class="text-white text-center">
-								<svg class="w-24 h-24 mx-auto mb-4 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-								</svg>
-								<span class="text-2xl font-bold">Laravel SEO</span>
+			</div>
+
+			<!-- Laravel SEO -->
+			<div class="animate-on-scroll delay-100 mb-16 group">
+				<div class="glass-card p-8 md:p-10 hover:border-payflo-pink/30 transition-all duration-500">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+						<div class="lg:col-span-5 lg:order-2">
+							<div class="relative">
+								<div class="absolute inset-0 bg-gradient-to-br from-pink-600 to-pink-800 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+								<div class="relative h-64 bg-gradient-to-br from-pink-600 to-pink-800 rounded-2xl flex items-center justify-center">
+									<div class="text-center text-white/90">
+										<Icon name="ph:magnifying-glass-duotone" class="w-20 h-20 mx-auto mb-4 opacity-80" />
+										<span class="text-xl font-bold">Laravel SEO</span>
+									</div>
+								</div>
 							</div>
 						</div>
-						<h3 title="laravel seo" class="text-3xl font-bold mb-4 text-white group-hover:text-pink-400 transition-colors">
-							<a title="Laravel SEO" href="/software/laravel-seo/" class="hover:underline">Laravel SEO</a>
-						</h3>
-						<p class="text-slate-400 mb-6 leading-relaxed text-lg">
-							Comprehensive SEO toolkit for Laravel applications. Optimize meta
-							tags, sitemaps, schema markup, and improve search rankings
-							effortlessly.
-						</p>
-						<a href="/software/laravel-seo/" class="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 font-semibold transition-colors group/link">
-							Learn more
-							<span class="group-hover/link:translate-x-1 transition-transform">→</span>
-						</a>
+						<div class="lg:col-span-7 lg:order-1">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="h-10 w-10 rounded-xl bg-gradient-to-br from-pink-600 to-pink-800 flex items-center justify-center">
+									<Icon name="ph:magnifying-glass-duotone" class="w-5 h-5 text-white" />
+								</div>
+								<h2 class="text-3xl font-black text-white">Laravel SEO</h2>
+							</div>
+							
+							<p class="text-lg text-white/70 leading-relaxed mb-6">
+								The ultimate SEO toolkit for Laravel applications. Boost your search rankings with automated meta tags, 
+								dynamic sitemaps, structured data markup, and powerful analytics that help you understand and improve your visibility.
+							</p>
+							
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+								<div class="flex items-start gap-3">
+									<Icon name="ph:tag-duotone" class="w-5 h-5 text-pink-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Dynamic Meta Tags</span>
+										<span class="text-white/50 text-sm">Auto-generate optimized tags</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:tree-structure-duotone" class="w-5 h-5 text-pink-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Smart Sitemaps</span>
+										<span class="text-white/50 text-sm">XML sitemaps with auto-updates</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:code-duotone" class="w-5 h-5 text-pink-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Schema Markup</span>
+										<span class="text-white/50 text-sm">JSON-LD structured data made easy</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:chart-pie-duotone" class="w-5 h-5 text-pink-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">SEO Analytics</span>
+										<span class="text-white/50 text-sm">Track rankings and insights</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="flex flex-wrap items-center gap-4">
+								<a href="/software/laravel-seo/" class="btn btn-primary inline-flex items-center gap-2">
+									Learn More
+									<Icon name="ph:arrow-right" class="w-5 h-5" />
+								</a>
+								<a href="https://laravelseo.com" target="_blank" class="text-white/60 hover:text-white font-semibold transition-colors flex items-center gap-2">
+									<Icon name="ph:globe-duotone" class="w-4 h-4" />
+									laravelseo.com
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
-				<!-- Laravel GPT Card -->
-				<div class="animate-fadeInUp delay-300">
-					<div class="group cursor-pointer">
-						<div class="relative mb-8 h-80 bg-linear-to-br from-purple-600 to-purple-800 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:scale-105">
-							<!-- Icon -->
-							<div class="text-white text-center">
-								<svg class="w-24 h-24 mx-auto mb-4 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-								</svg>
-								<span class="text-2xl font-bold">Laravel GPT</span>
+			</div>
+
+			<!-- Laravel GPT -->
+			<div class="animate-on-scroll delay-200 mb-16 group">
+				<div class="glass-card p-8 md:p-10 hover:border-payflo-purple/30 transition-all duration-500">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+						<div class="lg:col-span-5">
+							<div class="relative">
+								<div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+								<div class="relative h-64 bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl flex items-center justify-center">
+									<div class="text-center text-white/90">
+										<Icon name="ph:lightning-duotone" class="w-20 h-20 mx-auto mb-4 opacity-80" />
+										<span class="text-xl font-bold">Laravel GPT</span>
+									</div>
+								</div>
 							</div>
 						</div>
-						<h3 class="text-3xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors">
-							Laravel GPT
-						</h3>
-						<p class="text-slate-400 mb-6 leading-relaxed text-lg">
-							AI-powered Laravel application with GPT integration. Intelligent
-							content generation, automated responses, and smart chatbot
-							capabilities.
-						</p>
-						<a href="/software/laravel-gpt/" class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold transition-colors group/link">
-							Learn more
-							<span class="group-hover/link:translate-x-1 transition-transform">→</span>
-						</a>
+						<div class="lg:col-span-7">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="h-10 w-10 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
+									<Icon name="ph:lightning-duotone" class="w-5 h-5 text-white" />
+								</div>
+								<h2 class="text-3xl font-black text-white">Laravel GPT</h2>
+							</div>
+							
+							<p class="text-lg text-white/70 leading-relaxed mb-6">
+								Integrate the power of AI into your Laravel applications effortlessly. Build intelligent chatbots, 
+								automate content generation, create AI-powered search, and enhance user experiences with cutting-edge GPT technology.
+							</p>
+							
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+								<div class="flex items-start gap-3">
+									<Icon name="ph:chat-circle-duotone" class="w-5 h-5 text-purple-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">AI Chatbots</span>
+										<span class="text-white/50 text-sm">Intelligent customer support</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:note-pencil-duotone" class="w-5 h-5 text-purple-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Content Generation</span>
+										<span class="text-white/50 text-sm">Auto-create blog posts and copy</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:magnifying-glass-duotone" class="w-5 h-5 text-purple-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Semantic Search</span>
+										<span class="text-white/50 text-sm">AI-powered search experience</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:plug-charging-duotone" class="w-5 h-5 text-purple-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Multi-Provider</span>
+										<span class="text-white/50 text-sm">OpenAI, Anthropic, and more</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="flex flex-wrap items-center gap-4">
+								<a href="/software/laravel-gpt/" class="btn btn-primary inline-flex items-center gap-2">
+									Learn More
+									<Icon name="ph:arrow-right" class="w-5 h-5" />
+								</a>
+								<a href="https://laravelgpt.dev" target="_blank" class="text-white/60 hover:text-white font-semibold transition-colors flex items-center gap-2">
+									<Icon name="ph:globe-duotone" class="w-4 h-4" />
+									laravelgpt.dev
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
-				<!-- Laravel UI Card -->
-				<div class="animate-fadeInUp delay-400">
-					<div class="group cursor-pointer">
-						<div class="relative mb-8 h-80 bg-linear-to-br from-blue-600 to-blue-800 rounded-2xl overflow-hidden flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:scale-105">
-							<!-- Icon -->
-							<div class="text-white text-center">
-								<svg class="w-24 h-24 mx-auto mb-4 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
-								</svg>
-								<span class="text-2xl font-bold">Laravel UI</span>
+			</div>
+
+			<!-- Laravel UI -->
+			<div class="animate-on-scroll delay-300 mb-16 group">
+				<div class="glass-card p-8 md:p-10 hover:border-payflo-blue/30 transition-all duration-500">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+						<div class="lg:col-span-5 lg:order-2">
+							<div class="relative">
+								<div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+								<div class="relative h-64 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center">
+									<div class="text-center text-white/90">
+										<Icon name="ph:layout-duotone" class="w-20 h-20 mx-auto mb-4 opacity-80" />
+										<span class="text-xl font-bold">Laravel UI</span>
+									</div>
+								</div>
 							</div>
 						</div>
-						<h3 class="text-3xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">
-							Laravel UI
-						</h3>
-						<p class="text-slate-400 mb-6 leading-relaxed text-lg">
-							Premium UI components designed for easy use with Laravel.
-							High-quality Marketing and Application UI blocks built for
-							conversion-driven applications.
-						</p>
-						<a href="/software/laravel-ui/" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors group/link">
-							Learn more
-							<span class="group-hover/link:translate-x-1 transition-transform">→</span>
-						</a>
+						<div class="lg:col-span-7 lg:order-1">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+									<Icon name="ph:layout-duotone" class="w-5 h-5 text-white" />
+								</div>
+								<h2 class="text-3xl font-black text-white">Laravel UI</h2>
+							</div>
+							
+							<p class="text-lg text-white/70 leading-relaxed mb-6">
+								A stunning collection of premium UI components and blocks designed specifically for Laravel applications. 
+								Build beautiful marketing sites and admin dashboards with production-ready, customizable components.
+							</p>
+							
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+								<div class="flex items-start gap-3">
+									<Icon name="ph:package-duotone" class="w-5 h-5 text-blue-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">100+ Components</span>
+										<span class="text-white/50 text-sm">Buttons, cards, forms, and more</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:funnel-duotone" class="w-5 h-5 text-blue-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Marketing Blocks</span>
+										<span class="text-white/50 text-sm">Heroes, features, testimonials</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:gear-six-duotone" class="w-5 h-5 text-blue-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Admin Dashboard</span>
+										<span class="text-white/50 text-sm">Data tables, charts, analytics</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:figma-logo-duotone" class="w-5 h-5 text-blue-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Figma Included</span>
+										<span class="text-white/50 text-sm">Complete design system</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="flex flex-wrap items-center gap-4">
+								<a href="/software/laravel-ui/" class="btn btn-primary inline-flex items-center gap-2">
+									Learn More
+									<Icon name="ph:arrow-right" class="w-5 h-5" />
+								</a>
+							</div>
+						</div>
 					</div>
+				</div>
+			</div>
+
+			<!-- Leads Captain -->
+			<div class="animate-on-scroll delay-400 mb-16 group">
+				<div class="glass-card p-8 md:p-10 hover:border-emerald-500/30 transition-all duration-500">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+						<div class="lg:col-span-5">
+							<div class="relative">
+								<div class="absolute inset-0 bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+								<div class="relative h-64 bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-2xl flex items-center justify-center">
+									<div class="text-center text-white/90">
+										<Icon name="ph:flag-banner-duotone" class="w-20 h-20 mx-auto mb-4 opacity-80" />
+										<span class="text-xl font-bold">Leads Captain</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="lg:col-span-7">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="h-10 w-10 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-800 flex items-center justify-center">
+									<Icon name="ph:flag-banner-duotone" class="w-5 h-5 text-white" />
+								</div>
+								<h2 class="text-3xl font-black text-white">Leads Captain</h2>
+							</div>
+							
+							<p class="text-lg text-white/70 leading-relaxed mb-6">
+								Turn your website visitors into qualified leads with this powerful lead capture and management system. 
+								Features landing pages, lead scoring, automated follow-ups, and seamless CRM integration to supercharge your sales pipeline.
+							</p>
+							
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+								<div class="flex items-start gap-3">
+									<Icon name="ph:network-duotone" class="w-5 h-5 text-emerald-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Landing Pages</span>
+										<span class="text-white/50 text-sm">High-converting lead capture forms</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:target-duotone" class="w-5 h-5 text-emerald-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Lead Scoring</span>
+										<span class="text-white/50 text-sm">Prioritize your best prospects</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:whatsapp-logo-duotone" class="w-5 h-5 text-emerald-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">WhatsApp Integration</span>
+										<span class="text-white/50 text-sm">Connect via popular messaging</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:plugs-connected-duotone" class="w-5 h-5 text-emerald-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">CRM Sync</span>
+										<span class="text-white/50 text-sm">Integrate with your existing tools</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="flex flex-wrap items-center gap-4">
+								<a href="/software/leads-captain/" class="btn btn-primary inline-flex items-center gap-2">
+									Learn More
+									<Icon name="ph:arrow-right" class="w-5 h-5" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why Choose Section -->
+	<section class="pb-32 relative overflow-hidden">
+		<div class="container-custom">
+			<div class="text-center max-w-3xl mx-auto mb-16">
+				<h2 class="animate-on-scroll text-3xl md:text-4xl font-black text-white mb-6">
+					Why Choose Our <span class="gradient-text">Software</span>?
+				</h2>
+				<p class="animate-on-scroll delay-1 text-lg text-white/70">
+					Every package is built with the same quality standards we apply to client projects. 
+					Premium code, comprehensive documentation, and lifetime updates.
+				</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div class="animate-on-scroll delay-0 glass-card text-center hover:border-payflo-purple/30">
+					<div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center mx-auto mb-6">
+						<Icon name="ph:cloud-arrow-down-duotone" class="w-8 h-8 text-white" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Self-Hosted</h3>
+					<p class="text-white/60 text-sm">Your data stays on your server. Full control, complete privacy, no third-party dependencies.</p>
+				</div>
+				
+				<div class="animate-on-scroll delay-100 glass-card text-center hover:border-payflo-blue/30">
+					<div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-payflo-blue to-payflo-purple flex items-center justify-center mx-auto mb-6">
+						<Icon name="ph:infinity-duotone" class="w-8 h-8 text-white" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Lifetime Updates</h3>
+					<p class="text-white/60 text-sm">Buy once, receive updates forever. Stay current with the latest Laravel versions and features.</p>
+				</div>
+				
+				<div class="animate-on-scroll delay-200 glass-card text-center hover:border-payflo-pink/30">
+					<div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-payflo-pink to-payflo-blue flex items-center justify-center mx-auto mb-6">
+						<Icon name="ph:headset-duotone" class="w-8 h-8 text-white" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Priority Support</h3>
+					<p class="text-white/60 text-sm">Get fast, knowledgeable support directly from the developers who built the package.</p>
+				</div>
+				
+				<div class="animate-on-scroll delay-300 glass-card text-center hover:border-emerald-500/30">
+					<div class="h-16 w-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center mx-auto mb-6">
+						<Icon name="ph:code-duotone" class="w-8 h-8 text-white" />
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">Clean Code</h3>
+					<p class="text-white/60 text-sm">Well-documented, type-hinted code that follows Laravel best practices and is easy to customize.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="pb-32 relative overflow-hidden">
+		<div class="absolute inset-0 bg-gradient-to-b from-transparent via-payflo-purple/5 to-transparent"></div>
+		<div class="container-custom relative">
+			<div class="max-w-3xl mx-auto text-center glass-card py-16 px-8 md:px-16">
+				<h2 class="text-3xl md:text-4xl font-black text-white mb-6">
+					Need a Custom Solution?
+				</h2>
+				<p class="text-lg text-white/70 mb-8 max-w-xl mx-auto">
+					Looking for something tailored to your specific needs? We also offer custom development services 
+					to build the perfect Laravel solution for your business.
+				</p>
+				<div class="flex flex-wrap justify-center gap-4">
+					<a href="/contact/" class="btn btn-primary !px-10 !py-4 text-lg inline-flex items-center gap-2">
+						<Icon name="ph:chat-circle-duotone" class="w-5 h-5" />
+						Talk to Us
+					</a>
+					<a href="/software-development-agency-london/" class="btn btn-secondary !px-10 !py-4 text-lg inline-flex items-center gap-2">
+						<Icon name="ph:briefcase-duotone" class="w-5 h-5" />
+						Our Services
+					</a>
 				</div>
 			</div>
 		</div>
