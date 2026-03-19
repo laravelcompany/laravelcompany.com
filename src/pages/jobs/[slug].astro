@@ -97,7 +97,7 @@ const jsonLd = {
 };
 ---
 
-<Layout title={`${job.title} at ${job.company} - Laravel Jobs`}>
+<Layout title={`${job.title} at ${job.company}`}>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <main>
         <HeroSection
@@ -110,7 +110,7 @@ const jsonLd = {
             <div class="container-custom">
                 <div class="mb-8">
                     <a
-                        href="/jobs"
+                        href="/jobs/"
                         class="text-payflo-purple hover:underline flex items-center gap-2"
                     >
                         <svg
@@ -152,11 +152,11 @@ const jsonLd = {
                                 }
                             </div>
 
-                            <h1
+                            <h2
                                 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4"
                             >
                                 {job.title}
-                            </h1>
+                            </h2>
 
                             <div
                                 class="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-400 mb-6"
@@ -235,7 +235,7 @@ const jsonLd = {
                                             {applyText}
                                         </a>
                                         <a
-                                            href="/contact"
+                                            href="/contact/"
                                             class="btn btn-secondary text-center px-10 py-4 text-lg"
                                         >
                                             Contact Us

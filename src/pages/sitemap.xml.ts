@@ -7,28 +7,26 @@ export const GET: APIRoute = async ({ site }) => {
     // 1. Define static pages
     const staticPages = [
         '',
-        'about-us',
-        'careers',
-        'contact',
-        'cookie-policy',
-        'pricing',
-        'privacy-policy',
-        'product',
-        'solutions',
-        'terms-of-use',
-        'software',
-        'software/laravel-mail',
-        'software/laravel-gpt',
-        'software/laravel-seo',
-        'software/laravel-ui',
-        'shop',
-        'jobs',
-        'laravel-application-development-company',
-        'software-development-agency-london',
-        'hire-aws-consultant',
-        'magento-agency-london',
-        'laravel-consulting',
-        'database-development-services',
+        'about-us/',
+        'contact/',
+        'cookie-policy/',
+        'pricing/',
+        'privacy-policy/',
+        'solutions/',
+        'terms-of-use/',
+        'software/',
+        'software/laravel-mail/',
+        'software/laravel-gpt/',
+        'software/laravel-seo/',
+        'software/laravel-ui/',
+        'shop/',
+        'jobs/',
+        'laravel-application-development-company/',
+        'software-development-agency-london/',
+        'hire-aws-consultant/',
+        'magento-agency-london/',
+        'laravel-consulting/',
+        'database-development-services/',
     ];
 
     // 2. Fetch dynamic jobs
@@ -42,7 +40,7 @@ export const GET: APIRoute = async ({ site }) => {
                 .replace(/\s+/g, "-")
                 .replace(/-+/g, "-")
                 .trim();
-            return `jobs/${titleSlug}-${job.id}`;
+            return `jobs/${titleSlug}-${job.id}/`;
         });
     } catch (error) {
         console.error('Error fetching jobs for sitemap:', error);
@@ -69,7 +67,7 @@ export const GET: APIRoute = async ({ site }) => {
                         .replace(/\s+/g, "-")
                         .replace(/-+/g, "-")
                         .trim();
-                    return `shop/${slug}`;
+                    return `shop/${slug}/`;
                 });
             }
         }
