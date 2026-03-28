@@ -1125,7 +1125,7 @@ Now go forth, my friend, and conquer the world of emails with style, grace, and 
 
 To keep the party going and check up on your leviathan, click this button like Moby himself:
 
-```swag
+```text
 [View Order]($url) 🐳🎣
 ```
 

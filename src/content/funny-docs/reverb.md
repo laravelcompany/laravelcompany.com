@@ -499,7 +499,7 @@ Ready to handle more jams than your single-server amp can handle? It's time to s
 
 So, how do we make this happen? First, set the `REVERB_SCALING_ENABLED` environment variable to `true` in your application's `.env` configuration file:
 
-```env
+```bash
 REVERB_SCALING_ENABLED=🤘
 ```
 

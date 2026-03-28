@@ -878,7 +878,7 @@ The code above will initiate time-travel when you manually dispatch the `vite:pr
 
 If your Vite-built treasure chest of assets is deposited on a distant island (CDN) far from your humble abode (app), you'll need to set sail with the `ASSET_URL` environment variable. Anchor it securely within your ship's logbook (`.env` file):
 
-```env
+```bash
 ASSET_URL=https://cdn.example.com
 ```
 
@@ -897,7 +897,7 @@ Now, hoist the main sail and set a course for seamless integration! Arrrrgh! üè
 
 First off, ye can inject environment variables into yer own personal Black Pearl (or application's .env file) by prefixin' them with `VITE_`:
 
-```env
+```bash
 VITE_SENTRY_DSN_PUBLIC=http://example.com
 ```
 
@@ -1204,7 +1204,7 @@ Here be the safe harbors they provide:
 
 If ye be hankerin' for a custom harbor, just make sure yer application's `APP_URL` matches the one ye be visitin' on yer browser. If ye be sailin' to `https://my-app.laravel`, update yer `.env` accordingly:
 
-```env
+```bash
 APP_URL=https://my-app.laravel
 ```
 

@@ -759,7 +759,7 @@ Whichever view you choose, remember: it's all about making your application more
 
 Get ready to reminisce about the good old days (version 12.x), when pagination view names for our beloved Bootstrap 3 were as mysterious as the Sphinx riddles! But worry not, young grasshopper, for the Laravel gods have seen fit to make things a tad more explicit:
 
-```nothing
+```bash
 // Ancient Times (Laravel <= 12.x)
 pagination::default (aka: The Enigma)
 pagination::simple-default (aka: The Riddle wrapped in an Enigma)

@@ -428,7 +428,7 @@ If your tests or frontend output comparisons depended on escaped Unicode sequenc
 
 The internal pagination view names for Bootstrap 3 defaults are now explicit:
 
-```nothing
+```bash
 // Laravel <= 12.x
 pagination::default
 pagination::simple-default

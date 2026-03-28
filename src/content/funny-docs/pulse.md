@@ -567,7 +567,7 @@ But here's the kicker - this dance-off requires the [pulse:check command](#captu
 
 Each reporting server needs to bring its unique moves to the floor, so let's give them a name - by default, Pulse uses PHP's `gethostname` function to find their stage names, but you can always call 'em something else with a friendly nudge from the `PULSE_SERVER_NAME` environment variable:
 
-```env
+```bash
 PULSE_SERVER_NAME=load-balancer
 ```
 
@@ -641,7 +641,7 @@ For those high-traffic events where you don't want your app's DJ getting mixed u
 
 Now, let's get this party started with some custom settings! You can tailor the [database connection](/docs/{{version}}/database#configuration) that suits Pulse best by setting the `PULSE_DB_CONNECTION` environment variable, like so:
 
-```env
+```bash
 PULSE_DB_CONNECTION=pulse
 ```
 
