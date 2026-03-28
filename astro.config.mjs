@@ -91,7 +91,16 @@ export default defineConfig({
           "sparkle-duotone",
           "magic-wand-duotone",
           "users-three-duotone",
-          "plug-charging-duotone"
+          "plug-charging-duotone",
+          "arrow-left-duotone",
+          "key-duotone",
+          "terminal-duotone",
+          "scissors-duotone",
+          "radio-duotone",
+          "rocket-launch-duotone",
+          "brain-duotone",
+          "book-open-duotone",
+          "file-duotone"
         ]
       }
     }),

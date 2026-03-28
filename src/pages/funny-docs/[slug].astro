@@ -1,0 +1,97 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const funnyDocs = await getCollection("funny-docs");
+
+  return funnyDocs.map((doc) => ({
+    params: { slug: doc.id.replace(/\.md$/, "") },
+    props: { doc },
+  }));
+}
+
+const { doc } = Astro.props;
+const { Content } = await doc.render();
+
+const title = doc.body.split("\n")[0].replace(/^#\s*/, "");
+
+const icons: Record<string, string> = {
+  "authentication": "ph:key-duotone",
+  "authorization": "ph:shield-check-duotone",
+  "artisan": "ph:terminal-duotone",
+  "blade": "ph:scissors-duotone",
+  "billing": "ph:credit-card-duotone",
+  "broadcasting": "ph:radio-duotone",
+  "boost": "ph:rocket-duotone",
+  "ai": "ph:brain-duotone",
+  "ai-sdk": "ph:robot-duotone",
+  "readme": "ph:book-open-duotone",
+};
+
+const icon = icons[doc.id.replace(/\.md$/, "")] || "ph:file-duotone";
+---
+
+<Layout title={`${title} - Funny Laravel Docs`}>
+  <section class="pt-16 pb-8 bg-gradient-to-r from-purple-600 to-pink-600">
+    <div class="container-custom">
+      <a
+        href="/funny-docs"
+        class="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors"
+      >
+        <Icon name="ph:arrow-left-duotone" class="h-5 w-5 mr-2" />
+        Back to all funny docs
+      </a>
+
+      <div class="flex items-center gap-4">
+        <div class="h-16 w-16 rounded-2xl bg-white/20 flex items-center justify-center text-white">
+          <Icon name={icon} class="h-8 w-8" />
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-white">
+          {title}
+        </h1>
+      </div>
+      <p class="text-white/80 mt-4 text-lg">
+        Warning: May cause actual learning AND laughter!
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="container-custom max-w-4xl">
+      <article class="prose prose-lg max-w-none prose-purple
+        prose-headings:font-bold prose-headings:text-gray-800
+        prose-p:text-gray-600 prose-p:leading-relaxed
+        prose-a:text-purple-600 prose-a:no-underline hover:prose-a:underline
+        prose-code:text-pink-600 prose-code:bg-pink-50 prose-code:px-2 prose-code:py-0.5 prose-code:rounded
+        prose-pre:bg-gray-800 prose-pre:text-gray-100
+        prose-blockquote:border-l-4 prose-blockquote:border-purple-500 prose-blockquote:bg-purple-50 prose-blockquote:py-2 prose-blockquote:pr-2
+        prose-strong:text-gray-800
+        prose-ul:text-gray-600 prose-ol:text-gray-600
+        prose-li:marker:text-purple-500
+      ">
+        <Content />
+      </article>
+
+      <div class="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <a
+          href="/funny-docs"
+          class="inline-flex items-center px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+        >
+          <Icon name="ph:arrow-left-duotone" class="h-5 w-5 mr-2" />
+          More Funny Docs
+        </a>
+
+        <div class="flex gap-4">
+          <span class="text-gray-500 text-sm">Did you enjoy this?</span>
+          <a href="/contact" class="text-purple-600 hover:text-purple-800 text-sm font-medium">
+            Suggest a topic
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

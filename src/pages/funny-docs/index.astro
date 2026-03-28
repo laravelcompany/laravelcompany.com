@@ -1,0 +1,103 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+
+export const prerender = true;
+
+const funnyDocs = await getCollection("funny-docs");
+
+const icons: Record<string, string> = {
+  "authentication": "ph:key-duotone",
+  "authorization": "ph:shield-check-duotone",
+  "artisan": "ph:terminal-duotone",
+  "blade": "ph:scissors-duotone",
+  "billing": "ph:credit-card-duotone",
+  "broadcasting": "ph:radio-duotone",
+  "boost": "ph:rocket-duotone",
+  "ai": "ph:brain-duotone",
+  "ai-sdk": "ph:robot-duotone",
+  "readme": "ph:book-open-duotone",
+};
+
+const docsList = funnyDocs.map((doc) => ({
+  slug: doc.id.replace(/\.md$/, ""),
+  title: doc.body.split("\n")[0].replace(/^#\s*/, ""),
+  excerpt: doc.body.split("\n").slice(1, 3).join(" ").substring(0, 150),
+  icon: icons[doc.id.replace(/\.md$/, "")] || "ph:file-duotone",
+}));
+---
+
+<Layout title="Funny Laravel Docs - Because Learning Shouldn't Be Boring">
+  <HeroSection
+    title="Funny Laravel Docs"
+    subtitle="The same serious documentation, now with a side of humor! Learn Laravel while actually enjoying the ride."
+  />
+
+  <section class="py-20 bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <p class="text-lg text-gray-600">
+          Click on any topic below to start learning Laravel the fun way!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          docsList.map((doc, index) => (
+            <a
+              href={`/funny-docs/${doc.slug}`}
+              class="group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-purple-200 overflow-hidden"
+            >
+              <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-100 to-pink-100 rounded-bl-full -mr-8 -mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div class="relative">
+                <div class="h-14 w-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Icon name={doc.icon} class="h-7 w-7" />
+                </div>
+                
+                <h2 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
+                  {doc.title}
+                </h2>
+                <p class="text-gray-600 text-sm line-clamp-2">{doc.excerpt}...</p>
+                
+                <div class="mt-4 flex items-center text-purple-600 font-semibold text-sm">
+                  <span>Read now</span>
+                  <Icon name="ph:arrow-right" class="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+
+      {
+        docsList.length === 0 && (
+          <div class="text-center py-12">
+            <p class="text-gray-600 text-lg">
+              No funny docs yet! Check back soon.
+            </p>
+          </div>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-r from-purple-600 to-pink-600">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">
+        Got a suggestion?
+      </h2>
+      <p class="text-white/80 text-lg mb-6">
+        Have an idea for a funny doc topic? We'd love to hear it!
+      </p>
+      <a
+        href="/contact"
+        class="inline-block px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+      >
+        Contact Us
+      </a>
+    </div>
+  </section>
+</Layout>

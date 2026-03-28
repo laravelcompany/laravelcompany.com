@@ -15,6 +15,11 @@ const blogCollection = defineCollection({
   }),
 });
 
+const funnyDocsCollection = defineCollection({
+  type: 'content',
+});
+
 export const collections = {
   blog: blogCollection,
+  'funny-docs': funnyDocsCollection,
 };
