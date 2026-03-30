@@ -1,0 +1,286 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const sovereigntyStandards = [
+  {
+    title: "SecNumCloud (France)",
+    description: "ANSSI-certified cloud security requirements for French government and critical infrastructure.",
+    icon: "ph:flag-fill",
+    region: "France"
+  },
+  {
+    title: "C5 (Germany)",
+    description: "BSI Cloud Computing Compliance Criteria Catalogue for German public sector.",
+    icon: "ph:flag-fill",
+    region: "Germany"
+  },
+  {
+    title: "EUCS / EUCC",
+    description: "European Union Cybersecurity Certification Scheme for cloud services.",
+    icon: "ph:globe-hemisphere-east-duotone",
+    region: "EU-wide"
+  }
+];
+
+const benefits = [
+  {
+    title: "EU Data Residency",
+    description: "All data processing and storage within European Union borders, ensuring GDPR compliance and data sovereignty.",
+    icon: "ph:map-pin-duotone"
+  },
+  {
+    title: "Government-Grade Security",
+    description: "Security controls meeting national and EU certification requirements for sensitive government workloads.",
+    icon: "ph:shield-check-duotone"
+  },
+  {
+    title: "Verified Supply Chain",
+    description: "Full visibility into our software supply chain with SBOM documentation for all components.",
+    icon: "ph:link-break-duotone"
+  },
+  {
+    title: "Certified Personnel",
+    description: "Team members hold relevant security certifications and clearances for government projects.",
+    icon: "ph:user-check-duotone"
+  }
+];
+
+const commitments = [
+  "All data stored and processed within EU borders",
+  "No access by non-EU authorities without legal intervention",
+  "Full audit trail for all data access and modifications",
+  "Compliance with national cloud certification requirements",
+  "Transparent data processing with EU-based personnel"
+];
+---
+
+<Layout
+  title="EU Sovereign Cloud Provider | Government-Grade Security"
+  description="EU sovereign cloud solutions with SecNumCloud, C5, and EUCS compliance. Keep your government data within EU borders with our certified solutions."
+>
+  <section class="pt-20 pb-12 md:pt-28 md:pb-16">
+    <div class="container-custom">
+      <nav class="flex items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <a href="/compliance/" class="hover:text-white transition-colors">Compliance</a>
+        <span>/</span>
+        <span class="text-white">Sovereign Cloud</span>
+      </nav>
+
+      <div class="max-w-4xl mx-auto animate-on-scroll">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          EU Sovereign Cloud <span class="gradient-text">Provider</span>
+        </h1>
+        <p class="mt-6 text-xl text-white/70">
+          As an EU sovereign cloud provider, we deliver government-grade security solutions that keep your data within European borders. Our solutions align with SecNumCloud (FR), C5 (DE), and EUCS substantial level requirements for public sector data sovereignty.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">
+            Discuss Sovereign Solutions
+          </a>
+          <a href="/compliance/" class="btn bg-white/10 border border-white/20 text-white hover:bg-white/20">
+            View All Certifications
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-payflo-darker/30">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-wrap gap-6 justify-center">
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:globe-hemisphere-east-duotone" class="w-6 h-6 text-blue-400" />
+            <span class="font-medium text-white">EU Data Residency</span>
+          </div>
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:seal-check-duotone" class="w-6 h-6 text-green-400" />
+            <span class="font-medium text-white">EUCC Certified</span>
+          </div>
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:flag-fill" class="w-6 h-6 text-amber-400" />
+            <span class="font-medium text-white">SecNumCloud Ready</span>
+          </div>
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:shield-check-duotone" class="w-6 h-6 text-yellow-400" />
+            <span class="font-medium text-white">C5 Compliant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center animate-on-scroll">
+          Sovereign Cloud Standards We Support
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {sovereigntyStandards.map((standard, index) => (
+            <div class="glass-card p-6 animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="w-12 h-12 rounded-xl bg-payflo-purple/20 flex items-center justify-center mb-4">
+                <Icon name={standard.icon} class="w-6 h-6 text-payflo-purple" />
+              </div>
+              <span class="text-xs font-semibold text-payflo-purple uppercase tracking-wider">{standard.region}</span>
+              <h3 class="text-lg font-semibold text-white mt-2 mb-3">{standard.title}</h3>
+              <p class="text-white/70 text-sm">{standard.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-payflo-darker/30">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center animate-on-scroll">
+          Why EU Sovereign Cloud Matters
+        </h2>
+        
+        <div class="glass-card p-8 border-payflo-purple/30 animate-on-scroll">
+          <p class="text-white/70 mb-6">
+            Public sector organizations across Europe are increasingly required to use cloud services that meet strict data sovereignty requirements. Our EU sovereign cloud solutions ensure:
+          </p>
+          <ul class="space-y-4">
+            {commitments.map((commitment) => (
+              <li class="flex items-start gap-3">
+                <Icon name="ph:check-circle" class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                <span class="text-white/70">{commitment}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center animate-on-scroll">
+          Our Sovereignty Commitments
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {benefits.map((benefit, index) => (
+            <div class="glass-card p-6 animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-payflo-purple/20 flex items-center justify-center flex-shrink-0">
+                  <Icon name={benefit.icon} class="w-5 h-5 text-payflo-purple" />
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p class="text-sm text-white/70">{benefit.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="glass-card p-8 border-payflo-purple/30 animate-on-scroll">
+          <h3 class="text-xl font-bold text-white mb-4">Sovereign Cloud vs. Hyperscalers</h3>
+          <p class="text-white/70 mb-4">
+            While global hyperscalers offer significant infrastructure, EU public sector organizations increasingly face requirements for data residency and verified supply chain security. Our approach combines:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div>
+              <h4 class="font-semibold text-white mb-2">Our Advantage</h4>
+              <ul class="space-y-2 text-white/70 text-sm">
+                <li>• EU-based data processing</li>
+                <li>• Transparent supply chain</li>
+                <li>• Direct vendor relationships</li>
+                <li>• Specialized government support</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white mb-2">Certifications</h4>
+              <ul class="space-y-2 text-white/70 text-sm">
+                <li>• EUCC certified development</li>
+                <li>• GDPR compliant operations</li>
+                <li>• ISO 27001:2022 certified</li>
+                <li>• SOC 2 Type II verified</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-r from-payflo-purple to-payflo-blue text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl mx-auto text-center animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold">Need EU Sovereign Cloud Solutions?</h2>
+        <p class="mt-6 text-xl opacity-90">
+          Our team can discuss your sovereignty requirements and recommend solutions that meet national and EU certification standards.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact/" class="btn bg-white text-payflo-purple hover:bg-opacity-90">
+            Contact Our Team
+          </a>
+          <a href="/compliance/" class="btn bg-white/10 border border-white/20 text-white hover:bg-white/20">
+            View All Certifications
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "EU Sovereign Cloud Provider",
+      "description": "EU sovereign cloud solutions with SecNumCloud, C5, and EUCS compliance. Keep your government data within EU borders with our certified solutions.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Laravel Company",
+        "url": "https://laravelcompany.com",
+        "certification": [
+          { "@type": "Certification", "name": "EUCC", "certifyingAuthority": "ENISA" },
+          { "@type": "Certification", "name": "GDPR", "certifyingAuthority": "EU" }
+        ]
+      }
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://laravelcompany.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compliance",
+          "item": "https://laravelcompany.com/compliance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "EU Sovereign Cloud",
+          "item": "https://laravelcompany.com/eu-sovereign-cloud-provider/"
+        }
+      ]
+    }
+  </script>
+</Layout>

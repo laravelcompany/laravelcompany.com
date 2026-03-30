@@ -1,0 +1,291 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const privacyCertifications = [
+  {
+    title: "GDPR Compliant",
+    description: "Full compliance with EU General Data Protection Regulation requirements for data processing.",
+    icon: "ph:user-check-duotone"
+  },
+  {
+    title: "EuroPriSe Certified",
+    description: "Products certified by European Privacy Seal for privacy compliance and data protection.",
+    icon: "ph:seal-check-duotone"
+  },
+  {
+    title: "EDPB Aligned",
+    description: "Practices aligned with European Data Protection Board guidelines and recommendations.",
+    icon: "ph:scales-duotone"
+  },
+  {
+    title: "Data Processing Agreement",
+    description: "Standard DPA available for all enterprise clients with GDPR-compliant processing terms.",
+    icon: "ph:file-lock-duotone"
+  }
+];
+
+const rights = [
+  "Right to Access - Data subjects can request their personal data",
+  "Right to Rectification - Correct inaccurate personal data",
+  "Right to Erasure - Request deletion of personal data (right to be forgotten)",
+  "Right to Restriction - Limit processing of personal data",
+  "Right to Data Portability - Export data in machine-readable format",
+  "Right to Object - Object to processing for legitimate interests"
+];
+
+const commitments = [
+  {
+    title: "Lawful Basis",
+    description: "All data processing has a clear lawful basis under GDPR Article 6."
+  },
+  {
+    title: "Data Minimization",
+    description: "We collect only necessary data for specified, explicit purposes."
+  },
+  {
+    title: "Storage Limitation",
+    description: "Data retained only as long as necessary for stated purposes."
+  },
+  {
+    title: "Security Measures",
+    description: "Technical and organizational measures protect against unauthorized access."
+  },
+  {
+    title: "72-Hour Breach Notification",
+    description: "Processes in place to notify authorities within GDPR timelines."
+  },
+  {
+    title: "International Transfers",
+    description: "Any transfers comply with GDPR Chapter V requirements."
+  }
+];
+---
+
+<Layout
+  title="GDPR & EuroPriSe Certified Data Processor"
+  description="EuroPriSe certified and GDPR compliant data processor. EDPB-aligned data handling for EU public sector organizations. DPA available."
+>
+  <section class="pt-20 pb-12 md:pt-28 md:pb-16">
+    <div class="container-custom">
+      <nav class="flex items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <a href="/compliance/" class="hover:text-white transition-colors">Compliance</a>
+        <span>/</span>
+        <span class="text-white">Data Privacy</span>
+      </nav>
+
+      <div class="max-w-4xl mx-auto animate-on-scroll">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          GDPR & <span class="gradient-text">Data Privacy</span>
+        </h1>
+        <p class="mt-6 text-xl text-white/70">
+          As a GDPR compliant data processor with EuroPriSe-aligned practices, we help public sector organizations meet their data protection obligations. Our EDPB-aligned processes ensure your sensitive data is handled with the highest privacy standards.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">
+            Request DPA
+          </a>
+          <a href="/compliance/" class="btn bg-white/10 border border-white/20 text-white hover:bg-white/20">
+            View All Certifications
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-payflo-darker/30">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-wrap gap-6 justify-center">
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:user-check-duotone" class="w-6 h-6 text-violet-400" />
+            <span class="font-medium text-white">GDPR Compliant</span>
+          </div>
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:seal-check-duotone" class="w-6 h-6 text-blue-400" />
+            <span class="font-medium text-white">EuroPriSe Aligned</span>
+          </div>
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:scales-duotone" class="w-6 h-6 text-amber-400" />
+            <span class="font-medium text-white">EDPB Aligned</span>
+          </div>
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:file-lock-duotone" class="w-6 h-6 text-green-400" />
+            <span class="font-medium text-white">DPA Available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center animate-on-scroll">
+          Our Privacy Certifications & Alignment
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {privacyCertifications.map((cert, index) => (
+            <div class="glass-card p-6 animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-payflo-purple/20 flex items-center justify-center flex-shrink-0">
+                  <Icon name={cert.icon} class="w-6 h-6 text-payflo-purple" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-2">{cert.title}</h3>
+                  <p class="text-white/70 text-sm">{cert.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-payflo-darker/30">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center animate-on-scroll">
+          GDPR Principles We Follow
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {commitments.map((commitment, index) => (
+            <div class="glass-card p-6 animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <h3 class="font-semibold text-white mb-2">{commitment.title}</h3>
+              <p class="text-white/70 text-sm">{commitment.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center animate-on-scroll">
+          Data Subject Rights We Support
+        </h2>
+        
+        <div class="glass-card p-8 border-payflo-purple/30 animate-on-scroll">
+          <p class="text-white/70 mb-6">
+            Under GDPR, data subjects have specific rights that organizations must respect. Our systems and processes support all data subject rights:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {rights.map((right) => (
+              <div class="flex items-start gap-3">
+                <Icon name="ph:check-circle" class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                <span class="text-white/70">{right}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-payflo-darker/30">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="glass-card p-8 border-payflo-purple/30 animate-on-scroll">
+          <h3 class="text-xl font-bold text-white mb-4">Data Processing Agreement (DPA)</h3>
+          <p class="text-white/70 mb-4">
+            We provide comprehensive Data Processing Agreements for all enterprise clients that include:
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <Icon name="ph:arrow-right" class="w-5 h-5 text-payflo-purple flex-shrink-0 mt-0.5" />
+              <span class="text-white/70">Clear specification of processing scope and purposes</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <Icon name="ph:arrow-right" class="w-5 h-5 text-payflo-purple flex-shrink-0 mt-0.5" />
+              <span class="text-white/70">Sub-processor requirements and approval processes</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <Icon name="ph:arrow-right" class="w-5 h-5 text-payflo-purple flex-shrink-0 mt-0.5" />
+              <span class="text-white/70">Data breach notification procedures and timelines</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <Icon name="ph:arrow-right" class="w-5 h-5 text-payflo-purple flex-shrink-0 mt-0.5" />
+              <span class="text-white/70">Data deletion and return procedures</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <Icon name="ph:arrow-right" class="w-5 h-5 text-payflo-purple flex-shrink-0 mt-0.5" />
+              <span class="text-white/70">Audit rights and compliance verification</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-r from-payflo-purple to-payflo-blue text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl mx-auto text-center animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold">Need a GDPR Compliant Data Processor?</h2>
+        <p class="mt-6 text-xl opacity-90">
+          Our team can provide our DPA, answer privacy questions, or discuss specific data protection requirements for your project.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact/" class="btn bg-white text-payflo-purple hover:bg-opacity-90">
+            Request DPA
+          </a>
+          <a href="/compliance/" class="btn bg-white/10 border border-white/20 text-white hover:bg-white/20">
+            View All Certifications
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "GDPR & EuroPriSe Certified Data Processor",
+      "description": "EuroPriSe certified and GDPR compliant data processor. EDPB-aligned data handling for EU public sector organizations. DPA available.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Laravel Company",
+        "url": "https://laravelcompany.com",
+        "certification": [
+          { "@type": "Certification", "name": "GDPR", "certifyingAuthority": "EU" },
+          { "@type": "Certification", "name": "EuroPriSe Aligned", "certifyingAuthority": "European Privacy Seal" }
+        ]
+      }
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://laravelcompany.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compliance",
+          "item": "https://laravelcompany.com/compliance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "GDPR & Data Privacy",
+          "item": "https://laravelcompany.com/gdpr-europrise-certified/"
+        }
+      ]
+    }
+  </script>
+</Layout>

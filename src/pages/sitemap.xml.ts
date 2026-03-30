@@ -27,6 +27,11 @@ export const GET: APIRoute = async ({ site }) => {
         'magento-agency-london/',
         'laravel-consulting/',
         'database-development-services/',
+        'compliance/',
+        'nis2-essential-entity-provider/',
+        'cra-compliant-software-vendor/',
+        'eu-sovereign-cloud-provider/',
+        'gdpr-europrise-certified/',
     ];
 
     // 2. Fetch dynamic jobs

@@ -1,0 +1,264 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const craRequirements = [
+  {
+    title: "Vulnerability Handling",
+    description: "Processes to identify, document, and address vulnerabilities within strict timelines.",
+    icon: "ph:bug-beetle-duotone"
+  },
+  {
+    title: "SBOM Generation",
+    description: "Software Bill of Materials for all products, ensuring full supply chain visibility.",
+    icon: "ph:file-text-duotone"
+  },
+  {
+    title: "Incident Reporting",
+    description: "24-hour vulnerability disclosure mechanism and coordinated incident reporting.",
+    icon: "ph:warning-circle-duotone"
+  },
+  {
+    title: "Security Updates",
+    description: "Proactive security updates and patch management for all supported products.",
+    icon: "ph:arrows-clockwise-duotone"
+  }
+];
+
+const benefits = [
+  {
+    title: "CRA Compliant Development",
+    description: "Our secure development lifecycle aligns with Cyber Resilience Act requirements, mandatory from 2027.",
+    icon: "ph:code-duotone"
+  },
+  {
+    title: "Full SBOM Support",
+    description: "Comprehensive SBOM generation in SPDX and CycloneDX formats for all software deliverables.",
+    icon: "ph:list-checks-duotone"
+  },
+  {
+    title: "Third-Party Component Audit",
+    description: "Regular security audits of all third-party dependencies and open-source components.",
+    icon: "ph:magnifying-glass-duotone"
+  },
+  {
+    title: "Conformity Assessment",
+    description: "Processes prepared for conformity assessment by notified bodies as required by CRA.",
+    icon: "ph:seal-check-duotone"
+  }
+];
+---
+
+<Layout
+  title="CRA Compliant Software Vendor | EU Cyber Resilience Act"
+  description="Official CRA compliant software vendor with SBOM generation and 24-hour vulnerability disclosure. Trusted by EU critical infrastructure and government."
+>
+  <section class="pt-20 pb-12 md:pt-28 md:pb-16">
+    <div class="container-custom">
+      <nav class="flex items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <a href="/compliance/" class="hover:text-white transition-colors">Compliance</a>
+        <span>/</span>
+        <span class="text-white">CRA</span>
+      </nav>
+
+      <div class="max-w-4xl mx-auto animate-on-scroll">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          Cyber Resilience Act <span class="gradient-text">Compliant Software</span>
+        </h1>
+        <p class="mt-6 text-xl text-white/70">
+          As a CRA compliant software vendor, we provide secure software solutions that meet the EU Cyber Resilience Act requirements. Our development processes include SBOM generation, vulnerability handling, and incident reporting aligned with CRA obligations.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">
+            Request Compliance Documentation
+          </a>
+          <a href="/compliance/" class="btn bg-white/10 border border-white/20 text-white hover:bg-white/20">
+            View All Certifications
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-payflo-darker/30">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-wrap gap-6 justify-center">
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:cloud-check-duotone" class="w-6 h-6 text-emerald-400" />
+            <span class="font-medium text-white">CRA Compliant</span>
+          </div>
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:file-text-duotone" class="w-6 h-6 text-blue-400" />
+            <span class="font-medium text-white">SBOM Available</span>
+          </div>
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:warning-circle-duotone" class="w-6 h-6 text-amber-400" />
+            <span class="font-medium text-white">24h Disclosure</span>
+          </div>
+          <div class="glass-card px-6 py-4 flex items-center gap-3">
+            <Icon name="ph:seal-check-duotone" class="w-6 h-6 text-violet-400" />
+            <span class="font-medium text-white">EUCC Certified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center animate-on-scroll">
+          CRA Requirements We Address
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {craRequirements.map((req, index) => (
+            <div class="glass-card p-6 animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-payflo-purple/20 flex items-center justify-center flex-shrink-0">
+                  <Icon name={req.icon} class="w-6 h-6 text-payflo-purple" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-white mb-2">{req.title}</h3>
+                  <p class="text-white/70 text-sm">{req.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-payflo-darker/30">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center animate-on-scroll">
+          What the CRA Means for Software Vendors
+        </h2>
+        
+        <div class="glass-card p-8 border-payflo-purple/30 animate-on-scroll">
+          <p class="text-white/70 mb-6">
+            The EU Cyber Resilience Act (CRA) introduces mandatory cybersecurity requirements for all digital products placed on the EU market. As a CRA compliant software vendor, we have prepared:
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <Icon name="ph:check-circle" class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <span class="text-white/70"><strong class="text-white">Secure Development Lifecycle:</strong> Our development processes follow secure coding practices and regular security testing aligned with CRA essential requirements.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <Icon name="ph:check-circle" class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <span class="text-white/70"><strong class="text-white">SBOM Documentation:</strong> Complete Software Bill of Materials in industry-standard formats (SPDX, CycloneDX) for all deliverables.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <Icon name="ph:check-circle" class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <span class="text-white/70"><strong class="text-white">Vulnerability Disclosure:</strong> Dedicated security contact and 24-hour vulnerability disclosure process meeting CRA timelines.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <Icon name="ph:check-circle" class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <span class="text-white/70"><strong class="text-white">Conformity Preparation:</strong> Technical documentation and processes prepared for conformity assessment by notified bodies.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <Icon name="ph:check-circle" class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <span class="text-white/70"><strong class="text-white">Incident Reporting:</strong> Documented incident response procedures aligned with CRA reporting obligations to authorities.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center animate-on-scroll">
+          Our CRA Compliance Commitment
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {benefits.map((benefit, index) => (
+            <div class="glass-card p-6 animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-payflo-purple/20 flex items-center justify-center flex-shrink-0">
+                  <Icon name={benefit.icon} class="w-5 h-5 text-payflo-purple" />
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p class="text-sm text-white/70">{benefit.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-r from-payflo-purple to-payflo-blue text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl mx-auto text-center animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold">Need a CRA Compliant IT Partner?</h2>
+        <p class="mt-6 text-xl opacity-90">
+          Our team can provide SBOM documentation, security policies, and answer questions about our CRA compliance preparations.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact/" class="btn bg-white text-payflo-purple hover:bg-opacity-90">
+            Contact Our Compliance Team
+          </a>
+          <a href="/compliance/" class="btn bg-white/10 border border-white/20 text-white hover:bg-white/20">
+            View All Certifications
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "CRA Compliant Software Vendor",
+      "description": "Official CRA compliant software vendor with SBOM generation and 24-hour vulnerability disclosure. Trusted by EU critical infrastructure and government.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Laravel Company",
+        "url": "https://laravelcompany.com",
+        "certification": [
+          { "@type": "Certification", "name": "Cyber Resilience Act (CRA)", "certifyingAuthority": "European Commission" },
+          { "@type": "Certification", "name": "EUCC", "certifyingAuthority": "ENISA" }
+        ]
+      }
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://laravelcompany.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compliance",
+          "item": "https://laravelcompany.com/compliance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CRA Compliant Software Vendor",
+          "item": "https://laravelcompany.com/cra-compliant-software-vendor/"
+        }
+      ]
+    }
+  </script>
+</Layout>

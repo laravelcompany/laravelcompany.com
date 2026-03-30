@@ -11,6 +11,13 @@ const companyLinks = [
   { name: "Contact", href: "/contact/" },
 ];
 
+const complianceLinks = [
+  { name: "NIS2 Compliance", href: "/nis2-essential-entity-provider/" },
+  { name: "CRA Compliance", href: "/cra-compliant-software-vendor/" },
+  { name: "EU Sovereign Cloud", href: "/eu-sovereign-cloud-provider/" },
+  { name: "Data Privacy (GDPR)", href: "/gdpr-europrise-certified/" },
+];
+
 const productLinks = [
   { name: "Laravel Seo", href: "/software/laravel-seo/" },
   { name: "Laravel Mail", href: "/software/laravel-mail/" },
@@ -205,6 +212,28 @@ const socialLinks = [
         <ul class="space-y-3">
           {
             funLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-white/50 hover:text-white transition-colors duration-200 font-medium"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3
+          class="text-sm font-black uppercase tracking-widest mb-6 text-white"
+        >
+          Compliance
+        </h3>
+        <ul class="space-y-3">
+          {
+            complianceLinks.map((link) => (
               <li>
                 <a
                   href={link.href}
