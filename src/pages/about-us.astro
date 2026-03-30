@@ -6,28 +6,46 @@ import teamImage from "../assets/team-photo.jpg";
 
 const teamMembers = [
   {
-    name: "Alex Thompson",
-    role: "Founder & CEO",
-    bio: "Full-stack developer with 15+ years experience. Built scalable web applications for Fortune 500 companies and specialized in Laravel ecosystem development.",
-    avatar: "/avatar-alex.jpg",
+    name: "Bogdanboti",
+    role: "Marketing",
+    bio: "Member of Laravel Company Organization",
+    avatar: "https://avatars.githubusercontent.com/u/90279111?s=96&v=4",
+    github: "Bogdanboti",
   },
   {
-    name: "Maria Garcia",
-    role: "CTO & Lead Developer",
-    bio: "Laravel expert with deep knowledge in e-commerce platforms and automation systems. Former senior developer at major tech companies.",
-    avatar: "/avatar-maria.jpg",
+    name: "Stefan Bogdan",
+    role: "Founder",
+    bio: "Member of Laravel Company Organization",
+    avatar: "https://avatars.githubusercontent.com/u/2276408?s=96&v=4",
+    github: "izdrail",
   },
   {
-    name: "David Kim",
-    role: "Head of AI Development",
-    bio: "AI/ML specialist focused on integrating GPT and automation technologies into web applications. PhD in Computer Science with focus on NLP.",
-    avatar: "/avatar-david.jpg",
+    name: "Jon Basildon",
+    role: "Developer",
+    bio: "Member of Laravel Company Organization",
+    avatar: "https://avatars.githubusercontent.com/u/145971646?s=96&v=4",
+    github: "jonbasildon",
   },
   {
-    name: "Sarah Johnson",
-    role: "Project Manager & Client Relations",
-    bio: "Experienced project manager specializing in software development lifecycle and client communication for custom development projects.",
-    avatar: "/avatar-sarah.jpg",
+    name: "andreim",
+    role: "Marketing",
+    bio: "Member of Laravel Company Organization",
+    avatar: "https://avatars.githubusercontent.com/u/13685130?s=96&v=4",
+    github: "marmureanuweb",
+  },
+  {
+    name: "Marian P",
+    role: "Developer",
+    bio: "Member of Laravel Company Organization",
+    avatar: "https://avatars.githubusercontent.com/u/8106610?s=96&v=4",
+    github: "popiciulo",
+  },
+  {
+    name: "Syed Hammad Ahmed",
+    role: "Developer",
+    bio: "Member of Laravel Company Organization",
+    avatar: "https://avatars.githubusercontent.com/u/8712631?s=96&v=4",
+    github: "shammadahmed",
   },
 ];
 
@@ -57,6 +75,17 @@ const values = [
     icon: "ph:shield-check-duotone",
   },
 ];
+
+const esopInfo = {
+  title: "Employee Stock Ownership Plan",
+  description: "We believe in sharing success with our team. Our ESOP represents our commitment to long-term growth and talent retention.",
+  points: [
+    "Attract and retain top tech talent with competitive ownership benefits",
+    "Align employee interests with company growth and long-term success",
+    "Broad-based approach - open to all team members",
+    "Transparent financial reporting and regular valuations",
+  ],
+};
 
 const timeline = [
   {
@@ -122,6 +151,80 @@ const timeline = [
             >
               <h3 class="text-xl font-semibold text-white">{value.title}</h3>
               <p class="mt-3 text-white/70">{value.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold">Our ESOP</h2>
+        <p class="mt-4 text-xl text-white/70">
+          {esopInfo.description}
+        </p>
+      </div>
+
+      <div class="mt-12 max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {esopInfo.points.map((point, index) => (
+            <div class="glass-card p-6 animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-payflo-purple/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Icon name="ph:check" class="w-4 h-4 text-payflo-purple" />
+                </div>
+                <span class="text-white/80">{point}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-payflo-darker/30">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold">Meet Our Team</h2>
+        <p class="mt-4 text-xl text-white/70">
+          The talented individuals behind Laravel Company. We're a team of passionate 
+          developers building modern software solutions with Laravel.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {
+          teamMembers.map((member, index) => (
+            <div 
+              class="glass-card animate-on-scroll p-6 text-center group"
+              style={`animation-delay: ${index * 0.1}s`}
+            >
+              <div class="relative inline-block mb-4">
+                <img
+                  src={member.avatar}
+                  alt={`${member.name} avatar`}
+                  class="w-20 h-20 rounded-full mx-auto border-3 border-payflo-purple/30 group-hover:border-payflo-purple transition-colors duration-300"
+                  onerror={`this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=7c3aed&color=fff'`}
+                />
+              </div>
+              <h3 class="text-lg font-semibold text-white mb-1">
+                {member.name}
+              </h3>
+              <p class="text-white/60 text-sm">{member.role}</p>
+              <p class="mt-2 text-white/50 text-sm">{member.bio}</p>
+              {member.github && (
+                <a 
+                  href={`https://github.com/${member.github}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-3 inline-flex items-center gap-1 text-sm text-white/50 hover:text-payflo-purple transition-colors"
+                >
+                  <Icon name="ph:github-logo" class="w-4 h-4" />
+                  {member.github}
+                </a>
+              )}
             </div>
           ))
         }

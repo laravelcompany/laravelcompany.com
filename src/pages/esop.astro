@@ -1,0 +1,226 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const hrStrategy = {
+  title: "Human Resources & Talent Retention",
+  description: "Attract and retain top geolocation and 3D maps talent with ESOP",
+  points: [
+    "Use ESOP as a valuable means to secure specialized tech talent in competitive markets",
+    "Romanian Model: Intermediary entity acquires and administers shares until fully paid, then transfers to employees",
+    "Broad-based, qualified plan approach - open to all or most workers",
+    "Align employee interests with company growth and long-term success",
+  ],
+  icon: "ph:users-three-duotone",
+};
+
+const legalFramework = {
+  title: "Legal & Governance Framework",
+  description: "Compliant Romanian regulatory structure for ESOP implementation",
+  points: [
+    "General Assembly: One vote per participant in the intermediary entity",
+    "Transparency & Disclosure: Legally required to disclose all financial information to participants",
+    "Feasibility Study: Required financing of preliminary study before implementing ESOP",
+    "LLC + Fiduciary: Professionalized decision-making while employees hold economic interest",
+  ],
+  icon: "ph:buildings-duotone",
+};
+
+const financialStrategy = {
+  title: "Financial Strategy & Funding",
+  description: "Sophisticated corporate finance tool for growth and succession planning",
+  points: [
+    "Leveraged Financing: Fiduciary entity borrows (guaranteed by company), repaid from profits",
+    "Internal Market: Creates liquidity for shares in non-listed software company",
+    "Individual Capital Accounts (ICAs): Track net asset value per participant",
+    "Dividend reinvestment options for sustainable growth",
+  ],
+  icon: "ph:chart-line-up-duotone",
+};
+
+const implementation = {
+  title: "Implementation Considerations",
+  description: "Best practices for successful ESOP execution",
+  points: [
+    "Transitionary Vehicle: Leads to individual share ownership (not perpetual trust)",
+    "Risk Mitigation: ESOP is a benefit on top of wages, leaving salaries unaffected",
+    "Clear exit strategies for employees wishing to sell shares",
+    "Regular valuation and transparent reporting",
+  ],
+  icon: "ph:gear-six-duotone",
+};
+---
+
+<Layout
+  title="ESOP - Employee Stock Ownership Plan | Laravel Company"
+  description="Learn about our Employee Stock Ownership Plan (ESOP) - a strategic approach to attracting and retaining top tech talent in geolocation and 3D maps development."
+>
+  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="container-custom">
+      <div class="text-center max-w-4xl mx-auto animate-on-scroll">
+        <span class="inline-block px-4 py-1 bg-payflo-purple/20 rounded-full text-sm font-medium text-payflo-purple mb-6">
+          Employee Ownership
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          Our <span class="gradient-text">Ownership Model</span>
+        </h1>
+        <p class="mt-6 text-xl text-white/70">
+          At Laravel Company, we believe in sharing success with our team. Our Employee Stock 
+          Ownership Plan (ESOP) represents our commitment to long-term growth and talent retention 
+          in the specialized fields of Geolocation and 3D Maps development.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/team/" class="btn btn-primary">
+            Meet Our Team
+          </a>
+          <a href="/contact/" class="btn btn-secondary">
+            Learn About Joining
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold">Built on Romanian Excellence</h2>
+        <p class="mt-4 text-xl text-white/70">
+          Our ESOP follows the Romanian regulatory framework, ensuring legal compliance while 
+          maximizing benefits for our team members.
+        </p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass-card animate-on-scroll p-8">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 rounded-xl bg-payflo-purple/20 flex items-center justify-center">
+              <Icon name={hrStrategy.icon} class="w-8 h-8 text-payflo-purple" />
+            </div>
+            <h3 class="text-xl font-semibold text-white">{hrStrategy.title}</h3>
+          </div>
+          <p class="text-white/70 mb-6">{hrStrategy.description}</p>
+          <ul class="space-y-3">
+            {hrStrategy.points.map((point) => (
+              <li class="flex items-start gap-3 text-white/70">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-green flex-shrink-0 mt-0.5" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="glass-card animate-on-scroll p-8" style="animation-delay: 0.1s">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 rounded-xl bg-payflo-blue/20 flex items-center justify-center">
+              <Icon name={legalFramework.icon} class="w-8 h-8 text-payflo-blue" />
+            </div>
+            <h3 class="text-xl font-semibold text-white">{legalFramework.title}</h3>
+          </div>
+          <p class="text-white/70 mb-6">{legalFramework.description}</p>
+          <ul class="space-y-3">
+            {legalFramework.points.map((point) => (
+              <li class="flex items-start gap-3 text-white/70">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-green flex-shrink-0 mt-0.5" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="glass-card animate-on-scroll p-8" style="animation-delay: 0.2s">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 rounded-xl bg-payflo-pink/20 flex items-center justify-center">
+              <Icon name={financialStrategy.icon} class="w-8 h-8 text-payflo-pink" />
+            </div>
+            <h3 class="text-xl font-semibold text-white">{financialStrategy.title}</h3>
+          </div>
+          <p class="text-white/70 mb-6">{financialStrategy.description}</p>
+          <ul class="space-y-3">
+            {financialStrategy.points.map((point) => (
+              <li class="flex items-start gap-3 text-white/70">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-green flex-shrink-0 mt-0.5" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="glass-card animate-on-scroll p-8" style="animation-delay: 0.3s">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+              <Icon name={implementation.icon} class="w-8 h-8 text-emerald-400" />
+            </div>
+            <h3 class="text-xl font-semibold text-white">{implementation.title}</h3>
+          </div>
+          <p class="text-white/70 mb-6">{implementation.description}</p>
+          <ul class="space-y-3">
+            {implementation.points.map((point) => (
+              <li class="flex items-start gap-3 text-white/70">
+                <Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-green flex-shrink-0 mt-0.5" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-payflo-darker/30">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto animate-on-scroll">
+        <div class="glass-card p-8 md:p-12">
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
+            Why ESOP Matters for Tech Companies
+          </h2>
+          <div class="space-y-6 text-white/70">
+            <p>
+              For a software company specializing in <strong>Geolocation and 3D Maps</strong>, 
+              attracting and retaining key employees is a major competitive challenge. Our ESOP 
+              serves as a powerful tool to secure top-tier tech talent by aligning their interests 
+              with the company's long-term success.
+            </p>
+            <p>
+              Unlike traditional compensation structures, our Employee Stock Ownership Plan 
+              provides employees with a direct stake in the company's growth. This creates a 
+              motivated workforce committed to innovation and excellence in geolocation 
+              technology and 3D mapping solutions.
+            </p>
+            <div class="p-6 bg-payflo-purple/10 rounded-xl border border-payflo-purple/20">
+              <p class="text-white font-medium">
+                <Icon name="ph:info" class="w-5 h-5 inline mr-2" />
+                Note: While our ESOP focuses on the legal and financial structures, the technical 
+                aspects of Geolocation and 3D Maps require specialized expertise that our team 
+                continues to develop through ongoing research and innovation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="py-20 bg-gradient-to-r from-payflo-purple to-payflo-blue text-white relative overflow-hidden"
+  >
+    <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl mx-auto text-center animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold">Ready to Join Our Team?</h2>
+        <p class="mt-6 text-xl opacity-90">
+          Be part of a company where you're not just an employee - you're an owner. 
+          Join Laravel Company and grow with us.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/jobs/" class="btn bg-white text-payflo-purple hover:bg-opacity-90">
+            View Open Positions
+          </a>
+          <a href="/contact/" class="btn border-2 border-white hover:bg-white/10">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

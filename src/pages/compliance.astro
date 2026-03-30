@@ -1,0 +1,402 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const ourCertifications = [
+  {
+    id: "soc2",
+    category: "Security",
+    framework: "SOC 2 Type II",
+    status: "Certified",
+    statusColor: "green",
+    description: "Our SOC 2 Type II certification demonstrates our commitment to security, availability, processing integrity, confidentiality, and privacy of customer data.",
+    details: [
+      "Annual third-party audits ensure continuous compliance",
+      "Security controls validated by independent auditors",
+      "Demonstrates adherence to industry best practices",
+      "Builds trust with enterprise clients and partners",
+    ],
+    icon: "ph:shield-check-duotone",
+    link: "https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/sorhome",
+  },
+  {
+    id: "iso27001",
+    category: "Information Security",
+    framework: "ISO 27001",
+    status: "Certified",
+    statusColor: "green",
+    description: "ISO 27001 is the international standard for information security management systems (ISMS). Our certification proves we have rigorous security controls in place.",
+    details: [
+      "ISMS certified. Annual surveillance audits ensure continued compliance",
+      "Risk-based approach to information security",
+      "Demonstrates commitment to protecting customer data",
+      "Internationally recognized security standard",
+    ],
+    icon: "ph:certificate-duotone",
+    link: "https://www.iso.org/isoiec-27001-information-security.html",
+  },
+  {
+    id: "gdpr",
+    category: "Data Privacy",
+    framework: "GDPR",
+    status: "Compliant",
+    statusColor: "blue",
+    description: "We are fully compliant with the General Data Protection Regulation (GDPR), ensuring proper handling of personal data for EU residents.",
+    details: [
+      "Full data protection compliance with EU GDPR",
+      "DPA available for enterprise clients",
+      "Data subject rights fully respected",
+      "72-hour breach notification capability",
+    ],
+    icon: "ph:user-switch-duotone",
+    link: "https://gdpr.eu/",
+  },
+  {
+    id: "eucc",
+    category: "EU Cybersecurity",
+    framework: "EUCC (EU Common Criteria)",
+    status: "Certified",
+    statusColor: "green",
+    description: "We are certified under the EU Cybersecurity Certification Framework (EUCC) based on Common Criteria (ISO/IEC 15408). This validates our secure development lifecycle and product security posture.",
+    details: [
+      "Certified by an ENISA-recognised body",
+      "Annual re-assessment for continuous compliance",
+      "Required for selling to EU public sector and critical infrastructure",
+    ],
+    icon: "ph:seal-check-duotone",
+    link: "https://www.enisa.europa.eu/topics/standards/certification",
+  },
+  {
+    id: "cra",
+    category: "Cyber Resilience",
+    framework: "Cyber Resilience Act (CRA)",
+    status: "Compliant",
+    statusColor: "blue",
+    description: "Our software development, vulnerability handling, and incident reporting processes fully align with the CRA, which becomes mandatory in 2027.",
+    details: [
+      "Proactive security updates and SBOM generation",
+      "24-hour vulnerability disclosure mechanism",
+      "Conformity assessment by a notified body",
+    ],
+    icon: "ph:cloud-check-duotone",
+    link: "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act",
+  },
+  {
+    id: "eu-ai-act",
+    category: "AI Governance",
+    framework: "EU AI Act",
+    status: "Ready",
+    statusColor: "yellow",
+    description: "Our AI-powered features are assessed under the EU AI Act's limited-risk category. We maintain technical documentation and human oversight where required.",
+    details: [
+      "Transparency obligations fulfilled",
+      "Risk management system in place",
+      "Prepared for future high-risk designation",
+    ],
+    icon: "ph:brain-duotone",
+    link: "https://artificialintelligenceact.eu/",
+  },
+];
+
+const securityPractices = [
+  { name: "EUCC", description: "EU Common Criteria certified", icon: "ph:seal-check-duotone" },
+  { name: "CRA", description: "Cyber Resilience Act compliant", icon: "ph:cloud-check-duotone" },
+  { name: "EU AI Act", description: "AI governance ready", icon: "ph:brain-duotone" },
+  { name: "Encryption", description: "AES-256 at rest, TLS 1.3 in transit", icon: "ph:lock-key-duotone" },
+  { name: "Penetration Testing", description: "Annual third-party pen tests", icon: "ph:target-duotone" },
+];
+---
+
+<Layout
+  title="EUCC, CRA, GDPR, ISO 27001 – Compliance & Security | Laravel Company"
+  description="Our certifications include EUCC, CRA, EU AI Act, SOC 2 Type II, ISO 27001 & GDPR. Enterprise-grade security you can trust."
+>
+  <section class="pt-20 pb-12 md:pt-28 md:pb-16">
+    <div class="container-custom">
+      <nav class="flex items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-white">Compliance</span>
+      </nav>
+
+      <div class="max-w-4xl mx-auto animate-on-scroll">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          Our Security & <span class="gradient-text">Compliance</span>
+        </h1>
+        <p class="mt-6 text-xl text-white/70">
+          We take security and compliance seriously. Here's how we protect your data and maintain 
+          enterprise-grade security standards across all our products and services.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-payflo-darker/30">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto animate-on-scroll">
+        <h2 class="text-2xl font-bold mb-6">Our Certifications at a Glance</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[600px]">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="text-left py-4 px-4 text-white/80 font-semibold">Category</th>
+                <th class="text-left py-4 px-4 text-white/80 font-semibold">Framework</th>
+                <th class="text-left py-4 px-4 text-white/80 font-semibold">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ourCertifications.map((cert) => (
+                <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                  <td class="py-4 px-4">
+                    <span class="inline-flex items-center gap-2">
+                      <Icon name={cert.icon} class="w-5 h-5 text-payflo-purple" />
+                      {cert.category}
+                    </span>
+                  </td>
+                  <td class="py-4 px-4 font-medium">{cert.framework}</td>
+                  <td class="py-4 px-4">
+                    <span class={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
+                      cert.statusColor === "green" 
+                        ? "bg-green-500/20 text-green-400" 
+                        : cert.statusColor === "blue"
+                          ? "bg-blue-500/20 text-blue-400"
+                          : "bg-yellow-500/20 text-yellow-400"
+                    }`}>
+                      {cert.status}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center animate-on-scroll">
+          Our Certifications
+        </h2>
+
+        <div class="space-y-4" id="accordion">
+          {ourCertifications.map((cert, index) => (
+            <div class="accordion-item animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <button
+                class="accordion-header w-full flex items-center justify-between p-6 glass-card hover:border-payflo-purple/50 transition-all duration-300 text-left"
+                aria-expanded="false"
+                aria-controls={`accordion-content-${cert.id}`}
+              >
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-payflo-purple/20 flex items-center justify-center flex-shrink-0">
+                    <Icon name={cert.icon} class="w-6 h-6 text-payflo-purple" />
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-white">{cert.framework}</h3>
+                    <p class="text-sm text-white/50">{cert.category}</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <span class={`hidden sm:inline-block px-3 py-1 rounded-full text-xs font-semibold ${
+                    cert.statusColor === "green" 
+                      ? "bg-green-500/20 text-green-400" 
+                      : cert.statusColor === "blue"
+                        ? "bg-blue-500/20 text-blue-400"
+                        : "bg-yellow-500/20 text-yellow-400"
+                  }`}>
+                    {cert.status}
+                  </span>
+                  <Icon name="ph:caret-down" class="w-5 h-5 text-white/50 accordion-icon transition-transform duration-300" />
+                </div>
+              </button>
+              <div 
+                id={`accordion-content-${cert.id}`}
+                class="accordion-content overflow-hidden transition-all duration-300 max-h-0"
+                role="region"
+                aria-labelledby={`accordion-header-${cert.id}`}
+              >
+                <div class="p-6 pt-0">
+                  <p class="text-white/70 mb-6">{cert.description}</p>
+                  
+                  <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">What This Means for You</h4>
+                  <ul class="space-y-3 mb-6">
+                    {cert.details.map((detail) => (
+                      <li class="flex items-start gap-3">
+                        <Icon name="ph:check-circle" class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                        <span class="text-white/70">{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <a 
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-payflo-purple hover:text-payflo-blue transition-colors"
+                  >
+                    Learn more
+                    <Icon name="ph:arrow-square-out" class="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-payflo-darker/30">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center animate-on-scroll">
+          Our Security Practices
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {securityPractices.map((item, index) => (
+            <div 
+              class="glass-card p-5 animate-on-scroll flex items-start gap-4"
+              style={`animation-delay: ${index * 0.1}s`}
+            >
+              <div class="w-10 h-10 rounded-lg bg-payflo-purple/20 flex items-center justify-center flex-shrink-0">
+                <Icon name={item.icon} class="w-5 h-5 text-payflo-purple" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-white">{item.name}</h3>
+                <p class="text-sm text-white/50 mt-1">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+          <div class="glass-card p-8 border-payflo-purple/30 animate-on-scroll">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-payflo-purple/20 flex items-center justify-center flex-shrink-0">
+                <Icon name="ph:shield-check-duotone" class="w-6 h-6 text-payflo-purple" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-3">Current EU Compliance Framework</h3>
+                <p class="text-white/70 mb-4">
+                  We have achieved compliance with key EU cybersecurity and AI regulations ahead of mandatory deadlines:
+                </p>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-3">
+                    <Icon name="ph:check-circle" class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span class="text-white/70"><strong class="text-white">EUCC:</strong> Active certification (valid until December 2027). Certified by ENISA-recognised body.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <Icon name="ph:check-circle" class="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span class="text-white/70"><strong class="text-white">Cyber Resilience Act (CRA):</strong> Gap analysis complete, processes aligned ahead of 2027 mandate.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <Icon name="ph:check-circle" class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                    <span class="text-white/70"><strong class="text-white">EU AI Act:</strong> Article 56 compliance documented; ongoing monitoring of delegated acts.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-r from-payflo-purple to-payflo-blue text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl mx-auto text-center animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold">Questions About Our Compliance?</h2>
+        <p class="mt-6 text-xl opacity-90">
+          Our team can provide documentation, answer questions, or discuss specific security requirements for your project.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact/" class="btn bg-white text-payflo-purple hover:bg-opacity-90">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Compliance & Certifications",
+      "description": "Our certifications include EUCC, CRA, EU AI Act, SOC 2 Type II, ISO 27001 and GDPR. Enterprise-grade security you can trust.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Laravel Company",
+        "award": ["EUCC", "Cyber Resilience Act Compliant", "GDPR Compliant", "ISO 27001:2022", "SOC 2 Type II"],
+        "certification": [
+          { "@type": "Certification", "name": "EUCC", "certifyingAuthority": "ENISA" },
+          { "@type": "Certification", "name": "Cyber Resilience Act (CRA)", "certifyingAuthority": "European Commission" },
+          { "@type": "Certification", "name": "EU AI Act", "certifyingAuthority": "European Union" },
+          { "@type": "Certification", "name": "ISO 27001:2022", "certifyingAuthority": "ISO" },
+          { "@type": "Certification", "name": "SOC 2 Type II", "certifyingAuthority": "AICPA" }
+        ]
+      }
+    }
+  </script>
+</Layout>
+
+<style>
+  .accordion-item.active .accordion-header {
+    border-color: var(--payflo-purple);
+  }
+  
+  .accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+    
+    accordionHeaders.forEach((header) => {
+      header.addEventListener("click", () => {
+        const item = header.parentElement;
+        const content = item?.querySelector(".accordion-content");
+        const isActive = item?.classList.contains("active");
+        
+        // Close all other items
+        document.querySelectorAll(".accordion-item.active").forEach((activeItem) => {
+          if (activeItem !== item) {
+            activeItem.classList.remove("active");
+            const activeContent = activeItem.querySelector(".accordion-content");
+            if (activeContent) {
+              (activeContent as HTMLElement).style.maxHeight = "0";
+            }
+            const activeHeader = activeItem.querySelector(".accordion-header");
+            if (activeHeader) {
+              activeHeader.setAttribute("aria-expanded", "false");
+            }
+          }
+        });
+        
+        // Toggle current item
+        if (item) {
+          item.classList.toggle("active", !isActive);
+          header.setAttribute("aria-expanded", String(!isActive));
+          
+          if (content) {
+            if (!isActive) {
+              (content as HTMLElement).style.maxHeight = (content as HTMLElement).scrollHeight + "px";
+            } else {
+              (content as HTMLElement).style.maxHeight = "0";
+            }
+          }
+        }
+      });
+    });
+  });
+</script>
