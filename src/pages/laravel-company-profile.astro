@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Laravel Company Profile – Laravel Company";
+const pageDescription = "Explore our Laravel company profile on GitHub. Discover our open-source packages, Laravel development expertise, and years of contribution to the ecosystem.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="pt-20">
+    <section class="py-20 relative overflow-hidden">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-payflo-purple/10 blur-[120px] rounded-full -z-10"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-payflo-pink/10 blur-[120px] rounded-full -z-10"></div>
+
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+            Our <span class="gradient-text">Laravel Company Profile</span>
+          </h1>
+          <p class="text-xl text-white/70 leading-relaxed">
+            Discover our complete Laravel company profile and explore our open-source contributions, packages, and development expertise on GitHub.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <article class="glass-card p-8 md:p-12 border-white/20 rounded-2xl">
+            <h2 class="text-2xl font-black text-white mb-6">Our Laravel Company Profile & Open Source Work</h2>
+            
+            <div class="text-white/70 leading-relaxed space-y-6">
+              <p>
+                Welcome to our official Laravel company profile. We are a dedicated Laravel development agency with extensive experience in building robust, scalable applications using the Laravel framework. Our team has been contributing to the Laravel ecosystem for years, creating tools and packages that help developers worldwide.
+              </p>
+              
+              <p>
+                Our Laravel company profile showcases a diverse portfolio of open-source projects, from UI components and mail utilities to SEO tools and GPT integrations. We believe in giving back to the community that has supported our growth, which is why all our Laravel packages are freely available on GitHub.
+              </p>
+
+              <h3 class="text-xl font-black text-white pt-4">What You'll Find on Our GitHub Profile</h3>
+              
+              <p>
+                Our Laravel company profile features multiple open-source packages that demonstrate our expertise in Laravel development. These include Laravel UI for rapid prototyping, Laravel Mail for email handling, Laravel SEO for search optimization, and Laravel GPT for AI integration. Each repository reflects our commitment to code quality and practical solutions.
+              </p>
+
+              <p>
+                Beyond our own packages, our Laravel company profile also highlights our active participation in the broader Laravel community. We contribute to core Laravel packages, submit pull requests, and engage with other developers to improve the framework we all rely on.
+              </p>
+
+              <h3 class="text-xl font-black text-white pt-4">Why Explore Our Laravel Company Profile</h3>
+              
+              <p>
+                Whether you're evaluating potential partners for your next Laravel project or looking to learn from our open-source work, our GitHub profile provides valuable insight into our technical capabilities. You'll see firsthand how we approach problem-solving, our coding standards, and our dedication to creating maintainable solutions.
+              </p>
+
+              <p>
+                Our Laravel company profile serves as a portfolio of our skills and a testament to our passion for Laravel development. We invite you to explore our repositories, review our code, and see why we're recognized as a leading Laravel development company.
+              </p>
+            </div>
+
+            <div class="mt-10 pt-8 border-t border-white/10">
+              <a 
+                href="https://github.com/laravelcompany" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="btn btn-primary inline-flex items-center gap-3 text-lg"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                </svg>
+                View Our GitHub Profile
+              </a>
+              <p class="mt-4 text-white/50 text-sm">
+                Explore our Laravel packages, repositories, and contribution history
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="max-w-4xl mx-auto mt-16">
+          <h2 class="text-2xl font-black text-white text-center mb-8">Our Key Laravel Packages</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-6 border-white/10 rounded-xl">
+              <h3 class="text-lg font-black text-white mb-2">Laravel UI</h3>
+              <p class="text-white/60 text-sm">Rapid frontend scaffolding for Laravel applications</p>
+            </div>
+            <div class="glass-card p-6 border-white/10 rounded-xl">
+              <h3 class="text-lg font-black text-white mb-2">Laravel Mail</h3>
+              <p class="text-white/60 text-sm">Powerful email management and templates</p>
+            </div>
+            <div class="glass-card p-6 border-white/10 rounded-xl">
+              <h3 class="text-lg font-black text-white mb-2">Laravel SEO</h3>
+              <p class="text-white/60 text-sm">Search engine optimization tools</p>
+            </div>
+            <div class="glass-card p-6 border-white/10 rounded-xl">
+              <h3 class="text-lg font-black text-white mb-2">Laravel GPT</h3>
+              <p class="text-white/60 text-sm">AI integration for Laravel apps</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,164 @@
+---
+const choiceCards = [
+  {
+    title: "Legally Incorporated",
+    features: ["Legally registered", "Access to professional accounting", "Access to legal advisors"],
+    buttonText: "Explore Organization Features",
+    buttonLink: "/organizations/features",
+    id: "incorp"
+  },
+  {
+    title: "Unincorporated",
+    features: ["Not legally registered", "Need access to a legal status", "Need a trusted home for your money"],
+    buttonText: "Explore Collective Features",
+    buttonLink: "/collectives/features",
+    id: "unincorp"
+  }
+];
+
+const hosts = [
+  { name: "Open Source Collective", country: "United States", description: "A US 501(c)(6) nonprofit entity serving as fiscal host to open source projects...", slug: "open-source-collective" },
+  { name: "Open Collective Europe", country: "Europe", description: "A Brussels-based nonprofit hosting groups across Europe...", slug: "open-collective-europe" },
+  { name: "Gift Collective", country: "New Zealand", description: "A NZ-based charitable entity hosting grassroots/community groups...", slug: "gift-collective" },
+  { name: "Social Change Nest", country: "United Kingdom", description: "A UK host for mutual aid groups and social movements...", slug: "social-change-nest" },
+  { name: "Raft Foundation", country: "United States", description: "A US-based 501(c)(3) fiscal sponsor that brings communities together...", slug: "raft-foundation" }
+];
+
+const stats = [
+  { number: "41", label: "Organizations" },
+  { number: "10K+", label: "Collectives" },
+  { number: "$40M", label: "Money Managed" },
+  { number: "116K+", label: "Expenses Paid" },
+  { number: "1M+", label: "Contributions Received" },
+  { number: "6M+", label: "Transactions Recorded" }
+];
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Open Finance Consortium",
+  "url": "https://openfinanceconsortium.org",
+  "sameAs": []
+};
+
+const choiceCardsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": choiceCards.map((card, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": card.title,
+    "description": card.features.join(", ")
+  }))
+};
+
+const hostsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": hosts.map((host, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": host.name,
+    "description": host.description
+  }))
+};
+
+const statsSchema = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Open Finance Consortium Impact",
+  "description": "Statistics showing the collective impact of the Open Finance Consortium",
+  "variableMeasured": stats.map(stat => ({
+    "@type": "StatisticalVariable",
+    "name": stat.label,
+    "value": stat.number
+  }))
+};
+---
+
+<section class="py-20 relative overflow-hidden">
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-payflo-purple/10 blur-[120px] rounded-full -z-10"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-payflo-pink/10 blur-[120px] rounded-full -z-10"></div>
+
+  <div class="container-custom">
+    <div class="text-center max-w-4xl mx-auto mb-16">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mt-2">
+        Collaborative Money <span class="gradient-text">Management</span>
+      </h2>
+      <p class="mt-6 text-xl text-white/70 leading-relaxed">
+        Manage your collective finances transparently with the Open Finance Consortium (OFiCo) framework.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-20">
+      {choiceCards.map(card => (
+        <div class="glass-card p-8 border-white/20 rounded-2xl" aria-labelledby={`${card.id}-heading`}>
+          <h3 id={`${card.id}-heading`} class="text-2xl font-black text-white mb-6">{card.title}</h3>
+          <ul class="space-y-3 mb-8">
+            {card.features.map(feature => (
+              <li class="flex items-center gap-3 text-white/70">
+                <svg class="w-5 h-5 text-payflo-purple flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+          <a href={card.buttonLink} class="btn btn-primary inline-flex items-center gap-2">
+            {card.buttonText}
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h3 class="text-2xl font-black text-white mb-4">Stewarded by Open Finance Consortium (OFiCo)</h3>
+      <p class="text-white/70 leading-relaxed">
+        The Open Finance Consortium provides governance, infrastructure, and support for collaborative money management,
+        ensuring transparency and accountability for all participants.
+      </p>
+    </div>
+
+    <div class="mb-20">
+      <h3 class="text-3xl font-black text-white text-center mb-12">Fiscal Hosts</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        {hosts.map(host => (
+          <article class="glass-card p-6 border-white/10 rounded-xl hover:border-payflo-purple/50 transition-colors">
+            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center text-white font-bold text-xl mb-4">
+              {host.name.charAt(0)}
+            </div>
+            <h4 class="text-lg font-black text-white mb-2">{host.name}</h4>
+            <p class="text-sm text-white/50 mb-3">{host.country}</p>
+            <p class="text-white/70 text-sm mb-4 line-clamp-3">{host.description}</p>
+            <a href={`/fiscal-hosts/${host.slug}`} class="text-payflo-purple font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+              Learn more
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div class="text-center">
+      <h3 class="text-3xl font-black text-white mb-12">Our Impact, By the Numbers</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        {stats.map(stat => (
+          <div class="text-center">
+            <div class="text-4xl md:text-5xl font-black gradient-text mb-2">{stat.number}</div>
+            <div class="text-white/60 font-medium">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(choiceCardsSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(hostsSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(statsSchema)} />
