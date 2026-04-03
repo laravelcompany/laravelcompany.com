@@ -12,7 +12,7 @@ The official website for [Laravel Company](https://laravelcompany.com), built wi
 
 ## ✨ Key Features
 
-- **Product Showcases**: Dedicated landing pages for [Laravel SEO](https://laravelseo.com), [Laravel Mail](https://laravelmail.com), and [Laravel GPT](https://laravelgpt.com).
+- **Product Showcases**: Dedicated landing pages for [Laravel SEO](https://laravelseo.com), [Laravel Mail](https://laravelmail.com), [Laravel GPT](https://laravelgpt.com), and [Laravel Social](https://laravelsocial.com).
 - **Integrated Shop**: A dynamic shop section fetching products from the Laravel Company API with built-in caching and optimization.
 - **Dark Mode**: Fully converted and optimized dark theme for better accessibility and modern look.
 - **Performance Optimized**: 
