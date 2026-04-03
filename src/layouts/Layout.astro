@@ -5,6 +5,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+
 interface Props {
   title: string;
   description?: string;
@@ -97,6 +99,20 @@ const faviconImg = await getImage({
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={new URL("/logo.svg", Astro.site)} />
+
+    {gaMeasurementId && (
+      <>
+        <!-- Google Analytics 4 -->
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
+        <script define:vars={{ gaMeasurementId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', gaMeasurementId);
+          window.gtag = gtag;
+        </script>
+      </>
+    )}
   </head>
   <body
     class="min-h-screen flex flex-col bg-payflo-dark text-white selection:bg-payflo-purple/30"
@@ -134,6 +150,90 @@ const faviconImg = await getImage({
         animatedElements.forEach((element) => {
           observer.observe(element);
         });
+
+        // GA4 Event Tracking
+        if (typeof window.gtag !== 'undefined') {
+          // Track page views for SPA navigation
+          gtag('event', 'page_view', {
+            page_location: window.location.href,
+            page_title: document.title
+          });
+
+          // Track Calendly widget interactions
+          const calendlyWidget = document.querySelector('.calendly-inline-widget');
+          if (calendlyWidget) {
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  gtag('event', 'calendly_view', {
+                    event_category: 'engagement',
+                    event_label: window.location.pathname
+                  });
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, { threshold: 0.5 });
+            observer.observe(calendlyWidget);
+          }
+
+          // Track Calendly events (scheduled, cancel, book)
+          window.addEventListener('message', (e) => {
+            if (e.data.event && e.data.event.indexOf('calendly') === 0) {
+              const eventName = e.data.event.replace('calendly.', '');
+              if (eventName === 'event_scheduled') {
+                gtag('event', 'booking_complete', {
+                  event_category: 'conversion',
+                  event_label: 'calendly_booking'
+                });
+              } else if (eventName === 'event_canceled') {
+                gtag('event', 'booking_canceled', {
+                  event_category: 'engagement',
+                  event_label: 'calendly_canceled'
+                });
+              }
+            }
+          });
+
+          // Track product purchase button clicks
+          document.querySelectorAll('a[href*="aff_code"], a[href*="purchase"], .btn-primary').forEach(btn => {
+            if (btn.textContent && btn.textContent.toLowerCase().includes('purchase')) {
+              btn.addEventListener('click', () => {
+                gtag('event', 'purchase_click', {
+                  event_category: 'ecommerce',
+                  event_label: window.location.pathname
+                });
+              });
+            }
+          });
+
+          // Track contact links
+          document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', () => {
+              gtag('event', 'contact_click', {
+                event_category: 'engagement',
+                event_label: link.getAttribute('href')
+              });
+            });
+          });
+
+          // Track external link clicks
+          document.querySelectorAll('a[target="_blank"]').forEach(link => {
+            link.addEventListener('click', () => {
+              const href = link.href;
+              if (href.includes('calendly')) {
+                gtag('event', 'booking_start', {
+                  event_category: 'conversion',
+                  event_label: href
+                });
+              } else if (href.includes('affiliate') || href.includes('product')) {
+                gtag('event', 'product_purchase_start', {
+                  event_category: 'ecommerce',
+                  event_label: href
+                });
+              }
+            });
+          });
+        }
       });
     </script>
   </body>

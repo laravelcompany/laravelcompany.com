@@ -104,6 +104,20 @@ const jsonLd = {
 
 <Layout title={`${product.title} - Laravel Company Shop`}>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script is:inline define:vars={{ productTitle: product.title, productPrice: product.price, productCategory: product.category }}>
+      document.addEventListener("astro:page-load", () => {
+        if (typeof window.gtag !== 'undefined') {
+          gtag('event', 'view_item', {
+            items: [{
+              item_id: productTitle.toLowerCase().replace(/\s+/g, '-'),
+              item_name: productTitle,
+              item_category: productCategory,
+              price: parseFloat(productPrice)
+            }]
+          });
+        }
+      });
+    </script>
     <main>
         <HeroSection
             title={product.title}
