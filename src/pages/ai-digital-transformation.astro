@@ -1,0 +1,326 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "AI-Driven Digital Transformation for Global Industries | Laravel Company";
+const pageDescription = "Harness AI/ML, data, and modern technologies to solve real-world challenges and unlock new business growth opportunities. Enterprise SaaS, fintech platforms, telemedicine software & OTT app development services.";
+const canonicalUrl = Astro.url.href;
+
+const industryGroups = [
+  {
+    title: "Financial & Regulated Industries",
+    industries: [
+      { name: "Banking & Financial Services", description: "AI-driven banking and fintech solutions delivering secure, fast, and seamless digital experiences through scalable, compliant platforms for smarter financial growth." },
+      { name: "Insurance", description: "AI-powered insurance solutions that simplify underwriting, automate claims, and deliver seamless customer experiences through secure, scalable digital platforms." },
+      { name: "Healthcare & Life Sciences", description: "Healthcare solutions powered by secure, AI-enabled digital platforms that support telemedicine, ensure compliance, and improve patient outcomes." }
+    ]
+  },
+  {
+    title: "Technology & Digital Platforms",
+    industries: [
+      { name: "SaaS & Technology", description: "Enterprise SaaS solutions built for rapid launches through scalable, AI-enabled cloud platforms that power seamless onboarding, subscriptions, and real-time insights." },
+      { name: "Telecommunication", description: "Telecom solutions leveraging intelligent AI platforms to optimize networks, enhance customer experiences, and drive operational efficiency." },
+      { name: "Professional Services", description: "Professional services platforms powered by smart AI systems that streamline workflows, improve collaboration, and enable data-driven business outcomes." }
+    ]
+  },
+  {
+    title: "Media, Entertainment & Engagement",
+    industries: [
+      { name: "Media, Entertainment & OTT", description: "AI-powered media and OTT app development with intuitive UX, smooth streaming, and powerful recommendation engines that keep viewers hooked while empowering creators." },
+      { name: "Gaming & eSports", description: "AI-driven gaming and eSports platforms that deliver real-time scores, immersive experiences, and intelligent features to engage players across every screen." },
+      { name: "Social & Dating Platforms", description: "Scalable social and dating apps equipped with AI-powered intelligence to drive personalized interactions, smart recommendations, and real-time communication." }
+    ]
+  },
+  {
+    title: "Commerce, Travel & Lifestyle",
+    industries: [
+      { name: "Retail & eCommerce", description: "Next-gen platforms with live insights, bespoke experiences, and operational agility." },
+      { name: "Real Estate & PropTech", description: "AI-led solutions delivering predictive analytics & seamless property engagements." },
+      { name: "Education & Learning", description: "AI-driven EdTech apps for personalised learning, engagement, and student success." },
+      { name: "Lifestyle, Fitness & Consumer Services", description: "Connected AI solutions enabling smooth, customised journeys & real-time visibility." }
+    ]
+  },
+  {
+    title: "Mobility, Logistics & Travel",
+    industries: [
+      { name: "Travel, Hospitality & Aviation", description: "AI-infused travel ecosystems for hotels, airlines, and booking platforms to enhance guest experiences and streamline end-to-end operations." },
+      { name: "Transportation, Logistics & Supply Chain", description: "Intelligent platforms delivering real-time tracking, smart routing, and optimised warehouse operations." },
+      { name: "Mobility, Automotive & EV", description: "AI-enabled mobility solutions that drive predictive diagnostics, streamline operations, and enhance user engagement." }
+    ]
+  },
+  {
+    title: "Industrial, Energy & Mobility",
+    industries: [
+      { name: "Manufacturing", description: "AI-native systems enabling insights, integrating IoT, reducing downtime and costs." },
+      { name: "Energy & Utilities", description: "AI-powered platforms that enhance grids, predict demand, and drive efficiency." },
+      { name: "Construction", description: "AI-first platforms optimising project management and automating workflows at scale." },
+      { name: "Aerospace & Defence", description: "Intelligent platforms for precision, operational safety, and strategic outcomes." }
+    ]
+  }
+];
+
+const caseStudies = [
+  { client: "Arya", industry: "Agriculture", result: "Arya Overcome Resource Constraints with Reduction in Project Timelines by 40%.", technologies: "Web Development, QA, React.js, Java, PHP" },
+  { client: "Adda 247", industry: "EdTech", result: "A Leading EdTech Organization Increases User Traffic and Revenue by 45%.", technologies: "Web Development, Mobile Development, QA, React.js, Node.js, Android Native" },
+  { client: "Openplay", industry: "Entertainment", result: "Openplay Achieves 30% Increase in User Engagement", technologies: "Web Development, React.js, Node.js, Next.js" }
+];
+
+const testimonials = [
+  { name: "Bruno Lhote", title: "Founder & CEO, Astrology App", quote: "DigiMantra has greatly enhanced our sales and operational efficiency, leading to a noticeable improvement in our bottom line. Their team has delivered tasks on time and enthusiastically met our project's needs." },
+  { name: "Zak Garbor", title: "Co-Founder, Clinical Athlete, US", quote: "DigiMantra has greatly enhanced our sales and operational efficiency, leading to a noticeable improvement in our bottom line. Their team has delivered tasks on time and enthusiastically met our project's needs." },
+  { name: "Okuwehi Moseri", title: "Founder, On-Demand Fuel Solutions", quote: "Great work, great communication! Their agile methodology and regular communication ensured high-quality results and exceptional client satisfaction." },
+  { name: "Matthew Oefinger", title: "Chief Data Scientist, Ahara Corporation, USA", quote: "DigiMantra's technical proficiency & communication was outstanding throughout the project. They were flexible, making the entire development process hassle-free." },
+  { name: "Kelli Fox", title: "CEO, Astrolife, Australia", quote: "DigiMantra's technical proficiency & communication was outstanding… I would recommend them to those seeking a professional development team." },
+  { name: "David George", title: "CTO, GoEquipMe", quote: "DigiMantra's team has done a fantastic job… Response time was quick! They went above & beyond… I would recommend them to anyone looking for ALL-STAR development." },
+  { name: "Joshua Tutu", title: "CEO, Involvvely, USA", quote: "Great communication and great work! Their proactive approach made our cooperation seamless, minimizing the need for close supervision." },
+  { name: "Luke Goodman", title: "Global Marketing Manager, The Veneer Hub, UK", quote: "Great communication and great work! Their proactive approach made our cooperation seamless… Because of their help, we were able to launch quickly." }
+];
+
+const companyLinks = [
+  { name: "Industries", href: "/#industries" },
+  { name: "Contact Us", href: "/contact/" },
+  { name: "Career", href: "/jobs/" },
+  { name: "Leadership", href: "/team/" }
+];
+
+const resourceLinks = [
+  { name: "Blogs", href: "/blog/" },
+  { name: "Case Studies", href: "/#case-studies" }
+];
+
+const serviceLinks = [
+  { name: "Product Engineering", href: "/services/" },
+  { name: "Custom Software Development", href: "/services/" },
+  { name: "Mobile App Development", href: "/services/" },
+  { name: "MVP Development", href: "/services/" },
+  { name: "AI Consulting & Implementation", href: "/services/" },
+  { name: "Staff / Team Augmentation", href: "/services/" },
+  { name: "Web Development", href: "/services/" },
+  { name: "Design & Experience Services", href: "/services/" },
+  { name: "Digital Growth & Marketing", href: "/services/" }
+];
+
+const solutionLinks = [
+  { name: "Salesforce", href: "/solutions/" },
+  { name: "SAP", href: "/solutions/" },
+  { name: "ServiceNow", href: "/solutions/" },
+  { name: "Microsoft Dynamics 365 (D365)", href: "/solutions/" },
+  { name: "Odoo", href: "/solutions/" },
+  { name: "Zoho", href: "/solutions/" }
+];
+
+const locations = [
+  { country: "USA", phone: "+1 929-470-4267", address: "STE A, Dover, Kent County, 19001, United States" },
+  { country: "UK", phone: "+44 7404 022559", address: "Cardiff Bay Business Centre, Lewis Road, Ocean Park, Cardiff, UK" },
+  { country: "Dubai", phone: "", address: "Business Bay Square - Dubai, United Arab Emirates" },
+  { country: "India (Bengaluru)", phone: "", address: "INNOV8, Tower A, Mantri Commercio, Bengaluru 560103" },
+  { country: "India (Punjab)", phone: "+91-172-613-1700", address: "Sec 74, Sahibzada Ajit Singh Nagar, Punjab 160055" },
+  { country: "India (Ludhiana)", phone: "+91-161-281-6517", address: "Science & Technology Entrepreneurs' Park, Gill Rd, Ludhiana" }
+];
+
+const navItems = [
+  { name: "What We Build", href: "/#industries" },
+  { name: "Industries", href: "/#industries" },
+  { name: "Use Cases", href: "/#case-studies" },
+  { name: "Insights", href: "/blog/" },
+  { name: "Company", href: "/about-us/" }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-payflo-dark via-purple-900/20 to-payflo-darker"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <div class="container-custom relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+          <span class="gradient-text">AI-Driven Digital Transformation</span> for Global Industries
+        </h1>
+        <p class="text-xl md:text-2xl text-white/70 mb-8 max-w-3xl mx-auto">
+          Harness AI/ML, data, and modern technologies to solve real-world challenges and unlock new business growth opportunities.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="/contact/" class="btn btn-primary text-lg px-8 py-4">
+            Schedule a Free Consultation
+          </a>
+        </div>
+        
+        <div class="glass-card inline-block">
+          <p class="text-payflo-purple font-bold mb-4">Powering Business Success Worldwide Through AI-Led Innovation</p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+            <div>
+              <p class="text-2xl font-black text-white">13+</p>
+              <p class="text-white/50">Years of Expertise</p>
+            </div>
+            <div>
+              <p class="text-2xl font-black text-white">2K+</p>
+              <p class="text-white/50">Clients Worldwide</p>
+            </div>
+            <div>
+              <p class="text-2xl font-black text-white">4.8/5</p>
+              <p class="text-white/50">Top-Rated on Clutch</p>
+            </div>
+            <div>
+              <p class="text-2xl font-black text-white">100%</p>
+              <p class="text-white/50">Global Data Security</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Section -->
+  <section id="industries" class="section">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-black mb-4">
+          Explore Future-Ready, AI-Powered Digital Systems for Global Verticals
+        </h2>
+        <p class="text-xl text-white/50 mb-4">Optimize Operations & Scale Without Limits</p>
+        <a href="/contact/" class="inline-flex items-center text-payflo-purple font-bold hover:text-white transition-colors">
+          Talk to Industry Experts <span class="ml-2">→</span>
+        </a>
+      </div>
+      
+      <div class="space-y-8">
+        {industryGroups.map((group) => (
+          <div class="glass-card">
+            <h3 class="text-xl font-bold mb-6 text-payflo-purple">{group.title}</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {group.industries.map((industry) => (
+                <div class="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-payflo-purple/50 transition-colors">
+                  <h4 class="font-bold text-lg mb-3">{industry.name}</h4>
+                  <p class="text-white/60 text-sm leading-relaxed">{industry.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="case-studies" class="section bg-payflo-dark/50">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-black mb-4">
+          Redefining Industries Through Next-Gen Cognitive Solutions
+        </h2>
+        <a href="/case-studies/" class="inline-flex items-center text-payflo-purple font-bold hover:text-white transition-colors">
+          All Case Studies <span class="ml-2">→</span>
+        </a>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        {caseStudies.map((study) => (
+          <div class="glass-card">
+            <div class="text-xs font-bold text-payflo-purple uppercase tracking-wider mb-2">{study.industry}</div>
+            <h3 class="text-xl font-bold mb-4">{study.client}</h3>
+            <p class="text-white/70 mb-4">{study.result}</p>
+            <p class="text-sm text-white/50">{study.technologies}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-black mb-4">
+          Words of Trust from Leaders Across Industries
+        </h2>
+        <p class="text-white/50">See How Laravel Company Built Lasting Partnerships with Pioneers, Disruptors, and Changemakers</p>
+      </div>
+      
+      <div class="testimonial-slider relative">
+        <div class="overflow-x-auto pb-4 scrollbar-hide" id="testimonial-track">
+          <div class="flex gap-6" id="testimonial-cards">
+            {testimonials.map((testimonial) => (
+              <div class="testimonial-card min-w-[300px] md:min-w-[400px] flex-shrink-0">
+                <p class="text-white/70 mb-6 italic">"{testimonial.quote}"</p>
+                <div class="border-t border-white/10 pt-4">
+                  <p class="font-bold">{testimonial.name}</p>
+                  <p class="text-sm text-white/50">{testimonial.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <button id="testimonial-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-payflo-purple transition-colors" aria-label="Previous testimonial">
+          ←
+        </button>
+        <button id="testimonial-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-payflo-purple transition-colors" aria-label="Next testimonial">
+          →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="section py-24 bg-gradient-to-r from-payflo-purple/20 to-payflo-pink/20">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl md:text-4xl font-black mb-6">
+        Revolutionize Your Business Operations with Intelligent, AI-Powered Solutions Tailored to Your Industry Needs
+      </h2>
+      <a href="/contact/" class="btn btn-primary text-lg inline-flex items-center">
+        Consult Our Experts <span class="ml-2">→</span>
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .testimonial-slider {
+    position: relative;
+  }
+  
+  .testimonial-slider button {
+    z-index: 10;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonial-slider button {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const track = document.getElementById('testimonial-track');
+    const prevBtn = document.getElementById('testimonial-prev');
+    const nextBtn = document.getElementById('testimonial-next');
+    
+    if (track && prevBtn && nextBtn) {
+      let scrollAmount = 0;
+      const cardWidth = 420;
+      
+      prevBtn.addEventListener('click', () => {
+        scrollAmount = Math.max(0, scrollAmount - cardWidth);
+        track.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        scrollAmount = Math.min(maxScroll, scrollAmount + cardWidth);
+        track.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+      });
+    }
+  });
+</script>
