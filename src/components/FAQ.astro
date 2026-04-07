@@ -111,8 +111,6 @@ const organizationSchema = {
 <section
   class="py-24 relative overflow-hidden"
   aria-labelledby="faq-heading"
-  itemscope
-  itemtype="https://schema.org/FAQPage"
 >
   <!-- Background blobs -->
   <div
@@ -165,7 +163,7 @@ const organizationSchema = {
     </header>
 
     <main class="mt-20 max-w-5xl mx-auto" role="main">
-      <div class="space-y-6" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="space-y-6">
         {
           faqs.map((faq, index) => (
             <article
