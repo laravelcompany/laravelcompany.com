@@ -15,7 +15,7 @@ import { Icon } from "astro-icon/components";
 			"name": "Laravel Software Products",
 			"description": "Self-hosted Laravel software platforms for developers and businesses. Buy-to-own solutions with full control and no SaaS lock-in.",
 			"url": "https://laravelcompany.com/software",
-			"numberOfItems": 5,
+			"numberOfItems": 6,
 			"itemListOrder": "https://schema.org/ItemListOrderDescending",
 			"itemListElement": [
 				{
@@ -67,6 +67,16 @@ import { Icon } from "astro-icon/components";
 						"url": "https://laravelcompany.com/software/leads-captain",
 						"applicationCategory": "BusinessApplication"
 					}
+				},
+				{
+					"@type": "ListItem",
+					"position": 6,
+					"item": {
+						"@type": "SoftwareApplication",
+						"name": "Laravel Social",
+						"url": "https://laravelcompany.com/software/laravel-social",
+						"applicationCategory": "BusinessApplication"
+					}
 				}
 			]
 		}
@@ -95,7 +105,7 @@ import { Icon } from "astro-icon/components";
 	<!-- CTA Event Tracking -->
 	<script is:inline>
 		document.addEventListener('astro:page-load', function() {
-			const ctaButtons = document.querySelectorAll('a[href*="/contact"], a[href*="/software/laravel-"], a[href*="laravelmail.com"], a[href*="laravelseo.com"], a[href*="laravelgpt.dev"]');
+			const ctaButtons = document.querySelectorAll('a[href*="/contact"], a[href*="/software/laravel-"], a[href*="laravelmail.com"], a[href*="laravelseo.com"], a[href*="laravelgpt.com"], a[href*="laravelsocial.com"]');
 			
 			ctaButtons.forEach(function(button) {
 				button.addEventListener('click', function(e) {
@@ -106,8 +116,10 @@ import { Icon } from "astro-icon/components";
 						ctaType = 'laravel_mail_cta';
 					} else if (href.includes('laravel-seo') || href.includes('laravelseo.com')) {
 						ctaType = 'laravel_seo_cta';
-					} else if (href.includes('laravel-gpt') || href.includes('laravelgpt.dev')) {
+					} else if (href.includes('laravel-gpt') || href.includes('laravelgpt.com')) {
 						ctaType = 'laravel_gpt_cta';
+					} else if (href.includes('laravel-social') || href.includes('laravelsocial.com')) {
+						ctaType = 'laravel_social_cta';
 					} else if (href.includes('/contact')) {
 						ctaType = 'contact_cta';
 					}
@@ -379,9 +391,9 @@ import { Icon } from "astro-icon/components";
 									Learn More
 									<Icon name="ph:arrow-right" class="w-5 h-5" />
 								</a>
-								<a href="https://laravelgpt.dev" target="_blank" class="text-white/60 hover:text-white font-semibold transition-colors flex items-center gap-2">
+								<a href="https://laravelgpt.com" target="_blank" class="text-white/60 hover:text-white font-semibold transition-colors flex items-center gap-2">
 									<Icon name="ph:globe-duotone" class="w-4 h-4" />
-									laravelgpt.dev
+									laravelgpt.com
 								</a>
 							</div>
 						</div>
@@ -522,6 +534,80 @@ import { Icon } from "astro-icon/components";
 								<a href="/software/leads-captain/" class="btn btn-primary inline-flex items-center gap-2">
 									Learn More
 									<Icon name="ph:arrow-right" class="w-5 h-5" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Laravel Social -->
+			<div class="animate-on-scroll delay-500 mb-16 group">
+				<div class="glass-card p-8 md:p-10 hover:border-orange-500/30 transition-all duration-500">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+						<div class="lg:col-span-5 lg:order-2">
+							<div class="relative">
+								<div class="absolute inset-0 bg-gradient-to-br from-orange-600 to-orange-800 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+								<div class="relative h-64 bg-gradient-to-br from-orange-600 to-orange-800 rounded-2xl flex items-center justify-center">
+									<div class="text-center text-white/90">
+										<Icon name="ph:share-network-duotone" class="w-20 h-20 mx-auto mb-4 opacity-80" />
+										<span class="text-xl font-bold">Laravel Social</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="lg:col-span-7 lg:order-1">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="h-10 w-10 rounded-xl bg-gradient-to-br from-orange-600 to-orange-800 flex items-center justify-center">
+									<Icon name="ph:share-network-duotone" class="w-5 h-5 text-white" />
+								</div>
+								<h2 class="text-3xl font-black text-white">Laravel Social</h2>
+							</div>
+							
+							<p class="text-lg text-white/70 leading-relaxed mb-6">
+								A next-gen social media automation platform powered by AI. Schedule posts, generate engaging content, 
+								and grow your brand across all channels from one powerful dashboard.
+							</p>
+							
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+								<div class="flex items-start gap-3">
+									<Icon name="ph:robot-duotone" class="w-5 h-5 text-orange-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">AI Post Generation</span>
+										<span class="text-white/50 text-sm">Auto-generate engaging content</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:image-square-duotone" class="w-5 h-5 text-orange-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">AI Image Generation</span>
+										<span class="text-white/50 text-sm">Create stunning visuals with AI</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:share-fat-duotone" class="w-5 h-5 text-orange-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Multi-Platform</span>
+										<span class="text-white/50 text-sm">Facebook, Instagram, Twitter, TikTok</span>
+									</div>
+								</div>
+								<div class="flex items-start gap-3">
+									<Icon name="ph:calendar-dots-duotone" class="w-5 h-5 text-orange-400 mt-0.5" />
+									<div>
+										<span class="text-white font-semibold block">Content Calendar</span>
+										<span class="text-white/50 text-sm">Drag-and-drop scheduling</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="flex flex-wrap items-center gap-4">
+								<a href="/software/laravel-social/" class="btn btn-primary inline-flex items-center gap-2">
+									Learn More
+									<Icon name="ph:arrow-right" class="w-5 h-5" />
+								</a>
+								<a href="https://laravelsocial.com" target="_blank" class="text-white/60 hover:text-white font-semibold transition-colors flex items-center gap-2">
+									<Icon name="ph:globe-duotone" class="w-4 h-4" />
+									laravelsocial.com
 								</a>
 							</div>
 						</div>
