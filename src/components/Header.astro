@@ -6,14 +6,37 @@ interface NavItem {
     name: string;
     href: string;
     target?: string;
+    children?: NavItem[];
 }
 
 const navItems: NavItem[] = [
-    { name: "What We Build", href: "/#industries" },
-    { name: "Industries", href: "/#industries" },
-    { name: "Use Cases", href: "/#case-studies" },
-    { name: "Insights", href: "/blog/" },
-    { name: "Company", href: "/about-us/" },
+    { name: "Services", href: "/#services", children: [
+        { name: "Software Development", href: "/software-development-agency-london/" },
+        { name: "Laravel Consulting", href: "/laravel-consulting/" },
+        { name: "AWS Consulting", href: "/hire-aws-consultant/" },
+        { name: "Magento Agency", href: "/magento-agency-london/" },
+        { name: "Database Development", href: "/database-development-services/" },
+        { name: "AI & Digital Transformation", href: "/ai-digital-transformation/" },
+    ]},
+    { name: "Products", href: "/#products", children: [
+        { name: "Laravel SEO", href: "/software/laravel-seo/" },
+        { name: "Laravel Mail", href: "/software/laravel-mail/" },
+        { name: "Laravel GPT", href: "/software/laravel-gpt/" },
+        { name: "Laravel UI", href: "/software/laravel-ui/" },
+        { name: "LeadsCaptain", href: "/software/leads-captain/" },
+        { name: "Laravel Social", href: "/software/laravel-social/" },
+    ]},
+    { name: "Solutions", href: "/solutions/" },
+    { name: "Company", href: "/about-us/", children: [
+        { name: "About Us", href: "/about-us/" },
+        { name: "Our Team", href: "/team/" },
+        { name: "Careers", href: "/jobs/" },
+        { name: "ESOP Program", href: "/esop/" },
+    ]},
+    { name: "Resources", href: "/#resources", children: [
+        { name: "Pricing", href: "/pricing/" },
+        { name: "Compliance", href: "/compliance/" },
+    ]},
 ];
 ---
 
@@ -39,44 +62,59 @@ const navItems: NavItem[] = [
 
         <!-- Desktop Nav -->
         <nav
-            class="hidden md:flex items-center space-x-8"
+            class="hidden lg:flex items-center space-x-2"
             role="navigation"
             aria-label="Main navigation"
         >
             {
                 navItems.map((item) => (
-                    <a
-                        title={item.name}
-                        target={item.target ?? "_self"}
-                        href={item.href}
-                        class="nav-link"
-                    >
-                        {item.name}
-                    </a>
+                    <div class="relative group">
+                        {item.children ? (
+                            <>
+                                <button
+                                    class="nav-link flex items-center gap-1 py-2 px-3"
+                                    aria-expanded="false"
+                                    aria-haspopup="true"
+                                >
+                                    {item.name}
+                                    <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 z-50">
+                                    <div class="glass-card rounded-xl py-3 min-w-56 shadow-xl border border-white/10">
+                                        {item.children.map((child) => (
+                                            <a
+                                                href={child.href}
+                                                class="block px-4 py-2.5 text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
+                                            >
+                                                {child.name}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            </>
+                        ) : (
+                            <a href={item.href} class="nav-link py-2 px-3">
+                                {item.name}
+                            </a>
+                        )}
+                    </div>
                 ))
             }
         </nav>
 
         <div class="flex items-center space-x-4">
-            <button 
-                id="search-toggle"
-                class="hidden md:flex items-center justify-center w-10 h-10 glass-card p-2 focus:outline-none"
-                aria-label="Search"
-            >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-            </button>
             <a
                 href="/contact/"
-                class="btn btn-primary focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2"
+                class="btn btn-primary focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2 hidden lg:inline-flex"
                 >Talk to an Expert</a
             >
 
             <!-- Mobile Menu Button -->
             <button
                 id="menu-toggle"
-                class="md:hidden flex flex-col items-center justify-center w-10 h-10 glass-card p-2 focus:outline-none"
+                class="lg:hidden flex flex-col items-center justify-center w-10 h-10 glass-card p-2 focus:outline-none"
                 aria-label="Toggle navigation menu"
                 aria-expanded="false"
             >
@@ -96,19 +134,38 @@ const navItems: NavItem[] = [
         </div>
     </div>
 
-    <!-- Mobile Dropdown Menu - Right below header -->
+    <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="mobile-menu">
         <div class="container-custom py-6">
-            <nav class="flex flex-col space-y-4">
+            <nav class="flex flex-col space-y-2">
                 {
                     navItems.map((item) => (
-                        <a href={item.href} class="mobile-menu-item">
-                            {item.name}
-                        </a>
+                        <div class="mobile-nav-group">
+                            {item.children ? (
+                                <>
+                                    <button class="mobile-nav-toggle w-full flex items-center justify-between mobile-menu-item">
+                                        <span>{item.name}</span>
+                                        <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </button>
+                                    <div class="mobile-submenu hidden pl-4 mt-2 space-y-2">
+                                        {item.children.map((child) => (
+                                            <a href={child.href} class="mobile-submenu-item">
+                                                {child.name}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </>
+                            ) : (
+                                <a href={item.href} class="mobile-menu-item">
+                                    {item.name}
+                                </a>
+                            )}
+                        </div>
                     ))
                 }
-                <a href="https://app.laravelmail.com/login" class="mobile-menu-item"> Log In </a>
-                <a href="/contact/" class="mobile-menu-cta"> Book a Demo </a>
+                <a href="/contact/" class="mobile-menu-cta">Book a Demo</a>
             </nav>
         </div>
     </div>
@@ -191,6 +248,27 @@ const navItems: NavItem[] = [
         box-shadow: 0 8px 25px rgba(124, 58, 237, 0.6);
     }
 
+    .mobile-nav-toggle.active svg {
+        transform: rotate(180deg);
+    }
+
+    .mobile-submenu-item {
+        display: block;
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.75rem 1rem;
+        border-radius: 0.75rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-submenu-item:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
     @keyframes slideDown {
         from {
             opacity: 0;
@@ -268,6 +346,18 @@ const navItems: NavItem[] = [
                     menuToggle.classList.remove("active");
                     menuToggle.setAttribute("aria-expanded", "false");
                 }
+            });
+
+            // Mobile submenu toggles
+            const mobileToggles = document.querySelectorAll('.mobile-nav-toggle');
+            mobileToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const submenu = this.nextElementSibling;
+                    if (submenu && submenu.classList.contains('mobile-submenu')) {
+                        this.classList.toggle('active');
+                        submenu.classList.toggle('hidden');
+                    }
+                });
             });
         }
     });

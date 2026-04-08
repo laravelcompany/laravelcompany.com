@@ -75,25 +75,25 @@ const enterpriseFeatures = [
     </div>
   </section>
 
-  <section class="py-20 bg-payflo-gray">
+  <section class="py-20 bg-payflo-darker/50">
     <div class="container-custom">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {tiers.map((tier, index) => (
-          <div class={`bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative animate-on-scroll delay-${index + 2}`}>
+          <div class={`bg-payflo-darker/80 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative border border-white/10 animate-on-scroll delay-${index + 2}`}>
             {tier.name === "Scale" && (
               <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-payflo-purple to-payflo-blue text-white px-4 py-1 rounded-full text-sm font-medium">
                 Most Popular
               </div>
             )}
-            <h3 class="text-2xl font-semibold">{tier.name}</h3>
+            <h3 class="text-2xl font-semibold text-white">{tier.name}</h3>
             <div class="mt-4">
-              <span class="text-4xl font-bold">{tier.price}</span>
-              <span class="text-gray-600">{tier.period}</span>
+              <span class="text-4xl font-bold text-white">{tier.price}</span>
+              <span class="text-white/60">{tier.period}</span>
             </div>
-            <p class="mt-4 text-gray-600">{tier.description}</p>
+            <p class="mt-4 text-white/60">{tier.description}</p>
             <ul class="mt-8 space-y-4">
               {tier.features.map(feature => (
-                <li class="flex items-center text-gray-700">
+                <li class="flex items-center text-white/70">
                   <Icon name="ph:check-circle-duotone" class="h-5 w-5 text-payflo-purple mr-2" />
                   {feature}
                 </li>
@@ -135,13 +135,13 @@ const enterpriseFeatures = [
   </section>
 
   <!-- Comparison Table -->
-  <section class="py-20">
+  <section class="py-20 bg-payflo-darker/30">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto mb-12 animate-on-scroll">
         <h2 class="text-3xl md:text-4xl font-bold">
           Compare Plans
         </h2>
-        <p class="mt-4 text-xl text-gray-600">
+        <p class="mt-4 text-xl text-white/70">
           Find the perfect plan for your platform's needs
         </p>
       </div>
@@ -149,36 +149,36 @@ const enterpriseFeatures = [
       <div class="overflow-x-auto">
         <table class="w-full border-collapse animate-on-scroll">
           <thead>
-            <tr class="border-b border-gray-200">
-              <th class="py-4 px-6 text-left">Features</th>
-              <th class="py-4 px-6 text-center">Growth</th>
-              <th class="py-4 px-6 text-center">Scale</th>
-              <th class="py-4 px-6 text-center">Enterprise</th>
+            <tr class="border-b border-white/10">
+              <th class="py-4 px-6 text-left text-white/80">Features</th>
+              <th class="py-4 px-6 text-center text-white/80">Growth</th>
+              <th class="py-4 px-6 text-center text-white/80">Scale</th>
+              <th class="py-4 px-6 text-center text-white/80">Enterprise</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="border-b border-gray-200">
-              <td class="py-4 px-6">Employee Limit</td>
-              <td class="py-4 px-6 text-center">500</td>
-              <td class="py-4 px-6 text-center">2,000</td>
-              <td class="py-4 px-6 text-center">Unlimited</td>
+            <tr class="border-b border-white/10">
+              <td class="py-4 px-6 text-white/70">Employee Limit</td>
+              <td class="py-4 px-6 text-center text-white/70">500</td>
+              <td class="py-4 px-6 text-center text-white/70">2,000</td>
+              <td class="py-4 px-6 text-center text-white/70">Unlimited</td>
             </tr>
-            <tr class="border-b border-gray-200">
-              <td class="py-4 px-6">Support Level</td>
-              <td class="py-4 px-6 text-center">Standard</td>
-              <td class="py-4 px-6 text-center">Priority</td>
-              <td class="py-4 px-6 text-center">24/7 Dedicated</td>
+            <tr class="border-b border-white/10">
+              <td class="py-4 px-6 text-white/70">Support Level</td>
+              <td class="py-4 px-6 text-center text-white/70">Standard</td>
+              <td class="py-4 px-6 text-center text-white/70">Priority</td>
+              <td class="py-4 px-6 text-center text-white/70">24/7 Dedicated</td>
             </tr>
-            <tr class="border-b border-gray-200">
-              <td class="py-4 px-6">API Access</td>
-              <td class="py-4 px-6 text-center">Basic</td>
-              <td class="py-4 px-6 text-center">Advanced</td>
-              <td class="py-4 px-6 text-center">Custom</td>
+            <tr class="border-b border-white/10">
+              <td class="py-4 px-6 text-white/70">API Access</td>
+              <td class="py-4 px-6 text-center text-white/70">Basic</td>
+              <td class="py-4 px-6 text-center text-white/70">Advanced</td>
+              <td class="py-4 px-6 text-center text-white/70">Custom</td>
             </tr>
-            <tr class="border-b border-gray-200">
-              <td class="py-4 px-6">White Labeling</td>
+            <tr class="border-b border-white/10">
+              <td class="py-4 px-6 text-white/70">White Labeling</td>
               <td class="py-4 px-6 text-center">
-                <Icon name="ph:x-circle-duotone" class="h-5 w-5 text-gray-400 mx-auto" />
+                <Icon name="ph:x-circle-duotone" class="h-5 w-5 text-white/40 mx-auto" />
               </td>
               <td class="py-4 px-6 text-center">
                 <Icon name="ph:check-circle-duotone" class="h-5 w-5 text-payflo-purple mx-auto" />
@@ -187,13 +187,13 @@ const enterpriseFeatures = [
                 <Icon name="ph:check-circle-duotone" class="h-5 w-5 text-payflo-purple mx-auto" />
               </td>
             </tr>
-            <tr class="border-b border-gray-200">
-              <td class="py-4 px-6">Custom Development</td>
+            <tr class="border-b border-white/10">
+              <td class="py-4 px-6 text-white/70">Custom Development</td>
               <td class="py-4 px-6 text-center">
-                <Icon name="ph:x-circle-duotone" class="h-5 w-5 text-gray-400 mx-auto" />
+                <Icon name="ph:x-circle-duotone" class="h-5 w-5 text-white/40 mx-auto" />
               </td>
               <td class="py-4 px-6 text-center">
-                <Icon name="ph:x-circle-duotone" class="h-5 w-5 text-gray-400 mx-auto" />
+                <Icon name="ph:x-circle-duotone" class="h-5 w-5 text-white/40 mx-auto" />
               </td>
               <td class="py-4 px-6 text-center">
                 <Icon name="ph:check-circle-duotone" class="h-5 w-5 text-payflo-purple mx-auto" />
@@ -205,17 +205,17 @@ const enterpriseFeatures = [
     </div>
   </section>
 
-  <section class="py-20 bg-payflo-gray">
+  <section class="py-20 bg-payflo-darker/30">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto animate-on-scroll">
-        <h2 class="text-3xl md:text-4xl font-bold">
+        <h2 class="text-3xl md:text-4xl font-bold text-white">
           Frequently Asked Questions
         </h2>
-        <p class="mt-4 text-xl text-gray-600">
+        <p class="mt-4 text-xl text-white/70">
           Have questions about our pricing? Check out our FAQ or contact us for more details.
         </p>
         <div class="mt-8">
-          <a href="/contact/" class="btn btn-secondary">
+          <a href="/contact/" class="btn btn-primary">
             Get in Touch
           </a>
         </div>
