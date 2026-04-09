@@ -2,10 +2,12 @@
 interface Props {
     title: string;
     highlightText?: string;
-    description: string;
+    subtitle?: string;
+    description?: string;
+    breadcrumbs?: { label: string; href?: string }[];
 }
 
-const { title, highlightText, description } = Astro.props;
+const { title, highlightText, subtitle, description, breadcrumbs } = Astro.props;
 ---
 
 <section class="pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden relative">
@@ -19,6 +21,16 @@ const { title, highlightText, description } = Astro.props;
     </div>
 
     <div class="container-custom relative">
+        {breadcrumbs && (
+            <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+                {breadcrumbs.map((crumb, index) => (
+                    <>
+                        <a href={crumb.href || "/"} class="hover:text-white transition-colors">{crumb.label}</a>
+                        {index < breadcrumbs.length - 1 && <span>/</span>}
+                    </>
+                ))}
+            </nav>
+        )}
         <div class="max-w-4xl">
             <h1
                 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white"
@@ -31,9 +43,11 @@ const { title, highlightText, description } = Astro.props;
                 {highlightText && <br />}
                 {title}
             </h1>
-            <p class="mt-6 text-xl text-gray-300 max-w-2xl">
-                {description}
-            </p>
+            {(subtitle || description) && (
+                <p class="mt-6 text-xl text-gray-300 max-w-2xl">
+                    {subtitle || description}
+                </p>
+            )}
         </div>
     </div>
 </section>

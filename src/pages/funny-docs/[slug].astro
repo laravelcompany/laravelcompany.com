@@ -47,6 +47,13 @@ const icon = icons[doc.id.replace(/\.md$/, "")] || "ph:file-duotone";
 <Layout title={`${title} - Funny Laravel Docs`}>
   <section class="pt-16 pb-8 bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900">
     <div class="container-custom">
+      <nav class="flex items-center gap-2 text-sm text-white/50 mb-8">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <a href="/funny-docs/" class="hover:text-white transition-colors">Funny Docs</a>
+        <span>/</span>
+        <span class="text-white">{title}</span>
+      </nav>
       <a
         href="/funny-docs"
         class="inline-flex items-center text-violet-300 hover:text-white mb-8 transition-colors"

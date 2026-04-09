@@ -104,6 +104,7 @@ const jsonLd = {
             title={job.title}
             highlightText={job.company}
             description={`Join ${job.company} and take your Laravel career to the next level.`}
+            breadcrumbs={[{ label: "Home", href: "/" }, { label: "Jobs", href: "/jobs/" }, { label: job.title }]}
         />
 
         <section class="py-16 md:py-24 bg-white dark:bg-gray-800">

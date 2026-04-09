@@ -123,6 +123,7 @@ const jsonLd = {
             title={product.title}
             highlightText={product.category}
             description={`Premium tools and solutions by Laravel Company.`}
+            breadcrumbs={[{ label: "Home", href: "/" }, { label: "Shop", href: "/shop/" }, { label: product.title }]}
         />
 
         <section class="py-16 md:py-24 bg-white dark:bg-gray-800">
