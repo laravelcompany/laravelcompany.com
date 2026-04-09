@@ -1,15 +1,17 @@
 ---
 const partners = [
-  { name: "Acme Corp", logo: "/partner-logo-1.svg" },
-  { name: "TechFlow", logo: "/partner-logo-2.svg" },
-  { name: "Quantum", logo: "/partner-logo-3.svg" },
-  { name: "Innovate", logo: "/partner-logo-4.svg" },
-  { name: "PlatformX", logo: "/partner-logo-5.svg" },
-  { name: "SyncWave", logo: "/partner-logo-6.svg" },
+  { name: "AppFutura", logo: "/assets/logos/AppFutura-3.svg" },
+  { name: "CII", logo: "/assets/logos/CII-1.svg" },
+  { name: "CLUTCH", logo: "/assets/logos/CLUTCH-1.svg" },
+  { name: "CMO", logo: "/assets/logos/CMO-2.svg" },
+  { name: "ISO", logo: "/assets/logos/iso.svg" },
+  { name: "NASSCOM", logo: "/assets/logos/nasscom-1.svg" },
+  { name: "TIE", logo: "/assets/logos/tie-2.svg" },
+  { name: "Top Developers", logo: "/assets/logos/top-developers-1.svg" },
 ];
 ---
 
-<section class="py-16 relative overflow-hidden">
+<section class="py-16 relative overflow-hidden bg-white/5">
   <div class="container-custom">
     <div class="text-center">
       <h3
@@ -20,7 +22,7 @@ const partners = [
     </div>
 
     <div
-      class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center"
+      class="mt-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center justify-items-center"
     >
       {
         partners.map((partner, index) => (
