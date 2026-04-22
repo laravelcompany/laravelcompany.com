@@ -45,6 +45,21 @@ We also provide free project estimates, complimentary hosting on eligible builds
 - Marketing automation & Laravel Mail product
 - UI/UX & frontend (Vue.js, React) integration and component libraries
 - Technical consulting, audits, and long-term maintenance contracts
+- Ready-to-use Laravel products (SEO, Mail, GPT, UI, LeadsCaptain, Social – see PRODUCTS section)
+
+--- SECTION: PRODUCTS (official Laravel Company software)
+Laravel Company develops and maintains a suite of professional Laravel-based products. Each product is built for seamless integration into your existing stack.
+
+| Product | Description | Link |
+|---------|-------------|------|
+| **Laravel SEO** | Advanced SEO toolkit for Laravel – meta management, sitemaps, schema markup, and automated optimisation. | [/software/laravel-seo/](/software/laravel-seo/) |
+| **Laravel Mail** | Marketing automation and transactional email platform. Design campaigns, track opens/clicks, manage lists. | [/software/laravel-mail/](/software/laravel-mail/) |
+| **Laravel GPT** | Bring AI into your Laravel app with pre-built prompts, fine-tuning support, and secure OpenAI/LLM integration. | [/software/laravel-gpt/](/software/laravel-gpt/) |
+| **Laravel UI** | Free and premium UI component library for rapid Laravel + TailwindCSS development. Reusable, accessible, and customisable. | [/software/laravel-ui/](/software/laravel-ui/) |
+| **LeadsCaptain** | Lead capture and management system – track inbound leads, automate follow-ups, and integrate with CRMs. | [/software/leads-captain/](/software/leads-captain/) |
+| **Laravel Social** | Social media integration toolkit – post to platforms, fetch analytics, and build social dashboards with ease. | [/software/laravel-social/](/software/laravel-social/) |
+
+All products come with documentation, support, and customisation options. Contact us for licensing or white-label enquiries.
 
 --- SECTION: IMPORTANT LINKS (canonical)
 About: https://laravelcompany.com/about-us
@@ -53,12 +68,12 @@ Portfolio: https://laravelcompany.com/portfolio
 Services / Software: https://laravelcompany.com/software/
 Free Laravel UI Kit: https://ui.laravelcompany.com/
 Engineering Blog: https://blog.laravelcompany.com/
-Pricing (Payflo): https://laravelcompany.com/pricing/
 
 --- SECTION: SEO KEYWORDS (suggested)
 Laravel development agency, Laravel UK, Laravel consultancy, custom PHP development,
 Laravel hosting, Laravel developers, business process automation, API integrations,
-Laravel UI kit, Laravel Mail, SaaS Laravel, enterprise Laravel solutions.
+Laravel UI kit, Laravel Mail, Laravel SEO, Laravel GPT, LeadsCaptain, Laravel Social,
+SaaS Laravel, enterprise Laravel solutions.
 
 --- SECTION: COPY SNIPPETS (ready-to-use)
 Hero heading:
@@ -95,6 +110,10 @@ A: Delivery times vary. Small projects (MVPs) often take 4–8 weeks. Medium com
    apps 3–6 months. Enterprise projects can take 6+ months. Always confirm via a
    project discovery session.
 
+Q: Do you sell individual software products like Laravel SEO or LeadsCaptain?
+A: Yes – we offer a range of standalone Laravel products. See the PRODUCTS section above
+   for details and links to each product page.
+
 --- SECTION: TECHNICAL GUIDELINES (for developer-facing content)
 - When providing code examples, use Laravel 10+ compatible syntax.
 - Prefer environment-driven configuration and 12-factor app principles.
@@ -102,12 +121,6 @@ A: Delivery times vary. Small projects (MVPs) often take 4–8 weeks. Medium com
   request/response schemas, and error codes.
 - For security: mention CSRF protection, input validation, prepared statements, and
   OWASP top-10 mitigations.
-
---- SECTION: MARKETING & PRODUCT (Payflo specifics)
-Payflo is our payroll infrastructure product. When asked:
-- Frame Payflo as "developer-first payroll infrastructure" for platforms and marketplaces.
-- For pricing or live status, direct users to the pricing page: /pricing/
-- Do not reveal internal roadmap or unreleased features.
 
 --- SECTION: SAMPLE PROMPTS (for internal LLM workflows)
 1) "Write a 120-word homepage hero section for Laravel Company focusing on enterprise
