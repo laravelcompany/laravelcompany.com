@@ -1,88 +1,345 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Icon } from 'astro-icon/components';
-import CTASection from '../components/CTASection.astro';
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import CTASection from "../components/CTASection.astro";
 
 const solutions = [
   {
     title: "HR Platforms",
-    description: "Add payroll to your HR platform and become the all-in-one solution your customers need. Streamline employee management, benefits, and payroll in one place.",
+    description:
+      "Add Laravel solutions to your HR platform and become the all-in-one solution your customers need. Streamline employee management, benefits, and financial operations in one place with Laravel software.",
     icon: "ph:users-duotone",
     features: [
       "Employee onboarding integration",
       "Benefits management sync",
       "Time tracking connection",
-      "Automated tax calculations"
-    ]
+      "Automated tax calculations",
+    ],
   },
   {
     title: "Vertical SaaS",
-    description: "Enhance your industry-specific software with built-in payroll capabilities. Whether you serve restaurants, healthcare, or other sectors, we adapt to your needs.",
+    description:
+      "Enhance your industry-specific software with built-in Laravel capabilities. Whether you serve restaurants, healthcare, or other sectors, we adapt to your needs.",
     icon: "ph:buildings-duotone",
     features: [
       "Industry-specific calculations",
-      "Custom payment schedules",
+      "Custom schedule management",
       "Role-based permissions",
-      "Specialized reporting"
-    ]
+      "Specialized reporting",
+    ],
   },
   {
     title: "Staffing Platforms",
-    description: "Power your staffing platform with flexible payroll that handles complex scenarios like multiple work sites, varying rates, and contractor payments.",
+    description:
+      "Power your staffing platform with flexible Laravel solutions that handle complex scenarios like multiple work sites, varying rates, and contractor payouts.",
     icon: "ph:briefcase-duotone",
     features: [
       "Multi-location support",
       "Contractor management",
       "Variable rate handling",
-      "Automated payments"
-    ]
-  }
+      "Automated Laravel processing",
+    ],
+  },
 ];
 ---
 
-<Layout 
-  title="Payflo Solutions | Payroll for Every Platform"
-  description="Discover how Payflo's payroll infrastructure can be customized for your specific industry and use case."
+<Layout
+  title="Laravel Solutions - Software solutions for businesses"
+  description="Discover how Laravel's software infrastructure can be customized for your specific industry and use case."
 >
-  <section class="pt-20 pb-16 md:pt-28 md:pb-24">
-    <div class="container-custom">
-      <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+  <section class="pt-32 pb-20 relative overflow-hidden">
+    <div class="absolute top-20 left-1/4 w-[500px] h-[500px] bg-payflo-purple/20 blur-[150px] rounded-full -z-10"></div>
+    <div class="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-payflo-pink/15 blur-[120px] rounded-full -z-10"></div>
+    <div class="absolute top-40 right-1/3 w-[300px] h-[300px] bg-payflo-blue/10 blur-[100px] rounded-full -z-10"></div>
+    <div class="container-custom relative">
+      <nav
+        class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll"
+      >
         <a href="/" class="hover:text-white transition-colors">Home</a>
         <span>/</span>
         <span class="text-white">Solutions</span>
       </nav>
       <div class="text-center max-w-4xl mx-auto">
-        <h1 class="animate-on-scroll delay-0 text-4xl md:text-5xl font-bold leading-tight">
-          Tailored <span class="gradient-text">Solutions</span> for Every Platform
+        <div
+          class="animate-on-scroll inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8"
+        >
+          <Icon name="ph:package-duotone" class="w-5 h-5 text-payflo-purple" />
+          <span class="text-sm font-semibold text-white/80">Premium Laravel Solutions</span>
+        </div>
+        <h1
+          class="animate-on-scroll delay-1 text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6"
+        >
+          Powerful <span class="gradient-text">Software</span> for Modern Businesses
         </h1>
-        <p class="animate-on-scroll delay-1 mt-6 text-xl text-gray-600">
-          Whether you're building an HR platform, vertical SaaS solution, or staffing platform, 
-          Payflo's payroll infrastructure adapts to your specific needs.
+        <p
+          class="animate-on-scroll delay-2 text-xl md:text-2xl text-white/70 leading-relaxed font-medium max-w-3xl mx-auto mb-10"
+        >
+          Self-hosted Laravel packages that give you complete control. No subscriptions, no SaaS lock-in.
+          One-time purchase, lifetime access.
         </p>
+        <div
+          class="animate-on-scroll delay-3 flex flex-wrap justify-center gap-8 text-sm text-white/60 font-bold uppercase tracking-widest"
+        >
+          <span class="flex items-center gap-2">
+            <Icon name="ph:check-circle-duotone" class="w-5 h-5 text-emerald-400" />
+            One-Time Purchase
+          </span>
+          <span class="flex items-center gap-2">
+            <Icon name="ph:check-circle-duotone" class="w-5 h-5 text-emerald-400" />
+            Lifetime Updates
+          </span>
+          <span class="flex items-center gap-2">
+            <Icon name="ph:check-circle-duotone" class="w-5 h-5 text-emerald-400" />
+            Priority Support
+          </span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="py-20 bg-payflo-gray">
+  <section class="pb-20">
+    <div class="container-custom">
+      <div class="glass-card p-8 md:p-10 hover:border-payflo-pink/30 transition-all duration-500">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div class="lg:col-span-5 lg:order-2">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-pink-600 to-pink-800 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              <div class="relative h-64 bg-gradient-to-br from-pink-600 to-pink-800 rounded-2xl flex items-center justify-center">
+                <div class="text-center text-white/90">
+                  <Icon name="ph:magnifying-glass-duotone" class="w-20 h-20 mx-auto mb-4 opacity-80" />
+                  <span class="text-xl font-bold">Laravel SEO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-7 lg:order-1">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-pink-600 to-pink-800 flex items-center justify-center">
+                <Icon name="ph:magnifying-glass-duotone" class="w-5 h-5 text-white" />
+              </div>
+              <h2 class="text-3xl font-black text-white">Laravel SEO</h2>
+            </div>
+            <p class="text-lg text-white/70 leading-relaxed mb-6">
+              The ultimate SEO toolkit for Laravel applications. Boost your search rankings with automated meta tags,
+              dynamic sitemaps, structured data markup, and powerful analytics that help you understand and improve your visibility.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div class="flex items-start gap-3">
+                <Icon name="ph:tag-duotone" class="w-5 h-5 text-pink-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">Dynamic Meta Tags</span>
+                  <span class="text-white/50 text-sm">Auto-generate optimized tags</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="ph:tree-structure-duotone" class="w-5 h-5 text-pink-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">Smart Sitemaps</span>
+                  <span class="text-white/50 text-sm">XML sitemaps with auto-updates</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="ph:code-duotone" class="w-5 h-5 text-pink-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">Schema Markup</span>
+                  <span class="text-white/50 text-sm">JSON-LD structured data made easy</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="ph:chart-pie-duotone" class="w-5 h-5 text-pink-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">SEO Analytics</span>
+                  <span class="text-white/50 text-sm">Track rankings and insights</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="/software/laravel-seo/" class="btn btn-primary inline-flex items-center gap-2">
+                Learn More
+                <Icon name="ph:arrow-right" class="w-5 h-5" />
+              </a>
+              <a href="https://laravelseo.com" target="_blank" class="text-white/60 hover:text-white font-semibold transition-colors flex items-center gap-2">
+                <Icon name="ph:globe-duotone" class="w-4 h-4" />
+                laravelseo.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20">
+    <div class="container-custom">
+      <div class="glass-card p-8 md:p-10 hover:border-payflo-purple/30 transition-all duration-500">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div class="lg:col-span-5">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              <div class="relative h-64 bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl flex items-center justify-center">
+                <div class="text-center text-white/90">
+                  <Icon name="ph:lightning-duotone" class="w-20 h-20 mx-auto mb-4 opacity-80" />
+                  <span class="text-xl font-bold">Laravel GPT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
+                <Icon name="ph:lightning-duotone" class="w-5 h-5 text-white" />
+              </div>
+              <h2 class="text-3xl font-black text-white">Laravel GPT</h2>
+            </div>
+            <p class="text-lg text-white/70 leading-relaxed mb-6">
+              Integrate the power of AI into your Laravel applications effortlessly. Build intelligent chatbots,
+              automate content generation, create AI-powered search, and enhance user experiences with cutting-edge GPT technology.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div class="flex items-start gap-3">
+                <Icon name="ph:chat-circle-duotone" class="w-5 h-5 text-purple-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">AI Chatbots</span>
+                  <span class="text-white/50 text-sm">Intelligent customer support</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="ph:note-pencil-duotone" class="w-5 h-5 text-purple-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">Content Generation</span>
+                  <span class="text-white/50 text-sm">Auto-create blog posts and copy</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="ph:magnifying-glass-duotone" class="w-5 h-5 text-purple-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">Semantic Search</span>
+                  <span class="text-white/50 text-sm">AI-powered search experience</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="ph:plug-charging-duotone" class="w-5 h-5 text-purple-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">Multi-Provider</span>
+                  <span class="text-white/50 text-sm">OpenAI, Anthropic, and more</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="/software/laravel-gpt/" class="btn btn-primary inline-flex items-center gap-2">
+                Learn More
+                <Icon name="ph:arrow-right" class="w-5 h-5" />
+              </a>
+              <a href="https://laravelgpt.com" target="_blank" class="text-white/60 hover:text-white font-semibold transition-colors flex items-center gap-2">
+                <Icon name="ph:globe-duotone" class="w-4 h-4" />
+                laravelgpt.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20">
+    <div class="container-custom">
+      <div class="glass-card p-8 md:p-10 hover:border-orange-500/30 transition-all duration-500">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div class="lg:col-span-5 lg:order-2">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-orange-600 to-orange-800 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              <div class="relative h-64 bg-gradient-to-br from-orange-600 to-orange-800 rounded-2xl flex items-center justify-center">
+                <div class="text-center text-white/90">
+                  <Icon name="ph:share-network-duotone" class="w-20 h-20 mx-auto mb-4 opacity-80" />
+                  <span class="text-xl font-bold">Laravel Social</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-7 lg:order-1">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-orange-600 to-orange-800 flex items-center justify-center">
+                <Icon name="ph:share-network-duotone" class="w-5 h-5 text-white" />
+              </div>
+              <h2 class="text-3xl font-black text-white">Laravel Social</h2>
+            </div>
+            <p class="text-lg text-white/70 leading-relaxed mb-6">
+              A next-gen social media automation platform powered by AI. Schedule posts, generate engaging content,
+              and grow your brand across all channels from one powerful dashboard.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div class="flex items-start gap-3">
+                <Icon name="ph:robot-duotone" class="w-5 h-5 text-orange-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">AI Post Generation</span>
+                  <span class="text-white/50 text-sm">Auto-generate engaging content</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="ph:image-square-duotone" class="w-5 h-5 text-orange-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">AI Image Generation</span>
+                  <span class="text-white/50 text-sm">Create stunning visuals with AI</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="ph:share-fat-duotone" class="w-5 h-5 text-orange-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">Multi-Platform</span>
+                  <span class="text-white/50 text-sm">Facebook, Instagram, Twitter, TikTok</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="ph:calendar-dots-duotone" class="w-5 h-5 text-orange-400 mt-0.5" />
+                <div>
+                  <span class="text-white font-semibold block">Content Calendar</span>
+                  <span class="text-white/50 text-sm">Drag-and-drop scheduling</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="/software/laravel-social/" class="btn btn-primary inline-flex items-center gap-2">
+                Learn More
+                <Icon name="ph:arrow-right" class="w-5 h-5" />
+              </a>
+              <a href="https://laravelsocial.com" target="_blank" class="text-white/60 hover:text-white font-semibold transition-colors flex items-center gap-2">
+                <Icon name="ph:globe-duotone" class="w-4 h-4" />
+                laravelsocial.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-payflo-darker/50">
     <div class="container-custom">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {solutions.map((solution, index) => (
-          <div class={`bg-white rounded-xl p-8 shadow-lg animate-on-scroll delay-${index + 2}`}>
-            <div class="h-12 w-12 rounded-lg bg-gradient-to-r from-payflo-purple to-payflo-blue flex items-center justify-center text-white">
-              <Icon name={solution.icon} class="h-6 w-6" />
+        {
+          solutions.map((solution, index) => (
+            <div
+              class={`bg-payflo-darker/80 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-white/10 animate-on-scroll delay-${index + 2}`}
+            >
+              <div class="h-12 w-12 rounded-lg bg-gradient-to-r from-payflo-purple to-payflo-blue flex items-center justify-center text-white">
+                <Icon name={solution.icon} class="h-6 w-6" />
+              </div>
+              <h3 class="mt-6 text-2xl font-semibold text-white">{solution.title}</h3>
+              <p class="mt-4 text-white/70">{solution.description}</p>
+              <ul class="mt-6 space-y-3">
+                {solution.features.map((feature) => (
+                  <li class="flex items-center text-white/70">
+                    <Icon
+                      name="ph:check-circle-duotone"
+                      class="h-5 w-5 text-payflo-purple mr-2"
+                    />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h3 class="mt-6 text-2xl font-semibold">{solution.title}</h3>
-            <p class="mt-4 text-gray-600">{solution.description}</p>
-            <ul class="mt-6 space-y-3">
-              {solution.features.map(feature => (
-                <li class="flex items-center text-gray-700">
-                  <Icon name="ph:check-circle-duotone" class="h-5 w-5 text-payflo-purple mr-2" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
@@ -90,12 +347,10 @@ const solutions = [
   <section class="py-20">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto animate-on-scroll">
-        <h2 class="text-3xl md:text-4xl font-bold">
-          Built for Your Success
-        </h2>
-        <p class="mt-4 text-xl text-gray-600">
-          Our flexible infrastructure means you can build exactly what your customers need, 
-          without compromising on features or compliance.
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Built for Your Success</h2>
+        <p class="mt-4 text-xl text-white/70">
+          Our flexible infrastructure means you can build exactly what your
+          customers need, without compromising on features or compliance.
         </p>
       </div>
     </div>
