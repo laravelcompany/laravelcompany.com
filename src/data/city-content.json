@@ -1,0 +1,657 @@
+{
+  "Tirana": {
+    "techScene": "Growing tech hub with many startups focusing on mobile apps and web platforms. Italian and Greek markets are main clients.",
+    "culturalNotes": "Known for lively cafe culture. Business meetings often happen over coffee. 'Tak' means yes in Albanian.",
+    "contractNotes": "IT contracts follow civil law. Payment terms typically 30 days. Remote work increasingly common."
+  },
+  "Durrës": {
+    "techScene": "Port city with logistics software development. Growing tourism tech sector serving Adriatic coast.",
+    "culturalNotes": "Relaxed coastal business culture. Afternoon breaks common in summer. Strong Italian business connections.",
+    "contractNotes": "Standard Albanian contract law. Freelancers must register with tax authorities. EU-funded project opportunities."
+  },
+  "Vlorë": {
+    "techScene": "Emerging tech scene focused on tourism and maritime software. Developing IT services for oil industry.",
+    "culturalNotes": "Coastal city with Mediterranean business pace. Family-owned businesses common. Strong Greek connections.",
+    "contractNotes": "Standard contracts with 30-day payment terms typical. Growing number of IT freelancers."
+  },
+  "Shkodër": {
+    "techScene": "Small but growing tech community. Focus on cross-border e-commerce with Montenegro and Kosovo.",
+    "culturalNotes": "Northern Albanian culture, more conservative business style. Strong artisan and craft traditions.",
+    "contractNotes": "Standard Albanian business law applies. Growing remote work opportunities with Tirana-based companies."
+  },
+  "Andorra la Vella": {
+    "techScene": "Small but high-value fintech and blockchain projects. Serving international clients attracted by tax benefits.",
+    "culturalNotes": "Bilingual Catalan/Spanish business environment. Mountain culture affects business hours in winter.",
+    "contractNotes": "Andorran commercial law. Many international contractors. EU regulations apply through cooperation agreements."
+  },
+  "Escaldes-Engordany": {
+    "techScene": "Shopping district with e-commerce development focus. Serving retail and tourism sectors.",
+    "culturalNotes": "Busy commercial center. Business culture efficient and service-oriented. Close to Spanish border influences schedule.",
+    "contractNotes": "Standard Andorran contract law. Many freelancers serving both Andorra and Spain."
+  },
+  "Vienna": {
+    "techScene": "Major tech hub with focus on enterprise software, fintech, and AI. Headquarters for many international companies.",
+    "culturalNotes": "Elegant business culture. 'Grüß Gott' formal greeting essential. Coffee house meetings traditional.",
+    "contractNotes": "Strong worker protection laws. Collective bargaining agreements common. 14 salaries per year standard."
+  },
+  "Graz": {
+    "techScene": "University city with strong R&D focus. Automotive software and industrial IoT specializations.",
+    "culturalNotes": "Relaxed student city vibe. 'Servus' common greeting. Strong Styrian regional identity.",
+    "contractNotes": "Standard Austrian employment law. University partnerships common for R&D projects."
+  },
+  "Linz": {
+    "techScene": "Industrial tech hub with focus on automation and smart manufacturing. Voestalpine and other industrial clients.",
+    "culturalNotes": "Industrial business culture. Efficient and process-oriented. Ars Electronica center brings tech/art fusion.",
+    "contractNotes": "Standard Austrian contracts. Strong focus on industrial IP protection."
+  },
+  "Salzburg": {
+    "techScene": "Tourism tech and creative industries. Software for hospitality and cultural sectors.",
+    "culturalNotes": "Mozart city business elegance. Tourism-driven economy affects project timing. 'Grüß Gott' universally used.",
+    "contractNotes": "Standard Austrian law. Seasonal tourism projects common. International client base."
+  },
+  "Brussels": {
+    "techScene": "EU institution-focused development. Multilingual teams building regulatory compliance and policy software.",
+    "culturalNotes": "Trilingual business environment (FR/NL/EN). 'Bonjour'/'Goedendag' depending on area. EU bubble culture.",
+    "contractNotes": "Belgian employment law. Strong worker rights. Freelance 'indépendant/zelfstandige' status popular."
+  },
+  "Antwerp": {
+    "techScene": "Port logistics software hub. Diamond industry tech solutions. Growing startup ecosystem.",
+    "culturalNotes": "Diamond district business culture. 'Dag' common greeting. Port city pragmatism. Strong creative scene.",
+    "contractNotes": "Flemish region business law. Port-related contracts need specific insurance. Freelance status straightforward."
+  },
+  "Ghent": {
+    "techScene": "University city with AI research focus. Sustainable tech and smart city projects.",
+    "culturalNotes": "Student-friendly business culture. 'Dag' greeting. Cycling culture affects meeting schedules. Alternative vibe.",
+    "contractNotes": "Standard Belgian law. University collaborations common. Growing freelance community."
+  },
+  "Bruges": {
+    "techScene": "Tourism tech focused. Software for heritage sites, museums, and hospitality sector.",
+    "culturalNotes": "Medieval city affects logistics. Tourism seasonality important. 'Dag' greeting. UNESCO heritage considerations.",
+    "contractNotes": "Flemish business regulations. Seasonal contracts common. Tourism-focused payment terms."
+  },
+  "Sarajevo": {
+    "techScene": "Growing outsourcing hub. Strong in web development and mobile apps. Turkish and Middle Eastern clients common.",
+    "culturalNotes": "Coffee culture central to business. 'Zdravo' greeting. Ottoman heritage influences business style. 'Domaćin' hospitality.",
+    "contractNotes": "Bosnian contract law. Payment terms 30-45 days. Growing freelance community."
+  },
+  "Banja Luka": {
+    "techScene": "Emerging tech center. Focus on energy sector software and regional e-commerce platforms.",
+    "culturalNotes": "More relaxed business pace. 'Ćao' common. Strong coffee culture. River city influences business rhythm.",
+    "contractNotes": "Entity-level (Republika Srpska) business regulations. Freelance registration required."
+  },
+  "Tuzla": {
+    "techScene": "Industrial city with growing IT services. Salt mining heritage now shifting to digital services.",
+    "culturalNotes": "Working-class business culture. Direct communication style. 'Dobar dan' formal greeting.",
+    "contractNotes": "Bosnian Federation regulations. Growing number of IT freelancers and small agencies."
+  },
+  "Sofia": {
+    "techScene": "Major Balkan tech hub. Strong in Java, PHP, and AI. Many European companies have development centers here.",
+    "culturalNotes": "Fast-paced business environment. 'Zdravei' greeting. Coffee meetings essential. Strong Russian tech influence historically.",
+    "contractNotes": "Bulgarian IT law. 10% tax rate for IT specialists. Many freelancers use simplified taxation."
+  },
+  "Plovdiv": {
+    "techScene": "Second-largest tech hub. Cultural capital with growing startup scene. Focus on creative tech and e-commerce.",
+    "culturalNotes": "Ancient city business culture. 'Zdravei' greeting. Thracian heritage pride. More relaxed than Sofia.",
+    "contractNotes": "Standard Bulgarian law. Growing tech park with incentives. Freelance community expanding."
+  },
+  "Varna": {
+    "techScene": "Coastal tech hub. Tourism software, maritime tech, and gaming industry presence.",
+    "culturalNotes": "Black Sea business culture. Summer seasonality affects projects. 'Zdravei' greeting. Naval influences.",
+    "contractNotes": "Bulgarian coastal business practices. Seasonal tourism tech contracts. Remote work popular."
+  },
+  "Burgas": {
+    "techScene": "Oil refinery city transitioning to tech. Logistics software and petrochemical industry solutions.",
+    "culturalNotes": "Industrial business culture. Practical approach. 'Zdravei' greeting. Black Sea coastal influences.",
+    "contractNotes": "Standard Bulgarian law. Industrial contracts need specific compliance. Growing IT sector."
+  },
+  "Zagreb": {
+    "techScene": "Major tech hub with strong gaming industry (Croteam, etc.). Enterprise software and fintech focus.",
+    "culturalNotes": "Central European business culture. 'Bok' greeting. Café culture essential. Tram system affects meeting timing.",
+    "contractNotes": "Croatian employment law. Digital nomad visa available. Freelancers must register as 'obrt' or 'j.d.o.o.'."
+  },
+  "Split": {
+    "techScene": "Tourism tech hub. Software for hospitality, marina management, and nautical tourism.",
+    "culturalNotes": "Mediterranean business pace. 'Bok' greeting. Summer seasonality crucial. Diocletian Palace backdrop to business.",
+    "contractNotes": "Croatian law. Seasonal tourism contracts. Remote work popular among digital nomads."
+  },
+  "Dubrovnik": {
+    "techScene": "Premium tourism tech. Software for luxury hospitality, UNESCO sites, and cruise industry.",
+    "culturalNotes": "Elite tourism business culture. 'Bok' greeting. UNESCO regulations affect development. Summer peak season.",
+    "contractNotes": "Croatian coastal business law. Seasonal high-value contracts. International clientele."
+  },
+  "Rijeka": {
+    "techScene": "Port city tech. Maritime software, shipbuilding tech, and logistics platforms.",
+    "culturalNotes": "Industrial port culture. 'Bok' or 'Dobar dan'. More direct communication style. Fiume multicultural heritage.",
+    "contractNotes": "Croatian law. Port authority contracts need specific compliance. Growing IT services sector."
+  },
+  "Prague": {
+    "techScene": "Major Central European tech hub. AI, gaming, and enterprise software. Highest concentration of developers in CEE.",
+    "culturalNotes": "Beer culture integral to business. 'Ahoj' universal greeting. Kafkaesque bureaucracy humor. Grand cafe meetings.",
+    "contractNotes": "Czech trade license ('živnostenský list') for freelancers. 15% VAT for most IT services. Strong IP protection."
+  },
+  "Brno": {
+    "techScene": "University city with strong R&D. Automotive software (near Škoda), embedded systems, and cybersecurity.",
+    "culturalNotes": "Student city vibe. 'Ahoj' greeting. Moravian regional pride. Tech meetups very active. Beer culture strong.",
+    "contractNotes": "Standard Czech law. University partnerships common. Growing startup ecosystem with VC funding."
+  },
+  "Ostrava": {
+    "techScene": "Former industrial city transitioning to tech. Focus on smart city solutions and industrial digitization.",
+    "culturalNotes": "Working-class roots, practical business style. 'Ahoj' greeting. Silesian regional identity. Coal mining heritage.",
+    "contractNotes": "Czech business law. Industrial contracts need safety compliance. Growing IT sector in traditional industries."
+  },
+  "Copenhagen": {
+    "techScene": "Nordic tech leader. Green tech, fintech, and design-focused development. Home to many unicorns.",
+    "culturalNotes": "Bicycle business meetings. 'Hej' greeting. Flat hierarchy culture. 'Hygge' important in team building. Design-focused.",
+    "contractNotes": "Danish employment law. Strong worker rights. Freelance 'freelancer' status common. 25% VAT standard."
+  },
+  "Aarhus": {
+    "techScene": "University city with gaming and edtech focus. Scandinavian design principles in software development.",
+    "culturalNotes": "Student city atmosphere. 'Hej' greeting. Jutland regional identity. More relaxed than Copenhagen. Cycling culture.",
+    "contractNotes": "Standard Danish law. University collaborations frequent. Growing startup scene with local VC."
+  },
+  "Odense": {
+    "techScene": "Robotics and automation hub. Home to Universal Robots. Industry 4.0 software solutions.",
+    "culturalNotes": "Hans Christian Andersen city. 'Hej' greeting. Robotics fair (RoRo) major event. Island of Funen business culture.",
+    "contractNotes": "Danish law. Robotics IP protection crucial. Industrial partnerships common."
+  },
+  "Tallinn": {
+    "techScene": "E-residency pioneer. Blockchain, govtech, and Skype heritage. Highest startup density in Europe per capita.",
+    "culturalNotes": "Digital-first culture. 'Tere' greeting. Kuku club tech meetups. Nordic efficiency with Baltic grit. E-election pioneers.",
+    "contractNotes": "E-residency enables company formation. Digital signatures standard. 20% VAT. Crypto-friendly regulations."
+  },
+  "Tartu": {
+    "techScene": "University city with strong R&D. Bioinformatics, eduTech, and science-focused software development.",
+    "culturalNotes": "Student city with intellectual vibe. 'Tere' greeting. Estonian intellectual heart. More relaxed than Tallinn.",
+    "contractNotes": "Standard Estonian law. University research partnerships. Startup grants available from city."
+  },
+  "Narva": {
+    "techScene": "Border city with unique Russian-Estonian tech bridge. Cross-border e-commerce and translation tech.",
+    "culturalNotes": "Border town dynamics. 'Tere' greeting. Russian-speaking majority affects business language. Bridge metaphor in business.",
+    "contractNotes": "Estonian law applies. Cross-border tax considerations. Growing IT services for Russian-speaking markets."
+  },
+  "Helsinki": {
+    "techScene": "Gaming capital (Supercell, Rovio, Remedy). Deep tech, cleantech, and Slush startup ecosystem.",
+    "culturalNotes": "Sauna meetings for business. 'Moi' or 'Hei' greeting. 'Sisu' (grit) valued. Quiet but direct communication.",
+    "contractNotes": "Finnish employment law. Strong unions. Collective agreements standard. 24% VAT. Flat organizational structures."
+  },
+  "Espoo": {
+    "techScene": "Tech hub near Helsinki. Home to Nokia, Aalto University. Deep tech, 5G, and quantum computing.",
+    "culturalNotes": "Innovation district culture. 'Moi' greeting. Aalto University influences design thinking. Otaniemi tech campus.",
+    "contractNotes": "Standard Finnish law. University spin-offs common. Tech giant partnerships frequent."
+  },
+  "Tampere": {
+    "techScene": "Industrial tech heritage. Gaming (Nokia roots), IoT, and smart city solutions.",
+    "culturalNotes": "Industrial city turned tech hub. 'Moi' greeting. Sauna culture strong. Nokia legacy influences business.",
+    "contractNotes": "Finnish law. Industrial IP experience valuable. Growing startup ecosystem."
+  },
+  "Paris": {
+    "techScene": "AI/ML hub (Station F), luxury e-commerce, and fintech. Strong in PHP/Symfony, Python, and JavaScript.",
+    "culturalNotes": "Cafe meetings essential. 'Bonjour' mandatory. 'RSVP' for invitations. Fashion-tech crossover. Lunch is sacred 1-2pm.",
+    "contractNotes": "35-hour work week. 'Portage salarial' for freelancers popular. 20% VAT. Strong employee protection (CDI contracts)."
+  },
+  "Marseille": {
+    "techScene": "Growing Mediterranean tech hub. Logistics software, maritime tech, and tourism platforms.",
+    "culturalNotes": "Mediterranean business pace. 'Salut' or 'Bonjour'. Port city pragmatism. Strong North African business connections.",
+    "contractNotes": "French law. Southern France business practices. Growing freelance community. Port logistics contracts."
+  },
+  "Lyon": {
+    "techScene": "Second tech hub. Biotech software, smart city solutions, and gastronomy tech platforms.",
+    "culturalNotes": "Gastronomy capital influences business dinners. 'Bonjour' greeting. Rhône-Alpes regional pride. Silk heritage.",
+    "contractNotes": "French employment law. Biotech sector needs specific compliance. Strong local tech community."
+  },
+  "Toulouse": {
+    "techScene": "Aerospace software capital (Airbus). Embedded systems, aviation tech, and space industry software.",
+    "culturalNotes": "Aerospace culture precision. 'Bonjour' greeting. Occitan regional identity. Pink city (la ville rose) nickname.",
+    "contractNotes": "French law. Aerospace contracts need security clearance. High-value specialized contracts."
+  },
+  "Berlin": {
+    "techScene": "Startup capital with unicorns (N26, Delivery Hero). Fintech, AI, and creative tech. Strong PHP/Laravel community.",
+    "culturalNotes": "Berliner Schnauze (blunt humor). 'Hallo' greeting. Club culture affects business hours. Street art meets tech.",
+    "contractNotes": "Freelance 'Freiberufler' strictly defined. 19% VAT. 'Feierabend' (after-work) sacred. Flat hierarchy culture."
+  },
+  "Munich": {
+    "techScene": "Enterprise software, automotive tech (BMW, Audi). Premium development with highest rates in Germany.",
+    "culturalNotes": "Bavarian business elegance. 'Grüß Gott' greeting. Beer garden meetings. Punctuality essential. Lederhosen optional.",
+    "contractNotes": "German law. Automotive contracts need IP protection. Higher cost of living reflected in rates."
+  },
+  "Hamburg": {
+    "techScene": "Media tech, port logistics software, and e-commerce (Otto Group). Maritime tech hub.",
+    "culturalNotes": "Port city merchant culture. 'Moin' greeting unique to North Germany. Speicherstadt UNESCO district influences.",
+    "contractNotes": "German law. Maritime contracts need specific insurance. Media sector unions active."
+  },
+  "Frankfurt": {
+    "techScene": "Fintech capital (Deutsche Bank, fintech startups). Financial software, trading platforms, and RegTech.",
+    "culturalNotes": "Banker precision culture. 'Hallo' or 'Guten Tag'. Apple wine (Ebbelwoi) for business dinners. Skyscraper district.",
+    "contractNotes": "German law. Financial regulations strict (BaFin). High-value contracts. Banking sector compliance essential."
+  },
+  "Athens": {
+    "techScene": "Growing tech hub post-crisis. Tourism tech, shipping software, and fintech. Many startups relocating from UK post-Brexit.",
+    "culturalNotes": "Coffee culture essential ('frappe' or 'freddo'). 'Yassas' greeting. Siesta affects afternoon hours. Acropolis views inspire.",
+    "contractNotes": "Greek law. VAT 24%. Freelance 'freelancer' status straightforward. Payment terms improving post-crisis."
+  },
+  "Thessaloniki": {
+    "techScene": "University city with growing tech scene. Software for agriculture, tourism, and northern Greece industries.",
+    "culturalNotes": "Co-capital confidence. 'Yassas' greeting. More relaxed than Athens. Byzantine heritage influences. Seafood business lunches.",
+    "contractNotes": "Greek law. Student internships common. Growing freelance community. Northern Greece business networks."
+  },
+  "Patras": {
+    "techScene": "University city with tech park. Software for shipping, agriculture, and regional administration.",
+    "culturalNotes": "Bridge city culture (Rio-Antirrio). 'Yassas' greeting. Carnival city (Patrino Karnavali). Student population affects rhythm.",
+    "contractNotes": "Greek law. University partnerships available. Tech park offers tax incentives."
+  },
+  "Budapest": {
+    "techScene": "Major Central European tech hub. Automotive software (Audi, Mercedes), fintech, and gaming. High concentration of developers.",
+    "culturalNotes": "Thermal bath business meetings. 'Szia' greeting. Ruin pub culture for networking. Danube divide affects geography.",
+    "contractNotes": "KATA simplified taxation changed recently. 27% VAT highest in EU. Freelance 'egyéni vállalkozó' common."
+  },
+  "Debrecen": {
+    "techScene": "University city with automotive tech focus. Software for BMW factory and suppliers. Growing IT services.",
+    "culturalNotes": "Reformed church influences business ethics. 'Szia' greeting. Calvinist work ethic. Second city pride.",
+    "contractNotes": "Hungarian law. Automotive sector contracts. University partnerships for R&D."
+  },
+  "Szeged": {
+    "techScene": "University city with strong biotech software. Pharmaceutical industry tech (egis, Richter). EduTech focus.",
+    "culturalNotes": "Sunshine city nickname. 'Szia' greeting. Tisza River influences. More relaxed business pace. Paprika capital.",
+    "contractNotes": "Hungarian law. Biotech needs regulatory compliance. University research collaborations common."
+  },
+  "Reykjavik": {
+    "techScene": "Small but elite tech scene. Geothermal tech, tourism platforms, and creative software. High skills per capita.",
+    "culturalNotes": "Geothermal humor ('hotter than hell'). 'Hæ' greeting. Elves (huldufólk) folklore mentioned in meetings. Midnight sun affects schedule.",
+    "contractNotes": "Icelandic law. 24% VAT. Strong gender equality laws. Small network, personal referrals key."
+  },
+  "Kopavogur": {
+    "techScene": "Suburb tech with focus on services for Reykjavik capital area. E-commerce and municipal software.",
+    "culturalNotes": "Suburban business culture. 'Hæ' greeting. Close ties to Reykjavik. More residential pace.",
+    "contractNotes": "Standard Icelandic law. Service sector contracts. Growing IT services for municipalities."
+  },
+  "Hafnarfjordur": {
+    "techScene": "Port town tech. Maritime software, fishing industry tech, and tourism platforms for nearby Reykjavik.",
+    "culturalNotes": "Elves (huldufólk) town folklore. 'Hæ' greeting. Volcanic landscape influences. Harbor culture.",
+    "contractNotes": "Icelandic law. Maritime contracts need specific regulations. Small community, reputation matters."
+  },
+  "Dublin": {
+    "techScene": "European HQ for US tech giants (Google, Facebook, Apple). Fintech, SaaS, and enterprise software.",
+    "culturalNotes": "Pub meetings for business. 'Howya' casual greeting. 'Craic' (fun) important. Silicon Docks area. 12.5% corporate tax attracts.",
+    "contractNotes": "Irish law. 23% VAT. Favorable corporate tax 12.5%. Strong IP protection. US multinationals set standards."
+  },
+  "Cork": {
+    "techScene": "Tech hub with Apple's European operations. Pharma software, dairy tech, and maritime software.",
+    "culturalNotes": "Rebel county pride. 'Howya' greeting. More relaxed than Dublin. 'Feeding the soul' (food culture) important.",
+    "contractNotes": "Irish law. Pharma sector needs FDA/EMA compliance. Apple supplier contracts valuable."
+  },
+  "Limerick": {
+    "techScene": "University city with expanding tech park. Manufacturing software, medtech, and regional e-commerce.",
+    "culturalNotes": "Treaty city history. 'Howya' greeting. Shannon River influences. More affordable than Dublin/Cork.",
+    "contractNotes": "Irish law. Medtech needs regulatory compliance. University of Limerick partnerships available."
+  },
+  "Rome": {
+    "techScene": "Government software, tourism tech, and Vatican projects. Growing startup ecosystem with public sector focus.",
+    "culturalNotes": "Eternal city business rhythm. 'Ciao' greeting. 'Pranzo' (lunch) 1-3pm sacred. Ancient ruins meeting backdrops.",
+    "contractNotes": "Italian law. Complex bureaucracy ('la burocrazia'). Partita IVA for freelancers. Southern European pace."
+  },
+  "Milan": {
+    "techScene": "Fashion tech capital. Luxury e-commerce, fintech, and design-focused software. Highest rates in Italy.",
+    "culturalNotes": "Fashion week energy. 'Ciao' greeting. 'Aperitivo' (pre-dinner drinks) for networking. Design-centric business culture.",
+    "contractNotes": "Italian law. Fashion/IP protection crucial. Higher cost of living reflected in rates. Northern efficiency."
+  },
+  "Naples": {
+    "techScene": "Growing tech scene. Tourism software, maritime tech, and logistics platforms for southern Italy.",
+    "culturalNotes": "Neapolitan spirit ('O sole mio'). 'Ciao' greeting. More relaxed business pace. Pizza capital influences team lunches.",
+    "contractNotes": "Italian law. Southern Italy incentives available. EU funding for southern development projects."
+  },
+  "Turin": {
+    "techScene": "Automotive software (Fiat/Stellantis). Industrial tech, aerospace software, and smart city solutions.",
+    "culturalNotes": "Industrial city elegance. 'Ciao' greeting. Shroud of Turin city. Aperitivo culture. Alpine influences nearby.",
+    "contractNotes": "Italian law. Automotive sector contracts. University of Turin tech partnerships."
+  },
+  "Riga": {
+    "techScene": "Fintech hub (second most fintech companies in EU after London). 4G/5G infrastructure software, and e-government.",
+    "culturalNotes": "Art Nouveau architecture inspires design. 'Sveiks' greeting. Latvian Song Festival (Dziesmu svētki) affects schedule.",
+    "contractNotes": "21% VAT. E-residency compatible. Startup visa available. Freelance 'individual activity' status simple."
+  },
+  "Daugavpils": {
+    "techScene": "Border city tech. Cross-border e-commerce, translation tech, and Russian-speaking market software.",
+    "culturalNotes": "Multicultural influences. 'Sveiks' greeting. Russian-speaking majority affects business language. Fortress city history.",
+    "contractNotes": "Latvian law. Cross-border tax considerations. Growing IT services for eastern markets."
+  },
+  "Liepaja": {
+    "techScene": "Port city tech. Maritime software, wind energy tech, and tourism platforms for Latvian coast.",
+    "culturalNotes": "Windy city nickname. 'Sveiks' greeting. Seaside business culture. Music festival city (Liepājas koncerti).",
+    "contractNotes": "Latvian law. Maritime/wind energy sectors need specific compliance. Port authority contracts."
+  },
+  "Vaduz": {
+    "techScene": "Fintech and private banking software. High-value, specialized development for financial sector.",
+    "culturalNotes": "Principality precision. 'Grüezi' greeting. Alpine business culture. Royal family presence influences formality.",
+    "contractNotes": "Swiss/Liechtenstein law. 7.7% VAT. Banking secrecy considerations. High regulatory standards."
+  },
+  "Schaan": {
+    "techScene": "Industrial town tech. Manufacturing software, precision instruments, and logistics platforms.",
+    "culturalNotes": "Industrial pragmatism. 'Grüezi' greeting. Close to Swiss border affects business hours. Hilti headquarters nearby.",
+    "contractNotes": "Liechtenstein law. Manufacturing contracts need quality certifications. Cross-border workers common."
+  },
+  "Triesen": {
+    "techScene": "Services for Vaduz financial sector. Back-office software and compliance platforms.",
+    "culturalNotes": "Residential community serving capital. 'Grüezi' greeting. Quiet business environment. Close to Alpine recreation.",
+    "contractNotes": "Standard Liechtenstein law. Financial sector compliance essential. Small scale, personal relationships key."
+  },
+  "Vilnius": {
+    "techScene": "Fintech unicorn factory (Revolut, TransferGo). Laser tech, govtech, and blockchain. Top EU tech hub per capita.",
+    "culturalNotes": "Baroque beauty business setting. 'Labas' greeting. 'Šaltibarščiai' (pink soup) team lunches. Medieval old town inspires.",
+    "contractNotes": "21% VAT. Startup visa available. Fintech licensing expertise. Freelance status straightforward."
+  },
+  "Kaunas": {
+    "techScene": "Industrial tech hub. Automotive software, robotics, and smart city solutions for second city.",
+    "culturalNotes": "Modernist architecture (interwar capital). 'Labas' greeting. More industrial than Vilnius. Devil statue humor.",
+    "contractNotes": "Lithuanian law. Automotive sector contracts. Kaunas Free Economic Zone offers benefits."
+  },
+  "Klaipeda": {
+    "techScene": "Port city tech. Maritime software, wind energy platforms, and tourism tech for Lithuanian coast.",
+    "culturalNotes": "Sea breeze business culture. 'Labas' greeting. Smoked fish team lunches. Ferry connections to Sweden/Germany.",
+    "contractNotes": "Lithuanian law. Maritime contracts need port authority compliance. Seasonal tourism tech."
+  },
+  "Luxembourg City": {
+    "techScene": "Fintech capital. EU institution software, investment platforms, and private banking systems. Highest GDP per capita.",
+    "culturalNotes": "Trilingual business (Luxembourgish/French/German). 'Moien' greeting. 'Moien' starts every conversation. Cross-border workers common.",
+    "contractNotes": "17% VAT (lowest in EU). Multilingual contracts standard. Fund industry regulations strict. High-value contracts."
+  },
+  "Esch-sur-Alzette": {
+    "techScene": "Former steel city turned tech. Creative industries, esports, and digital media platforms.",
+    "culturalNotes": "Industrial heritage pride. 'Moien' greeting. Belgian border proximity influences culture. Rockhal music venue.",
+    "contractNotes": "Luxembourg law. Creative sector grants available. Cross-border freelance common."
+  },
+  "Valletta": {
+    "techScene": "iGaming hub. Blockchain platforms, casino software, and fintech for regulated gaming industry.",
+    "culturalNotes": "Fortress city business gravitas. 'Bongu' greeting. UNESCO heritage affects logistics. Knights of St. John history.",
+    "contractNotes": "18% VAT. iGaming licensing (MGA) essential. Crypto-friendly regulations. Small island, reputation matters."
+  },
+  "Birkirkara": {
+    "techScene": "Services and e-commerce for Maltese market. Back-office software and SME platforms.",
+    "culturalNotes": "Largest town practicality. 'Bongu' greeting. Central Malta location. More residential business pace.",
+    "contractNotes": "Malta law. SME-focused contracts. Growing freelance community serving iGaming sector."
+  },
+  "Mosta": {
+    "techScene": "Emerging tech services. Software for local businesses and remote work for Valletta-based companies.",
+    "culturalNotes": "Famous dome church landmark. 'Bongu' greeting. More relaxed than capital. Rotunda (church) pride.",
+    "contractNotes": "Maltese law. Standard contracts. Growing remote work community."
+  },
+  "Chișinău": {
+    "techScene": "Outsourcing hub with competitive rates. Strong in PHP, Java, and mobile development. EU proximity advantage.",
+    "culturalNotes": "Wine capital culture. 'Bună' greeting. 'Noroc' (cheers) with Moldovan wine. Soviet heritage meets EU aspirations.",
+    "contractNotes": "20% VAT. IT Park residents get tax privileges. Freelance status available. Romanian connections strong."
+  },
+  "Tiraspol": {
+    "techScene": "Limited tech scene. Cross-border e-commerce and software for unrecognized Transnistria region.",
+    "culturalNotes": "Unique geopolitical situation. 'Bună' greeting. Soviet aesthetics preserved. Rubles used alongside local currency.",
+    "contractNotes": "Complex jurisdictional issues. Cross-border payment challenges. Limited international contracts."
+  },
+  "Bălți": {
+    "techScene": "Northern Moldova tech. Agricultural software, cross-border trade platforms, and outsourcing services.",
+    "culturalNotes": "Industrial city pragmatism. 'Bună' greeting. Romanian cultural ties strong. More conservative business culture.",
+    "contractNotes": "Moldovan law. Agricultural sector contracts. Growing IT services for Romanian market."
+  },
+  "Podgorica": {
+    "techScene": "Growing capital tech scene. Tourism software, energy sector platforms, and government digitization projects.",
+    "culturalNotes": "Relaxed Mediterranean pace. 'Zdravo' greeting. 'Kafa' (coffee) meetings essential. Small capital intimacy.",
+    "contractNotes": "21% VAT. Digital nomad visa available. Freelance status straightforward. Adriatic connections."
+  },
+  "Nikšić": {
+    "techScene": "Industrial city tech. Steel industry software, energy sector platforms, and regional e-commerce.",
+    "culturalNotes": "Working-class roots. 'Zdravo' greeting. Montenegrin pride (second city). Beer culture (Trebjesa brewery).",
+    "contractNotes": "Montenegrin law. Industrial contracts. Lower costs than coastal region."
+  },
+  "Herceg Novi": {
+    "techScene": "Coastal tourism tech. Hospitality software, marina management, and yacht charter platforms.",
+    "culturalNotes": "Boka Bay beauty. 'Zdravo' greeting. Mediterranean leisure culture. Mimosa festival city. Many stairs!",
+    "contractNotes": "Montenegrin law. Tourism seasonality important. Coastal property tech needs specific regulations."
+  },
+  "Amsterdam": {
+    "techScene": "Fintech (ING, ABN AMRO), sustainable tech, and creative software. Startup ecosystem with SaaS focus.",
+    "culturalNotes": "Canal-side business meetings. 'Hoi' greeting. 'Gezellig' essential concept. Cycling to meetings standard. Rainbow capitalism friendly.",
+    "contractNotes": "21% VAT. Freelance 'ZZP' very common. 30% ruling for foreign employees. Progressive business culture."
+  },
+  "Rotterdam": {
+    "techScene": "Port logistics tech hub. Maritime software, smart city solutions, and architecture/design software.",
+    "culturalNotes": "No-nonsense port culture. 'Hoi' greeting. 'Doe maar gewoon' mentality. Modern architecture everywhere. Erasmus University influence.",
+    "contractNotes": "Dutch law. Port authority contracts need specific compliance. Maritime tech growing fast."
+  },
+  "The Hague": {
+    "techScene": "Government and legal tech. International court software, cybersecurity, and peace/diplomacy platforms.",
+    "culturalNotes": "Royal city dignity. 'Hoi' or 'Goedemorgen' formal. 'Respect' important. Beach nearby (Scheveningen) for breaks.",
+    "contractNotes": "Dutch law. Government contracts need security clearance. International organization standards."
+  },
+  "Utrecht": {
+    "techScene": "University city with eduTech focus. Smart city solutions, cycling infrastructure software, and creative tech.",
+    "culturalNotes": "Central Netherlands energy. 'Hoi' greeting. Dom Tower landmark. Student city vibe. More Central than Amsterdam.",
+    "contractNotes": "Dutch law. University partnerships common. Growing startup scene with less hype than Amsterdam."
+  },
+  "Skopje": {
+    "techScene": "Capital tech hub. Government software, outsourcing services, and startup ecosystem with incentives.",
+    "culturalNotes": "Baroque makeover city. 'Zdravo' greeting. Vardar River divides city. Statue park humor. 'Ajde' (come on) common phrase.",
+    "contractNotes": "18% VAT. Technological Industrial Development Zones offer tax benefits. Freelance status available."
+  },
+  "Bitola": {
+    "techScene": "Second city tech. Agricultural software, cross-border trade platforms, and regional outsourcing services.",
+    "culturalNotes": "Cultural capital pride. 'Zdravo' greeting. Close to Greek border affects business. Basilica ruins backdrop.",
+    "contractNotes": "Macedonian law. Agricultural sector contracts. Lower costs than capital."
+  },
+  "Kumanovo": {
+    "techScene": "Industrial town tech. Manufacturing software, cross-border logistics, and remote work for Skopje companies.",
+    "culturalNotes": "Industrial pragmatism. 'Zdravo' greeting. Close to Serbian and Kosovo borders. More conservative business culture.",
+    "contractNotes": "Macedonian law. Industrial contracts. Growing freelance community."
+  },
+  "Oslo": {
+    "techScene": "Green tech leader, oil & gas software, and maritime tech. Premium rates with exceptional quality.",
+    "culturalNotes": "Fjord city sophistication. 'Hei' greeting. 'Koselig' (cozy) valued. Oil wealth funds innovation. Munch museum inspiration.",
+    "contractNotes": "25% VAT. Strong worker rights. Freelance 'oppdragstaker' common. High labor costs reflected in rates."
+  },
+  "Bergen": {
+    "techScene": "Maritime tech hub. Aquaculture software, shipping platforms, and energy sector solutions.",
+    "culturalNotes": "Gateway to fjords. 'Hei' greeting. 'Regntunge' (rainy) humor. Bryggen wharf UNESCO site. Fish market lunches.",
+    "contractNotes": "Norwegian law. Maritime contracts need specific insurance. Aquaculture sector growing fast."
+  },
+  "Stavanger": {
+    "techScene": "Oil capital tech. Petroleum software, subsea technology, and energy transition platforms.",
+    "culturalNotes": "Oil money sophistication. 'Hei' greeting. 'Oillinje' (oil line) pride. Fargegata colorful street. Energy transition focus.",
+    "contractNotes": "Norwegian law. Oil sector contracts high-value. Energy transition creating new tech opportunities."
+  },
+  "Warsaw": {
+    "techScene": "Major CEE tech hub. Fintech (Revolut Poland), gaming (CD Projekt), and enterprise software. R&D centers abound.",
+    "culturalNotes": "Phoenix city resilience. 'Cześć' greeting. 'Na zdrowie' (cheers) with vodka. Warsaw Uprising memory influences. Modern skyline.",
+    "contractNotes": "23% VAT. B2B contracts popular for IT. R&D tax relief available. Strong employee rights."
+  },
+  "Krakow": {
+    "techScene": "Historic tech hub. Gaming, fintech, and outsourcing. Beautiful old town attracts international talent.",
+    "culturalNotes": "Royal city elegance. 'Cześć' greeting. 'Dobrego' (cheers with beer). Dragon legend humor. Wawel Castle backdrop.",
+    "contractNotes": "Polish law. Growing startup scene. Lower costs than Warsaw. Strong university partnerships."
+  },
+  "Gdansk": {
+    "techScene": "Baltic tech hub. Maritime software, amber trade platforms, and energy sector tech (near Baltic Pipe).",
+    "culturalNotes": "Solidarity (Solidarność) heritage. 'Cześć' greeting. Baltic Sea influence. Amber jewelry business gifts. Shipyard history.",
+    "contractNotes": "Polish law. Maritime contracts. Special Economic Zone offers tax benefits. EU funds available."
+  },
+  "Wroclaw": {
+    "techScene": "University city with strong tech scene. Microchip design (Intel), gaming, and R&D centers.",
+    "culturalNotes": "City of 100 bridges. 'Cześć' greeting. Gnomes (krasnale) statues everywhere. Silesian regional identity. Mathematical legacy (Banach).",
+    "contractNotes": "Polish law. University partnerships strong. Lower costs than Warsaw. Growing VC presence."
+  },
+  "Lisbon": {
+    "techScene": "Startups rising star. Web Summit host, fintech, and tourism tech. Growing unicorn ecosystem.",
+    "culturalNotes": "Cobblestone charm. 'Olá' greeting. 'Obrigado/a' (thank you). Tram 28 rides for meetings. Pastel de nata team treats. Fado soul.",
+    "contractNotes": "23% VAT. Digital nomad visa available. 'Recibos verdes' (freelance) common. EU funds supporting startups."
+  },
+  "Porto": {
+    "techScene": "Second tech hub. Textile tech, wine industry software, and growing startup scene. More affordable than Lisbon.",
+    "culturalNotes": "Invicta city grit. 'Olá' greeting. Port wine cellars for business meetings. Dom Luís I bridge landmark. Francesinha sandwich pride.",
+    "contractNotes": "Portuguese law. Wine/textile sectors need specific compliance. Lower rates than Lisbon attract companies."
+  },
+  "Braga": {
+    "techScene": "University city with tech park. Catholic heritage software, eduTech, and regional e-commerce.",
+    "culturalNotes": "Portuguese Rome nickname. 'Olá' greeting. Minho region pride. More religious business culture. Young population from university.",
+    "contractNotes": "Portuguese law. University of Minho partnerships. Growing tech park with incentives."
+  },
+  "Bucharest": {
+    "techScene": "Major Eastern European tech hub. Fintech (ING, Banca Transilvania), AI/ML, and automotive software.",
+    "culturalNotes": "Little Paris of the East. 'Bună' greeting. 'Noroc' (cheers) with ţuică. Palace of Parliament backdrop. Chaotic traffic humor.",
+    "contractNotes": "19% VAT. Micro-enterprise tax regime beneficial. Strong talent pool. Growing startup ecosystem."
+  },
+  "Cluj-Napoca": {
+    "techScene": "Silicon Valley of Transylvania. Strong in AI, gaming, and enterprise software. Highest concentration of IT per capita in Romania.",
+    "culturalNotes": "Heart of Transylvania. 'Bună' greeting. 'Noroc' with palincă (fruit brandy). King Matthias Corvinus pride. Halloween vibes year-round.",
+    "contractNotes": "Romanian law. IT sector tax benefits. Strong developer community. Lower costs than Bucharest attract talent."
+  },
+  "Timisoara": {
+    "techScene": "Innovation hub with strong engineering. Automotive software (near BMW factory), IoT, and smart city solutions.",
+    "culturalNotes": "City of roses. 'Bună' greeting. 'Noroc' with beer. Three nations (Austro-Hungarian-Serbian) architecture. Revolution Square 1989 history.",
+    "contractNotes": "Romanian law. Automotive sector contracts. Special Economic Zone benefits. Close to Hungarian/Serbian borders."
+  },
+  "San Marino": {
+    "techScene": "Microstate fintech. Blockchain platforms and e-government solutions for smallest republic.",
+    "culturalNotes": "Ancient republic dignity. 'Ciao' greeting. Titano mountain views. More formal than Italy. Statelessness humor.",
+    "contractNotes": "Special tax status. Italian VAT agreement. Small scale, personal relationships essential. Cross-border workers from Italy."
+  },
+  "Borgo Maggiore": {
+    "techScene": "Services for San Marino. E-commerce and back-office software for microstate businesses.",
+    "culturalNotes": "Main settlement practicality. 'Ciao' greeting. Close to Italian border. More residential business pace.",
+    "contractNotes": "San Marino law. Standard contracts. Growing remote work serving capital."
+  },
+  "Belgrade": {
+    "techScene": "Major Balkan tech hub. Strong in PHP/Laravel, Java, .NET. Startup ecosystem with nice valuations.",
+    "culturalNotes": "White city energy. 'Zdravo' greeting. 'Ćao' common. 'Kafa' (coffee) culture essential. Sava and Danube confluence. Rakija business lubricant.",
+    "contractNotes": "VAT 20%. Freelance 'paušalac' popular with simplified taxation. IT companies get tax incentives. Spontaneous business culture."
+  },
+  "Novi Sad": {
+    "techScene": "University city with growing tech park. Petrochemical software, agtech, and eduTech. Exit festival city.",
+    "culturalNotes": "Serbian Athens nickname. 'Zdravo' greeting. 'Ćao' common. Petrovaradin Fortress landmark. More relaxed than Belgrade.",
+    "contractNotes": "Serbian law. University partnerships available. Tech park offers incentives. Vojvodina region multicultural."
+  },
+  "Nis": {
+    "techScene": "Third city tech. Electronics software (near electronics industry), outsourcing services, and regional platforms.",
+    "culturalNotes": "Constantine the Great birthplace pride. 'Zdravo' greeting. 'Ćao' common. More conservative business culture. Red cross (Crveni krst) history.",
+    "contractNotes": "Serbian law. Electronics sector contracts. Lower costs attract Belgrade companies to outsource here."
+  },
+  "Bratislava": {
+    "techScene": "Automotive software capital (Volkswagen, Peugeot, Kia nearby). Fintech and enterprise solutions.",
+    "culturalNotes": "Little Big City charm. 'Ahoj' greeting. 'Ďakujem' (thank you). Coronation city history. UFO bridge landmark. Austrian-Hungarian coffee heritage.",
+    "contractNotes": "20% VAT. Freelance 'živnostník' straightforward. Automotive sector dominates. Cross-border work with Vienna common."
+  },
+  "Košice": {
+    "techScene": "Second city tech hub. Steel industry software (U.S. Steel), creative tech, and EU funding project management platforms.",
+    "culturalNotes": "European Capital of Culture 2013 legacy. 'Ahoj' greeting. 'Ďakujem' (thank you). Gothic cathedral landmark. More industrial than Bratislava.",
+    "contractNotes": "Slovak law. Steel industry contracts. Special Economic Zone benefits. Growing IT services sector."
+  },
+  "Prešov": {
+    "techScene": "Regional tech center. Manufacturing software, cross-border trade platforms, and remote work for Bratislava.",
+    "culturalNotes": "Eastern Slovakia pragmatism. 'Ahoj' greeting. 'Ďakujem' (thank you). Traditional crafts heritage. More conservative business culture.",
+    "contractNotes": "Slovak law. Manufacturing sector contracts. Lower costs than western Slovakia."
+  },
+  "Ljubljana": {
+    "techScene": "Green tech pioneer. Tourism software, forestry management platforms, and EU project management tools.",
+    "culturalNotes": "Dragon city pride. 'Živjo' greeting. 'Na zdravje' (cheers). Ljubljana River terrace meetings. Sustainable business focus. Jože Plečnik architecture.",
+    "contractNotes": "22% VAT. Freelance 's.p.' status available. Green tech incentives. Small but high-quality developer community."
+  },
+  "Maribor": {
+    "techScene": "University city with wine tech. Agricultural software, eduTech, and regional e-commerce platforms.",
+    "culturalNotes": "Lent district history. 'Živjo' greeting. 'Na zdravje' (cheers). Wine capital of Slovenia. More relaxed than Ljubljana. Styrian region.",
+    "contractNotes": "Slovenian law. Wine/agriculture sectors. University of Maribor partnerships. Lower costs attract companies."
+  },
+  "Celje": {
+    "techScene": "Industrial town tech. Manufacturing software, logistics platforms, and services for local industries.",
+    "culturalNotes": "Roman Celeia heritage. 'Živjo' greeting. 'Na zdravje' (cheers). More industrial pragmatism. Castle hill landmark.",
+    "contractNotes": "Slovenian law. Industrial contracts. Growing IT services for traditional industries."
+  },
+  "Madrid": {
+    "techScene": "Fintech, govtech, and enterprise software. Spanish HQ for many multinationals. Strong in PHP/Laravel and Python.",
+    "culturalNotes": "Imperial city energy. 'Hola' greeting. 'Vale' (okay) essential word. 'Tapeo' (tapas rounds) for business. Puerta del Sol meeting point. Siesta affects 2-4pm.",
+    "contractNotes": "21% VAT. 'Autónomo' freelance status common. Startup Law (Ley Startups) with tax benefits. Strong worker rights."
+  },
+  "Barcelona": {
+    "techScene": "Creative tech capital. Mobile world hub, design-focused software, and smart city solutions. Strong startup ecosystem.",
+    "culturalNotes": "Mediterranean cosmopolitanism. 'Hola' greeting. 'Vale' (okay). 'Seny' (common sense) valued. Gaudí inspiration everywhere. Siesta less observed in tech.",
+    "contractNotes": "Spanish law. Catalan regional specifics. Design/IP protection crucial. Higher rates than Madrid. Mobile World Congress major event."
+  },
+  "Valencia": {
+    "techScene": "Tourism tech and smart city pioneer. Software for paella capital's hospitality, agriculture, and port sectors.",
+    "culturalNotes": "Orange blossom scent. 'Hola' greeting. 'Vale' (okay). 'A qué hora quedamos?' (when shall we meet?) common. Beach meetings possible. Fallas festival affects March.",
+    "contractNotes": "Spanish law. Tourism/agriculture sectors. Lower costs than Madrid/Barcelona attract talent."
+  },
+  "Seville": {
+    "techScene": "Growing tech scene. Tourism software, flamenco tech platforms, and regional administration digitization.",
+    "culturalNotes": "Flamenco soul. 'Hola' greeting. 'Vale' (okay). '¡Olé!' for celebration. Santa María cathedral landmark. Summer heat affects 3-6pm schedules. April Fair impacts calendar.",
+    "contractNotes": "Spanish law. Tourism sector seasonal. Growing tech park with incentives. Andalusian business pace slower."
+  },
+  "Stockholm": {
+    "techScene": "Unicorn factory (Spotify, Klarna, Skype roots). Fintech, gaming (Mojang), and green tech. Highest unicorn density per capita.",
+    "culturalNotes": "Archipelago elegance. 'Hej' greeting. 'Tack' (thank you). 'Fika' (coffee break) sacred institution. Nobel Prize inspiration. ABBA humor.",
+    "contractNotes": "25% VAT. Freelance 'konsult' very common. F-skatt status for companies. Flat hierarchies. 'Lagom' (just right) mentality."
+  },
+  "Gothenburg": {
+    "techScene": "Automotive tech hub (Volvo Cars, CEVT). Green mobility software, maritime tech, and life sciences.",
+    "culturalNotes": "Little London nickname. 'Hej' greeting. 'Tack' (thank you). 'Fika' essential. Rainy humor like Bergen. Volvo safety culture.",
+    "contractNotes": "Swedish law. Automotive sector contracts. Strong unions. Cost of living lower than Stockholm."
+  },
+  "Malmö": {
+    "techScene": "Creative tech and gaming. Øresund bridge to Copenhagen enables cross-border collaboration. Sustainability focus.",
+    "culturalNotes": "Diversity capital. 'Hej' greeting. 'Tack' (thank you). 'Fika' important. Turning Torso landmark. Danish influence strong. Hyllie eco-district.",
+    "contractNotes": "Swedish law. Cross-border Øresund region work common. Creative sector growing. Lower costs than Stockholm."
+  },
+  "Zurich": {
+    "techScene": "Fintech (UBS, Credit Suisse, fintech startups), pharmaceutical software (Roche, Novartis), and premium enterprise solutions.",
+    "culturalNotes": "Banking precision. 'Grüezi' greeting. 'Merci' also used. 'Apéro' (after-work drinks) standard. Grossmünster landmark. Punctuality sacrosanct.",
+    "contractNotes": "7.7% VAT (lowest in region). Strict banking secrecy laws. High regulatory standards. Premium rates reflect quality and cost of living."
+  },
+  "Geneva": {
+    "techScene": "International organization tech. UN software, NGO platforms, and luxury watch industry software. Multilingual contracts.",
+    "culturalNotes": "Diplomatic precision. 'Bonjour' greeting (French-speaking). Red Cross museum inspiration. Jet d'eau landmark. International bubble culture.",
+    "contractNotes": "Swiss/French canton law. International organization standards. Multilingual contracts standard. High-value specialized contracts."
+  },
+  "Basel": {
+    "techScene": "Pharma software capital (Novartis, Roche HQ). Biotech platforms, life sciences software, and cross-border trinational tech.",
+    "culturalNotes": "Rhine river city. 'Grüezi' greeting. 'Merci' common. Dreiländereck (three countries) influences. Art Basel cultural sophistication.",
+    "contractNotes": "Swiss law. Pharma sector needs FDA/EMA compliance. Cross-border work with Germany/France common."
+  },
+  "Bern": {
+    "techScene": "Government software, cybersecurity, and Swisscom (telecom) tech hub. Administrative tech focus.",
+    "culturalNotes": "Federal city dignity. 'Grüezi' greeting. 'Merci' also used. Zytglogge (clock tower) landmark. Bear pit (BärenPark) symbol. Slower pace than Zurich.",
+    "contractNotes": "Swiss law. Government contracts need security clearance. Federal data protection strict."
+  },
+  "Kyiv": {
+    "techScene": "Major Eastern European tech hub. Strong in Java, .NET, PHP/Laravel. Many US/EU companies have R&D centers here.",
+    "culturalNotes": "Golden domes inspiration. 'Pryvit' greeting. 'Dyakuyu' (thank you). 'Na zdorov'ya' (cheers) with horilka. Maidan resilience. IT community exceptionally strong despite challenges.",
+    "contractNotes": "20% VAT. IT sector tax benefits (special regime). Freelance 'FOP' popular. Strong talent pool. Remote work infrastructure excellent."
+  },
+  "Lviv": {
+    "techScene": "Western Ukraine tech hub. Strong in game development, outsourcing, and IT services. Polish/Austrian heritage influences business culture.",
+    "culturalNotes": "Lion city charm. 'Pryvit' greeting. 'Dyakuyu' (thank you). Coffee culture famous (first cafe 1829). Opera house landmark. More Central European vibe.",
+    "contractNotes": "Ukrainian law. IT tax benefits. Strong Polish connections. Lower costs than Kyiv attract Western clients."
+  },
+  "Kharkiv": {
+    "techScene": "University city and aerospace software hub. Strong in mathematics, AI/ML, and embedded systems.",
+    "culturalNotes": "Intellectual capital. 'Pryvit' greeting. 'Dyakuyu' (thank you). Mirror Stream landmark. More scientific business culture. Russian-speaking tech community.",
+    "contractNotes": "Ukrainian law. Aerospace/defense contracts need specific compliance. Strong mathematical talent pool."
+  },
+  "Odessa": {
+    "techScene": "Port city tech. Maritime software, tourism platforms, and cross-border e-commerce with Black Sea region.",
+    "culturalNotes": "Humor capital (Odessa humor). 'Pryvit' greeting. 'Dyakuyu' (thank you). Potemkin Stairs landmark. Sea breeze business culture. Multilingual (Russian/Ukrainian).",
+    "contractNotes": "Ukrainian law. Maritime contracts. Tourism seasonality affects projects. Port city pragmatism."
+  },
+  "London": {
+    "techScene": "Global fintech capital (Monzo, Revolut, TransferWise). AI/ML, SaaS, and enterprise software. Highest concentration of unicorns in Europe.",
+    "culturalNotes": "City of London precision meets East London creativity. 'Hi' greeting. 'Cheers' (thank you/bye). 'Brilliant' (great). Pub meetings standard. Tea culture. 'Quick catch-up' meetings.",
+    "contractNotes": "20% VAT. IR35 legislation affects contractors. Strong IP protection. US/UK time zone overlap valuable. 'Inside IR35' vs 'Outside IR35' crucial distinction."
+  },
+  "Birmingham": {
+    "techScene": "Second city tech hub. Manufacturing software, fintech, and growing startup scene. More affordable than London.",
+    "culturalNotes": "Industrial heritage pride. 'Alright' (hello, Midlands style). 'Cheers' (thank you). Balti triangle curry capital. Bullring landmark. Brummie accent humor.",
+    "contractNotes": "UK law. IR35 regulations apply. Manufacturing sector contracts. Lower rates than London attract companies."
+  },
+  "Manchester": {
+    "techScene": "Digital marketing tech capital. Media software, e-commerce, and fintech. 'Madchester' creative energy in tech.",
+    "culturalNotes": "Northern soul. 'Hi' or 'Alright?' greeting. 'Cheers' (thank you). 'Bee in the bonnet' (obsessed). Canal street gay village. Rainy humor like Seattle.",
+    "contractNotes": "UK law. Media/digital marketing sector. Lower costs than London. Growing startup ecosystem with local VC."
+  },
+  "Glasgow": {
+    "techScene": "Scotland's tech hub. Fintech, shipbuilding software legacy, and creative industries. Strong university connections.",
+    "culturalNotes": "Glaswegian warmth with directness. 'Hi' or 'Awright' greeting. 'Cheers' (thank you). 'Wee' (small) in every sentence. Highland cattle humor. Haggis team lunches.",
+    "contractNotes": "UK/Scottish law. Shipbuilding/maritime contracts. Scottish Enterprise grants available. Lower costs than London."
+  }
+}

@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectCalculator from '../../components/ProjectCalculator.astro';
+import slugify from '../../utils/slugify';
+
+// Import data
+import countriesCities from '../../data/countries-cities.json';
+import countryContent from '../../data/country-content.json';
+import cityContent from '../../data/city-content.json';
+
+export function getStaticPaths() {
+  const paths = [];
+
+  for (const [countryKey, cities] of Object.entries(countriesCities)) {
+    for (const city of cities) {
+      paths.push({
+        params: {
+          country: countryKey.toLowerCase(),
+          city: slugify(city),
+        },
+        props: {
+          countryKey,
+          cityName: city,
+        },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { country, city } = Astro.params;
+const { countryKey, cityName } = Astro.props;
+
+// Get country-specific content
+const countryData = countryContent[countryKey] || {
+  currency: 'EUR',
+  currencySymbol: '€',
+  services: 'Web and software development services.',
+  laws: 'GDPR compliance required. Local data protection laws apply.',
+  slang: 'Business culture varies by region.',
+  expertName: 'Local Expert',
+  expertTitle: 'Software Developer',
+};
+
+// Get city-specific content
+const cityData = cityContent[cityName] || {
+  techScene: 'Growing tech scene with opportunities for custom software development.',
+  culturalNotes: 'Local business culture shapes how we deliver projects.',
+  contractNotes: 'Standard contracts with 30-day payment terms typical.',
+};
+
+// Format country name for display
+const countryName = countryKey.replace(/-/g, ' ');
+
+// Current date for schema
+const currentDate = new Date().toISOString().split('T')[0];
+---
+
+<Layout
+  title={`Laravel Development in ${cityName}, ${countryName} | Expert Software Team`}
+  description={`Hire Laravel developers in ${cityName}, ${countryName}. Local tech expertise, regulatory compliance, and tailored software solutions for ${cityName}-based businesses.`}
+>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Breadcrumb -->
+    <nav class="mb-8 text-sm text-gray-400">
+      <a href="/" class="hover:text-white">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`/${country}/`} class="hover:text-white">{countryName}</a>
+      <span class="mx-2">/</span>
+      <span class="text-white">{cityName}</span>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="text-center mb-16 animate-on-scroll">
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+        Laravel Development in <span class="text-purple-400">{cityName}</span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Expert software development team serving businesses in {cityName}, {countryName}
+        with local expertise and global standards.
+      </p>
+    </div>
+
+    <!-- Local Services & Tech Scene -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <div class="bg-gray-800 rounded-2xl p-8 animate-on-scroll">
+        <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </div>
+        <h2 class="text-xl font-bold mb-3">Tech Scene in {cityName}</h2>
+        <p class="text-gray-300">{cityData.techScene}</p>
+        <div class="mt-4 pt-4 border-t border-gray-700">
+          <h3 class="text-sm font-semibold text-gray-400 mb-2">Country-Level Services</h3>
+          <p class="text-gray-300 text-sm">{countryData.services}</p>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-2xl p-8 animate-on-scroll">
+        <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h2 class="text-xl font-bold mb-3">Laws & Regulations</h2>
+        <p class="text-gray-300">{countryData.laws}</p>
+        <div class="mt-4 pt-4 border-t border-gray-700">
+          <h3 class="text-sm font-semibold text-gray-400 mb-2">Contract Notes for {cityName}</h3>
+          <p class="text-gray-300 text-sm">{cityData.contractNotes}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cultural Notes -->
+    <div class="bg-gray-800/50 rounded-2xl p-8 mb-16 animate-on-scroll">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold mb-3">Local Business Culture in {cityName}</h2>
+          <p class="text-gray-300 mb-4">{countryData.slang}</p>
+          <div class="bg-gray-700/50 rounded-lg p-4">
+            <h3 class="text-sm font-semibold text-gray-400 mb-2">City-Specific Cultural Notes</h3>
+            <p class="text-gray-300 text-sm">{cityData.culturalNotes}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cities Navigation -->
+    <div class="mb-16 animate-on-scroll">
+      <h2 class="text-2xl font-bold mb-6 text-center">
+        Other Cities in <span class="text-purple-400">{countryName}</span>
+      </h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        {countriesCities[countryKey]?.map((c) => {
+          const citySlug = slugify(c);
+          const isActive = c === cityName;
+          return (
+            <a
+              href={`/${country}/${citySlug}/`}
+              class={`px-4 py-2 rounded-lg transition-colors ${
+                isActive
+                  ? 'bg-purple-600 text-white'
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+              }`}
+            >
+              {c}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- Project Calculator -->
+    <div class="mb-16 animate-on-scroll">
+      <ProjectCalculator currency={countryData.currency} currencySymbol={countryData.currencySymbol} />
+    </div>
+
+    <!-- Local Expert -->
+    <div class="bg-gray-800 rounded-2xl p-8 animate-on-scroll" itemscope itemtype="https://schema.org/Person">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="w-24 h-24 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-3xl font-bold">
+          {countryData.expertName.charAt(0)}
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold mb-2">
+            Meet Your Local Expert <span itemprop="name">{countryData.expertName}</span>
+          </h2>
+          <p class="text-gray-300 mb-2">{countryData.expertTitle} based in {cityName}, {countryName}</p>
+          <p class="text-gray-400 text-sm">
+            {countryData.expertName} brings deep knowledge of {cityName}'s tech ecosystem,
+            local regulations, and business culture to ensure your project's success.
+          </p>
+          <meta itemprop="jobTitle" content={countryData.expertTitle} />
+          <div itemprop="workLocation" itemscope itemtype="https://schema.org/City">
+            <meta itemprop="name" content={cityName} />
+          </div>
+          <div itemprop="homeLocation" itemscope itemtype="https://schema.org/City">
+            <meta itemprop="name" content={cityName} />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JSON-LD Schema.org for Article -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": `Laravel Development Services in ${cityName}, ${countryName}`,
+      "description": `Expert software development services in ${cityName}, ${countryName}. Local tech expertise, regulatory compliance, and tailored solutions.`,
+      "author": {
+        "@type": "Person",
+        "name": countryData.expertName,
+        "jobTitle": countryData.expertTitle,
+        "homeLocation": {
+          "@type": "City",
+          "name": cityName
+        },
+        "workLocation": {
+          "@type": "City",
+          "name": cityName
+        }
+      },
+      "contentLocation": {
+        "@type": "City",
+        "name": `${cityName}, ${countryName}`
+      },
+      "datePublished": currentDate,
+      "dateModified": currentDate,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://laravelcompany.com/${country}/${city}/`
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Laravel Company",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://laravelcompany.com/logo.svg"
+        }
+      }
+    })} />
+  </main>
+</Layout>

@@ -1,0 +1,209 @@
+---
+interface Props {
+  currency: string;
+  currencySymbol: string;
+}
+
+const { currency, currencySymbol } = Astro.props;
+---
+
+<div class="bg-gray-800 rounded-2xl p-8 shadow-xl">
+  <h3 class="text-2xl font-bold mb-6">Project Cost Calculator</h3>
+  <p class="text-gray-300 mb-8">Estimate your software project cost in {currency}</p>
+
+  <form id="calculator-form" class="space-y-6">
+    <!-- Project Type -->
+    <div>
+      <label for="project-type" class="block text-sm font-medium text-gray-300 mb-2">
+        Project Type
+      </label>
+      <select
+        id="project-type"
+        name="project-type"
+        class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+      >
+        <option value="website">Website / Landing Page</option>
+        <option value="ecommerce">E-commerce Platform</option>
+        <option value="mobile">Mobile App (iOS/Android)</option>
+        <option value="webapp">Web Application / SaaS</option>
+        <option value="crm">CRM / ERP System</option>
+        <option value="api">API / Integration Service</option>
+        <option value="custom">Custom Platform</option>
+      </select>
+    </div>
+
+    <!-- Complexity -->
+    <div>
+      <label class="block text-sm font-medium text-gray-300 mb-2">
+        Complexity Level
+      </label>
+      <div class="grid grid-cols-3 gap-3">
+        <button
+          type="button"
+          data-complexity="low"
+          class="complexity-btn px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg hover:bg-gray-600 transition-colors text-sm font-medium"
+        >
+          Low<br /><span class="text-xs text-gray-400">Simple</span>
+        </button>
+        <button
+          type="button"
+          data-complexity="medium"
+          class="complexity-btn px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg hover:bg-gray-600 transition-colors text-sm font-medium active"
+        >
+          Medium<br /><span class="text-xs text-gray-400">Standard</span>
+        </button>
+        <button
+          type="button"
+          data-complexity="high"
+          class="complexity-btn px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg hover:bg-gray-600 transition-colors text-sm font-medium"
+        >
+          High<br /><span class="text-xs text-gray-400">Complex</span>
+        </button>
+      </div>
+      <input type="hidden" id="complexity" name="complexity" value="medium" />
+    </div>
+
+    <!-- Hours -->
+    <div>
+      <label for="hours" class="block text-sm font-medium text-gray-300 mb-2">
+        Estimated Hours: <span id="hours-display">100</span>
+      </label>
+      <input
+        type="range"
+        id="hours"
+        name="hours"
+        min="20"
+        max="500"
+        value="100"
+        step="10"
+        class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-purple-500"
+      />
+      <div class="flex justify-between text-xs text-gray-400 mt-1">
+        <span>20h</span>
+        <span>500h</span>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div class="bg-gray-900 rounded-lg p-6 text-center">
+      <p class="text-sm text-gray-400 mb-2">Estimated Total Cost</p>
+      <p id="total-cost" class="text-4xl font-bold text-purple-400">
+        {currencySymbol}25,000
+      </p>
+      <p class="text-xs text-gray-500 mt-2">
+        *Estimate based on local rates. Final cost may vary.
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <a
+      href="/contact"
+      class="block w-full text-center px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+    >
+      Get Exact Quote
+    </a>
+  </form>
+</div>
+
+<script define:vars={{ currency, currencySymbol }}>
+  // Base hourly rates by currency (in local currency)
+  const baseRates = {
+    'ALL': 15,    // Albanian Lek
+    'EUR': 65,    // Euro
+    'BAM': 20,    // Bosnia Convertible Mark
+    'BGN': 22,    // Bulgarian Lev
+    'CZK': 550,   // Czech Koruna
+    'DKK': 500,   // Danish Krone
+    'EUR': 65,    // Euro (Austria, Belgium, etc.)
+    'GBP': 60,    // British Pound
+    'HUF': 8500,  // Hungarian Forint
+    'ISK': 9000,  // Icelandic Krona
+    'CHF': 75,    // Swiss Franc
+    'MDL': 300,   // Moldovan Leu
+    'MKD': 600,   // Macedonian Denar
+    'NOK': 650,   // Norwegian Krone
+    'PLN': 280,   // Polish Zloty
+    'RON': 160,   // Romanian Leu
+    'SEK': 600,   // Swedish Krona
+    'RSD': 2900,  // Serbian Dinar
+    'UAH': 800,   // Ukrainian Hryvnia
+  };
+
+  // Complexity multipliers
+  const complexityMultipliers = {
+    'low': 0.7,
+    'medium': 1.0,
+    'high': 1.5
+  };
+
+  // Project type multipliers
+  const projectMultipliers = {
+    'website': 0.8,
+    'ecommerce': 1.2,
+    'mobile': 1.3,
+    'webapp': 1.4,
+    'crm': 1.6,
+    'api': 1.1,
+    'custom': 1.8
+  };
+
+  const form = document.getElementById('calculator-form');
+  const hoursSlider = document.getElementById('hours');
+  const hoursDisplay = document.getElementById('hours-display');
+  const totalCostEl = document.getElementById('total-cost');
+  const complexityInput = document.getElementById('complexity');
+  const complexityBtns = document.querySelectorAll('.complexity-btn');
+
+  // Get rate for currency (fallback to EUR)
+  function getRate(curr) {
+    return baseRates[curr] || baseRates['EUR'];
+  }
+
+  // Format currency
+  function formatCurrency(amount, curr, sym) {
+    const formatted = Math.round(amount).toLocaleString('en-US');
+    return `${sym}${formatted}`;
+  }
+
+  // Calculate and update display
+  function calculate() {
+    const hours = parseInt(hoursSlider.value);
+    const complexity = complexityInput.value;
+    const projectType = document.getElementById('project-type').value;
+
+    const rate = getRate(currency);
+    const complexityMult = complexityMultipliers[complexity] || 1;
+    const projectMult = projectMultipliers[projectType] || 1;
+
+    const total = rate * hours * complexityMult * projectMult;
+
+    hoursDisplay.textContent = hours;
+    totalCostEl.textContent = formatCurrency(total, currency, currencySymbol);
+  }
+
+  // Complexity button handling
+  complexityBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      complexityBtns.forEach(b => {
+        b.classList.remove('bg-purple-600', 'border-purple-500');
+        b.classList.add('bg-gray-700', 'border-gray-600');
+      });
+      btn.classList.remove('bg-gray-700', 'border-gray-600');
+      btn.classList.add('bg-purple-600', 'border-purple-500');
+      complexityInput.value = btn.dataset.complexity;
+      calculate();
+    });
+  });
+
+  // Set medium as default active
+  document.querySelector('[data-complexity="medium"]')?.classList.remove('bg-gray-700', 'border-gray-600');
+  document.querySelector('[data-complexity="medium"]')?.classList.add('bg-purple-600', 'border-purple-500');
+
+  // Event listeners
+  hoursSlider.addEventListener('input', calculate);
+  document.getElementById('project-type').addEventListener('change', calculate);
+
+  // Initial calculation
+  calculate();
+</script>

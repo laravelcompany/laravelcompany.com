@@ -1,0 +1,362 @@
+{
+  "Albania": {
+    "currency": "ALL",
+    "currencySymbol": "L",
+    "services": "Web development with PHP Laravel, WordPress, and modern JavaScript frameworks. Growing outsourcing hub with competitive rates.",
+    "laws": "Personal Data Protection Law (Law No. 9887). Companies must register with the Commissioner for the Right to Information. VAT at 20%.",
+    "slang": "Common greeting: 'Përshëndetje!' Business culture is relationship-focused. 'Faleminderit' means thank you.",
+    "expertName": "Arber Hoxha",
+    "expertTitle": "Senior Laravel Developer"
+  },
+  "Andorra": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Fintech and blockchain development. Tax-efficient jurisdiction attracting international tech companies.",
+    "laws": "GDPR compliance required. Corporate tax rate 10%. Digital services tax applies. Data protection via Andorran Data Protection Agency.",
+    "slang": "Catalan is official: 'Gràcies' (thank you). Business hours include midday siesta. Personal relationships key to deals.",
+    "expertName": "Marc Pujol",
+    "expertTitle": "Full-Stack Developer"
+  },
+  "Austria": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Enterprise software, fintech, and Industry 4.0 solutions. Strong focus on Java, .NET, and Laravel for business applications.",
+    "laws": "GDPR compliance mandatory. Austrian Data Protection Act (DSG). Collective bargaining agreements affect IT contracts. 20% VAT standard rate.",
+    "slang": "Grüß Gott (formal greeting). 'Servus' for hello/goodbye. Punctuality is strict. Business culture is formal and structured.",
+    "expertName": "Julia Schneider",
+    "expertTitle": "Software Architect"
+  },
+  "Belgium": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "EU institution-focused development, fintech, and port logistics systems. Multilingual dev teams (Dutch, French, German).",
+    "laws": "GDPR compliance. Belgian Data Protection Authority oversight. 21% VAT. Strong worker protection laws. Freelance status requires specific structures.",
+    "slang": "Depends on region: 'Dag' (Dutch), 'Bonjour' (French). 'Merci' or 'Dank je' common. Business culture varies by region.",
+    "expertName": "Thomas Dubois",
+    "expertTitle": "Laravel Consultant"
+  },
+  "Bosnia-and-Herzegovina": {
+    "currency": "BAM",
+    "currencySymbol": "KM",
+    "services": "Outsourcing hub for software development. Strong in .NET, Java, and PHP. Competitive rates with EU proximity.",
+    "laws": "Personal Data Protection Act (2018). VAT 17%. Foreign companies can operate via branch offices. IT companies get tax incentives in tech parks.",
+    "slang": "Common: 'Zdravo' (hello). Business culture is relationship-based. Coffee meetings ('na kafu') are essential for business.",
+    "expertName": "Amina Šarić",
+    "expertTitle": "Backend Developer"
+  },
+  "Bulgaria": {
+    "currency": "BGN",
+    "currencySymbol": "лв",
+    "services": "Major outsourcing destination. Strong in Java, PHP, JavaScript. Many European companies have development centers here.",
+    "laws": "GDPR compliance. Personal Data Protection Act. 20% VAT. Flat tax rate 10% on corporate profits. IT specialists get 10% tax on income.",
+    "slang": "Common: 'Zdravei' (hello). 'Blagodarya' (thank you). Business culture becoming more Western. Direct communication style.",
+    "expertName": "Martin Petrov",
+    "expertTitle": "Senior PHP Developer"
+  },
+  "Croatia": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Tourism tech, blockchain, and enterprise software. Growing startup ecosystem with government support programs.",
+    "laws": "GDPR compliance. Personal Data Protection Act. 25% VAT standard rate. Digital nomad visa available. New residence permits for digital workers.",
+    "slang": "Common: 'Bok' (hello). 'Hvala' (thank you). Business culture is direct but polite. Summer slowdown in August.",
+    "expertName": "Ivana Horvat",
+    "expertTitle": "Frontend Developer"
+  },
+  "Czech-Republic": {
+    "currency": "CZK",
+    "currencySymbol": "Kč",
+    "services": "Enterprise software, gaming, and AI solutions. Prague is a major tech hub. Strong in Java, .NET, and PHP/Laravel.",
+    "laws": "GDPR compliance. Personal Data Protection Act. 21% VAT. Trade license (živnostenský list) common for freelancers. IT vat exemption possible.",
+    "slang": "Common: 'Ahoj' (hello). 'Děkuji' (thank you). Business culture is direct. Pilsner beer culture important for networking.",
+    "expertName": "Jan Novák",
+    "expertTitle": "Laravel Team Lead"
+  },
+  "Denmark": {
+    "currency": "DKK",
+    "currencySymbol": "kr",
+    "services": "Green tech, fintech, and design-focused web apps. High labor costs but exceptional quality. Strong startup ecosystem.",
+    "laws": "GDPR compliance. Danish Data Protection Act. 25% VAT. Strong worker rights. Flexible working environment. Limited liability companies popular.",
+    "slang": "Common: 'Hej' (hello). 'Tak' (thank you). Flat hierarchy in business. Work-life balance prioritized. 'Hygge' culture important.",
+    "expertName": "Mette Larsen",
+    "expertTitle": "Solution Architect"
+  },
+  "Estonia": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "E-residency pioneer, blockchain, and govtech. Tallinn is a digital society leader. Strong in Python, Go, and JavaScript.",
+    "laws": "GDPR compliance. Estonian Data Protection Act. 20% VAT. E-residency program. Digital signatures legally binding. Minimal bureaucracy.",
+    "slang": "Common: 'Tere' (hello). 'Aitäh' (thank you). Digital-first culture. 'Kohtumiseni' means see you. Business culture is efficient.",
+    "expertName": "Kadri Mägi",
+    "expertTitle": "Full-Stack Engineer"
+  },
+  "Finland": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Gaming industry leader (Rovio, Supercell), enterprise software, and cleantech. High quality, innovative solutions.",
+    "laws": "GDPR compliance. Finnish Data Protection Act. 24% VAT. Strong employee rights. Collective agreements common. Flat organizational structures.",
+    "slang": "Common: 'Moi' (hello). 'Kiitos' (thank you). 'Sisu' (determination) is cultural value. Punctuality expected. Sauna culture for networking.",
+    "expertName": "Antti Virtanen",
+    "expertTitle": "Senior Software Engineer"
+  },
+  "France": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Luxury e-commerce, fintech, and AI/ML solutions. Strong startup ecosystem (Station F). Expertise in PHP/Symfony, Laravel, Python.",
+    "laws": "GDPR compliance. CNIL oversight. 20% VAT standard. 35-hour work week. Strong employee protection. Freelance status (portage salarial) common.",
+    "slang": "Common: 'Bonjour' (hello). 'Merci' (thank you). 'RSVP' for responses. Business culture formal. Lunch meetings are important.",
+    "expertName": "Sophie Martin",
+    "expertTitle": "Technical Director"
+  },
+  "Germany": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Industry 4.0, automotive software, fintech, and enterprise solutions. Strong in Java, Python, and PHP/Laravel. Munich and Berlin hub.",
+    "laws": "GDPR compliance. German Federal Data Protection Act (BDSG). 19% VAT. Strong worker co-determination. Freelance (Freiberufler) status defined strictly.",
+    "slang": "Common: 'Hallo' (hello). 'Danke' (thank you). 'Mahlzeit' used at lunch. Direct communication. Punctuality is a virtue. 'Feierabend' sacred.",
+    "expertName": "Anna Schmidt",
+    "expertTitle": "Senior Laravel Developer"
+  },
+  "Greece": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Tourism tech, shipping software, and fintech. Growing startup scene with government incentives. Strong in JavaScript and PHP.",
+    "laws": "GDPR compliance. Greek Data Protection Authority. 24% VAT standard. Recent digital transformation initiatives. Freelance (freelancer) common.",
+    "slang": "Common: 'Yassas' (hello). 'Efharisto' (thank you). 'Opa!' for celebration. Business culture relaxed but relationship-focused. Coffee culture important.",
+    "expertName": "Dimitris Papadopoulos",
+    "expertTitle": "Web Development Lead"
+  },
+  "Hungary": {
+    "currency": "HUF",
+    "currencySymbol": "Ft",
+    "services": "Automotive software, fintech, and outsourcing hub. Budapest is major tech center. Strong in Java, .NET, and PHP development.",
+    "laws": "GDPR compliance. Hungarian Data Protection Act. 27% VAT (highest in EU). KATA simplified taxation for freelancers (recently changed).",
+    "slang": "Common: 'Szia' (hello). 'Köszönöm' (thank you). Business culture direct. 'Pálinka' (fruit brandy) for business dinners. Friday informal dress.",
+    "expertName": "Zoltán Kovács",
+    "expertTitle": "Backend Architect"
+  },
+  "Iceland": {
+    "currency": "ISK",
+    "currencySymbol": "kr",
+    "services": "Green energy tech, tourism platforms, and fintech. Small but highly skilled developer community. Strong in Python and JavaScript.",
+    "laws": "GDPR compliance. Icelandic Data Protection Authority. 24% VAT. Strong press freedom laws. Digital society with high tech adoption.",
+    "slang": "Common: 'Hæ' (hello). 'Takk' (thank you). 'Góðan daginn' formal greeting. Business culture egalitarian. Geothermal humor appreciated.",
+    "expertName": "Sigrún Jónsdóttir",
+    "expertTitle": "Software Developer"
+  },
+  "Ireland": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Fintech, SaaS platforms, and enterprise software. Dublin is European HQ for many US tech companies. Strong in Python, Java, and JavaScript.",
+    "laws": "GDPR compliance. Irish Data Protection Commission. 23% VAT. Favorable corporate tax rate 12.5%. Strong IP protection laws.",
+    "slang": "Common: 'Hi' or 'Howya' (hello). 'Thanks' (thank you). 'Craic' means fun. Business culture casual but professional. Pub meetings common.",
+    "expertName": "Conor O'Brien",
+    "expertTitle": "Full-Stack Developer"
+  },
+  "Italy": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Fashion tech, automotive software, and design-focused web applications. Strong in PHP, JavaScript, and Python development.",
+    "laws": "GDPR compliance. Garante per la protezione dei dati personali. 22% VAT standard. Complex bureaucracy. Partita IVA for freelancers.",
+    "slang": "Common: 'Ciao' (hello/goodbye). 'Grazie' (thank you). 'Prego' you're welcome. Business culture relationship-based. 'La bella figura' important.",
+    "expertName": "Marco Rossi",
+    "expertTitle": "Laravel Developer"
+  },
+  "Latvia": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Fintech, blockchain, and outsourcing. Riga is growing tech hub. Strong in PHP, Java, and modern JavaScript frameworks.",
+    "laws": "GDPR compliance. Latvian Data State Inspectorate. 21% VAT. Startup-friendly policies. E-residency compatible. Freelance status straightforward.",
+    "slang": "Common: 'Sveiks' (hello, male), 'Sveika' (female). 'Paldies' (thank you). Business culture direct. Midsummer (Jāņi) affects summer schedules.",
+    "expertName": "Liga Bērziņa",
+    "expertTitle": "Backend Developer"
+  },
+  "Liechtenstein": {
+    "currency": "CHF",
+    "currencySymbol": "Fr",
+    "services": "Fintech, private banking software, and enterprise solutions. High-quality, specialized development with Swiss-quality standards.",
+    "laws": "GDPR compliance. Data protection based on Swiss and EU standards. 7.7% VAT. Favorable tax environment. Strict banking regulations.",
+    "slang": "German-speaking: 'Grüezi' (hello). 'Merci' also used. Business culture formal and precise. Appointment-punctuality essential.",
+    "expertName": "Lukas Büchel",
+    "expertTitle": "Software Engineer"
+  },
+  "Lithuania": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Fintech (second most in EU after UK), laser tech, and outsourcing. Vilnius is major tech hub. Strong in PHP, Python, and JavaScript.",
+    "laws": "GDPR compliance. State Data Protection Inspectorate. 21% VAT. Startup visa available. Freelancer (individual activity) status simple.",
+    "slang": "Common: 'Labas' (hello). 'Ačiū' (thank you). Business culture direct but polite. 'Sėkmės' means good luck. Basketball culture prevalent.",
+    "expertName": "Tomas Žukauskas",
+    "expertTitle": "Senior Developer"
+  },
+  "Luxembourg": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Fintech, EU institution software, and investment platform development. High-value, specialized solutions for financial sector.",
+    "laws": "GDPR compliance. National Commission for Data Protection. 17% VAT. Favorable tax environment. Multilingual business environment (FR/DE/EN).",
+    "slang": "Multilingual: 'Moien' (Luxembourgish hello). 'Merci' (thank you). Business culture multilingual. Cross-border workers common.",
+    "expertName": "Pierre Schmit",
+    "expertTitle": "FinTech Developer"
+  },
+  "Malta": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "iGaming platforms, blockchain, and fintech. Strong regulatory framework attracts tech companies. Expertise in PHP and JavaScript.",
+    "laws": "GDPR compliance. Maltese Data Protection Commissioner. 18% VAT. iGaming licensing requirements. Digital innovation-friendly policies.",
+    "slang": "Common: 'Bongu' (hello, Maltese). 'Grazzi' (thank you). Business culture relationship-based. Bilingual EN/MT environment.",
+    "expertName": "Elena Borg",
+    "expertTitle": "Web Developer"
+  },
+  "Moldova": {
+    "currency": "MDL",
+    "currencySymbol": "L",
+    "services": "Outsourcing destination with competitive rates. Strong in PHP, Java, and .NET. Growing tech parks with tax incentives.",
+    "laws": "Personal Data Protection Law (2005, updated 2011). VAT 20%. IT Park residents get tax privileges. Freelance status available.",
+    "slang": "Common: 'Bună' (hello). 'Mulțumesc' (thank you). Business culture relationship-focused. Hospitality culture important. Wine culture prevalent.",
+    "expertName": "Andrei Ceban",
+    "expertTitle": "PHP Developer"
+  },
+  "Montenegro": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Tourism tech, blockchain, and outsourcing. Growing digital sector with digital nomad-friendly policies.",
+    "laws": "GDPR compliance. Agency for Personal Data Protection. VAT 21%. Digital nomad visa introduced. Freelance status straightforward.",
+    "slang": "Common: 'Zdravo' (hello). 'Hvala' (thank you). Business culture relaxed. 'Kafa' (coffee) meetings essential. Summer slows down in August.",
+    "expertName": "Milica Vuković",
+    "expertTitle": "Frontend Developer"
+  },
+  "Netherlands": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Fintech, water tech, and sustainable solutions. Amsterdam is major tech hub. Strong in Python, PHP/Laravel, and JavaScript.",
+    "laws": "GDPR compliance. Dutch Data Protection Authority (AP). 21% VAT. Freelance (ZZP) very common. 30% ruling for foreign employees.",
+    "slang": "Common: 'Hoi' (hello). 'Dank je' (thank you). 'Gezellig' (cozy/fun). Business culture direct. 'Doe maar gewoon' (keep it normal) mentality.",
+    "expertName": "Jeroen de Vries",
+    "expertTitle": "Solution Architect"
+  },
+  "North-Macedonia": {
+    "currency": "MKD",
+    "currencySymbol": "ден",
+    "services": "Outsourcing hub with competitive rates. Strong in PHP, Java, and mobile development. Government IT park incentives.",
+    "laws": "Personal Data Protection Law (2005). VAT 18%. Technological Industrial Development Zones offer tax benefits. Freelance status available.",
+    "slang": "Common: 'Zdravo' (hello). 'Blagodaram' (thank you). Business culture relationship-based. 'Kafa' (coffee) culture important for networking.",
+    "expertName": "Aleksandar Dimitrov",
+    "expertTitle": "Full-Stack Developer"
+  },
+  "Norway": {
+    "currency": "NOK",
+    "currencySymbol": "kr",
+    "services": "Oil & gas software, maritime tech, and green energy solutions. High-quality development with premium rates. Strong in Java, C#, Python.",
+    "laws": "GDPR compliance. Norwegian Data Protection Authority. 25% VAT. Strong worker rights. Freelance (oppdragstaker) common. High labor costs.",
+    "slang": "Common: 'Hei' (hello). 'Takk' (thank you). 'Koselig' (cozy). Business culture egalitarian. 'Dugnad' (community work) spirit valued.",
+    "expertName": "Erik Johansen",
+    "expertTitle": "Senior Software Engineer"
+  },
+  "Poland": {
+    "currency": "PLN",
+    "currencySymbol": "zł",
+    "services": "Major outsourcing hub. Fintech, gaming, and enterprise software. Strong in Java, .NET, PHP/Laravel. Warsaw and Krakow are tech centers.",
+    "laws": "GDPR compliance. Polish Data Protection Commissioner (UODO). 23% VAT. B2B contracts popular for IT. R&D tax relief available.",
+    "slang": "Common: 'Cześć' (hello). 'Dziękuję' (thank you). Business culture direct. 'Na zdrowie' (cheers). Pierogi meetings for team building.",
+    "expertName": "Katarzyna Wiśniewska",
+    "expertTitle": "Laravel Team Lead"
+  },
+  "Portugal": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Fintech, tourism tech, and startups. Lisbon is growing tech hub. Strong in Python, JavaScript, and PHP development.",
+    "laws": "GDPR compliance. CNPD (National Data Protection Commission). 23% VAT. Digital nomad visa available. Freelance (recibos verdes) common.",
+    "slang": "Common: 'Olá' (hello). 'Obrigado/a' (thank you). 'Bom dia' (good morning). Business culture relationship-based. Coffee 'bica' culture important.",
+    "expertName": "Ricardo Silva",
+    "expertTitle": "Backend Developer"
+  },
+  "Romania": {
+    "currency": "RON",
+    "currencySymbol": "lei",
+    "services": "Major outsourcing destination. Automotive software, fintech, and AI/ML. Strong in Java, .NET, PHP. Cluj-Napoca is tech hub.",
+    "laws": "GDPR compliance. National Supervision Authority for Personal Data Processing. 19% VAT. Micro-enterprise tax regime beneficial for IT.",
+    "slang": "Common: 'Bună' (hello). 'Mulțumesc' (thank you). 'Noroc' (cheers). Business culture direct. 'Sarma' (cabbage rolls) at business dinners.",
+    "expertName": "Alexandru Popa",
+    "expertTitle": "Senior PHP Developer"
+  },
+  "San-Marino": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Fintech and blockchain solutions. Favorable tax environment. Small but specialized development teams.",
+    "laws": "GDPR compliance. Data protection aligned with EU standards. VAT not applicable (special status). Tax advantages for companies.",
+    "slang": "Italian spoken: 'Ciao' (hello). 'Grazie' (thank you). Business culture similar to Italy. Small community, personal relationships key.",
+    "expertName": "Luca Bernardi",
+    "expertTitle": "Software Developer"
+  },
+  "Serbia": {
+    "currency": "RSD",
+    "currencySymbol": "дин",
+    "services": "Outsourcing hub with competitive rates. Strong in PHP, Java, .NET. Belgrade and Novi Sad are tech centers. Growing startup ecosystem.",
+    "laws": "Personal Data Protection Law (2018). VAT 20%. Freelance (paušalac) popular with simplified taxation. IT companies get tax incentives.",
+    "slang": "Common: 'Zdravo' (hello). 'Hvala' (thank you). 'Ćao' (Ciao). Business culture direct. 'Kafa' (coffee) meetings essential. Rakija culture.",
+    "expertName": "Nikola Jovanović",
+    "expertTitle": "Full-Stack Developer"
+  },
+  "Slovakia": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Automotive software, fintech, and outsourcing. Bratislava is growing tech hub. Strong in Java, .NET, and PHP development.",
+    "laws": "GDPR compliance. Office for Personal Data Protection. 20% VAT. Freelance (živnostník) straightforward. Automotive sector dominates.",
+    "slang": "Common: 'Ahoj' (hello). 'Ďakujem' (thank you). Business culture direct. 'Demänovka' (herbal liqueur) for celebrations. Beer culture prevalent.",
+    "expertName": "Peter Horváth",
+    "expertTitle": "Software Engineer"
+  },
+  "Slovenia": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Tourism tech, forestry software, and fintech. Ljubljana has growing startup scene. Strong in PHP, Python, and JavaScript.",
+    "laws": "GDPR compliance. Information Commissioner (IPRS). 22% VAT. Freelance (s.p.) status available. Green tech incentives.",
+    "slang": "Common: 'Živjo' (hello). 'Hvala' (thank you). 'Na zdravje' (cheers). Business culture polite and relationship-based. 'Gostilna' lunches common.",
+    "expertName": "Maja Kovačič",
+    "expertTitle": "Web Developer"
+  },
+  "Spain": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "services": "Fintech, tourism platforms, and e-commerce. Barcelona and Madrid are major tech hubs. Strong in PHP/Laravel, Python, and JavaScript.",
+    "laws": "GDPR compliance. AEPD (Spanish Data Protection Agency). 21% VAT. Startup Law (Ley Startups) with tax benefits. Freelance (autónomo) common.",
+    "slang": "Common: 'Hola' (hello). 'Gracias' (thank you). 'Vale' (okay). Business culture relationship-based. Siesta affects schedules. 'Tapas' meetings.",
+    "expertName": "Carlos García",
+    "expertTitle": "Laravel Developer"
+  },
+  "Sweden": {
+    "currency": "SEK",
+    "currencySymbol": "kr",
+    "services": "Fintech (Klarna, etc.), gaming, and green tech. Stockholm is unicorn factory. Strong in Python, Java, and JavaScript.",
+    "laws": "GDPR compliance. Swedish Authority for Privacy Protection (IMY). 25% VAT. Flat hierarchies. Freelance (konsult) very common. F-skatt status.",
+    "slang": "Common: 'Hej' (hello). 'Tack' (thank you). 'Fika' (coffee break) essential. Business culture egalitarian. 'Lagom' (just right) mentality.",
+    "expertName": "Erik Lindberg",
+    "expertTitle": "Senior Developer"
+  },
+  "Switzerland": {
+    "currency": "CHF",
+    "currencySymbol": "Fr",
+    "services": "Fintech, pharmaceutical software, and enterprise solutions. Premium quality development with highest rates. Strong in Java, Python, PHP.",
+    "laws": "GDPR compliance. FDPIC (Federal Data Protection and Information Commissioner). 7.7% VAT. Strict banking secrecy laws. High regulatory standards.",
+    "slang": "Multilingual: 'Grüezi' (DE), 'Bonjour' (FR), 'Buongiorno' (IT). Business culture punctual and precise. 'Apéro' (after-work drinks) common.",
+    "expertName": "Luca Meyer",
+    "expertTitle": "Solution Architect"
+  },
+  "Ukraine": {
+    "currency": "UAH",
+    "currencySymbol": "₴",
+    "services": "Major outsourcing hub. Strong in Java, .NET, PHP/Laravel. Kyiv, Lviv, Kharkiv are tech centers. Exceptional talent at competitive rates.",
+    "laws": "Personal Data Protection Law (2010). VAT 20%. IT sector tax benefits (special regime). Freelance (FOP) popular with simplified taxation.",
+    "slang": "Common: 'Pryvit' (hello). 'Dyakuyu' (thank you). 'Na zdorov'ya' (cheers). Business culture direct. 'Borscht' at team events. IT community strong.",
+    "expertName": "Olena Kovalenko",
+    "expertTitle": "Senior Laravel Developer"
+  },
+  "United-Kingdom": {
+    "currency": "GBP",
+    "currencySymbol": "£",
+    "services": "Fintech (London dominates), AI/ML, and enterprise software. Strong in Python, Java, JavaScript, and PHP/Laravel. Remote work prevalent.",
+    "laws": "UK GDPR compliance. ICO (Information Commissioner's Office). 20% VAT. IR35 legislation affects contractors. Strong IP protection.",
+    "slang": "Common: 'Hello'/'Hi'. 'Cheers' (thank you). 'Brilliant' (great). Business culture polite but direct. 'Pub' meetings common. Tea culture.",
+    "expertName": "James Thompson",
+    "expertTitle": "Technical Lead"
+  }
+}

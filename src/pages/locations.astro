@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import countriesCities from '../data/countries-cities.json';
+import slugify from '../utils/slugify';
+
+// Get all countries and cities for the index
+const countries = Object.entries(countriesCities).map(([countryKey, cities]) => {
+  return {
+    key: countryKey,
+    name: countryKey.replace(/-/g, ' '),
+    slug: countryKey.toLowerCase(),
+    cities: cities.map(city => ({
+      name: city,
+      slug: slugify(city)
+    }))
+  };
+}).sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<Layout
+  title="Our Locations | Laravel Development Services Worldwide"
+  description="Find Laravel development services in your country and city. We serve businesses across Europe and the UK with local expertise and global standards."
+>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Hero Section -->
+    <div class="text-center mb-16 animate-on-scroll">
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+        Our <span class="text-purple-400">Locations</span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Find expert Laravel development services in your country and city.
+        We serve businesses across Europe and the UK with local expertise.
+      </p>
+    </div>
+
+    <!-- Locations Grid -->
+    <div class="space-y-12">
+      {countries.map((country) => (
+        <div class="animate-on-scroll">
+          <!-- Country Header -->
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold">
+                <a href={`/${country.slug}/`} class="hover:text-purple-400 transition-colors">
+                  {country.name}
+                </a>
+              </h2>
+              <p class="text-gray-400 text-sm">{country.cities.length} cities served</p>
+            </div>
+          </div>
+
+          <!-- Cities Grid -->
+          <div class="ml-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            {country.cities.map((city) => (
+              <a
+                href={`/${country.slug}/${city.slug}/`}
+                class="block bg-gray-800 hover:bg-gray-700 rounded-lg p-3 text-center transition-colors text-sm"
+              >
+                {city.name}
+              </a>
+            ))}
+          </div>
+
+          <!-- Divider -->
+          <div class="mt-8 border-b border-gray-800"></div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-16 text-center animate-on-scroll">
+      <div class="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-2xl p-8 md:p-12">
+        <h2 class="text-3xl font-bold mb-4">Don't See Your Location?</h2>
+        <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+          We work with clients worldwide. Contact us to discuss how we can help with your software project,
+          no matter where your business is located.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+        >
+          Talk to an Expert
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 animate-on-scroll">
+      <div class="bg-gray-800 rounded-xl p-6 text-center">
+        <p class="text-4xl font-bold text-purple-400">{countries.length}</p>
+        <p class="text-gray-400 text-sm mt-1">Countries</p>
+      </div>
+      <div class="bg-gray-800 rounded-xl p-6 text-center">
+        <p class="text-4xl font-bold text-purple-400">
+          {countries.reduce((acc, country) => acc + country.cities.length, 0)}
+        </p>
+        <p class="text-gray-400 text-sm mt-1">Cities</p>
+      </div>
+      <div class="bg-gray-800 rounded-xl p-6 text-center">
+        <p class="text-4xl font-bold text-purple-400">
+          {countries.reduce((acc, country) => acc + country.cities.length, 0) + countries.length}
+        </p>
+        <p class="text-gray-400 text-sm mt-1">Total Pages</p>
+      </div>
+      <div class="bg-gray-800 rounded-xl p-6 text-center">
+        <p class="text-4xl font-bold text-purple-400">100%</p>
+        <p class="text-gray-400 text-sm mt-1">Static Pages</p>
+      </div>
+    </div>
+  </main>
+</Layout>

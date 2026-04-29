@@ -1,0 +1,185 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectCalculator from '../../components/ProjectCalculator.astro';
+import slugify from '../../utils/slugify';
+
+// Import data
+import countriesCities from '../../data/countries-cities.json';
+import countryContent from '../../data/country-content.json';
+import cityContent from '../../data/city-content.json';
+
+export function getStaticPaths() {
+  return Object.entries(countriesCities).map(([countryKey, cities]) => {
+    return {
+      params: { country: countryKey.toLowerCase() },
+      props: {
+        countryKey,
+        cities,
+      },
+    };
+  });
+}
+
+const { country } = Astro.params;
+const { countryKey, cities } = Astro.props;
+
+// Get country-specific content
+const content = countryContent[countryKey] || {
+  currency: 'EUR',
+  currencySymbol: '€',
+  services: 'Web and software development services tailored to local market needs.',
+  laws: 'GDPR compliance required. Local data protection laws apply.',
+  slang: 'Business culture varies by region. Please contact us for local insights.',
+  expertName: 'Local Expert',
+  expertTitle: 'Software Developer',
+};
+
+// Find expert's home city (first city in the list)
+const expertCity = cities?.[0] || 'Capital City';
+
+// Format country name for display (replace hyphens with spaces)
+const countryName = countryKey.replace(/-/g, ' ');
+
+// Current date for schema
+const currentDate = new Date().toISOString().split('T')[0];
+---
+
+<Layout
+  title={`Laravel Development Services in ${countryName} | Expert Software Team`}
+  description={`Hire Laravel developers in ${countryName}. Expert software development services, local regulations compliance, and tailored solutions for ${countryName}-based businesses.`}
+>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Hero Section -->
+    <div class="text-center mb-16 animate-on-scroll">
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+        Laravel Development Services in <span class="text-purple-400">{countryName}</span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Expert software development team serving businesses across {countryName} with local expertise and global standards.
+      </p>
+    </div>
+
+    <!-- Local Services -->
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-gray-800 rounded-2xl p-8 animate-on-scroll">
+        <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </div>
+        <h2 class="text-xl font-bold mb-3">Local Software Services</h2>
+        <p class="text-gray-300">{content.services}</p>
+      </div>
+
+      <div class="bg-gray-800 rounded-2xl p-8 animate-on-scroll">
+        <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h2 class="text-xl font-bold mb-3">Laws & Regulations</h2>
+        <p class="text-gray-300">{content.laws}</p>
+      </div>
+
+      <div class="bg-gray-800 rounded-2xl p-8 animate-on-scroll">
+        <div class="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+          </svg>
+        </div>
+        <h2 class="text-xl font-bold mb-3">Local Business Culture</h2>
+        <p class="text-gray-300">{content.slang}</p>
+      </div>
+    </div>
+
+    <!-- Cities List -->
+    <div class="mb-16 animate-on-scroll">
+      <h2 class="text-3xl font-bold mb-8 text-center">
+        Cities We Serve in <span class="text-purple-400">{countryName}</span>
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {cities.map((city) => {
+          const citySlug = slugify(city);
+          return (
+            <a
+              href={`/${country}/${citySlug}/`}
+              class="block bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center transition-colors"
+            >
+              <span class="text-lg font-medium">{city}</span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- Project Calculator -->
+    <div class="mb-16 animate-on-scroll">
+      <ProjectCalculator currency={content.currency} currencySymbol={content.currencySymbol} />
+    </div>
+
+    <!-- Local Expert -->
+    <div class="bg-gray-800/50 rounded-2xl p-8 animate-on-scroll" itemscope itemtype="https://schema.org/Person">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="w-24 h-24 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-3xl font-bold">
+          {content.expertName.charAt(0)}
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold mb-2">
+            Meet Your Local Expert in <span itemprop="name">{content.expertName}</span>
+          </h2>
+          <p class="text-gray-300 mb-2">{content.expertTitle} based in {expertCity}, {countryName}</p>
+          <p class="text-gray-400 text-sm">
+            With deep knowledge of {countryName}'s tech landscape, local regulations, and business culture,
+            {content.expertName} ensures your project succeeds in the local market.
+          </p>
+          <meta itemprop="jobTitle" content={content.expertTitle} />
+          <div itemprop="workLocation" itemscope itemtype="https://schema.org/City">
+            <meta itemprop="name" content={expertCity} />
+          </div>
+          <div itemprop="homeLocation" itemscope itemtype="https://schema.org/City">
+            <meta itemprop="name" content={expertCity} />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JSON-LD Schema.org for Article -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": `Laravel Development Services in ${countryName}`,
+      "description": `Expert software development services in ${countryName}. Local expertise, GDPR compliance, and tailored solutions.`,
+      "author": {
+        "@type": "Person",
+        "name": content.expertName,
+        "jobTitle": content.expertTitle,
+        "homeLocation": {
+          "@type": "City",
+          "name": expertCity
+        },
+        "workLocation": {
+          "@type": "City",
+          "name": expertCity
+        }
+      },
+      "contentLocation": {
+        "@type": "Country",
+        "name": countryName
+      },
+      "datePublished": currentDate,
+      "dateModified": currentDate,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://laravelcompany.com/${country}/`
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Laravel Company",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://laravelcompany.com/logo.svg"
+        }
+      }
+    })} />
+  </main>
+</Layout>
