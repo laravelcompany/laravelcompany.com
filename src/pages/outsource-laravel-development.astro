@@ -1,0 +1,258 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const models = [
+  {
+    name: "Staff Augmentation",
+    desc: "Add individual Laravel developers to your existing team with seamless integration.",
+    icon: "ph:users-three-duotone",
+    features: ["Individual developers", "Your tools & workflows", "Daily standups", "Direct management", "Scale up/down fast"]
+  },
+  {
+    name: "Dedicated Team",
+    desc: "A full team (PM, devs, QA) managed by our tech leads, dedicated to your project.",
+    icon: "ph:suitcase-duotone",
+    features: ["Full team setup", "Dedicated PM", "Our agile process", "Regular demos", "Team scaling"]
+  },
+  {
+    name: "Project-Based Outsourcing",
+    desc: "Fixed-price, end-to-end delivery managed entirely by our team.",
+    icon: "ph:factory-duotone",
+    features: ["Fixed price & timeline", "Full delivery ownership", "Zero management overhead", "Warranty included", "Turnkey solution"]
+  }
+];
+
+const benefits = [
+  { icon: "ph:clock-countdown-duotone", title: "50% Cost Reduction", desc: "Save up to 50% compared to US/UK in-house hiring while maintaining quality." },
+  { icon: "ph:globe-duotone", title: "EU Timezone Coverage", desc: "Romania-based teams with 4-6 hour overlap with US, full overlap with UK/EU." },
+  { icon: "ph:user-switch-duotone", title: "Instant Scaling", desc: "Add 1 or 10 developers in 48 hours. No recruitment, no payroll, no hassle." },
+  { icon: "ph:shield-check-duotone", title: "IP Protection", desc: "Strict NDAs, clean code ownership, and GDPR-compliant data handling." }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "What is Laravel development outsourcing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Outsourcing Laravel development means hiring an external team or company to build, maintain, or scale your Laravel applications. Models include staff augmentation, dedicated teams, and full project outsourcing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why outsource to a nearshore Laravel development company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nearshore outsourcing (Eastern Europe for Western Europe/UK, Latin America for USA) provides timezone alignment, cultural proximity, cost savings of 40-60%, and fluent English communication."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you ensure quality in outsourced Laravel development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We enforce code reviews, automated testing (PHPUnit), CI/CD pipelines, sprint-based delivery, and regular demos. All code is owned by you with full documentation and clean Git history."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between nearshore and offshore Laravel development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nearshore means hiring from nearby countries (Romania for EU, Mexico for USA) with 0-3 hour timezone difference. Offshore typically refers to Asia with 8-12 hour differences, often causing communication delays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can I start with an outsourced Laravel team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With staff augmentation, developers can start within 48 hours. Dedicated teams take 1-2 weeks to assemble. Project-based outsourcing begins with a 1-week discovery and planning phase."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel Development Outsourcing",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127"
+    }
+  },
+  "description": "Outsource Laravel development with staff augmentation, dedicated teams, or full project delivery. 50% cost savings, EU timezone coverage.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Outsourcing Models",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Staff Augmentation" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dedicated Team" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Project-Based Outsourcing" }}
+    ]
+  }
+};
+---
+
+<Layout
+  title="Outsource Laravel Development | Nearshore & Staff Augmentation"
+  description="Outsource Laravel development with staff augmentation, dedicated teams, or full project delivery. Save 50% vs in-house. Romania-based, EU timezone, 48h deployment."
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">Outsource Laravel Development</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:globe-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Nearshore Experts</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Outsource <span class="gradient-text">Laravel Development</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            Save 50% vs in-house hiring. Staff augmentation, dedicated teams, and full project delivery. Romania-based, EU timezone, deploy in 48 hours.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Start Outsourcing</a>
+            <a href="/nearshore-laravel-development/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">Nearshore Options</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {benefits.map((b, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-8 border-white/10 text-center">
+              <div class="w-16 h-16 bg-payflo-purple/10 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-payflo-purple/20">
+                <Icon name={b.icon} class="w-8 h-8 text-payflo-purple" />
+              </div>
+              <h3 class="text-xl font-black mb-4 text-white">{b.title}</h3>
+              <p class="text-gray-400 text-sm">{b.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagement Models -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Outsourcing <span class="gradient-text">Engagement Models</span></h2>
+          <p class="text-gray-400 text-lg">Choose the model that fits your team structure and project needs.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {models.map((m, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-10 border-white/10 hover:border-payflo-purple/30 transition-colors flex flex-col">
+              <Icon name={m.icon} class="w-12 h-12 text-payflo-purple mb-6" />
+              <h3 class="text-2xl font-black mb-4 text-white">{m.name}</h3>
+              <p class="text-gray-400 text-sm mb-8 flex-grow">{m.desc}</p>
+              <ul class="space-y-3 mb-8">
+                {m.features.map(f => (
+                  <li class="flex items-center gap-2 text-sm text-white/60">
+                    <Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> {f}
+                  </li>
+                ))}
+              </ul>
+              <a href="/contact/" class="font-bold text-payflo-purple hover:underline text-center">Get Quote →</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Nearshore vs Offshore -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Nearshore vs <span class="gradient-text">Offshore</span></h2>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="py-4 px-6 text-left text-white/80">Factor</th>
+                <th class="py-4 px-6 text-center text-payflo-purple">Nearshore (Romania)</th>
+                <th class="py-4 px-6 text-center text-white/60">Offshore (Asia)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-white/5"><td class="py-4 px-6 text-white/70">Timezone Overlap</td><td class="py-4 px-6 text-center text-white">4-8 hours</td><td class="py-4 px-6 text-center text-white/40">0-4 hours</td></tr>
+              <tr class="border-b border-white/5"><td class="py-4 px-6 text-white/70">English Fluency</td><td class="py-4 px-6 text-center"><Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-purple mx-auto" /></td><td class="py-4 px-6 text-center"><Icon name="ph:warning-circle-duotone" class="w-5 h-5 text-yellow-500 mx-auto" /></td></tr>
+              <tr class="border-b border-white/5"><td class="py-4 px-6 text-white/70">Cultural Alignment</td><td class="py-4 px-6 text-center"><Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-purple mx-auto" /></td><td class="py-4 px-6 text-center"><Icon name="ph:x-circle-duotone" class="w-5 h-5 text-white/30 mx-auto" /></td></tr>
+              <tr><td class="py-4 px-6 text-white/70">Cost Savings</td><td class="py-4 px-6 text-center text-payflo-purple font-bold">40-60%</td><td class="py-4 px-6 text-center text-white/50">60-80%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Outsourcing <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">What is Laravel development outsourcing?</h4>
+            <p class="text-gray-400">Outsourcing Laravel development means hiring an external team or company to build, maintain, or scale your Laravel applications. Models include staff augmentation, dedicated teams, and full project outsourcing.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Why outsource to a nearshore Laravel development company?</h4>
+            <p class="text-gray-400">Nearshore outsourcing (Eastern Europe for Western Europe/UK, Latin America for USA) provides timezone alignment, cultural proximity, cost savings of 40-60%, and fluent English communication.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How quickly can I start with an outsourced Laravel team?</h4>
+            <p class="text-gray-400">With staff augmentation, developers can start within 48 hours. Dedicated teams take 1-2 weeks to assemble. Project-based outsourcing begins with a 1-week discovery and planning phase.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire Laravel Developer →</a>
+          <a href="/nearshore-laravel-development/" class="text-payflo-purple hover:underline font-bold">Nearshore Development →</a>
+          <a href="/laravel-developers-romania/" class="text-payflo-purple hover:underline font-bold">Romania Developers →</a>
+          <a href="/hire-laravel-developer-remote/" class="text-payflo-purple hover:underline font-bold">Remote Hiring →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>

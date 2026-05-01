@@ -1,0 +1,239 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const services = [
+  {
+    title: "Database Optimization",
+    desc: "Index analysis, query optimization, N+1 elimination, and database refactoring for speed.",
+    icon: "ph:database-duotone"
+  },
+  {
+    title: "Caching Strategy",
+    desc: "Redis/Memcached implementation, query caching, view caching, and OpCache configuration.",
+    icon: "ph:lightning-duotone"
+  },
+  {
+    title: "Queue & Async Processing",
+    desc: "Move heavy tasks to Horizon queues, optimize job throughput, and reduce response times.",
+    icon: "ph:queue-duotone"
+  },
+  {
+    title: "Server & PHP Tuning",
+    desc: "PHP-FPM tuning, OpCache optimization, Nginx/Apache config, and CDN integration.",
+    icon: "ph:gear-six-duotone"
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "Why is my Laravel application slow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common causes: N+1 queries, missing database indexes, no caching, heavy synchronous jobs, unoptimized images, and lack of OpCache. Our audit identifies all bottlenecks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Laravel performance optimization cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Performance audits start at $1,500. Full optimization (audit + fixes) ranges from $3,000-$10,000 depending on codebase size and issues found."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much faster will my Laravel app be after optimization?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typical results: 3-10x faster page loads, 50-80% reduction in server response time, and 2-5x more concurrent users supported."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide ongoing performance monitoring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer monthly performance monitoring packages with New Relic/DataDog integration, weekly reports, and proactive optimization."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel Performance Optimization",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com"
+  },
+  "description": "Fix slow Laravel performance with caching, queue workers, database indexing, and OpCache tuning. 3-10x speed improvements guaranteed.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Performance Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Performance Audit" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Caching Implementation" }}
+    ]
+  }
+};
+---
+
+<Layout
+  title="Laravel Performance Optimization Service | Fix Slow Laravel Apps"
+  description="Fix slow Laravel performance with caching, queue workers, database indexing, and OpCache tuning. 3-10x speed improvements. Get a free audit."
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">Performance Optimization</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-pink/10 border border-payflo-pink/20 mb-8 animate-on-scroll">
+            <Icon name="ph:gauge-duotone" class="w-5 h-5 text-payflo-pink" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Speed Experts</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Fix Slow <span class="gradient-text">Laravel</span> Performance
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            3-10x faster page loads. Caching, queue workers, database indexing, and OpCache tuning. Get a free performance audit.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Get Free Performance Audit</a>
+            <a href="/laravel-security-audit/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">Security Audit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pain Indicators -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Signs Your Laravel App is <span class="gradient-text">Too Slow</span></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <Icon name="ph:clock-countdown-duotone" class="w-12 h-12 text-payflo-pink mx-auto mb-4" />
+            <h4 class="text-lg font-bold text-white mb-2">>2s Page Load</h4>
+            <p class="text-gray-400 text-sm">Google recommends <200ms server response. Your users are leaving.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <Icon name="ph:warning-duotone" class="w-12 h-12 text-payflo-pink mx-auto mb-4" />
+            <h4 class="text-lg font-bold text-white mb-2">Timeout Errors</h4>
+            <p class="text-gray-400 text-sm">502/504 errors under load. Server can't handle concurrent users.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <Icon name="ph:chart-line-down-duotone" class="w-12 h-12 text-payflo-pink mx-auto mb-4" />
+            <h4 class="text-lg font-bold text-white mb-2">High Bounce Rate</h4>
+            <p class="text-gray-400 text-sm">Slow speed kills conversions. 1s delay = 7% fewer conversions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optimization Services -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">What We <span class="gradient-text">Optimize</span></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {services.map((s, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-10 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+              <Icon name={s.icon} class="w-12 h-12 text-payflo-purple mb-6 group-hover:scale-110 transition-transform" />
+              <h3 class="text-2xl font-black mb-4 text-white">{s.title}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Typical Results -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Typical <span class="gradient-text">Results</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="glass-card p-8 border-green-500/20 bg-green-500/5">
+            <div class="text-4xl font-black text-green-400 mb-2">3-10x</div>
+            <div class="text-white font-bold">Faster Page Loads</div>
+          </div>
+          <div class="glass-card p-8 border-green-500/20 bg-green-500/5">
+            <div class="text-4xl font-black text-green-400 mb-2">50-80%</div>
+            <div class="text-white font-bold">Reduced Response Time</div>
+          </div>
+          <div class="glass-card p-8 border-green-500/20 bg-green-500/5">
+            <div class="text-4xl font-black text-green-400 mb-2">2-5x</div>
+            <div class="text-white font-bold">More Concurrent Users</div>
+          </div>
+          <div class="glass-card p-8 border-green-500/20 bg-green-500/5">
+            <div class="text-4xl font-black text-green-400 mb-2">90%+</div>
+            <div class="text-white font-bold">PageSpeed Score</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Performance <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Why is my Laravel application slow?</h4>
+            <p class="text-gray-400">Common causes: N+1 queries, missing database indexes, no caching, heavy synchronous jobs, unoptimized images, and lack of OpCache. Our audit identifies all bottlenecks.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How much does Laravel performance optimization cost?</h4>
+            <p class="text-gray-400">Performance audits start at $1,500. Full optimization (audit + fixes) ranges from $3,000-$10,000 depending on codebase size and issues found.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How much faster will my Laravel app be after optimization?</h4>
+            <p class="text-gray-400">Typical results: 3-10x faster page loads, 50-80% reduction in server response time, and 2-5x more concurrent users supported.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire Performance Expert →</a>
+          <a href="/laravel-security-audit/" class="text-payflo-purple hover:underline font-bold">Security Audit →</a>
+          <a href="/upgrade-laravel-version/" class="text-payflo-purple hover:underline font-bold">Upgrade Laravel →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>

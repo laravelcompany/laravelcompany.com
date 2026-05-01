@@ -1,0 +1,271 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const costTable = [
+  { region: "USA / Western Europe", hourly: "$100 - $200", dedicated: "$15,000 - $30,000/mo", quality: "Highest" },
+  { region: "Romania / Eastern Europe", hourly: "$35 - $75", dedicated: "$4,500 - $10,000/mo", quality: "High" },
+  { region: "Remote / Global", hourly: "$25 - $60", dedicated: "$3,000 - $8,000/mo", quality: "High" },
+  { region: "South Asia", hourly: "$15 - $35", dedicated: "$2,000 - $5,000/mo", quality: "Variable" }
+];
+
+const projectTypes = [
+  { type: "Laravel MVP", min: "$10,000", max: "$25,000", timeline: "4-8 weeks", features: ["Core features only", "Basic UI/UX", "Single tenant", "MVP testing"] },
+  { type: "Custom Web App", min: "$25,000", max: "$75,000", timeline: "8-16 weeks", features: ["Full feature set", "Custom design", "Third-party APIs", "Testing suite"] },
+  { type: "SaaS Platform", min: "$40,000", max: "$150,000+", timeline: "12-24 weeks", features: ["Multi-tenancy", "Subscription billing", "Team management", "Advanced roles"] },
+  { type: "E-commerce Store", min: "$15,000", max: "$50,000", timeline: "6-12 weeks", features: ["Product catalog", "Cart & checkout", "Payment gateway", "Admin panel"] }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "How much does Laravel development cost per hour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Laravel developer hourly rates range from $35/hour in Eastern Europe (Romania) to $200/hour in the USA. Mid-level developers average $50-$75/hour, while senior architects command $75-$150/hour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cost to hire a dedicated Laravel developer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dedicated Laravel developers cost $4,500-$10,000/month from Eastern Europe, $15,000-$30,000/month from the USA/UK. This includes 160 hours/month, project management, and code quality guarantees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a Laravel MVP cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Laravel MVP typically costs $10,000-$25,000 and takes 4-8 weeks. This includes core features, basic UI, user authentication, and deployment. Fixed-price MVP packages are available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Romanian Laravel development more cost-effective?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Romania offers top-tier engineering talent at 60-70% lower rates than the USA/UK due to lower living costs. Romanian developers are EU-based, speak fluent English, and work in European timezones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there hidden costs in Laravel development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We provide transparent, fixed-price quotes. Additional costs may include third-party services (Stripe, AWS), but our quotes clearly separate development costs from infrastructure and licensing."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel Development Cost Estimation",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com"
+  },
+  "description": "Transparent Laravel development cost calculator. Compare USA vs Romania vs Remote rates. Get accurate project estimates.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Rate Cards",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Laravel Developer USA" },
+        "price": "150",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Laravel Developer Romania" },
+        "price": "55",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      }
+    ]
+  }
+};
+---
+
+<Layout
+  title="Laravel Development Cost | Hourly Rates & Project Pricing Calculator"
+  description="Laravel development cost calculator: hourly rates from $35/hr, dedicated developers from $4,500/mo. Compare USA vs Romania vs Remote pricing. Get an instant quote."
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">Development Cost</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:currency-circle-dollar-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Transparent Pricing</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Laravel Development <span class="gradient-text">Cost Guide</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            Hourly rates from <strong class="text-white">$35/hr</strong>. Dedicated developers from <strong class="text-white">$4,500/mo</strong>. Compare global rates and get an accurate project estimate.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Get Free Estimate</a>
+            <a href="/hire-laravel-developer/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">Hire Developer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rate Comparison Table -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Hourly Rates by <span class="gradient-text">Region</span></h2>
+          <p class="text-gray-400 text-lg">Compare Laravel developer rates across different geographies. All regions offer fluent English and senior-level expertise.</p>
+        </div>
+        <div class="max-w-4xl mx-auto overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="py-4 px-6 text-left text-white/80">Region</th>
+                <th class="py-4 px-6 text-center text-white/80">Hourly Rate</th>
+                <th class="py-4 px-6 text-center text-white/80">Dedicated/Month</th>
+                <th class="py-4 px-6 text-center text-white/80">Quality</th>
+              </tr>
+            </thead>
+            <tbody>
+              {costTable.map((row, i) => (
+                <tr class="border-b border-white/5 animate-on-scroll delay-{i}">
+                  <td class="py-4 px-6 text-white font-bold">{row.region}</td>
+                  <td class="py-4 px-6 text-center text-payflo-purple font-bold">{row.hourly}</td>
+                  <td class="py-4 px-6 text-center text-white/70">{row.dedicated}</td>
+                  <td class="py-4 px-6 text-center">
+                    <span class={`px-3 py-1 rounded-full text-xs font-bold ${row.quality === 'Highest' ? 'bg-payflo-purple/20 text-payflo-purple' : row.quality === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'}`}>{row.quality}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Type Estimates -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Project <span class="gradient-text">Cost Estimates</span></h2>
+          <p class="text-gray-400 text-lg">Typical cost ranges for common Laravel project types. Fixed-price quotes available after discovery.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {projectTypes.map((p, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-8 border-white/10">
+              <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-black text-white">{p.type}</h3>
+                <div class="text-right">
+                  <div class="text-payflo-purple font-black">{p.min} - {p.max}</div>
+                  <div class="text-xs text-white/50">{p.timeline}</div>
+                </div>
+              </div>
+              <ul class="space-y-2">
+                {p.features.map(f => (
+                  <li class="flex items-center gap-2 text-sm text-white/60">
+                    <Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost Factors -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">What <span class="gradient-text">Affects</span> Laravel Development Cost?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="text-xl font-bold text-white mb-4">Project Complexity</h4>
+            <p class="text-gray-400 text-sm">Simple CRUD apps cost less. Multi-tenant SaaS, real-time features, and complex integrations increase cost and timeline.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="text-xl font-bold text-white mb-4">Developer Location</h4>
+            <p class="text-gray-400 text-sm">USA/UK rates are 3x Eastern Europe. Remote global talent offers the best value-to-quality ratio.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="text-xl font-bold text-white mb-4">Seniority Level</h4>
+            <p class="text-gray-400 text-sm">Junior: $15-$35/hr. Mid: $35-$75/hr. Senior: $75-$150/hr. Architect: $150+/hr.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="text-xl font-bold text-white mb-4">Engagement Model</h4>
+            <p class="text-gray-400 text-sm">Hourly: pay for actual time. Dedicated: discounted monthly rate. Fixed-price: known total cost upfront.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Cost <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How much does Laravel development cost per hour?</h4>
+            <p class="text-gray-400">Laravel developer hourly rates range from $35/hour in Eastern Europe (Romania) to $200/hour in the USA. Mid-level developers average $50-$75/hour, while senior architects command $75-$150/hour.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How much does a Laravel MVP cost?</h4>
+            <p class="text-gray-400">A Laravel MVP typically costs $10,000-$25,000 and takes 4-8 weeks. This includes core features, basic UI, user authentication, and deployment. Fixed-price MVP packages are available.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Why is Romanian Laravel development more cost-effective?</h4>
+            <p class="text-gray-400">Romania offers top-tier engineering talent at 60-70% lower rates than the USA/UK due to lower living costs. Romanian developers are EU-based, speak fluent English, and work in European timezones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire Laravel Developer →</a>
+          <a href="/laravel-developers-romania/" class="text-payflo-purple hover:underline font-bold">Developers in Romania →</a>
+          <a href="/laravel-mvp-development/" class="text-payflo-purple hover:underline font-bold">MVP Development →</a>
+          <a href="/outsource-laravel-development/" class="text-payflo-purple hover:underline font-bold">Outsourcing Options →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>

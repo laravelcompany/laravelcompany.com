@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import logoSrc from "../assets/logo.svg";
 ---
 
-<footer class="bg-payflo-darker/60 backdrop-blur-2xl text-white relative overflow-hidden border-t border-white/10">
+<footer class="bg-payflo-darker/60 backdrop-blur-2xl text-white relative overflow-hidden">
   <!-- Enhanced decorative background -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
     <div class="absolute -top-40 -right-40 w-80 h-80 bg-payflo-purple/10 rounded-full blur-3xl animate-pulse"></div>
@@ -12,8 +12,8 @@ import logoSrc from "../assets/logo.svg";
   </div>
 
   <div class="container-custom relative z-10">
-    <!-- Main Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 py-16 border-b border-white/10">
+      <!-- Main Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 py-16 border-t border-white/10">
       
       <!-- Brand Column (spans 4 cols on large) -->
       <div class="lg:col-span-4 space-y-6">
@@ -39,52 +39,73 @@ import logoSrc from "../assets/logo.svg";
         </div>
       </div>
 
-      <!-- Navigation Columns (8 cols on large, split into 4 groups) -->
-      <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Navigation Links -->
+      <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
         
         <!-- Company -->
-        <div class="space-y-4">
-          <h3 class="text-xs font-black uppercase tracking-widest text-payflo-purple/80">Company</h3>
-          <ul class="space-y-2.5">
-            <li><a href="/about-us/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>About Us</a></li>
-            <li><a href="/team/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>Team</a></li>
-            <li><a href="/esop/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>ESOP</a></li>
-            <li><a href="/jobs/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>Careers</a></li>
-            <li><a href="/contact/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>Contact</a></li>
+        <div class="flex flex-col">
+          <h3 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-payflo-purple/40 mb-3">Company</h3>
+          <ul class="flex flex-col gap-1.5 flex-1">
+            <li><a href="/about-us/" class="text-white/40 hover:text-white text-xs transition-colors">About</a></li>
+            <li><a href="/team/" class="text-white/40 hover:text-white text-xs transition-colors">Team</a></li>
+            <li><a href="/esop/" class="text-white/40 hover:text-white text-xs transition-colors">ESOP</a></li>
+            <li><a href="/jobs/" class="text-white/40 hover:text-white text-xs transition-colors">Careers</a></li>
+            <li><a href="/contact/" class="text-white/40 hover:text-white text-xs transition-colors">Contact</a></li>
           </ul>
         </div>
 
         <!-- Services -->
-        <div class="space-y-4">
-          <h3 class="text-xs font-black uppercase tracking-widest text-payflo-purple/80">Services</h3>
-          <ul class="space-y-2.5">
-            <li><a href="/software-development-agency-london/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>Bespoke London</a></li>
-            <li><a href="/hire-aws-consultant/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>AWS Consulting</a></li>
-            <li><a href="/laravel-consulting/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>Laravel Experts</a></li>
-            <li><a href="/magento-agency-london/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>Magento Agency</a></li>
-            <li><a href="/locations/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>Locations</a></li>
+        <div class="flex flex-col">
+          <h3 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-payflo-purple/40 mb-3">Services</h3>
+          <ul class="flex flex-col gap-1.5 flex-1">
+            <li><a href="/laravel-services/" class="text-white/40 hover:text-white text-xs transition-colors">All Services</a></li>
+            <li><a href="/hire-laravel-developer/" class="text-white/40 hover:text-white text-xs transition-colors">Hire</a></li>
+            <li><a href="/laravel-development-services/" class="text-white/40 hover:text-white text-xs transition-colors">Development</a></li>
+            <li><a href="/laravel-development-cost/" class="text-white/40 hover:text-white text-xs transition-colors">Cost</a></li>
+          </ul>
+        </div>
+
+        <!-- Industries -->
+        <div class="flex flex-col">
+          <h3 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-payflo-purple/40 mb-3">Industries</h3>
+          <ul class="flex flex-col gap-1.5 flex-1">
+            <li><a href="/laravel-fintech-development/" class="text-white/40 hover:text-white text-xs transition-colors">FinTech</a></li>
+            <li><a href="/laravel-ecommerce-development/" class="text-white/40 hover:text-white text-xs transition-colors">E-commerce</a></li>
+            <li><a href="/laravel-crm-development/" class="text-white/40 hover:text-white text-xs transition-colors">CRM</a></li>
+            <li><a href="/laravel-healthcare-software/" class="text-white/40 hover:text-white text-xs transition-colors">Health</a></li>
+            <li><a href="/laravel-logistics-platform/" class="text-white/40 hover:text-white text-xs transition-colors">Logistics</a></li>
+          </ul>
+        </div>
+
+        <!-- Locations -->
+        <div class="flex flex-col">
+          <h3 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-payflo-purple/40 mb-3">Locations</h3>
+          <ul class="flex flex-col gap-1.5 flex-1">
+            <li><a href="/laravel-developers-romania/" class="text-white/40 hover:text-white text-xs transition-colors">Romania</a></li>
+            <li><a href="/laravel-development-company-europe/" class="text-white/40 hover:text-white text-xs transition-colors">Europe</a></li>
+            <li><a href="/hire-laravel-developer-remote/" class="text-white/40 hover:text-white text-xs transition-colors">Remote</a></li>
+            <li><a href="/nearshore-laravel-development/" class="text-white/40 hover:text-white text-xs transition-colors">Nearshore</a></li>
           </ul>
         </div>
 
         <!-- Products -->
-        <div class="space-y-4">
-          <h3 class="text-xs font-black uppercase tracking-widest text-payflo-purple/80">Products</h3>
-          <ul class="space-y-2.5">
-            <li><a href="/software/laravel-seo/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>Laravel SEO</a></li>
-            <li><a href="/software/laravel-mail/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>Laravel Mail</a></li>
-            <li><a href="/software/laravel-gpt/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>Laravel GPT</a></li>
-            <li><a href="/software/laravel-ui/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>Laravel UI</a></li>
+        <div class="flex flex-col">
+          <h3 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-payflo-purple/40 mb-3">Products</h3>
+          <ul class="flex flex-col gap-1.5 flex-1">
+            <li><a href="/software/laravel-seo/" class="text-white/40 hover:text-white text-xs transition-colors">SEO</a></li>
+            <li><a href="/software/laravel-mail/" class="text-white/40 hover:text-white text-xs transition-colors">Mail</a></li>
+            <li><a href="/software/laravel-gpt/" class="text-white/40 hover:text-white text-xs transition-colors">GPT</a></li>
+            <li><a href="/software/laravel-ui/" class="text-white/40 hover:text-white text-xs transition-colors">UI</a></li>
           </ul>
         </div>
 
-        <!-- Compliance & Resources -->
-        <div class="space-y-4">
-          <h3 class="text-xs font-black uppercase tracking-widest text-payflo-purple/80">Trust</h3>
-          <ul class="space-y-2.5">
-            <li><a href="/nis2-essential-entity-provider/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>NIS2 Compliance</a></li>
-            <li><a href="/cra-compliant-software-vendor/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>CRA Certified</a></li>
-            <li><a href="/gdpr-europrise-certified/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>GDPR Compliant</a></li>
-            <li><a href="/funny-docs/" class="group flex items-center gap-2 text-white/60 hover:text-white transition-colors duration-200"><span class="w-1.5 h-1.5 rounded-full bg-payflo-purple/0 group-hover:bg-payflo-purple transition-colors"></span>😄 Funny Docs</a></li>
+        <!-- Trust -->
+        <div class="flex flex-col">
+          <h3 class="text-[10px] font-extrabold uppercase tracking-[0.2em] text-payflo-purple/40 mb-3">Trust</h3>
+          <ul class="flex flex-col gap-1.5 flex-1">
+            <li><a href="/nis2-essential-entity-provider/" class="text-white/40 hover:text-white text-xs transition-colors">NIS2</a></li>
+            <li><a href="/cra-compliant-software-vendor/" class="text-white/40 hover:text-white text-xs transition-colors">CRA</a></li>
+            <li><a href="/gdpr-europrise-certified/" class="text-white/40 hover:text-white text-xs transition-colors">GDPR</a></li>
           </ul>
         </div>
       </div>

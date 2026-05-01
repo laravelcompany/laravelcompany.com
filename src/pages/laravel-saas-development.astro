@@ -1,0 +1,255 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Multi-Tenancy Architecture",
+    desc: "Row-level isolation, tenant-aware routing, and scoped database connections for secure SaaS.",
+    icon: "ph:buildings-duotone"
+  },
+  {
+    title: "Subscription Billing",
+    desc: "Stripe, Paddle, and Chargebee integration with tiered plans, trials, and usage-based billing.",
+    icon: "ph:credit-card-duotone"
+  },
+  {
+    title: "Scalable Infrastructure",
+    desc: "Queue workers, horizontal scaling, Redis caching, and CDN integration for high-traffic SaaS.",
+    icon: "ph:rocket-launch-duotone"
+  },
+  {
+    title: "Team & Role Management",
+    desc: "Invite flows, role-based access control (RBAC), and SSO integration for enterprise teams.",
+    icon: "ph:users-three-duotone"
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "Why choose Laravel for SaaS development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Laravel offers built-in multi-tenancy packages, robust queue systems, and excellent ecosystem for SaaS: Cashier for billing, Passport for API auth, Horizon for queue monitoring. It scales to millions of users."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to build a SaaS with Laravel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Laravel SaaS MVP costs $15,000-$30,000 (4-8 weeks). Full-featured platforms with multi-tenancy, billing, and teams cost $40,000-$150,000 depending on complexity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you build multi-tenant SaaS applications?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We specialize in multi-tenant SaaS using Laravel Tenancy, Stancl Tenancy, or custom implementations with isolated databases or row-level tenancy based on your needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you migrate my existing SaaS to Laravel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We migrate SaaS platforms from Node.js, Django, Ruby on Rails, and custom PHP to Laravel with zero downtime, data integrity checks, and performance improvements."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel SaaS Development",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com"
+  },
+  "description": "Build scalable multi-tenant SaaS platforms with Laravel. Subscription billing, team management, and enterprise-grade architecture.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "SaaS Development Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Multi-Tenant SaaS" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SaaS MVP Development" }}
+    ]
+  }
+};
+---
+
+<Layout
+  title="Laravel SaaS Development Company | Build Multi-Tenant SaaS Platforms"
+  description="Build scalable multi-tenant SaaS platforms with Laravel. Subscription billing, team management, and enterprise-grade architecture. 50+ SaaS projects delivered."
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">SaaS Development</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:rocket-launch-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">SaaS Specialists</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Laravel <span class="gradient-text">SaaS Development</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            Build scalable multi-tenant SaaS platforms with subscription billing, team management, and enterprise-grade architecture.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Get SaaS Quote</a>
+            <a href="/laravel-mvp-development/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">MVP Package</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-10 border-y border-white/5 bg-white/[0.02]">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-white/40 text-sm font-bold uppercase tracking-widest">
+          <span>50+ SaaS Built</span>
+          <span>Multi-Tenant Experts</span>
+          <span>Stripe/Paddle Certified</span>
+          <span>99.9% Uptime</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">SaaS <span class="gradient-text">Core Features</span></h2>
+          <p class="text-gray-400 text-lg">Every SaaS platform we build includes enterprise-grade features from day one.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((f, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+              <Icon name={f.icon} class="w-12 h-12 text-payflo-purple mb-6 group-hover:scale-110 transition-transform" />
+              <h3 class="text-xl font-black mb-4 text-white">{f.title}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div class="animate-on-scroll">
+            <h2 class="text-4xl font-black mb-8">SaaS <span class="gradient-text">Tech Stack</span></h2>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <Icon name="ph:code-block-duotone" class="w-8 h-8 text-payflo-purple flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Laravel + Livewire/Inertia</h4>
+                  <p class="text-gray-400 text-sm">Modern monolith or API-first with Vue/React frontends.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:credit-card-duotone" class="w-8 h-8 text-payflo-pink flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Billing Integration</h4>
+                  <p class="text-gray-400 text-sm">Laravel Cashier (Stripe/Paddle), subscription management, invoicing.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:database-duotone" class="w-8 h-8 text-payflo-purple flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Scalable Data Layer</h4>
+                  <p class="text-gray-400 text-sm">PostgreSQL, Redis caching, queue workers (Horizon), S3 storage.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animate-on-scroll delay-2">
+            <div class="glass-card p-10 border-white/10">
+              <h3 class="text-2xl font-black text-white mb-6">MVP to Enterprise Path</h3>
+              <div class="space-y-4">
+                <div class="flex justify-between pb-4 border-b border-white/10">
+                  <span class="text-white/70">MVP (4-6 weeks)</span>
+                  <span class="text-payflo-purple font-bold">$15K-$30K</span>
+                </div>
+                <div class="flex justify-between pb-4 border-b border-white/10">
+                  <span class="text-white/70">Growth (8-12 weeks)</span>
+                  <span class="text-payflo-purple font-bold">$30K-$60K</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-white/70">Enterprise (12+ weeks)</span>
+                  <span class="text-payflo-pink font-bold">$60K-$150K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">SaaS <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Why choose Laravel for SaaS development?</h4>
+            <p class="text-gray-400">Laravel offers built-in multi-tenancy packages, robust queue systems, and excellent ecosystem for SaaS: Cashier for billing, Passport for API auth, Horizon for queue monitoring. It scales to millions of users.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How much does it cost to build a SaaS with Laravel?</h4>
+            <p class="text-gray-400">A Laravel SaaS MVP costs $15,000-$30,000 (4-8 weeks). Full-featured platforms with multi-tenancy, billing, and teams cost $40,000-$150,000 depending on complexity.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Do you build multi-tenant SaaS applications?</h4>
+            <p class="text-gray-400">Yes. We specialize in multi-tenant SaaS using Laravel Tenancy, Stancl Tenancy, or custom implementations with isolated databases or row-level tenancy based on your needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire SaaS Developer →</a>
+          <a href="/laravel-api-development/" class="text-payflo-purple hover:underline font-bold">API Development →</a>
+          <a href="/laravel-mvp-development/" class="text-payflo-purple hover:underline font-bold">MVP Development →</a>
+          <a href="/startup-laravel-agency/" class="text-payflo-purple hover:underline font-bold">Startup Agency →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>

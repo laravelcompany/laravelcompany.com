@@ -1,0 +1,253 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const comparison = [
+  { feature: "Time to MVP", laravel: "Fast (4-8 weeks)", nodejs: "Medium (8-12 weeks)", winner: "laravel" },
+  { feature: "Built-in Features", laravel: "Auth, queues, ORM, caching", nodejs: "Manual setup required", winner: "laravel" },
+  { feature: "Ecosystem", laravel: "Huge (Composer packages)", nodejs: "Large (npm packages)", winner: "tie" },
+  { feature: "Performance", laravel: "Good (PHP 8)", nodejs: "Excellent (event loop)", winner: "nodejs" },
+  { feature: "Learning Curve", laravel: "Gentle, excellent docs", nodejs: "Steeper, many choices", winner: "laravel" },
+  { feature: "Team Availability", laravel: "Abundant, lower cost", nodejs: "Abundant, higher cost", winner: "laravel" },
+  { feature: "Real-time Features", laravel: "Good (WebSockets)", nodejs: "Native (event-driven)", winner: "nodejs" },
+  { feature: "Enterprise Adoption", laravel: "Growing fast", nodejs: "Mature, wide", winner: "nodejs" }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "Is Laravel or Node.js better for SaaS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For SaaS, Laravel wins for time-to-market (4-8 weeks vs 8-12 weeks), built-in features (auth, queues, ORM), and lower development costs. Node.js wins for real-time features and raw performance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Laravel handle real-time SaaS features?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Laravel supports WebSockets via Laravel WebSockets or Pusher, event broadcasting, and queue workers. For heavy real-time, Node.js may have an edge, but Laravel covers 95% of SaaS use cases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is cheaper for SaaS development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Laravel is 30-50% cheaper. Laravel developers cost $35-$75/hr vs Node.js $50-$100/hr. Additionally, Laravel's built-in features reduce development time significantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I choose Node.js over Laravel for SaaS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose Node.js if: heavy real-time features (chat, collaboration), your team is already strong in JS/TypeScript, or you need maximum raw performance for CPU-intensive tasks."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel vs Node.js Comparison",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com"
+  },
+  "description": "Compare Laravel vs Node.js for SaaS: time-to-market, cost, performance, ecosystem. Laravel wins for faster MVP, lower cost."
+};
+---
+
+<Layout
+  title="Laravel vs Node.js for SaaS | Which is Better?"
+  description="Compare Laravel vs Node.js for SaaS development. Time-to-market, cost, performance, ecosystem breakdown. Laravel wins for faster MVP."
+  noindex={true}
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">Laravel vs Node.js</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:code-block-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Comparison</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Laravel vs <span class="gradient-text">Node.js for SaaS</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            Which is better for your SaaS? Time-to-market, cost, performance breakdown.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Get Free Consultation</a>
+            <a href="/laravel-saas-development/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">Laravel SaaS →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Feature <span class="gradient-text">Comparison</span></h2>
+          <p class="text-gray-400 text-lg">Side-by-side breakdown for SaaS development.</p>
+        </div>
+        <div class="max-w-4xl mx-auto overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="py-4 px-6 text-left text-white/80">Feature</th>
+                <th class="py-4 px-6 text-center text-payflo-purple">Laravel</th>
+                <th class="py-4 px-6 text-center text-white/60">Node.js</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparison.map((row, i) => (
+                <tr class="border-b border-white/5 animate-on-scroll delay-{i}">
+                  <td class="py-4 px-6 text-white/70">{row.feature}</td>
+                  <td class={`py-4 px-6 text-center ${row.winner === 'laravel' ? 'text-payflo-purple font-bold' : row.winner === 'tie' ? 'text-white/70' : 'text-white/40'}`}>{row.laravel}</td>
+                  <td class={`py-4 px-6 text-center ${row.winner === 'nodejs' ? 'text-payflo-pink font-bold' : row.winner === 'tie' ? 'text-white/70' : 'text-white/40'}`}>{row.nodejs}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- When to Choose Each -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          <div class="animate-on-scroll">
+            <h2 class="text-4xl font-black mb-8">Choose <span class="gradient-text">Laravel</span> When:</h2>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <Icon name="ph:rocket-launch-duotone" class="w-8 h-8 text-payflo-purple flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Fast MVP Launch</h4>
+                  <p class="text-gray-400 text-sm">4-8 weeks vs 8-12 weeks with Node.js.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:currency-circle-dollar-duotone" class="w-8 h-8 text-payflo-pink flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Lower Budget</h4>
+                  <p class="text-gray-400 text-sm">30-50% cheaper development and hosting costs.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:code-block-duotone" class="w-8 h-8 text-payflo-purple flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Built-in Features</h4>
+                  <p class="text-gray-400 text-sm">Auth, queues, ORM, caching included out of the box.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animate-on-scroll delay-2">
+            <h2 class="text-4xl font-black mb-8">Choose <span class="text-payflo-pink">Node.js</span> When:</h2>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <Icon name="ph:lightning-duotone" class="w-8 h-8 text-payflo-pink flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Heavy Real-Time</h4>
+                  <p class="text-gray-400 text-sm">Chat, collaboration, live updates are native.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:gauge-duotone" class="w-8 h-8 text-payflo-pink flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Maximum Performance</h4>
+                  <p class="text-gray-400 text-sm">Raw performance for CPU-intensive tasks.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:code-block-duotone" class="w-8 h-8 text-payflo-pink flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">JS-Only Stack</h4>
+                  <p class="text-gray-400 text-sm">Your team is already strong in JS/TypeScript.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soft Sell CTA -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto text-center">
+        <div class="glass-card p-12 border-payflo-purple/20 rounded-3xl">
+          <Icon name="ph:question-duotone" class="w-16 h-16 text-payflo-purple mx-auto mb-6" />
+          <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Not Sure Which is Right for Your Project?</h2>
+          <p class="text-gray-400 mb-8">Get a free 15-minute consultation. We'll analyze your requirements and recommend the best tech stack for your SaaS.</p>
+          <a href="/contact/" class="btn btn-primary px-10 py-4 text-lg">Book Free Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Comparison <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Is Laravel or Node.js better for SaaS?</h4>
+            <p class="text-gray-400">For SaaS, Laravel wins for time-to-market (4-8 weeks vs 8-12 weeks), built-in features (auth, queues, ORM), and lower development costs. Node.js wins for real-time features and raw performance.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Can Laravel handle real-time SaaS features?</h4>
+            <p class="text-gray-400">Yes. Laravel supports WebSockets via Laravel WebSockets or Pusher, event broadcasting, and queue workers. For heavy real-time, Node.js may have an edge, but Laravel covers 95% of SaaS use cases.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Which is cheaper for SaaS development?</h4>
+            <p class="text-gray-400">Laravel is 30-50% cheaper. Laravel developers cost $35-$75/hr vs Node.js $50-$100/hr. Additionally, Laravel's built-in features reduce development time significantly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/laravel-saas-development/" class="text-payflo-purple hover:underline font-bold">Laravel SaaS →</a>
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire Laravel Dev →</a>
+          <a href="/laravel-vs-django-web-app/" class="text-payflo-purple hover:underline font-bold">Laravel vs Django →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>

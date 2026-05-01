@@ -1,0 +1,281 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const packages = [
+  {
+    name: "MVP Sprint",
+    price: "$15,000",
+    timeline: "4-6 weeks",
+    features: ["Core features only", "Basic UI/UX", "User auth & profiles", "Single tenant", "Deployment & launch"],
+    popular: false,
+    cta: "Start MVP Sprint"
+  },
+  {
+    name: "Growth MVP",
+    price: "$25,000",
+    timeline: "6-8 weeks",
+    features: ["All MVP Sprint features", "Payment integration", "Admin dashboard", "Email notifications", "2 months support"],
+    popular: true,
+    cta: "Build Growth MVP"
+  },
+  {
+    name: "Scale MVP",
+    price: "$40,000",
+    timeline: "8-12 weeks",
+    features: ["All Growth features", "Multi-tenancy ready", "API for mobile apps", "Advanced roles/permissions", "3 months support"],
+    popular: false,
+    cta: "Scale MVP Package"
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "How much does a Laravel MVP cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our fixed-price MVP packages range from $15,000 (4-6 weeks) to $40,000 (8-12 weeks). Each package includes core features, basic UI, authentication, and deployment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build a Laravel MVP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Laravel MVP takes 4-6 weeks for core features, 6-8 weeks with payments and admin panel, and 8-12 weeks for multi-tenant readiness."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in your MVP package?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every MVP includes user authentication, core feature set, basic responsive UI, database design, API endpoints, deployment to cloud, and 30-90 days of post-launch support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer equity or deferred payment for startups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. For funded startups, we offer deferred payment options (50% upfront, 50% on funding) and selective equity partnerships for exceptional opportunities."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel MVP Development",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com"
+  },
+  "description": "Fixed-price Laravel MVP development packages $15K-$40K. 4-12 weeks delivery. Startup-friendly with equity/deferred payment options.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "MVP Packages",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "MVP Sprint" }, "price": "15000", "priceCurrency": "USD" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Growth MVP" }, "price": "25000", "priceCurrency": "USD" }
+    ]
+  }
+};
+---
+
+<Layout
+  title="Laravel MVP Development Service | Fixed-Price $15K-$30K"
+  description="Laravel MVP development service with fixed-price packages $15K-$40K. 4-12 weeks delivery. Startup-friendly equity & deferred payment options."
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">MVP Development</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:rocket-launch-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">MVP Specialists</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Laravel <span class="gradient-text">MVP Development</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            Fixed-price packages from <strong class="text-white">$15,000</strong>. Launch in 4-6 weeks. Startup-friendly with equity & deferred payment options.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Get MVP Quote</a>
+            <a href="/startup-laravel-agency/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">Startup Options</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-10 border-y border-white/5 bg-white/[0.02]">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-white/40 text-sm font-bold uppercase tracking-widest">
+          <span>50+ MVPs Launched</span>
+          <span>4-6 Weeks Delivery</span>
+          <span>Fixed-Price Packages</span>
+          <span>Startup Equity OK</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MVP Packages -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Fixed-Price <span class="gradient-text">MVP Packages</span></h2>
+          <p class="text-gray-400 text-lg">No surprises. Know your total cost and timeline upfront.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {packages.map((p, i) => (
+            <div class={`animate-on-scroll delay-${i} p-8 rounded-3xl border flex flex-col ${p.popular ? 'bg-payflo-purple/10 border-payflo-purple/30 scale-105 shadow-2xl' : 'bg-white/5 border-white/10'}`}>
+              {p.popular && (
+                <div class="px-3 py-1 bg-payflo-purple text-white text-[10px] font-black uppercase rounded-full mb-4 self-center">Most Popular</div>
+              )}
+              <h3 class="text-2xl font-black text-white mb-2">{p.name}</h3>
+              <div class="text-3xl font-black text-payflo-purple mb-1">{p.price}</div>
+              <div class="text-sm text-white/50 mb-6">{p.timeline}</div>
+              <ul class="space-y-3 mb-8 flex-grow">
+                {p.features.map(f => (
+                  <li class="flex items-center gap-2 text-sm text-white/60">
+                    <Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> {f}
+                  </li>
+                ))}
+              </ul>
+              <a href="/contact/" class={`font-bold py-3 px-6 rounded-2xl text-center transition-all ${p.popular ? 'btn btn-primary' : 'text-payflo-purple hover:underline'}`}>{p.cta}</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div class="animate-on-scroll">
+            <h2 class="text-4xl font-black mb-8">What's <span class="gradient-text">Included</span></h2>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <Icon name="ph:code-block-duotone" class="w-8 h-8 text-payflo-purple flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Core Feature Set</h4>
+                  <p class="text-gray-400 text-sm">Must-have features only. No bloat, just what gets you to market.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:palette-duotone" class="w-8 h-8 text-payflo-pink flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Basic UI/UX</h4>
+                  <p class="text-gray-400 text-sm">Clean, responsive design using Tailwind CSS. Mobile-ready.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:cloud-arrow-up-duotone" class="w-8 h-8 text-payflo-purple flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Deployment & Launch</h4>
+                  <p class="text-gray-400 text-sm">AWS/Forge deployment, SSL, CDN setup, and launch support.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:headset-duotone" class="w-8 h-8 text-payflo-pink flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Post-Launch Support</h4>
+                  <p class="text-gray-400 text-sm">30-90 days of bug fixes and minor adjustments included.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animate-on-scroll delay-2">
+            <div class="glass-card p-10 border-white/10">
+              <h3 class="text-2xl font-black text-white mb-6">Startup Perks</h3>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3"><Icon name="ph:percent-duotone" class="w-6 h-6 text-payflo-purple" /><span class="text-white/70">Deferred payment: 50% now, 50% later</span></div>
+                <div class="flex items-center gap-3"><Icon name="ph:trend-up-duotone" class="w-6 h-6 text-payflo-purple" /><span class="text-white/70">Equity partnerships for funded startups</span></div>
+                <div class="flex items-center gap-3"><Icon name="ph:rocket-launch-duotone" class="w-6 h-6 text-payflo-purple" /><span class="text-white/70">Free consultation & tech stack advisory</span></div>
+                <div class="flex items-center gap-3"><Icon name="ph:file-doc-duotone" class="w-6 h-6 text-payflo-purple" /><span class="text-white/70">Pitch deck tech appendix preparation</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist Download CTA -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto text-center">
+        <div class="glass-card p-12 border-payflo-purple/20 rounded-3xl">
+          <Icon name="ph:clipboard-text-duotone" class="w-16 h-16 text-payflo-purple mx-auto mb-6" />
+          <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Startup Founder's Checklist</h2>
+          <p class="text-gray-400 mb-8">Download our 12-page PDF checklist: "What to Include in Your MVP". Used by 200+ funded startups.</p>
+          <a href="/contact/" class="btn btn-primary px-10 py-4 text-lg">Download Free Checklist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">MVP <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How much does a Laravel MVP cost?</h4>
+            <p class="text-gray-400">Our fixed-price MVP packages range from $15,000 (4-6 weeks) to $40,000 (8-12 weeks). Each package includes core features, basic UI, authentication, and deployment.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">What is included in your MVP package?</h4>
+            <p class="text-gray-400">Every MVP includes user authentication, core feature set, basic responsive UI, database design, API endpoints, deployment to cloud, and 30-90 days of post-launch support.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Do you offer equity or deferred payment for startups?</h4>
+            <p class="text-gray-400">Yes. For funded startups, we offer deferred payment options (50% upfront, 50% on funding) and selective equity partnerships for exceptional opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire MVP Developer →</a>
+          <a href="/laravel-saas-development/" class="text-payflo-purple hover:underline font-bold">SaaS Development →</a>
+          <a href="/startup-laravel-agency/" class="text-payflo-purple hover:underline font-bold">Startup Agency →</a>
+          <a href="/laravel-development-cost/" class="text-payflo-purple hover:underline font-bold">Cost Calculator →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>

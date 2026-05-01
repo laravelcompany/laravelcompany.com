@@ -1,0 +1,238 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const perks = [
+  {
+    title: "Deferred Payment",
+    desc: "50% upfront, 50% on seed funding or revenue milestone. Cash-flow friendly for bootstrapped startups.",
+    icon: "ph:currency-circle-dollar-duotone"
+  },
+  {
+    title: "Equity Partnerships",
+    desc: "Selective equity deals for high-potential startups. We invest our time in exchange for 1-5% equity.",
+    icon: "ph:trend-up-duotone"
+  },
+  {
+    title: "Pitch Deck Support",
+    desc: "Tech appendix preparation, architecture diagrams, and cost projections for investor presentations.",
+    icon: "ph:presentation-duotone"
+  },
+  {
+    title: "Fractional CTO",
+    desc: "Senior technical leadership for startups without a tech co-founder. Strategy, hiring, and architecture.",
+    icon: "ph:user-focus-duotone"
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "Do you offer equity or deferred payment for startups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer deferred payment (50% upfront, 50% on seed funding) and selective equity partnerships (1-5%) for high-potential startups with strong founding teams."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a fractional CTO and do you provide this service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A fractional CTO provides technical leadership without the full-time cost. We offer 10-40 hours/month of senior architect time for tech strategy, team hiring, and investor reporting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you help startups raise funding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We prepare tech appendices for pitch decks, create architecture diagrams, provide cost projections, and can join investor calls to explain the technical roadmap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Laravel good for startup MVPs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Laravel has the fastest time-to-market of any framework. Huge ecosystem (packages for everything), excellent documentation, and can scale from MVP to IPO without rewriting."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Startup Laravel Development",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com"
+  },
+  "description": "Startup Laravel agency with equity/deferred payment options. Fractional CTO, pitch deck support, MVP development. 50+ startups served.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Startup Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "MVP Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fractional CTO" }}
+    ]
+  }
+};
+---
+
+<Layout
+  title="Startup Laravel Development Company | Equity & Deferred Payment"
+  description="Startup Laravel agency with equity/deferred payment options. Fractional CTO, pitch deck support, MVP development. 50+ startups served. Get a quote."
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">Startup Agency</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:rocket-launch-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Startup Specialists</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Startup <span class="gradient-text">Laravel Agency</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            Equity & deferred payment options. Fractional CTO, pitch deck support, MVP development. 50+ startups served.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Talk to Startup Team</a>
+            <a href="/laravel-mvp-development/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">MVP Packages</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-10 border-y border-white/5 bg-white/[0.02]">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-white/40 text-sm font-bold uppercase tracking-widest">
+          <span>50+ Startups Served</span>
+          <span>Equity Partnerships</span>
+          <span>Deferred Payment</span>
+          <span>Fractional CTO</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Startup Perks -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Startup <span class="gradient-text">Perks</span></h2>
+          <p class="text-gray-400 text-lg">We understand startup cash flow. Our models are designed for founders.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {perks.map((p, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-10 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+              <Icon name={p.icon} class="w-12 h-12 text-payflo-purple mb-6 group-hover:scale-110 transition-transform" />
+              <h3 class="text-2xl font-black mb-4 text-white">{p.title}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Funding Stages -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">We Work With <span class="gradient-text">All Stages</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <div class="text-2xl font-black text-payflo-purple mb-2">Pre-Seed</div>
+            <p class="text-gray-400 text-xs">MVP, founder-led, idea validation</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <div class="text-2xl font-black text-payflo-purple mb-2">Seed</div>
+            <p class="text-gray-400 text-xs">Product-market fit, early traction</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <div class="text-2xl font-black text-payflo-purple mb-2">Series A</div>
+            <p class="text-gray-400 text-xs">Scaling, team growth, new markets</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <div class="text-2xl font-black text-payflo-purple mb-2">Series B+</div>
+            <p class="text-gray-400 text-xs">Enterprise features, M&A, IPO prep</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA: Startup Checklist -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto text-center">
+        <div class="glass-card p-12 border-payflo-purple/20 rounded-3xl">
+          <Icon name="ph:clipboard-text-duotone" class="w-16 h-16 text-payflo-purple mx-auto mb-6" />
+          <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Startup Founder's Checklist</h2>
+          <p class="text-gray-400 mb-8">12-page PDF: "What VCs Look for in Your Tech Stack". Used by 200+ funded founders.</p>
+          <a href="/contact/" class="btn btn-primary px-10 py-4 text-lg">Download Free Checklist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Startup <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Do you offer equity or deferred payment for startups?</h4>
+            <p class="text-gray-400">Yes. We offer deferred payment (50% upfront, 50% on seed funding) and selective equity partnerships (1-5%) for high-potential startups with strong founding teams.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">What is a fractional CTO and do you provide this service?</h4>
+            <p class="text-gray-400">A fractional CTO provides technical leadership without the full-time cost. We offer 10-40 hours/month of senior architect time for tech strategy, team hiring, and investor reporting.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How do you help startups raise funding?</h4>
+            <p class="text-gray-400">We prepare tech appendices for pitch decks, create architecture diagrams, provide cost projections, and can join investor calls to explain the technical roadmap.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/laravel-mvp-development/" class="text-payflo-purple hover:underline font-bold">MVP Development →</a>
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire Developer →</a>
+          <a href="/laravel-saas-development/" class="text-payflo-purple hover:underline font-bold">SaaS Development →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>

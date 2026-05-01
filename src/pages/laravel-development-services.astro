@@ -1,0 +1,335 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const services = [
+  {
+    title: "Custom Laravel Development",
+    desc: "Tailor-made web applications built from scratch with clean architecture, SOLID principles, and modern Laravel best practices.",
+    icon: "ph:code-block-duotone",
+    features: ["Full-stack Laravel apps", "Clean Architecture", "TDD with PHPUnit", "RESTful API design"]
+  },
+  {
+    title: "Laravel API Development",
+    desc: "Build robust, scalable REST and GraphQL APIs with Laravel Sanctum, Passport, and JSON:API specifications.",
+    icon: "ph:plugs-connected-duotone",
+    features: ["REST & GraphQL APIs", "Sanctum/Passport auth", "Rate limiting", "API versioning"]
+  },
+  {
+    title: "SaaS Platform Development",
+    desc: "Multi-tenant SaaS applications with subscription billing, team management, and scalable infrastructure.",
+    icon: "ph:buildings-duotone",
+    features: ["Multi-tenancy", "Stripe/Paddle billing", "Team management", "Usage tracking"]
+  },
+  {
+    title: "Legacy Migration & Upgrades",
+    desc: "Migrate from WordPress, CodeIgniter, or legacy PHP to modern Laravel. Upgrade older Laravel versions safely.",
+    icon: "ph:arrow-circle-up-duotone",
+    features: ["Platform migration", "Version upgrades", "Zero downtime", "Data integrity"]
+  },
+  {
+    title: "E-commerce & Marketplaces",
+    desc: "Custom online stores, multi-vendor marketplaces, and inventory management systems with Laravel.",
+    icon: "ph:shopping-cart-duotone",
+    features: ["Custom cart & checkout", "Multi-vendor platforms", "Inventory systems", "Payment integration"]
+  },
+  {
+    title: "Maintenance & Support",
+    desc: "24/7 monitoring, security patches, performance optimization, and Laravel version upgrades.",
+    icon: "ph:wrench-duotone",
+    features: ["24/7 monitoring", "Security patches", "Performance tuning", "Bug fixes"]
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "What services does a Laravel development company provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full-service Laravel agency provides custom web development, API development, SaaS platform builds, e-commerce solutions, legacy migrations, maintenance & support, performance optimization, and security audits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Laravel development cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Custom Laravel projects typically range from $10,000 for MVPs to $100,000+ for enterprise platforms. Hourly rates range from $35-$75/hour depending on developer seniority and location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why choose a custom Laravel development company over freelancers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Agencies provide project management, code quality guarantees, backup developers, established workflows, and long-term support. You get a team, not just one person, reducing project risk significantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you follow Laravel best practices and coding standards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We strictly follow PSR-12 standards, Laravel conventions, SOLID principles, and implement comprehensive PHPUnit testing with CI/CD pipelines for every project."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel Development Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127"
+    }
+  },
+  "description": "Full-service Laravel development agency offering custom web apps, API development, SaaS platforms, e-commerce, and maintenance services.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Laravel Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Laravel Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laravel API Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SaaS Platform Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laravel Migration Services" }}
+    ]
+  }
+};
+---
+
+<Layout
+  title="Laravel Development Services | Custom Web Apps & API Development"
+  description="Professional Laravel development services: custom web apps, REST APIs, SaaS platforms, e-commerce, migration & support. 500+ projects delivered. Get a free quote."
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">Laravel Development Services</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:buildings-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Laravel Agency</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Laravel <span class="gradient-text">Development Services</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            Custom Laravel applications, REST APIs, SaaS platforms, and e-commerce solutions. 500+ projects delivered with 4.9/5 rating.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Get Free Quote</a>
+            <a href="/hire-laravel-developer/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">Hire Developer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Our <span class="gradient-text">Service Portfolio</span></h2>
+          <p class="text-gray-400 text-lg">End-to-end Laravel expertise for every stage of your product lifecycle.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((s, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-10 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+              <Icon name={s.icon} class="w-12 h-12 text-payflo-purple mb-8 group-hover:scale-110 transition-transform" />
+              <h3 class="text-2xl font-black mb-4 text-white">{s.title}</h3>
+              <p class="text-gray-400 text-sm mb-6 leading-relaxed">{s.desc}</p>
+              <ul class="space-y-2">
+                {s.features.map(f => (
+                  <li class="flex items-center gap-2 text-sm text-white/60">
+                    <Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div class="animate-on-scroll">
+            <h2 class="text-4xl font-black mb-8">Why Choose a <span class="gradient-text">Laravel Agency</span>?</h2>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <Icon name="ph:certificate-duotone" class="w-8 h-8 text-payflo-purple flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Certified Team</h4>
+                  <p class="text-gray-400 text-sm">Laravel-certified developers with 5+ years average experience on every project.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:clock-countdown-duotone" class="w-8 h-8 text-payflo-pink flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">8-Week Average Delivery</h4>
+                  <p class="text-gray-400 text-sm">Proven agile workflows deliver MVPs in 4-6 weeks, full platforms in 8-12 weeks.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:shield-check-duotone" class="w-8 h-8 text-payflo-purple flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Enterprise Security</h4>
+                  <p class="text-gray-400 text-sm">OWASP compliance, GDPR readiness, penetration testing, and SOC 2 aligned processes.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:trend-up-duotone" class="w-8 h-8 text-payflo-pink flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Scalable Architecture</h4>
+                  <p class="text-gray-400 text-sm">Event-driven design, queue workers, caching layers, and auto-scaling infrastructure.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animate-on-scroll delay-2">
+            <div class="glass-card p-10 border-white/10">
+              <h3 class="text-2xl font-black text-white mb-6">Service Breakdown</h3>
+              <div class="space-y-4">
+                <div class="flex justify-between items-center pb-4 border-b border-white/10">
+                  <span class="text-white/70">Custom Web Apps</span>
+                  <span class="text-payflo-purple font-bold">$15K-$50K</span>
+                </div>
+                <div class="flex justify-between items-center pb-4 border-b border-white/10">
+                  <span class="text-white/70">SaaS Platforms</span>
+                  <span class="text-payflo-purple font-bold">$25K-$100K</span>
+                </div>
+                <div class="flex justify-between items-center pb-4 border-b border-white/10">
+                  <span class="text-white/70">API Development</span>
+                  <span class="text-payflo-purple font-bold">$10K-$30K</span>
+                </div>
+                <div class="flex justify-between items-center pb-4 border-b border-white/10">
+                  <span class="text-white/70">E-commerce</span>
+                  <span class="text-payflo-purple font-bold">$15K-$40K</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-white/70">Maintenance/Month</span>
+                  <span class="text-payflo-pink font-bold">$500-$2,500</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Agency vs <span class="gradient-text">Freelancer vs In-House</span></h2>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th class="py-4 px-6 text-left text-white/80">Criteria</th>
+                <th class="py-4 px-6 text-center text-payflo-purple">Laravel Agency</th>
+                <th class="py-4 px-6 text-center text-white/60">Freelancer</th>
+                <th class="py-4 px-6 text-center text-white/60">In-House</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-white/5">
+                <td class="py-4 px-6 text-white/70">Project Management</td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-purple mx-auto" /></td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:x-circle-duotone" class="w-5 h-5 text-white/30 mx-auto" /></td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:check-circle-fill" class="w-5 h-5 text-white/30 mx-auto" /></td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-4 px-6 text-white/70">Backup Developers</td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-purple mx-auto" /></td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:x-circle-duotone" class="w-5 h-5 text-white/30 mx-auto" /></td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:check-circle-fill" class="w-5 h-5 text-white/30 mx-auto" /></td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-4 px-6 text-white/70">Cost Efficiency</td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-purple mx-auto" /></td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:check-circle-fill" class="w-5 h-5 text-white/30 mx-auto" /></td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:x-circle-duotone" class="w-5 h-5 text-white/30 mx-auto" /></td>
+              </tr>
+              <tr class="border-b border-white/5">
+                <td class="py-4 px-6 text-white/70">Long-term Support</td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-purple mx-auto" /></td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:x-circle-duotone" class="w-5 h-5 text-white/30 mx-auto" /></td>
+                <td class="py-4 px-6 text-center"><Icon name="ph:check-circle-fill" class="w-5 h-5 text-white/30 mx-auto" /></td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 text-white/70">Time to Deploy</td>
+                <td class="py-4 px-6 text-center text-payflo-purple font-bold">48h</td>
+                <td class="py-4 px-6 text-center text-white/50">1-4 weeks</td>
+                <td class="py-4 px-6 text-center text-white/50">2-3 months</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Services <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">What services does a Laravel development company provide?</h4>
+            <p class="text-gray-400">A full-service Laravel agency provides custom web development, API development, SaaS platform builds, e-commerce solutions, legacy migrations, maintenance & support, performance optimization, and security audits.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Why choose a custom Laravel development company over freelancers?</h4>
+            <p class="text-gray-400">Agencies provide project management, code quality guarantees, backup developers, established workflows, and long-term support. You get a team, not just one person, reducing project risk significantly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire Laravel Developer →</a>
+          <a href="/laravel-saas-development/" class="text-payflo-purple hover:underline font-bold">SaaS Development →</a>
+          <a href="/laravel-api-development/" class="text-payflo-purple hover:underline font-bold">API Development →</a>
+          <a href="/laravel-development-cost/" class="text-payflo-purple hover:underline font-bold">Cost Calculator →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>

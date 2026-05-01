@@ -1,0 +1,244 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Calendar & Availability",
+    desc: "Real-time availability, recurring bookings, buffer times, and timezone handling.",
+    icon: "ph:calendar-blank-duotone"
+  },
+  {
+    title: "Payment Integration",
+    desc: "Stripe, PayPal, deposits, refunds, and automated invoicing for bookings.",
+    icon: "ph:credit-card-duotone"
+  },
+  {
+    title: "Notifications & Reminders",
+    desc: "Email, SMS (Twilio), and push notifications for booking confirmations, reminders, cancellations.",
+    icon: "ph:bell-ringing-duotone"
+  },
+  {
+    title: "Vendor/Provider Portal",
+    desc: "Provider dashboards, schedule management, earnings tracking, and availability settings.",
+    icon: "ph:user-gear-duotone"
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "How much does it cost to build a booking platform with Laravel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A booking platform costs $20,000-$45,000 depending on features. Basic booking systems start at $20K. Advanced platforms with multi-provider support, mobile apps, and complex pricing reach $45K+."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build a Laravel booking platform?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simple booking platforms launch in 6-10 weeks. Advanced platforms with provider portals, mobile apps, and complex availability rules take 12-18 weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you integrate with existing calendar systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We integrate with Google Calendar, Outlook, Calendly, and iCal. Two-way sync ensures availability is always up to date across all platforms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you support multi-provider booking platforms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We build platforms like Airbnb, Booking.com, or Calendly clones with provider dashboards, availability management, and commission handling."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel Booking Platform Development",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com"
+  },
+  "description": "Build booking platforms with Laravel. Calendar, payments, notifications, provider portals. $20K-$45K. 6-18 weeks delivery.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Booking Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Booking System" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Provider Portal" }}
+    ]
+  }
+};
+---
+
+<Layout
+  title="Build Booking Platform Laravel | Calendar & Reservation Systems"
+  description="Build booking platforms with Laravel. Calendar integration, payments, notifications, provider portals. $20K-$45K. 6-18 weeks. Get a quote."
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">Booking Platform</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:calendar-check-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Booking Experts</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Build <span class="gradient-text">Booking Platform</span> with Laravel
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            Calendar integration, payments, notifications, and provider portals. Starting at $20,000.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Build Booking Platform</a>
+            <a href="/laravel-mvp-development/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">MVP Package</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Booking <span class="gradient-text">Core Features</span></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {features.map((f, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-10 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+              <Icon name={f.icon} class="w-12 h-12 text-payflo-purple mb-6 group-hover:scale-110 transition-transform" />
+              <h3 class="text-2xl font-black mb-4 text-white">{f.title}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Booking <span class="gradient-text">Use Cases</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <h4 class="text-lg font-bold text-white mb-2">Hotel/Accommodation</h4>
+            <p class="text-gray-400 text-xs">Airbnb-style platforms</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <h4 class="text-lg font-bold text-white mb-2">Appointment Booking</h4>
+            <p class="text-gray-400 text-xs">Salons, clinics, consultants</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <h4 class="text-lg font-bold text-white mb-2">Event Ticketing</h4>
+            <p class="text-gray-400 text-xs">Events, tours, activities</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <h4 class="text-lg font-bold text-white mb-2">Rental Equipment</h4>
+            <p class="text-gray-400 text-xs">Cars, tools, machinery</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <h4 class="text-lg font-bold text-white mb-2">Restaurant Reservations</h4>
+            <p class="text-gray-400 text-xs">Tables, private dining</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <h4 class="text-lg font-bold text-white mb-2">Service Appointments</h4>
+            <p class="text-gray-400 text-xs">Home services, repairs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost Estimate -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Cost <span class="gradient-text">Estimate</span></h2>
+        <div class="glass-card p-10 border-white/10">
+          <div class="space-y-4">
+            <div class="flex justify-between pb-4 border-b border-white/5">
+              <span class="text-white/70">Basic Booking (6-10 weeks)</span>
+              <span class="text-payflo-purple font-bold">$20K-$30K</span>
+            </div>
+            <div class="flex justify-between pb-4 border-b border-white/5">
+              <span class="text-white/70">Multi-Provider (10-14 weeks)</span>
+              <span class="text-payflo-purple font-bold">$30K-$45K</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-white/70">Enterprise + Mobile (14-18 weeks)</span>
+              <span class="text-payflo-pink font-bold">$45K-$75K</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Booking <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How much does it cost to build a booking platform with Laravel?</h4>
+            <p class="text-gray-400">A booking platform costs $20,000-$45,000 depending on features. Basic booking systems start at $20K. Advanced platforms with multi-provider support, mobile apps, and complex pricing reach $45K+.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Can you integrate with existing calendar systems?</h4>
+            <p class="text-gray-400">Yes. We integrate with Google Calendar, Outlook, Calendly, and iCal. Two-way sync ensures availability is always up to date across all platforms.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Do you support multi-provider booking platforms?</h4>
+            <p class="text-gray-400">Absolutely. We build platforms like Airbnb, Booking.com, or Calendly clones with provider dashboards, availability management, and commission handling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire Booking Dev →</a>
+          <a href="/build-marketplace-laravel/" class="text-payflo-purple hover:underline font-bold">Marketplace Dev →</a>
+          <a href="/laravel-mvp-development/" class="text-payflo-purple hover:underline font-bold">MVP Package →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>

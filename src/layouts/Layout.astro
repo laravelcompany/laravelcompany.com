@@ -10,11 +10,13 @@ const gaMeasurementId = "G-DTWW0CXPP2";
 interface Props {
   title: string;
   description?: string;
+  noindex?: boolean;
 }
 
 const {
   title,
   description = "Laravel Company develops open-source Laravel tools for UI, Mail, SEO, GPT and Leads Management — no lock-in, no fluff, just solid engineering.",
+  noindex = false,
 } = Astro.props;
 
 // Preload critical assets
@@ -40,7 +42,7 @@ const faviconImg = await getImage({
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
 
     <!-- Robots -->
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
     <meta name="author" content="Laravel Company" />
 
     <ViewTransitions />

@@ -1,0 +1,314 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const models = [
+  {
+    name: "Hourly Hiring",
+    price: "From $35/hr",
+    description: "Flexible engagement for ongoing work, bug fixes, and feature additions.",
+    features: ["No long-term contract", "Scale up/down anytime", "Weekly invoicing", "Direct communication", "Code reviews included"],
+    icon: "ph:clock-countdown-duotone",
+    popular: false
+  },
+  {
+    name: "Dedicated Developer",
+    price: "From $4,500/mo",
+    description: "Full-time Laravel expert dedicated to your project, 160 hours/month.",
+    features: ["40h/week availability", "Team integration", "Daily standups", "Project management", "15-day trial period"],
+    icon: "ph:user-focus-duotone",
+    popular: true
+  },
+  {
+    name: "Team Augmentation",
+    price: "Custom Quote",
+    description: "Scale your team with multiple Laravel developers managed by our tech leads.",
+    features: ["2+ developers", "Dedicated tech lead", "Agile workflow", "Shared Slack channel", "Sprint planning"],
+    icon: "ph:users-three-duotone",
+    popular: false
+  }
+];
+
+const vettingSteps = [
+  { step: "1", title: "Technical Assessment", desc: "Live coding, architecture design, and Laravel internals deep-dive" },
+  { step: "2", title: "Code Review Test", desc: "Real-world refactoring task evaluated by our senior architects" },
+  { step: "3", title: "Communication Check", desc: "English proficiency and client-facing communication simulation" },
+  { step: "4", title: "Background Verification", desc: "Employment history, reference checks, and security clearance" }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "How much does it cost to hire a Laravel developer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hourly rates start at $35/hour for mid-level developers and $55/hour for senior architects. Dedicated full-time developers start at $4,500/month. All developers are vetted, speak fluent English, and work in your timezone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can I hire a dedicated Laravel developer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We can assign a pre-vetted Laravel developer within 48 hours. Our bench includes 50+ available developers across all seniority levels, ready to start immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between hourly and dedicated hiring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hourly hiring is pay-as-you-go for flexible work. Dedicated hiring gives you a full-time developer exclusively working on your project with guaranteed 160 hours/month and deeper team integration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I interview developers before hiring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can interview as many candidates as needed. We provide resumes, code samples, and arrange video calls. You only pay once you're satisfied and ready to start."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide Laravel experts for SaaS startups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We have specialized Laravel developers with SaaS experience including multi-tenancy, subscription billing, API design, and scalability planning for high-growth startups."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel Developer Hiring",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127"
+    }
+  },
+  "description": "Hire pre-vetted Laravel developers for dedicated, hourly, or team augmentation engagements. Starting at $35/hour.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Hiring Models",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Hourly Laravel Developer" },
+        "price": "35",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Dedicated Laravel Developer" },
+        "price": "4500",
+        "priceCurrency": "USD"
+      }
+    ]
+  }
+};
+---
+
+<Layout
+  title="Hire Laravel Developer | Dedicated Experts from $35/hour"
+  description="Hire pre-vetted Laravel developers for dedicated, hourly, or team augmentation. 48h deployment, 15-day trial, 50+ available experts. Get a free quote today."
+>
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">Hire Laravel Developer</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:code-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Pre-Vetted Experts</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Hire a <span class="gradient-text">Laravel Developer</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            Dedicated Laravel experts starting at <strong class="text-white">$35/hour</strong>. Deploy in 48 hours, 15-day risk-free trial, 50+ developers on bench.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Hire a Developer Now</a>
+            <a href="/laravel-development-cost/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-10 border-y border-white/5 bg-white/[0.02]">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-white/40 text-sm font-bold uppercase tracking-widest">
+          <span>500+ Projects Delivered</span>
+          <span>4.9/5 Rating</span>
+          <span>50+ Active Developers</span>
+          <span>15-Day Trial</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vetting Process -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">How We <span class="gradient-text">Vet</span> Our Developers</h2>
+          <p class="text-gray-400 text-lg">Only the top 3% pass our rigorous 4-step screening process.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {vettingSteps.map((item, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-8 border-white/10 text-center">
+              <div class="w-16 h-16 bg-payflo-purple/10 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-payflo-purple/20">
+                <span class="text-2xl font-black text-payflo-purple">{item.step}</span>
+              </div>
+              <h3 class="text-xl font-black mb-4 text-white">{item.title}</h3>
+              <p class="text-gray-400 text-sm">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Hiring Models -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Flexible <span class="gradient-text">Engagement Models</span></h2>
+          <p class="text-gray-400 text-lg">Choose the model that fits your project and budget.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {models.map((model, i) => (
+            <div class={`animate-on-scroll delay-{i} p-8 rounded-3xl border flex flex-col ${model.popular ? 'bg-payflo-purple/10 border-payflo-purple/30 scale-105 shadow-2xl' : 'bg-white/5 border-white/10'}`}>
+              {model.popular && (
+                <div class="px-3 py-1 bg-payflo-purple text-white text-[10px] font-black uppercase rounded-full mb-4 self-center">Most Popular</div>
+              )}
+              <div class="w-12 h-12 bg-payflo-purple/10 rounded-xl flex items-center justify-center mb-6 border border-payflo-purple/20">
+                <Icon name={model.icon} class="w-6 h-6 text-payflo-purple" />
+              </div>
+              <h3 class="text-2xl font-black text-white mb-2">{model.name}</h3>
+              <div class="text-3xl font-black text-payflo-purple mb-4">{model.price}</div>
+              <p class="text-gray-400 text-sm mb-8">{model.description}</p>
+              <ul class="space-y-3 mb-8 flex-grow">
+                {model.features.map(f => (
+                  <li class="flex items-center gap-2 text-sm text-white/70">
+                    <Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> {f}
+                  </li>
+                ))}
+              </ul>
+              <a href="/contact/" class={`font-bold py-3 px-6 rounded-2xl text-center transition-all ${model.popular ? 'btn btn-primary' : 'text-payflo-purple hover:underline'}`}>Get Quote →</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div class="animate-on-scroll">
+            <h2 class="text-4xl font-black mb-8 leading-tight">Why Choose Our <span class="gradient-text">Laravel Experts</span>?</h2>
+            <div class="space-y-6">
+              <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                <h4 class="text-lg font-bold text-white mb-2">Senior-Only Team</h4>
+                <p class="text-gray-400 text-sm">Minimum 5 years Laravel experience. No juniors, no learning on your dime.</p>
+              </div>
+              <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                <h4 class="text-lg font-bold text-white mb-2">English Fluency Guaranteed</h4>
+                <p class="text-gray-400 text-sm">All developers pass rigorous communication tests. Daily standups in your timezone.</p>
+              </div>
+              <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                <h4 class="text-lg font-bold text-white mb-2">Transparent Code Ownership</h4>
+                <p class="text-gray-400 text-sm">You own 100% of the code. No lock-in, no hidden fees, clean Git history.</p>
+              </div>
+            </div>
+          </div>
+          <div class="animate-on-scroll delay-2">
+            <div class="glass-card p-10 border-payflo-purple/20">
+              <h3 class="text-2xl font-black text-white mb-6">Tech Stack Coverage</h3>
+              <div class="flex flex-wrap gap-3">
+                {["Laravel 11", "Livewire", "Filament", "Inertia.js", "Vue.js", "React", "MySQL/PostgreSQL", "Redis", "AWS", "Docker", "Sanctum/Passport", "Horizon", "Forge", "Nova"].map(tech => (
+                  <span class="px-3 py-1 bg-white/5 rounded-lg border border-white/10 text-xs font-bold text-white/70">{tech}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Hiring <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How much does it cost to hire a Laravel developer?</h4>
+            <p class="text-gray-400">Hourly rates start at $35/hour for mid-level developers and $55/hour for senior architects. Dedicated full-time developers start at $4,500/month. All developers are vetted, speak fluent English, and work in your timezone.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How quickly can I hire a dedicated Laravel developer?</h4>
+            <p class="text-gray-400">We can assign a pre-vetted Laravel developer within 48 hours. Our bench includes 50+ available developers across all seniority levels, ready to start immediately.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Can I interview developers before hiring?</h4>
+            <p class="text-gray-400">Yes. You can interview as many candidates as needed. We provide resumes, code samples, and arrange video calls. You only pay once you're satisfied and ready to start.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/laravel-development-services/" class="text-payflo-purple hover:underline font-bold">Laravel Development Services →</a>
+          <a href="/laravel-development-cost/" class="text-payflo-purple hover:underline font-bold">Development Cost Calculator →</a>
+          <a href="/outsource-laravel-development/" class="text-payflo-purple hover:underline font-bold">Outsource Laravel Development →</a>
+          <a href="/hire-laravel-developer-remote/" class="text-payflo-purple hover:underline font-bold">Hire Remote Developer →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn {
+    @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl;
+  }
+  .btn-primary {
+    @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1;
+  }
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl;
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink;
+  }
+</style>

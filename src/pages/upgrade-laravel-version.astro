@@ -1,0 +1,261 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const versions = [
+  { from: "Laravel 6-7", to: "Laravel 10-11", effort: "Medium", cost: "$3K-$8K", time: "2-4 weeks" },
+  { from: "Laravel 8", to: "Laravel 10-11", effort: "Low-Medium", cost: "$2K-$5K", time: "1-3 weeks" },
+  { from: "Laravel 9", to: "Laravel 10-11", effort: "Low", cost: "$1K-$3K", time: "1-2 weeks" },
+  { from: "Laravel 10", to: "Laravel 11", effort: "Low", cost: "$500-$1.5K", time: "3-5 days" }
+];
+
+const steps = [
+  { title: "Codebase Audit", desc: "Analyze current Laravel version, PHP version, dependencies, and deprecated features." },
+  { title: "LTS Planning", desc: "Choose target version, review breaking changes, and create migration roadmap." },
+  { title: "Dependency Updates", desc: "Update Composer packages, resolve conflicts, and replace deprecated packages." },
+  { title: "Testing & Deploy", desc: "Full regression testing, fix breaking changes, and deploy with zero downtime." }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "Why should I upgrade my Laravel version?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Older Laravel versions lose security patches, miss performance improvements, and have incompatible dependencies. Upgrading ensures security, speed, and access to new features like PHP 8.2+ support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a Laravel version upgrade cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upgrading from Laravel 8-9 to 10-11 costs $2,000-$5,000. Legacy upgrades (5.x-7.x) cost $5,000-$15,000 depending on codebase size and deprecated packages used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a Laravel upgrade take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simple upgrades (one major version) take 1-2 weeks. Legacy upgrades (multiple versions) take 3-6 weeks. We provide a detailed timeline after codebase audit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you refactor legacy Laravel code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We refactor deprecated patterns, upgrade to modern syntax (like enum casts, new Eloquent methods), and improve code quality during the upgrade process."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel Version Upgrade",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com"
+  },
+  "description": "Upgrade Laravel version service: LTS planning, breaking changes, dependency updates, and legacy refactoring. $500-$15,000 depending on version gap.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Upgrade Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Version Upgrade" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Legacy Refactoring" }}
+    ]
+  }
+};
+---
+
+<Layout
+  title="Upgrade Laravel Version Service | Legacy App Refactoring"
+  description="Upgrade Laravel version service: LTS planning, breaking changes, dependency updates. Legacy refactoring from Laravel 5-9 to 10-11. Get a free audit."
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">Upgrade Laravel Version</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:arrow-circle-up-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Version Upgrade</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Upgrade <span class="gradient-text">Laravel Version</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            LTS planning, breaking changes, dependency updates, and legacy refactoring. From $500 to $15,000 depending on version gap.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Get Upgrade Quote</a>
+            <a href="/laravel-security-audit/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">Security Audit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Risks of Not Upgrading -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div class="animate-on-scroll">
+            <h2 class="text-4xl font-black mb-8">Risks of <span class="gradient-text">Not Upgrading</span></h2>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <Icon name="ph:warning-octagon-duotone" class="w-8 h-8 text-red-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Security Vulnerabilities</h4>
+                  <p class="text-gray-400 text-sm">End-of-life versions no longer receive security patches. Your app becomes an easy target.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:package-duotone" class="w-8 h-8 text-payflo-pink flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Package Incompatibility</h4>
+                  <p class="text-gray-400 text-sm">New packages require modern Laravel. You can't add features because dependencies fail.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <Icon name="ph:gauge-duotone" class="w-8 h-8 text-payflo-purple flex-shrink-0 mt-1" />
+                <div>
+                  <h4 class="text-lg font-bold text-white mb-1">Performance Loss</h4>
+                  <p class="text-gray-400 text-sm">Newer Laravel versions include significant performance improvements and PHP 8.2+ optimizations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animate-on-scroll delay-2">
+            <div class="glass-card p-10 border-white/10">
+              <h3 class="text-2xl font-black text-white mb-6">Typical Upgrade Paths</h3>
+              <div class="space-y-4">
+                {versions.map(v => (
+                  <div class="pb-4 border-b border-white/5 last:border-0">
+                    <div class="flex justify-between items-center">
+                      <span class="text-white/70 text-sm">{v.from} → {v.to}</span>
+                      <span class="text-payflo-purple font-bold text-sm">{v.cost}</span>
+                    </div>
+                    <div class="flex justify-between text-xs text-white/40 mt-1">
+                      <span>{v.effort} effort</span>
+                      <span>{v.time}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upgrade Process -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Upgrade <span class="gradient-text">Process</span></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((s, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-8 border-white/10 text-center">
+              <div class="w-16 h-16 bg-payflo-purple/10 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-payflo-purple/20">
+                <span class="text-2xl font-black text-payflo-purple">{i+1}</span>
+              </div>
+              <h3 class="text-xl font-black mb-4 text-white">{s.title}</h3>
+              <p class="text-gray-400 text-sm">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Legacy Refactoring -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Legacy <span class="gradient-text">Refactoring</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="text-lg font-bold text-white mb-4">What We Refactor</h4>
+            <ul class="space-y-2 text-sm text-white/60">
+              <li class="flex items-center gap-2"><Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> Deprecated controller patterns</li>
+              <li class="flex items-center gap-2"><Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> Old Eloquent methods → modern</li>
+              <li class="flex items-center gap-2"><Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> Blade → Livewire/Inertia</li>
+              <li class="flex items-center gap-2"><Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> PHP 8.x syntax upgrades</li>
+            </ul>
+          </div>
+          <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="text-lg font-bold text-white mb-4">Included in Upgrade</h4>
+            <ul class="space-y-2 text-sm text-white/60">
+              <li class="flex items-center gap-2"><Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> Full test suite pass</li>
+              <li class="flex items-center gap-2"><Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> Zero-downtime deployment</li>
+              <li class="flex items-center gap-2"><Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> Rollback plan</li>
+              <li class="flex items-center gap-2"><Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> 30-day warranty</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Upgrade <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Why should I upgrade my Laravel version?</h4>
+            <p class="text-gray-400">Older Laravel versions lose security patches, miss performance improvements, and have incompatible dependencies. Upgrading ensures security, speed, and access to new features like PHP 8.2+ support.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How much does a Laravel version upgrade cost?</h4>
+            <p class="text-gray-400">Upgrading from Laravel 8-9 to 10-11 costs $2,000-$5,000. Legacy upgrades (5.x-7.x) cost $5,000-$15,000 depending on codebase size and deprecated packages used.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Do you refactor legacy Laravel code?</h4>
+            <p class="text-gray-400">Yes. We refactor deprecated patterns, upgrade to modern syntax (like enum casts, new Eloquent methods), and improve code quality during the upgrade process.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire Upgrade Specialist →</a>
+          <a href="/laravel-security-audit/" class="text-payflo-purple hover:underline font-bold">Security Audit →</a>
+          <a href="/migrate-wordpress-to-laravel/" class="text-payflo-purple hover:underline font-bold">Migration Services →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>

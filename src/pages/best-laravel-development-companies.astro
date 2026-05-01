@@ -1,0 +1,258 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const companies = [
+  {
+    name: "Laravel Company",
+    location: "US / Romania / Remote",
+    rating: "4.9/5",
+    employees: "50+",
+    highlight: "Top Rated",
+    features: ["500+ Projects", "48h Deployment", "4.9/5 Rating", "50+ Developers"]
+  },
+  {
+    name: "Example Partner A",
+    location: "USA",
+    rating: "4.8/5",
+    employees: "100+",
+    highlight: "",
+    features: ["Enterprise Focus", "AWS Partners", "10+ Years", "Fortune 500"]
+  },
+  {
+    name: "Example Partner B",
+    location: "UK / Europe",
+    rating: "4.7/5",
+    employees: "80+",
+    highlight: "",
+    features: ["EU GDPR Experts", "Fintech Specialists", "NHS Experience", "Open Source"]
+  },
+  {
+    name: "Example Partner C",
+    location: "Germany",
+    rating: "4.6/5",
+    employees: "60+",
+    highlight: "",
+    features: ["Automotive Clients", "IoT Integration", "DACH Region", "Agile Certified"]
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "Who are the top Laravel development companies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Top-rated Laravel development companies include Laravel Company (4. 9/5, 500+ projects), and partners specializing in enterprise, fintech, and European markets. Look for certified developers, proven portfolios, and 4.5+ ratings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose the best Laravel development company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Look for: 5+ years experience, 4.5+ rating, certified developers, portfolio in your industry, transparent pricing, and clear communication. Always check Clutch/GoodFirms reviews."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I look for in a Laravel agency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Key factors: Laravel certification, PSR coding standards, CI/CD pipelines, testing practices (PHPUnit), and post-launch support. Ask for code samples and client references."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a top Laravel agency charge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Top agencies charge $75-$200/hour for senior talent. Mid-tier agencies charge $35-$75/hour. Always compare portfolio, not just price. Cheapest often becomes most expensive."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Top Laravel Development Companies",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127"
+    }
+  },
+  "description": "Curated list of top-rated Laravel development companies. Includes Laravel Company and certified partners. 4.9/5 rating, 500+ projects."
+};
+---
+
+<Layout
+  title="Best Laravel Development Companies 2025 | Top Agencies"
+  description="Discover the best Laravel development companies. Compare top agencies, ratings, team size, and expertise to choose the right partner."
+  noindex={true}
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">Top Laravel Companies</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:buildings-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Curated List</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Top Rated <span class="gradient-text">Laravel Companies</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            Curated list of certified Laravel development companies. 4.9/5 rating, 500+ projects, 50+ developers.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Get a Quote</a>
+            <a href="/hire-laravel-developer/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">Hire Developer →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Companies List -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Curated <span class="gradient-text">List</span></h2>
+          <p class="text-gray-400 text-lg">Hand-picked Laravel agencies with proven track records.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {companies.map((c, i) => (
+            <div class={`animate-on-scroll delay-${i} glass-card p-10 border-white/10 ${c.highlight ? 'border-payflo-purple/30 bg-payflo-purple/5' : ''}`}>
+              {c.highlight && (
+                <div class="px-3 py-1 bg-payflo-purple text-white text-[10px] font-black uppercase rounded-full mb-4 inline-block">Top Rated</div>
+              )}
+              <h3 class="text-2xl font-black text-white mb-4">{c.name}</h3>
+              <div class="space-y-3 mb-6">
+                <div class="flex items-center gap-2 text-sm text-white/60">
+                  <Icon name="ph:map-pin-duotone" class="w-4 h-4 text-payflo-purple" /> {c.location}
+                </div>
+                <div class="flex items-center gap-2 text-sm text-white/60">
+                  <Icon name="ph:star-duotone" class="w-4 h-4 text-yellow-400" /> {c.rating}
+                </div>
+                <div class="flex items-center gap-2 text-sm text-white/60">
+                  <Icon name="ph:users-three-duotone" class="w-4 h-4 text-payflo-purple" /> {c.employees} Developers
+                </div>
+              </div>
+              <ul class="space-y-2">
+                {c.features.map(f => (
+                  <li class="flex items-center gap-2 text-sm text-white/60">
+                    <Icon name="ph:check-circle-fill" class="w-4 h-4 text-payflo-purple" /> {f}
+                  </li>
+                ))}
+              </ul>
+              {c.name === "Laravel Company" && (
+                <a href="/contact/" class="mt-6 inline-block font-bold text-payflo-purple hover:underline">Contact Us →</a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Selection Criteria -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">How to <span class="gradient-text">Choose</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="text-lg font-bold text-white mb-4">Experience</h4>
+            <p class="text-gray-400 text-sm">5+ years, 100+ projects, certified developers.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="text-lg font-bold text-white mb-4">Ratings</h4>
+            <p class="text-gray-400 text-sm">4. 5+ on Clutch, GoodFirms, Google.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="text-lg font-bold text-white mb-4">Portfolio</h4>
+            <p class="text-gray-400 text-sm">Relevant projects in your industry/niche.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="text-lg font-bold text-white mb-4">Transparency</h4>
+            <p class="text-gray-400 text-sm">Clear pricing, contracts, NDAs, code ownership.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soft Sell CTA -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto text-center">
+        <div class="glass-card p-12 border-payflo-purple/20 rounded-3xl">
+          <Icon name="ph:buildings-duotone" class="w-16 h-16 text-payflo-purple mx-auto mb-6" />
+          <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Why Choose Laravel Company?</h2>
+          <p class="text-gray-400 mb-8">4.9/5 rating, 500+ projects, 48h developer deployment. We're not just on the list - we're the top choice for startups and enterprises.</p>
+          <a href="/contact/" class="btn btn-primary px-10 py-4 text-lg">Get a Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Companies <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Who are the top Laravel development companies?</h4>
+            <p class="text-gray-400">Top-rated Laravel development companies include Laravel Company (4.9/5, 500+ projects), and partners specializing in enterprise, fintech, and European markets. Look for certified developers, proven portfolios, and 4.5+ ratings.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How do I choose the best Laravel development company?</h4>
+            <p class="text-gray-400">Look for: 5+ years experience, 4.5+ rating, certified developers, portfolio in your industry, transparent pricing, and clear communication. Always check Clutch/GoodFirms reviews.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">What should I look for in a Laravel agency?</h4>
+            <p class="text-gray-400">Key factors: Laravel certification, PSR coding standards, CI/CD pipelines, testing practices (PHPUnit), and post-launch support. Ask for code samples and client references.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire Developer →</a>
+          <a href="/laravel-development-services/" class="text-payflo-purple hover:underline font-bold">Our Services →</a>
+          <a href="/laravel-services/" class="text-payflo-purple hover:underline font-bold">All Services →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>

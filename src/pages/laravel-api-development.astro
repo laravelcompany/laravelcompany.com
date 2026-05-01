@@ -1,0 +1,210 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const services = [
+  {
+    title: "REST API Development",
+    desc: "Clean, RESTful APIs following Laravel best practices with proper HTTP status codes, pagination, and filtering.",
+    icon: "ph:plugs-connected-duotone"
+  },
+  {
+    title: "API Authentication",
+    desc: "Sanctum for SPAs, Passport for OAuth2, and custom JWT implementations for secure API access.",
+    icon: "ph:lock-key-duotone"
+  },
+  {
+    title: "JSON:API & OpenAPI",
+    desc: "Spec-compliant APIs with OpenAPI/Swagger documentation, JSON:API standardization, and Postman collections.",
+    icon: "ph:file-doc-duotone"
+  },
+  {
+    title: "API Performance & Scaling",
+    desc: "Rate limiting, caching layers, database optimization, and horizontal scaling for high-traffic APIs.",
+    icon: "ph:gauge-duotone"
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "Why use Laravel for API development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Laravel provides Eloquent API resources, built-in pagination, rate limiting, and excellent testing tools. It's the fastest way to build secure, documented, and scalable APIs with minimal boilerplate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What API authentication do you implement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We implement Laravel Sanctum for SPAs/mobile apps, Passport for OAuth2, and custom JWT solutions. All APIs include rate limiting, CORS configuration, and security headers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide API documentation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every API includes OpenAPI/Swagger documentation, Postman collections, and usage examples. We also provide onboarding guides for your frontend/mobile teams."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Laravel API development cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simple CRUD APIs start at $8,000. Complex APIs with authentication, third-party integrations, and documentation cost $15,000-$40,000 depending on scope."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel API Development",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com"
+  },
+  "description": "Build robust REST APIs with Laravel. Sanctum/Passport auth, JSON:API, OpenAPI docs, and scalable architecture.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "API Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "REST API Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "API Documentation" }}
+    ]
+  }
+};
+---
+
+<Layout
+  title="Laravel API Development Services | REST API & JSON:API Experts"
+  description="Build robust REST APIs with Laravel. Sanctum/Passport authentication, JSON:API, OpenAPI documentation, and scalable architecture. Get a free quote."
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">API Development</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:plugs-connected-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">API First</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Laravel <span class="gradient-text">API Development</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            Build robust REST APIs with Laravel. Sanctum/Passport authentication, JSON:API, OpenAPI docs, and scalable architecture.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Build API Now</a>
+            <a href="/laravel-saas-development/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">SaaS APIs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">API <span class="gradient-text">Services</span></h2>
+          <p class="text-gray-400 text-lg">Secure, documented, and scalable API solutions for web and mobile applications.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {services.map((s, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-10 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+              <Icon name={s.icon} class="w-12 h-12 text-payflo-purple mb-6 group-hover:scale-110 transition-transform" />
+              <h3 class="text-2xl font-black mb-4 text-white">{s.title}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Auth Methods -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Authentication <span class="gradient-text">Methods</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <h4 class="text-lg font-bold text-white mb-2">Laravel Sanctum</h4>
+            <p class="text-gray-400 text-sm">SPAs, mobile apps, simple token-based auth</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-payflo-purple/10 border border-payflo-purple/20 text-center">
+            <h4 class="text-lg font-bold text-white mb-2">Laravel Passport</h4>
+            <p class="text-gray-400 text-sm">Full OAuth2 server, scopes, personal access tokens</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <h4 class="text-lg font-bold text-white mb-2">Custom JWT</h4>
+            <p class="text-gray-400 text-sm">Stateless, high-performance, custom claims</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">API <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Why use Laravel for API development?</h4>
+            <p class="text-gray-400">Laravel provides Eloquent API resources, built-in pagination, rate limiting, and excellent testing tools. It's the fastest way to build secure, documented, and scalable APIs with minimal boilerplate.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">What API authentication do you implement?</h4>
+            <p class="text-gray-400">We implement Laravel Sanctum for SPAs/mobile apps, Passport for OAuth2, and custom JWT solutions. All APIs include rate limiting, CORS configuration, and security headers.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Do you provide API documentation?</h4>
+            <p class="text-gray-400">Yes. Every API includes OpenAPI/Swagger documentation, Postman collections, and usage examples. We also provide onboarding guides for your frontend/mobile teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire API Developer →</a>
+          <a href="/laravel-saas-development/" class="text-payflo-purple hover:underline font-bold">SaaS Development →</a>
+          <a href="/laravel-development-services/" class="text-payflo-purple hover:underline font-bold">All Services →</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>
