@@ -1,0 +1,71 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  location?: string;
+  currency?: string;
+  currencySymbol?: string;
+  hourlyRateLow?: number;
+  hourlyRateHigh?: number;
+}
+
+const {
+  location,
+  currency = 'USD',
+  currencySymbol = '$',
+  hourlyRateLow = 35,
+  hourlyRateHigh = 75,
+} = Astro.props;
+
+const services = [
+  { name: "Custom Web Application", rangeLow: 15000, rangeHigh: 50000, timeline: "6-12 weeks" },
+  { name: "SaaS Platform", rangeLow: 25000, rangeHigh: 100000, timeline: "8-16 weeks" },
+  { name: "API Development", rangeLow: 10000, rangeHigh: 30000, timeline: "4-8 weeks" },
+  { name: "E-commerce Solution", rangeLow: 15000, rangeHigh: 40000, timeline: "6-12 weeks" },
+  { name: "Migration & Upgrades", rangeLow: 8000, rangeHigh: 25000, timeline: "4-8 weeks" },
+  { name: "Monthly Maintenance", rangeLow: 500, rangeHigh: 2500, timeline: "Ongoing" },
+];
+---
+
+<section class="py-24 relative overflow-hidden">
+  <div class="absolute top-1/4 right-0 w-96 h-96 bg-payflo-pink/5 blur-[120px] rounded-full -z-10"></div>
+  <div class="container-custom">
+    <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+      <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
+        Transparent <span class="gradient-text">Pricing</span>
+        {location && <span> in {location}</span>}
+      </h2>
+      <p class="mt-6 text-xl text-white/70 font-medium">
+        {location
+          ? `Competitive Laravel development rates in ${location}. Hourly rates range from ${currencySymbol}${hourlyRateLow}-${currencySymbol}${hourlyRateHigh}/hr.`
+          : `Competitive Laravel development rates. Hourly rates range from ${currencySymbol}${hourlyRateLow}-${currencySymbol}${hourlyRateHigh}/hr.`}
+      </p>
+    </div>
+    <div class="max-w-4xl mx-auto">
+      <div class="glass-card overflow-hidden border-white/10">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="text-left py-5 px-6 text-white font-black uppercase tracking-widest text-sm">Service</th>
+              <th class="text-left py-5 px-6 text-white font-black uppercase tracking-widest text-sm">Price Range</th>
+              <th class="text-right py-5 px-6 text-white font-black uppercase tracking-widest text-sm">Timeline</th>
+            </tr>
+          </thead>
+          <tbody>
+            {services.map((s, i) => (
+              <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td class="py-5 px-6 font-bold text-white">{s.name}</td>
+                <td class="py-5 px-6 text-payflo-purple font-bold">{currencySymbol}{s.rangeLow.toLocaleString()} - {currencySymbol}{s.rangeHigh.toLocaleString()}</td>
+                <td class="py-5 px-6 text-right text-white/60">{s.timeline}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center text-white/40 text-sm mt-6">
+        * Prices are estimates. Final pricing depends on project scope, complexity, and requirements.
+        {location && ` ${location} rates adjusted for local market conditions.`}
+      </p>
+    </div>
+  </div>
+</section>

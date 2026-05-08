@@ -1,0 +1,67 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  location?: string;
+}
+
+const { location } = Astro.props;
+---
+
+<section class="py-24 relative overflow-hidden">
+  <div class="container-custom max-w-5xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+      <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
+        Why Choose Us <span class="gradient-text">vs Alternatives</span>
+      </h2>
+      <p class="mt-6 text-xl text-white/70 font-medium">
+        See how we compare to other options{location ? ` in ${location}` : ''}.
+      </p>
+    </div>
+    <div class="overflow-x-auto animate-on-scroll">
+      <table class="w-full border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="py-4 px-6 text-left text-white/80 font-black uppercase tracking-widest text-sm">Criteria</th>
+            <th class="py-4 px-6 text-center text-payflo-purple font-black uppercase tracking-widest text-sm">Laravel Company</th>
+            <th class="py-4 px-6 text-center text-white/60 font-black uppercase tracking-widest text-sm">Freelancers</th>
+            <th class="py-4 px-6 text-center text-white/60 font-black uppercase tracking-widest text-sm">Other Agencies</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            { criteria: "Team Expertise", us: true, freelancer: false, other: "Varies" },
+            { criteria: "Project Management", us: true, freelancer: false, other: "Varies" },
+            { criteria: "Backup Developers", us: true, freelancer: false, other: true },
+            { criteria: "Code Quality Guarantee", us: true, freelancer: false, other: "Varies" },
+            { criteria: "24/7 Support", us: true, freelancer: false, other: false },
+            { criteria: "Security Audits", us: true, freelancer: false, other: "Varies" },
+            { criteria: "Free Hosting Offer", us: true, freelancer: false, other: false },
+          ].map((row, i) => (
+            <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+              <td class="py-4 px-6 text-white/70 font-bold">{row.criteria}</td>
+              <td class="py-4 px-6 text-center">
+                {row.us === true
+                  ? <Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-purple mx-auto" />
+                  : <span class="text-white/40 font-bold">{row.us}</span>
+                }
+              </td>
+              <td class="py-4 px-6 text-center">
+                {row.freelancer === false
+                  ? <Icon name="ph:x-circle-duotone" class="w-5 h-5 text-white/30 mx-auto" />
+                  : <span class="text-white/40 font-bold">{row.freelancer}</span>
+                }
+              </td>
+              <td class="py-4 px-6 text-center">
+                {row.other === true
+                  ? <Icon name="ph:check-circle-fill" class="w-5 h-5 text-white/30 mx-auto" />
+                  : <span class="text-white/40 font-bold">{row.other}</span>
+                }
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

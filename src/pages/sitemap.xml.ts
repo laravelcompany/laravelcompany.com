@@ -1,5 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getJobs } from '../utils/jobsCache';
+import { LOCATIONS } from '../data/locations';
+import { SERVICE_MODIFIERS } from '../data/service-modifiers';
 
 export const GET: APIRoute = async ({ site }) => {
     const baseUrl = site ? site.toString() : 'https://laravelcompany.com';
@@ -33,6 +35,12 @@ export const GET: APIRoute = async ({ site }) => {
         'eu-sovereign-cloud-provider/',
         'gdpr-europrise-certified/',
     ];
+
+    // 2a. Generate geo service pages
+    const geoServicePages = LOCATIONS.map(loc => `services/laravel-development-company-in-${loc.slug}/`);
+
+    // 2b. Generate service variant pages
+    const variantServicePages = SERVICE_MODIFIERS.map(mod => `services/${mod.slug}-laravel-development-company/`);
 
     // 2. Fetch dynamic jobs
     let jobPages: string[] = [];
@@ -80,19 +88,26 @@ export const GET: APIRoute = async ({ site }) => {
         console.error('Error fetching products for sitemap:', error);
     }
 
-    const allPages = [...staticPages, ...jobPages, ...productPages];
+    const allPages = [...staticPages, ...geoServicePages, ...variantServicePages, ...jobPages, ...productPages];
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${allPages
             .map((page) => {
                 const url = new URL(page, baseUrl).toString();
+                const isGeo = geoServicePages.includes(page);
+                const isVariant = variantServicePages.includes(page);
+                let priority = '0.7';
+                let changefreq = 'weekly';
+                if (page === '') { priority = '1.0'; changefreq = 'daily'; }
+                else if (isGeo) { priority = '0.8'; changefreq = 'weekly'; }
+                else if (isVariant) { priority = '0.6'; changefreq = 'monthly'; }
                 return `
   <url>
     <loc>${url}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>${page === '' ? 'daily' : 'weekly'}</changefreq>
-    <priority>${page === '' ? '1.0' : '0.7'}</priority>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
   </url>`;
             })
             .join('')}

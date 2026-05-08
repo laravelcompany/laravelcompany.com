@@ -1,0 +1,94 @@
+---
+import Layout from './Layout.astro';
+import GeoHero from '../components/geo/GeoHero.astro';
+import LocalTestimonials from '../components/geo/LocalTestimonials.astro';
+import LocalCaseStudies from '../components/geo/LocalCaseStudies.astro';
+import GeoPriceTable from '../components/geo/GeoPriceTable.astro';
+import LocalFAQ from '../components/geo/LocalFAQ.astro';
+import GeoCTA from '../components/geo/GeoCTA.astro';
+import CompetitionTable from '../components/geo/CompetitionTable.astro';
+import { Icon } from "astro-icon/components";
+import type { ServicePageData } from '../data/types';
+
+export interface Props {
+  pageData: ServicePageData;
+}
+
+const { pageData } = Astro.props;
+const { locationData, modifierData } = pageData;
+---
+
+<Layout title={pageData.title} description={pageData.description}>
+  <!-- Page-specific JSON-LD structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(pageData.schema)} />
+
+  <GeoHero
+    title={pageData.h1}
+    description={pageData.intro}
+    breadcrumbs={pageData.breadcrumbs}
+    location={locationData?.city || modifierData?.modifier}
+    areas={locationData?.serviceAreas}
+  />
+
+  <LocalTestimonials location={pageData.location} />
+
+  <LocalCaseStudies location={pageData.location} />
+
+  <GeoPriceTable
+    location={locationData?.city}
+    currency={locationData?.currency}
+    currencySymbol={locationData?.currencySymbol}
+    hourlyRateLow={locationData?.hourlyRateLow}
+    hourlyRateHigh={locationData?.hourlyRateHigh}
+  />
+
+  <CompetitionTable location={locationData?.city} />
+
+  <LocalFAQ location={pageData.location} modifier={pageData.modifier} />
+
+  <!-- Internal Links -->
+  <section class="py-16 border-t border-white/5">
+    <div class="container-custom">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-3xl font-black text-white">Explore More Services</h2>
+        <p class="text-white/60 mt-2">Related Laravel development services you might be interested in.</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        {pageData.relatedSlugs.map(slug => {
+          const label = slug
+            .replace(/-/g, ' ')
+            .replace(/\blaravel\b/gi, 'Laravel')
+            .replace(/\bdevelopment\b/gi, 'Development')
+            .replace(/\bcompany\b/gi, 'Company')
+            .replace(/\bin\b/gi, 'in')
+            .split(' ')
+            .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+            .join(' ')
+            .replace(/ In /g, ' in ');
+          return (
+            <a
+              href={`/services/${slug}/`}
+              class="glass-card !py-3 !px-6 text-sm font-bold text-payflo-purple hover:text-white hover:bg-payflo-purple/20 transition-all border-payflo-purple/20"
+            >
+              {label}
+            </a>
+          );
+        })}
+        {pageData.type === 'location' && (
+          <a
+            href="/locations/"
+            class="glass-card !py-3 !px-6 text-sm font-bold text-white/60 hover:text-white transition-all"
+          >
+            <Icon name="ph:map-pin-fill" class="w-3.5 h-3.5 inline mr-1" /> View All Locations
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+
+  {pageData.type === 'location' ? (
+    <GeoCTA location={pageData.location} modifier={pageData.modifier} />
+  ) : (
+    <GeoCTA modifier={pageData.modifier} />
+  )}
+</Layout>

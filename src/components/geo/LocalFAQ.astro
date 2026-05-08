@@ -1,0 +1,113 @@
+---
+interface Props {
+  location?: string;
+  modifier?: string;
+}
+
+const { location, modifier } = Astro.props;
+
+const baseFaqs = [
+  {
+    question: "How long does it take to build a custom Laravel application?",
+    answer: "Most Laravel development projects launch within 6-12 weeks, depending on complexity and specific business requirements. Simple web applications and MVPs can be delivered in 4-6 weeks, while enterprise-level solutions with advanced features typically require 3-6 months.",
+  },
+  {
+    question: "Do you follow Laravel best practices and coding standards?",
+    answer: "Absolutely! Our certified Laravel development team strictly adheres to PSR-12 standards, Laravel conventions, SOLID principles, and implements comprehensive PHPUnit testing with CI/CD pipelines for every project.",
+  },
+  {
+    question: "How do you ensure application security and data protection?",
+    answer: "We implement Laravel's built-in security features including CSRF protection, SQL injection prevention, XSS protection, and encryption. Additionally, we conduct comprehensive security audits, follow OWASP guidelines, and ensure GDPR compliance.",
+  },
+  {
+    question: "What ongoing support and maintenance do you provide?",
+    answer: "We offer comprehensive post-launch support including 24/7 monitoring, security updates, performance optimization, bug fixes, feature enhancements, and Laravel version upgrades.",
+  },
+  {
+    question: "Can you integrate with existing systems and third-party APIs?",
+    answer: "Yes! Laravel's flexible architecture enables seamless integration with CRMs, ERPs, payment gateways, and hundreds of third-party APIs. We build custom connectors and webhooks for reliable data synchronization.",
+  },
+];
+
+const locationFaqs = location ? [
+  {
+    question: `Why choose a Laravel development company in ${location}?`,
+    answer: `Choosing a local Laravel development team in ${location} means better time zone alignment, cultural understanding, and the ability to meet in person. Local teams understand ${location}'s business landscape and can provide more responsive support.`,
+  },
+  {
+    question: `What are the Laravel development rates in ${location}?`,
+    answer: `Laravel development rates in ${location} are competitive with the local market. We provide transparent pricing and detailed project estimates with no hidden fees. Contact us for a personalized quote tailored to your project.`,
+  },
+] : [];
+
+const modifierFaqs = modifier ? [
+  {
+    question: `What does a ${modifier} Laravel development company offer?`,
+    answer: `A ${modifier} Laravel development company provides specialized services tailored to specific business needs. This includes ${modifier === 'enterprise' ? 'scalable architecture, compliance, and dedicated support for large organizations' : modifier === 'affordable' ? 'cost-effective solutions without compromising quality, ideal for startups and SMBs' : 'professional-grade development with industry best practices and proven methodologies'} allowing you to get exactly what your business needs.`,
+  },
+  {
+    question: `How do I choose the right ${modifier} Laravel development partner?`,
+    answer: `Look for proven experience, client testimonials, technical expertise, and transparent communication. We offer free consultations to discuss your project needs and provide detailed proposals.`,
+  },
+] : [];
+
+const faqs = [...locationFaqs, ...modifierFaqs, ...baseFaqs];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer,
+    },
+  })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<section class="py-24 relative overflow-hidden" aria-labelledby="faq-heading">
+  <div class="absolute top-1/4 left-10 w-96 h-96 bg-payflo-purple/10 blur-[130px] rounded-full -z-10"></div>
+  <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-payflo-pink/10 blur-[130px] rounded-full -z-10"></div>
+  <div class="container-custom relative">
+    <header class="text-center max-w-5xl mx-auto animate-on-scroll">
+      <h2 id="faq-heading" class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+        Frequently Asked <span class="gradient-text">Questions</span>
+      </h2>
+      <p class="mt-6 text-xl md:text-2xl text-white/70 font-medium max-w-4xl mx-auto leading-relaxed">
+        Everything you need to know about our Laravel development services
+        {location && <span> in {location}</span>}
+        {modifier && <span> — {modifier} solutions</span>}
+        .
+      </p>
+    </header>
+    <main class="mt-20 max-w-5xl mx-auto">
+      <div class="space-y-6">
+        {faqs.map((faq, index) => (
+          <article class="animate-on-scroll faq-item" style={`animation-delay: ${index * 0.1}s`} itemscope itemtype="https://schema.org/Question">
+            <details class="group/details w-full">
+              <summary class="focus:outline-none focus:bg-white/5 w-full">
+                <h3 class="text-xl lg:text-2xl font-black text-white transition-colors duration-300 pr-6 leading-tight text-left" itemprop="name">
+                  {faq.question}
+                </h3>
+                <div class="flex-shrink-0">
+                  <div class="h-10 w-10 lg:h-12 lg:w-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-all duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 lg:h-7 lg:w-7 text-white group-open:rotate-180 transition-all duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+              </summary>
+              <div class="faq-content" itemscope itemtype="https://schema.org/Answer">
+                <p class="text-lg font-medium" itemprop="text">{faq.answer}</p>
+              </div>
+            </details>
+          </article>
+        ))}
+      </div>
+    </main>
+  </div>
+</section>

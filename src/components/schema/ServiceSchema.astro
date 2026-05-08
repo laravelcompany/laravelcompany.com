@@ -1,0 +1,49 @@
+---
+interface Props {
+  serviceType: string;
+  description: string;
+  ratingValue?: string;
+  reviewCount?: string;
+}
+
+const { serviceType, description, ratingValue = '4.9', reviewCount = '127' } = Astro.props;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": serviceType,
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com",
+    "logo": "https://laravelcompany.com/logo.svg",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": ratingValue,
+      "reviewCount": reviewCount
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7 High Street",
+      "addressLocality": "Basildon",
+      "addressRegion": "Essex",
+      "postalCode": "SS14 1AB",
+      "addressCountry": "GB"
+    }
+  },
+  "description": description,
+  "areaServed": "Worldwide",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Laravel Development Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Laravel Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laravel API Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SaaS Platform Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laravel Migration & Upgrades" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-commerce Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maintenance & Support" } }
+    ]
+  }
+})} />

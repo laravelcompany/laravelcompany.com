@@ -1,0 +1,47 @@
+---
+import ServicePageLayout from '../../layouts/ServicePageLayout.astro';
+import { LOCATIONS } from '../../data/locations';
+import { SERVICE_MODIFIERS } from '../../data/service-modifiers';
+import {
+  generateLocationPageData,
+  generateServiceVariantPageData,
+  isLocationSlug,
+  isServiceVariantSlug,
+  getLocationBySlug,
+  getModifierBySlug,
+} from '../../data/page-utils';
+import type { ServicePageData } from '../../data/types';
+
+export function getStaticPaths() {
+  const paths = [];
+
+  // Location pages: /services/laravel-development-company-in-{city}/
+  for (const location of LOCATIONS) {
+    const slug = `laravel-development-company-in-${location.slug}`;
+    paths.push({
+      params: { slug },
+      props: {
+        pageData: generateLocationPageData(location),
+      },
+    });
+  }
+
+  // Service variant pages: /services/{modifier}-laravel-development-company/
+  for (const modifier of SERVICE_MODIFIERS) {
+    const slug = `${modifier.slug}-laravel-development-company`;
+    paths.push({
+      params: { slug },
+      props: {
+        pageData: generateServiceVariantPageData(modifier),
+      },
+    });
+  }
+
+  return paths;
+}
+
+const { slug } = Astro.params;
+const { pageData } = Astro.props as { pageData: ServicePageData };
+---
+
+<ServicePageLayout pageData={pageData} />

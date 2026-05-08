@@ -1,0 +1,78 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  location?: string;
+}
+
+const { location } = Astro.props;
+
+const caseStudies = [
+  {
+    title: "Enterprise SaaS Platform",
+    industry: "SaaS & Cloud",
+    description: "Built a multi-tenant SaaS platform handling 50K+ users with subscription billing, team management, and real-time analytics.",
+    results: ["3x faster deployment", "99.9% uptime", "40% cost reduction"],
+    icon: "ph:cloud-duotone",
+  },
+  {
+    title: "Custom E-commerce Marketplace",
+    industry: "E-commerce",
+    description: "Developed a multi-vendor marketplace with AI-powered recommendations, real-time inventory, and automated payment splitting.",
+    results: ["200K+ monthly orders", "35% conversion uplift", "50+ vendors onboarded"],
+    icon: "ph:shopping-cart-duotone",
+  },
+  {
+    title: "Fintech Payment Platform",
+    industry: "Fintech",
+    description: "Created a PCI-compliant payment processing platform with fraud detection, recurring billing, and multi-currency support.",
+    results: ["$10M+ processed monthly", "PCI Level 1 compliant", "Real-time fraud detection"],
+    icon: "ph:currency-circle-dollar-duotone",
+  },
+  {
+    title: "Healthcare Management System",
+    industry: "Healthcare",
+    description: "Delivered a HIPAA-compliant patient management platform with EHR integration, telemedicine, and automated scheduling.",
+    results: ["10K+ patient records", "60% admin time saved", "HIPAA compliant"],
+    icon: "ph:hospital-duotone",
+  },
+];
+---
+
+<section class="py-24 bg-white/5 relative overflow-hidden">
+  <div class="container-custom">
+    <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+      <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
+        Our <span class="gradient-text">Portfolio</span>
+      </h2>
+      <p class="mt-6 text-xl text-white/70 font-medium">
+        {location
+          ? `Real Laravel projects delivered for clients in ${location} and worldwide.`
+          : 'Real Laravel projects delivered for clients across industries.'}
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {caseStudies.map((cs, i) => (
+        <div class="glass-card p-8 group animate-on-scroll" style={`animation-delay: ${i * 0.1}s`}>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center">
+              <Icon name={cs.icon} class="w-7 h-7 text-white" />
+            </div>
+            <div>
+              <h3 class="text-xl font-black text-white group-hover:text-payflo-purple transition-colors">{cs.title}</h3>
+              <p class="text-sm text-white/50 font-bold uppercase tracking-wider">{cs.industry}</p>
+            </div>
+          </div>
+          <p class="text-white/70 mb-6 leading-relaxed">{cs.description}</p>
+          <div class="flex flex-wrap gap-3">
+            {cs.results.map(r => (
+              <span class="inline-flex items-center gap-1 text-sm font-bold text-green-400 bg-green-400/10 px-3 py-1.5 rounded-full">
+                <Icon name="ph:trend-up-fill" class="w-3.5 h-3.5" /> {r}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

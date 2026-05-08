@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GeoHero from '../../components/geo/GeoHero.astro';
+import { LOCATIONS } from '../../data/locations';
+import { SERVICE_MODIFIERS } from '../../data/service-modifiers';
+import { generateSlug } from '../../data/page-utils';
+import { Icon } from "astro-icon/components";
+import slugify from '../../utils/slugify';
+
+const featuredLocations = LOCATIONS.slice(0, 8);
+const featuredModifiers = SERVICE_MODIFIERS.filter(m => m.featured);
+---
+
+<Layout
+  title="Laravel Development Services | Custom Web Apps & API Development"
+  description="Professional Laravel development services: custom web apps, REST APIs, SaaS platforms, e-commerce, migration & support. 500+ projects delivered. Get a free quote."
+>
+  <main>
+    <GeoHero
+      title="Laravel Development Services"
+      description="Custom Laravel applications, REST APIs, SaaS platforms, and e-commerce solutions. 500+ projects delivered with 4.9/5 rating."
+      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]}
+    />
+
+    <!-- Location Pages -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
+            Laravel Development by <span class="gradient-text">Location</span>
+          </h2>
+          <p class="mt-6 text-xl text-white/70 font-medium">
+            Find expert Laravel developers in your city. Local expertise with global standards.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {featuredLocations.map(loc => (
+            <a
+              href={`/services/${generateSlug(loc)}/`}
+              class="glass-card p-6 text-center group hover:border-payflo-purple/50 transition-all"
+            >
+              <div class="w-12 h-12 rounded-xl bg-payflo-purple/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Icon name="ph:map-pin-fill" class="w-6 h-6 text-payflo-purple" />
+              </div>
+              <h3 class="text-lg font-black text-white mb-1">{loc.city}</h3>
+              <p class="text-sm text-white/50">{loc.country}</p>
+              <p class="text-xs text-payflo-purple font-bold mt-3 uppercase tracking-wider">{loc.competition} competition</p>
+            </a>
+          ))}
+        </div>
+        <div class="text-center mt-10">
+          <a href="/locations/" class="btn btn-primary !py-3 !px-8">
+            View All Locations <Icon name="ph:arrow-right" class="w-4 h-4 inline" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Variant Pages -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
+            Laravel Development by <span class="gradient-text">Service Type</span>
+          </h2>
+          <p class="mt-6 text-xl text-white/70 font-medium">
+            Choose the Laravel development service that matches your business needs.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {featuredModifiers.map(mod => {
+            const slug = `${mod.slug}-laravel-development-company`;
+            const label = mod.modifier.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+            return (
+              <a
+                href={`/services/${slug}/`}
+                class="glass-card p-6 text-center group hover:border-payflo-purple/50 transition-all"
+              >
+                <div class="w-12 h-12 rounded-xl bg-payflo-pink/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name="ph:star-fill" class="w-6 h-6 text-payflo-pink" />
+                </div>
+                <h3 class="text-lg font-black text-white mb-1">{label}</h3>
+                <p class="text-sm text-white/50">{mod.description.slice(0, 60)}...</p>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Geo Pages Matter -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+          <div class="animate-on-scroll">
+            <Icon name="ph:globe-duotone" class="w-12 h-12 text-payflo-purple mx-auto mb-6" />
+            <h3 class="text-xl font-black text-white mb-3">Local SEO Optimized</h3>
+            <p class="text-white/60">Each page targets specific city keywords with local business schema for better search visibility.</p>
+          </div>
+          <div class="animate-on-scroll delay-1">
+            <Icon name="ph:identification-card-duotone" class="w-12 h-12 text-payflo-purple mx-auto mb-6" />
+            <h3 class="text-xl font-black text-white mb-3">Unique Content</h3>
+            <p class="text-white/60">Every page features city-specific statistics, pricing, testimonials, and local insights.</p>
+          </div>
+          <div class="animate-on-scroll delay-2">
+            <Icon name="ph:arrows-out-duotone" class="w-12 h-12 text-payflo-purple mx-auto mb-6" />
+            <h3 class="text-xl font-black text-white mb-3">Scalable System</h3>
+            <p class="text-white/60">Add new cities or service types by simply updating data arrays — pages generate automatically.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
