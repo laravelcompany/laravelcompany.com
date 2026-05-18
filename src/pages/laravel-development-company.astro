@@ -1,0 +1,507 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CTASection from "../components/CTASection.astro";
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Custom Web Applications",
+    desc: "Scalable Laravel applications built with modern architecture, RESTful APIs, queue-driven background jobs, and real-time broadcasting for dynamic user experiences.",
+    icon: "ph:code-duotone"
+  },
+  {
+    title: "API Development & Integration",
+    desc: "RESTful and GraphQL APIs with Laravel Passport/Sanctum authentication, third-party integrations with Stripe, PayPal, AWS, and enterprise SaaS platforms.",
+    icon: "ph:plug-duotone"
+  },
+  {
+    title: "E-Commerce Platforms",
+    desc: "Full-featured e-commerce solutions with Laravel Cashier subscription billing, shopping cart logic, payment gateway integration, inventory management, and order workflows.",
+    icon: "ph:shopping-cart-duotone"
+  },
+  {
+    title: "SaaS Product Development",
+    desc: "Multi-tenant SaaS platforms with team management, subscription billing via Stripe/Paddle, usage metering, feature flags, and admin dashboards.",
+    icon: "ph:cloud-duotone"
+  },
+  {
+    title: "Database Architecture & Optimization",
+    desc: "MySQL, PostgreSQL, and MongoDB schema design, query optimization, indexing strategies, replication setups, and migration planning for high-traffic applications.",
+    icon: "ph:database-duotone"
+  },
+  {
+    title: "DevOps & Cloud Infrastructure",
+    desc: "AWS, DigitalOcean, and Laravel Forge deployment pipelines, CI/CD with GitHub Actions, Docker containerization, auto-scaling, and 24/7 monitoring.",
+    icon: "ph:cloud-arrow-up-duotone"
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      "name": "What does a Laravel development company do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Laravel development company builds custom web applications, APIs, e-commerce platforms, SaaS products, and enterprise systems using the Laravel PHP framework. Services include architecture design, development, testing, deployment, and ongoing maintenance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to hire a Laravel development company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Laravel development costs range from $15,000 for simple applications to $150,000+ for complex enterprise platforms. Hourly rates range from $50-$150 depending on location and expertise. Fixed-price contracts are available for well-defined projects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose the right Laravel development company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Look for proven Laravel experience, a strong portfolio, positive client reviews, clear communication, security awareness, and post-launch support. Verify their expertise with Laravel-specific technologies like Forge, Vapor, Horizon, and Nova."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the typical timeline for a Laravel project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Timelines vary by complexity: MVP applications take 6-12 weeks, mid-size platforms take 12-20 weeks, and enterprise systems take 20-40 weeks. Agile sprints allow for iterative delivery and regular feedback."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do Laravel development companies provide post-launch support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Most Laravel development companies offer ongoing maintenance, security updates, performance monitoring, and feature enhancements. Retainer packages typically start at $3,000-$5,000 per month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a Laravel development company handle high-traffic applications?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Laravel scales well with proper architecture including queue workers, caching layers (Redis/Memcached), database read replicas, CDN integration, and auto-scaling cloud infrastructure. We have delivered platforms handling millions of monthly active users."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What industries benefit most from Laravel development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Laravel excels across fintech, healthcare, e-commerce, SaaS, logistics, real estate, education, and enterprise SaaS. Its robust ecosystem of packages, excellent testing tools, and flexible architecture make it suitable for virtually any industry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What security measures do Laravel development companies implement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional Laravel development companies implement CSRF protection, SQL injection prevention via Eloquent, XSS sanitization, encryption at rest and in transit, role-based access control, rate limiting, security headers, and regular dependency audits."
+      }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Laravel Development Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com"
+  },
+  "description": "Professional Laravel development company offering custom web applications, API development, e-commerce platforms, SaaS products, and enterprise solutions. $15K-$150K+.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Laravel Development Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Web Application Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "API Development & Integration" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-Commerce Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SaaS Product Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Database Architecture & Optimization" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DevOps & Cloud Infrastructure" }}
+    ]
+  }
+};
+---
+
+<Layout
+  title="Laravel Development Company | Custom Web & SaaS Development"
+  description="Professional Laravel development company building custom web applications, APIs, SaaS platforms, and e-commerce solutions. $15K-$150K+. 10+ years of experience. Get a free quote."
+>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <a href="/laravel-services/" class="hover:text-white transition-colors">Services</a>
+          <span>/</span>
+          <span class="text-white">Laravel Development Company</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:code-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Laravel Development Company</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Laravel <span class="gradient-text">Development Company</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            We build custom Laravel applications, APIs, SaaS platforms, and e-commerce solutions used by thousands of businesses worldwide. Starting at $15,000.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Get Project Quote</a>
+            <a href="/portfolio/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">View Our Work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Services -->
+    <section class="py-24">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Core <span class="gradient-text">Laravel Services</span></h2>
+          <p class="text-gray-400 text-lg">As an experienced <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a>, we deliver end-to-end solutions from concept to deployment and beyond, covering every layer of the modern web application stack.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {features.map((f, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-10 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+              <Icon name={f.icon} class="w-12 h-12 text-payflo-purple mb-6 group-hover:scale-110 transition-transform" />
+              <h3 class="text-2xl font-black mb-4 text-white">{f.title}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Our <span class="gradient-text">Development Process</span></h2>
+          <p class="text-gray-400 text-lg">We follow a proven six-phase methodology that ensures quality, transparency, and predictable delivery for every Laravel project we undertake. As a professional <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a>, we have refined this process over hundreds of successful deliveries.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="animate-on-scroll glass-card p-8 border-white/10">
+            <div class="w-14 h-14 rounded-full bg-payflo-purple/20 flex items-center justify-center mb-6 text-2xl font-black text-payflo-purple">1</div>
+            <h3 class="text-xl font-black mb-3 text-white">Discovery & Requirements</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">We start with a deep discovery phase where our team understands your business goals, target users, technical constraints, and market landscape. The outcome is a detailed project specification with prioritized features, architecture recommendations, and a realistic timeline.</p>
+          </div>
+          <div class="animate-on-scroll delay-1 glass-card p-8 border-white/10">
+            <div class="w-14 h-14 rounded-full bg-payflo-purple/20 flex items-center justify-center mb-6 text-2xl font-black text-payflo-purple">2</div>
+            <h3 class="text-xl font-black mb-3 text-white">Architecture & UX Design</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Our architects design the system with scalable Laravel patterns including repository pattern, service layers, event sourcing where needed, and database schema optimized for your data model. Simultaneously, our designers create wireframes and high-fidelity mockups for your review.</p>
+          </div>
+          <div class="animate-on-scroll delay-2 glass-card p-8 border-white/10">
+            <div class="w-14 h-14 rounded-full bg-payflo-purple/20 flex items-center justify-center mb-6 text-2xl font-black text-payflo-purple">3</div>
+            <h3 class="text-xl font-black mb-3 text-white">Agile Development & Testing</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">We work in two-week sprints with daily standups, sprint reviews, and continuous deployment to staging environments. Every feature includes unit tests, feature tests, and browser tests. Our CI pipeline enforces code style, static analysis, and 90%+ test coverage before any code reaches production.</p>
+          </div>
+          <div class="animate-on-scroll delay-1 glass-card p-8 border-white/10">
+            <div class="w-14 h-14 rounded-full bg-payflo-purple/20 flex items-center justify-center mb-6 text-2xl font-black text-payflo-purple">4</div>
+            <h3 class="text-xl font-black mb-3 text-white">Security & Performance Audit</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Before launch, we conduct a comprehensive security review including dependency scanning, penetration testing, OWASP Top 10 validation, and performance profiling. We optimize database queries, implement caching strategies, and ensure your application is production-ready under load.</p>
+          </div>
+          <div class="animate-on-scroll delay-2 glass-card p-8 border-white/10">
+            <div class="w-14 h-14 rounded-full bg-payflo-purple/20 flex items-center justify-center mb-6 text-2xl font-black text-payflo-purple">5</div>
+            <h3 class="text-xl font-black mb-3 text-white">Deployment & Launch</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">We handle the entire deployment process using Laravel Forge or custom CI/CD pipelines, configure your cloud infrastructure on AWS or DigitalOcean, set up monitoring with New Relic or Sentry, and perform a controlled rollout with rollback capabilities.</p>
+          </div>
+          <div class="animate-on-scroll delay-3 glass-card p-8 border-white/10">
+            <div class="w-14 h-14 rounded-full bg-payflo-purple/20 flex items-center justify-center mb-6 text-2xl font-black text-payflo-purple">6</div>
+            <h3 class="text-xl font-black mb-3 text-white">Ongoing Support & Growth</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Post-launch, we offer 24/7 monitoring, security patches, Laravel framework updates, performance optimization, and feature development. When you choose a <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> with a structured support model, your application stays secure, fast, and aligned with your growing business needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Our Company -->
+    <section class="py-24">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Why Choose Us as Your <span class="gradient-text">Laravel Development Company</span></h2>
+          <p class="text-gray-400 text-lg">Selecting the right Laravel development partner is critical to your project's success. Here is what sets us apart from other agencies.</p>
+        </div>
+        <div class="space-y-12 max-w-4xl mx-auto">
+          <div class="animate-on-scroll glass-card p-8 border-white/10 flex flex-col md:flex-row gap-6 items-start">
+            <div class="w-16 h-16 rounded-2xl bg-payflo-purple/20 flex items-center justify-center flex-shrink-0">
+              <Icon name="ph:users-three-duotone" class="w-8 h-8 text-payflo-purple" />
+            </div>
+            <div>
+              <h3 class="text-2xl font-black mb-3 text-white">10+ Years of Laravel Expertise</h3>
+              <p class="text-gray-400 leading-relaxed">Our team has been building with Laravel since version 4. We have contributed to the Laravel ecosystem, authored packages, and delivered over 100 production applications. Our <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> has deep experience across every version of the framework, from Laravel 4 through Laravel 11 and beyond, ensuring your project benefits from the latest features and best practices.</p>
+            </div>
+          </div>
+          <div class="animate-on-scroll delay-1 glass-card p-8 border-white/10 flex flex-col md:flex-row gap-6 items-start">
+            <div class="w-16 h-16 rounded-2xl bg-payflo-purple/20 flex items-center justify-center flex-shrink-0">
+              <Icon name="ph:certificate-duotone" class="w-8 h-8 text-payflo-purple" />
+            </div>
+            <div>
+              <h3 class="text-2xl font-black mb-3 text-white">Certified & Compliant Infrastructure</h3>
+              <p class="text-gray-400 leading-relaxed">We maintain SOC 2 Type II, ISO 27001, and GDPR compliance certifications. Your Laravel application inherits our audited security controls, enterprise-grade cloud infrastructure on AWS, and proactive monitoring. Partnering with a certified <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> means you get enterprise security without the overhead of building it yourself.</p>
+            </div>
+          </div>
+          <div class="animate-on-scroll delay-2 glass-card p-8 border-white/10 flex flex-col md:flex-row gap-6 items-start">
+            <div class="w-16 h-16 rounded-2xl bg-payflo-purple/20 flex items-center justify-center flex-shrink-0">
+              <Icon name="ph:currency-circle-dollar-duotone" class="w-8 h-8 text-payflo-purple" />
+            </div>
+            <div>
+              <h3 class="text-2xl font-black mb-3 text-white">Transparent Fixed-Price Contracts</h3>
+              <p class="text-gray-400 leading-relaxed">We provide fixed-price contracts with clearly defined deliverables, milestones, and timelines. No time-and-materials surprises. Every project includes a detailed scope of work, regular progress reports, and a dedicated project manager who serves as your single point of contact throughout the engagement.</p>
+            </div>
+          </div>
+          <div class="animate-on-scroll delay-3 glass-card p-8 border-white/10 flex flex-col md:flex-row gap-6 items-start">
+            <div class="w-16 h-16 rounded-2xl bg-payflo-purple/20 flex items-center justify-center flex-shrink-0">
+              <Icon name="ph:headset-duotone" class="w-8 h-8 text-payflo-purple" />
+            </div>
+            <div>
+              <h3 class="text-2xl font-black mb-3 text-white">Full Lifecycle Support</h3>
+              <p class="text-gray-400 leading-relaxed">We do not just build and disappear. Our services cover the full application lifecycle: initial consulting and strategy, architecture and design, development and testing, deployment and launch, and ongoing managed support with 24/7 incident response, regular security updates, and continuous feature development as your business grows.</p>
+            </div>
+          </div>
+        </div>
+        <div class="animate-on-scroll mt-12 max-w-3xl mx-auto text-center glass-card p-10 border-payflo-purple/30">
+          <p class="text-gray-300 text-lg leading-relaxed">Trusted by startups, SMBs, and enterprise clients across fintech, healthcare, e-commerce, and SaaS. As a leading <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a>, we have delivered platforms processing millions of transactions, serving millions of users, and earning consistent 5-star reviews on Clutch and Google.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Technology <span class="gradient-text">Stack</span></h2>
+          <p class="text-gray-400 text-lg">Our technology stack combines the best of the Laravel ecosystem with modern infrastructure, frontend frameworks, and third-party services to deliver robust, scalable applications. As a <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a>, we stay current with every major framework release and ecosystem tool to ensure your project uses the most performant and secure versions available.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="animate-on-scroll glass-card p-6 border-white/10">
+            <h4 class="text-sm font-bold uppercase tracking-widest text-payflo-purple mb-4">Laravel & Backend</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Laravel 11 with PHP 8.3</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />MySQL / PostgreSQL / MongoDB</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Redis / Memcached caching</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Laravel Horizon & Reverb</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Laravel Nova admin panels</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />REST & GraphQL APIs</li>
+            </ul>
+          </div>
+          <div class="animate-on-scroll delay-1 glass-card p-6 border-white/10">
+            <h4 class="text-sm font-bold uppercase tracking-widest text-payflo-purple mb-4">Frontend & Infrastructure</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Vue.js / React / Livewire</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Tailwind CSS / Inertia.js</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />AWS / DigitalOcean / Vapor</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Docker / Forge / Envoyer</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />GitHub Actions CI/CD</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Sentry / New Relic monitoring</li>
+            </ul>
+          </div>
+          <div class="animate-on-scroll delay-2 glass-card p-6 border-white/10">
+            <h4 class="text-sm font-bold uppercase tracking-widest text-payflo-purple mb-4">Integrations & Tools</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Stripe / PayPal / Braintree</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />AWS S3 / SES / SQS / CloudFront</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Algolia / Meilisearch search</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Twilio / SendGrid / Postmark</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />Google Analytics / Mixpanel</li>
+              <li class="flex items-center gap-3 text-gray-400 text-sm"><Icon name="ph:check-circle" class="w-4 h-4 text-green-400 flex-shrink-0" />OpenAI / LLM integrations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-24">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Laravel <span class="gradient-text">Use Cases</span></h2>
+          <p class="text-gray-400 text-lg">Our Laravel development company has delivered solutions across a wide range of industries and application types, from early-stage MVPs to enterprise-scale platforms serving millions.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="animate-on-scroll glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+            <Icon name="ph:cloud-duotone" class="w-10 h-10 text-payflo-purple mb-5 group-hover:scale-110 transition-transform" />
+            <h3 class="text-xl font-black mb-3 text-white">SaaS Platforms</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Multi-tenant SaaS applications with team collaboration features, role-based access control, subscription management via Stripe or Paddle, usage metering and billing, white-label capabilities, comprehensive admin dashboards, and analytics reporting. Whether you need tenant isolation strategies or database sharding for horizontal scaling, a skilled <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> handles the full complexity of multi-tenant architecture.</p>
+          </div>
+          <div class="animate-on-scroll delay-1 glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+            <Icon name="ph:shopping-cart-duotone" class="w-10 h-10 text-payflo-purple mb-5 group-hover:scale-110 transition-transform" />
+            <h3 class="text-xl font-black mb-3 text-white">E-Commerce & Marketplaces</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Full-featured e-commerce platforms with product catalogs, inventory management, shopping cart and checkout flows, multiple payment gateway integrations, order management and fulfillment workflows, vendor management for multi-vendor marketplaces, and advanced search with faceted filtering powered by Algolia or Meilisearch.</p>
+          </div>
+          <div class="animate-on-scroll delay-2 glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+            <Icon name="ph:heart-duotone" class="w-10 h-10 text-payflo-purple mb-5 group-hover:scale-110 transition-transform" />
+            <h3 class="text-xl font-black mb-3 text-white">Healthcare & MedTech</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">HIPAA-compliant healthcare platforms including patient portals, electronic health record systems, appointment scheduling with calendar integrations, telemedicine video consultation modules, prescription management, insurance claims processing, and analytics dashboards for clinical decision support.</p>
+          </div>
+          <div class="animate-on-scroll delay-3 glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+            <Icon name="ph:bank-duotone" class="w-10 h-10 text-payflo-purple mb-5 group-hover:scale-110 transition-transform" />
+            <h3 class="text-xl font-black mb-3 text-white">Enterprise Business Systems</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Custom ERP systems, CRM platforms, project management tools, document management with version control, workflow automation engines, business intelligence dashboards, and reporting systems. We integrate with enterprise tools like Salesforce, HubSpot, Slack, and Microsoft 365 to create seamless data flows across your organization.</p>
+          </div>
+          <div class="animate-on-scroll delay-1 glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+            <Icon name="ph:graduation-cap-duotone" class="w-10 h-10 text-payflo-purple mb-5 group-hover:scale-110 transition-transform" />
+            <h3 class="text-xl font-black mb-3 text-white">EdTech & Learning Platforms</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Learning management systems with course creation tools, video streaming and progress tracking, assessment and quiz engines, certification workflows, student and instructor dashboards, discussion forums, and gamification features including badges, leaderboards, and achievement systems.</p>
+          </div>
+          <div class="animate-on-scroll delay-2 glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+            <Icon name="ph:building-apartment-duotone" class="w-10 h-10 text-payflo-purple mb-5 group-hover:scale-110 transition-transform" />
+            <h3 class="text-xl font-black mb-3 text-white">Real Estate & PropTech</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Property listing platforms with map-based search, virtual tour integration, CRM for agents and brokers, lead management systems, automated valuation models, rental and lease management, mortgage calculator integrations, and compliance documentation for real estate regulations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost Estimate -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-6">Project <span class="gradient-text">Cost Estimate</span></h2>
+        <p class="text-gray-400 text-lg text-center max-w-3xl mx-auto mb-16 animate-on-scroll">Pricing depends on complexity, feature scope, and timeline. Every engagement begins with a free discovery call to understand your requirements and provide an accurate fixed-price quote. A reliable <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> will always give you a transparent estimate before any work begins.</p>
+        <div class="glass-card p-10 border-white/10">
+          <div class="space-y-4">
+            <div class="flex justify-between pb-4 border-b border-white/5">
+              <span class="text-white/70">MVP / Simple Application (6-12 weeks)</span>
+              <span class="text-payflo-purple font-bold">$15K-$30K</span>
+            </div>
+            <div class="flex justify-between pb-4 border-b border-white/5">
+              <span class="text-white/70">Mid-Size Platform (12-20 weeks)</span>
+              <span class="text-payflo-purple font-bold">$30K-$75K</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-white/70">Enterprise / Complex Platform (20-40 weeks)</span>
+              <span class="text-payflo-pink font-bold">$75K-$150K+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24">
+      <div class="container-custom max-w-4xl mx-auto">
+        <h2 class="text-4xl font-black text-center mb-16">Laravel Development <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-6">
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">What does a Laravel development company do?</h4>
+            <p class="text-gray-400">A Laravel development company builds custom web applications, APIs, e-commerce platforms, SaaS products, and enterprise systems using the Laravel PHP framework. Services include architecture design, development, testing, deployment, and ongoing maintenance.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How much does it cost to hire a Laravel development company?</h4>
+            <p class="text-gray-400">Laravel development costs range from $15,000 for simple applications to $150,000+ for complex enterprise platforms. Hourly rates range from $50-$150 depending on location and expertise. We provide fixed-price contracts with clearly defined deliverables.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">How do I choose the right Laravel development company?</h4>
+            <p class="text-gray-400">Look for proven Laravel experience, a strong portfolio, positive client reviews, clear communication, security awareness, and post-launch support. Verify their expertise with Laravel-specific technologies like Forge, Vapor, Horizon, and Nova. A quality <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> will be transparent about their process, pricing, and past results.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">What is the typical timeline for a Laravel project?</h4>
+            <p class="text-gray-400">Timelines vary by complexity: MVP applications take 6-12 weeks, mid-size platforms take 12-20 weeks, and enterprise systems take 20-40 weeks. Agile sprints allow for iterative delivery and regular feedback. Any reputable <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> will provide a realistic timeline during the discovery phase.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Do you provide post-launch support?</h4>
+            <p class="text-gray-400">Yes. We offer ongoing maintenance, security updates, Laravel framework version upgrades, performance monitoring, and feature enhancements. Retainer packages start at $3,000-$5,000 per month and include priority support with rapid incident response.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">Can Laravel handle high-traffic applications?</h4>
+            <p class="text-gray-400">Yes. Laravel scales well with proper architecture including queue workers, caching layers (Redis/Memcached), database read replicas, CDN integration, and auto-scaling cloud infrastructure. We have delivered platforms handling millions of monthly active users with sub-200ms response times.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">What industries do you serve?</h4>
+            <p class="text-gray-400">We serve fintech, healthcare, e-commerce, SaaS, logistics, real estate, education, media, and enterprise SaaS. Laravel's robust ecosystem, excellent testing tools, and flexible architecture make it suitable for virtually any industry. No matter your vertical, working with an experienced <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> ensures your specific requirements are met with proven patterns and best practices.</p>
+          </div>
+          <div class="p-8 glass-card border-white/10">
+            <h4 class="text-lg font-bold mb-3 text-white">What security measures do you implement?</h4>
+            <p class="text-gray-400">We implement CSRF protection, SQL injection prevention via Eloquent, XSS sanitization, encryption at rest AES-256 and in transit TLS 1.3, role-based access control, rate limiting, comprehensive security headers, regular dependency audits with Dependabot, and annual penetration testing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Why Work With Our <span class="gradient-text">Laravel Team</span></h2>
+          <p class="text-gray-400 text-lg">Choosing the right development partner is one of the most important decisions for your project. Here is what makes our Laravel development company different.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="animate-on-scroll glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-payflo-purple/20 flex items-center justify-center mb-5">
+              <Icon name="ph:code-duotone" class="w-6 h-6 text-payflo-purple" />
+            </div>
+            <h3 class="text-xl font-black mb-3 text-white">Deep Laravel Specialization</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">We are not a generalist agency that happens to use Laravel. We are a dedicated <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> with senior developers who have been working with the framework since version 4. Every team member is a certified Laravel developer with proven expertise in Forge, Vapor, Horizon, Nova, Cashier, and the broader Laravel ecosystem.</p>
+          </div>
+          <div class="animate-on-scroll delay-1 glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-payflo-purple/20 flex items-center justify-center mb-5">
+              <Icon name="ph:clipboard-text-duotone" class="w-6 h-6 text-payflo-purple" />
+            </div>
+            <h3 class="text-xl font-black mb-3 text-white">Proven Track Record</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Over 100 Laravel projects delivered, millions of dollars in transactions processed, and millions of end users served. Our portfolio spans startups that grew to unicorn status, enterprise digital transformations, and government-grade platforms. We have consistent 5-star reviews across Clutch, Google, and Trustpilot. Few agencies can match the depth of experience this <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> brings to every engagement.</p>
+          </div>
+          <div class="animate-on-scroll delay-2 glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-payflo-purple/20 flex items-center justify-center mb-5">
+              <Icon name="ph:handshake-duotone" class="w-6 h-6 text-payflo-purple" />
+            </div>
+            <h3 class="text-xl font-black mb-3 text-white">Strategic Partnership Model</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">We do not just write code. Our team invests time in understanding your business model, market positioning, and growth goals. We provide strategic technical advice on architecture decisions, technology choices, and scaling strategies. Many of our clients treat us as their extended CTO office.</p>
+          </div>
+          <div class="animate-on-scroll delay-3 glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-payflo-purple/20 flex items-center justify-center mb-5">
+              <Icon name="ph:lifebuoy-duotone" class="w-6 h-6 text-payflo-purple" />
+            </div>
+            <h3 class="text-xl font-black mb-3 text-white">Long-Term Commitment</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Our average client engagement exceeds 3 years. We build lasting relationships by delivering consistent quality, transparent communication, and genuine dedication to our clients' success. When you work with us, you gain a technology partner that cares about your outcomes as much as you do. Choosing the right <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> is an investment in your product's long-term success.</p>
+          </div>
+        </div>
+        <div class="animate-on-scroll mt-12 max-w-3xl mx-auto text-center glass-card p-10 border-payflo-purple/30">
+          <p class="text-gray-300 text-lg leading-relaxed">As a trusted <a href="/" class="text-payflo-purple hover:underline font-bold">laravel development company</a> serving clients across Europe and North America, we bring technical excellence, business acumen, and a commitment to quality that sets us apart. Let us build something exceptional together.</p>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center gap-6 text-sm mb-8">
+          <a href="/" class="text-payflo-purple hover:underline font-bold">Laravel Development Company →</a>
+          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire Laravel Developer →</a>
+          <a href="/laravel-saas-development/" class="text-payflo-purple hover:underline font-bold">SaaS Development →</a>
+          <a href="/laravel-api-development/" class="text-payflo-purple hover:underline font-bold">API Development →</a>
+          <a href="/laravel-development-cost/" class="text-payflo-purple hover:underline font-bold">Development Cost →</a>
+        </div>
+        <div class="text-center text-sm text-white/30">
+          <span>Explore more: <a href="/laravel-development-services/" class="text-payflo-purple hover:underline">Laravel Development Services</a> · <a href="/laravel-fintech-development/" class="text-payflo-purple hover:underline">FinTech Development</a> · <a href="/laravel-consulting/" class="text-payflo-purple hover:underline">Laravel Consulting</a></span>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+  </main>
+</Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+</style>
