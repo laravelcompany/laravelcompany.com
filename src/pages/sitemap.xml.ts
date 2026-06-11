@@ -34,6 +34,7 @@ export const GET: APIRoute = async ({ site }) => {
         'cra-compliant-software-vendor/',
         'eu-sovereign-cloud-provider/',
         'gdpr-europrise-certified/',
+        'laravel-company-website-github/',
     ];
 
     // 2a. Generate geo service pages
