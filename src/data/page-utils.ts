@@ -73,6 +73,7 @@ export function generateLocationPageData(location: LocationData): ServicePageDat
       'https://twitter.com/laravelcompany',
       'https://github.com/laravelcompany',
       'https://linkedin.com/company/laravelcompany',
+      'https://www.facebook.com/laravelcompany/',
     ],
   };
 
