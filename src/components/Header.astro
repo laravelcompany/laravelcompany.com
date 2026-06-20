@@ -10,33 +10,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-    { name: "Services", href: "/#services", children: [
-        { name: "Software Development", href: "/software-development-agency-london/" },
-        { name: "Laravel Consulting", href: "/laravel-consulting/" },
-        { name: "AWS Consulting", href: "/hire-aws-consultant/" },
-        { name: "Magento Agency", href: "/magento-agency-london/" },
-        { name: "Database Development", href: "/database-development-services/" },
-        { name: "AI & Digital Transformation", href: "/ai-digital-transformation/" },
-    ]},
-    { name: "Products", href: "/#products", children: [
-        { name: "Laravel SEO", href: "/software/laravel-seo/" },
-        { name: "Laravel Mail", href: "/software/laravel-mail/" },
-        { name: "Laravel GPT", href: "/software/laravel-gpt/" },
-        { name: "Laravel UI", href: "/software/laravel-ui/" },
-        { name: "LeadsCaptain", href: "/software/leads-captain/" },
-        { name: "Laravel Social", href: "/software/laravel-social/" },
-    ]},
-    { name: "Solutions", href: "/solutions/" },
-    { name: "Company", href: "/about-us/", children: [
-        { name: "About Us", href: "/about-us/" },
-        { name: "Our Team", href: "/team/" },
-        { name: "Careers", href: "/jobs/" },
-        { name: "ESOP Program", href: "/esop/" },
-    ]},
-    { name: "Resources", href: "/#resources", children: [
-        { name: "Pricing", href: "/pricing/" },
-        { name: "Compliance", href: "/compliance/" },
-    ]},
+    { name: "Services", href: "/services/" },
+    { name: "Open source", href: "/open-source/" },
+    { name: "Products", href: "/products/" },
+    { name: "Blog", href: "/blog/" },
+    { name: "About", href: "/about-us/" },
 ];
 ---
 
@@ -108,7 +86,7 @@ const navItems: NavItem[] = [
             <a
                 href="/contact/"
                 class="btn btn-primary focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2 hidden lg:inline-flex"
-                >Talk to an Expert</a
+                >Work with us</a
             >
 
             <!-- Mobile Menu Button -->
@@ -165,7 +143,7 @@ const navItems: NavItem[] = [
                         </div>
                     ))
                 }
-                <a href="/contact/" class="mobile-menu-cta">Book a Demo</a>
+                <a href="/contact/" class="mobile-menu-cta">Work with us</a>
             </nav>
         </div>
     </div>

@@ -1,0 +1,52 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="py-24 relative overflow-hidden bg-payflo-dark/50">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-payflo-purple/10 blur-[120px] rounded-full -z-10"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-payflo-pink/10 blur-[120px] rounded-full -z-10"></div>
+
+  <div class="container-custom relative">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12 animate-on-scroll delay-0">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/20 border border-payflo-purple/30 text-payflo-purple text-sm font-bold uppercase tracking-widest">
+          <Icon name="ph:robot-duotone" class="h-5 w-5" />
+          AI-powered development
+        </span>
+      </div>
+
+      <h2 class="animate-on-scroll delay-0 text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight text-center">
+        Building for <span class="gradient-text">the AI era</span>
+      </h2>
+
+      <div class="mt-12 glass-card p-8 md:p-12 border-white/20 animate-on-scroll delay-2">
+        <p class="text-lg text-white/80 leading-relaxed">
+          AI has genuinely changed how we build. Coding agents like Claude Code, Codex, and Copilot
+          do a serious chunk of the work for us now. They scaffold features, write tests, work through
+          refactors, and handle the kind of repetitive tasks that used to eat half a developer's week.
+          What we used to spend on boilerplate, we now spend on architecture, edge cases, and the parts
+          of your product that actually need careful thinking.
+        </p>
+      </div>
+
+      <div class="mt-8 glass-card p-8 md:p-12 border-payflo-purple/30 animate-on-scroll delay-3 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-payflo-purple to-payflo-pink"></div>
+        <div class="flex items-start gap-4">
+          <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center text-white flex-shrink-0 shadow-lg shadow-purple-500/20">
+            <Icon name="ph:shield-check-duotone" class="h-6 w-6" />
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-white mb-3">Every result goes through a senior developer</h3>
+            <p class="text-lg text-white/80 leading-relaxed">
+              None of it ships without a human in front of it. Every result goes through a senior
+              Laravel developer, who reviews it as carefully as they'd review a colleague's pull
+              request. We catch what the agent got wrong, sharpen what's clumsy, and make sure the
+              pieces fit together. The outcome is more software, shipped faster, without the
+              technical debt that usually comes with moving at this speed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

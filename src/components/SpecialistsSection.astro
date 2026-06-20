@@ -1,0 +1,55 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="py-24 relative overflow-hidden">
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-payflo-purple/10 blur-[120px] rounded-full -z-10"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-payflo-pink/10 blur-[120px] rounded-full -z-10"></div>
+
+  <div class="container-custom relative">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="inline-block px-4 py-2 rounded-full bg-payflo-purple/20 border border-payflo-purple/30 text-payflo-purple text-sm font-bold uppercase tracking-widest mb-6 animate-on-scroll delay-0">
+        The Spatie team
+      </span>
+      <h2 class="animate-on-scroll delay-0 text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+        Specialists who know <span class="gradient-text">Laravel inside out</span>
+      </h2>
+      <p class="animate-on-scroll delay-1 mt-6 text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+        By asking the right questions first, we make thoughtful architecture decisions, and ship
+        clean code your team can maintain and extend long after launch.
+      </p>
+    </div>
+
+    <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="glass-card animate-on-scroll delay-2 text-center group">
+        <div class="h-16 w-16 mx-auto rounded-2xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center text-white mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-purple-500/20">
+          <Icon name="ph:magnifying-glass-duotone" class="h-8 w-8" />
+        </div>
+        <h3 class="text-xl font-black text-white mb-3">Ask the right questions</h3>
+        <p class="text-white/70 leading-relaxed">
+          We dig deep to understand your domain, your users, and your goals before we write a single line of code.
+        </p>
+      </div>
+
+      <div class="glass-card animate-on-scroll delay-3 text-center group">
+        <div class="h-16 w-16 mx-auto rounded-2xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center text-white mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-purple-500/20">
+          <Icon name="ph:cube-duotone" class="h-8 w-8" />
+        </div>
+        <h3 class="text-xl font-black text-white mb-3">Thoughtful architecture</h3>
+        <p class="text-white/70 leading-relaxed">
+          We make architecture decisions that stand the test of time, so your codebase stays clean and maintainable.
+        </p>
+      </div>
+
+      <div class="glass-card animate-on-scroll delay-4 text-center group">
+        <div class="h-16 w-16 mx-auto rounded-2xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center text-white mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-purple-500/20">
+          <Icon name="ph:code-duotone" class="h-8 w-8" />
+        </div>
+        <h3 class="text-xl font-black text-white mb-3">Ship clean code</h3>
+        <p class="text-white/70 leading-relaxed">
+          We deliver code your team can maintain and extend long after launch, with automated tests and clear structure.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

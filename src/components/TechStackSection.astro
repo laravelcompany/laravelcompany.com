@@ -1,0 +1,77 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const foundations = [
+  {
+    title: "Laravel & PHP",
+    description:
+      "Laravel is our framework of choice for everything from marketing sites to complex platforms. It's a battle-tested foundation that keeps codebases clean, maintainable, and easy to hand off as projects grow.",
+    icon: "ph:code-duotone",
+  },
+  {
+    title: "React & Livewire",
+    description:
+      "We match the frontend tool to the level of interactivity a project needs. Livewire handles reactive interfaces within Laravel, while React takes over for full SPA and mobile-first applications.",
+    icon: "ph:lightning-duotone",
+  },
+  {
+    title: "AI coding agents",
+    description:
+      "We use AI to generate code throughout the whole development cycle: features, tests, debugging and refactoring. Our coding guidelines make sure the output matches our standards and your project.",
+    icon: "ph:robot-duotone",
+  },
+];
+
+const techLogos = [
+  "Laravel",
+  "React",
+  "Livewire",
+  "Claude Code",
+  "ClickHouse",
+  "Statamic",
+];
+---
+
+<section class="py-24 relative overflow-hidden">
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-payflo-purple/10 blur-[120px] rounded-full -z-10"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-payflo-pink/10 blur-[120px] rounded-full -z-10"></div>
+
+  <div class="container-custom relative">
+    <div class="text-center max-w-4xl mx-auto mb-20">
+      <h2 class="animate-on-scroll delay-0 text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+        The foundations <span class="gradient-text">we build on</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+      {foundations.map((item, index) => (
+        <div class={`glass-card animate-on-scroll delay-${index + 2} group`}>
+          <div class="h-14 w-14 rounded-2xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center text-white mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-purple-500/20">
+            <Icon name={item.icon} class="h-7 w-7" />
+          </div>
+          <h3 class="text-2xl font-black text-white mb-4 group-hover:text-payflo-purple transition-colors">
+            {item.title}
+          </h3>
+          <p class="text-white/70 leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div class="animate-on-scroll delay-5">
+      <div class="glass-card border-white/10 py-10 px-8">
+        <p class="text-center text-white/50 text-sm font-bold uppercase tracking-widest mb-8">
+          Technologies we work with
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          {techLogos.map((tech) => (
+            <span class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold text-sm hover:bg-white/10 hover:border-payflo-purple/50 hover:text-payflo-purple transition-all duration-300 cursor-default">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

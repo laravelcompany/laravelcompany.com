@@ -1,28 +1,30 @@
 ---
-
+import { Icon } from 'astro-icon/components';
 ---
 
 <section class="py-32 relative overflow-hidden">
-  <!-- Background blobs -->
   <div class="bg-blob blob-1 !opacity-20"></div>
   <div class="bg-blob blob-2 !opacity-20"></div>
 
   <div class="container-custom relative">
     <div class="max-w-4xl mx-auto text-center animate-on-scroll">
-      <h2
-        class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight"
-      >
-        Ready to add <span class="gradient-text">magic</span> to your platform?
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/20 border border-payflo-purple/30 text-payflo-purple text-sm font-bold uppercase tracking-widest mb-6">
+        <Icon name="ph:handshake-duotone" class="h-5 w-5" />
+        Work with us
+      </span>
+
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+        Hire us for <span class="gradient-text">your next project</span>
       </h2>
-      <p
-        class="mt-8 text-xl md:text-2xl text-white/70 font-medium leading-relaxed"
-      >
-        Join the growing number of SaaS platforms using Laravel Agency to
-        deliver world-class software solutions.
+
+      <p class="mt-8 text-xl md:text-2xl text-white/70 font-medium leading-relaxed max-w-3xl mx-auto">
+        We act as advisors and architects, not just developers. We want to be as proud of your
+        project as you are. Tailor-made web development in Laravel is what we do best.
       </p>
+
       <div class="mt-12 flex flex-col sm:flex-row justify-center gap-6">
         <a href="/contact/" class="btn btn-primary !px-12 !py-5 text-xl">
-          Book a Consultation
+          Brief us your project
         </a>
       </div>
     </div>

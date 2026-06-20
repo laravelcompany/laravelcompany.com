@@ -1,0 +1,56 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="py-24 relative overflow-hidden bg-white/5">
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-payflo-purple/10 blur-[120px] rounded-full -z-10"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-payflo-pink/10 blur-[120px] rounded-full -z-10"></div>
+
+  <div class="container-custom relative">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="animate-on-scroll delay-0">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/20 border border-payflo-purple/30 text-payflo-purple text-sm font-bold uppercase tracking-widest mb-6">
+            <Icon name="ph:github-logo-duotone" class="h-5 w-5" />
+            Open source
+          </span>
+        </div>
+        <h2 class="animate-on-scroll delay-0 text-4xl md:text-5xl font-black text-white leading-tight">
+          Building blocks for the <span class="gradient-text">Laravel ecosystem</span>
+        </h2>
+        <p class="animate-on-scroll delay-1 mt-6 text-lg text-white/70 leading-relaxed">
+          Over time, we have created a collection of open source building blocks that allow us
+          to focus all our time and effort on making your project unique, rather than on the
+          scaffolding.
+        </p>
+        <p class="animate-on-scroll delay-2 mt-6 text-lg text-white/70 leading-relaxed">
+          And with our experiences in building with AI, we can ship faster, iterate more quickly,
+          and develop more prototypes that can validate your ideas.
+        </p>
+        <div class="animate-on-scroll delay-3 mt-8">
+          <a href="/contact/" class="btn btn-primary">Brief us your project</a>
+        </div>
+      </div>
+
+      <div class="animate-on-scroll delay-3">
+        <div class="grid grid-cols-2 gap-4">
+          {[
+            { name: "Laravel SEO", icon: "ph:magnifying-glass-duotone" },
+            { name: "Laravel Mail", icon: "ph:envelope-duotone" },
+            { name: "Laravel GPT", icon: "ph:brain-duotone" },
+            { name: "Laravel UI", icon: "ph:layout-duotone" },
+            { name: "Laravel Social", icon: "ph:share-network-duotone" },
+            { name: "Laravel MediaLibrary", icon: "ph:folder-duotone" },
+          ].map((pkg) => (
+            <div class="glass-card p-6 text-center group hover:bg-white/10 transition-all duration-300">
+              <div class="h-12 w-12 mx-auto rounded-xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center text-white mb-4 transition-all duration-300 group-hover:scale-110 shadow-lg shadow-purple-500/20">
+                <Icon name={pkg.icon} class="h-6 w-6" />
+              </div>
+              <h3 class="text-sm font-black text-white">{pkg.name}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
