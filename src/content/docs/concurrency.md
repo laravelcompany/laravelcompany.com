@@ -16,10 +16,10 @@ Laravel achieves concurrency by serializing the given closures and dispatching t
 
 The `Concurrency` facade supports three drivers: `process` (the default), `fork`, and `sync`.
 
-The `fork` driver offers improved performance compared to the default `process` driver, but it may only be used within PHP's CLI context, as PHP does not support forking during web requests. Before using the `fork` driver, you need to install the `spatie/fork` package:
+The `fork` driver offers improved performance compared to the default `process` driver, but it may only be used within PHP's CLI context, as PHP does not support forking during web requests. Before using the `fork` driver, you need to install the `laravelcompany/fork` package:
 
 ```shell
-composer require spatie/fork
+composer require laravelcompany/fork
 ```
 
 The `sync` driver is primarily useful during testing when you want to disable all concurrency and simply execute the given closures in sequence within the parent process.

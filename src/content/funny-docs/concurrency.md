@@ -42,10 +42,10 @@ So, hoist those sails high, my hearties! It's time to conquer those sluggish tas
 
 The `Concurrency` facade is our swanky bartender, mixing up three martinis (drivers): `process` (the default), `fork`, and `sync`.
 
-- The `fork` driver is our fast-talking, suave charm who's great at impressing guests when PHP's in its CLI best, but unfortunately can't keep the conversation going during web requests. So, before you introduce them to your guests, make sure to invite them over when PHP's dressed for the occasion by installing the `spatie/fork` package:
+- The `fork` driver is our fast-talking, suave charm who's great at impressing guests when PHP's in its CLI best, but unfortunately can't keep the conversation going during web requests. So, before you introduce them to your guests, make sure to invite them over when PHP's dressed for the occasion by installing the `laravelcompany/fork` package:
 
 ```shell
-composer require spatie/fork
+composer require laravelcompany/fork
 ```
 
 - The `sync` driver is our reliable old pal who always shows up when you need them, even if it means sticking around during testing and preventing any concurrency at all. They're the one you invite to the party when you want a drama-free evening with your closures neatly lined up and executed in order within the parent process.

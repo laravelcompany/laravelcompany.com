@@ -1113,7 +1113,7 @@ But wait, there's more! Flysystem ain't one to sit on its laurels; it's got adap
 To kickstart this bromance, we're gonna add a Dropbox adapter that's been hanging around the cool kids' table all evening - it's community-maintained and just itching to join the fun! To do that, you'll need to run this command in your terminal:
 
 ```shell
-composer require spatie/flysystem-dropbox
+composer require laravelcompany/flysystem-dropbox
 ```
 
 Once you've got your date (er, adapter) secured, it's time to introduce them to the rest of the family. You can register the driver within the `boot` method of one of your application's service providers. To accomplish this, you should use the `extend` method of the `Storage` facade:

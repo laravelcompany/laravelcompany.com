@@ -1,0 +1,235 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Development Best Practices & Guidelines | Laravel Company"
+  description="Our development standards, coding guidelines, code review process, and deployment best practices for building high-quality Laravel applications."
+>
+  <main class="py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+    <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-white">Guidelines</span>
+    </nav>
+
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4 animate-on-scroll">Development Best Practices</h1>
+      <p class="text-xl text-white/70 mb-12 animate-on-scroll">
+        Our engineering standards for building robust, maintainable, and scalable Laravel applications.
+      </p>
+
+      <section class="mb-12 animate-on-scroll">
+        <h2 class="text-2xl font-semibold mb-4">Coding Standards</h2>
+        <p class="text-white/70 mb-4">
+          All code must follow the <a href="https://laravel.com/docs/contributions#coding-style" class="text-payflo-purple hover:text-payflo-blue transition-colors" target="_blank" rel="noopener noreferrer">Laravel coding style</a>, which is based on PSR-12 with Laravel-specific conventions. We enforce these standards through automated tooling in CI/CD pipelines.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">PSR-12:</strong> Follow PSR-12 extended coding style guide as the baseline for all PHP code.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Laravel Naming Conventions:</strong> Use camelCase for methods and variables, PascalCase for classes, snake_case for database columns and configuration keys.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Type Hints:</strong> Use PHP type hints for all function parameters and return types. Leverage PHP 8.1+ features like enums, readonly properties, and first-class callables.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Docblocks:</strong> Use PHPDoc only where necessary to describe non-obvious behavior. Prefer expressive code and type hints over documentation.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Static Analysis:</strong> All code must pass PHPStan at level 6 or higher without errors. Larastan is the preferred static analysis tool.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-12 animate-on-scroll">
+        <h2 class="text-2xl font-semibold mb-4">Architecture Guidelines</h2>
+        <p class="text-white/70 mb-4">
+          We follow Laravel's intended architecture patterns to keep applications maintainable and testable.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Fat Models, Skinny Controllers:</strong> Keep controllers thin. Business logic belongs in models, actions, services, or form requests.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Service Layer:</strong> Extract complex business logic into dedicated service classes. Keep them stateless and inject dependencies via constructor.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Action Classes:</strong> For single-purpose operations, use invokable action classes. This keeps each unit of work focused and testable.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Repository Pattern:</strong> Use repositories only when you need to abstract data access for testing or multi-storage scenarios. For most CRUD, use Eloquent directly.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Dependency Injection:</strong> Rely on Laravel's service container. Avoid facades and the <code class="text-payflo-purple">app()</code> helper in constructors; use proper constructor injection.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">DTOs & Data Objects:</strong> Use typed data transfer objects for passing data between layers. Prefer readonly properties and named arguments.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-12 animate-on-scroll">
+        <h2 class="text-2xl font-semibold mb-4">Testing Standards</h2>
+        <p class="text-white/70 mb-4">
+          Every feature must be covered by automated tests. We use Pest PHP as our primary testing framework.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Test Coverage:</strong> Aim for at least 90% code coverage. Critical paths (auth, payments, data integrity) must have 100% coverage.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Feature Tests:</strong> Write feature tests for every HTTP endpoint covering success, validation, authorization, and failure scenarios.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Unit Tests:</strong> Unit test all service classes, actions, and DTOs. Mock external dependencies to keep tests fast and isolated.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Database Tests:</strong> Use SQLite in-memory for fast test execution. Seed only the data needed for each test case.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Browser Tests:</strong> Use Laravel Dusk for testing critical user journeys that involve JavaScript, such as checkout flows and file uploads.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-12 animate-on-scroll">
+        <h2 class="text-2xl font-semibold mb-4">Database Best Practices</h2>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Migrations:</strong> Write reversible migrations. Never modify published migrations; create a new one for schema changes.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Indexing:</strong> Add database indexes for all columns used in <code class="text-payflo-purple">WHERE</code>, <code class="text-payflo-purple">JOIN</code>, <code class="text-payflo-purple">ORDER BY</code>, and <code class="text-payflo-purple">GROUP BY</code> clauses. Use compound indexes for multi-column queries.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">N+1 Prevention:</strong> Eager-load relationships with <code class="text-payflo-purple">with()</code>. Use lazy loading only when explicitly needed. Monitor query logs in development.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Raw SQL:</strong> Avoid raw SQL in application code. Use Eloquent and the query builder. If raw SQL is unavoidable, use prepared statements.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Soft Deletes:</strong> Use soft deletes by default unless data retention policies require hard deletion. Always index the <code class="text-payflo-purple">deleted_at</code> column.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-12 animate-on-scroll">
+        <h2 class="text-2xl font-semibold mb-4">Security Guidelines</h2>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Input Validation:</strong> Always validate incoming data using Form Requests. Never trust user input even if it comes from authenticated sources.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Authorization:</strong> Use gates and policies for all authorization checks. Apply them in controllers, not in views or routes.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">SQL Injection:</strong> Never concatenate user input into SQL queries. Eloquent and the query builder handle parameter binding automatically.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">XSS Prevention:</strong> Use Blade's <code class="text-payflo-purple">{{ }}</code> syntax which automatically escapes output. Use <code class="text-payflo-purple">{!! !!}</code> only when deliberately rendering trusted HTML.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">CSRF:</strong> All state-changing requests must include CSRF tokens. Use <code class="text-payflo-purple">@csrf</code> in Blade forms and include <code class="text-payflo-purple">X-XSRF-TOKEN</code> headers in API requests.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Rate Limiting:</strong> Apply rate limiting to all public API routes and authentication endpoints to prevent abuse.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="mb-12 animate-on-scroll">
+        <h2 class="text-2xl font-semibold mb-4">Code Review Process</h2>
+        <p class="text-white/70 mb-4">
+          All code changes must go through peer review before being merged into the main branch.
+        </p>
+        <ol class="space-y-3 list-decimal pl-6">
+          <li class="text-white/70 pl-2">
+            <strong class="text-white">Create a Pull Request:</strong> Open a PR with a descriptive title and summary of changes. Reference the related issue or ticket.
+          </li>
+          <li class="text-white/70 pl-2">
+            <strong class="text-white">Automated Checks:</strong> CI must pass all checks including tests, static analysis (PHPStan), linting (Pint), and type checking before review.
+          </li>
+          <li class="text-white/70 pl-2">
+            <strong class="text-white">Peer Review:</strong> At least one senior developer must review the code. Reviewers check for correctness, security, performance, test coverage, and adherence to these guidelines.
+          </li>
+          <li class="text-white/70 pl-2">
+            <strong class="text-white">Address Feedback:</strong> The author should address all review comments. Use fixup commits during review and squash before merge.
+          </li>
+          <li class="text-white/70 pl-2">
+            <strong class="text-white">Merge:</strong> Squash-merge all commits into main with a clean commit message. Delete the feature branch after merging.
+          </li>
+        </ol>
+      </section>
+
+      <section class="mb-12 animate-on-scroll">
+        <h2 class="text-2xl font-semibold mb-4">Deployment Guidelines</h2>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">CI/CD Pipeline:</strong> All deployments go through automated CI/CD pipelines. Manual deployments are strictly prohibited for production environments.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Environment Separation:</strong> Maintain separate environments for development, staging, and production. Each must have its own database and configuration.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Deploy Script:</strong> Run migrations before releasing new code. Use Laravel's deployment commands: <code class="text-payflo-purple">php artisan up</code> / <code class="text-payflo-purple">down</code>, <code class="text-payflo-purple">php artisan optimize</code>, and cache clearing.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Health Checks:</strong> Implement health check endpoints that verify database connectivity, queue workers, cache, and third-party service availability.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Monitoring:</strong> Set up application monitoring (error tracking, performance metrics, log aggregation) before the first production deployment.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-payflo-purple flex-shrink-0 mt-2.5"></span>
+            <span class="text-white/70"><strong class="text-white">Rollback Plan:</strong> Every deployment must have a documented rollback strategy. Keep the previous release artifact available for at least 48 hours.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="glass-card p-8 border-payflo-purple/30 animate-on-scroll">
+        <div class="flex items-start gap-4">
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-2">Continuous Improvement</h3>
+            <p class="text-white/70 text-sm leading-relaxed">
+              These guidelines evolve as we adopt new tools and techniques. All team members are encouraged to propose improvements. Open a discussion or submit a PR to this document with your suggestions.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>

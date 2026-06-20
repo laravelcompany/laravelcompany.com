@@ -1063,7 +1063,7 @@ This resource class will ensure your responses sail smoothly through the [JSON:A
 But wait, there's more! Just as a seasoned sailor can set their sails to different winds, `JsonApiResource` sets the `Content-Type` header to `application/vnd.api+json`. No need for navigation charts here - we've got your back! πΊπΈ
 
 > [!NOTE]
-> Aye, Laravel's JSON:API resources are so efficient at managing your treasure that they can even pass the parchment (query parameters) of incoming JSON:API queries, such as filters and sorts. But if you find yourself in need of a navigator to help decipher these charts, [Spatie's Laravel Query Builder](https://spatie.be/docs/laravel-query-builder) is the perfect compass! π€β
+> Aye, Laravel's JSON:API resources are so efficient at managing your treasure that they can even pass the parchment (query parameters) of incoming JSON:API queries, such as filters and sorts. But if you find yourself in need of a navigator to help decipher these charts, [Laravelcompany's Laravel Query Builder](https://laravelcompany.be/docs/laravel-query-builder) is the perfect compass! π€β
 
 <a name="generating-jsonapi-resources"></a>
 Now, let's hoist the anchor and set sail for creating `JsonApiResources`! π²π΅οΈ
