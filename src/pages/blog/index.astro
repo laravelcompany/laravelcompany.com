@@ -1,0 +1,82 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+const allPosts = await getCollection("blog");
+const sortedPosts = allPosts.sort((a, b) => {
+  const dateA = new Date(a.data.date);
+  const dateB = new Date(b.data.date);
+  return dateB.getTime() - dateA.getTime();
+});
+---
+
+<Layout
+  title="Blog | Laravel Company"
+  description="Insights, guides, and best practices for Laravel development, EU compliance, cybersecurity, and modern web applications."
+>
+  <main class="py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+    <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-white">Blog</span>
+    </nav>
+
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4 text-center animate-on-scroll">Blog</h1>
+      <p class="text-xl text-white/70 mb-12 text-center animate-on-scroll max-w-2xl mx-auto">
+        Insights, guides, and best practices from the Laravel Company team.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {sortedPosts.map((post, index) => (
+          <a
+            href={`/blog/${post.id}/`}
+            class="group glass-card overflow-hidden animate-on-scroll hover:border-payflo-purple/50 transition-all duration-300"
+            style={`animation-delay: ${index * 0.05}s`}
+          >
+            {post.data.image && (
+              <div class="aspect-video overflow-hidden bg-payflo-darker">
+                <img
+                  src={post.data.image}
+                  alt={post.data.title}
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            )}
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                {post.data.tags?.slice(0, 2).map((tag) => (
+                  <span class="text-xs px-2.5 py-1 rounded-full bg-payflo-purple/20 text-payflo-purple font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h2 class="text-lg font-semibold text-white mb-2 group-hover:text-payflo-purple transition-colors">
+                {post.data.title}
+              </h2>
+              <p class="text-sm text-white/60 mb-4 line-clamp-2">
+                {post.data.excerpt}
+              </p>
+              <div class="flex items-center gap-3 text-xs text-white/40">
+                <span>{post.data.date}</span>
+                <span class="w-1 h-1 rounded-full bg-white/20"></span>
+                <span>{post.data.author}</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
