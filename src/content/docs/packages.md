@@ -21,7 +21,7 @@
 <a name="introduction"></a>
 ## Introduction
 
-Packages are the primary way of adding functionality to Laravel. Packages might be anything from a great way to work with dates like [Carbon](https://github.com/briannesbitt/Carbon) or a package that allows you to associate files with Eloquent models like Laravelcompany's [Laravel Media Library](https://github.com/laravelcompany/laravel-medialibrary).
+Packages are the primary way of adding functionality to Laravel. Packages might be anything from a great way to work with dates like [Carbon](https://github.com/briannesbitt/Carbon) or a package that allows you to associate files with Eloquent models like Laravelcompany's [Laravel Voip](https://github.com/laravelcompany/laravel-medialibrary).
 
 There are different types of packages. Some packages are stand-alone, meaning they work with any PHP framework. Carbon and Pest are examples of stand-alone packages. Any of these packages may be used with Laravel by requiring them in your `composer.json` file.
 
