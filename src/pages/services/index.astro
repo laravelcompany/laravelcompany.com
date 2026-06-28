@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import CTASection from '../../components/CTASection.astro';
 import GeoHero from '../../components/geo/GeoHero.astro';
 import { LOCATIONS } from '../../data/locations';
 import { SERVICE_MODIFIERS } from '../../data/service-modifiers';
@@ -9,28 +10,651 @@ import slugify from '../../utils/slugify';
 
 const featuredLocations = LOCATIONS.slice(0, 8);
 const featuredModifiers = SERVICE_MODIFIERS.filter(m => m.featured);
+
+const services = [
+  {
+    title: "Laravel Development",
+    slug: "/laravel-development-services/",
+    icon: "ph:code-duotone",
+    desc: "We build custom Laravel web applications for businesses of every size — from early-stage startups to enterprise organisations. Our Laravel development services cover the full spectrum of modern web application needs, delivering robust, secure, and scalable solutions on an accelerated timeline. Laravel's elegant syntax, built-in authentication, powerful ORM (Eloquent), and extensive ecosystem of first-party packages enable our team to build complex applications faster than with most other frameworks. We specialise in building multi-tenant SaaS platforms that serve thousands of users, enterprise systems handling sensitive business data, high-traffic e-commerce marketplaces with complex inventory and payment logic, and custom internal business tools that streamline operations. Each project begins with a thorough architectural assessment to select the right approach — whether that is a traditional monolithic Laravel application, a Laravel-powered API consumed by a frontend framework like Vue or React, or a microservices architecture using Laravel's queue and event systems. Our development team follows Laravel best practices including repository pattern, service classes, action classes, form requests for validation, and comprehensive test coverage using PHPUnit and Laravel Dusk.",
+    linkText: "Explore Laravel Development"
+  },
+  {
+    title: "Laravel Consulting",
+    slug: "/laravel-consulting/",
+    icon: "ph:lightbulb-duotone",
+    desc: "Our Laravel consulting services help organisations make better technical decisions, improve code quality, and build more scalable systems. We provide expert guidance across architecture reviews, performance optimisation, scaling strategy, technical auditing, and team mentoring. Our consultants bring years of production experience with Laravel applications handling millions of requests, complex queue workflows, real-time broadcasting, and high-availability deployments. An architecture review examines your current system design, identifying bottlenecks, security gaps, and scalability limitations before they become production problems. Performance optimisation focuses on database query optimisation, caching strategy (Redis, Memcached, Laravel Cache), queue configuration, and Laravel Octane deployment for maximum throughput. Our technical audits provide a comprehensive assessment of your Laravel codebase, covering code quality, security vulnerabilities, dependency health, test coverage, and adherence to Laravel conventions. For teams building in-house, we offer mentoring sessions covering advanced Laravel patterns, testing strategies, deployment automation, and team workflows. We also provide fractional CTO services for early-stage startups needing technical leadership without full-time commitment.",
+    linkText: "Book Laravel Consulting"
+  },
+  {
+    title: "Laravel AI Development",
+    slug: "/ai-digital-transformation/",
+    icon: "ph:robot-duotone",
+    desc: "We integrate artificial intelligence into Laravel applications, helping businesses automate workflows, enhance decision-making, and deliver intelligent user experiences. Our AI development services cover OpenAI GPT integration for natural language features, Anthropic Claude for safe and reliable AI interactions, Google Gemini for multimodal AI capabilities, retrieval-augmented generation (RAG) systems that combine LLMs with your proprietary data, autonomous AI agent systems for complex task automation, and custom AI workflows that integrate machine learning models with Laravel queues and event systems. We build AI-powered chatbots and virtual assistants using Laravel's broadcasting and queue systems combined with streaming LLM responses. Our RAG implementations index your documentation, knowledge base, or product data into vector databases (Pinecone, Qdrant, pgvector) and retrieve relevant context for each AI query, ensuring accurate, source-grounded responses. For businesses needing content generation, we build AI writing assistants, code generation tools, and automated reporting systems. Every AI feature we build includes proper rate limiting, cost management, fallback handling, and comprehensive logging — ensuring production reliability at scale.",
+    linkText: "Explore AI Development"
+  },
+  {
+    title: "Laravel API Development",
+    slug: "/laravel-api-development/",
+    icon: "ph:plug-charging-duotone",
+    desc: "We design and build robust Laravel APIs powering web applications, mobile backends, third-party integrations, and microservice architectures. Our API development covers RESTful APIs following JSON:API or custom conventions, GraphQL APIs using Laravel Lighthouse, microservice architectures using Laravel's queue and event systems, and third-party API integrations with payment gateways, CRM platforms, ERPs, and marketing tools. Every API we build includes comprehensive documentation (OpenAPI/Swagger), request validation, rate limiting, authentication (Sanctum, Passport, or custom OAuth2), versioning strategy, and automated testing. We implement Laravel's API resources for consistent response formatting, query parameter filtering and sorting for frontend flexibility, and webhook systems for real-time data synchronisation. Our APIs are designed for high throughput using Laravel Octane, Redis caching, database read replicas, and horizontal scaling. For mobile applications, we build REST or GraphQL backends that handle push notifications, file uploads, offline data synchronisation, and pagination for optimal mobile performance.",
+    linkText: "Explore API Development"
+  },
+  {
+    title: "Laravel Maintenance & Support",
+    slug: "/laravel-maintenance/",
+    icon: "ph:wrench-duotone",
+    desc: "We provide comprehensive Laravel maintenance and support services to keep your applications secure, performant, and up to date. Our maintenance covers security patching for Laravel and PHP vulnerabilities, dependency management with automated update testing via CI/CD, 24/7 application monitoring with alerting, bug fixing with SLAs for critical issues, performance monitoring and optimisation, database maintenance and indexing, server health monitoring, and regular security audits. We manage the full lifecycle of Laravel updates — from minor version patches to major version migrations (Laravel 9 to 10, 10 to 11, and beyond) — ensuring backward compatibility and zero-downtime deployments. Our support team provides a dedicated Slack or email channel with response time guarantees. We monitor application health using Laravel Pulse, Horizon metrics, and server-level monitoring. Monthly reports cover uptime, performance trends, security status, and recommendations for improvement. For applications on Laravel Vapor, we manage serverless infrastructure, auto-scaling configuration, and cost optimisation.",
+    linkText: "Explore Maintenance"
+  },
+  {
+    title: "Laravel Migration & Upgrades",
+    slug: "/migrate-wordpress-to-laravel/",
+    icon: "ph:arrows-clockwise-duotone",
+    desc: "We migrate legacy PHP applications, WordPress sites, and outdated Laravel versions to modern, secure Laravel applications. Our migration services cover WordPress to Laravel migrations preserving SEO rankings and content structure, legacy PHP framework migrations (CodeIgniter, CakePHP, Symfony 2/3) to Laravel, Laravel version upgrades (LTS migrations), database migrations with data integrity verification, and API migration from legacy systems. Each migration follows a proven process: full audit of existing codebase and database, data mapping and transformation specification, parallel run with traffic splitting for validation, comprehensive testing with data integrity checks, and cutover with rollback plan. We ensure your new Laravel application matches or exceeds the performance, SEO rankings, and functionality of the legacy system while adding modern capabilities like API access, background job processing, real-time features, and automated testing.",
+    linkText: "Explore Migration Services"
+  },
+  {
+    title: "Laravel SaaS Development",
+    slug: "/laravel-saas-development/",
+    icon: "ph:cloud-duotone",
+    desc: "We build multi-tenant SaaS platforms on Laravel, handling the complex requirements of subscription billing, tenant isolation, onboarding workflows, and scalable infrastructure from day one. Our SaaS development includes multi-tenant architecture using Laravel's built-in tenancy or third-party packages, subscription management with Laravel Cashier (Stripe, Paddle), feature flags and plan-based gating, onboarding flows with user activation and trial management, and admin dashboards for tenant management and analytics. We design SaaS platforms for horizontal scaling from the start, using database-per-tenant or row-level isolation strategies based on your data sensitivity and compliance requirements. Our platforms include usage metering, API access for tenant integrations, white-label options, and marketplace capabilities for platform business models. We deploy on Laravel Vapor or traditional VPS infrastructure with CI/CD pipelines automated via GitHub Actions or Envoyer.",
+    linkText: "Explore SaaS Development"
+  },
+  {
+    title: "Laravel Audit & Security Review",
+    slug: "/laravel-security-audit/",
+    icon: "ph:shield-check-duotone",
+    desc: "We conduct thorough Laravel security audits and code reviews to identify vulnerabilities, performance bottlenecks, and architectural issues before they impact your business. Our audit services cover OWASP Top 10 vulnerability testing, authentication and authorisation review, API security assessment, dependency vulnerability scanning, database and query security analysis, XSS, CSRF, and SQL injection prevention verification, and compliance review for GDPR, HIPAA, or SOC 2 requirements. Each audit produces a detailed report with severity-ranked findings, remediation steps, and estimated effort for each fix. We provide retesting after remediation to confirm all issues are resolved. For organisations requiring ongoing security assurance, we offer quarterly security reviews and penetration testing as a subscription service.",
+    linkText: "Book Security Audit"
+  }
+];
+
+const industries = [
+  {
+    title: "Healthcare",
+    slug: "/laravel-healthcare-software/",
+    icon: "ph:heartbeat-duotone",
+    desc: "HIPAA-compliant healthcare platforms including patient portals, telemedicine systems, EHR integrations via FHIR, medical billing software, and practice management solutions. We serve hospitals, clinics, telehealth startups, and healthcare SaaS companies with security-first Laravel applications."
+  },
+  {
+    title: "FinTech",
+    slug: "/laravel-fintech-development/",
+    icon: "ph:currency-circle-dollar-duotone",
+    desc: "Secure financial technology platforms including payment processing systems, lending platforms, investment dashboards, personal finance management tools, and regulatory compliance software. Built with encryption, audit logging, and financial data protection standards."
+  },
+  {
+    title: "E-commerce",
+    slug: "/laravel-ecommerce-development/",
+    icon: "ph:shopping-cart-duotone",
+    desc: "Custom e-commerce platforms, multi-vendor marketplaces, subscription commerce systems, and B2B ordering portals. We build with Laravel Cashier, complex inventory management, payment gateway integration, and scalable product catalog architecture."
+  },
+  {
+    title: "Logistics",
+    slug: "/laravel-logistics-platform/",
+    icon: "ph:truck-duotone",
+    desc: "Logistics and supply chain platforms including fleet management systems, route optimisation engines, warehouse management, real-time tracking, and carrier integration portals. Built for scale with real-time data processing and geolocation services."
+  },
+  {
+    title: "Real Estate",
+    slug: "/services/",
+    icon: "ph:buildings-duotone",
+    desc: "Property management platforms, real estate marketplaces, CRM systems for agents and brokers, property listing aggregation, and mortgage processing applications with document management and compliance features."
+  },
+  {
+    title: "Education",
+    slug: "/services/",
+    icon: "ph:graduation-cap-duotone",
+    desc: "Learning management systems, virtual classroom platforms, student information systems, assessment and testing platforms, and educational content management systems supporting institutions, edtech startups, and corporate training."
+  },
+  {
+    title: "Manufacturing",
+    slug: "/services/",
+    icon: "ph:factory-duotone",
+    desc: "Manufacturing execution systems, inventory and supply chain management, quality control platforms, equipment maintenance tracking, and production analytics dashboards for smart manufacturing operations."
+  },
+  {
+    title: "SaaS",
+    slug: "/laravel-saas-development/",
+    icon: "ph:cloud-duotone",
+    desc: "Multi-tenant SaaS platforms with subscription billing, feature flag management, usage analytics, tenant onboarding workflows, and scalable cloud infrastructure on Laravel Vapor or AWS with CI/CD automation."
+  },
+  {
+    title: "Government",
+    slug: "/services/",
+    icon: "ph:building-office-duotone",
+    desc: "Government digital services platforms, citizen portals, case management systems, regulatory compliance applications, and public sector data management solutions with security clearances and accessibility compliance."
+  },
+  {
+    title: "Legal Tech",
+    slug: "/services/",
+    icon: "ph:scales-duotone",
+    desc: "Legal practice management software, document automation platforms, case management systems, e-discovery tools, contract lifecycle management, and client portals for law firms and legal departments."
+  }
+];
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Discovery",
+    desc: "We begin every project with a thorough discovery phase. Our team meets with stakeholders to understand your business goals, technical requirements, user needs, and project constraints. We analyse existing systems, review documentation, and identify integration points. This phase produces a detailed requirements specification, technical feasibility assessment, and project roadmap with timeline and budget estimates."
+  },
+  {
+    step: "02",
+    title: "Architecture",
+    desc: "Our architects design the system architecture based on discovery findings. We decide on the right approach — monolithic vs microservices, API design patterns, database schema, caching strategy, queue configuration, and deployment infrastructure. Every architecture decision accounts for scalability, security, maintenance cost, and team productivity."
+  },
+  {
+    step: "03",
+    title: "Development",
+    desc: "We develop using Agile methodology with two-week sprints, daily stand-ups, and continuous integration. Our team follows Laravel best practices including repository pattern, action classes, form requests, Eloquent resource classes, and comprehensive test coverage. Code reviews are mandatory for every pull request."
+  },
+  {
+    step: "04",
+    title: "Testing",
+    desc: "Quality assurance runs throughout development. We write PHPUnit tests for business logic, feature tests for API endpoints, browser tests with Laravel Dusk, and integration tests for third-party services. Performance testing ensures your application meets response time targets under load."
+  },
+  {
+    step: "05",
+    title: "Deployment",
+    desc: "We deploy using CI/CD pipelines with automated testing, staging environments, and zero-downtime deployment strategies. Production deployments include database migration automation, cache warming, queue worker configuration, and health check monitoring. Rollback procedures are tested and documented."
+  },
+  {
+    step: "06",
+    title: "Support",
+    desc: "Post-launch, we provide ongoing support including security patching, dependency updates, performance monitoring, bug fixes, and feature enhancements. Our support team monitors application health, responds to incidents, and provides regular maintenance reports with recommendations."
+  }
+];
+
+const techCategories = [
+  {
+    title: "Backend",
+    icon: "ph:cpu-duotone",
+    items: ["Laravel", "PHP 8.x", "Laravel Octane", "RoadRunner", "Swoole", "Laravel Horizon"]
+  },
+  {
+    title: "Frontend",
+    icon: "ph:browser-duotone",
+    items: ["Vue.js", "React", "Nuxt.js", "Inertia.js", "Tailwind CSS", "Alpine.js"]
+  },
+  {
+    title: "Mobile",
+    icon: "ph:device-mobile-duotone",
+    items: ["Ionic", "Flutter", "React Native", "NativeScript", "Laravel REST APIs", "Push Notifications"]
+  },
+  {
+    title: "AI & Machine Learning",
+    icon: "ph:brain-duotone",
+    items: ["OpenAI GPT-4", "Anthropic Claude", "Google Gemini", "LangChain", "LlamaIndex", "Vector Databases"]
+  },
+  {
+    title: "Infrastructure",
+    icon: "ph:cloud-duotone",
+    items: ["AWS (EC2, RDS, Lambda)", "Azure", "Google Cloud", "Docker", "Kubernetes", "Laravel Vapor"]
+  },
+  {
+    title: "Databases & Storage",
+    icon: "ph:database-duotone",
+    items: ["MySQL 8.x", "PostgreSQL", "Redis", "Elasticsearch", "DynamoDB", "S3"]
+  }
+];
+
+const laravelExpertise = [
+  { name: "Laravel Horizon", desc: "Redis queue monitoring and management with real-time metrics, job retry workflows, and auto-scaling worker configuration for high-throughput applications." },
+  { name: "Laravel Nova", desc: "Admin panel development with custom tools, metrics, filters, and actions. We build Nova-powered dashboards for content management, user administration, and business analytics." },
+  { name: "Laravel Reverb", desc: "Real-time WebSocket broadcasting for live notifications, chat systems, collaborative editing, and real-time dashboards using Laravel's first-party WebSocket server." },
+  { name: "Laravel Scout", desc: "Full-text search integration with Algolia, MeiliSearch, and database drivers. We implement advanced search features including faceted filtering, typo tolerance, and relevance tuning." },
+  { name: "Laravel Cashier", desc: "Subscription billing integration with Stripe and Paddle including plan management, trial periods, invoicing, receipt emails, and usage-based billing for SaaS platforms." },
+  { name: "Laravel Sanctum", desc: "API token authentication for SPAs and mobile applications with token abilities, expiration, and revocation. Ideal for single-page applications and third-party API access." },
+  { name: "Laravel Passport", desc: "Full OAuth2 server implementation for API authentication supporting personal access tokens, password grants, client credentials, and authorization code grants with PKCE." },
+  { name: "Laravel Vapor", desc: "Serverless Laravel deployment on AWS Lambda with auto-scaling, database connection pooling, queue worker management, and environment-specific configuration management." }
+];
+
+const comparisons = [
+  {
+    framework: "Symfony",
+    useCase: "Enterprise applications needing maximum flexibility",
+    devSpeed: "Laravel's convention-over-configuration approach enables 40% faster development for most web applications. Symfony's flexibility adds complexity without corresponding benefits for typical business applications.",
+    security: "Laravel provides built-in CSRF, XSS prevention, encryption, and authentication. Symfony requires manual configuration of these features, increasing security audit effort and the risk of misconfiguration.",
+    ecosystem: "Laravel's ecosystem (Nova, Horizon, Forge, Vapor, Cashier, Scout) provides integrated solutions for common business requirements. Symfony relies on third-party bundles with varying quality and maintenance.",
+    cost: "Laravel development is typically 30-50% more cost-effective due to faster development cycles, lower hosting complexity, and a larger developer talent pool with competitive rates."
+  },
+  {
+    framework: "Django",
+    useCase: "Python ecosystem / data-intensive applications",
+    devSpeed: "Both frameworks offer rapid development. Laravel's Blade templating, Livewire, and Inertia provide more flexibility for modern frontend patterns compared to Django's template system.",
+    security: "Both frameworks have strong security. Laravel's explicit Gates and Policies provide clearer authorization audit trails than Django's permission system, which matters for compliance-heavy applications.",
+    ecosystem: "Laravel's first-party packages (all maintained by the core team) provide a more integrated ecosystem than Django's third-party package landscape. Laravel Spark, Jetstream, and Breeze accelerate project setup significantly.",
+    cost: "Laravel developers are more available globally with competitive rates. PHP hosting is significantly cheaper than Python hosting. Laravel Vapor provides cost-effective serverless deployment on AWS Lambda."
+  },
+  {
+    framework: "Node.js / Express",
+    useCase: "Real-time systems / highly concurrent I/O",
+    devSpeed: "Laravel's batteries-included approach delivers working software faster than Node.js ecosystems, which require manual selection and integration of dozens of npm packages for basic features like auth, queues, and validation.",
+    security: "Laravel's built-in security features (CSRF, XSS, SQL injection prevention, secure encryption) eliminate the security configuration burden that Node.js projects face. The Node.js ecosystem's package churn creates ongoing supply chain risk.",
+    ecosystem: "Laravel's cohesive ecosystem contrasts with Node.js's fragmented landscape. Laravel's packages are designed to work together; Node.js packages require ongoing maintenance as breaking changes cascade through dependencies.",
+    cost: "Laravel development is 20-40% more affordable than Node.js development due to faster development and a larger developer market. PHP infrastructure costs are significantly lower than Node.js production hosting."
+  },
+  {
+    framework: "Ruby on Rails",
+    useCase: "Startups / MVPs needing rapid prototyping",
+    devSpeed: "Both offer rapid prototyping. Laravel's ecosystem (Laravel Bootcamp, Jetstream, Breeze, and starter kits) provides more production-ready starting points than Rails equivalents for modern application requirements.",
+    security: "Comparable security fundamentals. Laravel's explicit authorization system provides clearer audit trails for compliance needs. Rails' convention-based security can obscure control flow during security reviews.",
+    ecosystem: "Laravel's ecosystem is more actively maintained with Laravel Cloud (serverless), Reverb (WebSockets), and Folio (file-based routing) representing modern architecture patterns. Rails ecosystem has fewer recent innovations.",
+    cost: "Laravel development costs are 20-30% lower due to PHP hosting economics and developer availability. Laravel Vapor's serverless platform eliminates DevOps overhead that Rails applications typically require."
+  }
+];
+
+const caseStudies = [
+  {
+    title: "SaaS Analytics Platform",
+    subtitle: "Multi-tenant analytics platform serving 10,000+ businesses",
+    icon: "ph:chart-bar-duotone",
+    results: ["10,000+ active tenants", "99.99% uptime over 12 months", "Sub-200ms API response times", "Automated billing for 50,000+ subscriptions", "Migrated from monolith to microservices with zero downtime"],
+    desc: "Architected and built a multi-tenant SaaS analytics platform processing millions of data points daily. The platform features tenant isolation, usage-based billing via Laravel Cashier, real-time dashboards using Laravel Reverb, and automated scaling on Laravel Vapor. Our team managed the full lifecycle from initial MVP through to enterprise feature expansion."
+  },
+  {
+    title: "Multi-Vendor Marketplace",
+    subtitle: "E-commerce marketplace connecting 5,000+ vendors with customers",
+    icon: "ph:storefront-duotone",
+    results: ["5,000+ active vendors", "500,000+ products listed", "Complex commission engine", "Real-time inventory sync", "Payment splitting across 40+ countries"],
+    desc: "Built a Laravel-powered multi-vendor marketplace with complex commission structures, real-time inventory synchronisation, multi-currency payment splitting, and vendor dashboard analytics. The platform handles peak traffic of 50,000 concurrent users with Redis caching and database read replicas."
+  },
+  {
+    title: "AI-Powered Content Platform",
+    subtitle: "Enterprise content generation platform using GPT-4 and Claude",
+    icon: "ph:robot-duotone",
+    results: ["100,000+ AI-generated content pieces monthly", "RAG pipeline indexing 1M+ documents", "Sub-3 second generation time", "Cost optimisation reducing API spend by 40%", "Enterprise-grade content moderation pipeline"],
+    desc: "Developed an AI-powered content platform integrating OpenAI GPT-4 and Anthropic Claude with a custom RAG pipeline for enterprise knowledge retrieval. The system handles rate limiting, cost management, prompt versioning, content moderation, and A/B testing of different LLM models and configurations."
+  },
+  {
+    title: "Healthcare Portal",
+    subtitle: "Patient portal and practice management for UK clinic network",
+    icon: "ph:hospital-duotone",
+    results: ["50 clinic locations onboarded", "150,000+ patient records migrated", "Integrated with NHS GP Connect", "Automated appointment scheduling", "HIPAA and UK GDPR compliant"],
+    desc: "Delivered a comprehensive healthcare portal with patient record management, appointment scheduling, video consultations, e-prescriptions, and NHS system integrations. Built with HIPAA-compliant security controls, FHIR R4 APIs for EHR interoperability, and role-based access for clinical and administrative staff."
+  }
+];
+
+const faqItems = [
+  { q: "Why choose Laravel for enterprise applications?", a: "Laravel is ideal for enterprise applications because of its built-in security features (encryption, CSRF protection, SQL injection prevention), mature ecosystem of first-party packages, active community with long-term support releases, and proven scalability powering applications handling millions of users on platforms like Laravel Vapor and Laravel Cloud." },
+  { q: "How much does Laravel development cost?", a: "Laravel development costs vary by project scope and complexity. A typical web application starts at $15,000-$30,000. SaaS platforms range from $30,000-$80,000. Enterprise systems with integrations and compliance requirements range from $50,000-$150,000+. We provide detailed quotes after a discovery phase." },
+  { q: "Can Laravel scale?", a: "Yes, Laravel scales to enterprise workloads. Laravel Octane boosts performance by 10-20x using RoadRunner or Swoole. Laravel Horizon manages Redis queues at scale. Laravel Vapor provides auto-scaling serverless infrastructure on AWS Lambda. We have built Laravel applications handling millions of requests per day." },
+  { q: "How long does Laravel development take?", a: "A typical web application takes 8-16 weeks. SaaS platforms require 12-20 weeks. Enterprise systems with complex integrations range from 16-30 weeks. Timelines depend on scope, integrations, compliance requirements, and team size. We provide timeline estimates after the discovery phase." },
+  { q: "Do you provide ongoing support after launch?", a: "Yes, we provide comprehensive post-launch support including security patching, dependency management, performance monitoring, bug fixing with SLAs, and feature enhancements. Support plans include dedicated Slack channels, monthly reports, and priority incident response." },
+  { q: "Can you migrate legacy PHP applications to Laravel?", a: "Yes, we specialise in migrating legacy PHP applications (including WordPress, CodeIgniter, CakePHP, and custom frameworks) to modern Laravel applications. Our migration process ensures zero data loss, preserved SEO rankings, and improved performance." },
+  { q: "Do you work with startups?", a: "Yes, we work with startups at every stage from pre-seed to Series B. We help startups build MVPs quickly, establish scalable architecture from day one, and iterate based on user feedback. We offer flexible engagement models for early-stage companies." },
+  { q: "Do you build SaaS applications?", a: "Yes, SaaS development is one of our core specialities. We build multi-tenant SaaS platforms with subscription billing via Laravel Cashier, feature flag systems, usage analytics, tenant onboarding workflows, and auto-scaling infrastructure on Laravel Vapor." },
+  { q: "Can Laravel integrate AI?", a: "Yes, Laravel integrates with all major AI providers. We build AI features using OpenAI GPT-4, Anthropic Claude, and Google Gemini within Laravel applications. Our RAG pipelines combine LLMs with your data using vector databases like Pinecone and pgvector for accurate, context-aware AI responses." },
+  { q: "Do you provide Laravel audits?", a: "Yes, we conduct comprehensive Laravel audits covering code quality, security vulnerabilities, performance bottlenecks, dependency health, and architectural issues. Each audit produces a detailed report with severity-ranked findings and remediation steps." },
+  { q: "Do you offer dedicated Laravel developers?", a: "Yes, we offer dedicated developer engagement models where one or more developers work exclusively on your project. This model works well for ongoing development, long-term product building, and teams that need consistent engineering capacity." },
+  { q: "Can Laravel handle high traffic?", a: "Yes, Laravel is proven at scale. With Laravel Octane, Redis caching, database read replicas, queue workers, and CDN integration, Laravel applications handle millions of daily users. We have built Laravel systems processing 50,000+ concurrent users in production." },
+  { q: "What databases do you support?", a: "We support MySQL 8.x, PostgreSQL, MariaDB, and SQLite for primary databases. We use Redis for caching, queues, and real-time data. We integrate Elasticsearch for advanced search, DynamoDB for high-throughput workloads, and MongoDB for document storage when needed." },
+  { q: "Do you build REST APIs?", a: "Yes, we build RESTful APIs following best practices including proper HTTP methods, resource naming conventions, versioning, pagination, filtering, sorting, comprehensive validation, rate limiting, and OpenAPI/Swagger documentation. We use Laravel's API resources and Form Requests for consistent, maintainable APIs." },
+  { q: "Do you build GraphQL APIs?", a: "Yes, we build GraphQL APIs using Laravel Lighthouse, the most popular GraphQL server for Laravel. We implement queries, mutations, subscriptions, validation, complex authorization rules, and performance optimisation including N+1 query prevention and deferred resolution." },
+  { q: "Do you build mobile backends?", a: "Yes, we build mobile backends using Laravel APIs that support push notifications, file uploads, offline data synchronisation, pagination, and authentication via Sanctum or Passport. We have built backends powering iOS, Android, and cross-platform mobile applications." },
+  { q: "Can you modernise existing Laravel applications?", a: "Yes, we modernise legacy Laravel applications by upgrading to the latest Laravel version, refactoring legacy code patterns, adding test coverage, implementing CI/CD pipelines, migrating to modern frontend stacks (Inertia, Livewire, Vue), and optimising performance with Octane and Horizon." },
+  { q: "Do you build custom web applications?", a: "Yes, custom web application development is our primary service. We build internal business tools, customer-facing portals, CRM systems, project management platforms, collaboration tools, reporting dashboards, and any other web application your business needs." },
+  { q: "What security measures do you implement?", a: "Every Laravel application we build includes encryption at rest and in transit, CSRF protection, XSS prevention, SQL injection prevention, secure authentication (with MFA when required), rate limiting, audit logging, and regular dependency vulnerability scanning as standard practice." },
+  { q: "Do you provide Laravel Nova development?", a: "Yes, we build custom Laravel Nova admin panels with tailored resources, custom tools, metrics cards, filters, and actions. Nova is ideal for content management, user administration, order management, and business analytics dashboards." },
+  { q: "Can you integrate third-party APIs?", a: "Yes, we integrate with hundreds of third-party APIs including payment gateways (Stripe, PayPal, Paddle), CRM platforms (Salesforce, HubSpot), marketing tools (Mailchimp, SendGrid), ERP systems (SAP, NetSuite), and industry-specific APIs (healthcare, fintech, logistics)." },
+  { q: "Do you build e-commerce platforms?", a: "Yes, we build custom e-commerce platforms with product catalog management, shopping cart, checkout flows, payment processing, order management, inventory tracking, shipping integration, and customer accounts. We also build multi-vendor marketplace platforms." }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://laravelcompany.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://laravelcompany.com/services/" }
+  ]
+};
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Laravel Development Services",
+  "description": "Comprehensive Laravel development services including custom web applications, APIs, AI integration, consulting, maintenance, and industry-specific solutions.",
+  "url": "https://laravelcompany.com/services/",
+  "numberOfItems": services.length,
+  "itemListElement": services.map((s, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Service",
+      "name": s.title,
+      "url": `https://laravelcompany.com${s.slug}`,
+      "provider": {
+        "@type": "Organization",
+        "name": "Laravel Company"
+      }
+    }
+  }))
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Service", "ProfessionalService"],
+  "serviceType": "Laravel Development Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company",
+    "url": "https://laravelcompany.com",
+    "logo": "https://laravelcompany.com/logo.svg",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127"
+    }
+  },
+  "description": "Custom Laravel development services including web applications, SaaS platforms, API development, AI integration, consulting, audits, maintenance, and migration. UK-based Laravel development company with 500+ projects delivered.",
+  "areaServed": ["GB", "US", "EU", "Worldwide"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Laravel Development Services",
+    "itemListElement": services.map(s => ({
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": s.title
+      }
+    }))
+  }
+};
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Laravel Development Services | Custom Software, APIs, AI & Consulting",
+  "description": "Laravel development services including custom web applications, SaaS platforms, API development, AI integrations, consulting, audits, maintenance and enterprise solutions.",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".speakable-heading", ".speakable-text"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Laravel Development Services"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company"
+  }
+};
 ---
 
 <Layout
-  title="Laravel Development Services | Custom Web Apps & API Development"
-  description="Professional Laravel development services: custom web apps, REST APIs, SaaS platforms, e-commerce, migration & support. 500+ projects delivered. Get a free quote."
+  title="Laravel Development Services | Custom Software, APIs, AI & Consulting"
+  description="Laravel development services including custom web applications, SaaS platforms, API development, AI integrations, consulting, audits, maintenance and enterprise solutions. 500+ projects delivered."
 >
   <main>
-    <GeoHero
-      title="Laravel Development Services"
-      description="Custom Laravel applications, REST APIs, SaaS platforms, and e-commerce solutions. 500+ projects delivered with 4.9/5 rating."
-      breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]}
-    />
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark speakable-text">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <span>/</span>
+          <span class="text-white">Services</span>
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name="ph:buildings-duotone" class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">Laravel Agency</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            Laravel <span class="gradient-text">Development Services</span>
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-lg md:text-xl text-white/70 leading-relaxed font-medium max-w-3xl mx-auto">
+            We are a UK-based Laravel development company delivering custom web applications, SaaS platforms, API-first architectures, AI integrations, and enterprise solutions. 500+ projects delivered with a 4.9/5 client rating. Every project is built with security-first practices, scalable architecture, and long-term maintainability in mind.
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Get Free Quote</a>
+            <a href="/hire-laravel-developer/" class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">Hire Laravel Developers</a>
+          </div>
+          <div class="animate-on-scroll delay-4 mt-10 flex flex-wrap justify-center gap-8 text-sm text-white/60 font-bold uppercase tracking-widest">
+            <span class="flex items-center gap-2"><Icon name="ph:star-fill" class="w-4 h-4 text-yellow-400" /> 4.9/5 Rating</span>
+            <span class="flex items-center gap-2"><Icon name="ph:check-circle-fill" class="w-4 h-4 text-green-400" /> 500+ Projects</span>
+            <span class="flex items-center gap-2"><Icon name="ph:map-pin-fill" class="w-4 h-4 text-payflo-purple" /> UK & Global</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-24 speakable-heading">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Custom Laravel <span class="gradient-text">Development Services</span></h2>
+        </div>
+        <div class="glass-card p-8 md:p-10 border-white/10 animate-on-scroll">
+          <p class="mb-6 text-gray-300">Laravel has become the framework of choice for modern web application development, powering everything from startup MVPs to enterprise-grade systems serving millions of users. As a leading <strong class="text-white">Laravel development company</strong>, we have delivered 500+ projects across industries including healthcare, fintech, e-commerce, logistics, and SaaS — each one built with a focus on security, scalability, and long-term maintainability.</p>
+          <p class="mb-6 text-gray-300">What makes Laravel exceptional is its comprehensive ecosystem. Unlike other frameworks that require developers to piece together third-party libraries for basic functionality, Laravel ships with built-in authentication, encryption, queue management, event broadcasting, caching, validation, and testing tools — all maintained by a dedicated core team with a clear release roadmap. For businesses, this means faster development cycles, lower maintenance costs, and reduced technical risk. As an experienced <strong class="text-white">Laravel development agency</strong>, we leverage this ecosystem to deliver production-ready applications in weeks, not months.</p>
+          <p class="mb-6 text-gray-300">Our team specialises in building enterprise applications that handle complex business logic, high-throughput transaction processing, and sensitive data requiring robust security controls. We build SaaS platforms with multi-tenant architecture, subscription billing, and usage analytics. We design API-first systems that power mobile applications, third-party integrations, and microservice ecosystems. We integrate artificial intelligence into Laravel applications, connecting OpenAI, Anthropic, and Google Gemini models with your proprietary data through retrieval-augmented generation pipelines. Every solution is built with an architecture-first approach, ensuring your application can grow, evolve, and adapt to changing business requirements without requiring rewrites.</p>
+          <p class="text-gray-300">As <strong class="text-white">Laravel developers</strong>, we bring deep expertise across the full Laravel ecosystem — from Horizon and Nova to Reverb and Vapor — combined with years of experience building <strong class="text-white">custom Laravel development</strong> solutions for businesses worldwide. Whether you need <strong class="text-white">Laravel software development</strong> for a new product, <strong class="text-white">Laravel web application development</strong> for an internal business tool, or expert consulting to improve an existing Laravel application, our team delivers the technical excellence and strategic guidance that transforms your vision into a reliable, scalable product.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Service Blocks -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Our Laravel <span class="gradient-text">Services</span></h2>
+          <p class="text-gray-400 text-lg">Comprehensive Laravel development services covering every stage of your project — from strategy and architecture through development, deployment, and ongoing support.</p>
+        </div>
+        <div class="space-y-8 max-w-6xl mx-auto">
+          {services.map((service, i) => (
+            <div class="animate-on-scroll glass-card p-8 md:p-10 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+              <div class="flex items-start gap-5 mb-5">
+                <Icon name={service.icon} class="w-10 h-10 text-payflo-purple mt-1 group-hover:scale-110 transition-transform shrink-0" />
+                <h3 class="text-2xl font-black text-white">{service.title}</h3>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">{service.desc}</p>
+              <a href={service.slug} class="inline-flex items-center gap-2 text-payflo-purple font-bold hover:text-payflo-pink transition-colors text-sm">
+                {service.linkText} <Icon name="ph:arrow-right" class="w-4 h-4" />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="py-24">
+      <div class="container-custom max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Industries <span class="gradient-text">We Serve</span></h2>
+          <p class="text-gray-400 text-lg">Deep domain expertise across industries. Each sector has unique requirements, compliance considerations, and user expectations — and we bring specialist knowledge to every project.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {industries.map((ind, i) => (
+            <a
+              href={ind.slug}
+              class="animate-on-scroll glass-card p-6 border-white/10 hover:border-payflo-purple/50 transition-colors group"
+            >
+              <Icon name={ind.icon} class="w-8 h-8 text-payflo-purple mb-4 group-hover:scale-110 transition-transform" />
+              <h3 class="text-lg font-bold mb-2 text-white">{ind.title}</h3>
+              <p class="text-gray-400 text-xs leading-relaxed">{ind.desc}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Our Laravel <span class="gradient-text">Development Process</span></h2>
+          <p class="text-gray-400 text-lg">A proven, structured approach to delivering high-quality Laravel applications on time and on budget. Every project follows this end-to-end methodology.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {processSteps.map((step, i) => (
+            <div class="animate-on-scroll glass-card p-6 border-white/10 hover:border-payflo-purple/50 transition-colors">
+              <span class="inline-block text-3xl font-black text-payflo-purple/30 mb-3">{step.step}</span>
+              <h3 class="text-xl font-black mb-3 text-white">{step.title}</h3>
+              <p class="text-gray-400 text-xs leading-relaxed">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="py-24">
+      <div class="container-custom max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Technologies <span class="gradient-text">We Work With</span></h2>
+          <p class="text-gray-400 text-lg">Modern technology stack covering backend, frontend, mobile, AI, infrastructure, and databases. We select the right tools for each project's specific requirements.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {techCategories.map((cat, i) => (
+            <div class="animate-on-scroll glass-card p-8 border-white/10">
+              <Icon name={cat.icon} class="w-10 h-10 text-payflo-purple mb-5" />
+              <h3 class="text-xl font-black mb-5 text-white">{cat.title}</h3>
+              <ul class="space-y-3">
+                {cat.items.map(item => (
+                  <li class="flex items-start gap-3 text-gray-400 text-sm">
+                    <Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Laravel Expertise -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Laravel <span class="gradient-text">Expertise</span></h2>
+          <p class="text-gray-400 text-lg">Deep mastery of the Laravel ecosystem. We leverage first-party Laravel packages to build robust, maintainable applications faster.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {laravelExpertise.map((exp, i) => (
+            <div class="animate-on-scroll glass-card p-6 border-white/10 hover:border-payflo-purple/50 transition-colors">
+              <h3 class="text-lg font-black mb-2 text-white">{exp.name}</h3>
+              <p class="text-gray-400 text-xs leading-relaxed">{exp.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Laravel / Comparison -->
+    <section class="py-24">
+      <div class="container-custom max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Why Choose <span class="gradient-text">Laravel?</span></h2>
+          <p class="text-gray-400 text-lg">Laravel offers unique advantages for business application development compared to other popular frameworks. Here is how it compares across the dimensions that matter most to your project.</p>
+        </div>
+        <div class="space-y-8">
+          {comparisons.map((comp, i) => (
+            <div class="animate-on-scroll glass-card p-8 border-white/10">
+              <div class="flex items-center gap-3 mb-6">
+                <h3 class="text-2xl font-black text-white">Laravel vs</h3>
+                <span class="text-2xl font-black text-payflo-pink">{comp.framework}</span>
+                <span class="text-sm text-gray-500 font-medium">| {comp.useCase}</span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                  <h4 class="text-sm font-bold text-payflo-purple mb-2">Development Speed</h4>
+                  <p class="text-gray-400 text-xs leading-relaxed">{comp.devSpeed}</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                  <h4 class="text-sm font-bold text-payflo-purple mb-2">Security</h4>
+                  <p class="text-gray-400 text-xs leading-relaxed">{comp.security}</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                  <h4 class="text-sm font-bold text-payflo-purple mb-2">Ecosystem</h4>
+                  <p class="text-gray-400 text-xs leading-relaxed">{comp.ecosystem}</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                  <h4 class="text-sm font-bold text-payflo-purple mb-2">Cost & Maintenance</h4>
+                  <p class="text-gray-400 text-xs leading-relaxed">{comp.cost}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Recent Laravel <span class="gradient-text">Projects</span></h2>
+          <p class="text-gray-400 text-lg">Real projects demonstrating our Laravel development expertise across SaaS, marketplace, AI, and healthcare domains.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {caseStudies.map((cs, i) => (
+            <div class="animate-on-scroll glass-card p-8 border-white/10 hover:border-payflo-purple/50 transition-colors">
+              <div class="flex items-center gap-3 mb-4">
+                <Icon name={cs.icon} class="w-8 h-8 text-payflo-pink" />
+                <div>
+                  <h3 class="text-xl font-black text-white">{cs.title}</h3>
+                  <p class="text-gray-500 text-xs">{cs.subtitle}</p>
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed mb-5">{cs.desc}</p>
+              <ul class="space-y-2">
+                {cs.results.map(r => (
+                  <li class="flex items-start gap-3 text-gray-400 text-xs">
+                    <Icon name="ph:check-circle-duotone" class="w-4 h-4 text-payflo-purple mt-0.5 shrink-0" />
+                    <span>{r}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- E-E-A-T / Why Companies Choose Us -->
+    <section class="py-24">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Why Companies Choose Our <span class="gradient-text">Laravel Developers</span></h2>
+        </div>
+        <div class="glass-card p-8 md:p-10 border-white/10 animate-on-scroll">
+          <p class="mb-6 text-gray-300">Companies choose to work with our Laravel developers because we bring more than technical skills to every project — we bring strategic thinking, architectural discipline, and a genuine commitment to our clients' success. Our team has been building Laravel applications since the framework's early releases, accumulating years of production experience across hundreds of projects spanning startups, scale-ups, and enterprise organisations.</p>
+          <p class="mb-6 text-gray-300">We take an architecture-first approach to every engagement. Before writing a single line of code, we invest in understanding your business domain, technical constraints, integration requirements, and long-term roadmap. This upfront investment means fewer surprises, less rework, and a system designed to grow with your business. Our security mindset means every application is built with defence in depth — encryption, authentication, authorisation, input validation, and audit logging are not afterthoughts but foundational design decisions.</p>
+          <p class="mb-6 text-gray-300">Our team actively contributes to the Laravel ecosystem through open-source packages, community knowledge sharing, and ongoing engagement with the Laravel core team. We maintain several open-source Laravel packages and regularly publish technical content to help the broader Laravel community build better applications. This commitment to the ecosystem ensures we stay at the forefront of Laravel best practices and emerging capabilities.</p>
+          <p class="mb-6 text-gray-300">We build long-term partnerships, not one-off projects. Many of our clients have worked with us for years, evolving their applications through multiple major releases, feature expansions, and architecture migrations. Our code quality standards — comprehensive test coverage, clean architecture patterns, thorough documentation, and consistent coding conventions — ensure that your application remains maintainable and extensible long after the initial development phase.</p>
+          <p class="text-gray-300">Our track record speaks for itself: 500+ projects delivered, 4.9/5 average client rating, and long-term relationships with clients across 20+ countries. When you hire our <strong class="text-white">Laravel experts</strong>, you gain a technical partner who cares as much about your project's success as you do.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Location Pages -->
-    <section class="py-24">
+    <section class="py-24 bg-white/5">
       <div class="container-custom">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
           <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
             Laravel Development by <span class="gradient-text">Location</span>
           </h2>
           <p class="mt-6 text-xl text-white/70 font-medium">
-            Find expert Laravel developers in your city. Local expertise with global standards.
+            Find expert <strong class="text-white">Laravel developers</strong> in your city. Local expertise with global standards.
           </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -57,14 +681,14 @@ const featuredModifiers = SERVICE_MODIFIERS.filter(m => m.featured);
     </section>
 
     <!-- Service Variant Pages -->
-    <section class="py-24 bg-white/5">
+    <section class="py-24">
       <div class="container-custom">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
           <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">
             Laravel Development by <span class="gradient-text">Service Type</span>
           </h2>
           <p class="mt-6 text-xl text-white/70 font-medium">
-            Choose the Laravel development service that matches your business needs.
+            Choose the <strong class="text-white">Laravel development service</strong> that matches your business needs.
           </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -88,27 +712,67 @@ const featuredModifiers = SERVICE_MODIFIERS.filter(m => m.featured);
       </div>
     </section>
 
-    <!-- Why Geo Pages Matter -->
-    <section class="py-24">
+    <!-- FAQ -->
+    <section class="py-24 bg-white/5">
       <div class="container-custom max-w-4xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-          <div class="animate-on-scroll">
-            <Icon name="ph:globe-duotone" class="w-12 h-12 text-payflo-purple mx-auto mb-6" />
-            <h3 class="text-xl font-black text-white mb-3">Local SEO Optimized</h3>
-            <p class="text-white/60">Each page targets specific city keywords with local business schema for better search visibility.</p>
-          </div>
-          <div class="animate-on-scroll delay-1">
-            <Icon name="ph:identification-card-duotone" class="w-12 h-12 text-payflo-purple mx-auto mb-6" />
-            <h3 class="text-xl font-black text-white mb-3">Unique Content</h3>
-            <p class="text-white/60">Every page features city-specific statistics, pricing, testimonials, and local insights.</p>
-          </div>
-          <div class="animate-on-scroll delay-2">
-            <Icon name="ph:arrows-out-duotone" class="w-12 h-12 text-payflo-purple mx-auto mb-6" />
-            <h3 class="text-xl font-black text-white mb-3">Scalable System</h3>
-            <p class="text-white/60">Add new cities or service types by simply updating data arrays — pages generate automatically.</p>
-          </div>
+        <h2 class="text-4xl font-black text-center mb-16">Laravel Development <span class="gradient-text">FAQ</span></h2>
+        <div class="space-y-4">
+          {faqItems.map((item, i) => (
+            <details class="animate-on-scroll glass-card border-white/10 group open:border-payflo-purple/50 transition-colors" style={{ borderRadius: '1rem', overflow: 'hidden' }}>
+              <summary class="p-6 cursor-pointer list-none flex items-center justify-between gap-4">
+                <h4 class="text-base font-bold text-white group-open:text-payflo-purple transition-colors">{item.q}</h4>
+                <Icon name="ph:caret-down-duotone" class="w-5 h-5 text-white/50 shrink-0 group-open:rotate-180 transition-transform" />
+              </summary>
+              <div class="px-6 pb-6">
+                <p class="text-gray-400 text-sm leading-relaxed">{item.a}</p>
+              </div>
+            </details>
+          ))}
         </div>
       </div>
     </section>
+
+    <!-- Internal Links -->
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="text-center mb-10">
+          <h3 class="text-2xl font-black text-white">Explore Our <span class="gradient-text">Services</span></h3>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 text-sm max-w-4xl mx-auto">
+          <a href="/laravel-development-services/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel Development</a>
+          <a href="/laravel-consulting/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel Consulting</a>
+          <a href="/ai-digital-transformation/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel AI Development</a>
+          <a href="/laravel-api-development/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel API Development</a>
+          <a href="/laravel-security-audit/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel Audit & Security</a>
+          <a href="/migrate-wordpress-to-laravel/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel Migration</a>
+          <a href="/laravel-saas-development/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel SaaS Development</a>
+          <a href="/laravel-healthcare-software/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Healthcare Development</a>
+          <a href="/laravel-fintech-development/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">FinTech Development</a>
+          <a href="/laravel-ecommerce-development/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">E-commerce Development</a>
+          <a href="/hire-laravel-developer/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Hire Laravel Developers</a>
+          <a href="/laravel-company-profile/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel Development Company</a>
+          <a href="/laravel-development-services/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Custom Laravel Development</a>
+          <a href="/upgrade-laravel-version/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel Upgrades</a>
+          <a href="/laravel-performance-optimization/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Performance Optimization</a>
+        </div>
+      </div>
+    </section>
+
+    <CTASection />
+
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(webpageSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />
   </main>
 </Layout>
+
+<style>
+  .btn { @apply inline-flex items-center justify-center font-black transition-all duration-300 rounded-2xl; }
+  .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
+  .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
+  .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+  details { @apply rounded-2xl overflow-hidden; }
+  details summary::-webkit-details-marker { display: none; }
+</style>
