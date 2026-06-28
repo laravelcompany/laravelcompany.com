@@ -26,72 +26,344 @@ const features = [
   }
 ];
 
+const solutions = [
+  {
+    title: "Patient Portals",
+    desc: "Custom patient portals with appointment scheduling, medical record access, prescription refill requests, secure messaging with providers, lab result viewing, and integrated billing. Built with HIPAA-compliant authentication and role-based access for patients, physicians, and administrative staff. FHIR-enabled for seamless EMR data synchronisation.",
+    icon: "ph:user-circle-duotone"
+  },
+  {
+    title: "Telemedicine Platforms",
+    desc: "Full-featured telehealth solutions with HD video consultations powered by WebRTC, virtual waiting rooms, screen sharing for diagnostic review, digital prescriptions, automated encounter notes, and insurance eligibility verification. Supports real-time provider-patient interaction with session recording and audit logging.",
+    icon: "ph:video-camera-duotone"
+  },
+  {
+    title: "Electronic Health Records (EHR)",
+    desc: "Cloud-based EHR systems supporting comprehensive patient health records, clinical decision support, medication management, lab integrations, and interoperable data exchange via HL7 FHIR and CDA standards. Designed for multi-specialty use with customisable templates and workflows.",
+    icon: "ph:clipboard-text-duotone"
+  },
+  {
+    title: "Electronic Medical Records (EMR)",
+    desc: "Streamlined EMR software for outpatient and inpatient settings with patient charting, order management, clinical documentation, e-prescribing, and lab result integration. Supports custom specialty modules with offline-capable architecture and real-time sync.",
+    icon: "ph:note-duotone"
+  },
+  {
+    title: "Practice Management Software",
+    desc: "End-to-end practice management solutions including appointment scheduling, insurance claims processing, patient intake forms, automated reminders, payment collection, and reporting dashboards. Multi-location support with centralised administration and role-based access controls.",
+    icon: "ph:calendar-duotone"
+  },
+  {
+    title: "Medical Billing Systems",
+    desc: "HIPAA-compliant medical billing software with claims submission (EDI 837), payment posting, denial management, patient statements, and revenue cycle analytics. Integrated with practice management and EHR systems for end-to-end revenue cycle automation.",
+    icon: "ph:currency-dollar-duotone"
+  },
+  {
+    title: "Healthcare CRM Platforms",
+    desc: "Patient-centric CRM solutions with automated appointment reminders, follow-up campaigns, patient engagement tracking, referral management, and satisfaction surveys. Designed to improve patient retention, reduce no-shows, and streamline provider-patient communication.",
+    icon: "ph:users-three-duotone"
+  },
+  {
+    title: "Healthcare Marketplaces",
+    desc: "Multi-vendor healthcare marketplace platforms connecting patients with providers, labs, pharmacies, and wellness services. Features include provider directories, real-time availability, booking, payments, reviews, and telemedicine integration for online consultations.",
+    icon: "ph:storefront-duotone"
+  },
+  {
+    title: "Remote Patient Monitoring",
+    desc: "RPM platforms integrating with wearable devices and IoT medical sensors for real-time vitals tracking, automated alerts, trend analytics, and provider dashboards. Supports chronic disease management, post-surgical monitoring, and elderly care with configurable threshold-based notifications.",
+    icon: "ph:heart-duotone"
+  },
+  {
+    title: "Mental Health Platforms",
+    desc: "Specialised platforms for mental health practices with HIPAA-compliant video therapy, mood and behaviour tracking, standardised assessment tools, treatment plan management, insurance billing for behavioural health, and secure journaling features.",
+    icon: "ph:brain-duotone"
+  },
+  {
+    title: "Laboratory Information Systems",
+    desc: "LIS solutions for lab workflow management including sample tracking, order entry, result reporting, quality control, instrument integration, and HL7-based data exchange with hospitals and clinics. Supports multi-site lab networks with configurable test catalogues.",
+    icon: "ph:flask-duotone"
+  },
+  {
+    title: "Pharmacy Management Software",
+    desc: "Comprehensive pharmacy systems with prescription processing, inventory management, drug interaction checking, e-prescribing (EPCS), insurance adjudication, patient counselling documentation, and adherence tracking. Integrated with EHR and eRx networks.",
+    icon: "ph:first-aid-kit-duotone"
+  }
+];
+
+const industries = [
+  {
+    title: "Hospitals",
+    desc: "Enterprise-grade solutions for multi-department hospital systems including EHR integration with Epic and Cerner, patient flow management, operating room scheduling, and inter-departmental data exchange via HL7 FHIR."
+  },
+  {
+    title: "Private Clinics",
+    desc: "Scalable clinic management software with appointment booking, EMR, billing, and patient communication tools. Designed for single and multi-provider practices with specialty-specific customisations."
+  },
+  {
+    title: "Dental Practices",
+    desc: "Dental practice management platforms with treatment planning, digital imaging integration, insurance claim processing, patient recall automation, and chair-side documentation tools."
+  },
+  {
+    title: "Mental Health Providers",
+    desc: "HIPAA-compliant platforms for therapists, psychiatrists, and counsellors including teletherapy video sessions, progress note templates, insurance billing for behavioural health, and client portal access."
+  },
+  {
+    title: "Home Healthcare",
+    desc: "Home health agency management software with caregiver scheduling, visit verification, clinical documentation, medication management, and integration with REMS and patient monitoring devices."
+  },
+  {
+    title: "Medical Device Companies",
+    desc: "Software platforms for medical device management including device tracking, maintenance scheduling, usage analytics, regulatory compliance documentation, and integration with hospital procurement systems."
+  },
+  {
+    title: "Health Insurance Providers",
+    desc: "Insurance technology solutions with claims processing, provider network management, member portals, prior authorisation workflows, and analytics dashboards for risk assessment and population health."
+  },
+  {
+    title: "Diagnostic Laboratories",
+    desc: "Laboratory information systems with order entry, result management, quality control, instrument interfacing, and HL7-based connectivity with hospitals, clinics, and reference labs."
+  }
+];
+
+const techCategories = [
+  {
+    title: "Healthcare Data Standards",
+    items: ["HL7 v2", "HL7 FHIR", "CDA (Clinical Document Architecture)", "SMART on FHIR", "DICOM", "NHS Digital Standards"],
+    icon: "ph:file-code-duotone"
+  },
+  {
+    title: "EHR / EMR Integrations",
+    items: ["Epic", "Cerner", "Athenahealth", "Allscripts", "eClinicalWorks", "NextGen", "Meditech"],
+    icon: "ph:cloud-arrow-up-duotone"
+  },
+  {
+    title: "Technology Stack",
+    items: ["Laravel", "PHP", "Vue.js", "React", "WebRTC", "AWS", "Azure", "Docker", "PostgreSQL", "Redis"],
+    icon: "ph:cpu-duotone"
+  }
+];
+
+const processSteps = [
+  { step: "01", title: "Discovery", desc: "We analyse your healthcare business requirements, compliance needs, integration points, and user workflows. This phase defines the product vision, technical scope, and project roadmap." },
+  { step: "02", title: "Compliance Assessment", desc: "Our compliance team reviews HIPAA, GDPR, SOC 2, and NHS Digital requirements relevant to your project. We identify security controls, data handling policies, and BAA requirements." },
+  { step: "03", title: "Architecture Design", desc: "We design a scalable, secure architecture with FHIR-ready data models, encryption layers, audit logging, and cloud infrastructure on AWS or Azure. Key decisions on HL7 integration patterns are finalised." },
+  { step: "04", title: "UX / UI Design", desc: "Patient and provider interfaces are designed for accessibility, clarity, and efficiency. We follow healthcare UX best practices including WCAG compliance, clinical workflow mapping, and responsive design." },
+  { step: "05", title: "Development", desc: "Agile development in two-week sprints with continuous integration. Laravel backend with Vue.js or React frontend. We build HIPAA-compliant APIs, FHIR endpoints, and real-time communication features." },
+  { step: "06", title: "Security Testing", desc: "Comprehensive penetration testing, vulnerability scanning, code analysis, and dependency auditing. We test for OWASP Top 10, HIPAA Security Rule controls, and data privacy compliance." },
+  { step: "07", title: "HIPAA Validation", desc: "Formal HIPAA compliance validation including risk assessment, security policy review, BAA execution, audit trail verification, and encryption validation. Documentation prepared for attestation." },
+  { step: "08", title: "Deployment", desc: "Production deployment with CI/CD pipelines, database encryption, backup strategies, disaster recovery configuration, and performance monitoring. Staged rollout with zero-downtime deployment strategy." },
+  { step: "09", title: "Ongoing Support", desc: "24/7 monitoring, maintenance, security patches, compliance updates, and feature enhancements. We provide SLA-backed support with incident response, regular security reviews, and compliance audits." }
+];
+
+const comparisons = [
+  {
+    framework: "Node.js",
+    security: "Laravel ships with built-in encryption, CSRF protection, SQL injection prevention, and authentication scaffolding. Node.js requires manual security configuration with third-party libraries, increasing compliance risk for healthcare applications.",
+    scalability: "Laravel with Octane, Horizon, and Vapor scales horizontally on AWS/Laravel Cloud. Node.js handles concurrent connections well but requires additional infrastructure for queue management and task scheduling common in healthcare.",
+    cost: "Laravel development is typically 30-40% faster due to batteries-included architecture, reducing total project cost. Node.js often requires more third-party integrations, increasing development time and cost for healthcare features.",
+    speed: "Laravel's convention-over-configuration approach enables rapid prototyping and faster time-to-market for healthcare MVPs. Node.js offers flexibility but requires more architectural decisions upfront.",
+    maintenance: "Laravel's LTS releases, comprehensive documentation, and large ecosystem make long-term maintenance predictable. Node.js ecosystem changes rapidly, requiring frequent dependency updates and migration work."
+  },
+  {
+    framework: "Django",
+    security: "Both offer strong security. Laravel's explicit middleware and policy-based authorisation provide finer-grained access control needed for healthcare RBAC. Django's monolithic admin is less suited for multi-role healthcare portals.",
+    scalability: "Laravel's queue system (Horizon), broadcasting, and cache drivers (Redis, DynamoDB) handle healthcare data pipelines well. Django's ORM scales but requires more configuration for event-driven healthcare workflows.",
+    cost: "Laravel developers are more available and cost-effective globally. Django developers often command higher rates. Laravel's ecosystem (Nova, Spark, Cashier) reduces custom development costs for subscription healthcare SaaS.",
+    speed: "Laravel's Blade templating, Livewire, and Inertia.js enable rapid iteration on patient and provider interfaces. Django's template system is less flexible for modern reactive healthcare UIs.",
+    maintenance: "Laravel's clear upgrade paths and comprehensive tooling (Forge, Envoyer) simplify ongoing maintenance. Django's major version migrations can be complex for long-running healthcare projects."
+  },
+  {
+    framework: "Ruby on Rails",
+    security: "Laravel and Rails are comparable on security fundamentals. Laravel's explicit authorisation gates (Gates/Policies) provide clearer audit trails for healthcare compliance. Rails' convention-based approach can obscure security controls.",
+    scalability: "Laravel's queue system, cache abstraction, and Octane server outperform Rails for healthcare workloads with high data throughput. Rails struggles with memory management under heavy healthcare data loads.",
+    cost: "Laravel development costs are generally 20-30% lower than Rails due to PHP hosting economics and developer availability. Healthcare applications on Laravel also benefit from lower cloud infrastructure costs with Vapor.",
+    speed: "Laravel's ecosystem (Laravel Bootcamp, Jetstream, Breeze) accelerates healthcare project setup. Rails offers similar speed but fewer specialised packages for healthcare-specific features like FHIR integration.",
+    maintenance: "Laravel's annual LTS releases and backward compatibility guarantee provide stability for regulated healthcare environments. Rails' shorter support window requires more frequent upgrades for compliance validation."
+  }
+];
+
+const caseStudies = [
+  {
+    title: "Telehealth Startup Platform",
+    subtitle: "Scalable video consultation platform for 50,000+ users",
+    results: [
+      "50,000+ active patients",
+      "WebRTC video with < 200ms latency",
+      "Full FHIR R4 integration",
+      "HIPAA compliance validated",
+      "3-month delivery timeline"
+    ],
+    desc: "Built a full-featured telehealth platform connecting patients with healthcare providers across the UK. Features include HD video consultations, virtual waiting rooms, digital prescriptions, automated encounter notes, and integrated payment processing."
+  },
+  {
+    title: "Clinic Management System",
+    subtitle: "Complete practice management for multi-location clinic network",
+    results: [
+      "15 clinic locations onboarded",
+      "5,000+ appointments per week",
+      "Integrated with NHS Spine",
+      "Automated billing reduced admin 60%",
+      "Patient satisfaction improved 40%"
+    ],
+    desc: "Developed a comprehensive clinic management platform with appointment scheduling, patient records, insurance claims, and real-time analytics. Integrated with NHS Digital systems for secure patient data exchange and GP record access."
+  }
+];
+
+const faqItems = [
+  {
+    q: "How long does healthcare software development take?",
+    a: "Patient portals typically take 8-12 weeks, telehealth platforms 12-16 weeks, and full healthcare systems 16-24 weeks. Timelines vary based on complexity, compliance requirements, and integration scope."
+  },
+  {
+    q: "How much does healthcare software development cost?",
+    a: "Patient portals start at $20,000-$40,000. Telehealth platforms cost $40,000-$80,000. Full healthcare systems range from $60,000-$150,000+. FHIR integrations cost $15,000-$30,000. We provide detailed quotes after discovery."
+  },
+  {
+    q: "Do you build HIPAA-compliant software?",
+    a: "Yes. All healthcare software we build is HIPAA-compliant with end-to-end encryption, audit logs, role-based access control, multi-factor authentication, and BAA (Business Associate Agreement) support included."
+  },
+  {
+    q: "Can you integrate with EHR / EMR systems?",
+    a: "Absolutely. We integrate with Epic, Cerner, Allscripts, Athenahealth, eClinicalWorks, NextGen, and other major EHR/EMR systems via HL7 FHIR, HL7 v2, and CDA standards for seamless patient data exchange."
+  },
+  {
+    q: "Do you develop telehealth platforms?",
+    a: "Yes. We build complete telehealth platforms with HD video consultations (WebRTC), virtual waiting rooms, screen sharing, digital prescriptions, encounter notes, insurance verification, and session recording."
+  },
+  {
+    q: "Can Laravel handle healthcare applications?",
+    a: "Yes. Laravel powers healthcare applications handling millions of patient records. With Octane, Horizon, and Vapor, Laravel scales to enterprise healthcare workloads. Built-in encryption, authentication, and queue systems make it ideal for HIPAA-compliant development."
+  },
+  {
+    q: "Do you support SMART on FHIR?",
+    a: "Yes. We build SMART on FHIR applications that integrate directly into EHR systems via the SMART launch framework. Our apps support standalone and EHR-launched workflows with OAuth2 authentication and FHIR R4 APIs."
+  },
+  {
+    q: "Can you build custom EHR software?",
+    a: "Yes. We develop custom EHR systems with patient charting, clinical documentation, order management, e-prescribing, lab integration, and custom specialty modules. Built on FHIR-compliant data models for interoperability."
+  },
+  {
+    q: "Do you sign Business Associate Agreements (BAAs)?",
+    a: "Yes. We sign BAAs as a standard part of our healthcare engagement process. Our BAAs cover all required HIPAA provisions including data protection, breach notification, and liability terms."
+  },
+  {
+    q: "How do you secure patient data?",
+    a: "Patient data is secured with encryption at rest (AES-256) and in transit (TLS 1.3), role-based access control, multi-factor authentication, comprehensive audit trails, and regular penetration testing. All data is stored on UK/EU AWS or Azure infrastructure."
+  },
+  {
+    q: "Can you integrate with Epic?",
+    a: "Yes. We integrate with Epic via FHIR R4 APIs, Epic's interoperability platform, and SMART on FHIR apps. We support patient data exchange, appointment scheduling, clinical document sharing, and population health data access."
+  },
+  {
+    q: "Can you integrate with Cerner?",
+    a: "Yes. We integrate with Cerner Millennium and Cerner HealtheIntent via FHIR APIs, HL7 v2 messages, and Cerner's Lightweight API framework. Support includes ADT, ORU, and scheduling message exchange."
+  },
+  {
+    q: "What healthcare APIs do you support?",
+    a: "We support HL7 FHIR (R4, STU3), HL7 v2, CDA, SMART on FHIR, NHS Digital APIs (Spine, GP Connect), Epic interoperability APIs, Cerner APIs, and custom RESTful healthcare data exchange endpoints."
+  },
+  {
+    q: "Can you migrate legacy healthcare systems?",
+    a: "Yes. We specialise in migrating legacy healthcare systems to modern Laravel-based platforms. Our migration process includes data mapping, HL7 conversion, compliance validation, and phased cutover with zero data loss."
+  },
+  {
+    q: "Do you provide penetration testing?",
+    a: "Yes. We include comprehensive penetration testing as part of our healthcare development process. Testing covers OWASP Top 10, HIPAA Security Rule controls, API security, authentication bypass, and data exposure risks."
+  },
+  {
+    q: "Can you build healthcare SaaS products?",
+    a: "Yes. We build healthcare SaaS platforms with multi-tenant architecture, subscription billing (Laravel Cashier), usage analytics, and role-based access for multiple provider organisations. Deployed on scalable cloud infrastructure."
+  },
+  {
+    q: "Do you offer ongoing support and maintenance?",
+    a: "Yes. We provide ongoing support with SLA-backed incident response, security patching, compliance updates, feature enhancements, and 24/7 monitoring. Monthly security reviews and quarterly compliance audits included."
+  },
+  {
+    q: "What compliance standards do you support?",
+    a: "We support HIPAA, GDPR, SOC 2, ISO 27001, NHS Digital standards, and UK data protection regulations. Our compliance framework includes data encryption, access controls, audit trails, BAA execution, and documentation."
+  },
+  {
+    q: "Do you work with UK healthcare providers?",
+    a: "Yes. We are a UK-based Laravel development company with deep experience integrating with NHS Digital systems, GP Connect, NHS Spine, and UK private healthcare providers. We comply with UK GDPR and NHS data security standards."
+  },
+  {
+    q: "Can you integrate with NHS Digital systems?",
+    a: "Yes. We integrate with NHS Digital APIs including GP Connect, NHS Spine, PDS (Personal Demographics Service), SDS (Spine Directory Service), and MESH (Message Exchange for Social Care and Health)."
+  }
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      "name": "How much does healthcare software development cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Healthcare platforms cost $30,000-$100,000+. Patient portals start at $20,000. Telehealth platforms cost $40,000-$80,000. FHIR integrations cost $15,000-$30,000."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you build HIPAA-compliant software?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. All healthcare software we build is HIPAA-compliant with end-to-end encryption, audit logs, role-based access control, and BAA (Business Associate Agreement) support."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you integrate with EHR/EMR systems?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Absolutely. We integrate with Epic, Cerner, Allscripts, and other EHRs via HL7 FHIR APIs, enabling seamless patient data exchange."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you develop telehealth platforms?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We build telehealth platforms with video consultations (WebRTC), digital prescriptions, encounter notes, and insurance verification."
-      }
+  mainEntity: faqItems.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
     }
-  ]
+  }))
 };
 
 const serviceSchema = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Laravel Healthcare Software",
+  "@type": ["Service", "ProfessionalService"],
+  "serviceType": "Laravel Healthcare Software Development",
   "provider": {
     "@type": "Organization",
     "name": "Laravel Company",
     "url": "https://laravelcompany.com"
   },
-  "description": "HIPAA-compliant healthcare software: patient portals, FHIR integrations, telehealth platforms. $30K-$100K.",
+  "description": "Custom Laravel healthcare software development services. HIPAA-compliant patient portals, telehealth platforms, FHIR integrations, EHR systems and healthcare SaaS applications. UK-based healthcare development experts.",
+  "areaServed": ["GB", "US", "EU"],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Healthcare Services",
+    "name": "Healthcare Software Development Services",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Patient Portal" }},
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "FHIR Integration" }}
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Patient Portal Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Telehealth Platform Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "EHR / EMR Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "FHIR Integration Services" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HIPAA Compliance Implementation" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Healthcare SaaS Development" }}
     ]
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://laravelcompany.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://laravelcompany.com/laravel-services/" },
+    { "@type": "ListItem", "position": 3, "name": "Healthcare Software Development", "item": "https://laravelcompany.com/laravel-healthcare-software/" }
+  ]
+};
+
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Laravel Healthcare Software Development | HIPAA, FHIR & Telehealth Solutions",
+  "description": "Custom Laravel healthcare software development services. HIPAA-compliant patient portals, telehealth platforms, FHIR integrations, EHR systems and healthcare SaaS applications.",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".speakable-heading", ".speakable-text"]
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Healthcare Software Development"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Laravel Company"
   }
 };
 ---
 
 <Layout
-  title="Laravel Healthcare Software Development | HIPAA Compliant"
-  description="HIPAA-compliant healthcare software: patient portals, FHIR integrations, telehealth platforms. $30K-$100K. Get a free consultation."
+  title="Laravel Healthcare Software Development Company | HIPAA, FHIR & Telehealth Solutions"
+  description="Custom Laravel healthcare software development services. HIPAA-compliant patient portals, telehealth platforms, FHIR integrations, EHR systems and healthcare SaaS applications. UK-based healthcare development experts."
 >
-  <main id="main-content">
-    <!-- Hero -->
+  <!-- Hero -->
     <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
       <div class="absolute inset-0 opacity-10 -z-10">
         <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
@@ -112,8 +384,8 @@ const serviceSchema = {
           <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
             Laravel <span class="gradient-text">Healthcare Software</span>
           </h1>
-          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
-            HIPAA-compliant patient portals, FHIR integrations, telehealth platforms. Starting at $30,000.
+          <p class="animate-on-scroll delay-2 mt-8 text-lg md:text-xl text-white/70 leading-relaxed font-medium max-w-3xl mx-auto speakable-text">
+            Healthcare software development involves building HIPAA-compliant digital solutions for the medical industry — from patient portals and telehealth platforms to electronic health records, medical billing systems, and healthcare marketplaces. Laravel is ideally suited for healthcare applications due to its robust encryption, built-in authentication, role-based access control, and mature ecosystem of packages for API development, queue management, and data protection. We serve a wide range of healthcare organisations including hospitals, private clinics, telehealth startups, medical SaaS companies, mental health platforms, healthcare marketplaces, and EHR system providers. Our team brings deep compliance expertise across HIPAA, GDPR, SOC 2, ISO 27001, and NHS Digital standards, ensuring every solution is audit-ready from day one. We follow a security-first development approach, implementing encryption at rest and in transit, comprehensive audit trails, multi-factor authentication, and strict access controls as standard practice across all healthcare projects.
           </p>
           <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
             <a href="/contact/" class="btn btn-primary px-10 py-5 text-lg shadow-2xl">Build Healthcare Software</a>
@@ -123,11 +395,48 @@ const serviceSchema = {
       </div>
     </section>
 
+    <!-- Long-Form Content: Custom Healthcare Software Development Services -->
+    <section class="py-24 speakable-heading">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Custom Healthcare <span class="gradient-text">Software Development</span></h2>
+        </div>
+        <div class="space-y-8 text-gray-300 text-base leading-relaxed">
+          <div class="animate-on-scroll glass-card p-8 md:p-10 border-white/10">
+            <p class="mb-6">Building healthcare software is fundamentally different from standard web application development. The stakes are higher — patient safety, data privacy, regulatory compliance, and clinical accuracy are non-negotiable requirements. Every decision, from database schema design to API authentication, must account for HIPAA, GDPR, and industry-specific standards that govern how patient data is stored, transmitted, and accessed.</p>
+            <p class="mb-6">Yet compliance alone is not enough. Modern healthcare platforms must deliver exceptional patient experiences, streamline provider workflows, and interoperate with an increasingly complex ecosystem of EHR systems, laboratory information systems, pharmacy platforms, and insurance portals. This is where Laravel excels — providing a secure, scalable foundation that accelerates development without compromising on compliance or quality.</p>
+            <p class="mb-6">Our healthcare development approach combines deep regulatory knowledge with technical excellence. We have delivered solutions for hospitals digitising patient records, telehealth startups scaling to 50,000+ users, mental health platforms requiring specialised data handling, and medical SaaS companies building multi-tenant subscription products. Each project is designed with future-proof architecture that accommodates evolving compliance requirements, growing patient volumes, and emerging interoperability standards like FHIR R4 and SMART on FHIR.</p>
+            <p>Whether you need a patient portal that integrates with existing EHR infrastructure, a telemedicine platform connecting patients with providers across multiple locations, or a complete healthcare SaaS product from concept to launch, our team has the <a href="/laravel-api-development/" class="text-payflo-purple hover:underline font-medium">API development</a> expertise, compliance knowledge, and <a href="/laravel-consulting/" class="text-payflo-purple hover:underline font-medium">technical consulting</a> capability to deliver. We act as partners in your healthcare digital transformation, not just developers — identifying risks early, advising on compliance strategy, and building systems that scale with your growth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Healthcare Solutions We Build -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Healthcare Software <span class="gradient-text">Solutions We Develop</span></h2>
+          <p class="text-gray-400 text-lg">Comprehensive healthcare software development across every major category. Each solution is built HIPAA-compliant by default, with FHIR-ready APIs and scalable cloud architecture.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {solutions.map((s, i) => (
+            <div class="animate-on-scroll delay-{i} glass-card p-8 border-white/10 group hover:border-payflo-purple/50 transition-colors">
+              <Icon name={s.icon} class="w-10 h-10 text-payflo-purple mb-5 group-hover:scale-110 transition-transform" />
+              <h3 class="text-xl font-black mb-3 text-white">{s.title}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <!-- Core Features -->
     <section class="py-24">
       <div class="container-custom">
         <div class="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
           <h2 class="text-4xl md:text-5xl font-black mb-6">Healthcare <span class="gradient-text">Core Features</span></h2>
+          <p class="text-gray-400 text-lg">Foundational capabilities built into every healthcare platform we develop.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {features.map((f, i) => (
@@ -141,33 +450,198 @@ const serviceSchema = {
       </div>
     </section>
 
-    <!-- Compliance -->
+    <!-- Healthcare Industries We Serve -->
     <section class="py-24 bg-white/5">
-      <div class="container-custom max-w-4xl mx-auto">
-        <h2 class="text-4xl font-black text-center mb-16">Compliance <span class="gradient-text">Ready</span></h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+      <div class="container-custom max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Healthcare Industries <span class="gradient-text">We Serve</span></h2>
+          <p class="text-gray-400 text-lg">Deep domain expertise across the healthcare spectrum. We build software tailored to the specific workflows, compliance requirements, and operational needs of each healthcare sector.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {industries.map((ind, i) => (
+            <div class="animate-on-scroll glass-card p-6 border-white/10 hover:border-payflo-purple/50 transition-colors">
+              <h3 class="text-lg font-bold mb-3 text-white">{ind.title}</h3>
+              <p class="text-gray-400 text-xs leading-relaxed">{ind.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Healthcare Technology Expertise -->
+    <section class="py-24">
+      <div class="container-custom max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Healthcare <span class="gradient-text">Technology Expertise</span></h2>
+          <p class="text-gray-400 text-lg">Technical depth across healthcare data standards, EHR integrations, and modern development technologies.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {techCategories.map((cat, i) => (
+            <div class="animate-on-scroll glass-card p-8 border-white/10">
+              <Icon name={cat.icon} class="w-10 h-10 text-payflo-purple mb-5" />
+              <h3 class="text-xl font-black mb-5 text-white">{cat.title}</h3>
+              <ul class="space-y-3">
+                {cat.items.map(item => (
+                  <li class="flex items-start gap-3 text-gray-400 text-sm">
+                    <Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Security & Compliance -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Healthcare Security <span class="gradient-text">&amp; Compliance</span></h2>
+          <p class="text-gray-400 text-lg">Security and compliance are embedded into every layer of our development process, not bolted on after the fact.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="animate-on-scroll glass-card p-8 border-white/10">
+            <Icon name="ph:shield-check-duotone" class="w-10 h-10 text-payflo-pink mb-5" />
+            <h3 class="text-xl font-black mb-4 text-white">HIPAA Compliance</h3>
+            <ul class="space-y-3 text-gray-400 text-sm">
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />Encryption at rest (AES-256) and in transit (TLS 1.3)</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />Comprehensive audit trails with user activity logging</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />Role-based access control (RBAC) with granular permissions</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />Multi-factor authentication for all healthcare applications</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />Business Associate Agreement (BAA) execution</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />Automatic session timeout and idle session management</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />HIPAA risk assessment and security policy documentation</li>
+            </ul>
+          </div>
+          <div class="animate-on-scroll glass-card p-8 border-white/10">
+            <Icon name="ph:lock-key-duotone" class="w-10 h-10 text-payflo-pink mb-5" />
+            <h3 class="text-xl font-black mb-4 text-white">Enterprise Compliance</h3>
+            <ul class="space-y-3 text-gray-400 text-sm">
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />GDPR compliance with data subject access request (DSAR) support</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />SOC 2 Type II controls and reporting</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />ISO 27001 aligned information security management</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />Data retention policies with automated purging schedules</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />Disaster recovery with RPO/RTO defined in SLAs</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />Penetration testing and vulnerability scanning (quarterly)</li>
+              <li class="flex items-start gap-3"><Icon name="ph:check-circle-duotone" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />Incident response plan with breach notification procedure</li>
+            </ul>
+          </div>
+        </div>
+        <div class="animate-on-scroll mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
             <h4 class="text-lg font-bold text-white mb-2">HIPAA</h4>
             <p class="text-gray-400 text-xs">US healthcare privacy law</p>
           </div>
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
             <h4 class="text-lg font-bold text-white mb-2">GDPR</h4>
-            <p class="text-gray-400 text-xs">EU data protection</p>
+            <p class="text-gray-400 text-xs">UK & EU data protection</p>
           </div>
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
-            <h4 class="text-lg font-bold text-white mb-2">FHIR</h4>
-            <p class="text-gray-400 text-xs">Health data interoperability</p>
-          </div>
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
             <h4 class="text-lg font-bold text-white mb-2">SOC 2</h4>
-            <p class="text-gray-400 text-xs">Security controls</p>
+            <p class="text-gray-400 text-xs">Security controls audit</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="text-lg font-bold text-white mb-2">ISO 27001</h4>
+            <p class="text-gray-400 text-xs">ISMS certification</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Cost Estimate -->
+    <!-- Healthcare Development Process -->
     <section class="py-24">
+      <div class="container-custom max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Healthcare Software <span class="gradient-text">Development Process</span></h2>
+          <p class="text-gray-400 text-lg">A structured, compliance-first approach to building healthcare software that meets regulatory requirements while delivering exceptional user experiences.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {processSteps.map((step, i) => (
+            <div class="animate-on-scroll glass-card p-6 border-white/10 hover:border-payflo-purple/50 transition-colors">
+              <span class="inline-block text-3xl font-black text-payflo-purple/30 mb-2">{step.step}</span>
+              <h3 class="text-lg font-black mb-2 text-white">{step.title}</h3>
+              <p class="text-gray-400 text-xs leading-relaxed">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Laravel for Healthcare / Comparison -->
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Why Laravel for <span class="gradient-text">Healthcare Software?</span></h2>
+          <p class="text-gray-400 text-lg">Laravel offers unique advantages for healthcare application development compared to other popular frameworks. Here is how it stacks up.</p>
+        </div>
+        <div class="space-y-8">
+          {comparisons.map((comp, i) => (
+            <div class="animate-on-scroll glass-card p-8 border-white/10">
+              <h3 class="text-2xl font-black mb-6 text-white">Laravel vs <span class="text-payflo-pink">{comp.framework}</span></h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                  <h4 class="text-sm font-bold text-payflo-purple mb-2">Security</h4>
+                  <p class="text-gray-400 text-xs leading-relaxed">{comp.security}</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                  <h4 class="text-sm font-bold text-payflo-purple mb-2">Scalability</h4>
+                  <p class="text-gray-400 text-xs leading-relaxed">{comp.scalability}</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                  <h4 class="text-sm font-bold text-payflo-purple mb-2">Cost</h4>
+                  <p class="text-gray-400 text-xs leading-relaxed">{comp.cost}</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                  <h4 class="text-sm font-bold text-payflo-purple mb-2">Development Speed</h4>
+                  <p class="text-gray-400 text-xs leading-relaxed">{comp.speed}</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                  <h4 class="text-sm font-bold text-payflo-purple mb-2">Maintenance</h4>
+                  <p class="text-gray-400 text-xs leading-relaxed">{comp.maintenance}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="py-24">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Healthcare Software <span class="gradient-text">Success Stories</span></h2>
+          <p class="text-gray-400 text-lg">Real projects that demonstrate our healthcare development expertise and the measurable impact we deliver.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {caseStudies.map((cs, i) => (
+            <div class="animate-on-scroll glass-card p-8 border-white/10 hover:border-payflo-purple/50 transition-colors">
+              <div class="flex items-center gap-3 mb-4">
+                <Icon name="ph:medal-duotone" class="w-8 h-8 text-payflo-pink" />
+                <div>
+                  <h3 class="text-xl font-black text-white">{cs.title}</h3>
+                  <p class="text-gray-500 text-xs">{cs.subtitle}</p>
+                </div>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed mb-5">{cs.desc}</p>
+              <ul class="space-y-2">
+                {cs.results.map(r => (
+                  <li class="flex items-start gap-3 text-gray-400 text-xs">
+                    <Icon name="ph:check-circle-duotone" class="w-4 h-4 text-payflo-purple mt-0.5 shrink-0" />
+                    <span>{r}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost Estimate -->
+    <section class="py-24 bg-white/5">
       <div class="container-custom max-w-4xl mx-auto">
         <h2 class="text-4xl font-black text-center mb-16">Cost <span class="gradient-text">Estimate</span></h2>
         <div class="glass-card p-10 border-white/10">
@@ -180,10 +654,46 @@ const serviceSchema = {
               <span class="text-white/70">Telehealth Platform (12-16 weeks)</span>
               <span class="text-payflo-purple font-bold">$40K-$80K</span>
             </div>
-            <div class="flex justify-between">
-              <span class="text-white/70">Full Healthcare System (16-24 weeks)</span>
-              <span class="text-payflo-pink font-bold">$60K-$150K</span>
+            <div class="flex justify-between pb-4 border-b border-white/5">
+              <span class="text-white/70">EHR / EMR System (16-24 weeks)</span>
+              <span class="text-payflo-purple font-bold">$60K-$150K</span>
             </div>
+            <div class="flex justify-between pb-4 border-b border-white/5">
+              <span class="text-white/70">FHIR Integration (6-10 weeks)</span>
+              <span class="text-payflo-purple font-bold">$15K-$30K</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-white/70">Healthcare SaaS MVP (12-16 weeks)</span>
+              <span class="text-payflo-pink font-bold">$40K-$80K</span>
+            </div>
+          </div>
+          <p class="mt-8 text-gray-400 text-sm text-center">All estimates include compliance documentation, security testing, and deployment. <a href="/contact/" class="text-payflo-purple hover:underline font-medium">Contact us for a detailed quote.</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Geo-Relevant Content: UK Healthcare -->
+    <section class="py-24">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">UK Healthcare <span class="gradient-text">Software Development</span></h2>
+          <p class="text-gray-400 text-lg">Based in Essex, we specialise in healthcare software for the UK market with deep NHS integration expertise.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="animate-on-scroll glass-card p-8 border-white/10">
+            <Icon name="ph:map-pin-duotone" class="w-10 h-10 text-payflo-purple mb-5" />
+            <h3 class="text-xl font-black mb-4 text-white">London & Essex</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Our team is based in Basildon, Essex with easy access to London healthcare clients. We provide on-site consulting, compliance workshops, and face-to-face collaboration for UK healthcare organisations. We understand the specific requirements of NHS trusts and UK private healthcare providers.</p>
+          </div>
+          <div class="animate-on-scroll glass-card p-8 border-white/10">
+            <Icon name="ph:first-aid-kit-duotone" class="w-10 h-10 text-payflo-purple mb-5" />
+            <h3 class="text-xl font-black mb-4 text-white">NHS Integration</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">We integrate with NHS Digital systems including GP Connect, NHS Spine, Personal Demographics Service (PDS), and the Message Exchange for Social Care and Health (MESH). Our platforms comply with NHS data security standards and are designed for DCB0129 clinical risk management.</p>
+          </div>
+          <div class="animate-on-scroll glass-card p-8 border-white/10">
+            <Icon name="ph:shield-duotone" class="w-10 h-10 text-payflo-purple mb-5" />
+            <h3 class="text-xl font-black mb-4 text-white">UK GDPR & Compliance</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">We ensure full compliance with UK GDPR, the Data Protection Act 2018, and NHS Digital's data security and protection toolkit. Our data processing infrastructure is UK-based on AWS London (eu-west-2) region, with strict data residency controls for patient information.</p>
           </div>
         </div>
       </div>
@@ -193,39 +703,54 @@ const serviceSchema = {
     <section class="py-24 bg-white/5">
       <div class="container-custom max-w-4xl mx-auto">
         <h2 class="text-4xl font-black text-center mb-16">Healthcare <span class="gradient-text">FAQ</span></h2>
-        <div class="space-y-6">
-          <div class="p-8 glass-card border-white/10">
-            <h4 class="text-lg font-bold mb-3 text-white">How much does healthcare software development cost?</h4>
-            <p class="text-gray-400">Healthcare platforms cost $30,000-$100,000+. Patient portals start at $20,000. Telehealth platforms cost $40,000-$80,000. FHIR integrations cost $15,000-$30,000.</p>
-          </div>
-          <div class="p-8 glass-card border-white/10">
-            <h4 class="text-lg font-bold mb-3 text-white">Do you build HIPAA-compliant software?</h4>
-            <p class="text-gray-400">Yes. All healthcare software we build is HIPAA-compliant with end-to-end encryption, audit logs, role-based access control, and BAA (Business Associate Agreement) support.</p>
-          </div>
-          <div class="p-8 glass-card border-white/10">
-            <h4 class="text-lg font-bold mb-3 text-white">Can you integrate with EHR/EMR systems?</h4>
-            <p class="text-gray-400">Absolutely. We integrate with Epic, Cerner, Allscripts, and other EHRs via HL7 FHIR APIs, enabling seamless patient data exchange.</p>
-          </div>
+        <div class="space-y-4">
+          {faqItems.map((item, i) => (
+            <details class="animate-on-scroll glass-card border-white/10 group open:border-payflo-purple/50 transition-colors">
+              <summary class="p-6 cursor-pointer list-none flex items-center justify-between gap-4">
+                <h4 class="text-base font-bold text-white group-open:text-payflo-purple transition-colors">{item.q}</h4>
+                <Icon name="ph:caret-down-duotone" class="w-5 h-5 text-white/50 shrink-0 group-open:rotate-180 transition-transform" />
+              </summary>
+              <div class="px-6 pb-6">
+                <p class="text-gray-400 text-sm leading-relaxed">{item.a}</p>
+              </div>
+            </details>
+          ))}
         </div>
       </div>
     </section>
 
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(webpageSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
 
     <!-- Internal Links -->
     <section class="py-16 border-t border-white/5">
       <div class="container-custom">
-        <div class="flex flex-wrap justify-center gap-6 text-sm">
-          <a href="/hire-laravel-developer/" class="text-payflo-purple hover:underline font-bold">Hire Healthcare Dev →</a>
-          <a href="/laravel-security-audit/" class="text-payflo-purple hover:underline font-bold">Security Audit →</a>
-          <a href="/laravel-api-development/" class="text-payflo-purple hover:underline font-bold">API Development →</a>
+        <div class="text-center mb-10">
+          <h3 class="text-2xl font-black text-white">Explore Our <span class="gradient-text">Services</span></h3>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 text-sm max-w-4xl mx-auto">
+          <a href="/hire-laravel-developer/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Hire Laravel Developers</a>
+          <a href="/laravel-api-development/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel API Development</a>
+          <a href="/laravel-consulting/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel Consulting</a>
+          <a href="/laravel-security-audit/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel Security Audit</a>
+          <a href="/laravel-saas-development/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel SaaS Development</a>
+          <a href="/laravel-development-services/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Laravel Development Services</a>
+          <a href="/ai-digital-transformation/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">AI Development</a>
+          <a href="/laravel-web-development-services/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Custom Web Development</a>
+          <a href="/laravel-mvp-development/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">MVP Development</a>
+          <a href="/laravel-crm-development/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">CRM Development</a>
+          <a href="/laravel-ecommerce-development/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">E-Commerce Development</a>
+          <a href="/laravel-development-cost/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Development Cost</a>
+          <a href="/outsource-laravel-development/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Outsource Development</a>
+          <a href="/laravel-performance-optimization/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Performance Optimization</a>
+          <a href="/migrate-wordpress-to-laravel/" class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-payflo-purple hover:bg-payflo-purple/20 hover:border-payflo-purple/30 transition-all font-bold">Migration Services</a>
         </div>
       </div>
     </section>
 
     <CTASection />
-  </main>
 </Layout>
 
 <style>
@@ -233,4 +758,6 @@ const serviceSchema = {
   .btn-primary { @apply bg-gradient-to-r from-payflo-purple to-payflo-pink text-white shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:-translate-y-1; }
   .glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl; }
   .gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-payflo-purple to-payflo-pink; }
+  details { @apply rounded-2xl overflow-hidden; }
+  details summary::-webkit-details-marker { display: none; }
 </style>
