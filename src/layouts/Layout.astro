@@ -34,7 +34,8 @@ const faviconImg = await getImage({
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google-site-verification" content="ce8-JHMeCvdT_PeZOS0E4Gpd5KcLqXu4hdDxoS991i0" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="180x180" />
+    <link rel="apple-touch-icon" href="/logo-square.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
@@ -94,7 +95,7 @@ const faviconImg = await getImage({
         "@type": "Organization",
         "name": "Laravel Company",
         "url": "https://laravelcompany.com",
-        "logo": "https://laravelcompany.com/logo.svg",
+        "logo": "https://laravelcompany.com/logo-square.png",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "7 High Street",
@@ -124,7 +125,9 @@ const faviconImg = await getImage({
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
-    <meta property="og:image" content={new URL("/logo.svg", Astro.site)} />
+    <meta property="og:image" content={new URL("/logo-square.png", Astro.site)} />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
     <meta property="og:site_name" content="Laravel Development Company" />
 
     <!-- Twitter Card -->
@@ -133,7 +136,7 @@ const faviconImg = await getImage({
     <meta name="twitter:creator" content="@laravelcompany" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL("/logo.svg", Astro.site)} />
+    <meta name="twitter:image" content={new URL("/logo-square.png", Astro.site)} />
 
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTWW0CXPP2"></script>

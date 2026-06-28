@@ -6,44 +6,39 @@ const packages = [
     name: "Laravel SEO",
     icon: "ph:magnifying-glass-duotone",
     title: "Search",
-    desc: "Powerful search<br>made simple",
+    desc: "Powerful search\nmade simple",
   },
   {
     name: "Laravel Mail",
     icon: "ph:envelope-duotone",
     title: "Mailer",
-    desc: "Beautiful emails,<br>delivered reliably",
+    desc: "Beautiful emails,\ndelivered reliably",
   },
   {
     name: "Laravel GPT",
     icon: "ph:brain-duotone",
     title: "AI",
-    desc: "AI integrations<br>that just work",
+    desc: "AI integrations\nthat just work",
   },
   {
     name: "Laravel UI",
     icon: "ph:layout-duotone",
     title: "UI Kit",
-    desc: "Reusable UI<br>components",
+    desc: "Reusable UI\ncomponents",
   },
   {
     name: "Laravel Social",
     icon: "ph:share-network-duotone",
     title: "Share",
-    desc: "Sharing made<br>effortless",
+    desc: "Sharing made\neffortless",
   },
   {
     name: "Laravel Voip",
     icon: "ph:folder-duotone",
     title: "Filesystem",
-    desc: "File handling<br>made easy",
+    desc: "File handling\nmade easy",
   },
 ];
-
-const col1 = [packages[0], packages[3]];
-const col2 = [packages[1], packages[4]];
-const col3 = [packages[2], packages[5]];
-const cols = [col1, col2, col3];
 ---
 
 <section class="py-24 relative overflow-hidden bg-white/5">
@@ -99,166 +94,352 @@ const cols = [col1, col2, col3];
         </div>
       </div>
 
-      <div class="animate-on-scroll delay-3">
-        <div class="hex-grid">
-          {cols.map((col, ci) => (
-            <div class="hex-col">
-              {col.map((pkg) => (
-                <div class="hex-card" tabindex="0" role="button" aria-label={pkg.name}>
-                  <svg class="hex-bg" viewBox="0 0 200 231" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <linearGradient id="hf" x1="0" y1="0" x2="200" y2="231" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#1e0b4a"/><stop offset="1" stop-color="#130a30"/>
-                    </linearGradient>
-                    <linearGradient id="hs" x1="0" y1="0" x2="200" y2="231" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#7c3aed" stop-opacity="0.6"/>
-                      <stop offset="1" stop-color="#c026d3" stop-opacity="0.3"/>
-                    </linearGradient>
-                    <polygon points="100,2 198,52.5 198,178.5 100,229 2,178.5 2,52.5"
-                      fill="url(#hf)" stroke="url(#hs)" stroke-width="1.5"/>
-                  </svg>
-                  <div class="hex-content">
-                    <div class="hex-icon-circle">
-                      <Icon name={pkg.icon} class="hex-icon" />
-                    </div>
-                    <div class="hex-title">{pkg.title}</div>
-                    <div class="hex-desc" set:html={pkg.desc}></div>
-                  </div>
-                  <div class="hex-underline"></div>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
+      <div class="relative w-full h-[400px] md:h-[500px] lg:h-[600px]" id="hex-container">
+        <canvas id="hex-canvas" class="w-full h-full"></canvas>
       </div>
     </div>
   </div>
 </section>
 
+<script>
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const container = document.getElementById('hex-container');
+const canvas = document.getElementById('hex-canvas');
+if (!container || !canvas) throw new Error('Missing container or canvas');
+
+const W = container.clientWidth;
+const H = container.clientHeight;
+
+const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(W, H);
+renderer.shadowMap.enabled = true;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, W / H, 0.1, 200);
+camera.position.set(0, 2, 18);
+camera.lookAt(0, 0, 0);
+
+// OrbitControls with auto-rotate
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+controls.autoRotate = true;
+controls.autoRotateSpeed = 1.2;
+controls.minDistance = 8;
+controls.maxDistance = 30;
+controls.target.set(0, 0.5, 0);
+controls.update();
+
+// Lights
+scene.add(new THREE.AmbientLight(0x1a0a3a, 3));
+
+const purpleSpot = new THREE.PointLight(0xa855f7, 6, 30);
+purpleSpot.position.set(0, 6, 6);
+scene.add(purpleSpot);
+
+const pinkSpot = new THREE.PointLight(0xec4899, 4, 25);
+pinkSpot.position.set(5, -4, 4);
+scene.add(pinkSpot);
+
+const blueSpot = new THREE.PointLight(0x818cf8, 3, 20);
+blueSpot.position.set(-6, 2, 4);
+scene.add(blueSpot);
+
+// Background particles
+const bgParticlesGeo = new THREE.BufferGeometry();
+const N = 220;
+const positions = new Float32Array(N * 3);
+const speeds = new Float32Array(N);
+for (let i = 0; i < N; i++) {
+  positions[i*3] = (Math.random() - 0.5) * 120;
+  positions[i*3+1] = (Math.random() - 0.5) * 80;
+  positions[i*3+2] = -10 + (Math.random() - 0.5) * 40;
+  speeds[i] = 0.002 + Math.random() * 0.004;
+}
+bgParticlesGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+const particleMat = new THREE.PointsMaterial({ color: 0x7c3aed, size: 0.28, transparent: true, opacity: 0.55 });
+const particles = new THREE.Points(bgParticlesGeo, particleMat);
+scene.add(particles);
+
+// Hex helpers
+function hexPrismGeo(radius, depth, segments = 6) {
+  return new THREE.CylinderGeometry(radius, radius, depth, segments, 1);
+}
+
+function glassMat(hexColor, opacity = 0.72) {
+  return new THREE.MeshPhysicalMaterial({
+    color: hexColor,
+    transparent: true,
+    opacity,
+    roughness: 0.12,
+    metalness: 0.05,
+    transmission: 0.4,
+    thickness: 1.2,
+    envMapIntensity: 0.6,
+    side: THREE.DoubleSide,
+  });
+}
+
+function hexOutline(radius, depth, color) {
+  const pts = [];
+  for (let i = 0; i <= 6; i++) {
+    const a = (i / 6) * Math.PI * 2 + Math.PI / 6;
+    pts.push(new THREE.Vector3(Math.cos(a) * radius, depth / 2 + 0.01, Math.sin(a) * radius));
+  }
+  const geo = new THREE.BufferGeometry().setFromPoints(pts);
+  return new THREE.Line(geo, new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.8 }));
+}
+
+function makeGlowRing(radius, color) {
+  const geo = new THREE.RingGeometry(radius * 0.72, radius * 0.92, 6);
+  const mat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.55, side: THREE.DoubleSide });
+  const ring = new THREE.Mesh(geo, mat);
+  ring.rotation.x = -Math.PI / 2;
+  return ring;
+}
+
+const tileMeshes = [];
+
+function makeTile(radius, depth, bodyColor, glowColor, x, y, z, index) {
+  const group = new THREE.Group();
+  group.userData.tileIndex = index;
+
+  const body = new THREE.Mesh(hexPrismGeo(radius, depth), glassMat(bodyColor, 0.7));
+  body.receiveShadow = true;
+  body.userData.tileIndex = index;
+  group.add(body);
+  tileMeshes.push(body);
+
+  const inner = new THREE.Mesh(hexPrismGeo(radius * 0.88, depth * 0.9), glassMat(glowColor, 0.18));
+  inner.userData.tileIndex = index;
+  group.add(inner);
+
+  const outline = hexOutline(radius, depth, glowColor);
+  outline.userData.tileIndex = index;
+  group.add(outline);
+
+  const ring = makeGlowRing(radius, glowColor);
+  ring.position.y = depth / 2;
+  ring.userData.tileIndex = index;
+  group.add(ring);
+
+  group.position.set(x, y, z);
+  scene.add(group);
+  return group;
+}
+
+// Center pedestal
+const pedestal = makeTile(2.0, 0.55, 0x1a0838, 0xec4899, 0, -0.5, 0, -1);
+
+// Center logo
+const logoGeo = new THREE.OctahedronGeometry(0.9, 0);
+const logoMat = new THREE.MeshPhongMaterial({ color: 0xff2d20, emissive: 0x8b0000, shininess: 80 });
+const logo = new THREE.Mesh(logoGeo, logoMat);
+logo.position.set(0, 0.6, 0);
+logo.rotation.y = Math.PI / 4;
+scene.add(logo);
+
+// Outer tiles
+const TILES_DATA = [
+  { x: -0.8, y:  3.0, z:  0,   body: 0x0f0730, glow: 0xa855f7, r: 1.55, d: 0.42 },
+  { x:  3.8, y:  2.4, z: -0.3, body: 0x0a0620, glow: 0x818cf8, r: 1.55, d: 0.42 },
+  { x: -3.8, y:  0.2, z:  0.2, body: 0x0f0730, glow: 0xa855f7, r: 1.55, d: 0.42 },
+  { x:  4.0, y: -1.0, z:  0.1, body: 0x0a0620, glow: 0x818cf8, r: 1.55, d: 0.42 },
+  { x: -1.6, y: -3.1, z:  0.2, body: 0x0f0730, glow: 0xa855f7, r: 1.55, d: 0.42 },
+  { x:  2.6, y: -3.4, z: -0.1, body: 0x0a0620, glow: 0x818cf8, r: 1.55, d: 0.42 },
+];
+
+const tiles = TILES_DATA.map((d, i) => makeTile(d.r, d.d, d.body, d.glow, d.x, d.y, d.z, i));
+
+// Package URLs matching tile indices
+const TILE_URLS = [
+  '/software/laravel-seo/',
+  '/software/laravel-gpt/',
+  '/software/laravel-mail/',
+  '/open-source/',
+  '/software/laravel-ui/',
+  '/software/laravel-social/',
+];
+
+// Connectors
+function makeConnector(fromV, toV, color) {
+  const dir = new THREE.Vector3().subVectors(toV, fromV);
+  const len = dir.length();
+  const mid = new THREE.Vector3().addVectors(fromV, toV).multiplyScalar(0.5);
+  const geo = new THREE.CylinderGeometry(0.04, 0.04, len, 8);
+  const mat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.6 });
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.position.copy(mid);
+  mesh.lookAt(toV);
+  mesh.rotateX(Math.PI / 2);
+
+  const glowGeo = new THREE.CylinderGeometry(0.09, 0.09, len, 8);
+  const glowMat = new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.18 });
+  const glowMesh = new THREE.Mesh(glowGeo, glowMat);
+  glowMesh.position.copy(mid);
+  glowMesh.lookAt(toV);
+  glowMesh.rotateX(Math.PI / 2);
+
+  scene.add(mesh);
+  scene.add(glowMesh);
+}
+
+const centerV = new THREE.Vector3(0, -0.5, 0);
+const connColors = [0xa855f7, 0x818cf8, 0xd946ef, 0x818cf8, 0xa855f7, 0x818cf8];
+TILES_DATA.forEach((d, i) => makeConnector(centerV, new THREE.Vector3(d.x, d.y, d.z), connColors[i]));
+
+// Floating HTML labels
+const LABELS = [
+  { icon: '🔍', name: 'Search',     desc: 'Powerful search<br>made simple',      tile: 0 },
+  { icon: '🧠', name: 'AI',         desc: 'AI integrations<br>that just work',   tile: 1 },
+  { icon: '✉️',  name: 'Mailer',    desc: 'Beautiful emails,<br>delivered reliably', tile: 2 },
+  { icon: '📁', name: 'Filesystem', desc: 'File handling<br>made easy',          tile: 3 },
+  { icon: '🖼️', name: 'UI Kit',     desc: 'Reusable UI<br>components',           tile: 4 },
+  { icon: '↗️', name: 'Share',      desc: 'Sharing made<br>effortless',          tile: 5 },
+];
+
+const labelEls = LABELS.map(lb => {
+  const el = document.createElement('div');
+  el.className = 'hex-label';
+  el.innerHTML = `<div class="hex-label-icon">${lb.icon}</div><div class="hex-label-name">${lb.name}</div><div class="hex-label-desc">${lb.desc}</div>`;
+  container.appendChild(el);
+  return el;
+});
+
+function projectToScreen(vec3, cam, w, h) {
+  const v = vec3.clone().project(cam);
+  return {
+    x: (v.x * 0.5 + 0.5) * w,
+    y: (v.y * -0.5 + 0.5) * h,
+  };
+}
+
+// ── Raycaster for click interaction ──
+const raycaster = new THREE.Raycaster();
+const pointer = new THREE.Vector2();
+let pointerDownPos = null;
+
+canvas.style.cursor = 'pointer';
+
+canvas.addEventListener('pointerdown', (e) => {
+  pointerDownPos = { x: e.clientX, y: e.clientY };
+});
+
+canvas.addEventListener('pointerup', (e) => {
+  if (!pointerDownPos) return;
+  const dx = e.clientX - pointerDownPos.x;
+  const dy = e.clientY - pointerDownPos.y;
+  pointerDownPos = null;
+  if (Math.sqrt(dx * dx + dy * dy) > 6) return;
+
+  const rect = canvas.getBoundingClientRect();
+  pointer.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+  pointer.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+
+  raycaster.setFromCamera(pointer, camera);
+  const intersects = raycaster.intersectObjects(tileMeshes);
+
+  if (intersects.length > 0) {
+    const hit = intersects[0].object;
+    const idx = hit.userData.tileIndex;
+    if (idx >= 0 && idx < TILE_URLS.length) {
+      window.location.href = TILE_URLS[idx];
+    }
+  }
+});
+
+// Animation
+let t = 0;
+function animate() {
+  requestAnimationFrame(animate);
+  t += 0.012;
+
+  controls.update();
+
+  particles.rotation.y = t * 0.0008;
+  const pos = bgParticlesGeo.attributes.position.array;
+  for (let i = 0; i < N; i++) {
+    pos[i*3+1] += speeds[i];
+    if (pos[i*3+1] > 40) pos[i*3+1] = -40;
+  }
+  bgParticlesGeo.attributes.position.needsUpdate = true;
+
+  logo.rotation.y += 0.008;
+  logo.position.y = 0.6 + Math.sin(t * 0.9) * 0.12;
+
+  tiles.forEach((tile, i) => {
+    tile.position.y = TILES_DATA[i].y + Math.sin(t + i * 1.1) * 0.14;
+    tile.rotation.y = t * 0.08 + i * 0.4;
+  });
+
+  pedestal.rotation.y = t * 0.05;
+
+  purpleSpot.intensity = 5 + Math.sin(t * 1.3) * 1.5;
+  pinkSpot.intensity = 3.5 + Math.cos(t * 0.9) * 1.2;
+
+  renderer.render(scene, camera);
+
+  const cW = canvas.clientWidth;
+  const cH = canvas.clientHeight;
+  LABELS.forEach((lb, i) => {
+    const d = TILES_DATA[lb.tile];
+    const worldPos = new THREE.Vector3(d.x, tiles[lb.tile].position.y + d.d / 2 + 0.6, d.z);
+    const sc = projectToScreen(worldPos, camera, cW, cH);
+    labelEls[i].style.left = sc.x + 'px';
+    labelEls[i].style.top = sc.y + 'px';
+  });
+}
+animate();
+
+window.addEventListener('resize', () => {
+  const nW = container.clientWidth;
+  const nH = container.clientHeight;
+  renderer.setSize(nW, nH);
+  camera.aspect = nW / nH;
+  camera.updateProjectionMatrix();
+  controls.update();
+});
+</script>
+
 <style is:global>
-  .hex-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+  #hex-container {
     position: relative;
   }
 
-  .hex-col {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  #hex-canvas {
+    display: block;
+    border-radius: 12px;
   }
 
-  .hex-col:nth-child(even) {
-    margin-top: 88px;
-  }
-
-  .hex-card {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 0.866;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .hex-label {
+    position: absolute;
     text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    outline: none;
-  }
-
-  .hex-card:hover {
-    transform: translateY(-6px);
-  }
-
-  .hex-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .hex-content {
-    position: relative;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
     z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 10px 28px;
   }
 
-  .hex-icon-circle {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 14px;
-    box-shadow: 0 0 20px rgba(108,63,255,0.5);
-    transition: box-shadow 0.3s ease;
+  .hex-label-icon {
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 4px;
   }
 
-  .hex-card:hover .hex-icon-circle {
-    box-shadow: 0 0 32px rgba(108,63,255,0.8);
-  }
-
-  .hex-icon {
-    width: 24px;
-    height: 24px;
-    color: white;
-  }
-
-  .hex-title {
-    font-size: 1rem;
+  .hex-label-name {
     font-weight: 700;
+    font-size: 13px;
     color: #e2e8f0;
-    margin-bottom: 6px;
+    white-space: nowrap;
   }
 
-  .hex-desc {
-    font-size: 0.72rem;
+  .hex-label-desc {
+    font-size: 10.5px;
     color: #94a3b8;
-    line-height: 1.45;
-  }
-
-  .hex-underline {
-    position: absolute;
-    bottom: 22px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 32px;
-    height: 2px;
-    background: linear-gradient(90deg, #8b5cf6, #e879f9);
-    border-radius: 2px;
-    opacity: 0.7;
-  }
-
-  @media (max-width: 1024px) {
-    .hex-col:nth-child(even) {
-      margin-top: 64px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .hex-grid {
-      max-width: 420px;
-      margin: 0 auto;
-    }
-
-    .hex-col:nth-child(even) {
-      margin-top: 48px;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .hex-grid {
-      max-width: 320px;
-      gap: 12px;
-    }
-
-    .hex-col:nth-child(even) {
-      margin-top: 36px;
-    }
+    white-space: nowrap;
+    line-height: 1.4;
   }
 </style>
