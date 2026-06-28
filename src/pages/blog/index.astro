@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
+import logoSvg from "../../assets/logo.svg";
 
 const allPosts = await getCollection("blog");
 const sortedPosts = allPosts.sort((a, b) => {
@@ -35,16 +36,25 @@ const sortedPosts = allPosts.sort((a, b) => {
             class="group glass-card overflow-hidden animate-on-scroll hover:border-payflo-purple/50 transition-all duration-300"
             style={`animation-delay: ${index * 0.05}s`}
           >
-            {post.data.image && (
-              <div class="aspect-video overflow-hidden bg-payflo-darker">
+            <div class="aspect-video overflow-hidden bg-payflo-darker">
+              {post.data.image ? (
                 <img
                   src={post.data.image}
                   alt={post.data.title}
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
-              </div>
-            )}
+              ) : (
+                <div class="w-full h-full flex items-center justify-center">
+                  <img
+                    src={logoSvg}
+                    alt="Laravel Company"
+                    class="w-16 h-16 opacity-30"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+            </div>
             <div class="p-6">
               <div class="flex flex-wrap gap-2 mb-3">
                 {post.data.tags?.slice(0, 2).map((tag) => (

@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
+import logoSvg from "../../assets/logo.svg";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -53,12 +54,20 @@ const { data } = post;
         </div>
       </div>
 
-      {data.image && (
+      {data.image ? (
         <img
           src={data.image}
           alt={data.title}
           class="w-full rounded-xl mb-10 animate-on-scroll"
         />
+      ) : (
+        <div class="w-full rounded-xl mb-10 animate-on-scroll bg-payflo-darker flex items-center justify-center py-20">
+          <img
+            src={logoSvg}
+            alt="Laravel Company"
+            class="w-24 h-24 opacity-30"
+          />
+        </div>
       )}
 
       <div class="prose prose-slate max-w-none animate-on-scroll">

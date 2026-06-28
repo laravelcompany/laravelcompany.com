@@ -1,5 +1,49 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+const packages = [
+  {
+    name: "Laravel SEO",
+    icon: "ph:magnifying-glass-duotone",
+    title: "Search",
+    desc: "Powerful search<br>made simple",
+  },
+  {
+    name: "Laravel Mail",
+    icon: "ph:envelope-duotone",
+    title: "Mailer",
+    desc: "Beautiful emails,<br>delivered reliably",
+  },
+  {
+    name: "Laravel GPT",
+    icon: "ph:brain-duotone",
+    title: "AI",
+    desc: "AI integrations<br>that just work",
+  },
+  {
+    name: "Laravel UI",
+    icon: "ph:layout-duotone",
+    title: "UI Kit",
+    desc: "Reusable UI<br>components",
+  },
+  {
+    name: "Laravel Social",
+    icon: "ph:share-network-duotone",
+    title: "Share",
+    desc: "Sharing made<br>effortless",
+  },
+  {
+    name: "Laravel Voip",
+    icon: "ph:folder-duotone",
+    title: "Filesystem",
+    desc: "File handling<br>made easy",
+  },
+];
+
+const col1 = [packages[0], packages[3]];
+const col2 = [packages[1], packages[4]];
+const col3 = [packages[2], packages[5]];
+const cols = [col1, col2, col3];
 ---
 
 <section class="py-24 relative overflow-hidden bg-white/5">
@@ -28,25 +72,60 @@ import { Icon } from 'astro-icon/components';
           and develop more prototypes that can validate your ideas.
         </p>
         <div class="animate-on-scroll delay-3 mt-8">
-          <a href="/contact/" class="btn btn-primary">Brief us your project</a>
+          <a href="/contact/" class="btn btn-primary gap-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="shrink-0"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Brief us your project &nbsp;→
+          </a>
+        </div>
+        <div class="animate-on-scroll delay-3 mt-8 flex gap-10 flex-wrap">
+          <div class="flex items-center gap-2.5 text-sm text-white/60 font-medium">
+            <div class="w-8 h-8 border border-payflo-purple/20 rounded-lg flex items-center justify-center text-payflo-purple bg-payflo-purple/10">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            Trusted by teams
+          </div>
+          <div class="flex items-center gap-2.5 text-sm text-white/60 font-medium">
+            <div class="w-8 h-8 border border-payflo-purple/20 rounded-lg flex items-center justify-center text-payflo-purple bg-payflo-purple/10">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            Built for speed
+          </div>
+          <div class="flex items-center gap-2.5 text-sm text-white/60 font-medium">
+            <div class="w-8 h-8 border border-payflo-purple/20 rounded-lg flex items-center justify-center text-payflo-purple bg-payflo-purple/10">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            Open source first
+          </div>
         </div>
       </div>
 
       <div class="animate-on-scroll delay-3">
-        <div class="grid grid-cols-2 gap-4">
-          {[
-            { name: "Laravel SEO", icon: "ph:magnifying-glass-duotone" },
-            { name: "Laravel Mail", icon: "ph:envelope-duotone" },
-            { name: "Laravel GPT", icon: "ph:brain-duotone" },
-            { name: "Laravel UI", icon: "ph:layout-duotone" },
-            { name: "Laravel Social", icon: "ph:share-network-duotone" },
-            { name: "Laravel Voip", icon: "ph:folder-duotone" },
-          ].map((pkg) => (
-            <div class="glass-card p-6 text-center group hover:bg-white/10 transition-all duration-300">
-              <div class="h-12 w-12 mx-auto rounded-xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center text-white mb-4 transition-all duration-300 group-hover:scale-110 shadow-lg shadow-purple-500/20">
-                <Icon name={pkg.icon} class="h-6 w-6" />
-              </div>
-              <h3 class="text-sm font-black text-white">{pkg.name}</h3>
+        <div class="hex-grid">
+          {cols.map((col, ci) => (
+            <div class="hex-col">
+              {col.map((pkg) => (
+                <div class="hex-card" tabindex="0" role="button" aria-label={pkg.name}>
+                  <svg class="hex-bg" viewBox="0 0 200 231" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <linearGradient id="hf" x1="0" y1="0" x2="200" y2="231" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#1e0b4a"/><stop offset="1" stop-color="#130a30"/>
+                    </linearGradient>
+                    <linearGradient id="hs" x1="0" y1="0" x2="200" y2="231" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#7c3aed" stop-opacity="0.6"/>
+                      <stop offset="1" stop-color="#c026d3" stop-opacity="0.3"/>
+                    </linearGradient>
+                    <polygon points="100,2 198,52.5 198,178.5 100,229 2,178.5 2,52.5"
+                      fill="url(#hf)" stroke="url(#hs)" stroke-width="1.5"/>
+                  </svg>
+                  <div class="hex-content">
+                    <div class="hex-icon-circle">
+                      <Icon name={pkg.icon} class="hex-icon" />
+                    </div>
+                    <div class="hex-title">{pkg.title}</div>
+                    <div class="hex-desc" set:html={pkg.desc}></div>
+                  </div>
+                  <div class="hex-underline"></div>
+                </div>
+              ))}
             </div>
           ))}
         </div>
@@ -54,3 +133,132 @@ import { Icon } from 'astro-icon/components';
     </div>
   </div>
 </section>
+
+<style is:global>
+  .hex-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    position: relative;
+  }
+
+  .hex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hex-col:nth-child(even) {
+    margin-top: 88px;
+  }
+
+  .hex-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.866;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    outline: none;
+  }
+
+  .hex-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .hex-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hex-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px 28px;
+  }
+
+  .hex-icon-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    box-shadow: 0 0 20px rgba(108,63,255,0.5);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hex-card:hover .hex-icon-circle {
+    box-shadow: 0 0 32px rgba(108,63,255,0.8);
+  }
+
+  .hex-icon {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
+
+  .hex-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 6px;
+  }
+
+  .hex-desc {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    line-height: 1.45;
+  }
+
+  .hex-underline {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 2px;
+    background: linear-gradient(90deg, #8b5cf6, #e879f9);
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 1024px) {
+    .hex-col:nth-child(even) {
+      margin-top: 64px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hex-grid {
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .hex-col:nth-child(even) {
+      margin-top: 48px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .hex-grid {
+      max-width: 320px;
+      gap: 12px;
+    }
+
+    .hex-col:nth-child(even) {
+      margin-top: 36px;
+    }
+  }
+</style>

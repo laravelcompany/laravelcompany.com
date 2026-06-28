@@ -38,6 +38,7 @@ export const GET: APIRoute = async ({ site }) => {
         'eu-sovereign-cloud-provider/',
         'gdpr-europrise-certified/',
         'laravel-company-website-github/',
+        'laravel-company-headquarters-phone-number-usa/',
     ];
 
     // 2a. Generate geo service pages

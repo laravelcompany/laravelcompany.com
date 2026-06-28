@@ -1,46 +1,596 @@
 ---
-import { Image } from "astro:assets";
-import heroImage from "../assets/logo.svg";
 ---
 
-<section class="pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden relative min-h-[80vh] flex items-center">
-  <div class="bg-blob blob-1"></div>
-  <div class="bg-blob blob-2"></div>
-
-  <div class="container-custom relative">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <div class="animate-on-scroll delay-0">
-          <span class="inline-block px-4 py-2 rounded-full bg-payflo-purple/20 border border-payflo-purple/30 text-payflo-purple text-sm font-bold uppercase tracking-widest mb-6">
-            Tailor-made web development
-          </span>
-        </div>
-        <h1 class="animate-on-scroll delay-0 text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight">
-          We build <span class="gradient-text">web applications</span> that grow with you
-        </h1>
-        <p class="animate-on-scroll delay-1 mt-6 text-xl text-white/70 max-w-lg leading-relaxed">
-          We're not your do-it-all digital agency, but a partner focused on building web
-          applications with a solid foundation that can grow alongside your needs.
-        </p>
-        <div class="animate-on-scroll delay-2 mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="/contact/" class="btn btn-primary">Brief us your project</a>
-        </div>
+<section class="hero-section">
+  <div class="hero">
+    <div class="hero-left">
+      <div class="animate-on-scroll delay-0">
+        <span class="eyebrow">
+          <svg viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5L6 0z"/></svg>
+          Tailor-made web development
+        </span>
       </div>
 
-      <div class="animate-on-scroll delay-4">
-        <div class="relative hover-zoom">
-          <div class="absolute -inset-2 bg-gradient-to-r from-payflo-purple to-payflo-pink rounded-2xl blur-2xl opacity-20 transition-opacity duration-300 hover:opacity-40"></div>
-          <div class="relative glass-card border-white/20 p-2 overflow-hidden">
-            <Image
-              src={heroImage}
-              alt="Laravel web development"
-              class="w-full h-auto transition-all duration-500 rounded-xl"
-              width={700}
-              height={500}
-            />
+      <h1 class="animate-on-scroll delay-0">We build <span class="accent-web">web</span><br><span class="accent-apps">applications</span> that grow with you</h1>
+
+      <p class="hero-sub animate-on-scroll delay-1">We're not your do-it-all digital agency, but a partner focused on building web applications with a solid foundation that can grow alongside your needs.</p>
+
+      <div class="hero-actions animate-on-scroll delay-2">
+        <a href="/contact/" class="btn-cta">Brief us your project &nbsp;→</a>
+      </div>
+
+      <div class="trust-badges animate-on-scroll delay-3">
+        <div class="badge">
+          <div class="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="badge-title">Reliable</div>
+            <div class="badge-desc">Secure, tested<br>and dependable</div>
+          </div>
+        </div>
+        <div class="badge">
+          <div class="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <div class="badge-title">Scalable</div>
+            <div class="badge-desc">Built to grow<br>with your business</div>
+          </div>
+        </div>
+        <div class="badge">
+          <div class="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div>
+            <div class="badge-title">Modern</div>
+            <div class="badge-desc">Clean code, latest<br>technologies</div>
+          </div>
+        </div>
+        <div class="badge">
+          <div class="badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <div class="badge-title">Collaborative</div>
+            <div class="badge-desc">Transparent process,<br>true partnership</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right animate-on-scroll delay-4">
+      <div class="hero-card">
+        <div class="hero-graphic-wrap">
+          <div class="glow-ring glow-ring-1"></div>
+          <div class="glow-ring glow-ring-2"></div>
+
+          <div id="hero-three-container" style="position:absolute;inset:0;width:100%;height:100%;"></div>
+        </div>
+
+        <div class="feature-strip">
+          <div class="feature-item">
+            <div class="feature-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.5 6.5H22l-5.5 4.5 2 7L12 16l-6.5 4 2-7L2 8.5h6.5L12 2z"/></svg>
+            </div>
+            <div class="feature-title">Custom Solutions</div>
+            <div class="feature-desc">Tailored to your unique goals</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="feature-title">Performance First</div>
+            <div class="feature-desc">Fast, optimized and efficient</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+            <div class="feature-title">Future Ready</div>
+            <div class="feature-desc">Maintainable and built to last</div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <div class="feature-title">Full Stack Expertise</div>
+            <div class="feature-desc">End-to-end from concept to launch</div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="trusted-section">
+    <div class="trusted-divider"></div>
+    <div class="trusted-label">Trusted by developers &amp; companies worldwide</div>
+    <div class="tech-logos">
+      <div class="tech-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M23.642 5.43a.364.364 0 0 1 .014.1v5.149c0 .135-.073.26-.189.326l-4.323 2.49v4.934a.378.378 0 0 1-.188.326L9.93 23.949a.316.316 0 0 1-.066.027.299.299 0 0 1-.098.023.316.316 0 0 1-.098-.023.301.301 0 0 1-.066-.027L.534 18.755a.377.377 0 0 1-.189-.326V3.603c0-.035.006-.069.014-.1a.327.327 0 0 1 .022-.078.27.27 0 0 1 .04-.063.314.314 0 0 1 .052-.048L4.78.192a.378.378 0 0 1 .378 0l4.308 2.484h.002a.378.378 0 0 1 .188.326v9.83l3.757-2.165V5.52a.378.378 0 0 1 .188-.326l4.309-2.484a.378.378 0 0 1 .378 0l4.309 2.484a.375.375 0 0 1 .08.063.27.27 0 0 1 .04.063.327.327 0 0 1 .013.078z" fill="#FF2D20"/></svg>
+        Laravel
+      </div>
+      <div class="tech-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M24,1.61H14.06L12,5.16,9.94,1.61H0L12,22.39ZM12,14.08,5.16,2.23H9.59L12,6.41l2.41-4.18h4.43Z" fill="#4FC08D"/></svg>
+        Vue.js
+      </div>
+      <div class="tech-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.139" fill="#61DAFB"/><path d="M12 6.827c5.374 0 9.736 2.308 9.736 5.156S17.374 17.14 12 17.14c-5.374 0-9.736-2.308-9.736-5.157S6.626 6.827 12 6.827z" stroke="#61DAFB" stroke-width="1"/><path d="M8.538 9C11.225 4.365 14.893 1.433 17.293 2.857 19.694 4.281 19.427 9.1 16.74 13.734 14.052 18.369 10.384 21.3 7.984 19.877 5.583 18.453 5.85 13.634 8.538 9z" stroke="#61DAFB" stroke-width="1"/><path d="M8.538 15.098C5.85 10.463 5.583 5.644 7.984 4.22c2.4-1.424 6.068 1.508 8.756 6.143 2.688 4.635 2.954 9.453.554 10.877-2.4 1.424-6.068-1.507-8.756-6.142z" stroke="#61DAFB" stroke-width="1"/></svg>
+        React
+      </div>
+      <div class="tech-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0z"/></svg>
+        next.js
+      </div>
+      <div class="tech-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" fill="#06B6D4"/></svg>
+        tailwindcss
+      </div>
+      <div class="tech-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#2496ED"><path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 0 0-.75.748 11.376 11.376 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 0 0 3.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg>
+        docker
+      </div>
+      <div class="tech-logo">
+        <svg width="28" height="18" viewBox="0 0 48 30" fill="none"><path d="M13.756 11.937c0 .52.056 1.042.168 1.507.112.465.28.874.504 1.23.084.14.112.28.112.392 0 .168-.112.336-.336.504l-1.12.756c-.14.084-.28.14-.42.14-.168 0-.336-.084-.504-.224a4.636 4.636 0 0 1-.588-.756 12.72 12.72 0 0 1-.504-1.006c-1.288 1.512-2.912 2.268-4.872 2.268-1.4 0-2.52-.392-3.332-1.176-.812-.784-1.232-1.82-1.232-3.136 0-1.4.504-2.52 1.512-3.36 1.008-.84 2.352-1.26 4.088-1.26.56 0 1.148.056 1.764.14.616.084 1.26.224 1.932.392V7.065c0-1.288-.28-2.184-.812-2.688-.56-.504-1.512-.756-2.856-.756-.616 0-1.26.084-1.904.252-.644.168-1.288.392-1.904.672-.28.14-.504.224-.616.28-.112.028-.196.056-.252.056-.224 0-.336-.168-.336-.504V3.285c0-.28.028-.476.14-.616.112-.14.336-.28.672-.392A13.116 13.116 0 0 1 5.88.897C6.86.673 7.896.561 8.96.561c2.24 0 3.864.504 4.9 1.512 1.008 1.008 1.54 2.548 1.54 4.62v6.244h-.644zM5.88 14.261c.56 0 1.12-.112 1.736-.336.616-.224 1.176-.616 1.652-1.176.28-.336.504-.7.616-1.12.112-.42.196-.924.196-1.512v-.728a14.2 14.2 0 0 0-1.512-.252 13.37 13.37 0 0 0-1.568-.084c-1.12 0-1.96.224-2.52.672-.56.448-.84 1.092-.84 1.932 0 .784.196 1.372.616 1.764.392.364.98.84 1.624.84zm13.104 1.764c-.308 0-.504-.056-.644-.168-.14-.084-.28-.308-.392-.616L14.7 3.145c-.112-.336-.168-.56-.168-.7 0-.28.14-.448.42-.448h1.68c.336 0 .56.056.672.168.14.084.252.308.364.616l2.1 8.12 1.932-8.12c.084-.336.196-.56.336-.616.14-.084.364-.168.672-.168h1.372c.336 0 .56.056.672.168.14.084.28.308.336.616l1.96 8.232 2.156-8.232c.112-.336.224-.56.364-.616.14-.084.364-.168.672-.168h1.596c.28 0 .42.14.42.448 0 .084-.028.196-.056.336-.028.14-.084.336-.168.616l-3.304 12.096c-.112.336-.224.56-.364.616-.14.084-.364.168-.644.168H23.44c-.336 0-.56-.056-.672-.168-.14-.112-.28-.308-.336-.644l-1.932-7.868L18.6 15.185c-.084.336-.196.56-.336.644-.14.112-.364.168-.672.168H16.984v.028zM33.208 16.22c-.84 0-1.68-.112-2.492-.336-.812-.224-1.456-.476-1.876-.756-.252-.168-.42-.364-.476-.532a1.332 1.332 0 0 1-.056-.42v-.98c0-.336.112-.504.364-.504.084 0 .196.028.308.084.112.056.28.112.476.196.644.28 1.344.504 2.072.644.756.14 1.484.224 2.24.224 1.176 0 2.1-.196 2.744-.616.644-.42.98-1.008.98-1.792 0-.532-.168-.98-.504-1.344-.336-.364-.98-.7-1.904-.98L31.78 8.88c-1.372-.42-2.38-1.036-2.996-1.848-.616-.784-.924-1.68-.924-2.66 0-.756.168-1.428.504-2.016a4.778 4.778 0 0 1 1.344-1.484 6.138 6.138 0 0 1 1.96-1.008 8.15 8.15 0 0 1 2.464-.364c.42 0 .868.028 1.316.084.448.056.868.14 1.288.252.392.112.784.224 1.12.364.336.14.616.28.812.42.28.168.476.336.588.504.112.168.168.392.168.672v.896c0 .336-.112.532-.336.532-.112 0-.308-.056-.56-.196-1.008-.448-2.156-.672-3.444-.672-1.064 0-1.904.168-2.492.532-.588.364-.896.924-.896 1.68 0 .532.196 1.008.56 1.372.364.364 1.064.728 2.072 1.036l2.688.84c1.344.42 2.324 1.008 2.912 1.764.588.756.896 1.624.896 2.604 0 .784-.168 1.484-.504 2.1a4.6 4.6 0 0 1-1.4 1.568 6.332 6.332 0 0 1-2.1 1.008 9.144 9.144 0 0 1-2.632.364z" fill="#F90"/><path d="M37.296 22.996c-4.62 3.416-11.34 5.236-17.136 5.236-8.092 0-15.4-2.996-20.916-7.952-.42-.392-.056-.952.476-.644 5.964 3.5 13.356 5.6 20.972 5.6 5.152 0 10.808-1.064 16.016-3.276.784-.364 1.428.504.588 1.036z" fill="#F90"/><path d="M39.368 20.616c-.588-.756-3.92-.364-5.432-.168-.448.056-.532-.336-.112-.644 2.66-1.876 7.028-1.344 7.532-.7.504.644-.14 4.984-2.632 7.056-.392.336-.756.168-.588-.28.56-1.372 1.82-4.508 1.232-5.264z" fill="#F90"/></svg>
+        aws
+      </div>
+      <div class="tech-logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>
+        Vercel
+      </div>
+      <div class="tech-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="2" width="20" height="20" rx="4" fill="#FFD21E"/>
+          <circle cx="9" cy="10" r="1.5" fill="#1F2937"/>
+          <circle cx="15" cy="10" r="1.5" fill="#1F2937"/>
+          <path d="M9 15c.667.667 2 1.5 3 1.5s2.333-.833 3-1.5" stroke="#1F2937" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M6 11.5c1.333-.667 3.333-1 5-1s3.667.333 5 1" stroke="#1F2937" stroke-width="1" fill="none" stroke-linecap="round"/>
+          <path d="M7 9c.5-1 1.5-2 5-2s4.5 1 5 2" stroke="#1F2937" stroke-width="1" fill="none" stroke-linecap="round"/>
+        </svg>
+        Hugging Face
+      </div>
+    </div>
+  </div>
 </section>
+
+<style is:global>
+  .hero-section {
+    --purple:     #6c3fff;
+    --purple-lt:  #8b5cf6;
+    --pink:       #c026d3;
+    --pink-lt:    #e879f9;
+    --orange:     #f97316;
+    --blue-neon:  #38bdf8;
+    --text:       #e2e8f0;
+    --text-muted: #94a3b8;
+    --border:     rgba(139,92,246,0.18);
+    --glow-p:     rgba(108,63,255,0.35);
+
+    background: #0a0818;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 140px 60px 60px;
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(108,63,255,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(192,38,211,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-left {
+    position: relative;
+    z-index: 2;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid var(--border);
+    background: rgba(108,63,255,0.1);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--purple-lt);
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+
+  .eyebrow svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.08;
+    margin-bottom: 24px;
+    color: var(--text);
+  }
+
+  .hero-left h1 .accent-web {
+    color: var(--purple-lt);
+  }
+
+  .hero-left h1 .accent-apps {
+    background: linear-gradient(90deg, var(--purple-lt), var(--pink-lt));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 36px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .btn-cta {
+    background: var(--purple);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 20px var(--glow-p);
+  }
+
+  .btn-cta:hover {
+    background: var(--purple-lt);
+    box-shadow: 0 0 32px var(--glow-p);
+  }
+
+  .trust-badges {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .badge-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--purple-lt);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .badge-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .badge-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .hero-right {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-card {
+    background: #130f2e;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 60px rgba(108,63,255,0.15), inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+
+  .hero-graphic-wrap {
+    padding: 40px 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 320px;
+    position: relative;
+  }
+
+  .glow-ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .glow-ring-1 {
+    width: 380px;
+    height: 380px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    background: radial-gradient(circle, rgba(108,63,255,0.22) 0%, transparent 65%);
+    animation: hero-pulse-ring 4s ease-in-out infinite;
+  }
+
+  .glow-ring-2 {
+    width: 280px;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    background: radial-gradient(circle, rgba(56,189,248,0.12) 0%, transparent 65%);
+  }
+
+  .feature-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+    background: rgba(0,0,0,0.2);
+  }
+
+  .feature-item {
+    padding: 20px 16px 22px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+  }
+
+  .feature-item:last-child {
+    border-right: none;
+  }
+
+  .feature-icon-wrap {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-neon);
+  }
+
+  .feature-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .feature-desc {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  .trusted-section {
+    padding: 40px 60px 60px;
+    text-align: center;
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .trusted-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+  }
+
+  .trusted-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border) 20%, var(--border) 80%, transparent);
+    margin-bottom: 30px;
+  }
+
+  .tech-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    opacity: 0.65;
+  }
+
+  .tech-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .tech-logo svg {
+    flex-shrink: 0;
+  }
+
+  @keyframes hero-float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-12px); }
+  }
+
+  @keyframes hero-pulse-ring {
+    0%, 100% { opacity: 0.4; transform: translate(-50%,-48%) scale(1); }
+    50%       { opacity: 0.7; transform: translate(-50%,-48%) scale(1.05); }
+  }
+
+
+
+  @media (max-width: 1024px) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 120px 24px 40px;
+      gap: 32px;
+    }
+
+    .trusted-section {
+      padding: 20px 24px 40px;
+    }
+
+    .hero-sub {
+      max-width: 100%;
+    }
+
+    .hero-card {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 100px 20px 32px;
+      gap: 24px;
+    }
+
+    .hero-graphic-wrap {
+      padding: 24px 20px 12px;
+      min-height: 240px;
+    }
+
+    .glow-ring-1 {
+      width: 280px;
+      height: 280px;
+    }
+
+    .glow-ring-2 {
+      width: 200px;
+      height: 200px;
+    }
+
+    .feature-strip {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-item:nth-child(2) {
+      border-right: none;
+    }
+
+    .feature-item:nth-child(3) {
+      border-top: 1px solid var(--border);
+    }
+
+    .feature-item:nth-child(4) {
+      border-top: 1px solid var(--border);
+      border-right: none;
+    }
+
+    .tech-logos {
+      gap: 24px;
+    }
+
+    .trust-badges {
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-graphic-wrap {
+      min-height: 200px;
+      padding: 16px 12px 8px;
+    }
+
+    .hero-left h1 {
+      font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .btn-cta,
+    .btn-outline {
+      justify-content: center;
+    }
+
+    .feature-item {
+      padding: 14px 10px 16px;
+    }
+
+    .trust-badges {
+      gap: 16px;
+    }
+
+    .badge {
+      flex: 1 1 calc(50% - 16px);
+      min-width: 140px;
+    }
+  }
+</style>
+
+<script>
+  import { initHeroScene } from '../scripts/hero-3d';
+
+  let cleanup = null;
+
+  function init() {
+    const container = document.getElementById('hero-three-container');
+    if (!container || container.clientWidth === 0) return;
+    if (cleanup) cleanup();
+    cleanup = initHeroScene(container);
+  }
+
+  document.addEventListener('astro:page-load', init);
+  document.addEventListener('astro:before-swap', () => {
+    if (cleanup) { cleanup(); cleanup = null; }
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+</script>
