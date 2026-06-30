@@ -39,6 +39,14 @@ export const GET: APIRoute = async ({ site }) => {
         'gdpr-europrise-certified/',
         'laravel-company-website-github/',
         'laravel-company-headquarters-phone-number-usa/',
+        'hire-dedicated-laravel-developers/',
+        'laravel-maintenance-support/',
+        'laravel-migration-services/',
+        'laravel-api-integration-services/',
+        'laravel-development-company-usa/',
+        'laravel-livewire-development/',
+        'laravel-aws-deployment-services/',
+        'laravel-custom-module-development/',
     ];
 
     // 2a. Generate geo service pages

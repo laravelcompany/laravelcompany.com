@@ -1,0 +1,247 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+interface Breadcrumb {
+  label: string;
+  href: string;
+}
+
+interface Stat {
+  value: string;
+  label: string;
+}
+
+interface Section {
+  title: string;
+  paragraphs: string[];
+  bullets?: string[];
+}
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface RelatedLink {
+  href: string;
+  label: string;
+  icon?: string;
+}
+
+export interface Props {
+  title: string;
+  description: string;
+  eyebrow: string;
+  icon: string;
+  breadcrumbs: Breadcrumb[];
+  heroPrefix: string;
+  heroAccent: string;
+  heroSuffix: string;
+  heroLead: string;
+  stats: Stat[];
+  introTitle: string;
+  introParagraphs: string[];
+  sections: Section[];
+  faqs: FAQ[];
+  relatedLinks: RelatedLink[];
+  ctaTitle: string;
+  ctaText: string;
+  ctaPrimaryLabel: string;
+  ctaPrimaryHref: string;
+  ctaSecondaryLabel?: string;
+  ctaSecondaryHref?: string;
+  serviceSchema: Record<string, unknown>;
+}
+
+const {
+  title,
+  description,
+  eyebrow,
+  icon,
+  breadcrumbs,
+  heroPrefix,
+  heroAccent,
+  heroSuffix,
+  heroLead,
+  stats,
+  introTitle,
+  introParagraphs,
+  sections,
+  faqs,
+  relatedLinks,
+  ctaTitle,
+  ctaText,
+  ctaPrimaryLabel,
+  ctaPrimaryHref,
+  ctaSecondaryLabel,
+  ctaSecondaryHref,
+  serviceSchema,
+} = Astro.props as Props;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div>
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden relative bg-payflo-dark">
+      <div class="absolute inset-0 opacity-10 -z-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      </div>
+      <div class="container-custom relative">
+        <nav class="flex flex-wrap justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+          {breadcrumbs.map((crumb, index) => (
+            <>
+              <a href={crumb.href} class="hover:text-white transition-colors">{crumb.label}</a>
+              {index < breadcrumbs.length - 1 && <span>/</span>}
+            </>
+          ))}
+        </nav>
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/10 border border-payflo-purple/20 mb-8 animate-on-scroll">
+            <Icon name={icon} class="w-5 h-5 text-payflo-purple" />
+            <span class="text-sm font-bold uppercase tracking-widest text-white/70">{eyebrow}</span>
+          </div>
+          <h1 class="animate-on-scroll delay-1 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white">
+            {heroPrefix} <span class="gradient-text">{heroAccent}</span> {heroSuffix}
+          </h1>
+          <p class="animate-on-scroll delay-2 mt-8 text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
+            {heroLead}
+          </p>
+          <div class="animate-on-scroll delay-3 mt-12 flex flex-wrap justify-center gap-6">
+            <a href={ctaPrimaryHref} class="btn btn-primary px-10 py-5 text-lg shadow-2xl">{ctaPrimaryLabel}</a>
+            {ctaSecondaryHref && ctaSecondaryLabel && (
+              <a href={ctaSecondaryHref} class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">
+                {ctaSecondaryLabel}
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 border-y border-white/5 bg-white/[0.02]">
+      <div class="container-custom">
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-white/40 text-sm font-bold uppercase tracking-widest">
+          {stats.map((stat) => (
+            <span>{stat.value} {stat.label}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">{introTitle}</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="space-y-6 text-white/70 text-lg leading-relaxed">
+            {introParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {sections.slice(0, 4).map((section) => (
+              <div class="glass-card p-6 border-white/10">
+                <h3 class="text-xl font-black text-white mb-3">{section.title}</h3>
+                <p class="text-sm text-white/60 leading-relaxed">{section.paragraphs[0]}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {sections.map((section, index) => (
+      <section class={`py-20 ${index % 2 === 1 ? "bg-white/5" : ""}`}>
+        <div class="container-custom max-w-5xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-4">
+              <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">{section.title}</h2>
+            </div>
+            <div class="lg:col-span-8 space-y-6 text-white/70 text-lg leading-relaxed">
+              {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              {section.bullets && (
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                  {section.bullets.map((bullet) => (
+                    <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/5 border border-white/10">
+                      <Icon name="ph:check-circle-fill" class="w-5 h-5 text-payflo-purple mt-0.5 shrink-0" />
+                      <span class="text-sm text-white/70 leading-relaxed">{bullet}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <section class="py-24 bg-white/5">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">Frequently Asked Questions</h2>
+          <p class="text-gray-400 text-lg">Answers to the questions buyers usually ask before they contact us.</p>
+        </div>
+        <div class="space-y-6">
+          {faqs.map((faq) => (
+            <div class="p-8 glass-card border-white/10">
+              <h3 class="text-xl font-black mb-3 text-white">{faq.question}</h3>
+              <p class="text-gray-400 leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container-custom max-w-5xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-4xl md:text-5xl font-black mb-6">{ctaTitle}</h2>
+          <p class="text-white/70 text-lg leading-relaxed">{ctaText}</p>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+          <a href={ctaPrimaryHref} class="btn btn-primary px-10 py-5 text-lg shadow-2xl">{ctaPrimaryLabel}</a>
+          {ctaSecondaryHref && ctaSecondaryLabel && (
+            <a href={ctaSecondaryHref} class="btn glass-card border-white/20 px-10 py-5 text-lg hover:bg-white/10 transition-all font-bold">
+              {ctaSecondaryLabel}
+            </a>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 border-t border-white/5">
+      <div class="container-custom">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <h2 class="text-3xl font-black text-white">Related Pages</h2>
+          <p class="text-white/60 mt-2">Continue the research path with closely related service pages.</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4">
+          {relatedLinks.map((link) => (
+            <a
+              href={link.href}
+              class="glass-card !py-3 !px-6 text-sm font-bold text-payflo-purple hover:text-white hover:bg-payflo-purple/20 transition-all border-payflo-purple/20"
+            >
+              {link.icon && <Icon name={link.icon} class="w-3.5 h-3.5 inline mr-1" />}
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
