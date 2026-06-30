@@ -1,8 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
-import logoSvg from "../../assets/logo.svg";
+import logoSrc from "../../assets/logo.svg";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -42,11 +43,6 @@ const { data } = post;
         <h1 class="text-3xl md:text-4xl font-bold mb-6">{data.title}</h1>
 
         <div class="flex items-center gap-4 mb-8 pb-8 border-b border-white/10">
-          <img
-            src={data.authorAvatar}
-            alt={data.author}
-            class="w-12 h-12 rounded-full object-cover"
-          />
           <div>
             <p class="font-semibold text-white">{data.author}</p>
             <p class="text-sm text-white/50">{data.authorRole} &middot; {data.date}</p>
@@ -62,9 +58,10 @@ const { data } = post;
         />
       ) : (
         <div class="w-full rounded-xl mb-10 animate-on-scroll bg-payflo-darker flex items-center justify-center py-20">
-          <img
-            src={logoSvg}
+          <Image
+            src={logoSrc}
             alt="Laravel Company"
+            width={96}
             class="w-24 h-24 opacity-30"
           />
         </div>

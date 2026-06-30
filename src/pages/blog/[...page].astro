@@ -1,19 +1,26 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
-import logoSvg from "../../assets/logo.svg";
+import logoSrc from "../../assets/logo.svg";
 
-const allPosts = await getCollection("blog");
-const sortedPosts = allPosts.sort((a, b) => {
-  const dateA = new Date(a.data.date);
-  const dateB = new Date(b.data.date);
-  return dateB.getTime() - dateA.getTime();
-});
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await getCollection("blog");
+  const sortedPosts = allPosts.sort((a, b) => {
+    const dateA = new Date(a.data.date);
+    const dateB = new Date(b.data.date);
+    return dateB.getTime() - dateA.getTime();
+  });
+  return paginate(sortedPosts, { pageSize: 12 });
+}
+
+const { page } = Astro.props;
+const sortedPosts = page.data;
 ---
 
 <Layout
-  title="Blog | Laravel Company"
+  title={page.current === 1 ? "Blog | Laravel Company" : `Blog - Page ${page.current} | Laravel Company`}
   description="Insights, guides, and best practices for Laravel development, EU compliance, cybersecurity, and modern web applications."
 >
   <main class="py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
@@ -21,6 +28,7 @@ const sortedPosts = allPosts.sort((a, b) => {
       <a href="/" class="hover:text-white transition-colors">Home</a>
       <span>/</span>
       <span class="text-white">Blog</span>
+      {page.current > 1 && <><span>/</span><span class="text-white">Page {page.current}</span></>}
     </nav>
 
     <div class="max-w-5xl mx-auto">
@@ -46,9 +54,10 @@ const sortedPosts = allPosts.sort((a, b) => {
                 />
               ) : (
                 <div class="w-full h-full flex items-center justify-center">
-                  <img
-                    src={logoSvg}
+                  <Image
+                    src={logoSrc}
                     alt="Laravel Company"
+                    width={64}
                     class="w-16 h-16 opacity-30"
                     loading="lazy"
                   />
@@ -78,6 +87,47 @@ const sortedPosts = allPosts.sort((a, b) => {
           </a>
         ))}
       </div>
+
+      {page.total > 1 && (
+        <nav class="flex justify-center items-center gap-2 mt-12 animate-on-scroll" aria-label="Blog pagination">
+          {page.current > 1 && (
+            <a
+              href={page.current === 2 ? "/blog/" : `/blog/page/${page.current - 1}/`}
+              class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors text-sm"
+            >
+              <span class="flex items-center gap-1">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Previous
+              </span>
+            </a>
+          )}
+
+          <div class="flex items-center gap-1">
+            {Array.from({ length: page.total }, (_, i) => i + 1).map((p) => (
+              p === page.current ? (
+                <span class="w-9 h-9 rounded-lg bg-payflo-purple text-white flex items-center justify-center text-sm font-semibold">{p}</span>
+              ) : (
+                <a
+                  href={p === 1 ? "/blog/" : `/blog/page/${p}/`}
+                  class="w-9 h-9 rounded-lg bg-white/10 text-white/70 hover:bg-white/20 hover:text-white transition-colors flex items-center justify-center text-sm"
+                >{p}</a>
+              )
+            ))}
+          </div>
+
+          {page.current < page.total && (
+            <a
+              href={`/blog/page/${page.current + 1}/`}
+              class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors text-sm"
+            >
+              <span class="flex items-center gap-1">
+                Next
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          )}
+        </nav>
+      )}
     </div>
   </main>
 </Layout>
