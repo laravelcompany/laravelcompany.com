@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """
-Generate blog posts from CSV questions using an Ollama-compatible endpoint.
+Generate blog posts from CSV questions using an Ollama‑compatible endpoint.
 Uses SQLite for persistent storage and resume capability.
-Enforces a minimum word count (1000) and retries with backoff.
+Enforces a minimum word count (500) and retries with backoff.
+Includes parallelism, full debug logging of AI prompts & responses,
+and graceful shutdown.
 """
 
 import csv
@@ -30,11 +32,11 @@ class ColorFormatter(logging.Formatter):
     """Add colors to console log output."""
 
     COLORS = {
-        logging.DEBUG: "\033[36m",  # cyan
-        logging.INFO: "\033[32m",  # green
-        logging.WARNING: "\033[33m",  # yellow
-        logging.ERROR: "\033[31m",  # red
-        logging.CRITICAL: "\033[41m",  # red background
+        logging.DEBUG: "\033[36m",          # cyan
+        logging.INFO: "\033[32m",           # green
+        logging.WARNING: "\033[33m",        # yellow
+        logging.ERROR: "\033[31m",          # red
+        logging.CRITICAL: "\033[41m",       # red background
     }
     RESET = "\033[0m"
 
@@ -48,7 +50,7 @@ def setup_logging(verbose: bool = False, log_file: Optional[str] = None) -> None
     """Configure logging with optional file output and verbosity."""
     level = logging.DEBUG if verbose else logging.INFO
     root = logging.getLogger()
-    root.setLevel(logging.DEBUG)  # capture everything, handlers filter
+    root.setLevel(logging.DEBUG)                 # capture everything, handlers filter
 
     # Console handler with color
     console = logging.StreamHandler(sys.stdout)
@@ -78,17 +80,17 @@ DEFAULT_CONFIG = {
     "api_endpoint": "https://ai.izdrail.com/v1/chat/completions",
     "model": "neural-chat:7b",
     "api_key": "",
-    "request_timeout": 300,
+    "request_timeout": 500,
     "max_retries": 3,
     "backoff_factor": 2,
-    "min_words": 500,
-    "request_delay": 2.0,
+    "min_words": 400,
+    "request_delay": 2.0,          # seconds between sequential requests
     "concurrency": 1,
     "system_prompt": (
         "You are a senior developer and technical blogger. "
-        "Your answers are accurate, practical, and well-explained. "
+        "Your answers are accurate, practical, and well‑explained. "
         "Always include natural backlinks to https://laravelcompany.com where relevant. "
-        "Your blog posts must be at least 1000 words long."
+        "Your blog posts must be at least 500 words long."
     ),
     "user_prompt_template": (
         "Write a comprehensive blog post that answers the following question.\n\n"
@@ -98,17 +100,18 @@ DEFAULT_CONFIG = {
         "- Provide a correct and thorough answer from a developer's perspective.\n"
         "- Include relevant code examples or best practices.\n"
         "- Naturally incorporate backlinks to https://laravelcompany.com in the content.\n"
-        "- Be well-structured with headings, paragraphs, and a clear conclusion.\n"
-        "- Be at least 1000 words long."
+        "- Be well‑structured with headings, paragraphs, and a clear conclusion.\n"
+        "- Be at least 500 words long."
     ),
     "expand_prompt": (
-        "\n\nThe previous response was too short. Please expand it to at least 1000 words "
+        "\n\nThe previous response was too short. Please expand it to at least 500 words "
         "by adding more details, examples, and deeper explanations, while keeping the same "
         "high quality and structure."
     ),
     "db_file": "blog_posts.db",
     "export_dir": "exported_posts",
     "log_file": None,
+    "debug_ai": True,              # whether to log full AI prompts & responses
 }
 
 
@@ -130,12 +133,15 @@ def load_config(config_path: Optional[str]) -> dict:
         "REQUEST_TIMEOUT": "request_timeout",
         "DB_FILE": "db_file",
         "EXPORT_DIR": "export_dir",
+        "DEBUG_AI": "debug_ai",
     }
     for env_key, cfg_key in env_map.items():
         val = os.environ.get(env_key)
         if val is not None:
             if cfg_key in ("request_timeout",):
                 val = int(val)
+            elif cfg_key == "debug_ai":
+                val = val.lower() in ("1", "true", "yes")
             cfg[cfg_key] = val
 
     return cfg
@@ -148,8 +154,8 @@ DB_FILE = "blog_posts.db"
 
 
 def get_db_connection(db_path: str):
-    """Return a connection to the SQLite database."""
-    conn = sqlite3.connect(db_path)
+    """Return a connection to the SQLite database with a busy timeout."""
+    conn = sqlite3.connect(db_path, timeout=10)      # avoid "database is locked"
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA journal_mode=WAL")
     return conn
@@ -321,8 +327,37 @@ def delete_records(db_path: str, status: Optional[str] = None) -> int:
 
 
 # ============================================================================
-# AI CALL WITH RETRY AND BACKOFF
+# AI CALL WITH RETRY, BACKOFF, AND FULL DEBUG LOGGING
 # ============================================================================
+
+def mask_api_key(key: str) -> str:
+    """Return a partially masked API key for logging."""
+    if not key:
+        return "<none>"
+    return key[:4] + "***" + key[-4:] if len(key) > 8 else "***"
+
+
+def _log_ai_request(payload: dict, cfg: dict) -> None:
+    """Log the full AI request (with masked API key) when debug_ai is enabled."""
+    if not cfg.get("debug_ai"):
+        return
+    safe_payload = {**payload}
+    # mask the authorization header if present
+    if cfg.get("api_key"):
+        safe_payload["headers"] = {"Authorization": f"Bearer {mask_api_key(cfg['api_key'])}"}
+    log.debug("AI REQUEST: %s", json.dumps(safe_payload, indent=2, ensure_ascii=False))
+
+
+def _log_ai_response(response_data: dict, status_code: int, attempt: int) -> None:
+    """Log the full AI response when debug_ai is enabled."""
+    if not log.isEnabledFor(logging.DEBUG):
+        return
+    log.debug(
+        "AI RESPONSE (attempt %d, HTTP %d): %s",
+        attempt,
+        status_code,
+        json.dumps(response_data, indent=2, ensure_ascii=False)[:3000]  # limit length
+    )
 
 
 def call_ai(
@@ -333,6 +368,7 @@ def call_ai(
     """
     Send a request to the AI endpoint.
     Retries with exponential backoff on timeouts or errors.
+    Logs full request/response when --debug-ai is active.
     """
     headers = {"Content-Type": "application/json"}
     if cfg.get("api_key"):
@@ -340,7 +376,7 @@ def call_ai(
 
     system_msg = cfg["system_prompt"]
     if expand:
-        system_msg += " The response must be at least 1000 words. If you have already written a shorter version, expand it now."
+        system_msg += " The response must be at least 500 words. If you have already written a shorter version, expand it now."
 
     messages = [
         {"role": "system", "content": system_msg},
@@ -361,6 +397,7 @@ def call_ai(
 
     for attempt in range(1, max_retries + 1):
         try:
+            _log_ai_request({**payload, "headers": headers}, cfg)
             log.debug(
                 "API request (attempt %d/%d): model=%s, timeout=%d",
                 attempt,
@@ -376,6 +413,7 @@ def call_ai(
             )
             resp.raise_for_status()
             data = resp.json()
+            _log_ai_response(data, resp.status_code, attempt)
 
             if "choices" in data:
                 content = data["choices"][0]["message"]["content"].strip()
@@ -384,15 +422,15 @@ def call_ai(
             else:
                 raise ValueError(f"Unexpected response format: {list(data.keys())}")
 
-            log.debug("API response received (%d bytes)", len(content))
+            log.debug("API response received (%d chars)", len(content))
             return content
 
         except requests.exceptions.Timeout:
-            wait = backoff**attempt
+            wait = backoff ** attempt
             log.warning("Timeout (attempt %d). Retrying in %ds...", attempt, wait)
             time.sleep(wait)
         except requests.exceptions.ConnectionError as e:
-            wait = backoff**attempt
+            wait = backoff ** attempt
             log.error(
                 "Connection error (attempt %d): %s. Retrying in %ds...",
                 attempt,
@@ -405,15 +443,16 @@ def call_ai(
             log.error("HTTP %s (attempt %d): %s", status_code, attempt, e)
             if e.response and e.response.text:
                 log.debug("Response body: %s", e.response.text[:500])
+                _log_ai_response({"error_body": e.response.text[:2000]}, status_code, attempt)
             if attempt == max_retries:
                 return None
-            wait = backoff**attempt
+            wait = backoff ** attempt
             time.sleep(wait)
         except json.JSONDecodeError as e:
             log.error("Invalid JSON response (attempt %d): %s", attempt, e)
             return None
         except Exception as e:
-            wait = backoff**attempt
+            wait = backoff ** attempt
             log.warning(
                 "API error (attempt %d): %s. Retrying in %ds...", attempt, e, wait
             )
@@ -433,11 +472,19 @@ def generate_blog_post(title: str, body: str, cfg: dict) -> Optional[str]:
 
     for attempt in range(1, cfg["max_retries"] + 1):
         log.info("Attempt %d/%d...", attempt, cfg["max_retries"])
+        # log the prompt being sent
+        if cfg.get("debug_ai"):
+            log.debug("PROMPT (attempt %d): %s", attempt, current_prompt)
+
         content = call_ai(current_prompt, cfg, expand=expand)
 
         if content is None:
             log.warning("API call returned None")
             continue
+
+        # log the raw response
+        if cfg.get("debug_ai"):
+            log.debug("RAW RESPONSE (attempt %d): %s", attempt, content[:2000])
 
         word_count = len(content.split())
         log.info("Generated %d words", word_count)
@@ -462,7 +509,6 @@ def generate_blog_post(title: str, body: str, cfg: dict) -> Optional[str]:
 # ============================================================================
 # EXPORT
 # ============================================================================
-
 
 def export_posts(db_path: str, export_dir: str, status: str = "completed") -> int:
     """Export blog posts as markdown files to a directory. Returns count exported."""
@@ -503,7 +549,6 @@ def export_posts(db_path: str, export_dir: str, status: str = "completed") -> in
 # CONNECTION TEST
 # ============================================================================
 
-
 def test_connection(cfg: dict) -> bool:
     """Test connectivity to the AI endpoint."""
     headers = {"Content-Type": "application/json"}
@@ -521,6 +566,8 @@ def test_connection(cfg: dict) -> bool:
 
     log.info("Testing connection to %s ...", cfg["api_endpoint"])
     log.info("Model: %s", cfg["model"])
+    if cfg.get("debug_ai"):
+        log.debug("Test payload: %s", json.dumps(payload, indent=2))
 
     try:
         resp = requests.post(
@@ -528,6 +575,9 @@ def test_connection(cfg: dict) -> bool:
         )
         resp.raise_for_status()
         data = resp.json()
+
+        if cfg.get("debug_ai"):
+            _log_ai_response(data, resp.status_code, 1)
 
         if "choices" in data:
             log.info("Response: %s", data["choices"][0]["message"]["content"].strip())
@@ -555,7 +605,6 @@ def test_connection(cfg: dict) -> bool:
 # ============================================================================
 # STATISTICS
 # ============================================================================
-
 
 def show_stats(db_path: str) -> None:
     """Display detailed statistics about records."""
@@ -613,12 +662,13 @@ def _signal_handler(signum, frame) -> None:
 
 
 class ProgressTracker:
+    """Thread‑safe progress tracker for parallel execution."""
     def __init__(self, total: int):
         self.total = total
         self._lock = threading.Lock()
         self.completed: List[int] = []
         self.failed: List[int] = []
-        self.running: Dict[int, str] = {}  # record_id -> title
+        self.running: Dict[int, str] = {}   # record_id -> title
 
     def start(self, record_id: int, title: str) -> None:
         with self._lock:
@@ -663,6 +713,7 @@ def _worker(
 
     progress.start(rec_id, title[:60])
 
+    # Mark as processing (with its own connection)
     conn = get_db_connection(db_path)
     try:
         conn.execute(
@@ -676,6 +727,7 @@ def _worker(
     blog_post = generate_blog_post(title, body, cfg)
     success = blog_post is not None
 
+    # Final status update
     conn = get_db_connection(db_path)
     try:
         if blog_post is None:
@@ -718,16 +770,12 @@ def _run_sequential(cfg: dict, records: list, total: int) -> None:
         if _shutdown_requested:
             break
         if idx < total:
-            log.debug("Rate-limit sleep: %ds", cfg["request_delay"])
+            log.debug("Rate‑limit sleep: %ds", cfg["request_delay"])
             time.sleep(cfg["request_delay"])
 
 
 def _run_parallel(cfg: dict, records: list, total: int, concurrency: int) -> None:
-    """Process records in parallel using a work-stealing thread pool.
-
-    Always keeps up to `concurrency` workers busy. As each finishes,
-    the pool immediately hands it the next waiting record.
-    """
+    """Process records in parallel using a work‑stealing thread pool."""
     workers = min(concurrency, total)
     progress = ProgressTracker(total)
 
@@ -796,7 +844,6 @@ def process_records(
 # COMMAND-LINE INTERFACE
 # ============================================================================
 
-
 def parse_args() -> Namespace:
     parser = ArgumentParser(
         description="Generate blog posts from CSV questions using AI with database and resume support.",
@@ -816,6 +863,7 @@ def parse_args() -> Namespace:
             "  %(prog)s --delete completed                 Delete all completed records\n"
             "  %(prog)s --verbose                          Enable debug logging\n"
             "  %(prog)s -P 5 data.csv                      Process 5 records in parallel\n"
+            "  %(prog)s --debug-ai data.csv                Show full AI prompts and responses\n"
         ),
     )
     parser.add_argument(
@@ -866,7 +914,7 @@ def parse_args() -> Namespace:
     )
     parser.add_argument("--log-file", help="Path to log file")
     parser.add_argument(
-        "--verbose", action="store_true", help="Enable debug-level logging"
+        "--verbose", action="store_true", help="Enable debug‑level logging"
     )
     parser.add_argument(
         "-P",
@@ -875,6 +923,11 @@ def parse_args() -> Namespace:
         default=None,
         dest="concurrency",
         help="Number of records to process in parallel (default: 1, sequential)",
+    )
+    parser.add_argument(
+        "--debug-ai",
+        action="store_true",
+        help="Log full AI request/response payloads (debug level must be active)",
     )
     return parser.parse_args()
 
@@ -942,13 +995,16 @@ def main() -> None:
         cfg["export_dir"] = args.export_dir
     if args.log_file:
         cfg["log_file"] = args.log_file
-
-    # Apply concurrency from CLI (overrides config/env)
     if args.concurrency is not None:
         cfg["concurrency"] = args.concurrency
+    if args.debug_ai:
+        cfg["debug_ai"] = True
 
-    # Setup logging
-    setup_logging(verbose=args.verbose, log_file=cfg.get("log_file"))
+    # Setup logging (debug level if verbose or debug_ai is on)
+    setup_logging(
+        verbose=args.verbose or cfg.get("debug_ai"),
+        log_file=cfg.get("log_file")
+    )
 
     DB_FILE = cfg["db_file"]
 
@@ -957,33 +1013,27 @@ def main() -> None:
 
     # --- Dispatch commands ---
 
-    # Connection test
     if args.test:
         test_connection(cfg)
         return
 
-    # Stats
     if args.stats:
         show_stats(DB_FILE)
         return
 
-    # List
     if args.list is not None:
         cmd_list(DB_FILE, args.list)
         return
 
-    # Show
     if args.show is not None:
         cmd_show(DB_FILE, args.show)
         return
 
-    # Export
     if args.export:
         exported = export_posts(DB_FILE, cfg["export_dir"])
         log.info("Exported %d posts to %s/", exported, cfg["export_dir"])
         return
 
-    # Delete
     if args.delete is not None:
         status = None if args.delete == "all" else args.delete
         deleted = delete_records(DB_FILE, status)
@@ -994,7 +1044,6 @@ def main() -> None:
         )
         return
 
-    # Retry failed
     if args.retry_failed:
         conn = get_db_connection(DB_FILE)
         conn.execute(
@@ -1006,9 +1055,8 @@ def main() -> None:
         log.info("Reset %d failed records to pending.", affected)
         return
 
-    # Dry-run
     if args.dry_run:
-        log.info("DRY RUN mode - no API calls will be made")
+        log.info("DRY RUN mode – no API calls will be made")
         if args.csv:
             try:
                 with open(args.csv, "r", newline="", encoding="utf-8") as f:
@@ -1029,7 +1077,7 @@ def main() -> None:
         concurrency = cfg.get("concurrency", 1)
         log.info("Concurrency: %d", concurrency)
         if concurrency > 1:
-            log.info("No rate-limit delay between records in parallel mode")
+            log.info("No rate‑limit delay between records in parallel mode")
         else:
             pending = get_records(
                 DB_FILE, status_filter="pending", max_retries=cfg["max_retries"]
