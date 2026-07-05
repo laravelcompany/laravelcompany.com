@@ -92,7 +92,7 @@ const sortedPosts = page.data;
         <nav class="flex justify-center items-center gap-2 mt-12 animate-on-scroll" aria-label="Blog pagination">
           {page.current > 1 && (
             <a
-              href={page.current === 2 ? "/blog/" : `/blog/page/${page.current - 1}/`}
+              href={page.current === 2 ? "/blog/" : `/blog/${page.current - 1}/`}
               class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors text-sm"
             >
               <span class="flex items-center gap-1">
@@ -108,7 +108,7 @@ const sortedPosts = page.data;
                 <span class="w-9 h-9 rounded-lg bg-payflo-purple text-white flex items-center justify-center text-sm font-semibold">{p}</span>
               ) : (
                 <a
-                  href={p === 1 ? "/blog/" : `/blog/page/${p}/`}
+                  href={p === 1 ? "/blog/" : `/blog/${p}/`}
                   class="w-9 h-9 rounded-lg bg-white/10 text-white/70 hover:bg-white/20 hover:text-white transition-colors flex items-center justify-center text-sm"
                 >{p}</a>
               )
@@ -117,7 +117,7 @@ const sortedPosts = page.data;
 
           {page.current < page.total && (
             <a
-              href={`/blog/page/${page.current + 1}/`}
+              href={`/blog/${page.current + 1}/`}
               class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors text-sm"
             >
               <span class="flex items-center gap-1">
