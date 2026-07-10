@@ -1,7 +1,7 @@
 {
   "title": "What is the Laravel way to check if the POST Request has a field left empty?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# What is the Laravel Way to Check if a POST Request Field Has Left Empty? Mastering Optional Array Inputs As senior developers, we often encounter scenarios...",

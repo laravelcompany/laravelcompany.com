@@ -1,7 +1,7 @@
 {
   "title": "TimeZones In Laravel Application",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Timezones in Laravel: Displaying Data Accurately Across the Globe As a senior developer, I frequently encounter scenarios where data stored...",

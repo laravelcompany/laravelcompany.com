@@ -1,7 +1,7 @@
 {
   "title": "Laravel 8 rest api email verification",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Laravel 8 REST API Email Verification with JWT: Solving the Redirect Dilemma After diving deep into the official documentation and forum...",

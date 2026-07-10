@@ -1,7 +1,7 @@
 {
   "title": "Carbon: displaying hours and minutes?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Displaying Hours, Minutes, and Seconds with Carbon in Laravel Views Body: When working on a web application development project, it is essential to...",

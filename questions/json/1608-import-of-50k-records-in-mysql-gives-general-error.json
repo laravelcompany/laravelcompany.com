@@ -1,7 +1,7 @@
 {
   "title": "Import of 50K+ Records in MySQL Gives General error: 1390 Prepared statement contains too many placeholders",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving General Error: 1390 Prepared Statement Contains Too Many Placeholders When Importing Large Data Sets in MySQL When dealing with large data...",

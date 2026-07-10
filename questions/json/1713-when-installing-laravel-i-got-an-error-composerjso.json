@@ -1,7 +1,7 @@
 {
   "title": "When installing Laravel I got an error: \"./composer.json is not writable.\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: When installing Laravel I got an error: \"./composer.json is not writable.\" - A Guide to Fixing Composer Access Issues in Linux Body: Encountering errors...",

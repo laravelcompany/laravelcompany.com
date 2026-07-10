@@ -1,7 +1,7 @@
 {
   "title": "Modify a custom attribute of an Eloquent Model",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Modify a Custom Attribute of an Eloquent Model: The Right Way As developers working with Laravel and Eloquent, we often move beyond simple attribute storage...",

@@ -1,7 +1,7 @@
 {
   "title": "Trying to set up Laravel 4 gives \"failed to open stream: No such file or directory\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting \"No such file or directory\" Issues When Setting up Laravel 4 on Mac Introduction Setting up Laravel 4 can be a straightforward process...",

@@ -1,7 +1,7 @@
 {
   "title": "Get primary key of Eloquent model instance",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Get Primary Key of Eloquent Model Instance: Solving Inconsistent Naming Headaches I'm happy enough to work on a project with (not) very consistent column...",

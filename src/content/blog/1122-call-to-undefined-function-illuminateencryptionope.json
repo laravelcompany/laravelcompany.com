@@ -1,7 +1,7 @@
 {
   "title": "Call to undefined function Illuminate\\Encryption\\openssl_decrypt()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Call to undefined function Illuminate\\Encryption\\openssl_decrypt() - A Comprehensive Guide to Solving Laravel Encryption Errors Body: Developers working...",

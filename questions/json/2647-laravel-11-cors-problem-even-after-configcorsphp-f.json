@@ -1,7 +1,7 @@
 {
   "title": "Laravel 11: CORS problem even after config/cors.php file setup",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel 11: Solving Persistent CORS Issues Even After Configuring `config/cors.php` Working with modern full-stack applications, especially those involving...",

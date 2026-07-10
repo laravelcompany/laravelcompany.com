@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.2: Class Imagick not found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the Laravel Mystery: Why 'Class Imagick does not exist' Appears in Your Service As senior developers, we often encounter frustrating bugs where code...",

@@ -1,7 +1,7 @@
 {
   "title": "Dynamically hide certain columns when returning an Eloquent object as JSON?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Dynamically Hiding or Showing Specific Columns in JSON Responses with Laravel Eloquent One of the core concepts of software development is flexibility....",

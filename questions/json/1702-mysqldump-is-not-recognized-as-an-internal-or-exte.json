@@ -1,7 +1,7 @@
 {
   "title": "'mysqldump' is not recognized as an internal or external command",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting 'mysqldump' Not Recognized Issue in Laravel Projects Currently, you're working on backing up and restoring your MySQL database for your...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Impossible to Create Root Directory",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Overcoming Laravel's \"Impossible to Create Root Directory\" Error During Uploads Introduction Ensuring uploaded files are efficiently stored and accessed...",

@@ -1,7 +1,7 @@
 {
   "title": "How can I query raw via Eloquent?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficient Raw Querying with Eloquent in Laravel Applications Introduction: In the world of modern PHP frameworks, Laravel offers a robust set of tools...",

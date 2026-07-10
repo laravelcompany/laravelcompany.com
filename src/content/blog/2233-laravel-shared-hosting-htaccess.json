@@ -1,7 +1,7 @@
 {
   "title": "Laravel Shared Hosting .htaccess",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Tackling Laravel Shared Hosting Issues: Solve .htaccess Problems When Removing /public Folder Body: As a developer, you may encounter various challenges...",

@@ -1,7 +1,7 @@
 {
   "title": "How to change date format in laravel Query Builder from \"2016-03-12\" to \"12-Mar-2016\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Modifying Date Formats in Laravel Query Builder Introduction: One of the core features of a database is handling dates and timestamps....",

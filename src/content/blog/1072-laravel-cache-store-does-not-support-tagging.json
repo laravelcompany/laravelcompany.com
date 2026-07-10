@@ -1,7 +1,7 @@
 {
   "title": "Laravel cache store does not support tagging",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Cache Tagging Issues in Laravel with Zizaco\\Entrust Integration Body: Encountering \"BadMethodCallException: This cache store does not...",

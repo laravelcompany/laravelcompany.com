@@ -1,7 +1,7 @@
 {
   "title": "Laravel eloquent not retrieving results based on boolean column",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# The Eloquent Mystery: Why Boolean Queries Fail When Dealing with Integers in the Database As senior developers working with Laravel and Eloquent, we often...",

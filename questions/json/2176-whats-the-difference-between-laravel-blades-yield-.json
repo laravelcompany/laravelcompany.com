@@ -1,7 +1,7 @@
 {
   "title": "What's the difference between Laravel Blade's `@yield` and `@include`?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Clarifying the Difference Between Laravel Blade's `@yield` and `@include` Directives Body: Laravel, a powerful PHP framework, offers an impressive range...",

@@ -1,7 +1,7 @@
 {
   "title": "Sending email to multiple cc recipients in Laravel 5.4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Sending Email with Multiple CC Recipients in Laravel 5.4 Introduction: In today's world, emails play an essential role in communication between people...",

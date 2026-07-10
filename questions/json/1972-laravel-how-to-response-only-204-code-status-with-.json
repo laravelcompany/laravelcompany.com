@@ -1,7 +1,7 @@
 {
   "title": "Laravel how to response only 204 code status with no body message",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Custom Response Handling for Empty Body Messages and 204 Status Codes Introduction In some cases, you might need to return an empty response...",

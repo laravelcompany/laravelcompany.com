@@ -1,7 +1,7 @@
 {
   "title": "What Are the Differences Between PSR-0 and PSR-4?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Unraveling the Differences Between PSR-0 and PSR-4 for Effective Namespacing Introduction: Namespaces are fundamental in modern programming. They help...",

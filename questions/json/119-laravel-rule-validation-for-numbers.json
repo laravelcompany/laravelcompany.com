@@ -1,7 +1,7 @@
 {
   "title": "Laravel rule validation for numbers",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Comprehensive Guide to Laravel Rule Validation for Numbers Introduction Laravel's request validation system provides an easy way to validate user input...",

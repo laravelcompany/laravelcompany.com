@@ -1,7 +1,7 @@
 {
   "title": "Call to undefined method Laravel\\Passport\\Passport::routes()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: \"Call to undefined method Laravel\\Passport\\Passport::routes()\" - A Comprehensive Guide to Resolving This Common Error in Laravel Applications...",

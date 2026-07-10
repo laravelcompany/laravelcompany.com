@@ -1,7 +1,7 @@
 {
   "title": "Laravel testing, get JSON content",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Retrieving JSON Responses during Laravel Testing Introduction: In Laravel's unit testing world, dealing with API endpoints that return JSON...",

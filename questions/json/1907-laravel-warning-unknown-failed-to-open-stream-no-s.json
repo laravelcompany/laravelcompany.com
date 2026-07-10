@@ -1,7 +1,7 @@
 {
   "title": "Laravel Warning: Unknown: failed to open stream: No such file or directory in Unknown on line 0",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Debugging Laravel Warning: Unknown: failed to open stream - A Comprehensive Guide for Developers Introduction Encountering the error \"Warning: Unknown:...",

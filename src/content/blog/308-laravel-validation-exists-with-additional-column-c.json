@@ -1,7 +1,7 @@
 {
   "title": "Laravel validation: exists with additional column condition - custom validation rule",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Custom Laravel Validation Rule for Checking Existence with Additional Conditions Laravel is a powerful PHP framework renowned for its robust validation...",

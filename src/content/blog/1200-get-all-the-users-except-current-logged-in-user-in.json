@@ -1,7 +1,7 @@
 {
   "title": "Get all the users except current logged in user in laravel eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Retrieving All Users Except the Current Logged In User in Laravel Eloquent Introduction: Working with users is a crucial task in many applications,...",

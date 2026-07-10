@@ -1,7 +1,7 @@
 {
   "title": "How to generate mobile phone number with Faker",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Generate Unique Mobile Phone Numbers with Faker in Laravel As senior developers working within the Laravel ecosystem, we frequently rely on the...",

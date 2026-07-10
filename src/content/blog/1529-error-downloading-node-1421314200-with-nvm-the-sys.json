@@ -1,7 +1,7 @@
 {
   "title": "Error downloading node 14.21.3/14.20.0 with NVM. The system cannot find the file specified",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Node.js Installation Errors with NVM - A Developer's Guide Body: When working on legacy projects that require specific versions of...",

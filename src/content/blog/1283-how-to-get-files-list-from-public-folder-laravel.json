@@ -1,7 +1,7 @@
 {
   "title": "How to get files list from public folder Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Retrieving Files from Laravel's Public Folder Introduction: In your Laravel application, you have stored several images within the public...",

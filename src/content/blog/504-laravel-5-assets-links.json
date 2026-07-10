@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 assets links",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel Assets Links and Best Practices Body: In your Laravel 5 project, you may have encountered the issue of assets links pointing to...",

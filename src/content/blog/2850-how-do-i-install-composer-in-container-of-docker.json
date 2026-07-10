@@ -1,7 +1,7 @@
 {
   "title": "How do I install composer in container of docker?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Install Composer in Your Docker Container for Laravel Development As a senior developer working with containerized applications, I frequently...",

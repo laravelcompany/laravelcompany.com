@@ -1,7 +1,7 @@
 {
   "title": "How to upgrade laravel 5.5 to laravel 10?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# The Grand Migration: How to Safely Upgrade from Laravel 5.5 to Laravel 10 Upgrading a large framework like Laravel across several major versions is not a...",

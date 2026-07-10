@@ -1,7 +1,7 @@
 {
   "title": "Convert Unix Timestamp to Carbon Object",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Convert Unix Timestamps to Carbon Objects for Human Readable Formats Body: Managing timestamps is an integral part of any application, and...",

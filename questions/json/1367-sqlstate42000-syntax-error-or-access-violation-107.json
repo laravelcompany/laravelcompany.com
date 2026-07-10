@@ -1,7 +1,7 @@
 {
   "title": "SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: SQLSTATE[42000]: Syntax error or access violation - Understanding and Resolving Incorrect Table Definition Issues in Laravel Introduction The...",

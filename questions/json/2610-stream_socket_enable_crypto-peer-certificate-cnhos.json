@@ -1,7 +1,7 @@
 {
   "title": "stream_socket_enable_crypto(): Peer certificate CN=`<hostname>' did not match expected CN=`smtp-relay.sendinblue.com'",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Deciphering SMTP SSL Errors in Laravel: Troubleshooting `stream_socket_enable_crypto()` As a senior developer working with modern PHP frameworks like...",

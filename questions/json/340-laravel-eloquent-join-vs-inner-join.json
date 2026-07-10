@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent Join vs Inner Join?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Retrieving Friend Feed Data Using Laravel Eloquent and Inner Joins Body: Retrieving data from multiple tables can be quite complex,...",

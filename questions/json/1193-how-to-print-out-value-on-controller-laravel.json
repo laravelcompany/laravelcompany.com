@@ -1,7 +1,7 @@
 {
   "title": "How to print out value on controller Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Debugging a Laravel application involves printing out values on the controller, which is often required when you want to monitor specific data or test your...",

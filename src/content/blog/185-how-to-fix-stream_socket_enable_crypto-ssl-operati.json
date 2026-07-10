@@ -1,7 +1,7 @@
 {
   "title": "how to fix stream_socket_enable_crypto(): SSL operation failed with code 1",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving Stream_socket_enable_crypto Errors with SSL and Custom Script Communications Introduction: SSL (Secure Sockets Layer) is a vital component of...",

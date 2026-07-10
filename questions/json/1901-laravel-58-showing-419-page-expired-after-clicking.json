@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.8 showing \"419 Page Expired\" after clicking logout from an already cleared session",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"419 Page Expired\" Errors After Logging Out in Laravel 5.8 Introduction Laravel provides a powerful authentication system using the make:auth...",

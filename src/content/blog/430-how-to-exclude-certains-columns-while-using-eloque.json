@@ -1,7 +1,7 @@
 {
   "title": "How to exclude certains columns while using Eloquent?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Excluding Certain Columns while Using Eloquent: A Comprehensive Guide Body: Introduction When developing applications using Laravel, you often want to...",

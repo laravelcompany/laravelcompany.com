@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 MethodNotAllowedHttpException in RouteCollection.php line 201:",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving Laravel's MethodNotAllowedHttpException Error in RouteCollection.php Line 201 Body: Laravel is an excellent PHP framework...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel-5 how to populate select box from database with id value and name value",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Populate Select Boxes from Database in Laravel 5 Using Illuminate\\Html Laravel is an incredibly powerful PHP framework that simplifies the...",

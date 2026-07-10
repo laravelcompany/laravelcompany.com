@@ -1,7 +1,7 @@
 {
   "title": "Could not find package /laravel/laravel with stability stable",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the Laravel Setup Nightmare: Resolving Composer and Installer Errors As a senior developer, I’ve seen countless times how frustrating dependency...",

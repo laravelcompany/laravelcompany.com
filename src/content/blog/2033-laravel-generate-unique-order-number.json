@@ -1,7 +1,7 @@
 {
   "title": "Laravel - generate unique order number",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Generating Unique Order Numbers in Laravel When developing a web application involving orders, one of the crucial factors that play a significant role is...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Carbon how to change timezone without changing the hour",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Manipulating Time Zones with Laravel Carbon without Changing the Hour Value Body: Working with time zones in PHP applications can be tricky due to the...",

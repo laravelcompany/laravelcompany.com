@@ -1,7 +1,7 @@
 {
   "title": "league/flysystem-aws-s3-v3 on Laravel 8 other packages require lower version",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Navigating Package Version Conflicts: Updating league/flysystem-aws-s3-v3 on Laravel 8 with Other Dependencies Introduction: When working with composite...",

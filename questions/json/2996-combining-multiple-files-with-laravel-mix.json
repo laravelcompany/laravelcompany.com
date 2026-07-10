@@ -1,7 +1,7 @@
 {
   "title": "Combining Multiple Files with Laravel Mix",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Asset Management: Advanced Combining Techniques with Laravel Mix Diving into the world of asset bundling with Laravel Mix often brings up complex...",

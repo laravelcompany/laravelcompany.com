@@ -1,7 +1,7 @@
 {
   "title": "Fixing 'Access Blocked' in Google OAuth and Database Session Leaks in Laravel",
   "date": "2026-07-28",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Google blocking Socialite logins in in-app browsers, ghost session records piling up in your database—these authentication headaches have practical solutions. Here's how to fix both.",

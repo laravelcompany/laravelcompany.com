@@ -1,7 +1,7 @@
 {
   "title": "How to alias a table in Laravel Eloquent queries (or using Query Builder)?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Streamlining Laravel Eloquent Queries with Table Aliasing: A Comprehensive Guide Introduction: In the world of modern software development, efficiency...",

@@ -1,7 +1,7 @@
 {
   "title": "Multipart/form-data not working on axios put request",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving Multipart/form-data Issues with Axios PUT Requests: A Deep Dive for Next.js & Laravel Developers File uploads are a cornerstone of modern web...",

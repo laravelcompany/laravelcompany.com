@@ -1,7 +1,7 @@
 {
   "title": "Laravel Jobs Serialization of 'Closure' is not allowed",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Jobs Serialization of 'Closure' is not allowed - A Comprehensive Guide to Resolving the Issue During the development process, you may encounter...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent : with query parameters",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Eloquent: Mastering Dynamic Query Parameters in Eager Loading I've finally worked out how to put together a complex query to get related models. The...",

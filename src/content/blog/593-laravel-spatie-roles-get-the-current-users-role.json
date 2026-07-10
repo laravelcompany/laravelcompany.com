@@ -1,7 +1,7 @@
 {
   "title": "Laravel Spatie Roles: get the current user's role",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Spatie Roles: Retrieving the Current User's Role with Ease Introduction: In a Laravel-based application that utilizes the Spatie/Roles library,...",

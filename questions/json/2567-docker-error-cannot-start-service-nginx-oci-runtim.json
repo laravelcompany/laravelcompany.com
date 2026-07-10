@@ -1,7 +1,7 @@
 {
   "title": "Docker: ERROR Cannot start service nginx: OCI runtime create failed",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Docker: Solving the \"OCI runtime create failed\" Error When Mounting Configuration Files As senior developers working with containerized applications, we...",

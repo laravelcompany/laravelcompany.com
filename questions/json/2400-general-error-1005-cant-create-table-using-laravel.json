@@ -1,7 +1,7 @@
 {
   "title": "\"General error: 1005 Can't create table\" Using Laravel Schema Build and Foreign Keys",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# General Error: 1005 Can't Create Table with Laravel Schema and Foreign Keys As senior developers, we often encounter frustrating errors that seem cryptic,...",

@@ -1,7 +1,7 @@
 {
   "title": "How to place the ~/.composer/vendor/bin directory in your PATH?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Adding ~/.composer/vendor/bin to Your PATH for Smooth Laravel Execution Introduction: Laravel is one of the most popular PHP frameworks...",

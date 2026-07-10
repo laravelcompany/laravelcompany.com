@@ -1,7 +1,7 @@
 {
   "title": "cURL error 28: Operation timed out after 2000 milliseconds with 7276200 out of 23000995 bytes received",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Addressing cURL Timeouts and Large Data Transfers in Laravel Applications Description In this comprehensive post, we'll explore the most common culprits...",

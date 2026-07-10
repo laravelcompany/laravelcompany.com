@@ -1,7 +1,7 @@
 {
   "title": "Laravel 502 Bad Gateway Error Post Request",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving Laravel 502 Bad Gateway Error During POST Requests on Homestead Setup Body: The Laravel 502 bad gateway error during post requests can be...",

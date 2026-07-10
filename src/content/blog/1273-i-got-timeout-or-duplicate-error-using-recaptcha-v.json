@@ -1,7 +1,7 @@
 {
   "title": "I got \"timeout-or-duplicate\" error using ReCaptcha v3",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: TroubleShooting \"timeout-or-duplicate\" Errors with Recaptcha v3 in Laravel Projects Body: You've implemented ReCaptcha v3 on your Laravel contact form,...",

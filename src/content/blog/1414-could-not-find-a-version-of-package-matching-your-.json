@@ -1,7 +1,7 @@
 {
   "title": "Could not find a version of package matching your minimum-stability. Require it with an explicit version constraint allowing its desired stability",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving Issues with Composer and Package Installation - A Developer's Guide Introduction As a senior developer dealing with package management using...",

@@ -1,7 +1,7 @@
 {
   "title": "connecting postgres with laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Connecting PostgreSQL with Laravel: Troubleshooting the \"Could Not Find Driver\" Error Connecting a modern PHP framework like Laravel with a robust database...",

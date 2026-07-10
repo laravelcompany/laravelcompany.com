@@ -1,7 +1,7 @@
 {
   "title": "Argument 1 passed t be an instance of Illuminate\\Http\\Request, array given",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Argument 1 Passed as Array in Illuminate\\Http\\Request, Resolving Issue with Code Refactoring Why am I getting the following error? Argument 1 passed to...",

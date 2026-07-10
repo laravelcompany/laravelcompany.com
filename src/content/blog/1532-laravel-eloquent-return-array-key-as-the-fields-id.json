@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent: Return Array key as the fields ID",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Retrieving Array Keys as IDs using Laravel Eloquent Introduction Laravel provides an incredible framework for building web applications. One...",

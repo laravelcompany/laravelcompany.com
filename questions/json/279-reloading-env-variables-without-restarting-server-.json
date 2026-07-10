@@ -1,7 +1,7 @@
 {
   "title": "Reloading .env variables without restarting server (Laravel 5, shared hosting)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortless .env Variable Reloading Without Restarting Server (Laravel 5, Shared Hosting) Body: Introduction: Often in Laravel development, you may...",

@@ -1,7 +1,7 @@
 {
   "title": "Ajax post request in laravel 5 return error 500 (Internal Server Error)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Ajax Post Request in Laravel 5 Returning Error 500 (Internal Server Error) Introduction: In this blog post, we will discuss the...",

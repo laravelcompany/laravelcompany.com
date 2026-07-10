@@ -1,7 +1,7 @@
 {
   "title": "Add [title] to fillable property to allow mass assignment on [App\\Post]",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Mass Assignment in Laravel: Understanding Fillable Properties and Safe Insertion of Data Introduction Mass assignment is a common practice in web...",

@@ -1,7 +1,7 @@
 {
   "title": "Inserting created_at data with Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Inserting created_at Data with Laravel - A Comprehensive Guide Body: Inserting a created_at data in your database table through Laravel can seem...",

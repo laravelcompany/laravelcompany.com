@@ -1,7 +1,7 @@
 {
   "title": "Laravel hasMany with where in a Polymorphic relationship",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Polymorphic Relationships with hasMany and Custom Conditions Introduction: In modern web development, managing data efficiently is crucial for...",

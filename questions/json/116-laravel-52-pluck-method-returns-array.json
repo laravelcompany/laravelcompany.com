@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.2 - pluck() method returns array",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Clarifying Laravel 5.2's pluck() Method Behavior Body: In the context of upgrading your project from Laravel 5.1 to 5.2, you might face some challenges...",

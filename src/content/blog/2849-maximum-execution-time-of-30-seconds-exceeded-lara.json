@@ -1,7 +1,7 @@
 {
   "title": "Maximum execution time of 30 seconds exceeded Laravel 4 error",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the Maximum Execution Time Error in Laravel: A Deep Dive into Asynchronous Operations As a senior developer working with legacy systems like Laravel...",

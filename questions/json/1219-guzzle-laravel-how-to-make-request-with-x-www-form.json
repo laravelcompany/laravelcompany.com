@@ -1,7 +1,7 @@
 {
   "title": "Guzzle - Laravel. How to make request with x-www-form-url-encoded",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Guzzle - Laravel. How to Make Requests with x-www-form-url-encoded Data Introduction: Handling API interactions is an essential part of modern web...",

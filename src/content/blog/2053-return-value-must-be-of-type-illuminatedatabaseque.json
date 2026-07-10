@@ -1,7 +1,7 @@
 {
   "title": "Return value must be of type ?Illuminate\\\\Database\\\\Query\\\\Builder, App\\\\Models\\\\ModelName returned",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Return Value Issues in Eloquent Model Relationships In your scenario, you're attempting to fetch a user along with its associated country...",

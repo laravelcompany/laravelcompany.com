@@ -1,7 +1,7 @@
 {
   "title": "Laravel Request getting current path with query string",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Retrieving Current Path with Query String in Laravel Requests Body: Isobar for you is a web development framework with powerful tools to handle HTTP...",

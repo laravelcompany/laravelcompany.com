@@ -1,7 +1,7 @@
 {
   "title": "Limiting the results in Blade foreach loop",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Limit Results in Blade foreach Loops: A Comprehensive Guide Introduction: Displaying only a limited number of items on your Laravel web...",

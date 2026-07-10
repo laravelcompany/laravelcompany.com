@@ -1,7 +1,7 @@
 {
   "title": "file_put_content...fail to open stream:Permission denied in Laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving file_put_content...fail to open stream:Permission denied issues in Laravel 5 The error is mention in below:- ErrorException in Filesystem.php...",

@@ -1,7 +1,7 @@
 {
   "title": "How to manually create a new empty Eloquent Collection in Laravel 4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: How to Manually Create a New Empty Eloquent Collection in Laravel 4 Introduction: In Laravel 4, when it comes to working with collections of models,...",

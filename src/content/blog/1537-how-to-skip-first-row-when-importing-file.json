@@ -1,7 +1,7 @@
 {
   "title": "How to skip first row when importing file",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Skipping the First Row When Importing Files with Laravel and Maatwebsite-Excel Introduction In your project, you might want to import data from an Excel...",

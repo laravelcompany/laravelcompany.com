@@ -1,7 +1,7 @@
 {
   "title": "Creating laravel service class",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Utilizing Laravel Service Classes with Uptime Monitoring APIs Creating a service class in Laravel is an excellent way to organize your code and make it...",

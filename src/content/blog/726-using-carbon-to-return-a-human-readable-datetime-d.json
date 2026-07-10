@@ -1,7 +1,7 @@
 {
   "title": "Using Carbon to return a human readable datetime difference",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Simplifying Human Readable DateTime Differences with Laravel and Carbon Package Introduction: Displaying the timing of events on your application can...",

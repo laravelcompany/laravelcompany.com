@@ -1,7 +1,7 @@
 {
   "title": "\"Type error: Too few arguments to function App\\Http\\Controllers\\UserController::attendance(), 0 passed and exactly 1 expected\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: \"Type Error: Understanding and Resolving Argument Issues in Laravel Route Callbacks\" Body: Encountering a type error related to function arguments can...",

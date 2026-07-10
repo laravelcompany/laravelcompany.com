@@ -1,7 +1,7 @@
 {
   "title": "laravel/framework 9.x-dev requires php ^8.0 -> your PHP version (7.4.13) does not satisfy that requirement",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Upgrading Laravel or any other package in your project can introduce several benefits as well as potential risks if not handled properly. Before deciding on...",

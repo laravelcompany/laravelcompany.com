@@ -1,7 +1,7 @@
 {
   "title": "Laravel get name of file",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Retrieving Filename from Uploaded File in Laravel Body: In Laravel, handling file uploads is quite straightforward thanks to the built-in functionality...",

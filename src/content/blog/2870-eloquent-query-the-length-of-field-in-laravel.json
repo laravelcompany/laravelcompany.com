@@ -1,7 +1,7 @@
 {
   "title": "Eloquent: Query the length of field in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Eloquent: Querying Field Lengths and Database Functions Correctly As developers working with Laravel and Eloquent, we often find ourselves needing to...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel `array_pluck` on any key",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# The Illusion of Magic: Why `array_pluck` Can't Handle Complex Dot Notation As developers, we often look for shortcuts—a single, elegant function call that...",

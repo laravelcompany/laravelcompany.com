@@ -1,7 +1,7 @@
 {
   "title": "Upload file using Guzzle 6 to API endpoint",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Upload File Using Guzzle 6 to API Endpoint: A Comprehensive Guide Introduction The process of uploading files through an HTTP request is essential for...",

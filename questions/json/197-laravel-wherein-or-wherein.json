@@ -1,7 +1,7 @@
 {
   "title": "Laravel whereIn OR whereIn",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Differences Between Laravel whereIn and OR whereIn When Working with Search Filters Body: When building an application that requires...",

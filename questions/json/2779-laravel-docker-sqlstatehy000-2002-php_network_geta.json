@@ -1,7 +1,7 @@
 {
   "title": "Laravel Docker - SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the Docker Networking Nightmare: Fixing SQLSTATE[HY000] in Laravel As a senior developer working with containerized applications, I frequently...",

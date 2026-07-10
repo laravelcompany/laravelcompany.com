@@ -1,7 +1,7 @@
 {
   "title": "How to clear Laravel route caching on server",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Managing Laravel Route Caching on Localhost and Server Introduction As a developer, you often encounter issues with route caching in Laravel...",

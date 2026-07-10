@@ -1,7 +1,7 @@
 {
   "title": "Unable to create or change a table without a primary key - Laravel DigitalOcean Managed Database",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Unable to Create or Change a Table Without a Primary Key - Solving Laravel and DigitalOcean Managed Database Issues Body: I've just deployed my app to...",

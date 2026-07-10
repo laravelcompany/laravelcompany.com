@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.1 PHP DOMDocument() class not found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Resolving the Mystery: Why `DOMDocument()` Fails in Laravel 5.1 Projects As developers working within the Laravel ecosystem, we often rely on a stable...",

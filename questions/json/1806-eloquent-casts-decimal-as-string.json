@@ -1,7 +1,7 @@
 {
   "title": "Eloquent casts decimal as string",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Eloquent's Decimal Casting Issues and How to Fix Them Body: Introduction When working with Eloquent models, you may encounter situations...",

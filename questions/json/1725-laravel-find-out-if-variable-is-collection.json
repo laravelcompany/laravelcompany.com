@@ -1,7 +1,7 @@
 {
   "title": "Laravel: find out if variable is collection",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Determining if a Variable is an Eloquent Collection in Laravel Introduction Laravel, being one of the leading PHP frameworks, provides an...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel not sending email and not giving errors",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel Email Issues - Not Sending or Giving Errors Body: Laravel is an incredible framework that simplifies many tasks, including email...",

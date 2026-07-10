@@ -1,7 +1,7 @@
 {
   "title": "Provider Class not found In ProviderRepository.php line 208",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving 'Provider Class not found In ProviderRepository.php line 208' During Uninstallation of Spatie/Geocoder Package for Laravel Applications Body:...",

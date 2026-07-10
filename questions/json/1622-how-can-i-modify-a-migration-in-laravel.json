@@ -1,7 +1,7 @@
 {
   "title": "How can I modify a migration in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Modifying Existing Laravel Migrations: A Comprehensive Approach Body: When working on any application, it's common to modify existing migrations....",

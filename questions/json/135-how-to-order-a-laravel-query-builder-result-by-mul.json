@@ -1,7 +1,7 @@
 {
   "title": "How to order a Laravel query builder result by multiple columns?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Order Laravel Query Builder Results by Multiple Columns Introduction: The power of Laravel's query builder lies in its flexibility and ease...",

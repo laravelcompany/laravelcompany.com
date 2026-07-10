@@ -1,7 +1,7 @@
 {
   "title": "How to change Yarn default packages directory?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Rethink Dependency Structure: Moving Beyond the Default `node_modules` As developers, we often rely on convention. When we use package managers like...",

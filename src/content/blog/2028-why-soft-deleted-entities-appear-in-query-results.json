@@ -1,7 +1,7 @@
 {
   "title": "Why soft deleted entities appear in query results?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Soft Deleted Entities and Their Appearance in Query Results The \"soft delete\" concept is an important feature in modern software...",

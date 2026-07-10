@@ -1,7 +1,7 @@
 {
   "title": "Laravel: How to include file from Vendor folder in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel: How to Properly Access Files from the `vendor` Directory As developers working within the Laravel ecosystem, navigating the file...",

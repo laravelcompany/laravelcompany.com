@@ -1,7 +1,7 @@
 {
   "title": "Delete Redis Keys matching a pattern Laravel 5.7",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Deleting Redis Keys Matching a Pattern in Laravel: A Developer's Guide Dealing with bulk operations on data stores like Redis often presents tricky syntax...",

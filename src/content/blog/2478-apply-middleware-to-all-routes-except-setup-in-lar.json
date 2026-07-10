@@ -1,7 +1,7 @@
 {
   "title": "Apply Middleware to all routes except `setup/*` in Laravel 5.4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Applying Middleware Selectively in Laravel: Excluding Specific Routes When working with middleware in a framework like Laravel, developers often encounter...",

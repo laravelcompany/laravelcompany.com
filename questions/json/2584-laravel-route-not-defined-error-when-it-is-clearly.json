@@ -1,7 +1,7 @@
 {
   "title": "Laravel route not defined error when it is clearly defined",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the Laravel Route Not Defined Error in Form Submissions As a developer working with Laravel, one of the most common stumbling blocks, especially when...",

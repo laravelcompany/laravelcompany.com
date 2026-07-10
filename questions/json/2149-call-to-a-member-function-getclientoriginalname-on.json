@@ -1,7 +1,7 @@
 {
   "title": "Call to a member function getClientOriginalName() on a non-object",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting \"Call to a member function getClientOriginalName() on a non-object\" Error in Laravel Image Uploader Body: One common error encountered...",

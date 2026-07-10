@@ -1,7 +1,7 @@
 {
   "title": "laravel with() method versus load() method",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel's Eloquent Relationship Loading Methods: with() vs load() Body: The Laravel framework simplifies database interactions by...",

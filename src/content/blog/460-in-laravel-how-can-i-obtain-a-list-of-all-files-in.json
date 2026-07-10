@@ -1,7 +1,7 @@
 {
   "title": "In Laravel, how can I obtain a list of all files in a public folder?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Obtaining a List of All Files in Laravel's Public Folder Introduction: In Laravel, you may find it difficult to obtain a list of all files within the...",

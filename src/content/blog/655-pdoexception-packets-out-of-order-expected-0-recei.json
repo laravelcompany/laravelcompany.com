@@ -1,7 +1,7 @@
 {
   "title": "PDOException: Packets out of order. Expected 0 received 1. Packet size=23",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving PDOException Errors in Laravel Applications Body: The PDOException error \"Packets out of order. Expected 0 received 1....",

@@ -1,7 +1,7 @@
 {
   "title": "Method addEagerConstraints does not exist",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding Eloquent Eager Loading: Why `addEagerConstraints` Fails As a senior developer working with Laravel and Eloquent, we frequently encounter situations...",

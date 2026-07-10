@@ -1,7 +1,7 @@
 {
   "title": "PHP Composer update \"cannot allocate memory\" error (using Laravel 4)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving \"Cannot Allocate Memory\" Errors during PHP Composer Updates in Laravel 4 Introduction: While working on your project using Laravel 4 with PHP...",

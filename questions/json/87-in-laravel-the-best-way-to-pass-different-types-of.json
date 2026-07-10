@@ -1,7 +1,7 @@
 {
   "title": "In Laravel, the best way to pass different types of flash messages in the session",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Mastering Flash Messages in Laravel Sessions: Types, Best Practices, and Implementation Introduction: Flash messages are a critical component of any web...",

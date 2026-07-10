@@ -1,7 +1,7 @@
 {
   "title": "Laravel: stream_socket_enable_crypto(): SSL operation failed with code 1",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel SSL Failure: Decoding `stream_socket_enable_crypto(): SSL operation failed with code 1` Dealing with cryptic errors during external service...",

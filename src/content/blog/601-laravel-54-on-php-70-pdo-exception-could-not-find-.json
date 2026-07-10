@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.4 on PHP 7.0: PDO Exception - Could not find driver (MySQL)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel 5.4 on PHP 7.0: PDO Exception - Could not find driver (MySQL) Body: I have a Laravel 5.4 project on my Ubuntu 14.04 VPS with Plesk 12.5.30....",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 file downloads: stream() or download()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel File Downloads: Mastering `stream()` vs. `download()` When developing applications that involve serving files—especially private assets from cloud...",

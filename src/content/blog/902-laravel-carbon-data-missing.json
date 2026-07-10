@@ -1,7 +1,7 @@
 {
   "title": "Laravel Carbon Data Missing",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Handling Missing Seconds When Working with Laravel Dates Body: Laravel's Carbon library is an essential tool for manipulating various date and time...",

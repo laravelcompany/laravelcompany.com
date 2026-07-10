@@ -1,7 +1,7 @@
 {
   "title": "SQLSTATE[42S02]: Base table or view not found: 1146 Table X doesn't exist",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Deciphering SQLSTATE[42S02]: Solving the \"Base table or view not found\" Error in Laravel As a senior developer, I frequently encounter errors that seem...",

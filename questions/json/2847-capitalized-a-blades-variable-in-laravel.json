@@ -1,7 +1,7 @@
 {
   "title": "Capitalized a blade's variable in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Capitalizing Blade Variables in Laravel: Mastering the Pipe Operator I remember those early days moving from systems like Smarty to the robust ecosystem of...",

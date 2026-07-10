@@ -1,7 +1,7 @@
 {
   "title": "Are Sanctum and Laravel's default auth the same if not used for tokens?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Sanctum vs. Default Laravel Auth: Are They the Same Without Tokens? A Deep Dive As developers working within the Laravel ecosystem, understanding the nuances...",

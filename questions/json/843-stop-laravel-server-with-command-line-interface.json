@@ -1,7 +1,7 @@
 {
   "title": "Stop laravel server with command line interface",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Stopping Laravel Server from the Command Line Interface Body: Laravel is an amazing framework for web development that offers efficient...",

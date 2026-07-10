@@ -1,7 +1,7 @@
 {
   "title": "Correct way to run a select query from blades in laravel 5 using eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# The Correct Way to Retrieve Related Data in Blade: Mastering Eloquent Relationships As senior developers working with Laravel, one of the most common...",

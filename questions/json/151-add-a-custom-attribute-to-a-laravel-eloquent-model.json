@@ -1,7 +1,7 @@
 {
   "title": "Add a custom attribute to a Laravel / Eloquent model on load?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Extending Laravel/Eloquent Models with Custom Attributes on Load Introduction: Working with complex database models in Laravel often requires handling...",

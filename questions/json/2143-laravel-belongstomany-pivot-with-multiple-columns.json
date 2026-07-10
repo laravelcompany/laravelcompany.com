@@ -1,7 +1,7 @@
 {
   "title": "Laravel belongsToMany pivot with multiple columns",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel belongsToMany Pivot with Multiple Columns for Member Types In this blog post, we'll discuss how to handle multiple columns in the pivot table...",

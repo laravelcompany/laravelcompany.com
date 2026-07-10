@@ -1,7 +1,7 @@
 {
   "title": "Download a file in Laravel using a URL to external resource",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Downloading Files from External Resources Using Laravel or Plain PHP Introduction: In this blog post, we will explore the process of downloading...",

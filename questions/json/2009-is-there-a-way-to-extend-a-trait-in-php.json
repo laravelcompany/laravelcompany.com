@@ -1,7 +1,7 @@
 {
   "title": "Is there a way to extend a trait in PHP?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Extending Traits in PHP: Adding New Functionality to Existing Traits Body: In order to utilize existing functionality of a trait, create additional...",

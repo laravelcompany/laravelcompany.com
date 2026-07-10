@@ -1,7 +1,7 @@
 {
   "title": "How to upload files in Laravel directly into public folder?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Upload Files in Laravel Using Public Folder - A Comprehensive Guide Body: In situations where the hosting server doesn't support links, or...",

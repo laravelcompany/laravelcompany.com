@@ -1,7 +1,7 @@
 {
   "title": "php artisan: \"failed to open stream: No such file or directory\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Deciphering and Resolving \"Failed to Open Stream: No Such File or Directory\" Errors in PHP Artisan Commands Introduction: When learning how to use...",

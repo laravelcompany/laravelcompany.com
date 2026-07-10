@@ -1,7 +1,7 @@
 {
   "title": "AngularJS All slashes in URL changed to %2F",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# AngularJS Routing Mystery Solved: Decoding URL Slashes and Hash Fragments I'm having a massive problem with AngularJS routing. Up until recently everything...",

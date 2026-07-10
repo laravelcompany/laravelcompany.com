@@ -1,7 +1,7 @@
 {
   "title": "List all registered variables inside a Laravel view",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Listing Registered Variables in Laravel Views Introduction When working on a Laravel project, you may want to know what variables are...",

@@ -1,7 +1,7 @@
 {
   "title": "PostgreSQL: Unique violation: 7 ERROR: duplicate key value violates unique constraint \"users_pkey\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: PostgreSQL: Unique Violation - Understanding and Resolving Duplicate Key Errors in Laravel Apps Body: As a developer working with PostgreSQL in your...",

@@ -1,7 +1,7 @@
 {
   "title": "Call laravel controller via command line",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Calling Laravel Controllers via Command Line Body: In today's modern software development landscape, efficient communication between various...",

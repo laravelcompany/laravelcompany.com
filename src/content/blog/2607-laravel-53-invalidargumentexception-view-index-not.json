@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.3 - InvalidArgumentException View [index] not found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Deconstructing the Laravel Request Lifecycle: Understanding the Pipeline and Middleware Flow When debugging complex issues in a Laravel application,...",

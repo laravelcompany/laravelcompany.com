@@ -1,7 +1,7 @@
 {
   "title": "Laravel 11 - Disable CSRF for a route",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Disabling CSRF Protection for Specific Routes in Laravel 11 - A Comprehensive Guide Body: Dealing with webhook endpoints can present unique challenges,...",

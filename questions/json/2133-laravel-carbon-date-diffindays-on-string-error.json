@@ -1,7 +1,7 @@
 {
   "title": "Laravel Carbon date diffInDays() on string error",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"Call to a member function diffInDays() on string\" Error in Laravel Carbon Date Manipulation Introduction Laravel's Carbon library is a...",

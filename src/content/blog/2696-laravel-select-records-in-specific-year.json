@@ -1,7 +1,7 @@
 {
   "title": "Laravel Select records in specific year",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel: Selecting Records by Specific Year Using `created_at` Welcome to the world of Laravel! It’s completely normal to feel a bit lost when starting with...",

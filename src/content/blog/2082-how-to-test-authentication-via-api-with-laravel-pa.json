@@ -1,7 +1,7 @@
 {
   "title": "How to test authentication via API with Laravel Passport?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Comprehensive Guide on Testing Authentication via API with Laravel Passport Testing authentication in an application can be a daunting task due to its...",

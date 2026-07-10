@@ -1,7 +1,7 @@
 {
   "title": "curl error 28 for composer update/install laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Conquering `curl error 28`: A Senior Developer's Guide to Composer Failures in Laravel Projects As developers, we often find ourselves hitting frustrating...",

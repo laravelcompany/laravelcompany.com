@@ -1,7 +1,7 @@
 {
   "title": "How to manually run a laravel/lumen job using command line",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Manually Running Laravel/Lumen Jobs Using Command Line: A Comprehensive Guide Introduction: Laravel and Lumen are powerful PHP frameworks that provide...",

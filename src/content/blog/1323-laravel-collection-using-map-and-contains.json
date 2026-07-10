@@ -1,7 +1,7 @@
 {
   "title": "Laravel collection using map and contains",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Tackling Map and Contains Issues in Laravel Collections for Effective Product Filtration Body: When working with collections in Laravel, developers...",

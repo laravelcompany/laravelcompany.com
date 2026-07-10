@@ -1,7 +1,7 @@
 {
   "title": "Adding Imagick extension in Laragon, XAMPP, WAMPP to be used in Laravel 11 with PHP 8.2?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Adding the Imagick Extension in Local Stacks and Production for Laravel 11 with PHP 8.2 Dealing with environment setup, especially when dealing with specific...",

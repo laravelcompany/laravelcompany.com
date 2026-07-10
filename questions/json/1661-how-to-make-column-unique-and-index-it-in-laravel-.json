@@ -1,7 +1,7 @@
 {
   "title": "How to make column unique and index it in Laravel Migration?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Making Columns Unique and Indexed in Laravel Migration Body: When working on a database or migrating your tables, it is essential to ensure...",

@@ -1,7 +1,7 @@
 {
   "title": "Add count of duplicate values to Laravel collection",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Sum Dupplicate Values in Laravel Collections In this comprehensive blog post, we'll delve into a common problem developers face when working...",

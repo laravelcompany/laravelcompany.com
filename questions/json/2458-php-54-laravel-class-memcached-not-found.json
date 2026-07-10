@@ -1,7 +1,7 @@
 {
   "title": "PHP 5.4 & Laravel Class 'Memcached' not found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# PHP 5.4 & Laravel Class 'Memcached' not found: Debugging a Common Caching Headache I realize there are about ten questions out there regarding caching...",

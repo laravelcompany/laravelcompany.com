@@ -1,7 +1,7 @@
 {
   "title": "Laravel : Redis No connection could be made : [tcp://127.0.0.1:6379]",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel : Redis No connection could be made : Resolving \"tcp://127.0.0.1:6379\" Issues Body: You have installed redis with laravel by adding...",

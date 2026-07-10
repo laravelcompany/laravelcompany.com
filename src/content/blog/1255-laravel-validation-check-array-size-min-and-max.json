@@ -1,7 +1,7 @@
 {
   "title": "Laravel Validation check array size min and max",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Validation Check for Array Size Range Introduction: Laravel is an outstanding PHP framework that provides powerful validation features to ensure...",

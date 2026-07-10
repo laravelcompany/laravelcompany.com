@@ -1,7 +1,7 @@
 {
   "title": "Laravel Error \"Class 'App\\Http\\Controllers\\DateTime' not found\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Error \"Class 'App\\Http\\Controllers\\DateTime' not found\" - A Comprehensive Guide to Resolving the Issue In this blog post, we will explore one of...",

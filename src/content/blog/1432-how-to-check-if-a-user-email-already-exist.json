@@ -1,7 +1,7 @@
 {
   "title": "how to check if a user email already exist",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Handling Email Duplicates During User Registration in Laravel Body: In any web application dealing with user registration, you must ensure...",

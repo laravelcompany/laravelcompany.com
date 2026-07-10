@@ -1,7 +1,7 @@
 {
   "title": "How to make public folder as root in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Simplifying Your Laravel Application's URL Structure: Removing the Public Folder as Root Body: When developing web applications using the Laravel...",

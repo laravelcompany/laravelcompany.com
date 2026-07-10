@@ -1,7 +1,7 @@
 {
   "title": "Laravel DB::update only return 0 or 1",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel DB::update Return Values: Zero or One may Indicate Either Failure or Equal Updates Body: Laravel's DB update function is an...",

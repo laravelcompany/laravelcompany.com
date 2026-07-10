@@ -1,7 +1,7 @@
 {
   "title": "Validating multiple files in array",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Validating Multiple Files in Array: A Comprehensive Solution for Laravel Developers Introduction: Ensuring the integrity of file uploads is essential...",

@@ -1,7 +1,7 @@
 {
   "title": "How to access URL segment(s) in blade in Laravel 5?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Accessing URL Segments in Blade Templates for Laravel Applications Introduction Laravel is a powerful PHP framework that offers great support for MVC...",

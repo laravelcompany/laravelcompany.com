@@ -1,7 +1,7 @@
 {
   "title": "Dropping column with foreign key Laravel error: General error: 1025 Error on rename",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving \"General error: 1025 Error on rename\" when Dropping Columns with Foreign Keys in Laravel Body: Encountering a general error with code 1025 and...",

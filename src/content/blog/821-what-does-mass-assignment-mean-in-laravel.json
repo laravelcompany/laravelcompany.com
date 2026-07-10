@@ -1,7 +1,7 @@
 {
   "title": "What does \"Mass Assignment\" mean in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Mass Assignment in Laravel: A Comprehensive Guide Introduction: Mass assignment is one of the key features within Laravel's Eloquent ORM...",

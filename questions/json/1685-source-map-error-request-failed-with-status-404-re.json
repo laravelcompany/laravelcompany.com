@@ -1,7 +1,7 @@
 {
   "title": "Source map error: request failed with status 404 Resource URL: http://{mywebsite}/js/app.js Source Map URL: bootstrap.js.map-laravel-Vue",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Source Map Errors with Resource URLs and Source Map URLs Source map errors are common in modern web development, especially when complex...",

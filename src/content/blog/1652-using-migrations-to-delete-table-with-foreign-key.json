@@ -1,7 +1,7 @@
 {
   "title": "Using migrations to delete table with foreign key",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Handling Foreign Key Constraints While Deleting Tables Using Laravel Migrations Introduction: In the world of modern software development, databases are...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent - How to query NOT LIKE?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Eloquent - How to Query NOT LIKE? Body: In this comprehensive blog post, we will explore how to find something that is not like a certain string...",

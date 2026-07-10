@@ -1,7 +1,7 @@
 {
   "title": "502 Bad Gateway for Laravel 5.4 with nginx and php7.0-fpm in Ubuntu",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving 502 Bad Gateway Error for Laravel 5.4 with nginx and php7.0-fpm in Ubuntu Introduction: Laravel 5.4 is a powerful framework that allows...",

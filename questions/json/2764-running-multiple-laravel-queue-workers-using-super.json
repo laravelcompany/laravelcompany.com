@@ -1,7 +1,7 @@
 {
   "title": "Running multiple Laravel queue workers using Supervisor",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Running Multiple Laravel Queue Workers Efficiently with Supervisor: Scaling Your Processing Power As a senior developer working with large-scale applications...",

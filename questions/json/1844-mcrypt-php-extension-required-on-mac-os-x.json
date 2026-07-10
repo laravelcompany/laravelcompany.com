@@ -1,7 +1,7 @@
 {
   "title": "Mcrypt PHP extension required on Mac OS X",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Mcrypt PHP Extension Issues on Mac OS X Introduction As a developer working on Mac OS X, you might encounter issues related to the...",

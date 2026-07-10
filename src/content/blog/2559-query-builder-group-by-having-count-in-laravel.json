@@ -1,7 +1,7 @@
 {
   "title": "Query builder GROUP BY, HAVING, COUNT in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Aggregation: GROUP BY, HAVING, and COUNT in the Laravel Query Builder As developers working with relational databases, mastering SQL concepts like...",

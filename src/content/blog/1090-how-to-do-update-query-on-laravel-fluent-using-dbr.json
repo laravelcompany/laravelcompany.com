@@ -1,7 +1,7 @@
 {
   "title": "How to do update query on laravel fluent using db::raw",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: A Comprehensive Guide to Updating Table Values with Laravel Fluent and DB::raw Body: In this blog post, we are going to answer the question of how to...",

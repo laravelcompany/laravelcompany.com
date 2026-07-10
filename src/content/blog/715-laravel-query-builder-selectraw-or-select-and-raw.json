@@ -1,7 +1,7 @@
 {
   "title": "Laravel Query Builder, selectRaw or select and raw",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel's Query Builder Options - selectRaw vs. Select & raw Body: When working with databases in PHP applications, developers often need...",

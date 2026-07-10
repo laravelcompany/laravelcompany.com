@@ -1,7 +1,7 @@
 {
   "title": "Laravel failed to listen on 127.0.0.1:8000 (reason ?)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel Failed to Listen on 127.0.0.1:8000 (Common Causes and Solutions) Body: So, you just created a new Laravel project and are trying...",

@@ -1,7 +1,7 @@
 {
   "title": "How to create laravel storage symbolic link for production or sub domain system?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Streamlining Laravel Storage Link Creation for Production Servers or Subdomains Body: When working on your Laravel application locally, the command php...",

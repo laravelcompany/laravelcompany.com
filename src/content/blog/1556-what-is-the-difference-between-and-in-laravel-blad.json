@@ -1,7 +1,7 @@
 {
   "title": "What is the difference between {{ }} and {!! !!} in laravel blade files?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Differences Between {{ }} and {!! !!} in Laravel Blade Files Body: In the world of web development, incorporating PHP code into HTML files...",

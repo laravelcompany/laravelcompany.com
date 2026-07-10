@@ -1,7 +1,7 @@
 {
   "title": "Proper Repository Pattern Design in PHP?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Preface: I'm attempting to use the repository pattern in an MVC architecture with relational databases. I've recently started learning TDD in PHP, and I'm...",

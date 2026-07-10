@@ -1,7 +1,7 @@
 {
   "title": "Laravel Sail problem \"no configuration file provided: not found\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the Laravel Sail Mystery: Debugging the \"No Configuration File Provided\" Error As a senior developer working with modern PHP stacks, we often rely on...",

@@ -1,7 +1,7 @@
 {
   "title": "Carbon - why addMonths() change the day of month?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Carbon's AddMonths() Behavior and Handling Date Adjustments Introduction: Carbon is an open-source PHP library for working with dates and...",

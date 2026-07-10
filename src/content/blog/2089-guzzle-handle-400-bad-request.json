@@ -1,7 +1,7 @@
 {
   "title": "Guzzle: handle 400 bad request",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Handling 400 Bad Request Errors Using Guzzle in Laravel Applications Introduction: Guzzle is a popular PHP HTTP client library that facilitates easy...",

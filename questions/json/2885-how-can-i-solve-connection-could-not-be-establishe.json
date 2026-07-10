@@ -1,7 +1,7 @@
 {
   "title": "How can I solve \"Connection could not be established with host smtp.gmail.com\"?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Solve \"Connection could not be established with host smtp.gmail.com\" on Staging Servers Dealing with connection errors when sending emails is one of...",

@@ -1,7 +1,7 @@
 {
   "title": "Tell Composer to use Different PHP Version",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Overcome PHP Version Conflicts with Composer on Hosting Platforms: A Guide for Laravel Developers Introduction: Composer is an essential tool in the...",

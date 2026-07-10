@@ -1,7 +1,7 @@
 {
   "title": "How to perform a delete operation on a Model?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Performing Delete Operations on Models in Laravel Body: As a developer diving into the world of Laravel 5, you might encounter several...",

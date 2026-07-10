@@ -1,7 +1,7 @@
 {
   "title": "Laravel: file_put_contents() permission denied — correct storage/framework/cache permissions?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel: Solving Permission Issues with File Operations in Cache Storage Body: Dealing with file operations such as writing to or reading from a cache...",

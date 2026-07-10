@@ -1,7 +1,7 @@
 {
   "title": "SQLSTATE[08001]: [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: Error code 0x2746",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting SQLSTATE[08001] Error Code 0x2746 in Laravel 7.4 on Ubuntu 20.04 Introduction: In this blog post, we will discuss a common issue that...",

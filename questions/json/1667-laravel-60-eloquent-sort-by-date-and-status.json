@@ -1,7 +1,7 @@
 {
   "title": "Laravel 6.0 Eloquent - sort by date and status",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel 6.0 Eloquent - Effective Sorting by Date and Status for Multiple Columns Introduction: In Laravel applications, ordering table data based on...",

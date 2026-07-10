@@ -1,7 +1,7 @@
 {
   "title": "Laravel use same form for create and edit",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Simplifying Form Creation for Create and Edit Operations with Laravel Introduction In this comprehensive blog post, we'll discuss how to use one form...",

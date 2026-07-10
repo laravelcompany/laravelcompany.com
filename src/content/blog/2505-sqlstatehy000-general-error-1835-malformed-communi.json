@@ -1,7 +1,7 @@
 {
   "title": "SQLSTATE[HY000]: General error: 1835 Malformed communication packet on LARAVEL",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding SQLSTATE[HY000]: Malformed Communication Packet in Laravel Applications As senior developers working with the Laravel ecosystem, we often encounter...",

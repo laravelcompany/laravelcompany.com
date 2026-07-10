@@ -1,7 +1,7 @@
 {
   "title": "The PutObject operation requires non-empty parameter",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Debugging S3 Upload Failures: Why Your Laravel `put` Operation Fails in Production As a senior developer, I frequently encounter issues where code works...",

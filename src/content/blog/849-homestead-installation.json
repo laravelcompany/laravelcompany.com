@@ -1,7 +1,7 @@
 {
   "title": "Homestead installation",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Common Homestead Installation Issues Introduction: Setting up a local development environment for Laravel can sometimes come with its...",

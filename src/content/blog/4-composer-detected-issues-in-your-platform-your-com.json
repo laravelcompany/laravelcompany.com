@@ -1,7 +1,7 @@
 {
   "title": "Composer detected issues in your platform: Your Composer dependencies require a PHP version \">= 7.3.0\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving Composer Dependency Requirements for PHP Versions Introduction: Your Laravel project is an essential part of your business...",

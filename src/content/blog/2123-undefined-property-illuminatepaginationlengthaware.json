@@ -1,7 +1,7 @@
 {
   "title": "Undefined property: Illuminate\\Pagination\\LengthAwarePaginator::$name",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"Undefined property: Illuminate\\Pagination\\LengthAwarePaginator::$name\" Issue in Laravel Applications Body: When working with Laravel...",

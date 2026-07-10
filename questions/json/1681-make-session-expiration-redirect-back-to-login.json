@@ -1,7 +1,7 @@
 {
   "title": "Make session expiration redirect back to login?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "When dealing with session expiration redirection back to login page in Laravel applications, there are several ways to achieve this. The first is to use...",

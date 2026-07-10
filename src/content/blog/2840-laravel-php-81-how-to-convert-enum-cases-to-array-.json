@@ -1,7 +1,7 @@
 {
   "title": "Laravel Php 8.1 how to convert enum cases to array for select input",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Php 8.1: How to Convert Enum Cases to Array for Select Input Working with modern PHP features, especially enums, brings significant improvements in...",

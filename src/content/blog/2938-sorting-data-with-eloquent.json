@@ -1,7 +1,7 @@
 {
   "title": "Sorting data with Eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Sorting Data with Eloquent: Mastering Nested Relationships I'm new to Laravel (switched from CI) and Eloquent ORM is still a bit of a mystery at some point!...",

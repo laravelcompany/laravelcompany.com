@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent Ignore Casing",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Eloquent Ignore Casing: Efficiently Handling Search Queries with Mixed Case Fields Body: In many database tables, fields containing data might...",

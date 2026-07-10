@@ -1,7 +1,7 @@
 {
   "title": "laravel url validation umlauts",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel URL Validation with Umlauts: Handling Unicode in Domain Names As developers working within the Laravel ecosystem, we often rely on built-in...",

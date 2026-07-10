@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 - validate array as required, but allow an empty array to be passed",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: A Practical Solution for Validating Array Presence with Optional Empty Arrays in Laravel 5.4 Introduction: Laravel's validation system offers robust...",

@@ -1,7 +1,7 @@
 {
   "title": "OpenSSL Error messages: error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving OpenSSL Error Issues During Composer Installation Introduction OpenSSL errors can be frustrating for developers using PHP...",

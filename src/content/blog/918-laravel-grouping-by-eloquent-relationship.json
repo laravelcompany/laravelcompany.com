@@ -1,7 +1,7 @@
 {
   "title": "Laravel Grouping by Eloquent Relationship",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Grouping Results by Relationship using Eloquent in Laravel Introduction: One of the powerful features of Laravel is its Object Relational...",

@@ -1,7 +1,7 @@
 {
   "title": "Parameters inside Laravel localized string",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Using Parameters in Laravel Localized Strings Body: Localized strings are essential for internationalizing applications as they allow...",

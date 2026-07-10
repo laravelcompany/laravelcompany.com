@@ -1,7 +1,7 @@
 {
   "title": "Laravel stylesheets and javascript don't load for non-base routes",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Stylesheets and JavaScript: Managing Assets Across Routes with Ease Body: The issue you are facing is common among developers using Laravel who...",

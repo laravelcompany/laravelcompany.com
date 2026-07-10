@@ -1,7 +1,7 @@
 {
   "title": "How can I solve net::ERR_ABORTED 404 (Not Found) in a view, error dont let display the css Laravel 6.0?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving Net::ERR_ABORTED (404 - Not Found) Issues in Laravel Views for CSS and JS Files Body: Issuing a 404 error message when trying to retrieve CSS or...",

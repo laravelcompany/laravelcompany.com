@@ -1,7 +1,7 @@
 {
   "title": "Mixed Content: The page at 'domain' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"Mixed Content\" Errors with Laravel Inertia and Resource Controllers The Problem: You are experiencing mixed content errors when trying to...",

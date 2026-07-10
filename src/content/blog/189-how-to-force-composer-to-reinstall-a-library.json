@@ -1,7 +1,7 @@
 {
   "title": "How to force composer to reinstall a library?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Forcing Composer to Reinstall Libraries for Development Purposes Introduction: Composer is an immensely useful tool for managing dependencies in your...",

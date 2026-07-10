@@ -1,7 +1,7 @@
 {
   "title": "How to structure a modular app in Laravel 5?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Structure a Modular Application in Laravel 5: A Deep Dive Building large applications often necessitates modularity. Dividing your codebase into...",

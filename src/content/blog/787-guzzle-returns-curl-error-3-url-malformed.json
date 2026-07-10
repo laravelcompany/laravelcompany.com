@@ -1,7 +1,7 @@
 {
   "title": "Guzzle returns cURL error 3: <url> malformed",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Guzzle Connection Errors: Understanding cURL Error 3: Malformed Body: When working with HTTP clients like Guzzle, it's common to...",

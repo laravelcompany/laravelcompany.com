@@ -1,7 +1,7 @@
 {
   "title": "CURL error 28 while downloading Connection timed out after 10000 milliseconds",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving CURL Errors During Laravel Package Installations: A Comprehensive Guide Introduction: In the world of web development, using Laravel and its...",

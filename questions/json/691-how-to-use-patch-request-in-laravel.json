@@ -1,7 +1,7 @@
 {
   "title": "How to use patch request in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Utilizing PATCH Requests in Laravel Applications Body: In a modern Laravel application, you may encounter situations where updating specific...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Passport gives me \"Invalid key supplied\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Passport and Multi-Tenant Applications: An In-Depth Guide for Troubleshooting \"Invalid Key Supplied\" Issues Body: If you've been working on a...",

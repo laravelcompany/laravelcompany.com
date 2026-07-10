@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.1 Creating default object from empty value",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"ErrorException in AdminController.php line 108: Creating default object from empty value\" Error in Laravel 5.1 Body: When developing web...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel join tables",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Laravel Join Tables: A Comprehensive Guide In this blog post, we will discuss how to join tables in Laravel effectively and efficiently. We'll explore the...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel : Saving a belongsToMany relationship",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Saving a belongsToMany Relationship in Laravel: A Comprehensive Guide to Managing Many-to-Many Associations with Signatures and Users Body: Handling...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel: how to set date format on model attribute casting?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Model Attribute Casting and Date Formats: A Comprehensive Guide Body: Laravel is an incredibly powerful PHP framework that allows developers to...",

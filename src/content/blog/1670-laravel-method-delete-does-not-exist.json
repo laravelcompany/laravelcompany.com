@@ -1,7 +1,7 @@
 {
   "title": "Laravel - Method delete does not exist",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving Laravel's \"BadMethodCallException: Method delete does not exist\" Error Introduction: Working on a Laravel application, you might encounter the...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Property [title] does not exist on the Eloquent builder instance",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel Property Access Issues on Eloquent Builder Instances Introduction In the world of web development, debugging errors can be a...",

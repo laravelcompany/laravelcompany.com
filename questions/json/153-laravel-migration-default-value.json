@@ -1,7 +1,7 @@
 {
   "title": "Laravel migration default value",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Migration Default Values: Understanding Their Impact on Database Models I didn't understand what is the effect of the default option in the...",

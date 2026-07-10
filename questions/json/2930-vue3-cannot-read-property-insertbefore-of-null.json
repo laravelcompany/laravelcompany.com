@@ -1,7 +1,7 @@
 {
   "title": "vue3 Cannot read property 'insertBefore' of null",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Vue3 Error Solved: Understanding `Cannot read property 'insertBefore' of null` during Data Updates As a senior developer, I frequently encounter frustrating...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel: Is it possible to log stack trace when exception caught, and continue the execution?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Error Handling: Logging Stack Traces Gracefully When Catching Exceptions As developers working with frameworks like Laravel, robust error logging is...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.5 call Controller function from blade view with parameter",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Calling Controller Functions from Blade Views with Parameters Introduction When working with Laravel frameworks, we often need to call...",

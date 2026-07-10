@@ -1,7 +1,7 @@
 {
   "title": "Laravel validate array of objects",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Validating Arrays of Objects with Laravel Introduction In today's world, many applications deal with massive amounts of data that require...",

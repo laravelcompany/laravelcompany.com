@@ -1,7 +1,7 @@
 {
   "title": "Laravel Performance Tuning: How to Insert 100,000+ Records Efficiently (Beyond Eloquent)",
   "date": "2026-07-15",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Stop waiting for slow data imports. Learn how to bypass Eloquent overhead and insert hundreds of thousands of records in seconds using raw SQL, transactions, and CLI commands.",

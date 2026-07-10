@@ -1,7 +1,7 @@
 {
   "title": "Small file get uploaded but not large file in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Why Large File Uploads Fail in Laravel: A Deep Dive into PHP Limits and Validation As a senior developer working with web frameworks like Laravel, dealing...",

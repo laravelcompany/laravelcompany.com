@@ -1,7 +1,7 @@
 {
   "title": "Laravel whereDate and where",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel Query Builder: Using whereDate and where Clauses Together for Accurate Results In PHP programming with Laravel, utilizing the...",

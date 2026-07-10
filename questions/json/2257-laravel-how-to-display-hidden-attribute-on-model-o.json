@@ -1,7 +1,7 @@
 {
   "title": "Laravel How to display $hidden attribute on model on paginate",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Discovering Advanced Methods for Displaying Hidden Attributes on Paginated Models in Laravel Introduction: Managing sensitive data in your application...",

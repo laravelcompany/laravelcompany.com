@@ -1,7 +1,7 @@
 {
   "title": "Script @php artisan package:discover handling the post-autoload-dump event returned with error code 255",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Script @php artisan package:discover handling the post-autoload-dump event returned with error code 255 Body: I moved my project from desk to another....",

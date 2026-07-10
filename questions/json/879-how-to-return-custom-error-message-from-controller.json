@@ -1,7 +1,7 @@
 {
   "title": "How to return custom error message from controller method validation",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "How to Return Custom Error Messages from Controller Method Validation in Laravel In Laravel, validation plays an essential role in ensuring the data received...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel mysql migrate error",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel MySQL Migrate Errors on MacOS with SQL Mode Issues Body: Recently, you encountered an issue while migrating your database...",

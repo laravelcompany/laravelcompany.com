@@ -1,7 +1,7 @@
 {
   "title": "Laravel error 'ReflectionException' - 'Class App\\Http\\Kernel does not exist'",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving 'ReflectionException' in Laravel: Troubleshooting Class App\\Http\\Kernel Issues Body: When developing a Laravel project, it is common to...",

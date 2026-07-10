@@ -1,7 +1,7 @@
 {
   "title": "Using $this when not in object context in a Laravel controller",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding $this and Static Functions in Laravel Controllers Introduction: In programming, understanding the concept of object context is crucial for...",

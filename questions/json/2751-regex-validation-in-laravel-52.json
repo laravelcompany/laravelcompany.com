@@ -1,7 +1,7 @@
 {
   "title": "Regex Validation in Laravel 5.2",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Complexity: Advanced Regex Validation in Laravel As developers working with frameworks like Laravel, we frequently encounter the need to enforce...",

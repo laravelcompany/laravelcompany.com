@@ -1,7 +1,7 @@
 {
   "title": "Expected response code 250 but got code \"535\", with message \"535-5.7.8 Username and Password not accepted",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting SwiftMailer's Error Code 535: \"Username and Password not accepted\" Introduction: It is no secret that the process of sending emails can...",

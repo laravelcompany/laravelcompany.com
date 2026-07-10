@@ -1,7 +1,7 @@
 {
   "title": "Laravel - Difference between @yield and @section?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Diving Deep into Laravel's Template System: @yield vs @section Body: From the Laravel docs (http://laravel.com/docs/5.0/templates), you can include...",

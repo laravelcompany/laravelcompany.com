@@ -1,7 +1,7 @@
 {
   "title": "How to deal with self-signed TLS certificates in Laravel's SMTP driver?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Tackling SSL Certificate Issues with Self-Signed TLS in Laravel's SMTP Driver Body: Dealing with self-signed TLS certificates can be quite a challenge,...",

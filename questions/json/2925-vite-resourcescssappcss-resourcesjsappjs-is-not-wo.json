@@ -1,7 +1,7 @@
 {
   "title": "@vite( 'resources/css/app.css' 'resources/js/app.js' ) is not working with laravel 9, vite 4.0.0",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Debugging the Vite Headache: Why `@vite` Fails in Laravel 9 Jetstream Setups As a senior developer working within the vibrant Laravel ecosystem, I've seen...",

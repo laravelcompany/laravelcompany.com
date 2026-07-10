@@ -1,7 +1,7 @@
 {
   "title": "How to pass laravel CSRF token value to vue",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: A Comprehensive Guide on Passing Laravel CSRF Token Value to Vue Introduction: In a world where security is increasingly important, Laravel makes use of...",

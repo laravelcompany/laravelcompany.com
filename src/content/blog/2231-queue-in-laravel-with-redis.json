@@ -1,7 +1,7 @@
 {
   "title": "Queue in laravel with redis",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Processing API Calls with Laravel Queues Using Redis Introduction Laravel's queue system is an excellent tool for handling time-consuming or...",

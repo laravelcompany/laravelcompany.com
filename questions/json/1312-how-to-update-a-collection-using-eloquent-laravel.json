@@ -1,7 +1,7 @@
 {
   "title": "How to update a collection using Eloquent Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Updating Collections Using Eloquent Laravel with MySQL Queries Introduction: The efficiency of your application depends on the optimization...",

@@ -1,7 +1,7 @@
 {
   "title": "How to get fillable variable as array in laravel 4.2",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Model Attributes: How to Access `$fillable` as an Array in Laravel As developers working with the Laravel ecosystem, understanding how Eloquent...",

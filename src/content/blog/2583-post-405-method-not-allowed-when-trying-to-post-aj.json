@@ -1,7 +1,7 @@
 {
   "title": "POST 405 (Method not allowed) when trying to post AJAX request - Laravel 4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# POST 405 (Method Not Allowed) when trying to post AJAX request in Laravel As a senior developer working with Laravel, you frequently encounter frustrating...",

@@ -1,7 +1,7 @@
 {
   "title": "Change Date format using Carbon",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Date Formatting in Laravel: Solving Carbon Parsing Issues for MySQL As senior developers working within the Laravel ecosystem, we frequently deal...",

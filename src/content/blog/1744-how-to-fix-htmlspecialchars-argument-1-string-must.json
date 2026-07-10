@@ -1,7 +1,7 @@
 {
   "title": "how to fix htmlspecialchars(): Argument #1 ($string) must be of type string, array given on laravel 9",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Fixing htmlspecialchars() Error in Laravel 9 Applications Body: In the world of web development, errors can often cause frustration...",

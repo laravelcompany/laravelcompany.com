@@ -1,7 +1,7 @@
 {
   "title": "CORS preflight request error: Redirect is not allowed for a preflight request",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: CORS Preflight Request Error: Resolving \"Redirect is not allowed for a preflight request\" Issues in Vue3 Applications Body: I have a Vue3 application...",

@@ -1,7 +1,7 @@
 {
   "title": "Get last part of current URL in Laravel 5 using Blade",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Retrieving the Last Path Segment of Current URL in Laravel 5 Using Blade Body: In modern web development, it is quite essential to work...",

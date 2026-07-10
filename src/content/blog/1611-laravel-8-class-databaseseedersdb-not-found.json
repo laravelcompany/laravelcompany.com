@@ -1,7 +1,7 @@
 {
   "title": "LARAVEL 8: Class 'Database\\Seeders\\DB' not found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving 'Class 'Database\\Seeders\\DB' not found' Error When Running Laravel Seeders Introduction: In Laravel, seeders play an essential role in...",

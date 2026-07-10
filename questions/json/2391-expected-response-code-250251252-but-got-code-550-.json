@@ -1,7 +1,7 @@
 {
   "title": "Expected response code \"250/251/252\" but got code \"550\", with message \"550 5.7.1 Relaying denied\". Laravel 9",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Debugging SMTP Failures: Why \"Relaying Denied\" Happens When Moving from Localhost to Heroku in Laravel As a senior developer, I've seen countless deployment...",

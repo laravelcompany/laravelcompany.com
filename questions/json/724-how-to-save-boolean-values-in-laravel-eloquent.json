@@ -1,7 +1,7 @@
 {
   "title": "How to save boolean values in laravel eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Saving Boolean Values in Laravel Eloquent Models Introduction ----------------------- In this blog post, we will cover how to save boolean...",

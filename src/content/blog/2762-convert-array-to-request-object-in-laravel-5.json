@@ -1,7 +1,7 @@
 {
   "title": "Convert array to Request object in laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Converting Arrays to Request Objects in Laravel: Solving the Type Mismatch Mystery As a senior developer working with the Laravel ecosystem, you frequently...",

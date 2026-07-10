@@ -1,7 +1,7 @@
 {
   "title": "Starting with laravel on ubuntu",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Cracking the Code: Solving Laravel Permission Errors on Ubuntu Setting up a new PHP framework like Laravel, especially within a local server environment like...",

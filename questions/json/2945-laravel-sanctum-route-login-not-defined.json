@@ -1,7 +1,7 @@
 {
   "title": "Laravel Sanctum: Route [login] not defined",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Debugging Sanctum Authentication: Solving the \"Route Not Defined\" Error As a senior developer working with modern Laravel applications, integrating...",

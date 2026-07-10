@@ -1,7 +1,7 @@
 {
   "title": "Laravel: validate json object",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel: Validate JSON Objects Properly for User Input Data Body: In today's modern web applications, validation is an essential step to ensure the data...",

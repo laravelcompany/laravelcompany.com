@@ -1,7 +1,7 @@
 {
   "title": "Laravel env() or config() to get environment variable on command line",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Accessing Environment Variables Directly from Command Line in Laravel - The Easy Way Body: Introduction Laravel provides powerful tools to manage...",

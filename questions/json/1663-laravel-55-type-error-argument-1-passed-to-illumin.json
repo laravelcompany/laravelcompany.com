@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.5 Type error: Argument 1 passed to Illuminate\\Auth\\EloquentUserProvider::validateCredentials() must be an instance",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel 5.5 Type Error Resolution: Understanding Argument Types and Authentication Flow Introduction: You might have come across this error while...",

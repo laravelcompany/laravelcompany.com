@@ -1,7 +1,7 @@
 {
   "title": "\"https://packagist.org/packages.json\" file could not be downloaded",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Troubleshooting Composer Download Failures: Resolving Proxy and Environment Issues for Laravel Development As a senior developer, I’ve seen countless...",

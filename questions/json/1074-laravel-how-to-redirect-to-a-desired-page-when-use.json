@@ -1,7 +1,7 @@
 {
   "title": "Laravel - How to redirect to a desired page when user is not authenticated",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel - Proper Redirection Mechanisms When User is Not Authenticated Body: In your code, you attempted to use the `__constructor` method from both...",

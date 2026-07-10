@@ -1,7 +1,7 @@
 {
   "title": "Laravel. Use scope() in models with relation",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel: Effectively Using Scopes with Eloquent Relationships In the world of Laravel development, you often work with multiple related models. One such...",

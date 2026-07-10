@@ -1,7 +1,7 @@
 {
   "title": "How can I remove “public/index.php” in the Laravel Url?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Removing \"public/index.php\" from Laravel URLs is a common requirement for many developers who prefer cleaner, easier-to-remember URLs. In this blog post, we'll...",

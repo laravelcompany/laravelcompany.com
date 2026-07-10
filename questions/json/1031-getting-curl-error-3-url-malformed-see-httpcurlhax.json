@@ -1,7 +1,7 @@
 {
   "title": "Getting cURL error 3: <url> malformed (see http://curl.haxx.se/libcurl/c/libcurl-errors.html) error after saving models in laravel 5.4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving cURL Error 3 After Saving Models in Laravel 5.4 Introduction Laravel is an efficient PHP framework that simplifies web application...",

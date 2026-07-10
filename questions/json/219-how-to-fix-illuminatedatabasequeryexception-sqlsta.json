@@ -1,7 +1,7 @@
 {
   "title": "How to fix \"Illuminate\\Database\\QueryException: SQLSTATE[HY000] [1044] Access denied for user\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: How to Fix \"Illuminate\\Database\\QueryException: SQLSTATE[HY000] [1044] Access denied for user\" Body: Introduction In Laravel, the...",

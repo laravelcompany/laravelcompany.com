@@ -1,7 +1,7 @@
 {
   "title": "Call route from button click laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Calling Routes from Button Clicks in Laravel Introduction In this blog post, we will discuss how to call a route in Laravel when a button on a view is...",

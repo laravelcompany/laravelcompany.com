@@ -1,7 +1,7 @@
 {
   "title": "In Laravel, send a post request with json object data",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Sending JSON Data with Post Requests Using Laravel's Http Facade Introduction: In today's world of web development, APIs are an integral part of...",

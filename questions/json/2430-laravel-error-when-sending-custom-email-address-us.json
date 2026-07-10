@@ -1,7 +1,7 @@
 {
   "title": "Laravel error when sending custom email address using smtp server",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the SSL Handshake Nightmare: Why Your Custom SMTP Email Fails in Laravel As a senior developer working with Laravel applications, configuring...",

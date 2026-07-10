@@ -1,7 +1,7 @@
 {
   "title": "Unable to use Laravel Factory in Tinker",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the Mystery: Why You Can't Use Model Factories in Laravel Tinker As a senior developer navigating the intricacies of the Laravel ecosystem, you often...",

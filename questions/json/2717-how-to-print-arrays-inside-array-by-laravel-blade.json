@@ -1,7 +1,7 @@
 {
   "title": "How to print arrays inside array by Laravel blade?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Print Arrays Inside Arrays in Laravel Blade? Navigating Nested Data Iteration When working with dynamic data passed from your backend to a Laravel...",

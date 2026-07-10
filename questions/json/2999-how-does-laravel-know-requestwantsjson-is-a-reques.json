@@ -1,7 +1,7 @@
 {
   "title": "How does Laravel know Request::wantsJson is a request for JSON?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Unpacking Laravel's Request Logic: How Does `Request::wantsJson` Know What It Wants? As a senior developer working with frameworks like Laravel, we often...",

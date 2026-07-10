@@ -1,7 +1,7 @@
 {
   "title": "How to fix \"Uncaught ReflectionException: Class view does not exist\" in Laravel after deployment to Ubuntu 18.04 server",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting \"Uncaught ReflectionException: Class view does not exist\" in Laravel after Deploying to Ubuntu 18.04 Servers Introduction Deploying your...",

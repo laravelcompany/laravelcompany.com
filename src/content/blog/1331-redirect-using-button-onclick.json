@@ -1,7 +1,7 @@
 {
   "title": "redirect using button onclick",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Redirecting Using Button onclick in Laravel Body: Redirecting from one view to another is an essential aspect of a web application that ensures users...",

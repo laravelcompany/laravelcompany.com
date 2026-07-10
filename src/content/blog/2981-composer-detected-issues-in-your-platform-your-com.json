@@ -1,7 +1,7 @@
 {
   "title": "Composer detected issues in your platform: Your Composer dependencies require a PHP version \">= 8.0.0\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Composer Dependency Conflict on Azure: How to Resolve PHP Version Mismatches Deploying a modern Laravel application often involves managing dependencies...",

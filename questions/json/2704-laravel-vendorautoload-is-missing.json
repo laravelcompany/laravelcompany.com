@@ -1,7 +1,7 @@
 {
   "title": "Laravel vendor/autoload is missing",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Fixing the Dreaded Error: Laravel `vendor/autoload.php` Missing As a fellow developer, I’ve seen countless beginners hit roadblocks when setting up a new...",

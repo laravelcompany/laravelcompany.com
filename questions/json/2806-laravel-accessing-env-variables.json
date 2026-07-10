@@ -1,7 +1,7 @@
 {
   "title": "Laravel - accessing .env variables",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Environment Variables in Laravel: The Right Way to Access `.env` Data As developers working with frameworks like Laravel, understanding how the...",

@@ -16,7 +16,7 @@ from datetime import datetime
 from pathlib import Path
 
 # Default values for metadata
-DEFAULT_AUTHOR = "Stefan Izdrail"
+DEFAULT_AUTHOR = "Stefan Bogdanescu"
 DEFAULT_ROLE = "Founder & Senior Architect"
 DEFAULT_AVATAR = "/avatar-stefan.jpg"
 DEFAULT_IMAGE = None

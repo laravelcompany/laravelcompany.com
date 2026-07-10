@@ -1,7 +1,7 @@
 {
   "title": "Why I'm getting 'Non-static method should not be called statically' when invoking a method in a Eloquent model?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving 'Non-static Method Should Not Be Called Statically' Errors in Eloquent Models Body: In Laravel, one of the most common errors developers face...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Pagination links() not working",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Pagination Links() Not Working: A Deep Dive into Paginator Issues Dealing with pagination in Laravel is a fundamental task, but sometimes the...",

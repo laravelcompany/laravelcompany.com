@@ -1,7 +1,7 @@
 {
   "title": "How to get all rows (soft deleted too) from a table in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Retrieving All Rows (Including Soft Deleted) from Tables in Laravel - A Comprehensive Guide Introduction: As a popular PHP framework, Laravel provides...",

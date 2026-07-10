@@ -1,7 +1,7 @@
 {
   "title": "Updating laravel relationship data",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Nested Updates in Laravel: The Eloquent Relationship Dilemma When working with relational data in an application built on Laravel and Eloquent,...",

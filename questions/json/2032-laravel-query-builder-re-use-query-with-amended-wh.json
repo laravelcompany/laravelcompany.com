@@ -1,7 +1,7 @@
 {
   "title": "Laravel query builder - re-use query with amended where statement",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Reusing Laravel Queries with Customized Date Ranges Body: One common challenge faced by developers is building complex queries that...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.4 ‘cross-env’ Is Not Recognized as an Internal or External Command",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding 'cross-env' Not Recognized Error in Laravel Mix Body: Laravel is an impressive PHP framework that allows developers to build powerful web...",

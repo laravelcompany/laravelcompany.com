@@ -1,7 +1,7 @@
 {
   "title": "Debugging Laravel jobs",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Debugging Laravel Jobs Using Custom Loggers and Console Output Debugging can be quite challenging when working with asynchronous tasks, especially in...",

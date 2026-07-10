@@ -1,7 +1,7 @@
 {
   "title": "Read a .csv file into an array in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Read CSV Files into Arrays in Laravel Applications Introduction In many modern web applications, it is common to interface with external...",

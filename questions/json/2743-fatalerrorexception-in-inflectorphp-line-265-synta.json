@@ -1,7 +1,7 @@
 {
   "title": "FatalErrorException in Inflector.php line 265: syntax error, unexpected ':', expecting ';' or '{'",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the Error: Resolving FatalErrorException in Laravel Composer Updates As a senior developer working within the Laravel ecosystem, we often encounter...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Auth::user relationship",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Debugging and Solving Auth::user Relationship Issues in Laravel Body: In Laravel, one of the most common issues faced by developers is dealing with user...",

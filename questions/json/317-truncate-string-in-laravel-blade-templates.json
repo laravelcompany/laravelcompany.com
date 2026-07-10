@@ -1,7 +1,7 @@
 {
   "title": "Truncate string in Laravel blade templates",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Truncate String in Laravel Blade Templates: Alternative Solutions for Enhancing Your Templates Is there a native truncate modifier for the Laravel blade...",

@@ -1,7 +1,7 @@
 {
   "title": "API returning 400 Bad Request response",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the 400 Bad Request: Debugging API Communication Issues As developers building APIs, one of the most frustrating experiences is encountering a...",

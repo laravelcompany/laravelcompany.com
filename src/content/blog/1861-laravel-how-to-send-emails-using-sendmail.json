@@ -1,7 +1,7 @@
 {
   "title": "Laravel: How to send emails using sendmail",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel: Enhancing Email Sending with Sendmail Driver Using Mail Facade Introduction: Laravel provides various ways to send emails within your...",

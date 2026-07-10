@@ -1,7 +1,7 @@
 {
   "title": "Delete data from the database with Laravel 5.4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Deleting Data from the Database with Laravel: Troubleshooting Your Destroy Operation As you are building out your simple blog application in Laravel, itâs...",

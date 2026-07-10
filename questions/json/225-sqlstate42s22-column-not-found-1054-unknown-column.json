@@ -1,7 +1,7 @@
 {
   "title": "SQLSTATE[42S22]: Column not found: 1054 Unknown column - Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Common Mistakes with SQLSTATE Column Not Found Errors in Laravel Applications Body: SQLSTATE errors, such as 'Column not found', can be a headache for...",

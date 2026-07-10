@@ -1,7 +1,7 @@
 {
   "title": "Which to use: $fetch, useAsyncData or useFetch for GET and POST requests in Nuxt 3?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Navigating GET and POST Requests in Nuxt 3 Using $fetch, useAsyncData, and useFetch Introduction: In this article, we will delve into the various...",

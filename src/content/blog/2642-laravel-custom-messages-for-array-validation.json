@@ -1,7 +1,7 @@
 {
   "title": "Laravel custom messages for array validation",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Dynamic Error Messages: Custom Validation for Array Inputs in Laravel As a senior developer working with Laravel, you often run into scenarios...",

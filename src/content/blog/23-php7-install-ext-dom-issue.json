@@ -1,7 +1,7 @@
 {
   "title": "PHP7 : install ext-dom issue",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: PHP7 Installation Issues with Ext-Dom Dependencies in Laravel Apps Introduction: When building your Laravel applications on PHP7, you may encounter...",

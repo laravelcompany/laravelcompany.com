@@ -1,7 +1,7 @@
 {
   "title": "How to return database table name in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Retrieve Database Table Names Using Laravel's Model Functionality In Laravel, retrieving the current database table name in use by your...",

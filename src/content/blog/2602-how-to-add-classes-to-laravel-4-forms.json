@@ -1,7 +1,7 @@
 {
   "title": "How to add classes to Laravel 4 Forms",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Add Classes to Laravel 4 Forms in Blade Templates It is a very common scenario when working with older frameworks like Laravel 4 or when migrating...",

@@ -1,7 +1,7 @@
 {
   "title": "curl error 28 while downloading https://repo.packagist.org/packages.json: Connection timeout after 10004 ms",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving curl error 28 while Downloading from repo.packagist.org using Composer Body: One common issue that developers encounter when...",

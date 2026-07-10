@@ -1,7 +1,7 @@
 {
   "title": "Laravel @extends and @include",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding the Differences Between Laravel @extends and @include Body: When working with a Laravel project, you might have encountered the directives...",

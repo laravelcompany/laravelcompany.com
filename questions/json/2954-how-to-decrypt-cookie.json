@@ -1,7 +1,7 @@
 {
   "title": "How to decrypt cookie?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Decrypt Cookies: Unpacking Session Security in Web Applications I recently encountered a debugging scenario where I found a session cookie,...",

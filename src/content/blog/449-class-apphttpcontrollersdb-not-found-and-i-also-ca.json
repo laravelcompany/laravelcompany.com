@@ -1,7 +1,7 @@
 {
   "title": "Class 'App\\Http\\Controllers\\DB' not found and I also cannot use a new Model",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Diagnosing and Resolving Laravel Class Not Found Issues with Models and Queries Introduction: In this blog post, we'll address two common issues...",

@@ -1,7 +1,7 @@
 {
   "title": "Getting 500 server error with Laravel 5.7 on Windows",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving 500 Server Error Issues with Laravel 5.7 on Windows Introduction: The Laravel framework is undoubtedly one of the most famous PHP-based...",

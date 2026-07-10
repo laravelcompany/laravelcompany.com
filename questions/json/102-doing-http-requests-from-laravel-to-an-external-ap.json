@@ -1,7 +1,7 @@
 {
   "title": "Doing HTTP requests FROM Laravel to an external API",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Making HTTP Requests from Laravel to External APIs Body: Introduction When developing web applications using Laravel, it is often necessary...",

@@ -1,7 +1,7 @@
 {
   "title": "How many cores are used by Github Actions Runners?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Optimizing Github Actions Runners for Parallel Processing: Maximizing Resource Utilization Body: The world of software development is continuously...",

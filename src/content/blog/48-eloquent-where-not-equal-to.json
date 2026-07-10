@@ -1,7 +1,7 @@
 {
   "title": "Eloquent - where not equal to",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Mastering Eloquent Queries: Understanding whereNotIn(), where('column', 'operator', 'value') & NOT IN Operator Usage in Laravel Eloquent is an elegant...",

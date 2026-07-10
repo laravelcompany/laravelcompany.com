@@ -1,7 +1,7 @@
 {
   "title": "SQLSTATE[HY000] [2054] Server sent charset unknown to the client. Please, report to the developers",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Common Causes and Solutions for SQLSTATE[HY000] [2054] Errors in Laravel Applications SQLSTATE[HY000] [2054] errors signal that the database server is...",

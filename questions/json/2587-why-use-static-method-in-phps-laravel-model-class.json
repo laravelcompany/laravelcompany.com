@@ -1,7 +1,7 @@
 {
   "title": "Why use static method in PHP's laravel model class?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Why Use Static Methods in PHP's Laravel Model Class? Demystifying Eloquent Design As developers working with the Laravel ecosystem, we often encounter...",

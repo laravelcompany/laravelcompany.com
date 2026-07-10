@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.1 Migration and Seeding Cannot truncate a table referenced in a foreign key constraint",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Database Integrity: Solving Laravel Migration Truncation Errors with Foreign Keys As a senior developer working with Laravel, we constantly deal...",

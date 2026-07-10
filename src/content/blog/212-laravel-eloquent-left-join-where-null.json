@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent LEFT JOIN WHERE NULL",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding LEFT JOIN Queries with WHERE NULL Using Eloquent - A Comprehensive Guide In this blog post, we will delve into the intricacies of working...",

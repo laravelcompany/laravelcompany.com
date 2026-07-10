@@ -1,7 +1,7 @@
 {
   "title": "laravel how to validate as equal to a variable",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Comparing Form Field Values with PHP Variables in Laravel Validation Introduction: In Laravel, validation is an essential component of any web...",

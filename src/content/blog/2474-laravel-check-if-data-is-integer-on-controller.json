@@ -1,7 +1,7 @@
 {
   "title": "Laravel: Check if data is integer on controller",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel: How to Robustly Check if Input Data is an Integer in a Controller As developers working with frameworks like Laravel, we constantly deal with...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.1: keep uploaded file as old input",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Preserving File Upload Inputs in Laravel Form Validation - A Comprehensive Guide Introduction: In Laravel 5.1, the built‑in validation system allows you...",

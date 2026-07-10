@@ -1,7 +1,7 @@
 {
   "title": "elastic search failed to parse date field with format [strict_date_optional_time||epoch_millis]",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving Date Parsing Issues When Updating Models in Laravel Introduction In Laravel applications, when an object model is updated,...",

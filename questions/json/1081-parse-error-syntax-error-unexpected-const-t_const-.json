@@ -1,7 +1,7 @@
 {
   "title": "Parse error: syntax error, unexpected 'const' (T_CONST), expecting variable (T_VARIABLE) in Laravel project",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving \"Parse error: syntax error, unexpected 'const'...\" Errors in Laravel Projects Introduction The Parse error: syntax error,...",

@@ -1,7 +1,7 @@
 {
   "title": "ErrorException failed to open stream: Permission denied",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving \"ErrorException failed to open stream: Permission denied\" Error in Laravel Projects Introduction: When working on Laravel...",

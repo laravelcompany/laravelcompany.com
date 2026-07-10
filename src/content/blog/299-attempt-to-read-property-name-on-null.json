@@ -1,7 +1,7 @@
 {
   "title": "Attempt to read property \"name\" on null",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Displaying Category Name in Your Laravel Application Category Model Code: class Category extends Model { use HasFactory; protected $fillable=...",

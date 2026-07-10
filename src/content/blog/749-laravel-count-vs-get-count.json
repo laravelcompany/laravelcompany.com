@@ -1,7 +1,7 @@
 {
   "title": "laravel ->count() vs ->get()->count()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding the Difference Between Laravel ->count() and ->get()->count() for Counting Rows in Queries Body: When it comes to working with large...",

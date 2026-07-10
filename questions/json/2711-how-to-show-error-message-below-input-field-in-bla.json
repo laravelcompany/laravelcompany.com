@@ -1,7 +1,7 @@
 {
   "title": "How to show error message below input field in blade file - Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Show Specific Validation Errors Below Input Fields in Laravel Blade As a senior developer working with Laravel, you frequently encounter the need to...",

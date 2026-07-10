@@ -1,7 +1,7 @@
 {
   "title": "validating a numeric input's length in laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Validating Numeric Input's Length in Laravel 5 Body: In web development, ensuring user input meets certain criteria is crucial for maintaining...",

@@ -1,7 +1,7 @@
 {
   "title": "Print log to terminal running artisan serve",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Print Log to Terminal Running `artisan serve`: Real-Time Debugging with Laravel As developers, our primary goal when debugging is visibility. When working...",

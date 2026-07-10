@@ -1,7 +1,7 @@
 {
   "title": "Serialization of 'Closure' is not allowed in Laravel 5.3 Email Queue",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Solving Serialization Issues with Closures in Laravel 5.3 Email Queue Body: Serialization issues often arise when working with...",

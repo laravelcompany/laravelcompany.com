@@ -1,7 +1,7 @@
 {
   "title": "Blade, Use html inside variable being passed into partial view is not being rendered",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Blade Output Mystery Solved: How to Render Raw HTML within Variables As a senior developer working with Laravel and Blade, you often encounter scenarios...",

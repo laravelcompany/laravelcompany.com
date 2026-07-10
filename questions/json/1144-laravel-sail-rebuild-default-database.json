@@ -1,7 +1,7 @@
 {
   "title": "Laravel Sail rebuild default database",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "When working with Laravel Sail on a MySQL container for your database, you might encounter issues when running migrations or performing other database-related...",

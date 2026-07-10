@@ -1,7 +1,7 @@
 {
   "title": "Laravel - link to a file saved in storage folder",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Creating Links to Files Stored in Laravel's Storage Folder Body: When working with Laravel, there are several ways to store files and make them...",

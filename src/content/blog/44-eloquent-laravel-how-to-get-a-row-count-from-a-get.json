@@ -1,7 +1,7 @@
 {
   "title": "eloquent laravel: How to get a row count from a ->get()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Retrieving Row Counts with Laravel Eloquent's Collection Methods Introduction: In this blog post, we'll explore various ways to count rows...",

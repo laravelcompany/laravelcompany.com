@@ -1,7 +1,7 @@
 {
   "title": "Add \"ON DELETE CASCADE\" to existing column in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Implement \"ON DELETE CASCADE\" in Your Laravel Application Body: In Laravel, working with foreign keys is relatively straightforward....",

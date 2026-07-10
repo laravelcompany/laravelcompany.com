@@ -1,7 +1,7 @@
 {
   "title": "Laravel throws 'The bootstrap/cache directory must be present and writable' error after update",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Tackling 'The bootstrap/cache directory must be present and writable' Error in Laravel After Updates Body: Laravel is an efficient PHP framework that...",

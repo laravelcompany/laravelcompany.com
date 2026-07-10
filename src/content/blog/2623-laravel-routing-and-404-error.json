@@ -1,7 +1,7 @@
 {
   "title": "laravel routing and 404 error",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Laravel Routing: Controlling the 404 Error Gracefully As developers building applications with the power of Laravel, mastering routing isn't just...",

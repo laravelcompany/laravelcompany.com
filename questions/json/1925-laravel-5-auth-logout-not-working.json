@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 Auth logout not working",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel 5 Auth Logout Issues Introduction: When developing your application using Laravel's built-in authentication system, you may...",

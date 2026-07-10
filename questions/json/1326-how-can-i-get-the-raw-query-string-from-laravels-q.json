@@ -1,7 +1,7 @@
 {
   "title": "How can I get the raw query string from Laravel's query builder BEFORE executing the query?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: How to Retrieve the Raw Query String from Laravel's Query Builder Before Execution Introduction: As we build complex queries using Laravel's query...",

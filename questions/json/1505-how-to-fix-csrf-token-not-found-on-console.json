@@ -1,7 +1,7 @@
 {
   "title": "how to fix CSRF token not found on console",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving CSRF Token Errors in Laravel 5.4 while Using Vue JS Introduction: Laravel and Vue JS are two powerful tools that can be used together to create...",

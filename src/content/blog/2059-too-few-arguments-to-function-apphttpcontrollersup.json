@@ -1,7 +1,7 @@
 {
   "title": "Too few arguments to function App\\Http\\Controllers\\Update::update(), 0 passed nd exactly 7 expected",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Addressing \"Too few arguments to function App\\Http\\Controllers\\Update::update(), 0 passed nd exactly 7 expected\" Error in Laravel Body: The error...",

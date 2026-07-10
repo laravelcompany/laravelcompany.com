@@ -1,7 +1,7 @@
 {
   "title": "focus:outline-none not working Tailwind CSS with Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving Focus Border Issues with Tailwind CSS in Laravel Applications Introduction: Tailwind CSS is a powerful utility-first framework that helps...",

@@ -1,7 +1,7 @@
 {
   "title": "Errors \"This action is unauthorized.\" using Form Request validations in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting \"This action is unauthorized.\" errors with Form Request validations in Laravel Introduction: In Laravel's world of security and...",

@@ -1,7 +1,7 @@
 {
   "title": "What is different between save(), create() function in laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding the Difference Between save() and create() Functions in Laravel 5 Body: Laravel is a popular PHP framework that offers numerous features...",

@@ -1,7 +1,7 @@
 {
   "title": "I don't understand why I am getting undefined array key exception error - Laravel 9 PHP 8",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving Undefined Array Key Exception Error in Laravel PHP Apps (Laravel 9, PHP 8) One common issue faced by developers is the undefined array key...",

@@ -1,7 +1,7 @@
 {
   "title": "Passing (laravel) Array in Javascript",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Passing Laravel Arrays to JavaScript Introduction: As a developer using Laravel, you may encounter the need to pass arrays containing your...",

@@ -1,7 +1,7 @@
 {
   "title": "SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed:",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving SQLSTATE[23000]: Integrity Constraint Violation Issue in Laravel Apps Body: In your Laravel to-do list application, you're...",

@@ -1,7 +1,7 @@
 {
   "title": "Routing to controller with optional parameters",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Routing to Controllers with Optional Parameters in Laravel Introduction: In the contemporary web development world, APIs are a significant...",

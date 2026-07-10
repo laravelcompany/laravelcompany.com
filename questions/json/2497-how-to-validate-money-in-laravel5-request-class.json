@@ -1,7 +1,7 @@
 {
   "title": "How to validate Money in Laravel5 request class",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Validate Money in a Laravel Request Class: Handling Currency with Precision As a senior developer working with Laravel, you often deal with forms...",

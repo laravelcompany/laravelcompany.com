@@ -1,7 +1,7 @@
 {
   "title": "What is the difference between queue:work --daemon and queue:listen",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Understanding Queue Workers: `queue:work --daemon` vs. `queue:listen` Setting up an efficient background job processing system in Laravel often involves...",

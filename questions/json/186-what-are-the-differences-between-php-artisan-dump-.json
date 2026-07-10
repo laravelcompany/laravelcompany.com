@@ -1,7 +1,7 @@
 {
   "title": "What are the Differences Between \"php artisan dump-autoload\" and \"composer dump-autoload\"?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Differences Between \"php artisan dump-autoload\" and \"composer dump-autoload\" Body: For new Laravel 4 developers or those who are not well-versed in...",

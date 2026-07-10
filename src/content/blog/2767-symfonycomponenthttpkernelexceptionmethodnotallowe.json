@@ -1,7 +1,7 @@
 {
   "title": "Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException The PUT method is not supported for this route. Supported methods: GET, HEAD",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the Error: Understanding Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException in Laravel As a senior developer working with the...",

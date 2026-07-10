@@ -1,7 +1,7 @@
 {
   "title": "Laravel 4 - Blade Templating - How to properly Link to Route?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Blade: Properly Linking Routes with Complex HTML Structures As developers working with Laravel, we often find ourselves in situations where the need...",

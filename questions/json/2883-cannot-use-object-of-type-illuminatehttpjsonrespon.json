@@ -1,7 +1,7 @@
 {
   "title": "Cannot use object of type Illuminate\\\\Http\\\\JsonResponse as array in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Fixing the Type Mismatch: Why You Can't Use `JsonResponse` as an Array in Laravel Data Handling As senior developers working within the Laravel ecosystem, we...",

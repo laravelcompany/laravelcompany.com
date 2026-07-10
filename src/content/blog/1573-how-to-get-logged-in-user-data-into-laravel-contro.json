@@ -1,7 +1,7 @@
 {
   "title": "How to get logged in user data into Laravel controller",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Retrieving Logged In User Data in Laravel Controllers for Enhanced User Experience Introduction: As a Laravel developer, you might encounter scenarios...",

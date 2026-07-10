@@ -1,7 +1,7 @@
 {
   "title": "Eloquent push() and save() difference",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding the Differences between Eloquent's push() and save() Methods In Laravel, working with relationships in your database can be effortless...",

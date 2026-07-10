@@ -1,7 +1,7 @@
 {
   "title": "Laravel, How to use where conditions for relation's column?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Mastering Eloquent Relational Queries in Laravel for Complex Scenarios Body: Restaurant management applications often involve multiple tables and...",

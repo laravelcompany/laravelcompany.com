@@ -1,7 +1,7 @@
 {
   "title": "Laravel 8 - Route cannot find controllers: Target class [Auth\\LoginController] does not exist",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel 8 Error Solved: Why Route Cannot Find Controllers (Target Class Does Not Exist) As developers, we all encounter frustrating errors during the...",

@@ -1,7 +1,7 @@
 {
   "title": "PHP Fatal error: Uncaught Error: Class 'Normalizer' not found in /usr/share/php/Symfony/Component/Console/Helper/Helper.php",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving the \"PHP Fatal Error: Class 'Normalizer' not Found\" Issue During Composer Installation in Laravel Projects Introduction Encountering errors...",

@@ -1,7 +1,7 @@
 {
   "title": "How to get distinct values for non-key column fields in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Handling Distinct Values for Non-Key Columns in Laravel Queries Introduction: When working with Laravel applications, you might encounter a...",

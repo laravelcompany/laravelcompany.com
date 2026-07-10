@@ -1,7 +1,7 @@
 {
   "title": "Upgrading laravel into 8 I got illuminate/support support?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Upgrading Laravel into 8 - Fixing Illuminate/Support Issues Body: If you're facing issues while upgrading to Laravel 8 because of the illuminate/support...",

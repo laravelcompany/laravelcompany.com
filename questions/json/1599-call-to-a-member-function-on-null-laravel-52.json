@@ -1,7 +1,7 @@
 {
   "title": "call to a member function on null Laravel 5.2",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving \"call to a member function on null\" Error in Laravel 5.2 Applications Introduction In the world of web development, errors...",

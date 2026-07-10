@@ -1,7 +1,7 @@
 {
   "title": "Laravel: Validate min and max value based on input fields",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel: Validating Min and Max Values Based on Input Fields As developers building complex applications with Laravel, we frequently encounter validation...",

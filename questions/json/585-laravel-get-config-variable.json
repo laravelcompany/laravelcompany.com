@@ -1,7 +1,7 @@
 {
   "title": "Laravel Get Config Variable",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel Configuration Variables: Retrieval and Usage in Templates Introduction: In Laravel, configuration variables are an essential part...",

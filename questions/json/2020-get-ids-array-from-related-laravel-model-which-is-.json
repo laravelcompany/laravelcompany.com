@@ -1,7 +1,7 @@
 {
   "title": "Get ids array from related laravel model which is having belongsToMany relationship",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Retrieving User IDs from BelongsToMany Relationship in Laravel In the world of Laravel applications, relationships between models are...",

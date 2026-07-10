@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent Select Between current month and previous 3 months",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Date Ranges in Laravel: Selecting Data Between Current and Previous Months As developers working with databases, one of the most frequent and...",

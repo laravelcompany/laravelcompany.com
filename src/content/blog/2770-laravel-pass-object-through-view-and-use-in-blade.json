@@ -1,7 +1,7 @@
 {
   "title": "Laravel - Pass object through view and use in blade",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel: Passing Logic and Objects to Your Blade Views – A Deep Dive As we build complex applications with Laravel, one of the most common stumbling blocks...",

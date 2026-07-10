@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5: DB Seed class not found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Overcoming Laravel 5 DB Seed Class Not Found Issue Introduction: Database seeders play a crucial role in managing your database and help you maintain...",

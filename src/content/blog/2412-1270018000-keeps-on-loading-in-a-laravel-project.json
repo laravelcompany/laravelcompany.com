@@ -1,7 +1,7 @@
 {
   "title": "127.0.0.1:8000 keeps on loading in a laravel project",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Debugging the Dead End: Why `php artisan serve` Keeps Loading in Laravel Projects As a senior developer working with the Laravel ecosystem, I often encounter...",

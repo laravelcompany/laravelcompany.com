@@ -1,7 +1,7 @@
 {
   "title": "Laravel, right way to import javascript into Blade Templates",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Laravel, right way to import JavaScript into Blade Templates Laravel provides an elegant solution for handling JavaScript imports in your blade templates. The...",

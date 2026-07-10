@@ -1,7 +1,7 @@
 {
   "title": "Linking a CSS image URL in laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Linking CSS Image URLs using Laravel's URL Helper Functions Introduction One of the advantages of utilizing a robust framework like Laravel...",

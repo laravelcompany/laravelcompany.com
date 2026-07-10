@@ -1,7 +1,7 @@
 {
   "title": "Timestamps (updated_at, created_at) are null in Laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Timestamps (updated_at, created_at) are Null in Laravel 5: Troubleshooting and Solutions When you face problems with timestamps (created_at and updated_at)...",

@@ -1,7 +1,7 @@
 {
   "title": "Fatal error: Class 'Illuminate\\Foundation\\Application' not found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Fatal error: Class 'Illuminate\\Foundation\\Application' not found - A Comprehensive Guide to Solving Laravel Issues Introduction: In the world of web...",

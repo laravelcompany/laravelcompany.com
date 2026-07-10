@@ -1,7 +1,7 @@
 {
   "title": "Laravel named route for resource controller",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Assign Names to Resource Controller Routes in Laravel 4.2 for Easy URL Generation Body: Laravel's resource controllers offer an easy way to...",

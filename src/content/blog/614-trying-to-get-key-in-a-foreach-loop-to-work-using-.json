@@ -1,7 +1,7 @@
 {
   "title": "Trying to get key in a foreach loop to work using blade",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Accessing and Displaying URLs from XML Nodes within Laravel's Blade Templates Body: The problem highlighted in the question involves displaying all URLs...",

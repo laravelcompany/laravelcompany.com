@@ -1,7 +1,7 @@
 {
   "title": "How do I downgrade my php version from 7.3.4 to 7.0.0 in larvel 5.4.36?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Downgrading PHP Version from 7.3.4 to 7.0.0 in Laravel 5.4.36: A Comprehensive Guide Body: Downgrading your PHP version can be necessary for a variety...",

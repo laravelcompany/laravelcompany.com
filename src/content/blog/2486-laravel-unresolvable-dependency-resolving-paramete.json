@@ -1,7 +1,7 @@
 {
   "title": "Laravel Unresolvable dependency resolving [Parameter #0 [ <required> $method ]] in class GuzzleHttp\\Psr7\\Request",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the Error: Resolving Unresolvable Dependencies in Guzzle within Laravel As a senior developer working within the Laravel ecosystem, we frequently...",

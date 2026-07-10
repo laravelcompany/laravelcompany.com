@@ -1,7 +1,7 @@
 {
   "title": "The DELETE method is not supported for this route. Supported methods: GET, HEAD, POST",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"The DELETE method is not supported for this route. Supported methods: GET, HEAD, POST\" Issues in Laravel Applications Body: When creating web...",

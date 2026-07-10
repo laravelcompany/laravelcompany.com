@@ -1,7 +1,7 @@
 {
   "title": "Concept of laravel first() method",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel's First() Method for User Authentication Body: The laravel first() method is a crucial tool in Laravel that deals with retrieving...",

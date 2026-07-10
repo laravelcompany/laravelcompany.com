@@ -1,7 +1,7 @@
 {
   "title": "Laravel- redirect with variable and display it in the view file",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Redirects with Variables and Displaying Them in View Files Body: In modern web development, redirecting users based on specific conditions or...",

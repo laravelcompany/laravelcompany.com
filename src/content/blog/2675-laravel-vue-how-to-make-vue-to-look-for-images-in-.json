@@ -1,7 +1,7 @@
 {
   "title": "Laravel Vue - How to make vue to look for images in public folder",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Vue: Solving the Image Path Dilemma in Your Public Folder As developers working with the Laravel and Vue stack, managing asset paths—especially when...",

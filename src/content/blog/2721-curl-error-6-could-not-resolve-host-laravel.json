@@ -1,7 +1,7 @@
 {
   "title": "cURL error 6: Could not resolve host laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving cURL Error 6: Could Not Resolve Host in Laravel HTTP Requests As developers working with modern PHP frameworks like Laravel, we frequently interact...",

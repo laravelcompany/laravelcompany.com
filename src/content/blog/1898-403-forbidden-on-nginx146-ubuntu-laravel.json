@@ -1,7 +1,7 @@
 {
   "title": "403 Forbidden on nginx/1.4.6 (Ubuntu) - Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting 403 Forbidden Errors in Laravel Apps with Nginx/1.4.6 (Ubuntu) Body: Receiving a \" 403 Forbidden \" error can be frustrating, especially...",

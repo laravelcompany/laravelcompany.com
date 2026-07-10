@@ -1,7 +1,7 @@
 {
   "title": "Working with CSRF token in JavaScript via Fetch API",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Working with CSRF Token in JavaScript via Fetch API: A Comprehensive Guide Introduction: In today's web development landscape, security plays an...",

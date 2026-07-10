@@ -1,7 +1,7 @@
 {
   "title": "Laravel create migration file in specific folder",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Create Migration Files for Your Payment Package in Laravel using Custom Artisan Commands Introduction: Creating migration files is an...",

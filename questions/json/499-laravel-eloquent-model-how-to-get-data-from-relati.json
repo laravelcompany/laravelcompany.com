@@ -1,7 +1,7 @@
 {
   "title": "Laravel eloquent model how to get data from relationship's table",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficient Eloquent Modeling for Retrieving Data from Related Tables in Laravel Body: In your Laravel application, you've defined a relationship between...",

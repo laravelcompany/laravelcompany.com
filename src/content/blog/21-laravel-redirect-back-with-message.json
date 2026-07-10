@@ -1,7 +1,7 @@
 {
   "title": "Laravel Redirect Back with() Message",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Redirect Back with Message Using Laravel's Exception Handling Introduction One of the common practices in web application development is to...",

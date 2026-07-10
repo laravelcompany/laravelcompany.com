@@ -1,7 +1,7 @@
 {
   "title": "Redirect to Login if user not logged in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Redirecting to Login if Not Logged In Laravel Using Middleware Introduction: As a Laravel developer or enthusiast, ensuring the security of...",

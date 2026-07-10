@@ -1,7 +1,7 @@
 {
   "title": "What does onDelete('cascade') mean?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: OnDelete('cascade'): Understanding Database Relationship Deletion When working with relational databases, it's essential to understand the different...",

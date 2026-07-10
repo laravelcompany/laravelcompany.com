@@ -1,7 +1,7 @@
 {
   "title": "How to route GET and POST for same pattern in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Combine GET and POST Routing for Same Pattern in Laravel Body: Routing is a fundamental part of any web application that enables users to interact with...",

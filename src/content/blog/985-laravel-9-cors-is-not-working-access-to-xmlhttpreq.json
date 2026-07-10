@@ -1,7 +1,7 @@
 {
   "title": "Laravel 9 - CORS is not working (Access to XMLHttpRequest has been blocked by CORS policy)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving Laravel 9 CORS Issues with Vuejs Frontend App Body: Laravel is a powerful PHP framework for creating elegant web applications. VueJS, on the...",

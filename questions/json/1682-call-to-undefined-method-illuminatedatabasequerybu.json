@@ -1,7 +1,7 @@
 {
   "title": "Call to undefined method Illuminate\\Database\\Query\\Builder::lists() when seeding after updating to Laravel 5.3",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Call to undefined method issue when seeding after updating to Laravel 5.3 Body: Updating to Laravel 5.3 can sometimes bring unexpected...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel - how to calculate the sum of objects in an array in blade view",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel: How to Calculate the Sum of Objects in an Array in a Blade View When working with dynamic data in Laravel, especially when iterating over...",

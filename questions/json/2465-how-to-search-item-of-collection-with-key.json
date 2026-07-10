@@ -1,7 +1,7 @@
 {
   "title": "How to search item of collection with key?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Search Items in a Laravel Collection Using Keys As developers working with data structures, especially collections, efficiently finding specific items...",

@@ -1,7 +1,7 @@
 {
   "title": "@extends('layout') laravel. Blade Template System seems like Not working",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Unraveling the Mystery: Why Your Laravel Blade Template System Isn't Working as Expected Introduction: Laravel is a powerful PHP framework that provides...",

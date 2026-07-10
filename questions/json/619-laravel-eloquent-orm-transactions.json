@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent ORM Transactions",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Simplifying MySQL Transactions with Laravel Eloquent ORM: A Comprehensive Guide Introduction: The Laravel framework offers a rich set of tools to help...",

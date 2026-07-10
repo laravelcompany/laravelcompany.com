@@ -1,7 +1,7 @@
 {
   "title": "Database (database/database.sqlite) does not exist. Database works from artisan tinker",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Database (database/database.sqlite) does not exist. Database works from artisan tinker - Solving the Issue Body: Database management is an essential...",

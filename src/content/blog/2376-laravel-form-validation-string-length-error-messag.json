@@ -1,7 +1,7 @@
 {
   "title": "Laravel: Form validation string-length error messages cause exception",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel: Form Validation String-Length Errors Cause Exceptions When Displaying Messages As a senior developer working with the Laravel ecosystem, we often...",

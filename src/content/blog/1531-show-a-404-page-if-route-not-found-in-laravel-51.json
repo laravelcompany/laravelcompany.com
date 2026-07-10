@@ -1,7 +1,7 @@
 {
   "title": "Show a 404 page if route not found in Laravel 5.1",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Displaying a Custom 404 Page for Unfound Routes in Laravel 5.1 Body: In this post, we will explore how to display a custom 404 page when a route is not...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel 4, Pass a variable to route in javascript",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel 4 - Passing Variables from Ajax Response in Javascript to Route for URL Generation Introduction In Laravel development, sometimes you may need...",

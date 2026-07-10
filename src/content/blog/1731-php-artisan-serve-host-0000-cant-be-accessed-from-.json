@@ -1,7 +1,7 @@
 {
   "title": "php artisan serve --host 0.0.0.0 can't be accessed from mobile device on same network",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel Server Access Issues on Local Networks Body: Introducing Laravel, an MVC framework built on PHP, provides a convenient way to...",

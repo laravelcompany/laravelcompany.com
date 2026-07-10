@@ -1,7 +1,7 @@
 {
   "title": "How do I use md5 instead of bcrypt?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: The Difference Between Using md5 and bcrypt for Storing Passwords Introduction: Using secure methods to hash passwords is essential for protecting user...",

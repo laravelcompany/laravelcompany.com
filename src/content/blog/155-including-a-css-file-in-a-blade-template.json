@@ -1,7 +1,7 @@
 {
   "title": "Including a css file in a blade template?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Including a CSS File in a Blade Template - The Correct Way to Approach It Including CSS files in your Laravel blade template comes down to understanding...",

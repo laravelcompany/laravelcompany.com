@@ -1,7 +1,7 @@
 {
   "title": "Laravel mail bcc",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Email Delivery in Laravel: Troubleshooting BCC Issues As developers working with Laravel, sending emails reliably is a fundamental task. We often...",

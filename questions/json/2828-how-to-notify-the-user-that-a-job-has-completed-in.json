@@ -1,7 +1,7 @@
 {
   "title": "How to notify the user that a job has completed in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Notify the User That a Job Has Completed in Laravel Working with background processing using Laravel Queues is a cornerstone of building scalable,...",

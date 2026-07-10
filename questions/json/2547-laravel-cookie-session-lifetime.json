@@ -1,7 +1,7 @@
 {
   "title": "Laravel cookie session lifetime",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Session and Token Lifetime in Laravel: A Deep Dive for OAuth2 Clients As developers building applications that integrate with external services,...",

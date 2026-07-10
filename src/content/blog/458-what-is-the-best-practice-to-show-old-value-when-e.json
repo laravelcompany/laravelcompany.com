@@ -1,7 +1,7 @@
 {
   "title": "What is the best practice to show old value when editing a form in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Best Practices for Displaying Old Values While Editing Forms in Laravel Body: When developing forms in Laravel, it's essential to consider different...",

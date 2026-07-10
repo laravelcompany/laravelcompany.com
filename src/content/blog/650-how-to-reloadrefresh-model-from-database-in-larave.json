@@ -1,7 +1,7 @@
 {
   "title": "How to reload/refresh model from database in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Reloading/Refreshing Models from the Database in Laravel Introduction In some situations within your Laravel applications, you may need to reload or...",

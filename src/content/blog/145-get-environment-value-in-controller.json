@@ -1,7 +1,7 @@
 {
   "title": "Get environment value in controller",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Accessing Environment Variables in Laravel Controllers - A Comprehensive Guide Introduction: In modern web applications, managing configuration settings...",

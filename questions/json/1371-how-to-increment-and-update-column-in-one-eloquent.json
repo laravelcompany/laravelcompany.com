@@ -1,7 +1,7 @@
 {
   "title": "How to increment and update column in one eloquent query",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Streamlining Eloquent Queries for Column Incrementation and Timestamp Updates Introduction: In the world of software development, efficiency is key to...",

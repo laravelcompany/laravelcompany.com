@@ -1,7 +1,7 @@
 {
   "title": "Pass data from blade to vue component",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Bridging the Gap: Passing Data from Laravel Blade to a Vue Component Integrating a backend framework like Laravel with a dynamic frontend library like Vue is...",

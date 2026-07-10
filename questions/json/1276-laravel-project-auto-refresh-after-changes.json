@@ -1,7 +1,7 @@
 {
   "title": "Laravel project auto refresh after changes",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Testing Laravel Code Changes Without Refreshing the Page Every Time Body: In this comprehensive blog post, we will address one of the most...",

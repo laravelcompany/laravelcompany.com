@@ -1,7 +1,7 @@
 {
   "title": "Laravel needs to display only the date not the time using the Carbon class",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Displaying Dates Without Times using Carbon Class in Laravel In this comprehensive blog post, we will discuss the necessity of displaying dates without...",

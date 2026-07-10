@@ -1,7 +1,7 @@
 {
   "title": "composer create-project laravel/laravel:^9.* AppNameHere does not create folder/directory - how to fix it",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Composer Create-Project Mystery: Why Your Laravel Project Folder Isn't Being Created As a senior developer, I’ve seen countless instances where commands that...",

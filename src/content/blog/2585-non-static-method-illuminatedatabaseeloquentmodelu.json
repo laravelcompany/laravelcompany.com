@@ -1,7 +1,7 @@
 {
   "title": "Non-static method Illuminate\\Database\\Eloquent\\Model::update() should not be called statically",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Non-static Method `Illuminate\\Database\\Eloquent\\Model::update()` Should Not Be Called Statically: Understanding Eloquent Instance vs. Static Methods As...",

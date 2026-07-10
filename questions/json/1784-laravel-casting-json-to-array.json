@@ -1,7 +1,7 @@
 {
   "title": "Laravel casting JSON to array?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Casting JSON to Array: A Comprehensive Guide Body: When working with JSON data in your Laravel application, you might need to cast it as an...",

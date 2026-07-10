@@ -1,7 +1,7 @@
 {
   "title": "Laravel SQL Server Error: ODBC Driver 18 for SQL Server]SSL Provider: [error:1416F086:SSL",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Tackling Laravel SQL Server Errors: Decoding SSL Issues and Enhancing Connection Security Introduction: As developers, we often encounter various issues...",

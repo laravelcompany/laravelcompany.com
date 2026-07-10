@@ -1,7 +1,7 @@
 {
   "title": "Laravel to SQL Server (sqlsrv). [PDOException] could not find driver",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel to SQL Server (sqlsrv). [PDOException] could not find driver. Introduction: Integrating Laravel with Microsoft's SQL Server can be challenging...",

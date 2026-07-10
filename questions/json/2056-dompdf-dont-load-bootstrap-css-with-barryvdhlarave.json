@@ -1,7 +1,7 @@
 {
   "title": "dompdf dont load bootstrap css with barryvdh/laravel-dompdf",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving CSS Issues with Bootstrap and Laravel-DomPDF in PDF Generation The issue of failing to load Bootstrap CSS for PDF generation using...",

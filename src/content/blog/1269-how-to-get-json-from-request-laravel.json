@@ -1,7 +1,7 @@
 {
   "title": "How to get JSON from request Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Retrieving JSON Data from Request in Laravel In Laravel, handling requests is part of the core functionality provided by its framework. One significant feature...",

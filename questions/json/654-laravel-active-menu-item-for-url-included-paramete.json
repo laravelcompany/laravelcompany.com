@@ -1,7 +1,7 @@
 {
   "title": "Laravel active menu item for url included parameters",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Adding Active Class for URL Included Parameters in Laravel Blade Templates In this blog post, we aim to tackle the issue of setting an active class in...",

@@ -1,7 +1,7 @@
 {
   "title": "php artisan migrate throwing [PDO Exception] Could not find driver - Using Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving PDOException Issues During Laravel's artisan migrate Command Introduction It is common to encounter issues when starting out with Laravel...",

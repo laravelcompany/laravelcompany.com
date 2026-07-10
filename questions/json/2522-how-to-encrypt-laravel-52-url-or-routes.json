@@ -1,7 +1,7 @@
 {
   "title": "How to encrypt laravel 5.2 URL or Routes?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Secure Your Laravel Routes: Beyond Simple URL Obfuscation As a senior developer working with frameworks like Laravel, security is not an...",

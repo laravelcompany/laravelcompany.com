@@ -1,7 +1,7 @@
 {
   "title": "Response::json() - Laravel 5.1",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Clarifying Response::json() Usage in Laravel 5.1 Projects Introduction: In the ever-evolving realm of web development, frameworks like Laravel simplify...",

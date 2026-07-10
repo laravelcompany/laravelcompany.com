@@ -1,7 +1,7 @@
 {
   "title": "\"error\": \"array_merge(): Expected parameter 1 to be an array, null given\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "This is a very common point of confusion when starting with Laravel's powerful features like Observers, Events, and Broadcasting. The issue you are facing...",

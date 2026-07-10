@@ -1,7 +1,7 @@
 {
   "title": "How do I get a refresh token in Laravel Passport?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Simplifying Refresh Token Generation with Laravel Passport Introduction In this blog post, we'll focus on creating refresh tokens using Laravel 6.7 and...",

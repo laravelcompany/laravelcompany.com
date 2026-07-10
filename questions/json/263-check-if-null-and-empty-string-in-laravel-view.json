@@ -1,7 +1,7 @@
 {
   "title": "Check if null and empty string in Laravel view",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Distinguishing Null Values and Empty Strings in Laravel Views Introduction: In Laravel, often we deal with different values such as null or empty...",

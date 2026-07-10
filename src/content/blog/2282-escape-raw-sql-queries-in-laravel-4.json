@@ -1,7 +1,7 @@
 {
   "title": "Escape raw SQL queries in Laravel 4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Escape Raw SQL Queries in Laravel 4: The Right Way and Alternate Methods Escaping raw SQL queries is crucial to avoid security vulnerabilities that may...",

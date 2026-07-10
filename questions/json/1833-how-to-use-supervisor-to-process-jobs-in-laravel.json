@@ -1,7 +1,7 @@
 {
   "title": "How to use supervisor to process jobs in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Process Laravel Jobs Using Supervisor: A Comprehensive Guide Introduction: As a developer, you know the importance of handling concurrent...",

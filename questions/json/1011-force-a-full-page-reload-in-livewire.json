@@ -1,7 +1,7 @@
 {
   "title": "Force a full page reload in Livewire",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Force a Full Page Reload in Livewire Introduction Livewire is an impressive framework for Laravel that enhances your application's UI responsiveness...",

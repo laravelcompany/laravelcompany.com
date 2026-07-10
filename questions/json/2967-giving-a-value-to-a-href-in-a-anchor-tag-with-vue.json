@@ -1,7 +1,7 @@
 {
   "title": "Giving a value to a href in a anchor tag with Vue",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Giving a Value to an `href` in an Anchor Tag with Vue: The Definitive Guide It’s a common sticking point when transitioning from static HTML to dynamic...",

@@ -1,7 +1,7 @@
 {
   "title": "cannot perform raw query with DB::select(DB::raw()) after updating to laravel 10",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Fixing the Raw Query Headache in Laravel 10: Why `DB::raw()` Fails Dynamically As developers, we often dive into raw SQL when dealing with complex database...",

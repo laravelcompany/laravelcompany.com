@@ -1,7 +1,7 @@
 {
   "title": "How to Cast String into int in Laravel model",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Casting Strings into int Values in Laravel Models Body: In Laravel, handling data types is crucial to ensure that your application runs...",

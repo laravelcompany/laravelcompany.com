@@ -1,7 +1,7 @@
 {
   "title": "Laravel catch Eloquent \"Unique\" field error",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Catching Eloquent Unique Field Errors: Unmasking Database Constraints As developers working with Laravel and Eloquent, one of the most common...",

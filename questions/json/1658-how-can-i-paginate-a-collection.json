@@ -1,7 +1,7 @@
 {
   "title": "How can I paginate a collection?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Paginate Merged Collections in Laravel Applications Body: When working on applications that deal with large amounts of data, pagination...",

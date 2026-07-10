@@ -1,7 +1,7 @@
 {
   "title": "Create a Insert... Select statement in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Create Insert... Select Statements Using Laravel's Eloquent ORM or Queries Introduction Inserting data and selecting values from another...",

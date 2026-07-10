@@ -1,7 +1,7 @@
 {
   "title": "Calling laravel artisan command from console",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Calling Laravel Artisan Command from Console Body: Learning and understanding Laravel's command line interface (CLI) is crucial for developers who want...",

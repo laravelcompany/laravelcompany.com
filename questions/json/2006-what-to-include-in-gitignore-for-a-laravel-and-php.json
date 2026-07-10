@@ -1,7 +1,7 @@
 {
   "title": "What to include in gitignore for a Laravel and PHPStorm project?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Mastering Gitignore for Laravel & PHPStorm Projects: A Comprehensive Guide Body: In web development using Laravel and PHPStorm, the .gitignore file...",

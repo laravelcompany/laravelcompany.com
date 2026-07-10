@@ -1,7 +1,7 @@
 {
   "title": "Failed to authenticate on SMTP server with username in smtp.office365.com",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Resolving SMTP Authentication Failures with Office 365 in Laravel Sending emails reliably from an application is fundamental, and when integration involves...",

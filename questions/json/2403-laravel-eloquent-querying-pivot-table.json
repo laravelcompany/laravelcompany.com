@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent - querying pivot table",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Many-to-Many Relationships: Querying Pivot Tables with Laravel Eloquent As developers working with relational databases in Laravel, navigating...",

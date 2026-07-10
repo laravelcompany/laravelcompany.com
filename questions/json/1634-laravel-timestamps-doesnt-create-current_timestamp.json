@@ -1,7 +1,7 @@
 {
   "title": "Laravel timestamps() doesn't create CURRENT_TIMESTAMP",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel's `timestamps()` Functionality: Understanding and Customizing Timestamp Fields When working with Laravel projects, one of the most helpful...",

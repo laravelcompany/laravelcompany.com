@@ -1,7 +1,7 @@
 {
   "title": "Laravel 4: Failed to open stream: Permission denied",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving Permission Issues While Setting Up Laravel 4: Understanding \"Failed to open stream: Permission denied\" Error Body: If you're facing issues...",

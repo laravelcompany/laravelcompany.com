@@ -1,7 +1,7 @@
 {
   "title": "WhereHas() / orWhereHas not constraining the query as expected",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# WhereHas() / orWhereHas Not Constraining the Query as Expected: Mastering Complex Relationship Filtering in Eloquent As developers working with relational...",

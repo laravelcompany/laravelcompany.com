@@ -1,7 +1,7 @@
 {
   "title": "Laravel - htmlspecialchars() expects parameter 1 to be string, object given",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel's \"htmlspecialchars() expects parameter 1 to be string, object given\" Error Body: When working with JSON data in your Laravel...",

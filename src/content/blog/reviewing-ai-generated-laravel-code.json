@@ -1,7 +1,7 @@
 {
   "title": "Maintaining Data Integrity: Best Practices for Reviewing AI-Generated Laravel Code",
   "date": "2026-07-22",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "AI coding assistants are incredibly productive, but they can also introduce subtle data integrity bugs, N+1 queries, and security vulnerabilities. Learn a systematic review workflow for AI-generated Laravel code.",

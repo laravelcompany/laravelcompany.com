@@ -1,7 +1,7 @@
 {
   "title": "How to get value of input in blade.php",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Accessing Input Values in Blade Templates: A Comprehensive Guide Introduction: In Laravel web applications, the Blade template engine is used to render...",

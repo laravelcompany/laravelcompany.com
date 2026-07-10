@@ -1,7 +1,7 @@
 {
   "title": "rename column in laravel using migration",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Changing a Column Name in Laravel Migrations Renaming a column in Laravel using migrations is an essential task when you want to modify your database schema...",

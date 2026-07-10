@@ -1,7 +1,7 @@
 {
   "title": "How to change variables in the .env file dynamically in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Dynamically Editing .env File Variables in Laravel - A Comprehensive Guide Introduction: In this blog post, we will explore how to create an...",

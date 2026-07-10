@@ -1,7 +1,7 @@
 {
   "title": "net::ERR_CONNECTION_REFUSED using Laravel 9, ReactJs with vite js",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving net::ERR_CONNECTION_REFUSED Issues in Laravel 9, ReactJS, and Vite JS Apps Body: Building web applications using Laravel,...",

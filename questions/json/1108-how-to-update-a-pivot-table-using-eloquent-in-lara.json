@@ -1,7 +1,7 @@
 {
   "title": "How to update a pivot table using Eloquent in laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Updating Pivot Tables Using Laravel Eloquent in Laravel 5 Body: As a developer working with Laravel 5, you've created a many-to-many...",

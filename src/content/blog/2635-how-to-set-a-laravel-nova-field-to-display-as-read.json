@@ -1,7 +1,7 @@
 {
   "title": "How to set a Laravel Nova field to display as readonly or protected?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Set a Laravel Nova Field to Display as Readonly or Protected When building complex administrative interfaces with Laravel Nova, developers often seek...",

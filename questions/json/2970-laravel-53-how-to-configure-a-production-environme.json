@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.3. How to configure a production environment?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel 5.3: Configuring a Robust Production Environment Moving a Laravel application from a comfortable local development setup to a live production server...",

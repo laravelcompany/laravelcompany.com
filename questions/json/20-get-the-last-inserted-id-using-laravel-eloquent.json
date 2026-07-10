@@ -1,7 +1,7 @@
 {
   "title": "Get the Last Inserted Id Using Laravel Eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Retrieving the Last Inserted ID Using Laravel Eloquent A common requirement in many applications is to return the last inserted ID after...",

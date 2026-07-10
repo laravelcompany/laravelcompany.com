@@ -1,7 +1,7 @@
 {
   "title": "how to fix \"Method Illuminate\\Database\\Schema\\Blueprint::class does not exist.\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Unraveling the Mystery Behind \"Method Illuminate\\Database\\Schema\\Blueprint::class does not exist.\" Errors in Laravel Migrations Introduction When...",

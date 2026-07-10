@@ -1,7 +1,7 @@
 {
   "title": "Why \"no such file or directory ... autoload.php\" when accessing Laravel app?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting \"No such file or directory ... autoload.php\" when accessing Laravel App Introduction: Laravel is one of the most popular PHP frameworks,...",

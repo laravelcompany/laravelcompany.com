@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent delete by id",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel Eloquent delete by ID Issues and Solutions Body: When working with Laravel applications, you might encounter situations where your...",

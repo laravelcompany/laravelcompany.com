@@ -1,7 +1,7 @@
 {
   "title": "How do you force a JSON response on every response in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Enforcing JSON Responses in Laravel for Every Request Body: When building a RESTful API using the Laravel framework, you may want all responses to be in...",

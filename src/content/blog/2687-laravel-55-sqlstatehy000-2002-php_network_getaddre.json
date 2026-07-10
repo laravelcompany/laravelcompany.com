@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.5 SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the Dreaded Error: Solving `getaddrinfo failed` in Laravel Database Connections As developers, we often spend more time debugging application logic...",

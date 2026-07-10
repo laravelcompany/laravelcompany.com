@@ -1,7 +1,7 @@
 {
   "title": "Get all fields from db model in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Get All Fields from DB Model in Laravel: Handling Empty Attributes As a senior developer working with Laravel and Eloquent, you've encountered a very common...",

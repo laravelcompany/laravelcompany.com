@@ -1,7 +1,7 @@
 {
   "title": "Inertia: Reload page with updated data without modifying scroll position",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Reload Pages with Updated Data Using Inertia while Preserving Scroll Position Introduction In today's dynamic web applications, user...",

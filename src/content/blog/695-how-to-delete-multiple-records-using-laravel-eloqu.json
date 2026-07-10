@@ -1,7 +1,7 @@
 {
   "title": "How to delete multiple records using Laravel Eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Deleting Multiple Records with Laravel Eloquent: A Comprehensive Guide Body: Deleting multiple records from a database can seem like a...",

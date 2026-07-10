@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 new auth: Get current user and how to implement roles?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel 5 Auth Deep Dive: Getting the User and Implementing Roles As developers move through different versions of a framework like Laravel, understanding...",

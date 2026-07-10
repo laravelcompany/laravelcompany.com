@@ -1,7 +1,7 @@
 {
   "title": "Using sass variables in a VueJS component",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Leveraging Sass Variables in VueJS Components: A Step-by-Step Guide for Enhanced Styling Management Introduction: In a world where web development is...",

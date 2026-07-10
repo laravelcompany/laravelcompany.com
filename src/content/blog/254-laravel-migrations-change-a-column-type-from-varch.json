@@ -1,7 +1,7 @@
 {
   "title": "Laravel migrations change a column type from varchar to longText",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Changing Column Types from Varchar to LongText Using Laravel Migrations Body: Changing column types in your database can be a necessary...",

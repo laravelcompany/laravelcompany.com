@@ -1,7 +1,7 @@
 {
   "title": "Laravel lockforupdate (Pessimistic Locking)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Unlocking the Mystery of Laravel's lockForUpdate - A Comprehensive Guide Laravel's lockForUpdate() function is a crucial feature for developers working with...",

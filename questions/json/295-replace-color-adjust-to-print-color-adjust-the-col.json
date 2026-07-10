@@ -1,7 +1,7 @@
 {
   "title": "Replace color-adjust to print-color-adjust. The color-adjust shorthand is currently deprecated",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving Deprecated color-adjust Warnings When Creating Laravel Projects Body: Modern web development often involves complex processes and numerous tools...",

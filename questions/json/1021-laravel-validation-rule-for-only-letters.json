@@ -1,7 +1,7 @@
 {
   "title": "laravel validation rule for only letters",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Validation Rule for Strict Letter Acceptance Body: When working with custom validation rules in Laravel, it's essential to ensure that your...",

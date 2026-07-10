@@ -1,7 +1,7 @@
 {
   "title": "Cannot use v-for on stateful component root element because it renders multiple elements?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Fixing the Vue Render Dilemma: Why `v-for` on Stateful Components Causes Multiple Root Nodes As developers working with reactive frameworks like Vue.js,...",

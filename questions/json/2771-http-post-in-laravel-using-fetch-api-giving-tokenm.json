@@ -1,7 +1,7 @@
 {
   "title": "Http Post in laravel using fetch api giving TokenMismatchException",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the TokenMismatchException: Making HTTP POST Requests with Fetch in Laravel As a senior developer working with modern JavaScript frontends and robust...",

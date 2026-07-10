@@ -1,7 +1,7 @@
 {
   "title": "Send object with axios get request",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Sending Objects with Axios Get Requests: A Comprehensive Guide Introduction: In the world of web development, APIs and data exchange play an essential...",

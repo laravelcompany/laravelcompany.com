@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.6: Migration from a specific folder",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Migration Paths in Laravel: Troubleshooting `--path` and Custom Loading Logic As senior developers working with the Laravel ecosystem, managing...",

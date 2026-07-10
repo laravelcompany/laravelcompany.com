@@ -1,7 +1,7 @@
 {
   "title": "Laravel: How to get last N entries from DB",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Retrieving Last N Entries from Your Laravel Database Body: Retrieving the latest entries from your database is a common requirement in many...",

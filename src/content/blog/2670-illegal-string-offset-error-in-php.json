@@ -1,7 +1,7 @@
 {
   "title": "Illegal string offset error in PHP",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Data Retrieval: Solving Illegal String Offset Errors in PHP As developers working with APIs and server-side data, we frequently encounter...",

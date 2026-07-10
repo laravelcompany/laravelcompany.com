@@ -1,7 +1,7 @@
 {
   "title": "Is there a way to \"limit\" the result with ELOQUENT ORM of Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Limiting Results with Eloquent ORM in Laravel: Techniques and Best Practices When using the Laravel Framework's Eloquent Object Relational Mapper (ORM)...",

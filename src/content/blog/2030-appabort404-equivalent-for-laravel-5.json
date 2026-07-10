@@ -1,7 +1,7 @@
 {
   "title": "App::abort(404) equivalent for Laravel 5?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Handling 404 Errors in Laravel 5: An In-Depth Look Introduction: In the world of Laravel applications, handling 404 errors when a requested URL doesn't...",

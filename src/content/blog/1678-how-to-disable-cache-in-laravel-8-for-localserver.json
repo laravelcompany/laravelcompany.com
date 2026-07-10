@@ -1,7 +1,7 @@
 {
   "title": "How to disable cache in Laravel 8 for localserver?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Disable Caching on Local Laravel 8 Servers Introduction Laravel 8 is an excellent PHP framework, but sometimes you may encounter issues with...",

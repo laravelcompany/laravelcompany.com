@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent JSON Contains, how to provide WhereIn logic (one of array values)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Eloquent JSON Contains and WhereIn Logic: Exploring Possible Solutions for Filtering Array Values in JSON Arrays Body: The Laravel framework...",

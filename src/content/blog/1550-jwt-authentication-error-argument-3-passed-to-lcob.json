@@ -1,7 +1,7 @@
 {
   "title": "Jwt Authentication error Argument 3 passed to Lcobucci\\JWT\\Signer\\Hmac::doVerify()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Unraveling JWT Authentication Issues: Argument 3 Error in Laravel Projects Body: JWT (JSON Web Token) authentication in Laravel can be a powerful tool...",

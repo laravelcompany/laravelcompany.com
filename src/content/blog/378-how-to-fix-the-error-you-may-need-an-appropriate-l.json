@@ -1,7 +1,7 @@
 {
   "title": "How to fix the error \"You may need an appropriate loader to handle this file type\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Fixing \"You may need an appropriate loader to handle this file type\" Error While Compiling Files with Laravel & Vue Introduction In the development...",

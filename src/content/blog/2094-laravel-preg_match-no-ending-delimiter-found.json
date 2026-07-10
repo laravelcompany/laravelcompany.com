@@ -1,7 +1,7 @@
 {
   "title": "Laravel preg_match(): No ending delimiter '/' found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Unraveling Laravel preg_match() Errors: Understanding No Ending Delimiter Issues Body: Laravel is an amazing framework for building web applications,...",

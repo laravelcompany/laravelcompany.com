@@ -1,7 +1,7 @@
 {
   "title": "Laravel11 mysql migration problem with collation: \"General error: 1273 Unknown collation: 'utf8mb4_0900_ai_ci'\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the Laravel MySQL Collation Nightmare: Decoding Error 1273 As developers diving into modern frameworks like Laravel, we often encounter frustrating...",

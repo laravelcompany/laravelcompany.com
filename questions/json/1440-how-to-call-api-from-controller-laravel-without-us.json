@@ -1,7 +1,7 @@
 {
   "title": "How to call API from controller Laravel without using curl and guzzle as its not working",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: A Reliable Approach to Calling APIs from Laravel Controllers Without Using Curl or Guzzle Introduction: Calling external APIs can be an essential part...",

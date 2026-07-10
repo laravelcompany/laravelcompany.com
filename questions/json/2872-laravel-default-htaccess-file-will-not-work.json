@@ -1,7 +1,7 @@
 {
   "title": "Laravel default .htaccess file will not work",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the Laravel `.htaccess` Mystery: Why Your Routing Fails Dealing with a mysterious HTTP 500 error right after deployment, especially when fiddling...",

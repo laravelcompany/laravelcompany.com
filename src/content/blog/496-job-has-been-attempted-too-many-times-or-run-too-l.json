@@ -1,7 +1,7 @@
 {
   "title": "Job has been attempted too many times or run too long",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Queue Jobs that Run for Extended Time or are Repeatedly Retried in Laravel Applications Body: You've implemented a robust system with a...",

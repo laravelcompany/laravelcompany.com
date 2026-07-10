@@ -1,7 +1,7 @@
 {
   "title": "How can I disable `Initializing JS/TS Language Features` in a specific project?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Disabling `Initializing JS/TS Language Features` in Specific Projects for Performance Boost Body: As developers working on multiple projects with...",

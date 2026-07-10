@@ -1,7 +1,7 @@
 {
   "title": "Laravel not updating null values to column",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Handling Null Values for Date Columns in Laravel Migrations and Updates Introduction Migration is an essential part of any modern web application...",

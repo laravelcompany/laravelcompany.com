@@ -1,7 +1,7 @@
 {
   "title": "How to resolve: SQLSTATE[HY000] [2054] The server requested authentication method unknown to the client?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving SQLSTATE[HY000] [2054]: The Server Requested Authentication Method Unknown to the Client in Laravel Body: ISSUE DESCRIPTION AND CONTEXT You...",

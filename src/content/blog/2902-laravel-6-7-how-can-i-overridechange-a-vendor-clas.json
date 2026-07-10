@@ -1,7 +1,7 @@
 {
   "title": "Laravel 6-7 How Can I Override/Change a Vendor Class?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Overriding: The Right Way to Customize Framework Behavior in Modern Applications When working with large frameworks like Laravel, developers often...",

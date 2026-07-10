@@ -1,7 +1,7 @@
 {
   "title": "How can I set a session var using javascript and get it via php code",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Bridging the Gap: How to Pass Data from JavaScript to PHP Sessions As developers working across the full stack, we constantly encounter scenarios where data...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel collection filtering to avoid null records",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Filtering Laravel Collections Without Null Records Body: Working with data in modern web applications often requires dealing with...",

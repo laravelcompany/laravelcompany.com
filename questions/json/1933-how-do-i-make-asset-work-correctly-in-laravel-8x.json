@@ -1,7 +1,7 @@
 {
   "title": "How do I make asset() work correctly in Laravel 8.x?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving Asset Issues in Laravel 8.x Applications with Vue Body: The issue you are facing when using asset() in Laravel 8.x with Vue is likely due to a...",

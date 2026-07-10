@@ -1,7 +1,7 @@
 {
   "title": "Eloquent select rows with empty string or null value",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Selecting Rows with Empty Strings or Null Values in Laravel Eloquent In Laravel Eloquent, there might be instances where you need to filter your model's...",

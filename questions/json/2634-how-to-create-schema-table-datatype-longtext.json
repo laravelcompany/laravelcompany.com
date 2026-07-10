@@ -1,7 +1,7 @@
 {
   "title": "How to create schema table datatype longtext?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Large Text: How to Create `LONGTEXT` Columns in Laravel As a senior developer working with relational databases and frameworks like Laravel, you...",

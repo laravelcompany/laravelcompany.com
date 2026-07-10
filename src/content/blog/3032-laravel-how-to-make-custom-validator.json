@@ -1,7 +1,7 @@
 {
   "title": "Laravel How to Make Custom Validator?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel How to Make Custom Validators: Extending the Core Logic As developers working with Laravel, we often find ourselves in situations where the built-in...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Collection get unique values from nested datastructure",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Collection's Unique Method for Nested Data Structures Body: The Laravel Collection class offers a versatile set of methods and utilities for...",

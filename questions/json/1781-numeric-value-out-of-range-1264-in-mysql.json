@@ -1,7 +1,7 @@
 {
   "title": "Numeric value out of range: 1264 in mysql",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving MySQL \"Numeric Value Out of Range\" Errors Introduction: MySQL error messages can often be confusing when they appear during...",

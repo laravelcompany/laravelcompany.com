@@ -1,7 +1,7 @@
 {
   "title": "Remove create button inside filamentPHP view",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Customizing FilamentPHP Views: Removing Create Button for Specific Resources Introduction FilamentPHP is an excellent toolkit for building modern web...",

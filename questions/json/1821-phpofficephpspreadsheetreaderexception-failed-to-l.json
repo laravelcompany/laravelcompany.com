@@ -1,7 +1,7 @@
 {
   "title": "PhpOffice\\PhpSpreadsheet\\Reader\\Exception Failed to load .... as a DOM document",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "When you face a problem related to exporting data into an Excel file, it's essential to understand the root cause. In this case, the error \"Failed to load...",

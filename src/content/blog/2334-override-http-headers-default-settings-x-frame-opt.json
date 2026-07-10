@@ -1,7 +1,7 @@
 {
   "title": "Override HTTP header's default settings (X-FRAME-OPTIONS)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Overriding HTTP Header Defaults: Mastering Security Headers in Laravel As developers working with modern frameworks like Laravel, we often deal with a...",

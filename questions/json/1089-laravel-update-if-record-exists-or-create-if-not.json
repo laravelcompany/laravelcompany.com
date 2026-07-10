@@ -1,7 +1,7 @@
 {
   "title": "Laravel Update if record exists or Create if not",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Handling Record Updates and Creation in Laravel Using Eloquent Models Body: Laravel's powerful eloquent models make managing database...",

@@ -1,7 +1,7 @@
 {
   "title": "How to set and get Cookie in laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Managing Cookies in Laravel: Setting and Getting Values Introduction: Cookies are small pieces of data stored on your user's computer, which...",

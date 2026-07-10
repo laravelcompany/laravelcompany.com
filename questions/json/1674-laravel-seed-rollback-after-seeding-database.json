@@ -1,7 +1,7 @@
 {
   "title": "laravel seed rollback after seeding database",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Rolling Back Laravel Seed Data After Database Seeding Introduction The Laravel framework provides an easy way for developers to generate their...",

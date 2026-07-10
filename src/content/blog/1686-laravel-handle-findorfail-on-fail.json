@@ -1,7 +1,7 @@
 {
   "title": "Laravel : Handle findOrFail( ) on Fail",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Handling Find Operations in Laravel: Alternatives to findOrFail() when Data is Not Found Introduction: In web development, especially using frameworks...",

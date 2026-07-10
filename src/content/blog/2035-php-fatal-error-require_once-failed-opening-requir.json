@@ -1,7 +1,7 @@
 {
   "title": "php Fatal error: require_once(): Failed opening required 'C:\\xampp\\htdocs\\paribibi/public/index.php' (include_path='C:\\xampp\\php\\PEAR')",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding PHP Fatal Errors and Fixing require_once() Issues Introduction: As a developer, you may encounter errors from time to time, especially...",

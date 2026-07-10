@@ -1,7 +1,7 @@
 {
   "title": "Laravel href with POST",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering HTTP Methods in Laravel: Why `href` Fails for State Changes (and How to Use POST Correctly) As senior developers working within the Laravel...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.1 Create or Update on Duplicate",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficient Data Management with Laravel 5.1's updateOrCreate() Method Body: Laravel 5.1 brings a wealth of new features to help developers manage their...",

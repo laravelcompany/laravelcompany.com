@@ -1,7 +1,7 @@
 {
   "title": "Laravel routes not found after nginx install",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Routes Not Found after Nginx Install: A Comprehensive Guide Introduction When you migrate your Laravel application from Apache to Nginx or...",

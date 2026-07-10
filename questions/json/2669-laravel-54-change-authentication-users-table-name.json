@@ -1,7 +1,7 @@
 {
   "title": "laravel 5.4 change authentication users table name",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel 5.4: Renaming the Authentication Table in Your Application Dealing with database schema changes within an existing framework setup can often be...",

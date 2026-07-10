@@ -1,7 +1,7 @@
 {
   "title": "Laravel: Create an API Controller, model and migration in one line",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Streamlining Laravel Development with One-Line API Creation Creating an API often requires handling multiple tasks such as developing controllers,...",

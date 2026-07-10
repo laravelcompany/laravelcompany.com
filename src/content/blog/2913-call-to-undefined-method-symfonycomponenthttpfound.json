@@ -1,7 +1,7 @@
 {
   "title": "Call to undefined method Symfony\\Component\\HttpFoundation\\Response::header()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Call to undefined method Symfony\\Component\\HttpFoundation\\Response::header(): Debugging Middleware Header Issues in Laravel As a senior developer, I often...",

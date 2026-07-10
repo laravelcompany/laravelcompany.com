@@ -1,7 +1,7 @@
 {
   "title": "How should I serve an image with Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Best Practices for Serving User Profile Images in Laravel Applications Introduction Serving images within your Laravel application can be accomplished...",

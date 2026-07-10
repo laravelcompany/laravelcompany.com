@@ -1,7 +1,7 @@
 {
   "title": "Package phpunit/php-token-stream is abandoned, you should avoid using it. No replacement was suggested",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Addressing Package Dependency Issues: Dealing with Abandoned Packages like phpunit/php-token-stream in Laravel Projects Introduction: As a developer,...",

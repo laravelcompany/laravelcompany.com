@@ -1,7 +1,7 @@
 {
   "title": "Accessing Laravel .env variables in blade",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Accessing Laravel .env Variables in Blade Templates Introduction As a senior developer and technical blogger, it is essential to understand how to...",

@@ -1,7 +1,7 @@
 {
   "title": "laravel Livewire wire:click not firing the function",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "To improve upon this code, we will break down each component of the Laravel Livewire application and provide a more detailed explanation as well as offer best...",

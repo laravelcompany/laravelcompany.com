@@ -1,7 +1,7 @@
 {
   "title": "Redirect::route with parameter in URL in Laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Redirecting and Passing Parameters with Route::route in Laravel 5 Introduction: In your Laravel 5 app, you have created a route for...",

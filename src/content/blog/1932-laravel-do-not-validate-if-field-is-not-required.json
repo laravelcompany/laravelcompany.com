@@ -1,7 +1,7 @@
 {
   "title": "Laravel do not validate if field is not required",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Request Validation: Understanding Required Fields and Conditional Logic Body: Request validation in Laravel is a powerful tool used to ensure...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel : How to send image or file to API",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel: The Definitive Guide to Sending Images and Files to Your API Sending files, especially images, from a client application to a server via an API is...",

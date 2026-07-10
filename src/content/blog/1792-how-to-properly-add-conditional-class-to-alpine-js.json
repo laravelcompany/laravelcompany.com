@@ -1,7 +1,7 @@
 {
   "title": "How to properly add conditional class to Alpine JS x-for template?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Adding Conditional Classes in Alpine JS Templates with Loops Introduction AlpineJS is an efficient and easy-to-use JavaScript framework for building...",

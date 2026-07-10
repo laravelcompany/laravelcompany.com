@@ -1,7 +1,7 @@
 {
   "title": "Laravel Call to a member function toArray() on array Error",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving the Laravel Call to a member function toArray() on array Error Body: Introduction: In this blog post, we will be discussing a common issue that...",

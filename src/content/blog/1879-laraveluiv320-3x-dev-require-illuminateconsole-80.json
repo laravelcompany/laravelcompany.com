@@ -1,7 +1,7 @@
 {
   "title": "laravel/ui[v3.2.0, ..., 3.x-dev] require illuminate/console ^8.0",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "\"Laravel/UI Composer Requirements Explained\" Title: Laravel/UI[v3.2.0, ..., 3.x-dev] require illuminate/console ^8.0 Greetings fellow developers! You might...",

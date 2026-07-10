@@ -1,7 +1,7 @@
 {
   "title": "can't write image data to path in laravel using the Intervention library",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving \"Can't Write Image Data to Path\" Issue in Laravel Using Intervention Library Body: In this blog post, we will discuss the causes and solutions...",

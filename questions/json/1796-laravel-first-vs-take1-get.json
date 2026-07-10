@@ -1,7 +1,7 @@
 {
   "title": "Laravel first() vs take(1)->get()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Unveiling the Differences between Laravel's first() and take(1)->get() Methods for Single Blog Post Retrieval Body: When working with Laravel, you may...",

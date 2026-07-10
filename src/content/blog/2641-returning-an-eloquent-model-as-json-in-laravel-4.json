@@ -1,7 +1,7 @@
 {
   "title": "Returning an Eloquent model as JSON in Laravel 4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Returning Eloquent Models as JSON: `toArray()` vs. `toJson()` in Laravel When building a web application with Laravel, one of the most fundamental tasks is...",

@@ -1,7 +1,7 @@
 {
   "title": "Class 'Maatwebsite\\Excel\\Excel' not found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting the Class 'Maatwebsite\\Excel\\Excel' Not Found Error in Laravel Projects Body: The error \"Class 'Maatwebsite\\Excel\\Excel' not found\" is a...",

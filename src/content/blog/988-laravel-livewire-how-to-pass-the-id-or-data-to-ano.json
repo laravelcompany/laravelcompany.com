@@ -1,7 +1,7 @@
 {
   "title": "laravel livewire, how to pass the id or data to another component by click",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Passing Data Between Laravel Livewire Components by Click Events Body: Laravel Livewire is an exciting framework that allows you to create...",

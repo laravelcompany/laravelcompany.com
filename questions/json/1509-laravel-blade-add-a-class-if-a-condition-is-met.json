@@ -1,7 +1,7 @@
 {
   "title": "Laravel blade - Add a class if a condition is met",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Adding Conditional Classes with Laravel Blade Introduction: In the world of web development, using conditional classes to style elements...",

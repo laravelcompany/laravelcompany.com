@@ -1,7 +1,7 @@
 {
   "title": "BadMethodCallException Method Illuminate\\Foundation\\Application::share does not exist. error in laravel app",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving BadMethodCallException Method Illuminate\\Foundation\\Application::share does not exist Error in Laravel App You have installed...",

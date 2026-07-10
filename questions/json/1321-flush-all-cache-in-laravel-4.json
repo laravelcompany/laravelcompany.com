@@ -1,7 +1,7 @@
 {
   "title": "Flush all cache in Laravel 4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Flushing Cache in Laravel 4: A Comprehensive Guide for Developers Introduction In the world of web development, cache is an essential tool that helps...",

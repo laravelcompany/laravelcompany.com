@@ -1,7 +1,7 @@
 {
   "title": "Why is my Laravel 11 exception handler not working?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel 11 Exception Handling for AuthorizationException Body: Using Laravel 11, exception handling has been moved to the...",

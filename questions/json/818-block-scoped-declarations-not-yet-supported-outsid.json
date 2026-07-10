@@ -1,7 +1,7 @@
 {
   "title": "Block-scoped declarations not yet supported outside strict mode",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Block-scoped declarations not yet supported outside strict mode - Troubleshooting Laravel 5.4 Webpack Issues Body: Laravel is a popular PHP framework,...",

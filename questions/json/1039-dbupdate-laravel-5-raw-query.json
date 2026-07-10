@@ -1,7 +1,7 @@
 {
   "title": "DB::update laravel 5 raw query",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Performing Laravel 5 Update Queries Using DB::update() Introduction: In this blog post, we'll discuss how to perform update queries in your Laravel...",

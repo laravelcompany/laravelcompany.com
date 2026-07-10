@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.2: POST request is always returning \"405 Method Not Allowed\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel 5.2 POST Requests Returning \"405 Method Not Allowed\" Error Body: Laravel is a powerful framework that offers many benefits for...",

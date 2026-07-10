@@ -1,7 +1,7 @@
 {
   "title": "PHP7.1 and Laravel 5.3: Function mcrypt_get_iv_size() is deprecated",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"mcrypt_get_iv_size() is deprecated\" Error when Upgrading from PHP7.0 to 7.1 with Laravel 5.3 Body: When updating your PHP version, it's not...",

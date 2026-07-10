@@ -1,7 +1,7 @@
 {
   "title": "Laravel Sanctum can be use Multiauth guard",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Multi-Auth Guards in Laravel Sanctum: Beyond Simple Tokens It is a common hurdle when scaling applications with Laravel and Sanctum: moving beyond...",

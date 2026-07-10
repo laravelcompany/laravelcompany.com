@@ -1,7 +1,7 @@
 {
   "title": "Laravel X-CSRF-Token mismatch with POSTMAN",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel X-CSRF-Token Issues with POSTMAN and Best Practices to Overcome Them Body: When you're working on your REST API built using...",

@@ -1,7 +1,7 @@
 {
   "title": "How to add private github repository as Composer dependency",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Add Private Github Repository as Composer Dependency Introduction GitHub is an invaluable resource for software developers worldwide. It...",

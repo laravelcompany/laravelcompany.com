@@ -1,7 +1,7 @@
 {
   "title": "Change PHP version used by Composer on Windows",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Change PHP Version Used by Composer on Windows: A Developer's Guide Dealing with multiple PHP versions on a single system, especially in environments like...",

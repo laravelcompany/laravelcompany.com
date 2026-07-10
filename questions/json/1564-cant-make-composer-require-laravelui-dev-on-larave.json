@@ -1,7 +1,7 @@
 {
   "title": "Can't make \"composer require laravel/ui --dev\" on laravel 6.5.1",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting \"composer require laravel/ui --dev\" Errors on Laravel 6.5.1 Introduction Laravel framework is a popular PHP web application framework...",

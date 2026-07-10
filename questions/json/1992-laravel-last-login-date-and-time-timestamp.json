@@ -1,7 +1,7 @@
 {
   "title": "Laravel - last login date and time timestamp",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Track User Last Login in Laravel with Eloquent Events and Timestamps Body: In today's world, online security is of utmost importance to...",

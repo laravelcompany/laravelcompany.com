@@ -1,7 +1,7 @@
 {
   "title": "Class App\\Http\\Controllers\\StudentController does not exist in Laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Class App\\Http\\Controllers\\StudentController Does Not Exist Error in Laravel 5 Body: In building a Laravel module called Student, it is...",

@@ -1,7 +1,7 @@
 {
   "title": "[Vue warn]: Cannot find element: #app",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving the [Vue warn]: Cannot find element: #app Issue in Laravel Projects Body: When you encounter the error \"[Vue warn]: Cannot find element: #app\"...",

@@ -1,7 +1,7 @@
 {
   "title": "How to specify a different .env file for phpunit in Laravel 5?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Separating Testing Configurations with Custom .env Files in Laravel 5 In the development of a web application using Laravel 5, one common pain point is...",

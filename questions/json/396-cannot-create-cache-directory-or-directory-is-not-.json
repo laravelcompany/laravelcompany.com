@@ -1,7 +1,7 @@
 {
   "title": "Cannot create cache directory .. or directory is not writable. Proceeding without cache in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Cannot create cache directory or directory is not writable? Proceeding without cache in Laravel Introduction: In the world of web development, error...",

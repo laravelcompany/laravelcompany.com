@@ -1,7 +1,7 @@
 {
   "title": "What is the difference between laravel cursor and laravel chunk method?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel Chunking and Cursor Methods: A Comprehensive Guide Body: Laravel provides various ways to optimize your application's performance,...",

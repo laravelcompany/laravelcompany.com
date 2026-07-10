@@ -1,7 +1,7 @@
 {
   "title": "laravel 5 - How can i add ->index() to existing foreign key",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Indexes and Foreign Keys in Laravel 5 Framework: Laravel 5.2 Database: MySQL PHP: 7.0 Introduction In Laravel 5, you may often encounter...",

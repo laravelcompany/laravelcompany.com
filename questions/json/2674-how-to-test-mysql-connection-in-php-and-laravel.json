@@ -1,7 +1,7 @@
 {
   "title": "How to test MySQL connection in PHP and Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Test MySQL Connection in PHP and Laravel: A Developer's Guide When building application installers or setup scripts, ensuring a successful connection...",

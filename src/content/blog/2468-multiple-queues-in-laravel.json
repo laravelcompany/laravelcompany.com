@@ -1,7 +1,7 @@
 {
   "title": "Multiple Queues in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Concurrency: Understanding Multiple Queues in Laravel When building complex applications, especially those involving real-time interactions like...",

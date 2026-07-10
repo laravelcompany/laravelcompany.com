@@ -1,7 +1,7 @@
 {
   "title": "Laravel LeftJoin where",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving Laravel LeftJoin and Where Clause Issues in Eloquent Models Introduction: In your project, you are facing issues while joining two tables...",

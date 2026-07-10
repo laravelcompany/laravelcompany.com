@@ -1,7 +1,7 @@
 {
   "title": "Storing array or std object in database of Laravel app",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Storing Array or stdObject Data in Laravel Database Tables Body: Storing arrays and objects within your Laravel application's database is...",

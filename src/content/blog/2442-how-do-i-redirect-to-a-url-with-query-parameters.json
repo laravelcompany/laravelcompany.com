@@ -1,7 +1,7 @@
 {
   "title": "How do I redirect to a URL with query parameters?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Redirects: How to Append Query Parameters Correctly in Laravel As developers working with frameworks like Laravel, managing URL...",

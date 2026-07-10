@@ -1,7 +1,7 @@
 {
   "title": "Laravel dynamic page title in navbar-brand",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Dynamically Display Page Titles in Laravel Navbar-Brand Using Blade Views Introduction In Laravel, having a dynamic page title displayed on your...",

@@ -1,7 +1,7 @@
 {
   "title": "Property [title] does not exist on this collection instance",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"Property [title] does not exist on this collection instance\" Error in Laravel Applications Body: Introduction When developing web...",

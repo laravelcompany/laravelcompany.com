@@ -1,7 +1,7 @@
 {
   "title": "Laravel query with \"if\" conditions?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Advanced Search Queries with Laravel: Handling \"if\" Conditions for Efficient Database Retrieval Body: In your Laravel application, you have created an...",

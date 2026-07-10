@@ -1,7 +1,7 @@
 {
   "title": "Unable to guess the MIME type as no guessers are available. How do I install php_fileinfo extension in cPanel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Unable to Guess MIME Type? Install PHP_Fileinfo Extension in cPanel for Enhanced Image Upload Validation Body: Enabling image upload validation with...",

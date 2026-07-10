@@ -1,7 +1,7 @@
 {
   "title": "Laravel - How to pass variable to layout partial view",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel: Elegantly Passing Variables to Layout Partials As developers working with Laravel, we frequently encounter scenarios where data needs to be shared...",

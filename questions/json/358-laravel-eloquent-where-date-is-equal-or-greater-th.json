@@ -1,7 +1,7 @@
 {
   "title": "Laravel eloquent where date is equal or greater than DateTime",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Filter Eloquent Models by Date Equality or Greater Than Current Time Introduction Laravel's Eloquent ORM offers a powerful set of functions...",

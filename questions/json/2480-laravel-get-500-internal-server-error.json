@@ -1,7 +1,7 @@
 {
   "title": "Laravel get 500 internal server error",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the 500 Error in Laravel on Shared Hosting: A Deep Dive into Routing Issues As a senior developer, I’ve seen countless developers grapple with...",

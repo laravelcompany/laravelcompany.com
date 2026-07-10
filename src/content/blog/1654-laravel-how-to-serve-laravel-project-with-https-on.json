@@ -1,7 +1,7 @@
 {
   "title": "Laravel - how to serve laravel project with https on local development",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Serving Laravel Projects with HTTPS Locally - A Comprehensive Guide Introduction: Serving your Laravel projects on an encrypted connection is essential...",

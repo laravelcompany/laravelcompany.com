@@ -1,7 +1,7 @@
 {
   "title": "Laravel say that Auth guard [] is not defined",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Common Mistakes and Solutions When Configuring Laravel Auth Routes Body: As a beginner starting your journey in the world of Laravel development, it's...",

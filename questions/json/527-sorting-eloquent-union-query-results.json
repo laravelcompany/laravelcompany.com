@@ -1,7 +1,7 @@
 {
   "title": "Sorting Eloquent Union query results",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Sorting Eloquent Union Query Results: Understanding the Challenges and Solutions Body: In Eloquent ORM, when working with database queries that involve...",

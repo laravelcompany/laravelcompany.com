@@ -1,7 +1,7 @@
 {
   "title": "use carbon function in laravel view(Blade template)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Use Carbon Functions in Laravel Views (Blade Templates) Body: Laravel provides great support for working with dates through the Carbon...",

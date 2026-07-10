@@ -1,7 +1,7 @@
 {
   "title": "Class 'App\\Http\\Controllers\\Mail' not found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Class 'App\\Http\\Controllers\\Mail' not Found Error in Laravel Introduction One of the most common errors faced by developers using...",

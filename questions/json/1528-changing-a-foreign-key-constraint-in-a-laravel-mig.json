@@ -1,7 +1,7 @@
 {
   "title": "Changing a foreign key constraint in a Laravel migration",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Modifying Foreign Key Constraints in Laravel Migrations Body: One of the powerful features in Laravel is its ability to create migrations...",

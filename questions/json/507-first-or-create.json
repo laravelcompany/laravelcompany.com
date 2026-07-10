@@ -1,7 +1,7 @@
 {
   "title": "First Or Create",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding `firstOrCreate` in Laravel: Managing Uniqueness of User Records Efficiently Body: In your application, you might find yourself in a...",

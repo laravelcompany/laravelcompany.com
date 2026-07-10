@@ -1,7 +1,7 @@
 {
   "title": "Getting GET \"?\" Variable in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Handling Query Strings in Laravel API Routes Greetings fellow developers! Today, we will cover an important aspect of building elegant APIs...",

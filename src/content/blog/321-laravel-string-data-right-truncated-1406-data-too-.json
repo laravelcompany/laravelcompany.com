@@ -1,7 +1,7 @@
 {
   "title": "Laravel: String data, right truncated: 1406 Data too long for column",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel: String Data Truncation Errors in MySQL and Possible Solutions Introduction: Laravel developers often face challenges with data types and their...",

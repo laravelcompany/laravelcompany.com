@@ -1,7 +1,7 @@
 {
   "title": "Composer could not detect the root package (laravel/laravel) version, defaulting to '1.0.0'. See https://getcomposer.org/root-version",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Composer Root Package Detection Failure: Fixing the `laravel/laravel` Version Warning As a senior developer working within the Laravel ecosystem, you often...",

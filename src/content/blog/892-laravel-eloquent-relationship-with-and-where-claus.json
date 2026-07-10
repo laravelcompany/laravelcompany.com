@@ -1,7 +1,7 @@
 {
   "title": "laravel eloquent relationship with and where clause based on foreign column",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Eloquent Relationships with Where Clause Based on Foreign Column In this blog post, we'll explore how to query your database using various...",

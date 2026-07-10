@@ -1,7 +1,7 @@
 {
   "title": "How do I connect Laravel 7 to Microsoft SQL Server?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Simplifying Laravel 7's Microsoft SQL Server Configuration Process Introduction: Connecting your Laravel application to a Microsoft SQL Server can be an...",

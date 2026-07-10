@@ -1,7 +1,7 @@
 {
   "title": "Laravel: Validating a number greater than zero is failing",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel's Number Validation and Handling Zero Values Introduction: As a Laravel developer, you need to ensure that the data being...",

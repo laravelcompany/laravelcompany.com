@@ -1,7 +1,7 @@
 {
   "title": "SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. (Laravel 8 migration error)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Solving SQLSTATE[HY000] [2002] Errors in Laravel 8 Migration Process Introduction After installing a new Laravel 8 project with...",

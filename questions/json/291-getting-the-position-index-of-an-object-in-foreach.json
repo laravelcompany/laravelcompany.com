@@ -1,7 +1,7 @@
 {
   "title": "Getting the position (index) of an object in foreach?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Displaying the Position of Objects in foreach Loops in Laravel Views Body: In your Laravel application, you might encounter a use case where you need to...",

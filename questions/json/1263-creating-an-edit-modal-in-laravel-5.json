@@ -1,7 +1,7 @@
 {
   "title": "Creating an edit modal in Laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Creating an Edit Modal in Laravel 5: A Comprehensive Guide Introduction Creating an edit modal to allow users to update data within a row is a common...",

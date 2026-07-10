@@ -1,7 +1,7 @@
 {
   "title": "\"There are no commands defined in the 'command' namespace.\" after running command:make in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting \"There are no commands defined in the 'command' namespace.\" Errors When Running command:make in Laravel Introduction...",

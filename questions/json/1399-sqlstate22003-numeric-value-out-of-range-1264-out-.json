@@ -1,7 +1,7 @@
 {
   "title": "SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving Numeric Value Out of Range Errors in SQL Queries Body: One common issue that developers face when working with databases is...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Error: Method Illuminate\\View\\View::__toString() must not throw an exception",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Error: Method Illuminate\\View\\View::__toString() must not throw an exception - A Comprehensive Guide for Developers Body: Have you seen this...",

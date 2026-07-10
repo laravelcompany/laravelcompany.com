@@ -1,7 +1,7 @@
 {
   "title": "Eloquent Parent-Child relationship on same model",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Nesting Child Relations Using Laravel Eloquent Models When building applications in Laravel using Eloquent models, working with parent-child relationships can...",

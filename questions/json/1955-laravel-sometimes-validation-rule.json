@@ -1,7 +1,7 @@
 {
   "title": "Laravel sometimes validation rule",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel's 'sometimes' Validation Rule for Password Fields Body: Validation in web applications plays a vital role in ensuring user data is...",

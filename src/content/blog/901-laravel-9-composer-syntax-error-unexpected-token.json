@@ -1,7 +1,7 @@
 {
   "title": "Laravel 9 composer syntax error, unexpected token \")\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel 9 Composer Update Issues with Syntax Errors Introduction: In Laravel projects, errors could occur when running `composer...",

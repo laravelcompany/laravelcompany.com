@@ -1,7 +1,7 @@
 {
   "title": "Laravel 4: Adding where clause to a join condition",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Joins in Laravel: Where Clauses and The Right Place It’s a very common point of confusion when working with complex database queries in Laravel,...",

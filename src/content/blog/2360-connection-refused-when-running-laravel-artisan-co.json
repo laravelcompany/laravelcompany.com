@@ -1,7 +1,7 @@
 {
   "title": "Connection refused when running Laravel artisan command with Docker",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Connection Refused When Running Laravel Artisan Commands with Docker: A Senior Developer's Guide Running modern applications within Docker containers is a...",

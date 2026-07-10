@@ -1,7 +1,7 @@
 {
   "title": "Laravel Homestead: 403 forbidden on nginx",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Homestead: Troubleshooting Nginx 403 Forbidden Errors As a senior developer, I've seen countless times how frustrating environment setup issues can...",

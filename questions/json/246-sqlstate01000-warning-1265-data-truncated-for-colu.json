@@ -1,7 +1,7 @@
 {
   "title": "SQLSTATE[01000]: Warning: 1265 Data truncated for column",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Overcoming \"SQLSTATE[01000]: Warning: 1265 Data truncated for column\" Errors in Laravel Applications Introduction: In many Laravel...",

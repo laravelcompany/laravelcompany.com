@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.4 Show flash error and success messages in different ways",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Displaying Error and Success Messages in Laravel 5.4 - A Comprehensive Guide Introduction: In this blog post, we will discuss various ways of displaying...",

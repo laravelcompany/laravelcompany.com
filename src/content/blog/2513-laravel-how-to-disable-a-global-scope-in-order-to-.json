@@ -1,7 +1,7 @@
 {
   "title": "Laravel: how to \"disable\" a global scope in order to include \"inactive\" objects into query?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel: How to \"Disable\" a Global Scope to Include Inactive Objects in Queries As developers working with Eloquent, global scopes offer an incredibly...",

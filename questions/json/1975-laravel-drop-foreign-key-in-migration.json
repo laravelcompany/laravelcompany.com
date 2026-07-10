@@ -1,7 +1,7 @@
 {
   "title": "Laravel drop foreign Key in Migration",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Drop Foreign Key in Migration: A Comprehensive Guide Body: Dropping or removing foreign keys from database tables is part of the migration...",

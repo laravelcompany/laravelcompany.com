@@ -1,7 +1,7 @@
 {
   "title": "Laravel classloader.php error failed to open stream: No such file or directory",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Common Laravel ClassLoader Issues and How to Fix Them In this comprehensive blog post, we are going to delve into common issues faced by developers...",

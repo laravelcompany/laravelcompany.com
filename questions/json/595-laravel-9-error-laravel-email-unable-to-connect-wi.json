@@ -1,7 +1,7 @@
 {
   "title": "LARAVEL 9. ERROR LARAVEL EMAIL: Unable to connect with STARTTLS: stream_socket_enable_crypto(): SSL operation failed with code 1",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel Email Issues: Fixing SSL Connection Errors in Laravel 9 Applications Body: Greetings to the Laravel community! Email issues can...",

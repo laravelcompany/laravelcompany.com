@@ -1,7 +1,7 @@
 {
   "title": "Sort Eloquent Collection by created_at",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Sorting Eloquent Collections by Created_at Body: Sorting Eloquent collections can be challenging for developers who are new to Laravel or...",

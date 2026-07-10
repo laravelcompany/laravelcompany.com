@@ -1,7 +1,7 @@
 {
   "title": "Declaration of Illuminate\\Container\\Container::get($id) must be compatible with Psr\\Container\\ContainerInterface::get(string $id)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Declaration of Illuminate\\Container\\Container::get($id) must be compatible with Psr\\Container\\ContainerInterface::get(string $id) - Understanding and...",

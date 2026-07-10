@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 : Use different database for testing and local",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Switch Databases for Development and Testing in Laravel 5 Applications Body: Laravel makes it easy to manage databases by allowing you to...",

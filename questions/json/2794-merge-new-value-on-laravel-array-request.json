@@ -1,7 +1,7 @@
 {
   "title": "Merge new value on Laravel array request",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Merging New Values into Laravel Request Data: The Right Way As developers working with web frameworks like Laravel, we frequently deal with handling incoming...",

@@ -1,7 +1,7 @@
 {
   "title": "Types cannot be provided in put mapping requests, unless the include_type_name parameter is set to true",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Mapping Types and Best Practices for Elasticsearch Integration with Laravel Scout Body: Elasticsearch is an open source, distributed...",

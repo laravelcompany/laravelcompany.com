@@ -1,7 +1,7 @@
 {
   "title": "array_map and pass 2 arguments to the mapped function - array_map(): Argument #3 should be an array",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering `array_map`: Passing Multiple Arguments and Callables in Object-Oriented PHP As senior developers, we often deal with inheritance and abstract...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel retrieving data from REST API",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Retrieving Data from REST APIs Using Laravel - A Developer's Guide Body: Retrieving data from external sources, such as REST APIs, is a...",

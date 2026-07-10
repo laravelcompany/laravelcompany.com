@@ -1,7 +1,7 @@
 {
   "title": "Laravel Passport Route [login] not defined",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel Passport Route [login] not Defined Error In this post, we will discuss why you might encounter the Laravel Passport error \"Route...",

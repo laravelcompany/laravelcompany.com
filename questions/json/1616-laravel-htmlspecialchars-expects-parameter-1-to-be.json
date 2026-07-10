@@ -1,7 +1,7 @@
 {
   "title": "Laravel htmlspecialchars() expects parameter 1 to be string, object given in my project?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving Laravel htmlspecialchars() Error in Your Project Introduction: When developing web applications using Laravel, you may come across the...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Livewire component not refreshing/reloading automatically after refreshing it",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Livewire Component Updates: Ensuring Automatic Refresh After Manual Page Refreshes Body: Laravel Livewire is an excellent tool to build...",

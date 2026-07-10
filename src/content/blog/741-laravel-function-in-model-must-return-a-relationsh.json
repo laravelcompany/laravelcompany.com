@@ -1,7 +1,7 @@
 {
   "title": "laravel: function in model must return a relationship instance",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel: Function in Model Must Return a Relationship Instance Body: In this comprehensive blog post about Laravel, we will discuss why it is crucial...",

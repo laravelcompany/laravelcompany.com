@@ -1,7 +1,7 @@
 {
   "title": "foreach() argument must be of type array|object, null given in laravel 8",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Debugging Looping Issues in Laravel Applications Body: When working on Laravel applications or any framework where data is being submitted through forms...",

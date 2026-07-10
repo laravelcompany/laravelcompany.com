@@ -1,7 +1,7 @@
 {
   "title": "laravel inserting into multiple tables",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Inserting Data into Multiple Tables using Laravel Body: Handling data across multiple tables in your Laravel application can be quite...",

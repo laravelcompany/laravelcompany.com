@@ -1,7 +1,7 @@
 {
   "title": "How to Remove Duplicate Rows in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Remove Duplicate Rows in Laravel: A Database Deep Dive As developers working with relational databases through an ORM like Laravel Eloquent, data...",

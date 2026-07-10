@@ -1,7 +1,7 @@
 {
   "title": "How to logout with a GET request in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Logout Securely in Laravel: Why GET Requests Fail and the Correct Way to Handle Logouts As a senior developer working with the Laravel ecosystem, I...",

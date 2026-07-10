@@ -1,7 +1,7 @@
 {
   "title": "Address in mailbox given [] does not comply with RFC 2822, 3.6.2. when email is in a variable",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Address in mailbox given [] does not comply with RFC 2822, 3.6.2 when email is in a variable - A Comprehensive Explanation for Developers Body:...",

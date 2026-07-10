@@ -1,7 +1,7 @@
 {
   "title": "Laravel access request object outside controller",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Access Request Object Outside of Controllers: Bridging the Gap Between Request and View As developers working with the Laravel framework, we often...",

@@ -1,7 +1,7 @@
 {
   "title": "How validate unique email out of the user that is updating it in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Validating Unique Emails During User Updates in Laravel Introduction: In modern web applications, users often need to update their account details -...",

@@ -1,7 +1,7 @@
 {
   "title": "\"SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server] Invalid 'users' object name",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: \"SQLSTATE[42S02]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server] Invalid 'users' object name - A Comprehensive Guide\" Body: Migrating from MySQL...",

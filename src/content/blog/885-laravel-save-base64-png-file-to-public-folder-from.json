@@ -1,7 +1,7 @@
 {
   "title": "Laravel: Save Base64 .png file to public folder from controller",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel: Efficiently Save Base64 .png Files from Controller in Public Folder Body: Introduction If you're sending a PNG image file to your controller in...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel - Query Model if values contain a certain string (taken from search input)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Laravel Searching Models Containing Certain Strings Querying models in Laravel that contain specific strings can be quite useful when implementing search...",

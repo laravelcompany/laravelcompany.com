@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent get results grouped by days",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Grouping Laravel Page Views by Day Using Eloquent Introduction: In this article, we will explore how to effectively group page views in...",

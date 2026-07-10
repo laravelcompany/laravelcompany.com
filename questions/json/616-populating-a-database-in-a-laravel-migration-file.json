@@ -1,7 +1,7 @@
 {
   "title": "Populating a database in a Laravel migration file",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Populating a Database in Laravel Migration Files - A Comprehensive Guide Body: Populating a database in Laravel migration files can be an essential step...",

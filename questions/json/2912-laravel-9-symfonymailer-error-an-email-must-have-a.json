@@ -1,7 +1,7 @@
 {
   "title": "Laravel 9 SymfonyMailer error - An email must have a \"To\", \"Cc\", or \"Bcc\" header",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel 9 SymfonyMailer Error: Fixing the \"To, Cc, or Bcc\" Header Issue Migrating between major Laravel versions, especially when theme changes introduce...",

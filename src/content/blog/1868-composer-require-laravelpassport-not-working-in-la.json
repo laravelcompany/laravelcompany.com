@@ -1,7 +1,7 @@
 {
   "title": "composer require laravel/passport not working in laravel 5.8",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Composer Require Laravel/Passport in Laravel 5.8 - A Comprehensive Guide Body: Laravel is a popular PHP framework with robust features...",

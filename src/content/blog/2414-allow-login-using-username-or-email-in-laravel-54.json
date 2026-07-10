@@ -1,7 +1,7 @@
 {
   "title": "Allow login using username or email in Laravel 5.4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Allowing Login by Username or Email in Laravel 5.4 As a senior developer, I often encounter situations where following standard documentation provides a...",

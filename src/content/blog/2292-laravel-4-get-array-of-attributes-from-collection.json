@@ -1,7 +1,7 @@
 {
   "title": "Laravel 4 - Get Array of Attributes from Collection",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel 4 - Efficiently Retrieving Attributes from Collections Body: In Laravel 4, when working with collections of objects (such as tags in our...",

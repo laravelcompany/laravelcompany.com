@@ -1,7 +1,7 @@
 {
   "title": "Messaging: The notification permission was not granted and blocked instead",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Firebase Messaging Errors and Solutions on HTTPS Servers Body: Firebase messaging is an effective way to send notifications across...",

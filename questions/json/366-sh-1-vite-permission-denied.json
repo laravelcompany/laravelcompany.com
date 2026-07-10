@@ -1,7 +1,7 @@
 {
   "title": "sh: 1: vite: Permission denied",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving Permission Issues When Using Composer and npm Commands Body: When working on web applications using technologies like...",

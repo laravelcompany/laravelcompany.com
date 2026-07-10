@@ -1,7 +1,7 @@
 {
   "title": "Carbon::now() is not using UTC",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Timezones and Carbon::now() in Your Laravel Applications Time is one of the most fundamental aspects of software applications. It plays an...",

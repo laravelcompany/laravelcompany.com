@@ -1,7 +1,7 @@
 {
   "title": "Eloquent ORM Code Hinting in PhpStorm",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Eloquent Hints: Getting Code Completion for Query Builders in PhpStorm As developers working within the Laravel ecosystem, productivity hinges on...",

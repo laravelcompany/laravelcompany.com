@@ -1,7 +1,7 @@
 {
   "title": "Updating Multiple Records using Eloquent (Laravel 5.4)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Updating Multiple Records using Eloquent (Laravel 5.4) Introduction: In the world of software development, data management is crucial for...",

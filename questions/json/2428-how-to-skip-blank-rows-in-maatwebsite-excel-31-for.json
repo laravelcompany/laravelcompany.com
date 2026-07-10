@@ -1,7 +1,7 @@
 {
   "title": "How to skip blank rows in maatwebsite-excel 3.1 for model-way import on Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Skip Blank Rows in maatwebsite-excel for Model Import on Laravel Importing data from external sources like Excel files is a common task in web...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel league/flysystem getting file URL with AWS S3",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Managing File URLs in Laravel with league/flysystem and AWS S3 Adapter Introduction: In this article, we will discuss how to utilize the power of...",

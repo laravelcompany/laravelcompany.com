@@ -1,7 +1,7 @@
 {
   "title": "Getting Auth User ID in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Getting Auth User ID in Laravel: Performance vs. Convenience As developers working with frameworks like Laravel, performance is always a critical...",

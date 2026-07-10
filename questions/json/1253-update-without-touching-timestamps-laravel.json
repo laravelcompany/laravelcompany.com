@@ -1,7 +1,7 @@
 {
   "title": "Update without touching timestamps (Laravel)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Update without Touching Timestamps (Laravel) Body: Is it possible to update a user without touching the timestamps? In Laravel, by default, whenever you...",

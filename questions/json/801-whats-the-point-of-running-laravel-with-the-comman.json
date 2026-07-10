@@ -1,7 +1,7 @@
 {
   "title": "Whats the point of running Laravel with the command 'php artisan serve'?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Clarifying the Purpose of Running Laravel with 'php artisan serve' Body: Understanding the Rationale Behind Running Laravel Applications with 'php...",

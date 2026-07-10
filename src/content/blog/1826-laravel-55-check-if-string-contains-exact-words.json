@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.5 - Check if string contains exact words",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficient String Comparison in Laravel 5.5 - Checking for Exact Matches in a Blacklist Array Body: In this comprehensive blog post, we will discuss how...",

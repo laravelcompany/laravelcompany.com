@@ -1,7 +1,7 @@
 {
   "title": "How to break a foreach loop in laravel blade view?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Breaking Loops in Laravel Blade Views: A Comprehensive Guide for Developers Introduction: Laravel's blade views provide developers with an...",

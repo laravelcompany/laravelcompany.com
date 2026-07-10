@@ -1,7 +1,7 @@
 {
   "title": "Call to undefined method Illuminate\\Routing\\Route::get()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving the \"Call to undefined method Illuminate\\Routing\\Route::get()\" Error in Laravel 5.1 Body: The error message \"Call to...",

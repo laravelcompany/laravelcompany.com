@@ -1,7 +1,7 @@
 {
   "title": "Call to undefined method App\\Models\\Category::factory() laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Call to Undefined Method Errors in Laravel Body: Call to undefined method errors can be frustrating when developing applications with...",

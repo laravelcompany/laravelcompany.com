@@ -1,7 +1,7 @@
 {
   "title": "Laravel Custom Model Methods",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Adding Custom Logic to Laravel Models without Static Methods: A Comprehensive Guide for Optimized Calling Body: Eloquent models in Laravel provide a...",

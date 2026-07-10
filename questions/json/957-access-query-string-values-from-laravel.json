@@ -1,7 +1,7 @@
 {
   "title": "Access query string values from Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Accessing Query String Values from Laravel Routes Laravel is an elegant PHP framework that provides developers with various tools to build powerful...",

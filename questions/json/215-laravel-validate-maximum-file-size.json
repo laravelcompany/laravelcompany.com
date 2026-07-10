@@ -1,7 +1,7 @@
 {
   "title": "Laravel: Validate maximum File size?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Validating Maximum File Size in Laravel - A Comprehensive Guide Introduction: In web applications that involve file uploads, it's essential to set...",

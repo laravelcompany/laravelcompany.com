@@ -1,7 +1,7 @@
 {
   "title": "Using Laravel Socialite to login to facebook",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Social Login in Laravel: Solving the Socialite Driver Error Welcome to the world of Laravel development! Diving into social authentication methods...",

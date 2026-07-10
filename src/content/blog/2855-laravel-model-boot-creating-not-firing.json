@@ -1,7 +1,7 @@
 {
   "title": "Laravel - Model boot creating not firing",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Eloquent Events: Why Your Model Attribute Changes Aren't Sticking As a senior developer working with the Laravel ecosystem, you frequently dive into...",

@@ -1,7 +1,7 @@
 {
   "title": "Respond with status code 401 on authentication failure using Laravel and Passport?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Customizing Laravel Passport's Authentication Failure Response Code for API Routes Introduction Using the Laravel framework, you can implement a...",

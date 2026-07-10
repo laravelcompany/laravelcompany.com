@@ -1,7 +1,7 @@
 {
   "title": "The response content must be a string or object implementing __toString(), \"boolean\" given after move to PSQL",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Debugging \"The Response content must be a string or object implementing __toString(), 'boolean' given\" Error When Moving from MySQL to PSQL in Laravel...",

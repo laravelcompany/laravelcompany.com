@@ -1,7 +1,7 @@
 {
   "title": "What's the correct way to set ENV variables in Laravel 5?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: The Correct Way to Set ENV Variables in Laravel 5 - A Comprehensive Guide Introduction: Laravel 5 has brought significant changes in how we deal with...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent inner join with multiple conditions",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effectively Handling Inner Joins with Multiple Conditions in Laravel Eloquent Introduction: Handling inner joins in Laravel applications can sometimes...",

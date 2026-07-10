@@ -1,7 +1,7 @@
 {
   "title": "Access denied for user 'homestead'@'localhost' (using password: YES)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting \"Access denied for user 'homestead'@'localhost'\" Issues in Laravel Development Environments Body: In this comprehensive blog post, we...",

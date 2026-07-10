@@ -1,7 +1,7 @@
 {
   "title": "Laravel eloquent model model attribute casting (Which attribute types should I cast?)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Comprehensive Guide on Laravel Eloquent Model Attribute Casting: Which Attributes to Cast? Introduction: Laravel is well-known for its expressive and...",

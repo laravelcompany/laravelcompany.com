@@ -1,7 +1,7 @@
 {
   "title": "Laravel - Database, Table and Column Naming Conventions?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel - Database, Table and Column Naming Conventions: The Eloquent Way As developers working with Laravel and Eloquent, one of the first hurdles we...",

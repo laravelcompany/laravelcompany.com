@@ -1,7 +1,7 @@
 {
   "title": "Best Practices for Laravel 4 Helpers and Basic Functions?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Best Practices for Laravel 4 Helpers and Basic Functions: Structuring Your Global Logic As developers working with frameworks like Laravel 4, a common...",

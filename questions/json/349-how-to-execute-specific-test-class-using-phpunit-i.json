@@ -1,7 +1,7 @@
 {
   "title": "How to execute specific test class using PHPUnit in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Executing Specific Test Classes Using PHPUnit in Laravel Projects In this blog post, we will explore how to execute a particular test class using...",

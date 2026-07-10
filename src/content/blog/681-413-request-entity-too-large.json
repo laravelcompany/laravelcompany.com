@@ -1,7 +1,7 @@
 {
   "title": "413 Request Entity Too Large",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving the 413 Request Entity Too Large Error in Laravel Applications Body: The infamous \"413 Request Entity Too Large\" error is a common issue faced...",

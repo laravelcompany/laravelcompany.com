@@ -1,7 +1,7 @@
 {
   "title": "Laravel - Load common header and footer to view",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Loading Common Header, Footer, and Views in Laravel for Efficiency In modern web development, efficiency is a must-have trait for application...",

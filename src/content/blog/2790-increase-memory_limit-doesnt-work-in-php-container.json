@@ -1,7 +1,7 @@
 {
   "title": "increase memory_limit doesn't work in PHP Container in Docker",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Why `memory_limit` Changes in PHP Container in Docker Don't Seem to Work: A Deep Dive As senior developers working with containerized applications, we often...",

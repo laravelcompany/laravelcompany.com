@@ -1,7 +1,7 @@
 {
   "title": "Azure Active Directory SSO with Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving Azure Active Directory SSO Issues with Laravel Introduction: In this article, we will discuss an issue encountered while implementing Azure...",

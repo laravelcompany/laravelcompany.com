@@ -1,7 +1,7 @@
 {
   "title": "Laravel get users by id in user model and store them in an array",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Data Retrieval: Getting Users by ID in Laravel Eloquent Building interconnected systems, like a simple friends list, is a common task in web...",

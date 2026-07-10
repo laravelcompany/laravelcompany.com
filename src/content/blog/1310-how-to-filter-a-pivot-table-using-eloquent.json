@@ -1,7 +1,7 @@
 {
   "title": "How to filter a pivot table using Eloquent?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Filtering Pivot Table Data Using Eloquent in Laravel Body: Pivots in Laravel provide a convenient way to connect multiple models together....",

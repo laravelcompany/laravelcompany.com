@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.5 change unauthenticated login redirect url",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Changing Unauthenticated Login Redirect URL in Laravel 5.5 without Modifying Vendor Files In Laravel, it is always good practice to keep your project...",

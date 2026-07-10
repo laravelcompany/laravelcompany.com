@@ -1,7 +1,7 @@
 {
   "title": "Laravel get a collection of relationship items",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Retrieving Related Products for a User in Laravel Introduction Retrieving related data in Laravel can be quite easy when using its Eloquent...",

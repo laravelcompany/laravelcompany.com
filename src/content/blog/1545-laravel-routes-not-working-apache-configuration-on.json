@@ -1,7 +1,7 @@
 {
   "title": "Laravel Routes not working, Apache configuration only allows for public/index.php/route",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Debugging Laravel Routes: Solving Issues Where Apache Allows Only Public/index.php/route Access Introduction: Encountering issues while accessing your...",

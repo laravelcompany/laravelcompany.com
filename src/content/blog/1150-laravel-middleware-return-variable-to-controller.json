@@ -1,7 +1,7 @@
 {
   "title": "Laravel Middleware return variable to controller",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Improving Laravel Application Performance by Sharing Data Between Middleware and Controller Introduction: Laravel is an elegant PHP framework that...",

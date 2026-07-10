@@ -1,7 +1,7 @@
 {
   "title": "disable csrf in laravel for specific route",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effectively Disabling CSRF for Specific Routes in Laravel Applications Introduction When building web applications, ensuring the right level of security...",

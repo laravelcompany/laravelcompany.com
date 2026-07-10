@@ -1,7 +1,7 @@
 {
   "title": "How to seed database migrations for laravel tests?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Seeding Database Migrations for Laravel Tests with Comprehensive Guide Introduction: Laravel is an excellent PHP framework that provides powerful tools...",

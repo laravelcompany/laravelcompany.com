@@ -1,7 +1,7 @@
 {
   "title": "Run raw SQL in migration",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Executing Raw SQL in Laravel Migrations: A Comprehensive Guide Body: As a developer working with Laravel and PHP, executing raw SQL statements within...",

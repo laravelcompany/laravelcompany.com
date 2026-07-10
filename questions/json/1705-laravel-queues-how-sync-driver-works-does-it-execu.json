@@ -1,7 +1,7 @@
 {
   "title": "laravel queues - how sync driver works? Does it executes in a separate process/thread or the main execution thread?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel Queues: Working of Sync Driver and Execution Methods Body: Laravel has various queue drivers built into the framework to handle...",

@@ -1,7 +1,7 @@
 {
   "title": "No alive nodes. All the 1 nodes seem to be down",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# No Alive Nodes: Troubleshooting Elasticsearch Connection Failures in Laravel Connecting a backend application like Laravel to an external service, especially...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel, how to get the environment value?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: The Correct Approach to Retrieving Environment Values in Laravel Applications In the world of Laravel, accessing environment variables has always been...",

@@ -1,7 +1,7 @@
 {
   "title": "Get path of temp uploaded file with image extension in PHP",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Handling Temporary Uploaded File Paths in PHP with Image Extensions Introduction: You might have come across scenarios where you have to...",

@@ -1,7 +1,7 @@
 {
   "title": "BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving 'path' Module Issues with Webpack The issue you are facing where the application throws an error when running \"npm run dev\" is common, and...",

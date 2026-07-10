@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.5 with MySQL 8.0.11: 'sql_mode' can't be set to the value of 'NO_AUTO_CREATE_USER'",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Resolving the MySQL 8.0.11 Conflict: Fixing the `sql_mode` Error in Laravel 5.5 As developers constantly update their environments, navigating compatibility...",

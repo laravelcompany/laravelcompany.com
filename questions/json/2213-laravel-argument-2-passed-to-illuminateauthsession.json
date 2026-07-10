@@ -1,7 +1,7 @@
 {
   "title": "Laravel: Argument 2 passed to Illuminate\\Auth\\SessionGuard::__construct()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Solving Argument Error in Laravel Auth Guard Configuration Introduction to Laravel's Authentication System Laravel framework uses...",

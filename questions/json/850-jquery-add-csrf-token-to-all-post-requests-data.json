@@ -1,7 +1,7 @@
 {
   "title": "jQuery add CSRF token to all $.post() requests' data",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Adding CSRF Tokens to jQuery AJAX Requests in Laravel Apps Introduction: Ensuring the security of web applications is crucial in today's digital...",

@@ -1,7 +1,7 @@
 {
   "title": "oauth-private.key does not exist or is not readable",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"oauth-private.key Does Not Exist or Is Not Readable\" Error in Laravel Projects Body: The error message [LogicException] Key path...",

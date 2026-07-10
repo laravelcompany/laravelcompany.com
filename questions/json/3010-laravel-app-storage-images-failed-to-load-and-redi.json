@@ -1,7 +1,7 @@
 {
   "title": "Laravel app storage images failed to load and redirect to 404",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Fixing Laravel Storage Image Loading Issues on Shared Hosting: A Deep Dive into Symlinks and File Paths Dealing with file uploads and asset serving in a...",

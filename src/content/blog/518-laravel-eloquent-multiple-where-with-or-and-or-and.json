@@ -1,7 +1,7 @@
 {
   "title": "Laravel eloquent multiple WHERE with OR AND OR and LIKE?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Querying Laravel Eloquent with Multiple Conditions and LIKE Statements Laravel's query builder is incredibly powerful and flexible, allowing you to...",

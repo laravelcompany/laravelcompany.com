@@ -1,7 +1,7 @@
 {
   "title": "How to disable CSRF Token in Laravel and why we have to disable it?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding CSRF Tokens and When to Disable Them in Laravel Applications Body: Cross-site request forgery (CSRF) attacks are a common security threat...",

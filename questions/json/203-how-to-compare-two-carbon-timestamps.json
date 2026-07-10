@@ -1,7 +1,7 @@
 {
   "title": "How to compare two Carbon Timestamps?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Comparing Carbon Timestamps: Correcting Issues and Applying Best Practices for Laravel Developers Introduction Working with timestamps in PHP...",

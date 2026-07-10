@@ -1,7 +1,7 @@
 {
   "title": "How to set postgres query execution timeout from application level?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Set PostgreSQL Query Execution Timeout from the Application Level When developing robust web applications, managing database performance and...",

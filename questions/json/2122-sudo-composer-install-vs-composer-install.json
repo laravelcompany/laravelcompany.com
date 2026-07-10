@@ -1,7 +1,7 @@
 {
   "title": "sudo composer install vs. composer install",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding the Difference Between sudo composer install and composer install Body: Composer is an essential tool for managing dependencies of...",

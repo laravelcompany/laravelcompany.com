@@ -1,7 +1,7 @@
 {
   "title": "How to set default DateTime() in Laravel migrations?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: A Detailed Guide on Setting Default DateTime Values in Laravel Migrations Introduction: In this comprehensive guide, we will explore how to set a...",

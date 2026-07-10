@@ -1,7 +1,7 @@
 {
   "title": "Why is the \"sail up\" command not building my laravel docker containers?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel Sail Docker Container Build Issues Body: Laravel Sail is an easy-to-use tool for local development environments that simplifies...",

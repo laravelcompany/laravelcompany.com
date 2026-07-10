@@ -1,7 +1,7 @@
 {
   "title": "Check mail is sent successfully or not on Laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Confirming Mail Sent Successfully on Laravel 5 Introduction In many applications, sending emails is one of the crucial aspects that often requires...",

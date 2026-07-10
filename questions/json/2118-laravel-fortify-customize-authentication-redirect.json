@@ -1,7 +1,7 @@
 {
   "title": "Laravel Fortify Customize Authentication Redirect",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Customizing Laravel Fortify Authentication Redirect: Comprehensive Guide for Error Messages and Login Redirection Introduction In Laravel Fortify, the...",

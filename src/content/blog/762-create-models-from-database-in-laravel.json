@@ -1,7 +1,7 @@
 {
   "title": "Create Models from database in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Generating Models from Database in Laravel In Laravel, you can create models based on your database tables by utilizing the powerful features provided in this...",

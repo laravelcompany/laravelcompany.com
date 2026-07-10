@@ -1,7 +1,7 @@
 {
   "title": "How to install PHP composer inside a docker container",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Easily Install PHP Composer Inside a Docker Container for Laravel Development Introduction In today's rapidly evolving world of software development,...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel & Docker: The stream or file \"/var/www/html/storage/logs/laravel.log\" could not be opened: failed to open stream: Permission denied",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel & Docker: Fixing Permission Issues with Storage Logs Laravel and Docker are powerful tools that can help streamline your development workflow by...",

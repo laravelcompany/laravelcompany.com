@@ -1,7 +1,7 @@
 {
   "title": "Difference between Laravel DB::insert() and DB::table()->insert()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Dissecting the Usage of Laravel's DB::insert() vs DB::table()->insert() Introduction: Laravel provides developers with numerous methods to interact with...",

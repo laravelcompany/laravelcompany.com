@@ -1,7 +1,7 @@
 {
   "title": "Eloquent model mass update",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficient Mass Updates with Eloquent Models: A Comprehensive Guide Please correct me if I am wrong, but I think there is no such thing as mass update in...",

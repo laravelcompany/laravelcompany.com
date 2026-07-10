@@ -1,7 +1,7 @@
 {
   "title": "How to add comment in Mysql column using Laravel Migrations",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Adding Comments on MySQL Columns Using Laravel Migrations Introduction: As software engineers working with Laravel, managing databases efficiently is...",

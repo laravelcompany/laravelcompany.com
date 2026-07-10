@@ -1,7 +1,7 @@
 {
   "title": "datatable pagination in laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Implementing Dynamic Datatable Pagination in Laravel Applications Body: In this blog post, we'll explore how to create dynamic pagination for data...",

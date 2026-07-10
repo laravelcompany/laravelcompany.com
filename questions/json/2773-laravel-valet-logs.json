@@ -1,7 +1,7 @@
 {
   "title": "Laravel Valet logs",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding Laravel Valet Logs: Where to Find PHP and Nginx Error Files As developers working in local environments, managing the intricacies of server logs can...",

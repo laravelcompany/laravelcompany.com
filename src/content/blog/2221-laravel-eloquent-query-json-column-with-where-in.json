@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent query JSON column with Where In?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Querying JSON Columns with Laravel Eloquent and Where In? Body: When working with a database that contains a JSON column in its rows, querying it can be...",

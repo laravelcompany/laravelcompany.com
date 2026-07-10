@@ -1,7 +1,7 @@
 {
   "title": "Getting the Form input value in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Getting the Form Input Value in Laravel: Beyond `Input::get()` Are there other ways to get the value of an ` ` field in Laravel besides the straightforward...",

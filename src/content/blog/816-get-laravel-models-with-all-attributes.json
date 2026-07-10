@@ -1,7 +1,7 @@
 {
   "title": "Get Laravel Models with All Attributes",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Comprehensive Guide to Retrieving Laravel Models with All Attributes - Including Null Values Body: Introduction In the world of Laravel, models are a...",

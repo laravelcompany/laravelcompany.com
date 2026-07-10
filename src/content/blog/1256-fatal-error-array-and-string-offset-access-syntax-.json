@@ -1,7 +1,7 @@
 {
   "title": "Fatal error: Array and string offset access syntax with curly braces is no longer supported in php 8.0 pkcs5_unpad",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving Fatal Errors Related to Deprecated Array Syntax in PHP 8.0's pkcs5_unpad Function Introduction Modernizing your codebase is...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel's Artisan says nothing to migrate",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving Common Artisan Migration Issues and Understanding Laravel Path Conventions Body: Laravel is an incredibly powerful PHP framework that leverages...",

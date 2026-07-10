@@ -1,7 +1,7 @@
 {
   "title": "Laravel function with optional parameter",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Handling Optional Parameters in Laravel Functions Introduction ------------------------- In Laravel projects, you'll often encounter instances where...",

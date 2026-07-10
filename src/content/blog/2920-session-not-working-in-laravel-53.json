@@ -1,7 +1,7 @@
 {
   "title": "Session not working in laravel 5.3",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Fixing Session Issues in Laravel 5.3: A Deep Dive into Session Management As a senior developer, I frequently encounter situations where developers try to...",

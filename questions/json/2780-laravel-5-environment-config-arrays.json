@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 environment config arrays?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Environment Configuration Arrays in Laravel 5: Moving Beyond Legacy Structures The way we handle configuration in Laravel has evolved significantly...",

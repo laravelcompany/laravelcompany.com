@@ -1,7 +1,7 @@
 {
   "title": "How can I manually return or throw a validation error/exception in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Manually Returning or Throwing Validation Errors in Laravel - A Comprehensive Guide Laravel comes with powerful built-in validation tools that help...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.6 Upgrade caused Logging to break",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel Logging Issues After Upgrading from 5.2 to 5.6 Body: Upgrading your Laravel application is an important process that can...",

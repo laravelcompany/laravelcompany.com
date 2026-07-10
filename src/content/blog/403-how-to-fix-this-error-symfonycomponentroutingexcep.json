@@ -1,7 +1,7 @@
 {
   "title": "How to fix this error Symfony\\Component\\Routing\\Exception\\RouteNotFoundException: Route [login] not defined. in laravel 8?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Comprehensive Guide on Fixing RouteNotFoundException in Laravel 8 Body: When working with APIs in Laravel, you may encounter errors such as...",

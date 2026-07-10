@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 - global Blade view variable available in all templates",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "**Title**: Laravel 5 - Global Blade View Variables: Accessing Them Everywhere with Ease Introduction: When working on large projects in Laravel 5, developers...",

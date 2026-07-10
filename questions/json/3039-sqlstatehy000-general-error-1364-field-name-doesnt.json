@@ -1,7 +1,7 @@
 {
   "title": "SQLSTATE[HY000]: General error: 1364 Field 'name' doesn't have a default value (SQL: insert into `cats` (`updated_at`, `created_at`)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the Error: Solving SQLSTATE[HY000]: Field 'name' doesn't have a default value in Laravel As developers working with relational databases via an ORM...",

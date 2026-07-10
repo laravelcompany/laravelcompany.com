@@ -1,7 +1,7 @@
 {
   "title": "Laravel: What is \"remember_token\" in the \"users\" DB table?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding the Purpose of \"remember_token\" in Laravel's User Table Body: In the world of web development, security is one of the most crucial aspects...",

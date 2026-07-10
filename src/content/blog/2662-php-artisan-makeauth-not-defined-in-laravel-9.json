@@ -1,7 +1,7 @@
 {
   "title": "Php artisan make:auth not defined in Laravel 9",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the Error: Why `php artisan make:auth` Doesn't Exist in Modern Laravel As developers working with the Laravel ecosystem, we are constantly evolving...",

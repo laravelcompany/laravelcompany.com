@@ -1,7 +1,7 @@
 {
   "title": "Get the Query Executed in Laravel 3/4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Retrieve Executed SQL Queries in Laravel 3/4 using Query Builder or Eloquent ORM Body: Retrieving the Raw Executed SQL Query Using Laravel Query Builder...",

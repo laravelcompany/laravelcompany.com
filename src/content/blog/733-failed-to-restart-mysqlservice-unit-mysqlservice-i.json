@@ -1,7 +1,7 @@
 {
   "title": "Failed to restart mysql.service: Unit mysql.service is masked in Ubuntu 20.04 after an upgrade from 18.4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Failed to Restart MySQL: Unit Masked Issue After Ubuntu Upgrade from 18.4 to 20.04 Introduction: Upgrading your operating system can bring about a...",

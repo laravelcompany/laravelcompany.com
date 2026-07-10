@@ -1,7 +1,7 @@
 {
   "title": "How do you get the path to the Laravel Storage folder?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Managing File Storage in Laravel: Accessing and Utilizing the Laravel Storage Directory Introduction: Laravel makes it simple to handle your...",

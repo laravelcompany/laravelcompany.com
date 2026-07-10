@@ -1,7 +1,7 @@
 {
   "title": "Displaying HTML with Blade shows the HTML code",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Displaying HTML with Blade: A Comprehensive Guide for Laravel Developers Body: Introduction In Laravel, we often use Blade templates for rendering views...",

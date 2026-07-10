@@ -1,7 +1,7 @@
 {
   "title": "Where is Illuminate?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Where is Illuminate? Demystifying Laravel's Core Structure If you are a developer working with Laravel, you will inevitably encounter namespaces like...",

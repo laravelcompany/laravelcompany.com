@@ -1,7 +1,7 @@
 {
   "title": "Laravel Passport vs JWT vs Oauth2 vs Auth0",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Confusion about API Auth Types in Laravel? Demystifying OAuth2, Passport, JWT, and Auth0 As a developer diving into building robust APIs with Laravel, it is...",

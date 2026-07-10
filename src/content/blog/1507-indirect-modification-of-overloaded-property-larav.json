@@ -1,7 +1,7 @@
 {
   "title": "Indirect Modification of Overloaded Property Laravel MongoDB",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving Indirect Modification of Overloaded Property Error in Laravel MongoDB Applications Body: When working with mongoDB and laravel through the...",

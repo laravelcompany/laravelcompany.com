@@ -1,7 +1,7 @@
 {
   "title": "How to get the content of a file sent via POST in Laravel 4?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Retrieving File Content from a POST Request in Laravel 4 Body: In some cases, you may need to handle files that are uploaded through a POST request with...",

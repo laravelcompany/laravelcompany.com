@@ -1,7 +1,7 @@
 {
   "title": "Blade: escaping text and allowing new lines",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Escaping Text and Allowing New Lines in Blade Templates Body: Incorporating user-input text into your application can be challenging,...",

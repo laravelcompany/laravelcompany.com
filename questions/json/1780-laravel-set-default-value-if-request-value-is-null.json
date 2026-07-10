@@ -1,7 +1,7 @@
 {
   "title": "Laravel set default value if request value is null",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Laravel, being a popular PHP framework, offers various ways to handle data validation, input, and defaults for your application. In this blog post, we'll...",

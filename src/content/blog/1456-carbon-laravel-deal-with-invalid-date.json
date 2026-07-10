@@ -1,7 +1,7 @@
 {
   "title": "Carbon (laravel) deal with invalid date",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Handling Invalid Dates with Carbon in Laravel - A Comprehensive Guide Body: Dealing with date format conversions can be challenging for programmers....",

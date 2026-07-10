@@ -1,7 +1,7 @@
 {
   "title": "Laravel - get size from uploaded file",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Retrieving File Size from Uploaded Files in Laravel In Laravel, handling uploaded files is quite straightforward thanks to the built-in functionality...",

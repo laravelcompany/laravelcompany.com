@@ -1,7 +1,7 @@
 {
   "title": "Should I use belongsTo or hasOne?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Should I use `belongsTo` or `hasOne`? Demystifying Eloquent Relationships As developers working with Laravel and Eloquent ORM, understanding how to structure...",

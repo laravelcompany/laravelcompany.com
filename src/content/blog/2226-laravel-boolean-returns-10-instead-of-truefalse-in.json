@@ -1,7 +1,7 @@
 {
   "title": "Laravel boolean returns \"1\"/\"0\" instead of true/false in query",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel Boolean Query Results: \"1\"/\"0\" instead of True/False on SQL Server Introduction: Programming languages like PHP and frameworks...",

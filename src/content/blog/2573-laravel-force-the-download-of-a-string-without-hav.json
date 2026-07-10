@@ -1,7 +1,7 @@
 {
   "title": "Laravel : Force the download of a string without having to create a file",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel: Force the Download of a String Without Creating a File As developers building dynamic web applications with Laravel, we frequently run into...",

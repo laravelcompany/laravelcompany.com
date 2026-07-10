@@ -1,7 +1,7 @@
 {
   "title": "barryvdh/laravel-dompdf page break content changes PDF",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Page Breaks in PDF Generation with barryvdh/laravel-dompdf As developers who rely on generating professional documents from dynamic data, working...",

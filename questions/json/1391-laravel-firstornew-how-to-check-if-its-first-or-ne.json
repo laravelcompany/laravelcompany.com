@@ -1,7 +1,7 @@
 {
   "title": "Laravel firstOrNew how to check if it's first or new?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel firstOrNew - Understanding How To Check If An Object Is New or Existing Body: Laravel's built-in function firstOrNew is a powerful tool that...",

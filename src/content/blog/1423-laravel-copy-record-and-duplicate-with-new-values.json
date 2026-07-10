@@ -1,7 +1,7 @@
 {
   "title": "Laravel Copy record and duplicate with new values",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Copying Records with Different Values in Laravel While Maintaining Data Integrity Introduction: Working with Laravel applications, you...",

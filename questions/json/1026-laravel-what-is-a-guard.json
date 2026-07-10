@@ -1,7 +1,7 @@
 {
   "title": "Laravel What is a guard?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Guards in Laravel Authentication Body: In this post, we'll discuss guards, which are an essential component of Laravel's authentication...",

@@ -1,7 +1,7 @@
 {
   "title": "Carbon Date startOfDay give me endOfDay date",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Date Boundaries in Carbon: Using `startOfDay()` and `endOfDay()` Effectively As senior developers working with Laravel, we spend a significant...",

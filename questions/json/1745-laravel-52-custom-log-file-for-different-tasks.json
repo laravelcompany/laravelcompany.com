@@ -1,7 +1,7 @@
 {
   "title": "laravel 5.2 custom log file for different tasks",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Managing Custom Log Files for Different Tasks in Laravel 5.2 Introduction Laravel is an incredibly powerful PHP framework that offers a robust logging...",

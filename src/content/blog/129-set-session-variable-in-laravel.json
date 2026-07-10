@@ -1,7 +1,7 @@
 {
   "title": "Set session variable in laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Setting and Using Session Variables in Laravel Applications Body: Session variables provide a way for developers to store information about...",

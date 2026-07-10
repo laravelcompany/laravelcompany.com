@@ -1,7 +1,7 @@
 {
   "title": "Laravel /broadcasting/auth Always Fails With 403 Error",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel 403 Errors in /broadcasting/auth Route for Private Channels Body: In recent endeavors with Laravel 5.3's Laravel-Echo and Pusher...",

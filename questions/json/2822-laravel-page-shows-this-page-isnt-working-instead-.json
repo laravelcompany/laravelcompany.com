@@ -1,7 +1,7 @@
 {
   "title": "Laravel page shows \"This page isn’t working\" instead of errors",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Why Your Laravel App Shows \"This Page Isn’t Working\" Instead of Errors: A Deep Dive for Windows Users As a senior developer, I've seen countless developers...",

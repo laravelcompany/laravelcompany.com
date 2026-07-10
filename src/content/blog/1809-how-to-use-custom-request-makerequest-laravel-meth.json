@@ -1,7 +1,7 @@
 {
   "title": "How to Use custom request (make:request)? (laravel) Method App\\Http\\Requests\\Custom::doesExistI does not exist",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Mastering Custom Requests in Laravel: A Comprehensive Guide Introduction: In today's dynamic web applications, custom requests play a vital role in...",

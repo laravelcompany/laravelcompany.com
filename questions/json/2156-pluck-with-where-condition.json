@@ -1,7 +1,7 @@
 {
   "title": "Pluck with Where condition",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Mastering Laravel's Collection Methods for Efficient Data Handling Introduction: In modern web applications, data management is crucial to creating an...",

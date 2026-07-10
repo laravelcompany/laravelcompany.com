@@ -1,7 +1,7 @@
 {
   "title": "Argument 1 passed to Symfony\\Component\\HttpFoundation\\Response::setContent() with Axios Vue and Laravel 7",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Argument 1 passed to Symfony\\Component\\HttpFoundation\\Response::setContent() with Axios Vue and Laravel 7 - A Comprehensive Analysis It can be confusing when...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent Select CASE?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Injecting CASE Statements into Laravel Eloquent Queries: A Comprehensive Guide Body: Laravel is a powerful framework that allows developers to create...",

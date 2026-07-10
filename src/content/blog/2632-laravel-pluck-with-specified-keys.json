@@ -1,7 +1,7 @@
 {
   "title": "Laravel - pluck with specified keys",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Eloquent: Mastering Custom Transformations with Pluck and Map As developers working with Laravel, we constantly bridge the gap between our robust...",

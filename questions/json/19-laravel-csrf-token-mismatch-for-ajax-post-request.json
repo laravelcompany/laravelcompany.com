@@ -1,7 +1,7 @@
 {
   "title": "Laravel csrf token mismatch for ajax POST Request",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel CSRF Token Mismatch for Ajax POST Request: Troubleshooting Strategies to Resolve the Issue Body: Introduction Laravel's built-in Cross-Site...",

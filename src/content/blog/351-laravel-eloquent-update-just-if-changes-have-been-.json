@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent update just if changes have been made",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficient Laravel Eloquent Model Updates with Change Detection Body: The concept of optimizing database modifications in any application is crucial to...",

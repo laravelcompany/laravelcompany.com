@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5: Use implode() with Eloquent the right way",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel 5: Use `implode()` with Eloquent the Right Way – Beyond Simple String Concatenation As a senior developer, I often encounter scenarios where...",

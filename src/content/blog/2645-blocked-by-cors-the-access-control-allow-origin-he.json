@@ -1,7 +1,7 @@
 {
   "title": "blocked by CORS :The 'Access-Control-Allow-Origin' header contains multiple values '*, *', Laravel8",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Blocked by CORS: Decoding the Multiple Values Error in Laravel APIs As developers building modern Single Page Applications (SPAs) that communicate with...",

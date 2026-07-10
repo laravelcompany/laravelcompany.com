@@ -1,7 +1,7 @@
 {
   "title": "Laravel - check if routes on blade",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Checking Routes on Blade Views in Laravel Introduction: In Laravel, you can check whether a user is on a specific route by using the `Route::current()`...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel File not found at path but it does exist",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Debugging Laravel File Not Found Errors: A Comprehensive Guide for Developers Body: Introduction: Encountering \"File not found\" errors in your Laravel...",

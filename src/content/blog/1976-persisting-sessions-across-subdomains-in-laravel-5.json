@@ -1,7 +1,7 @@
 {
   "title": "Persisting sessions across subdomains in Laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Persisting Sessions across Subdomains in Laravel 5 Subdomains are an important part of your Laravel application if you wish to provide multiple services...",

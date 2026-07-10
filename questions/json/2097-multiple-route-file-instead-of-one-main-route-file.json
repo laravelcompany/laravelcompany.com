@@ -1,7 +1,7 @@
 {
   "title": "multiple route file instead of one main route file in laravel 5",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Managing Routes Efficiently in Laravel 5: Multiple Route Files Over One Main File Introduction: As a novice web developer, you may encounter projects...",

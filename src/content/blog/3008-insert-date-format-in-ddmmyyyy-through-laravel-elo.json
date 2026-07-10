@@ -1,7 +1,7 @@
 {
   "title": "Insert date format in dd/mm/yyyy through laravel Eloquent Model",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Inserting Date Formats in Laravel Eloquent: Mastering Custom Formatting with Carbon As senior developers working with Laravel, one of the most common pain...",

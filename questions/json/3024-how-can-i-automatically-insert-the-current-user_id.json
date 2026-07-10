@@ -1,7 +1,7 @@
 {
   "title": "How can i automatically insert the current user_id after submitting a form in Filament v3.0",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How Can I Automatically Insert the Current `user_id` After Submitting a Form in Filament v3.0? Working with relationships and ownership in database entities...",

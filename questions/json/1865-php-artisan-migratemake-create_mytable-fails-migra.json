@@ -1,7 +1,7 @@
 {
   "title": "php artisan migrate:make create_mytable fails: \"migrate:make\" is not defined",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: \"php artisan migrate:make\" Command Error in Laravel 5 - A Comprehensive Guide to Understanding and Solving the Issue Introduction: As a Senior...",

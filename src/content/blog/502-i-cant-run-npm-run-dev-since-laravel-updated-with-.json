@@ -1,7 +1,7 @@
 {
   "title": "I can't run 'npm run dev' since Laravel updated with Vite",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding 'npm run dev' Issues After Laravel Project Updates with Vite Taylor Otwell announced that new Laravel projects will run using Vite by...",

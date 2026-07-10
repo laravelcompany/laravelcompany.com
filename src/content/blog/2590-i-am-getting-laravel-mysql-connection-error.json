@@ -1,7 +1,7 @@
 {
   "title": "I am getting Laravel Mysql Connection Error",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the Dreaded Error: `SQLSTATE[42S01]: Base table or view already exists` During Laravel Migrations As a senior developer working with the Laravel...",

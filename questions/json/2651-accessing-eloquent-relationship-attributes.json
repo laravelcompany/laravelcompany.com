@@ -1,7 +1,7 @@
 {
   "title": "Accessing Eloquent relationship attributes",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Nested Eloquent Relationships: Accessing Attributes Across Multiple Models As developers working with relational databases through an ORM like...",

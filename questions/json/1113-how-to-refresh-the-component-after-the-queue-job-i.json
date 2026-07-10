@@ -1,7 +1,7 @@
 {
   "title": "How to refresh the component after the queue job is finished?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Refreshing Components After Queue Jobs are Finished Introduction: Laravel is an amazing framework that provides numerous tools to help build...",

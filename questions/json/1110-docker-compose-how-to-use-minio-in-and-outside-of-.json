@@ -1,7 +1,7 @@
 {
   "title": "docker-compose: how to use minio in- and outside of the docker network",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: docker-compose: how to use Minio inside and outside of the Docker network Introduction Developers often struggle when trying to access their local...",

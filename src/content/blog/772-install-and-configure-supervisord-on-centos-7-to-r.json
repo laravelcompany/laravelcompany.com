@@ -1,7 +1,7 @@
 {
   "title": "Install and configure supervisord on centos 7 to run Laravel queues permanently",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Install and Configure Supervisord on CentOS 7 for Permanent Laravel Queue Management Introduction: Queues play a crucial role in scalable software...",

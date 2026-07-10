@@ -1,7 +1,7 @@
 {
   "title": "Setting up a Laravel cron job in cPanel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Laravel Cron Jobs in cPanel: Solving Scheduling and Execution Mysteries As a senior developer working with Laravel applications deployed on shared...",

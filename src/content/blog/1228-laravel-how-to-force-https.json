@@ -1,7 +1,7 @@
 {
   "title": "Laravel: how to force HTTPS?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Enforcing HTTPS in Laravel Applications: A Comprehensive Guide for Developers Body: Forcing HTTPS (Hypertext Transfer Protocol Secure) connections is an...",

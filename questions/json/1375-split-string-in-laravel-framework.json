@@ -1,7 +1,7 @@
 {
   "title": "Split string in Laravel Framework",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Split String and Display Data in a Table with Laravel Framework When working with databases in Laravel, we often come across cases where we need to...",

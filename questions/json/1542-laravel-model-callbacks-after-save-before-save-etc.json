@@ -1,7 +1,7 @@
 {
   "title": "laravel model callbacks after save, before save, etc",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Using Model Callbacks in Laravel for Save Operations Introduction: In the world of web application development, the MVC (Model View...",

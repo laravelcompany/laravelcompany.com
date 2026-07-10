@@ -1,7 +1,7 @@
 {
   "title": "Laravel - Seeding Relationships",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Optimizing Laravel Database Seeding for Complex Relationships Body: Database seeding in Laravel is an essential process that helps you bootstrap your...",

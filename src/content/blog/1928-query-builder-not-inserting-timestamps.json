@@ -1,7 +1,7 @@
 {
   "title": "Query builder not inserting timestamps",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Query Builder Not Inserting Timestamps: A Comprehensive Guide for Laravel Developers Body: Introduction: In this comprehensive blog post, we aim to...",

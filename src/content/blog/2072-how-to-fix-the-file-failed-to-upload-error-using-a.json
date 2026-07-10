@@ -1,7 +1,7 @@
 {
   "title": "How to fix 'The file failed to upload.' error using any validation for image upload - Laravel 5.7",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving Laravel 5.7 'The File Failed to Upload.' Errors During Image Validations Introduction Image upload validation errors can be frustrating when...",

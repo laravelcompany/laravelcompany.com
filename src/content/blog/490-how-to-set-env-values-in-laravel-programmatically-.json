@@ -1,7 +1,7 @@
 {
   "title": "How to set .env values in laravel programmatically on the fly",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Programmatically Handling .env Values in Laravel: A Comprehensive Guide for Enhancing Custom CMS Flexibility As a senior developer working on a custom...",

@@ -1,7 +1,7 @@
 {
   "title": "Route [login] not defined",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Route [login] not defined: Understanding and Resolving Laravel Routing Issues Introduction: Building a robust web application involves managing its...",

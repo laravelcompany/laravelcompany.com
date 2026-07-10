@@ -1,7 +1,7 @@
 {
   "title": "required_if Laravel 5 validation",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Mastering Laravel 5 Validation with required_if Introduction Laravel is a popular PHP framework that provides many useful validations to ensure user...",

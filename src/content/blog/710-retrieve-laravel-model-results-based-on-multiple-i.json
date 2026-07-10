@@ -1,7 +1,7 @@
 {
   "title": "Retrieve Laravel Model results based on multiple ID's",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Retrieve Laravel Model Results Based on Multiple IDs Body: When working with a significant number of records in your Laravel application,...",

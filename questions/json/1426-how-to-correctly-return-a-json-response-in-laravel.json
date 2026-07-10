@@ -1,7 +1,7 @@
 {
   "title": "How to correctly return a JSON Response in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: How to Correctly Return a JSON Response with Custom Status Code in Laravel? Introduction In this blog post, we will explore how to return a JSON...",

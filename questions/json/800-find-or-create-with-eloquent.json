@@ -1,7 +1,7 @@
 {
   "title": "Find or Create with Eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Simplifying Model Creation and Retrieval with Find or Create in Laravel Eloquent Introduction: As a Laravel developer, you might have experienced the...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel 4: how to \"order by\" using Eloquent ORM",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel 4: Efficiently Ordering Results with Eloquent ORM Introduction: Ordering is a crucial aspect of any application that deals with data. In...",

@@ -1,7 +1,7 @@
 {
   "title": "Convert hour to PM and AM with Carbon",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Comprehensive Guide to Converting Hour Format Timestamps to AM/PM Using Carbon in PHP Abstract: In this blog post, we will explore how to convert hour...",

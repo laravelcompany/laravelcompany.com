@@ -1,7 +1,7 @@
 {
   "title": "Artisan command \"make:auth\" is not defined in Laravel 6",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving Issues with Artisan Command \"make:auth\" in Laravel 6 Introduction In this blog post, we will discuss the common issues faced when using the...",

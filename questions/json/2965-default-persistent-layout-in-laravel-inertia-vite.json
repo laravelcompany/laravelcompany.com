@@ -1,7 +1,7 @@
 {
   "title": "Default Persistent Layout In Laravel + Inertia + Vite",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Default Persistent Layout in Laravel + Inertia + Vite: Solving the Resolution Puzzle Setting up a modern stack involving Laravel, Inertia.js, and Vite is...",

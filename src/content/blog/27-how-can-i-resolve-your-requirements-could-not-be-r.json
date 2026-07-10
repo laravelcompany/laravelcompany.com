@@ -1,7 +1,7 @@
 {
   "title": "How can I resolve \"Your requirements could not be resolved to an installable set of packages\" error?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"Your requirements could not be resolved to an installable set of packages\" Error in Composer Updates Introduction: Composer is the de facto...",

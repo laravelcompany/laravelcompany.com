@@ -1,7 +1,7 @@
 {
   "title": "Call to a member function store() on null - laravel 5.4",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving the Call to a Member Function store() on null Error in Laravel 5.4 Introduction: Troubleshooting and resolving errors is an...",

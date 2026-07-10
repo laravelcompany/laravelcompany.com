@@ -1,7 +1,7 @@
 {
   "title": "Laravel Collection keys modification",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Collection Keys: How to Ensure Sequential Indexing After Filtering in Laravel As developers working with Laravel, we frequently manipulate data...",

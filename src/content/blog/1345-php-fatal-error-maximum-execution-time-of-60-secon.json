@@ -1,7 +1,7 @@
 {
   "title": "PHP Fatal error: Maximum execution time of 60 seconds exceeded in C:\\xampp\\htdocs\\vendor\\symfony\\process\\Pipes\\WindowsPipes.php on line 140",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving \"PHP Fatal Error: Maximum Execution Time Exceeded\" When Handling Large Video Files in Laravel In a world where data transfer...",

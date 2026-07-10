@@ -1,7 +1,7 @@
 {
   "title": "Laravel faker generate gender from name",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Faker: Generating Gender That Matches the Name – The Developer's Guide When working with data generation in any application, especially within the...",

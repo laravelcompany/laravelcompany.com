@@ -1,7 +1,7 @@
 {
   "title": "'mix' is not recognized as an internal or external command in Laravel 8 new installation",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Fixing the 'mix' Command Issue in Laravel 8 Installations Body: Introduction: In this blog post, we will discuss why you might...",

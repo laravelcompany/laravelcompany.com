@@ -1,7 +1,7 @@
 {
   "title": "How to remove /public/ from a Laravel URL",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Simplifying Laravel URLs without Public Folder Troubles - A Practical Guide for Developers Introduction Laravel is an incredibly powerful framework that...",

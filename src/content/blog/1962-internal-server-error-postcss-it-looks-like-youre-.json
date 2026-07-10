@@ -1,7 +1,7 @@
 {
   "title": "Internal server error: [postcss] It looks like you're trying to use tailwindcss directly as a PostCSS plugin",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Internal Server Error: Solving TailwindCSS Issues with PostCSS Integration Introduction When working on your project, you might encounter the internal...",

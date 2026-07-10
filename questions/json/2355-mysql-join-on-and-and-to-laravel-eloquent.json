@@ -1,7 +1,7 @@
 {
   "title": "mysql join ON and AND to laravel eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Complex Joins in Laravel Eloquent: The Power of `ON` and `AND` As developers, we often bridge the gap between highly optimized raw SQL queries and...",

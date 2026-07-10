@@ -1,7 +1,7 @@
 {
   "title": "Undefined variable: users (View: C:\\xampp\\htdocs\\rentalmobil\\resources\\views\\admin\\user.blade.php)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# SOLVED: Debugging Undefined Variables in Laravel Blade Views Welcome to the world of Laravel development! It is completely normal to feel confused when you...",

@@ -1,7 +1,7 @@
 {
   "title": "How do I get ONLY the validated data from a laravel FormRequest?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Accessing Validated Data from Laravel FormRequests Body: Handling form data in your Laravel applications can be done with FormRequests -...",

@@ -1,7 +1,7 @@
 {
   "title": "Livewire how to $emit event on select change (wire:model)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Livewire how to $emit event on &lt;select&gt; change (wire:model) Livewire is a powerful framework for building interactive web applications with Laravel. It...",

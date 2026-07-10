@@ -1,7 +1,7 @@
 {
   "title": "Laravel Carbon\\Carbon::setLastErrors()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel Carbon\\Carbon::setLastErrors() Error on Hosting Sites like SiteGround for Your Laravel API Introduction: Laravel is an efficient...",

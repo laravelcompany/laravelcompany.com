@@ -1,7 +1,7 @@
 {
   "title": "Laravel eloquent api resource remove `data` key (no collection)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Eloquent API Resource: Removing the \"data\" Key (No Collection) Body: Laravel provides a powerful set of tools to develop efficient and scalable...",

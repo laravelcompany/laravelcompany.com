@@ -1,7 +1,7 @@
 {
   "title": "Laravel parent / child relationship on the same model",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Parent / Child Relationship on the Same Model - A Comprehensive Guide Body: The Setup And Dummy Data Firstly, let's set up a model named...",

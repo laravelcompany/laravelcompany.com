@@ -1,7 +1,7 @@
 {
   "title": "Calling a native PHP function in Laravel 4 blade doesn't work",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Calling Native PHP Functions in Laravel Blade Files: A Practical Guide Body: Laravel, a popular open-source framework, simplifies...",

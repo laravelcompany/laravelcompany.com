@@ -1,7 +1,7 @@
 {
   "title": "Automatically deleting related rows in Laravel (Eloquent ORM)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Managing Related Rows Deletion with Laravel Eloquent ORM Introduction: In Laravel, the Eloquent Object Relational Mapper (ORM) provides a...",

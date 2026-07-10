@@ -1,7 +1,7 @@
 {
   "title": "Class \"Redis\" Not Found laravel 8, using phpredis",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting \"Class 'Redis' not Found\" Error When Using Phpredis with Laravel 8 Body: Many developers using Laravel 8 have encountered the...",

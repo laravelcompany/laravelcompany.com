@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 session not persisting after user is logged in",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel 5 Session Persistence Nightmare: Why Logged-In Status Disappears I’ve encountered a frustrating, yet common, issue when working with session...",

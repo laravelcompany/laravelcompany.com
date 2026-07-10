@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 Clear Views Cache",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Managing Laravel View Caches: Understanding Their Location, Deletion, and Disabling Introduction Laravel is an incredibly powerful PHP...",

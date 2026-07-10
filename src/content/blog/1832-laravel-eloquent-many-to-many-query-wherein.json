@@ -1,7 +1,7 @@
 {
   "title": "Laravel Eloquent Many-to-Many query whereIn",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Querying Many-to-Many Relationships Using Laravel - Eloquent's whereIn() Method Body: In your Laravel application, you might encounter...",

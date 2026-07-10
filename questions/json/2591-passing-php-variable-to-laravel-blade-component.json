@@ -1,7 +1,7 @@
 {
   "title": "Passing Php variable to Laravel Blade Component",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Passing PHP Variables to Laravel Blade Components: The Complete Guide As developers working with Laravel, we often seek ways to encapsulate reusable UI...",

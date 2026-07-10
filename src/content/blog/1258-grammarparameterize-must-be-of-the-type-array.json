@@ -1,7 +1,7 @@
 {
   "title": "Grammar::parameterize() must be of the type array",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving the \"Grammar::parameterize() must be of the type array\" Error for Multiple Select Form Input in Laravel Body: You...",

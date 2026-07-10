@@ -1,7 +1,7 @@
 {
   "title": "Facade does not implement getFacadeAccessor method",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the Error: Why Facade Fails in Downgraded Laravel Environments As developers constantly juggle version control, dependency management, and...",

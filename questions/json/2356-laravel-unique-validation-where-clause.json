@@ -1,7 +1,7 @@
 {
   "title": "Laravel | Unique validation where clause",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel | Unique Validation with Scoped `WHERE` Clauses: Mastering Conditional Uniqueness As senior developers working with Laravel, we constantly encounter...",

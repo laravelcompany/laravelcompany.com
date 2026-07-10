@@ -1,7 +1,7 @@
 {
   "title": "Class 'MongoDB\\Driver\\Manager' not found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving \"Class 'MongoDB\\Driver\\Manager' not found\" Error When Integrating MongoDB with Laravel Body: When integrating MongoDB with...",

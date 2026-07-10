@@ -1,7 +1,7 @@
 {
   "title": "Laravel collection multiple where conditions",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Handling Multiple Conditions with Laravel Collections In this blog post, we'll discuss the best way to handle multiple conditions using...",

@@ -1,7 +1,7 @@
 {
   "title": "How to install Laravel 4 to a web host subfolder without publicly exposing /app/ folder?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Install Laravel 4 to a Web Host Subfolder Without Publicly Exposing Sensitive Folders As developers deploying frameworks, managing directory...",

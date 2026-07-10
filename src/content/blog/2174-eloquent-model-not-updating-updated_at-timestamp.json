@@ -1,7 +1,7 @@
 {
   "title": "Eloquent model not updating updated_at timestamp",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Eloquent Model Timestamp Updates in Laravel Body: You're encountering a specific issue where your Eloquent model isn't updating the 'updated_at'...",

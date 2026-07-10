@@ -1,7 +1,7 @@
 {
   "title": "How to access model hasMany Relation with where condition?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Accessing Model Relationships with Conditions - A Comprehensive Guide for Laravel Developers Introduction: In the world of Laravel development,...",

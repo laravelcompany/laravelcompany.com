@@ -1,7 +1,7 @@
 {
   "title": "Extension gd is missing from your system - laravel composer Update",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Extension gd is missing from your system - Laravel Composer Update solved Body: The error message \"Problem 1 - dompdf/dompdf v0.7.0 requires ext-gd *...",

@@ -1,7 +1,7 @@
 {
   "title": "JETSTREAM \"Unable to locate file in Vite manifest: resources/css/app.css.\" ERROR",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the Jetstream Build Error: \"Unable to locate file in Vite manifest: resources/css/app.css.\" Welcome to the world of Laravel and Jetstream! Setting up...",

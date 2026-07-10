@@ -1,7 +1,7 @@
 {
   "title": "Undefined Method in Request::all()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the Mystery: Why You Get \"Undefined Method in Request::all()\" in Laravel As a senior developer, I’ve seen countless times how seemingly simple errors...",

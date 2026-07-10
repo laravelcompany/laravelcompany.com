@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.3 db:seed command simply doesn't work",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel 5.3's db:seed Command: A Comprehensive Guide to Fixing Common Issues Body: Laravel is an incredible framework that has...",

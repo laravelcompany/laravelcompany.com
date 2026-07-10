@@ -1,7 +1,7 @@
 {
   "title": "\"405 Method not allowed\" in Laravel 5.6.14",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the 405 Error in Laravel: Mastering HTTP Methods for API Development As developers building APIs with Laravel, mastering HTTP methods is...",

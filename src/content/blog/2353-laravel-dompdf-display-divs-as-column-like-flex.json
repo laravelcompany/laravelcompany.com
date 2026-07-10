@@ -1,7 +1,7 @@
 {
   "title": "laravel-dompdf | Display divs as column like flex",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# laravel-dompdf | Display divs as column like flex: Mastering Layouts for PDF Exports When generating complex documents like meeting summaries or invoices...",

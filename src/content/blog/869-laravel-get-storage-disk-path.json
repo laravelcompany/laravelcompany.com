@@ -1,7 +1,7 @@
 {
   "title": "Laravel - Get storage disk path",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Retrieving Storage Disk Paths in Laravel Laravel provides a powerful file system abstraction layer through its storage classes to...",

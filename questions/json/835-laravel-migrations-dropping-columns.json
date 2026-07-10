@@ -1,7 +1,7 @@
 {
   "title": "Laravel Migrations - Dropping columns",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Laravel Migrations for Dropping Columns Body: Laravel provides an efficient way to manage database changes through migrations. However,...",

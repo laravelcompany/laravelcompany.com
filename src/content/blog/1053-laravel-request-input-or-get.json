@@ -1,7 +1,7 @@
 {
   "title": "Laravel Request input() or get()",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Request input() or get(): Understanding Method Injection vs Facades Introduction: When it comes to handling request data in Laravel, two methods...",

@@ -1,7 +1,7 @@
 {
   "title": "How to check if the key exists in Redis?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Check if a Key Exists in Redis: Ensuring Data Integrity in Caching As developers working with caching layers like Redis, ensuring data...",

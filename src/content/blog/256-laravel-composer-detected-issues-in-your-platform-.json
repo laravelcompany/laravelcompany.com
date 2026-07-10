@@ -1,7 +1,7 @@
 {
   "title": "Laravel - Composer detected issues in your platform after updating it",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Tackling Composer Dependency Issues Post-Update in Laravel Web Applications Introduction: As a Laravel developer, experiencing Composer detected issues...",

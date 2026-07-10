@@ -1,7 +1,7 @@
 {
   "title": "(!) Some chunks are larger than 500 KiB after minification",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Taming the Beast: Why Your Build is Warning You About Large JavaScript Chunks As developers, we constantly strive for efficiency—whether that means...",

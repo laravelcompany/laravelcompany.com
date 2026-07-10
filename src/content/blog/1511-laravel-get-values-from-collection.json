@@ -1,7 +1,7 @@
 {
   "title": "Laravel get values from collection",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Working with Values in Laravel Collections There is a wealth of features available in Laravel that makes working with data incredibly efficient. One...",

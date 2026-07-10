@@ -1,7 +1,7 @@
 {
   "title": "fatal error class name must be a valid object or a string",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Debugging Fatal Errors: Solving \"Class Name Must Be a Valid Object or a String\" in Laravel Controllers Welcome to the world of Laravel and PHP! As you dive...",

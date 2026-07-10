@@ -1,7 +1,7 @@
 {
   "title": "How to get the id of the current model in Laravel when saving",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Get the Parent Model ID When Saving Child Models in Laravel As developers working with relational data in frameworks like Laravel, managing foreign...",

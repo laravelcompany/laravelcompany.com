@@ -1,7 +1,7 @@
 {
   "title": "How to get all pending jobs in laravel queue on redis?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Retrieving Pending Jobs from Laravel Queue on Redis - A Comprehensive Guide for Developers Introduction: In the world of web development, efficiency and...",

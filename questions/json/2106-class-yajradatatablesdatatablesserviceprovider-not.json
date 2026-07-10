@@ -1,7 +1,7 @@
 {
   "title": "Class 'Yajra\\DataTables\\DatatablesServiceProvider' not found",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting 'Yajra\\DataTables\\DatatablesServiceProvider' not Found Issue in Shared Hosting Servers Body Text: Introduction: Ensure that you have...",

@@ -1,7 +1,7 @@
 {
   "title": "The request response was returned in $kernel->handle($request)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding the Core: Understanding `$kernel->handle($request)` in Laravel As developers working with frameworks like Laravel, understanding the internal...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel HTTP client - How to send file",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering File Transfers in Laravel: Sending Files via the HTTP Client As a developer working with APIs, one of the most common hurdles is correctly...",

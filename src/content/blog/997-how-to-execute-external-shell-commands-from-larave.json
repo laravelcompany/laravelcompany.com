@@ -1,7 +1,7 @@
 {
   "title": "How to execute external shell commands from laravel controller?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "How to Execute External Shell Commands from Laravel Controller When working with Laravel, it is often necessary to execute external shell commands directly in...",

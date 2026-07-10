@@ -1,7 +1,7 @@
 {
   "title": "Invalid datetime format: 1292 Incorrect datetime value - Laravel 5.2",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Invalid datetime format: 1292 Incorrect datetime value - Laravel 5.2: A Comprehensive Guide Facing the error \"SQLSTATE[22007]: Invalid datetime format: 1292...",

@@ -1,7 +1,7 @@
 {
   "title": "Check if column exist in Laravel model's table and then apply a condition",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Checking for Existence of a Column in Laravel Model's Table and Applying Conditions Efficiently In Laravel, you may need to query data from your...",

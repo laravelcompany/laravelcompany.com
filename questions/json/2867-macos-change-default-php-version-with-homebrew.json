@@ -1,7 +1,7 @@
 {
   "title": "MacOs change default php version with Homebrew",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Migrating PHP Versions on macOS with Homebrew: A Developer's Guide As developers working within the robust ecosystem of PHP, managing different versions is...",

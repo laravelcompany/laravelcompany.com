@@ -1,7 +1,7 @@
 {
   "title": "How can I get the remote IP / Client IP using NGINX in Docker ?? Also using Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Unmasking the Client IP: Getting Real Client Addresses in Dockerized NGINX and Laravel Setups As a senior developer working with modern microservices and...",

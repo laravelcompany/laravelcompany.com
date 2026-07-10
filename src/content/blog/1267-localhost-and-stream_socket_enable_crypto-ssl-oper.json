@@ -1,7 +1,7 @@
 {
   "title": "localhost and \"stream_socket_enable_crypto(): SSL operation failed with code 1\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving \"stream_socket_enable_crypto(): SSL operation failed with code 1\" Issues in Localhost Email Sending Body: When it comes to...",

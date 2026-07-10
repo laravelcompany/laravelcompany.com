@@ -1,7 +1,7 @@
 {
   "title": "Laravel Passport Key path oauth-public.key does not exist or is not readable",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Unraveling Laravel Passport Errors: Key Path Issues and Solutions Body: Laravel Passport is an elegant and straightforward API authorization solution...",

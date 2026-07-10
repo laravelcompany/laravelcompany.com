@@ -1,7 +1,7 @@
 {
   "title": "\"laravel.log\" could not be opened: failed to open stream",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving the Laravel Homestead \"Failed to Open Stream\" Issue Introduction: You have been working on setting up Laravel Homestead on your local OSX...",

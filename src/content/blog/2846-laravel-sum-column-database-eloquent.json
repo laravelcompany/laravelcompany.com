@@ -1,7 +1,7 @@
 {
   "title": "Laravel Sum column database Eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Database Summation in Laravel Eloquent: Resolving Discrepancies Trying to aggregate data from a database using an ORM like Laravel Eloquent can...",

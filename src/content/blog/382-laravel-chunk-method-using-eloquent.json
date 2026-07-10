@@ -1,7 +1,7 @@
 {
   "title": "Laravel Chunk Method Using Eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Processing Large Databases with Laravel's Chunk Method Using Eloquent Introduction Laravel is an impressive PHP framework that provides us...",

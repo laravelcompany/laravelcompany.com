@@ -1,7 +1,7 @@
 {
   "title": "Laravel SQLSTATE[HY000] [1049] Unknown database 'previous_db_name'",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel SQLSTATE[HY000] [1049] Unknown database 'previous_db_name' Error Analysis and Solutions Body: In Laravel, errors like \"SQLSTATE[HY000] [1049]...",

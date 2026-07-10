@@ -1,7 +1,7 @@
 {
   "title": "Laravel Carbon\\Carbon::setLastErrors() argument #1 ($lastErrors) must be of type array, bool given,",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Deciphering the Carbon Error: Why `setLastErrors()` Expects an Array, Not a Boolean As senior developers working with date and time manipulation libraries...",

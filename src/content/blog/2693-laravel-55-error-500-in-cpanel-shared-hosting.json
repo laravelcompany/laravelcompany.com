@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5.5 Error 500 in Cpanel Shared Hosting",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Solving the Laravel 5.5 Error 500 on CPanel Shared Hosting: A Deep Dive into Path and Permissions Dealing with a persistent \"500 Internal Server Error\" on...",

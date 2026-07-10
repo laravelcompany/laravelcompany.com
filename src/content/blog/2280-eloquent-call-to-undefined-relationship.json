@@ -1,7 +1,7 @@
 {
   "title": "Eloquent - Call to undefined relationship",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Addressing Eloquent Call to Undefined Relationships in Laravel Introduction: In Laravel, the Eloquent ORM offers a powerful way of working with...",

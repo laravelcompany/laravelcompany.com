@@ -1,7 +1,7 @@
 {
   "title": "Laravel Artisan: How does `schedule:run` work?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Artisan: Deep Dive into `schedule:run` Command Functionality Body: When working with Laravel, understanding the core features like `php artisan...",

@@ -1,7 +1,7 @@
 {
   "title": "Fatal error: Uncaught ReflectionException: Class config does not exist",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"Fatal error: Uncaught ReflectionException: Class config does not exist\" During Laravel Development Body: In the world of modern web...",

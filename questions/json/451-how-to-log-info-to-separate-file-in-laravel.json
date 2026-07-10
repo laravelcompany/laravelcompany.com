@@ -1,7 +1,7 @@
 {
   "title": "How to Log INFO to separate file in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficiently Logging INFO to Separate Files in Laravel: A Comprehensive Guide Body: Logging is crucial for any application to help developers track,...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel format DateTime from database result",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Format DateTime from Database Result: A Comprehensive Guide Body: Handling date and time data in your Laravel applications can be quite simple...",

@@ -1,7 +1,7 @@
 {
   "title": "Save Multiple Data Once into Database in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Save Multiple Data Once into Database in Laravel: Mastering Batch Insertion As a senior developer working with Laravel and Eloquent, I frequently encounter...",

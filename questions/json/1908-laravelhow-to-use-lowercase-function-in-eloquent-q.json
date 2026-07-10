@@ -1,7 +1,7 @@
 {
   "title": "laravel:how to use LOWERCASE Function in Eloquent Query?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel: How to Use LOWERCASE Function in Eloquent Query Correctly? Body: Introduction Implementing case insensitive search can be a common requirement...",

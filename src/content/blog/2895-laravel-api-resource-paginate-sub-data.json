@@ -1,7 +1,7 @@
 {
   "title": "Laravel API resource paginate sub data",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Pagination with Filtered Data in Laravel API Resources As developers building robust APIs with Laravel, one of the most common requirements is...",

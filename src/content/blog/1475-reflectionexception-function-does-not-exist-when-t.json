@@ -1,7 +1,7 @@
 {
   "title": "\"ReflectionException Function () does not exist\" when trying to setup authentication in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Resolving \"ReflectionException Function () does not exist\" Issues During Authentication Setup in Laravel Introduction: You are experiencing issues while...",

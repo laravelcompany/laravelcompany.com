@@ -1,7 +1,7 @@
 {
   "title": "laravel 5.5 The page has expired due to inactivity. Please refresh and try again",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding and Resolving Laravel 5.5 Expired Session Issues When Using POST Methods Body: Laravel is an extensive PHP framework that streamlines your...",

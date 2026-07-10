@@ -1,7 +1,7 @@
 {
   "title": "Eager load relationships in laravel with conditions on the relation",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Eager Loading Relationships with Conditions in Laravel for Hierarchical Categories and Products Body: In Laravel, eager loading is an efficient...",

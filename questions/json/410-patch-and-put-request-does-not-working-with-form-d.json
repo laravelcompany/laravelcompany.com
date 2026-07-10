@@ -1,7 +1,7 @@
 {
   "title": "PATCH and PUT Request Does not Working with form-data",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding PATCH and PUT Request Issues with Form-Data in Laravel Applications Body: In the past few years, RESTful APIs have become the foundation...",

@@ -1,7 +1,7 @@
 {
   "title": "How to only use created_at in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Streamlining Laravel Timestamps: Customizing Field Names and Disabling Timestamps In today's world where data is the new gold, managing it efficiently...",

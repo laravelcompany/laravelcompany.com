@@ -1,7 +1,7 @@
 {
   "title": "Laravel File Upload Validation",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel File Upload Validation: Enforcing Microsoft Word Files with Custom Code In your Laravel application, you have a form that allows users to upload...",

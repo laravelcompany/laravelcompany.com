@@ -1,7 +1,7 @@
 {
   "title": "Laravel Scheduling call controller",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering Laravel Task Scheduling: How to Properly Call Controller Methods As senior developers working with the Laravel ecosystem, we frequently deal with...",

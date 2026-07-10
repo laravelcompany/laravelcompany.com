@@ -1,7 +1,7 @@
 {
   "title": "Class 'UserTableSeeder' does not exist - Laravel 5.0 [php artisan db:seed]",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting 'UserTableSeeder' Not Found Issues in Laravel 5.0 [php artisan db:seed] Introduction In this blog post, we will address the issue of the...",

@@ -1,7 +1,7 @@
 {
   "title": "A JOIN With Additional Conditions Using Query Builder or Eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: A JOIN With Additional Conditions Using Query Builder or Eloquent Body: I'm trying to add a condition using a JOIN query with Laravel Query Builder....",

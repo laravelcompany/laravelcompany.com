@@ -1,7 +1,7 @@
 {
   "title": "How to return view with flash message?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# How to Return Views with Flash Messages in Laravel: Mastering Session Flashes As a senior developer working with the Laravel ecosystem, managing...",

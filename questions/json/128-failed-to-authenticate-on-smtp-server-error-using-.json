@@ -1,7 +1,7 @@
 {
   "title": "Failed to authenticate on SMTP server error using gmail",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting Mail Authentication Issues in Laravel App Using Gmail SMTP Body: When setting up your first email for a Laravel project, you might come...",

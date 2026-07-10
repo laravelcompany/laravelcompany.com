@@ -1,7 +1,7 @@
 {
   "title": "Laravel Escaping All HTML in Blade Template",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Laravel Escaping All HTML in Blade Template: A Comprehensive Guide to Enabling Content Execution Introduction: Laravel's powerful templating system...",

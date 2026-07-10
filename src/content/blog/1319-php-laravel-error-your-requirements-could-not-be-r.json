@@ -1,7 +1,7 @@
 {
   "title": "PHP Laravel error - Your requirements could not be resolved to an installable set of packages",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Solving Laravel's \"Your requirements could not be resolved\" Issue in WSL2 Ubuntu Body: Creating a Laravel project using Composer on your WSL2 Ubuntu...",

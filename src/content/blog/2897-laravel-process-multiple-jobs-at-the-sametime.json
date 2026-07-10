@@ -1,7 +1,7 @@
 {
   "title": "Laravel process multiple jobs at the sametime",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Unleashing Parallel Power: Running Multiple Jobs Simultaneously in Laravel As a senior developer, I frequently encounter performance bottlenecks where...",

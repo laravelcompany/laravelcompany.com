@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5: Performing an asynchronous task",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Laravel Asynchronicity: Performing Heavy Image Processing Without Timeouts As a senior developer working with Laravel, we constantly face performance...",

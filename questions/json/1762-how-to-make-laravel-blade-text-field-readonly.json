@@ -1,7 +1,7 @@
 {
   "title": "How to make Laravel (Blade) text field readonly",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Effortlessly Making Laravel Blade Text Fields Readonly with PHP Processing Introduction Making certain fields in your Laravel application read-only is...",

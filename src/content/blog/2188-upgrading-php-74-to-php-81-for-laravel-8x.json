@@ -1,7 +1,7 @@
 {
   "title": "Upgrading PHP 7.4 to PHP 8.1 for Laravel 8.x",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Upgrading PHP 7.4 to PHP 8.1 for Laravel 8.x - A Comprehensive Guide Introduction: With Laravel upgrades on the horizon, it's essential to ensure your...",

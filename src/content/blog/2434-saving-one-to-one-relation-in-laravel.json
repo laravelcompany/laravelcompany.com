@@ -1,7 +1,7 @@
 {
   "title": "Saving one to one relation in Laravel",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Mastering One-to-One Relations in Laravel: Why Your Saves Aren't Updating Dealing with Eloquent relationships, especially one-to-one setups, often presents...",

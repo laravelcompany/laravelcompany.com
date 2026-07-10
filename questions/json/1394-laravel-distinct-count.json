@@ -1,7 +1,7 @@
 {
   "title": "Laravel Distinct Count",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Accurately Retrieving Distinct Counts in Laravel Using Eloquent or DB::raw Body: In the world of Laravel, it's common to come across a need for...",

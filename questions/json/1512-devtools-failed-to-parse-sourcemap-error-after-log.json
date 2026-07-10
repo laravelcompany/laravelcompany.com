@@ -1,7 +1,7 @@
 {
   "title": "DevTools failed to parse SourceMap error after login will redirect to that js file",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Troubleshooting DevTools Failed To Parse SourceMap Errors After Login Redirect Issues Body: As developers working on VueJS applications, we often...",

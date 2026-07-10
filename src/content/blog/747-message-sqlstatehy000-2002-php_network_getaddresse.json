@@ -1,7 +1,7 @@
 {
   "title": "message: \"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution (SQL: select * from `users`...)\"",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Message \"SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed\" Error in Laravel Web App Deployment on Ubuntu Server Introduction When web...",

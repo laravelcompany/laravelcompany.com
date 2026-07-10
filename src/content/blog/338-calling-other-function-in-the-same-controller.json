@@ -1,7 +1,7 @@
 {
   "title": "Calling other function in the same controller?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Calling Other Functions in the Same Controller: A Comprehensive Guide to Avoiding Errors in Laravel Controllers As a developer, you might occasionally...",

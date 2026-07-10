@@ -1,7 +1,7 @@
 {
   "title": "Laravel: redirect from controller to named route with params in URL",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Efficient Route Redirection with Named Routes and Parameters in Laravel Body: One of the most common tasks we perform as developers is redirecting users...",

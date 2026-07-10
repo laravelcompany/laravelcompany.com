@@ -1,7 +1,7 @@
 {
   "title": "Order By before Group By using Eloquent (Laravel)",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Order By before Group By using Eloquent (Laravel) Body: Ordering and grouping database records can often be a complex task, especially when dealing with...",

@@ -1,7 +1,7 @@
 {
   "title": "Undefined variable: request",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Debugging Undefined Variable Issues in Laravel Applications: A Comprehensive Guide Undefined variables can be a common issue when working with large or...",

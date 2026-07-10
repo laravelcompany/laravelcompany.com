@@ -1,7 +1,7 @@
 {
   "title": "What is the need for env and env.example files in Laravel?",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: The Importance of .env and .env.example Files in Laravel Application Development Body: As a new or aspiring Laravel developer, you must understand the...",

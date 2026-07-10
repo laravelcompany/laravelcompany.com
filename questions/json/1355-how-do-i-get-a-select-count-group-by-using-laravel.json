@@ -1,7 +1,7 @@
 {
   "title": "How do I get a \"select count(*) group by\" using laravel eloquent",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Achieving \"select count(*) group by\" Using Laravel Eloquent for Advanced Querying There might be several ways to tackle this problem using Laravel...",

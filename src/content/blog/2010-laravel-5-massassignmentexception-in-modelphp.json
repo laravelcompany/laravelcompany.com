@@ -1,7 +1,7 @@
 {
   "title": "Laravel 5 : MassAssignmentException in Model.php",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Unraveling Laravel 5's MassAssignmentException: A Comprehensive Guide to Fixing the _token Issue in Model.php Introduction: When working with Laravel,...",

@@ -1,7 +1,7 @@
 {
   "title": "Laravel doesn't show image",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "# Decoding Image Display Issues in Laravel: Why Your Photos Aren't Showing Up As a senior developer working with the Laravel ecosystem, I frequently encounter...",

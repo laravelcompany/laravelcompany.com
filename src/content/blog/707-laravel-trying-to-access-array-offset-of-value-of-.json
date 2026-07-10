@@ -1,7 +1,7 @@
 {
   "title": "Laravel - Trying to access array offset of value of type int",
   "date": "2026-06-29",
-  "author": "Stefan Izdrail",
+  "author": "Stefan Bogdanescu",
   "authorRole": "Founder & Senior Architect",
   "authorAvatar": "/avatar-stefan.jpg",
   "excerpt": "Title: Understanding Laravel's Array Offset Issue with PHP Versions Introduction Laravel is an open-source PHP framework that enables developers to create web...",
