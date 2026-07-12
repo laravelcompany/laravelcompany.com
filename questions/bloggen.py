@@ -3,7 +3,6 @@
 Generate blog posts from CSV questions using AI with database, resume support,
 fallback, and a live Rich TUI that shows streaming responses and tokens/sec.
 """
-
 import csv
 import json
 import logging
@@ -18,15 +17,15 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from pathlib import Path
 from typing import Optional, Callable
-
 import requests
 from rich.console import Console
 from rich.layout import Layout
 from rich.live import Live
 from rich.panel import Panel
-from rich.progress import BarColumn, Progress, TextColumn, TimeElapsedColumn
+from rich.progress import BarColumn, Progress, TextColumn, TimeElapsedColumn, TimeRemainingColumn
 from rich.table import Table
 from rich.text import Text
+from rich import box
 
 # ============================================================================
 # LOGGING (with colors)
@@ -40,12 +39,10 @@ class ColorFormatter(logging.Formatter):
         logging.CRITICAL: "\033[41m",
     }
     RESET = "\033[0m"
-
     def format(self, record):
         color = self.COLORS.get(record.levelno, self.RESET)
         record.msg = f"{color}{record.msg}{self.RESET}"
         return super().format(record)
-
 
 def setup_logging(verbose=False, log_file=None):
     level = logging.DEBUG if verbose else logging.INFO
@@ -53,18 +50,16 @@ def setup_logging(verbose=False, log_file=None):
     root.setLevel(logging.DEBUG)
     console = logging.StreamHandler(sys.stdout)
     console.setLevel(level)
-    console.setFormatter(ColorFormatter("%(asctime)s  %(levelname)-8s  %(message)s", datefmt="%H:%M:%S"))
+    console.setFormatter(ColorFormatter("%(asctime)s %(levelname)-8s %(message)s", datefmt="%H:%M:%S"))
     root.addHandler(console)
     if log_file:
         fh = logging.FileHandler(log_file, encoding="utf-8")
         fh.setLevel(logging.DEBUG)
-        fh.setFormatter(logging.Formatter("%(asctime)s  %(levelname)-8s  %(name)s  %(message)s"))
+        fh.setFormatter(logging.Formatter("%(asctime)s %(levelname)-8s %(name)s %(message)s"))
         root.addHandler(fh)
         logging.info("Logging to %s", log_file)
 
-
 log = logging.getLogger("bloggen")
-
 
 # ============================================================================
 # CONFIGURATION
@@ -108,8 +103,11 @@ DEFAULT_CONFIG = {
     "debug_ai": False,
     "stream": False,
     "max_tokens": 4096,
+    "no_tui": False,
+    "stream_to_file": None,
+    "stream_lines": 180,
+    "quiet": False,
 }
-
 
 def load_config(config_path=None):
     cfg = dict(DEFAULT_CONFIG)
@@ -118,7 +116,6 @@ def load_config(config_path=None):
             file_cfg = json.load(f)
         cfg.update(file_cfg)
         log.info("Loaded config from %s", config_path)
-
     # Environment overrides
     env_map = {
         "AI_ENDPOINT": "api_endpoint",
@@ -130,17 +127,18 @@ def load_config(config_path=None):
         "DEBUG_AI": "debug_ai",
         "STREAM": "stream",
         "MAX_TOKENS": "max_tokens",
+        "NO_TUI": "no_tui",
+        "STREAM_LINES": "stream_lines",
     }
     for env_key, cfg_key in env_map.items():
         val = os.environ.get(env_key)
         if val is not None:
-            if cfg_key in ("request_timeout", "max_tokens"):
+            if cfg_key in ("request_timeout", "max_tokens", "stream_lines"):
                 val = int(val)
-            elif cfg_key in ("debug_ai", "stream"):
+            elif cfg_key in ("debug_ai", "stream", "no_tui"):
                 val = val.lower() in ("1", "true", "yes")
             cfg[cfg_key] = val
     return cfg
-
 
 # ============================================================================
 # DATABASE
@@ -150,7 +148,6 @@ def get_db_connection(db_path):
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA journal_mode=WAL")
     return conn
-
 
 def init_db(db_path):
     conn = get_db_connection(db_path)
@@ -179,7 +176,6 @@ def init_db(db_path):
     conn.commit()
     conn.close()
 
-
 def import_csv_to_db(csv_file, db_path):
     conn = get_db_connection(db_path)
     cursor = conn.cursor()
@@ -205,7 +201,6 @@ def import_csv_to_db(csv_file, db_path):
     conn.close()
     return inserted
 
-
 def get_records(db_path, status_filter=None, limit=None, max_retries=3):
     conn = get_db_connection(db_path)
     conditions, params = [], []
@@ -223,7 +218,6 @@ def get_records(db_path, status_filter=None, limit=None, max_retries=3):
     rows = cursor.fetchall()
     conn.close()
     return [dict(row) for row in rows]
-
 
 def update_record_status(db_path, record_id, status, blog_post=None, retries=None,
                          word_count=None, error_message=None):
@@ -246,7 +240,6 @@ def update_record_status(db_path, record_id, status, blog_post=None, retries=Non
     conn.commit()
     conn.close()
 
-
 def delete_records(db_path, status=None):
     conn = get_db_connection(db_path)
     if status:
@@ -258,7 +251,6 @@ def delete_records(db_path, status=None):
     conn.close()
     return deleted
 
-
 # ============================================================================
 # AI CALL – SUPPORTS BOTH OPENAI AND OLLAMA NATIVE
 # ============================================================================
@@ -266,7 +258,6 @@ def mask_api_key(key):
     if not key:
         return "<none>"
     return key[:4] + "***" + key[-4:] if len(key) > 8 else "***"
-
 
 def _log_ai_request(payload, cfg):
     if not cfg.get("debug_ai"):
@@ -276,46 +267,74 @@ def _log_ai_request(payload, cfg):
         safe["headers"] = {"Authorization": f"Bearer {mask_api_key(cfg['api_key'])}"}
     log.debug("AI REQUEST: %s", json.dumps(safe, indent=2, ensure_ascii=False))
 
-
 def _stream_response(response, debug_ai, on_chunk=None):
-    for line in response.iter_lines(decode_unicode=True):
-        if not line:
-            continue
-        if line.startswith("data: "):
-            data = line[6:]
-            if data == "[DONE]":
-                break
-            try:
-                chunk = json.loads(data)
-                delta = chunk.get("choices", [{}])[0].get("delta", {})
-                content = delta.get("content", "")
+    """Improved streaming parser – handles SSE and plain JSON fallback."""
+    full_content = []
+    try:
+        # First, check if it's a normal JSON response (e.g., when stream flag ignored)
+        content_type = response.headers.get('content-type', '')
+        if 'application/json' in content_type and not response.headers.get('transfer-encoding') == 'chunked':
+            # Try to parse as JSON directly
+            data = response.json()
+            if 'choices' in data:
+                content = data['choices'][0].get('message', {}).get('content', '') or ''
                 if content:
-                    if debug_ai:
-                        log.debug("STREAM CHUNK: %s", repr(content))
+                    full_content.append(content)
                     if on_chunk:
                         on_chunk(content)
                     yield content
-            except json.JSONDecodeError:
+                    return
+        # Otherwise, treat as SSE stream
+        for line in response.iter_lines(decode_unicode=True, delimiter=None):
+            if not line or line.strip() == "":
                 continue
-        else:
-            try:
-                chunk = json.loads(line)
-                delta = chunk.get("choices", [{}])[0].get("delta", {})
-                content = delta.get("content", "")
-                if content:
-                    if debug_ai:
-                        log.debug("STREAM CHUNK: %s", repr(content))
-                    if on_chunk:
-                        on_chunk(content)
-                    yield content
-            except json.JSONDecodeError:
-                pass
 
+            if debug_ai:
+                log.debug("RAW LINE: %s", line[:300])
+
+            # OpenAI format
+            if line.startswith("data: "):
+                data = line[6:].strip()
+                if data == "[DONE]":
+                    break
+                try:
+                    chunk = json.loads(data)
+                    delta = chunk.get("choices", [{}])[0].get("delta", {})
+                    content = delta.get("content", "") or ""
+                    if content:
+                        full_content.append(content)
+                        if on_chunk:
+                            on_chunk(content)
+                        yield content
+                except (json.JSONDecodeError, KeyError, IndexError) as e:
+                    if debug_ai:
+                        log.debug("JSON parse error on data line: %s", str(e))
+                    continue
+
+            # Fallback: raw JSON line (some endpoints)
+            else:
+                try:
+                    chunk = json.loads(line.strip())
+                    if isinstance(chunk, dict):
+                        delta = chunk.get("choices", [{}])[0].get("delta", {}) or chunk.get("message", {})
+                        content = delta.get("content", "") if isinstance(delta, dict) else ""
+                        if content:
+                            full_content.append(content)
+                            if on_chunk:
+                                on_chunk(content)
+                            yield content
+                except json.JSONDecodeError:
+                    continue
+    except Exception as e:
+        log.warning("Streaming interrupted: %s", e)
+        if debug_ai:
+            log.exception("Streaming error details")
+    # If we got no chunks but have full_content (e.g., from plain JSON), yield it once
+    if full_content and not any(True for _ in []) :  # generator already yielded
+        pass
 
 def call_ai(prompt, cfg, expand=False, on_chunk: Optional[Callable[[str], None]] = None):
-    """Unified AI caller – auto-detects endpoint format.
-       If on_chunk is provided and streaming is enabled, it is called for each content chunk.
-    """
+    """Unified AI caller – auto-detects endpoint format."""
     headers = {"Content-Type": "application/json"}
     if cfg.get("api_key"):
         headers["Authorization"] = f"Bearer {cfg['api_key']}"
@@ -332,7 +351,6 @@ def call_ai(prompt, cfg, expand=False, on_chunk: Optional[Callable[[str], None]]
     endpoint = cfg["api_endpoint"].lower()
     use_ollama = "/api/chat" in endpoint and "/v1/" not in endpoint
 
-    # If streaming is enabled and we have a callback, set stream=True
     stream_enabled = cfg.get("stream", False) and on_chunk is not None
 
     if use_ollama:
@@ -364,6 +382,7 @@ def call_ai(prompt, cfg, expand=False, on_chunk: Optional[Callable[[str], None]]
         log.debug("API attempt %d/%d", attempt, max_retries)
         try:
             _log_ai_request({**payload, "headers": headers}, cfg)
+
             resp = requests.post(
                 cfg["api_endpoint"],
                 headers=headers,
@@ -371,12 +390,12 @@ def call_ai(prompt, cfg, expand=False, on_chunk: Optional[Callable[[str], None]]
                 timeout=timeout,
                 stream=stream_enabled,
             )
+
             log.debug("Request completed in %.2fs", time.time() - start)
 
-            # --- BEGIN FIX: Log raw response for debugging ---
             if cfg.get("debug_ai"):
-                log.debug("RAW RESPONSE BODY (first 2000 chars): %s", resp.text[:2000])
-            # --- END FIX ---
+                log.debug("RAW RESPONSE STATUS: %s", resp.status_code)
+                log.debug("RAW RESPONSE BODY (first 1500 chars): %s", resp.text[:1500] if not stream_enabled else "[STREAMING]")
 
             resp.raise_for_status()
 
@@ -398,12 +417,14 @@ def call_ai(prompt, cfg, expand=False, on_chunk: Optional[Callable[[str], None]]
                     full_content = choices[0].get("message", {}).get("content", "").strip()
 
             if not full_content:
-                raise ValueError("Empty response")
+                raise ValueError("Empty response from API")
 
             wc = len(full_content.split())
             log.debug("Received %d words", wc)
+
             if cfg.get("debug_ai"):
-                log.debug("FULL RESPONSE (truncated): %s", full_content[:2000])
+                log.debug("FULL RESPONSE (truncated): %s...", full_content[:1500])
+
             return full_content
 
         except requests.exceptions.Timeout:
@@ -418,24 +439,25 @@ def call_ai(prompt, cfg, expand=False, on_chunk: Optional[Callable[[str], None]]
             status_code = e.response.status_code if e.response else "?"
             log.error("HTTP %s (attempt %d): %s", status_code, attempt, e)
             if e.response and e.response.text:
-                log.debug("Response body: %s", e.response.text[:500])
+                log.debug("Response body: %s", e.response.text[:800])
             if attempt == max_retries:
                 return None
             wait = backoff ** attempt
             time.sleep(wait)
-        except (json.JSONDecodeError, ValueError) as e:
+        except (json.JSONDecodeError, ValueError, KeyError) as e:
             log.error("Invalid response (attempt %d): %s", attempt, e)
             if attempt == max_retries:
                 return None
             time.sleep(backoff ** attempt)
         except Exception as e:
-            log.warning("API error (attempt %d): %s. Retry in %ds", attempt, e, backoff ** attempt)
+            log.warning("API error (attempt %d): %s", attempt, e)
             if log.isEnabledFor(logging.DEBUG):
                 log.exception("Exception details:")
+            if attempt == max_retries:
+                return None
             time.sleep(backoff ** attempt)
 
     return None
-
 
 def generate_blog_post(title, body, cfg, on_chunk: Optional[Callable[[str], None]] = None):
     """Generate with fallback – returns best content even if below min_words."""
@@ -446,9 +468,9 @@ def generate_blog_post(title, body, cfg, on_chunk: Optional[Callable[[str], None
     best_word_count = 0
 
     for attempt in range(1, cfg["max_retries"] + 1):
-        log.info("Attempt %d/%d...", attempt, cfg["max_retries"])
+        log.info("Attempt %d/%d for '%s'...", attempt, cfg["max_retries"], title[:50])
         if cfg.get("debug_ai"):
-            log.debug("PROMPT (attempt %d): %s", attempt, current_prompt)
+            log.debug("PROMPT (attempt %d): %s", attempt, current_prompt[:500])
 
         content = call_ai(current_prompt, cfg, expand=expand, on_chunk=on_chunk)
         if content is None:
@@ -456,6 +478,7 @@ def generate_blog_post(title, body, cfg, on_chunk: Optional[Callable[[str], None
 
         wc = len(content.split())
         log.info("Generated %d words", wc)
+
         if wc > best_word_count:
             best_content, best_word_count = content, wc
 
@@ -471,16 +494,15 @@ def generate_blog_post(title, body, cfg, on_chunk: Optional[Callable[[str], None
         return best_content
     return None
 
-
 # ============================================================================
-# RICH TUI – Live display with streaming content and tokens/sec
+# RICH TUI – Enhanced with better streaming, stats, and UX
 # ============================================================================
 class RichTUI:
-    def __init__(self, total):
+    def __init__(self, total, stream_lines=180):
         self.total = total
         self.completed = 0
         self.failed = 0
-        self.running = {}  # id -> {title, start_time, word_count, token_count, content}
+        self.running = {}  # id -> {title, start_time, word_count, token_count, content, status}
         self.current_record_id = None
         self.current_content = ""
         self.current_start_time = None
@@ -489,7 +511,9 @@ class RichTUI:
         self.lock = threading.Lock()
         self.console = Console()
         self._stop = False
-        self._thread = None
+        self._start_time = time.time()
+        self.overall_start = time.time()
+        self.stream_lines = stream_lines
 
     def start_record(self, record_id, title):
         with self.lock:
@@ -499,15 +523,23 @@ class RichTUI:
                 "word_count": 0,
                 "token_count": 0,
                 "content": "",
+                "status": "Starting...",
             }
             if self.current_record_id is None:
-                self.current_record_id = record_id
-                self.current_content = ""
-                self.current_start_time = time.time()
-                self.current_word_count = 0
-                self.current_token_count = 0
+                self._switch_to_record(record_id)
+
+    def _switch_to_record(self, record_id):
+        """Internal helper to switch displayed record."""
+        self.current_record_id = record_id
+        if record_id in self.running:
+            rec = self.running[record_id]
+            self.current_content = rec["content"]
+            self.current_word_count = rec["word_count"]
+            self.current_token_count = rec["token_count"]
+            self.current_start_time = rec["start_time"]
 
     def update_stream(self, record_id, chunk):
+        """Append a chunk to the record's content (used during streaming)."""
         with self.lock:
             if record_id not in self.running:
                 return
@@ -515,48 +547,78 @@ class RichTUI:
             rec["content"] += chunk
             words = len(rec["content"].split())
             rec["word_count"] = words
-            rec["token_count"] = int(words * 1.3)  # rough token estimate
+            rec["token_count"] = int(words * 1.35)  # better token estimate
+            rec["status"] = "Streaming..."
 
             if record_id == self.current_record_id:
                 self.current_content = rec["content"]
                 self.current_word_count = words
                 self.current_token_count = rec["token_count"]
 
+    def set_content(self, record_id, content):
+        """Replace the content for a record (used for final non‑streaming result)."""
+        with self.lock:
+            if record_id not in self.running:
+                return
+            rec = self.running[record_id]
+            rec["content"] = content
+            words = len(content.split())
+            rec["word_count"] = words
+            rec["token_count"] = int(words * 1.35)
+            rec["status"] = "Completed" if words > 0 else "Failed"
+
+            if record_id == self.current_record_id:
+                self.current_content = content
+                self.current_word_count = words
+                self.current_token_count = rec["token_count"]
+
+    def set_error(self, record_id, error_msg):
+        """Show an error message in the content panel."""
+        with self.lock:
+            if record_id not in self.running:
+                return
+            rec = self.running[record_id]
+            rec["status"] = f"Error: {error_msg[:60]}"
+            # Optionally, we could set content to error message
+            # but we keep existing content.
+
     def finish_record(self, record_id, success):
         with self.lock:
-            self.running.pop(record_id, None)
+            rec = self.running.pop(record_id, None)
             if success:
                 self.completed += 1
             else:
                 self.failed += 1
+
             if record_id == self.current_record_id:
-                self.current_record_id = None
-                self.current_content = ""
-                self.current_start_time = None
-                self.current_word_count = 0
-                self.current_token_count = 0
                 if self.running:
-                    next_id = next(iter(self.running))
-                    self.current_record_id = next_id
-                    rec2 = self.running[next_id]
-                    self.current_content = rec2["content"]
-                    self.current_word_count = rec2["word_count"]
-                    self.current_token_count = rec2["token_count"]
-                    self.current_start_time = rec2["start_time"]
+                    next_id = next(iter(self.running.keys()))
+                    self._switch_to_record(next_id)
+                else:
+                    self.current_record_id = None
+                    self.current_content = ""
+                    self.current_start_time = None
+                    self.current_word_count = 0
+                    self.current_token_count = 0
 
     def get_current_tokens_per_sec(self):
-        if self.current_start_time is None or self.current_token_count == 0:
+        if not self.current_start_time or self.current_token_count == 0:
             return 0.0
         elapsed = time.time() - self.current_start_time
-        if elapsed <= 0:
-            return 0.0
-        return self.current_token_count / elapsed
+        return self.current_token_count / max(elapsed, 0.001)
+
+    def get_overall_stats(self):
+        elapsed = time.time() - self.overall_start
+        done = self.completed + self.failed
+        speed = done / max(elapsed, 1)
+        eta = (self.total - done) / max(speed, 0.01) if done > 0 else 0
+        return elapsed, speed, eta
 
     def render(self) -> Layout:
         layout = Layout()
         layout.split(
             Layout(name="header", size=3),
-            Layout(name="progress", size=5),
+            Layout(name="progress", size=6),
             Layout(name="main"),
         )
         layout["main"].split_row(
@@ -565,81 +627,107 @@ class RichTUI:
         )
 
         # Header
-        header_text = Text("Blog Post Generator", style="bold blue")
-        layout["header"].update(Panel(header_text, style="white"))
+        header_text = Text("Blog Post Generator • Live Streaming", style="bold blue")
+        layout["header"].update(Panel(header_text, style="white", box=box.ROUNDED))
 
-        # Progress table
+        # Progress
         with self.lock:
             done = self.completed + self.failed
-            pct = done / self.total * 100 if self.total else 0
-            elapsed = time.time() - getattr(self, "_start_time", time.time())
-            table = Table(show_header=False, box=None)
-            table.add_column(justify="left")
-            table.add_column(justify="right")
-            table.add_row("Total", str(self.total))
-            table.add_row("Completed", f"{self.completed} ✅")
-            table.add_row("Failed", f"{self.failed} ❌")
-            table.add_row("Running", str(len(self.running)))
-            table.add_row("Progress", f"{pct:.1f}%")
-            table.add_row("Elapsed", f"{elapsed:.0f}s")
+            pct = (done / self.total * 100) if self.total else 0
+            elapsed, speed, eta = self.get_overall_stats()
+
+            prog_table = Table(show_header=False, box=None, padding=(0, 1))
+            prog_table.add_column(justify="left", width=12)
+            prog_table.add_column(justify="right")
+
+            prog_table.add_row("Total", str(self.total))
+            prog_table.add_row("Completed", f"{self.completed} ✅")
+            prog_table.add_row("Failed", f"{self.failed} ❌")
+            prog_table.add_row("Active", str(len(self.running)))
+            prog_table.add_row("Progress", f"{pct:.1f}%")
+            prog_table.add_row("Elapsed", f"{elapsed:.0f}s")
+            prog_table.add_row("Speed", f"{speed:.2f} posts/min")
+            prog_table.add_row("ETA", f"{eta/60:.1f} min" if eta > 60 else f"{eta:.0f}s")
+
             progress_bar = Progress(
                 TextColumn("[progress.description]{task.description}"),
                 BarColumn(),
                 TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
                 TimeElapsedColumn(),
+                TimeRemainingColumn(),
             )
-            task = progress_bar.add_task("", total=self.total, completed=done)
-            progress_bar.update(task, completed=done)
-            table.add_row("Bar", progress_bar)
-            layout["progress"].update(Panel(table, title="Progress", border_style="green"))
+            progress_bar.add_task("", total=self.total, completed=done)
+            prog_table.add_row("Overall", progress_bar)
 
-        # Current record panel
+            layout["progress"].update(
+                Panel(prog_table, title="Progress", border_style="green", box=box.ROUNDED)
+            )
+
+        # Current record info
         with self.lock:
-            if self.current_record_id is not None and self.current_record_id in self.running:
+            if self.current_record_id and self.current_record_id in self.running:
                 rec = self.running[self.current_record_id]
                 title = rec["title"]
-                word_count = rec["word_count"]
-                token_count = rec["token_count"]
+                wc = rec["word_count"]
+                tc = rec["token_count"]
                 tps = self.get_current_tokens_per_sec()
-                status = "Generating..." if self.current_content else "Waiting for response..."
-                info = (
-                    f"Title: {title[:60]}\n"
-                    f"Status: {status}\n"
-                    f"Words: {word_count}  |  Tokens: {token_count}  |  Tokens/sec: {tps:.2f}"
-                )
-                layout["current"].update(Panel(info, title="Current Record", border_style="cyan"))
-            else:
-                layout["current"].update(Panel("No active record", title="Current Record", border_style="cyan"))
+                status = rec.get("status", "Generating...")
 
-        # Content panel – show current content (truncated to last 200 lines)
+                info = (
+                    f"Title: {title[:65]}\n"
+                    f"Status: {status}\n"
+                    f"Words: {wc} | Tokens: {tc} | Tokens/sec: {tps:.2f}"
+                )
+                layout["current"].update(
+                    Panel(info, title="Current Generation", border_style="cyan", box=box.ROUNDED)
+                )
+            else:
+                layout["current"].update(
+                    Panel("No active generation", title="Current Generation", border_style="cyan", box=box.ROUNDED)
+                )
+
+        # Streaming content (last N lines)
         with self.lock:
-            content = self.current_content
+            content = self.current_content or "Waiting for first tokens..."
+            # If content is just a placeholder and we have no chunks, show a message
+            if content == "Waiting for first tokens..." and self.current_record_id:
+                # Check if record has error status
+                rec = self.running.get(self.current_record_id)
+                if rec and rec.get("status", "").startswith("Error"):
+                    content = f"❌ {rec['status']}"
             lines = content.splitlines()
-            if len(lines) > 200:
-                content = "\n".join(lines[-200:])
-                content = "... (truncated)\n" + content
-            # FIX: removed overflow="fold" for compatibility with older rich versions
-            layout["content"].update(Panel(content, title="Streaming Content", border_style="yellow"))
+            max_lines = self.stream_lines
+            if len(lines) > max_lines:
+                content = "\n".join(lines[-max_lines:])
+                content = f"... [truncated to last {max_lines} lines]\n\n" + content
+
+            layout["content"].update(
+                Panel(
+                    Text(content, style="white"),
+                    title="Live Streaming Output",
+                    border_style="yellow",
+                    box=box.ROUNDED,
+                    padding=(1, 2)
+                )
+            )
 
         return layout
 
     def display_loop(self):
-        self._start_time = time.time()
-        with Live(self.render(), console=self.console, refresh_per_second=5, screen=True) as live:
+        with Live(self.render(), console=self.console, refresh_per_second=6, screen=True, transient=False) as live:
             while not self._stop:
                 live.update(self.render())
-                time.sleep(0.2)
+                time.sleep(0.18)
+            # Final update
             live.update(self.render())
 
     def stop(self):
         self._stop = True
 
-
 # ============================================================================
 # WORKER
 # ============================================================================
 _shutdown_requested = False
-
 
 def _signal_handler(signum, frame):
     global _shutdown_requested
@@ -649,41 +737,79 @@ def _signal_handler(signum, frame):
     _shutdown_requested = True
     log.warning("\nShutdown requested. Finishing current record... (Ctrl+C again to force)")
 
-
-def _worker(cfg, record, tui):
+def _worker(cfg, record, tui, stream_file=None, quiet=False):
     rec_id = record["id"]
     title = record["title"]
     body = record["body"]
     retries = record["retries"] + 1
     db_path = cfg["db_file"]
 
-    tui.start_record(rec_id, title)
+    if tui:
+        tui.start_record(rec_id, title)
+    elif not quiet:
+        log.info("Processing: %s", title[:60])
+
     log.debug("Worker: starting record %d", rec_id)
 
+    # Mark as processing
     conn = get_db_connection(db_path)
     conn.execute("UPDATE blog_posts SET status='processing', retries=?, updated_at=? WHERE id=?",
                  (retries, datetime.now().isoformat(), rec_id))
     conn.commit()
     conn.close()
 
+    stream_output = None
+    if stream_file:
+        # Open file for appending/writing
+        stream_output = open(stream_file, "a", encoding="utf-8") if os.path.exists(stream_file) else open(stream_file, "w", encoding="utf-8")
+
     def on_chunk(chunk):
-        tui.update_stream(rec_id, chunk)
+        if tui:
+            tui.update_stream(rec_id, chunk)
+        if not quiet and not tui:
+            # Print chunk to stdout (when no TUI)
+            sys.stdout.write(chunk)
+            sys.stdout.flush()
+        if stream_output:
+            stream_output.write(chunk)
+            stream_output.flush()
 
     blog_post = generate_blog_post(title, body, cfg, on_chunk=on_chunk if cfg.get("stream") else None)
-    success = blog_post is not None
 
+    if stream_output:
+        stream_output.close()
+
+    success = blog_post is not None
     if success:
         wc = len(blog_post.split())
         update_record_status(db_path, rec_id, "completed", blog_post=blog_post,
                              word_count=wc, error_message=None)
-        log.info("✅ %s (%d words)", title[:60], wc)
+        if tui:
+            # Update TUI with final content (in case streaming was off or missed some)
+            tui.set_content(rec_id, blog_post)
+            log.info("✅ Completed %s (%d words)", title[:60], wc)
+        else:
+            if not quiet:
+                log.info("✅ Completed %s (%d words)", title[:60], wc)
+            # If no TUI, print the final post if quiet? Actually we already printed chunks.
+            # For non-streaming, we need to print the final post.
+            if not cfg.get("stream") and not quiet:
+                print("\n--- FINAL POST ---\n")
+                print(blog_post)
+                print("\n---\n")
     else:
-        update_record_status(db_path, rec_id, "failed", error_message="Failed after retries")
-        log.error("❌ %s", title[:60])
+        error_msg = "Failed after retries"
+        update_record_status(db_path, rec_id, "failed", error_message=error_msg)
+        if tui:
+            tui.set_error(rec_id, error_msg)
+            log.error("❌ Failed %s", title[:60])
+        else:
+            if not quiet:
+                log.error("❌ Failed %s", title[:60])
 
-    tui.finish_record(rec_id, success)
+    if tui:
+        tui.finish_record(rec_id, success)
     return success
-
 
 def process_records(cfg, limit=None, force=False):
     global _shutdown_requested
@@ -698,6 +824,7 @@ def process_records(cfg, limit=None, force=False):
 
     records = get_records(cfg["db_file"], status_filter="pending", limit=limit,
                           max_retries=cfg["max_retries"])
+
     if not records:
         log.info("No pending records.")
         return
@@ -707,19 +834,32 @@ def process_records(cfg, limit=None, force=False):
 
     concurrency = cfg.get("concurrency", 1)
     if cfg.get("stream") and concurrency > 1:
-        log.warning("Streaming enabled – reducing concurrency to 1 for better TUI experience.")
+        log.warning("Streaming enabled – forcing concurrency=1 for coherent TUI streaming.")
         concurrency = 1
 
-    tui = RichTUI(total)
-    tui_thread = threading.Thread(target=tui.display_loop, daemon=True)
-    tui_thread.start()
+    use_tui = not cfg.get("no_tui", False)
+    stream_lines = cfg.get("stream_lines", 180)
+    stream_file = cfg.get("stream_to_file")
+    quiet = cfg.get("quiet", False)
+
+    tui = None
+    tui_thread = None
+    if use_tui:
+        try:
+            tui = RichTUI(total, stream_lines=stream_lines)
+            tui_thread = threading.Thread(target=tui.display_loop, daemon=True)
+            tui_thread.start()
+        except Exception as e:
+            log.warning("Failed to start TUI, falling back to console mode: %s", e)
+            use_tui = False
+            tui = None
 
     with ThreadPoolExecutor(max_workers=concurrency) as pool:
         futures = []
         for rec in records:
             if _shutdown_requested:
                 break
-            f = pool.submit(_worker, cfg, rec, tui)
+            f = pool.submit(_worker, cfg, rec, tui, stream_file, quiet)
             futures.append((f, rec["id"]))
 
         for f, rid in futures:
@@ -730,12 +870,15 @@ def process_records(cfg, limit=None, force=False):
                 if log.isEnabledFor(logging.DEBUG):
                     log.exception("Details:")
                 update_record_status(cfg["db_file"], rid, "failed", error_message=str(e))
-                tui.finish_record(rid, success=False)
+                if tui:
+                    tui.set_error(rid, str(e))
+                    tui.finish_record(rid, success=False)
 
-    tui.stop()
-    tui_thread.join(timeout=2)
+    if tui:
+        tui.stop()
+        if tui_thread:
+            tui_thread.join(timeout=3)
     log.info("Processing finished.")
-
 
 # ============================================================================
 # EXPORT, STATS, OTHER COMMANDS
@@ -764,7 +907,6 @@ def export_posts(db_path, export_dir, status="completed"):
         log.info("Exported: %s", filepath.name)
     return exported
 
-
 def show_stats(db_path):
     conn = get_db_connection(db_path)
     cursor = conn.execute("SELECT status, COUNT(*) FROM blog_posts GROUP BY status")
@@ -777,12 +919,11 @@ def show_stats(db_path):
     completed, avg, mn, mx = cursor.fetchone()
     conn.close()
     log.info("📊 Database Statistics")
-    log.info("  Total: %d", total)
+    log.info(" Total: %d", total)
     for s in ("pending", "processing", "completed", "failed"):
-        log.info("  %s: %d", s.capitalize(), status_counts.get(s, 0))
+        log.info(" %s: %d", s.capitalize(), status_counts.get(s, 0))
     if completed:
-        log.info("  Completed posts: avg=%.0f, min=%d, max=%d", avg, mn, mx)
-
+        log.info(" Completed posts: avg=%.0f, min=%d, max=%d", avg, mn, mx)
 
 def cmd_list(db_path, status):
     records = get_records(db_path, status_filter=status if status != "all" else None)
@@ -790,12 +931,11 @@ def cmd_list(db_path, status):
         log.info("No records found with status '%s'.", status)
         return
     log.info("Records (status=%s):", status)
-    log.info("  %-4s  %-10s  %-5s  %s", "ID", "Status", "Words", "Title")
-    log.info("  %s", "-" * 80)
+    log.info(" %-4s %-10s %-5s %s", "ID", "Status", "Words", "Title")
+    log.info(" %s", "-" * 80)
     for rec in records:
         wc = rec.get("word_count", 0) or (len(rec.get("blog_post", "").split()) if rec.get("blog_post") else 0)
-        log.info("  %-4d  %-10s  %-5d  %s", rec["id"], rec["status"], wc, rec["title"][:70])
-
+        log.info(" %-4d %-10s %-5d %s", rec["id"], rec["status"], wc, rec["title"][:70])
 
 def cmd_show(db_path, record_id):
     conn = get_db_connection(db_path)
@@ -818,7 +958,6 @@ def cmd_show(db_path, record_id):
     if rec.get("blog_post"):
         log.info("\n--- Generated Blog Post ---\n%s", rec["blog_post"])
 
-
 def test_connection(cfg):
     headers = {"Content-Type": "application/json"}
     if cfg.get("api_key"):
@@ -833,7 +972,6 @@ def test_connection(cfg):
     except Exception as e:
         log.error("❌ Connection failed: %s", e)
         return False
-
 
 # ============================================================================
 # MAIN
@@ -861,12 +999,16 @@ def parse_args():
     parser.add_argument("--timeout", type=int, help="Request timeout in seconds")
     parser.add_argument("--pending", action="store_true", help="Show pending count")
     parser.add_argument("--stream", action="store_true", help="Enable streaming and show live content in TUI")
+    parser.add_argument("--no-tui", action="store_true", help="Disable TUI and print streaming content to stdout")
+    parser.add_argument("--stream-to-file", metavar="FILE", help="Write streaming chunks to this file in real time")
+    parser.add_argument("--stream-lines", type=int, default=180, help="Number of lines to show in TUI streaming panel")
+    parser.add_argument("--quiet", action="store_true", help="Suppress progress output when --no-tui is used")
     return parser.parse_args()
-
 
 def main():
     args = parse_args()
     cfg = load_config(args.config)
+
     if args.db:
         cfg["db_file"] = args.db
     if args.export_dir:
@@ -881,6 +1023,14 @@ def main():
         cfg["request_timeout"] = args.timeout
     if args.stream:
         cfg["stream"] = True
+    if args.no_tui:
+        cfg["no_tui"] = True
+    if args.stream_to_file:
+        cfg["stream_to_file"] = args.stream_to_file
+    if args.stream_lines:
+        cfg["stream_lines"] = args.stream_lines
+    if args.quiet:
+        cfg["quiet"] = True
 
     setup_logging(verbose=args.verbose or cfg.get("debug_ai"), log_file=cfg.get("log_file"))
 
@@ -951,7 +1101,6 @@ def main():
     # Process
     process_records(cfg, limit=args.limit, force=args.force)
     show_stats(db_path)
-
 
 if __name__ == "__main__":
     main()
