@@ -1,0 +1,11 @@
+{
+  "title": "Ajax Post not Working in laravel 5.1",
+  "date": "2026-06-29",
+  "author": "Stefan Bogdanescu",
+  "authorRole": "Founder & Senior Architect",
+  "authorAvatar": "/avatar-stefan.jpg",
+  "excerpt": "# Fixing AJAX POST Failures in Laravel 5.1: Mastering the CSRF Challenge As a senior developer working with the Laravel ecosystem, I frequently encounter...",
+  "image": null,
+  "tags": [],
+  "content": "# Fixing AJAX POST Failures in Laravel 5.1: Mastering the CSRF Challenge\n\nAs a senior developer working with the Laravel ecosystem, I frequently encounter situations where dynamic data submission"
+}

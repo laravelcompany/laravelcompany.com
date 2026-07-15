@@ -1,0 +1,11 @@
+{
+  "title": "Route::controllers - Method [index] does not exist on [App\\Http\\Controllers",
+  "date": "2026-06-29",
+  "author": "Stefan Bogdanescu",
+  "authorRole": "Founder & Senior Architect",
+  "authorAvatar": "/avatar-stefan.jpg",
+  "excerpt": "# Solving the Method Not Found Error: Integrating Laravel DataTables Correctly As a senior developer working within the Laravel ecosystem, we frequently...",
+  "image": null,
+  "tags": [],
+  "content": "# Solving the Method Not Found Error: Integrating Laravel DataTables Correctly\n\nAs a senior developer working within the Laravel ecosystem, we frequently encounter situations where the routing configuration seems straightforward, yet"
+}

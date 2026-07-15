@@ -1,0 +1,11 @@
+{
+  "title": "Laravel - Error: App\\Exports\\View must be compatible with Maatwebsite\\Excel\\Concerns\\FromView::view(): Illuminate\\Contracts\\View\\View",
+  "date": "2026-06-29",
+  "author": "Stefan Bogdanescu",
+  "authorRole": "Founder & Senior Architect",
+  "authorAvatar": "/avatar-stefan.jpg",
+  "excerpt": "# Solving the Excel Export Nightmare: Understanding the `FromView` Error in Laravel As a senior developer working with the Laravel ecosystem, one of the most...",
+  "image": null,
+  "tags": [],
+  "content": "# Solving the Excel Export Nightmare: Understanding the `FromView` Error in Laravel\n\nAs a senior developer working with the Laravel ecosystem, one of the most common stumbling blocks when integrating data exporting tools like Maatwebsite\\Excel is dealing with interface contracts. The error you encountered—`Declaration of App\\Exports\\UserresponseExport::view(): App\\Exports\\View must be compatible with Maatwebsite\\Excel\\Concerns\\FromView::view(): Illuminate\\Contracts\\View\\View"
+}

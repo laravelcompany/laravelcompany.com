@@ -1,0 +1,11 @@
+{
+  "title": "Laravel Echo SocketIO with private channel",
+  "date": "2026-06-29",
+  "author": "Stefan Bogdanescu",
+  "authorRole": "Founder & Senior Architect",
+  "authorAvatar": "/avatar-stefan.jpg",
+  "excerpt": "# Mastering Private Channels in Laravel Echo: Solving the SocketIO Broadcast Mystery Welcome to the world of real-time communication with Laravel Echo and...",
+  "image": null,
+  "tags": [],
+  "content": "# Mastering Private Channels in Laravel Echo: Solving the SocketIO Broadcast Mystery\n\nWelcome to the world of real-time communication with Laravel Echo and Socket.IO"
+}
