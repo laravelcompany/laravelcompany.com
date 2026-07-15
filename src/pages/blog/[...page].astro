@@ -17,6 +17,24 @@ export async function getStaticPaths({ paginate }) {
 
 const { page } = Astro.props;
 const sortedPosts = page.data;
+
+function getPageNumbers(current: number, last: number): (number | "...")[] {
+  if (last <= 7) return Array.from({ length: last }, (_, i) => i + 1);
+
+  const pages: (number | "...")[] = [1];
+  const delta = 1;
+  const rangeStart = Math.max(2, current - delta);
+  const rangeEnd = Math.min(last - 1, current + delta);
+
+  if (rangeStart > 2) pages.push("...");
+  for (let i = rangeStart; i <= rangeEnd; i++) pages.push(i);
+  if (rangeEnd < last - 1) pages.push("...");
+
+  pages.push(last);
+  return pages;
+}
+
+const pageNumbers = getPageNumbers(page.currentPage, page.lastPage);
 ---
 
 <Layout
@@ -103,8 +121,10 @@ const sortedPosts = page.data;
           )}
 
           <div class="flex items-center gap-1">
-            {Array.from({ length: page.lastPage }, (_, i) => i + 1).map((p) => (
-              p === page.currentPage ? (
+            {pageNumbers.map((p) => (
+              p === "..." ? (
+                <span class="w-9 h-9 flex items-center justify-center text-sm text-white/40 select-none">...</span>
+              ) : p === page.currentPage ? (
                 <span class="w-9 h-9 rounded-lg bg-payflo-purple text-white flex items-center justify-center text-sm font-semibold">{p}</span>
               ) : (
                 <a
