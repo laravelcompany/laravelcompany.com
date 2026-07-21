@@ -5,53 +5,95 @@ import { Icon } from "astro-icon/components";
 interface TeamMember {
   name: string;
   role: string;
+  desc: string;
   skills: string[];
   github: string;
   avatar: string;
+  initials: string;
+  left: number;
+  top: number;
+  color1: string;
+  color2: string;
 }
 
 const teamMembers: TeamMember[] = [
   {
     name: "Bogdan Boti",
-    role: "Full-Stack Developer",
-    skills: ["Laravel", "Vue.js", "MySQL"],
+    role: "Marketing",
+    desc: "Laravel Community Member",
+    skills: ["Laravel", "SEO", "AI"],
     github: "Bogdanboti",
     avatar: "https://avatars.githubusercontent.com/u/90279111?s=96&v=4",
+    initials: "BB",
+    left: 9,
+    top: 34,
+    color1: "#f97316",
+    color2: "#facc15",
   },
   {
     name: "Stefan Bogdan",
-    role: "Senior Full-Stack Developer",
-    skills: ["Laravel", "React", "DevOps"],
+    role: "Founder",
+    desc: "Laravel Core Team Contributor",
+    skills: ["Laravel", "Vue", "AI"],
     github: "izdrail",
     avatar: "https://avatars.githubusercontent.com/u/2276408?s=96&v=4",
+    initials: "SB",
+    left: 33,
+    top: 16,
+    color1: "#f472b6",
+    color2: "#fb923c",
   },
   {
     name: "Jon Basildon",
-    role: "Full-Stack Developer",
-    skills: ["Laravel", "Tailwind", "Livewire"],
+    role: "Developer",
+    desc: "Backend & API Specialist",
+    skills: ["PHP", "Laravel", "AWS"],
     github: "jonbasildon",
     avatar: "https://avatars.githubusercontent.com/u/145971646?s=96&v=4",
+    initials: "JB",
+    left: 65,
+    top: 16,
+    color1: "#38bdf8",
+    color2: "#818cf8",
   },
   {
     name: "Andrei M",
-    role: "Full-Stack Developer",
-    skills: ["Laravel", "Vue.js", "API Design"],
+    role: "Marketing",
+    desc: "Laravel Community Member",
+    skills: ["Content", "SEO", "Growth"],
     github: "marmureanuweb",
     avatar: "https://avatars.githubusercontent.com/u/13685130?s=96&v=4",
+    initials: "AM",
+    left: 90,
+    top: 34,
+    color1: "#34d399",
+    color2: "#0ea5e9",
   },
   {
     name: "Marian P",
-    role: "Senior Developer",
-    skills: ["Laravel", "React", "PostgreSQL"],
+    role: "Developer",
+    desc: "Full Stack Developer",
+    skills: ["Laravel", "Livewire", "Vue"],
     github: "popiciulo",
     avatar: "https://avatars.githubusercontent.com/u/8106610?s=96&v=4",
+    initials: "MP",
+    left: 22,
+    top: 66,
+    color1: "#a78bfa",
+    color2: "#818cf8",
   },
   {
     name: "Syed Hammad Ahmed",
-    role: "Full-Stack Developer",
-    skills: ["Laravel", "React", "AWS"],
+    role: "Developer",
+    desc: "Backend & DevOps Engineer",
+    skills: ["Laravel", "Docker", "AWS"],
     github: "shammadahmed",
     avatar: "https://avatars.githubusercontent.com/u/8712631?s=96&v=4",
+    initials: "SH",
+    left: 77,
+    top: 66,
+    color1: "#fb7185",
+    color2: "#f59e0b",
   },
 ];
 ---
@@ -60,596 +102,1099 @@ const teamMembers: TeamMember[] = [
   title="Our Team | Laravel Company"
   description="Meet the talented team behind Laravel Company — expert Laravel developers, engineers, and open source contributors building world-class web applications."
 >
-  <!-- ===== HERO + CONSTELLATION ===== -->
-  <section class="relative min-h-screen overflow-hidden bg-[#05080f]">
-    <!-- Three.js Canvas -->
-    <div id="constellation-canvas" class="absolute inset-0 z-0"></div>
+  <!-- Three.js Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
 
-    <!-- Gradient overlays -->
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#05080f] z-[1] pointer-events-none"></div>
-    <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-payflo-purple/5 blur-[150px] rounded-full -z-10 pointer-events-none"></div>
-    <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-payflo-blue/5 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
+  <!-- Film Grain Overlay -->
+  <div class="grain-overlay"></div>
 
-    <div class="relative z-10 pt-20 md:pt-28">
+  <div class="relative z-10">
+    <!-- ==================== HERO ==================== -->
+    <section class="pt-24 md:pt-32 pb-4">
       <div class="container-custom">
-        <nav class="flex justify-center items-center gap-2 text-sm text-white/40 mb-8 animate-on-scroll">
-          <a href="/" class="hover:text-white transition-colors">Home</a>
-          <span>/</span>
-          <span class="text-white/80">Our Team</span>
-        </nav>
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-12">
+          <!-- Left: Text -->
+          <div class="max-w-2xl animate-on-scroll">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-payflo-purple/20 to-payflo-pink/20 border border-payflo-purple/30 text-purple-200 mb-6">
+              <Icon name="ph:users-three" class="w-4 h-4" />
+              Our Team
+            </span>
+            <h1
+              class="text-5xl md:text-6xl lg:text-[52px] font-extrabold leading-[1.05] text-white"
+              style="font-family:'Sora',sans-serif;"
+            >
+              Meet Our <span class="gradient-text">Team</span>
+            </h1>
+            <p class="mt-5 text-base md:text-lg text-purple-200/60 leading-relaxed max-w-xl">
+              The talented individuals behind Laravel Company. We're a team of passionate
+              developers building modern software solutions with Laravel — drag a card to see who moves.
+            </p>
+          </div>
 
-        <div class="text-center max-w-4xl mx-auto animate-on-scroll">
-          <span class="inline-block px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest text-payflo-purple bg-payflo-purple/10 border border-payflo-purple/20 mb-6">
-            Our People
-          </span>
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-white">
-            Meet the <span class="gradient-text">Constellation</span>
-          </h1>
-          <p class="mt-6 text-lg md:text-xl text-white/60 leading-relaxed max-w-2xl mx-auto">
-            A team of passionate Laravel developers, open source contributors, and problem solvers building the future of web applications.
-          </p>
+          <!-- Right: Stat Cards -->
+          <div class="grid grid-cols-2 gap-3 w-full lg:w-auto lg:min-w-[520px] animate-on-scroll" style="animation-delay:0.15s;">
+            {[
+              { icon: "ph:users-three", num: "18+", label: "Developers" },
+              { icon: "ph:cube", num: "250+", label: "Projects" },
+              { icon: "ph:download-simple", num: "10M+", label: "Downloads" },
+              { icon: "ph:star", num: "8+", label: "Years" },
+            ].map((stat) => (
+              <div class="stat-card glass-card !p-3.5 !rounded-2xl flex items-center gap-3 border-white/[0.08] bg-white/[0.04] hover:border-payflo-pink/40 hover:bg-white/[0.07] transition-all duration-300 group cursor-default">
+                <div class="w-[42px] h-[42px] rounded-xl flex items-center justify-center bg-gradient-to-br from-payflo-purple/30 to-payflo-pink/30 border border-white/10">
+                  <Icon name={stat.icon} class="w-4 h-4 text-purple-200" />
+                </div>
+                <div>
+                  <div class="text-lg font-bold text-white leading-none" style="font-family:'Sora',sans-serif;">{stat.num}</div>
+                  <div class="text-xs text-purple-200/50 mt-1">{stat.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONSTELLATION (Desktop) ==================== -->
+    <div id="constellation" class="relative w-full h-[900px] mt-8 hidden lg:block">
+      <!-- SVG Lines -->
+      <svg id="lines-svg" class="absolute inset-0 w-full h-full overflow-visible pointer-events-none">
+        <defs>
+          <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#a855f7" />
+            <stop offset="100%" stop-color="#ec4899" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <!-- Central Laravel Core -->
+      <div class="core" id="core">
+        <div class="core-ring"></div>
+        <div class="core-ring core-ring-r2"></div>
+        <div class="core-glow"></div>
+        <div class="core-gem">
+          <svg width="70" height="80" viewBox="0 0 70 80" fill="none">
+            <path d="M35 2 L66 20 L66 60 L35 78 L4 60 L4 20 Z" stroke="#ff2d20" stroke-width="2" fill="rgba(255,45,32,0.07)" />
+            <path d="M35 2 L35 78 M4 20 L66 60 M66 20 L4 60" stroke="#ff2d20" stroke-width="1.2" opacity="0.6" />
+          </svg>
         </div>
       </div>
 
-      <!-- Constellation -->
-      <div class="mt-10 md:mt-16" id="team-constellation">
-        <div class="max-w-6xl mx-auto px-4">
-          <div class="constellation-container relative" id="constellation-container" data-members={JSON.stringify(teamMembers)}>
-            <!-- Three.js scene (desktop) -->
-            <div id="team-scene-container" class="absolute inset-0 z-[2] hidden lg:block">
-              <canvas id="team-canvas" class="w-full h-full"></canvas>
-            </div>
-
-            <!-- Team Cards Grid (mobile/tablet) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-[3] lg:hidden">
-              {
-                teamMembers.map((member, index) => {
-                  const animationDelay = `${index * 0.15}s`;
-                  return (
-                    <div
-                      class="team-card group animate-on-scroll"
-                      style={`animation-delay: ${animationDelay}`}
-                      data-index={index}
-                    >
-                      <div class="glass-card p-6 md:p-7 text-center border-white/[0.06] hover:border-payflo-purple/30 bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-xl relative overflow-hidden">
-                        {/* Hover glow */}
-                        <div class="absolute -top-20 -right-20 w-40 h-40 bg-payflo-purple/5 blur-[60px] rounded-full group-hover:bg-payflo-purple/10 transition-all duration-700"></div>
-
-                        {/* Avatar with conic gradient ring */}
-                        <div class="relative inline-block mb-5">
-                          <div class="w-24 h-24 rounded-full p-[3px] bg-gradient-to-br from-payflo-purple via-payflo-pink to-payflo-blue animate-spin-slow group-hover:from-payflo-blue group-hover:via-payflo-purple group-hover:to-payflo-pink transition-all duration-700">
-                            <div class="w-full h-full rounded-full overflow-hidden bg-[#05080f]">
-                              <img
-                                src={member.avatar}
-                                alt={`${member.name}`}
-                                class="w-full h-full object-cover"
-                                onerror={`this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=7c3aed&color=fff&size=96'`}
-                                loading="lazy"
-                              />
-                            </div>
-                          </div>
-                          {/* Online dot */}
-                          <div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-emerald-500 border-[3px] border-[#05080f] shadow-lg shadow-emerald-500/30">
-                            <div class="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-30"></div>
-                          </div>
-                        </div>
-
-                        {/* Name & Role */}
-                        <h3 class="text-xl font-bold text-white mb-1">{member.name}</h3>
-                        <p class="text-sm text-payflo-purple/80 font-medium mb-4">{member.role}</p>
-
-                        {/* Skills */}
-                        <div class="flex flex-wrap justify-center gap-2 mb-5">
-                          {member.skills.map((skill) => (
-                            <span class="px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full bg-white/[0.06] text-white/50 border border-white/[0.06] group-hover:border-payflo-purple/20 group-hover:text-white/70 transition-all duration-300">
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-
-                        {/* Social links */}
-                        <div class="flex justify-center gap-3 pt-3 border-t border-white/[0.06]">
-                          <a
-                            href={`https://github.com/${member.github}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="w-9 h-9 rounded-lg bg-white/[0.04] hover:bg-white/10 flex items-center justify-center text-white/40 hover:text-white transition-all duration-200 group/btn"
-                            aria-label={`${member.name}'s GitHub`}
-                          >
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
-                          </a>
-                          <a
-                            href={`https://github.com/${member.github}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="flex items-center gap-1.5 px-3 h-9 rounded-lg bg-white/[0.04] hover:bg-white/10 text-[11px] font-bold text-white/40 hover:text-white uppercase tracking-wider transition-all duration-200"
-                            aria-label={`View ${member.name}'s GitHub profile`}
-                          >
-                            <span>GitHub</span>
-                            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                          </a>
-                        </div>
+      <!-- Team Cards (Desktop Constellation) -->
+      {
+        teamMembers.map((member, i) => (
+          <div class="card-anchor" style={`left:${member.left}%;top:${member.top}%`}>
+            <div
+              class="card-float"
+              style={`animation:${5 + (i % 3)}s ease-in-out infinite;animation-delay:${i * 0.4}s;`}
+            >
+              <div class="card-drag" data-index={i}>
+                <div class="drag-hint">
+                  <Icon name="ph:arrows-out-cardinal" class="w-3 h-3" /> drag me
+                </div>
+                <div class="member-card">
+                  <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] absolute top-3.5 right-3.5" />
+                  <div class="flex gap-3.5 items-start">
+                    <div class="w-[70px] h-[70px] rounded-full p-[2px] bg-gradient-to-br from-violet-500 via-pink-500 to-violet-500 flex-shrink-0">
+                      <div
+                        class="w-full h-full rounded-full flex items-center justify-center font-bold text-white text-lg"
+                        style={`background:linear-gradient(135deg,${member.color1},${member.color2});font-family:'Sora',sans-serif;`}
+                      >
+                        {member.initials}
                       </div>
                     </div>
-                  );
-                })
-              }
+                    <div class="min-w-0">
+                      <div class="font-bold text-[16.5px] text-white">{member.name}</div>
+                      <div class="text-[12.5px] font-bold text-payflo-pink">{member.role}</div>
+                      <div class="text-[12.5px] text-purple-200/50 leading-snug mt-0.5">{member.desc}</div>
+                    </div>
+                  </div>
+                  <div class="flex gap-1.5 mt-3.5 flex-wrap">
+                    {member.skills.map((skill) => (
+                      <span class="text-[11px] px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/[0.09] text-purple-200/50">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                  <div class="flex gap-2 mt-3.5">
+                    <a
+                      href={`https://github.com/${member.github}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-[30px] h-[30px] rounded-lg flex items-center justify-center bg-white/[0.05] border border-white/[0.08] text-purple-200/40 hover:text-white hover:bg-gradient-to-br hover:from-payflo-purple hover:to-payflo-pink transition-all duration-200 hover:-translate-y-0.5"
+                      aria-label={`${member.name}'s GitHub`}
+                    >
+                      <Icon name="ph:github-logo" class="w-3.5 h-3.5" />
+                    </a>
+                    <a
+                      href={`https://github.com/${member.github}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-[30px] h-[30px] rounded-lg flex items-center justify-center bg-white/[0.05] border border-white/[0.08] text-purple-200/40 hover:text-white hover:bg-gradient-to-br hover:from-payflo-purple hover:to-payflo-pink transition-all duration-200 hover:-translate-y-0.5"
+                      aria-label={`${member.name}'s LinkedIn`}
+                    >
+                      <Icon name="ph:linkedin-logo" class="w-3.5 h-3.5" />
+                    </a>
+                    <a
+                      href={`https://github.com/${member.github}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-[30px] h-[30px] rounded-lg flex items-center justify-center bg-white/[0.05] border border-white/[0.08] text-purple-200/40 hover:text-white hover:bg-gradient-to-br hover:from-payflo-purple hover:to-payflo-pink transition-all duration-200 hover:-translate-y-0.5"
+                      aria-label={`${member.name}'s Twitter`}
+                    >
+                      <Icon name="ph:x-logo" class="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        ))
+      }
 
-      <!-- Scroll indicator -->
-      <div class="flex justify-center mt-16 md:mt-20 pb-10 animate-on-scroll">
-        <div class="flex flex-col items-center gap-2 text-white/20">
-          <span class="text-[10px] font-bold uppercase tracking-widest">Scroll to explore</span>
-          <div class="w-5 h-8 rounded-full border border-white/20 flex justify-center pt-1.5">
-            <div class="w-1 h-2 rounded-full bg-white/40 animate-bounce"></div>
-          </div>
-        </div>
+      <!-- Quote Pill -->
+      <div class="quote-pill">
+        <Icon name="ph:users-three" class="w-4 h-4 text-payflo-pink" />
+        A team united by code, driven by purpose.
       </div>
     </div>
-  </section>
 
-  <!-- ===== STATS ===== -->
-  <section class="py-20 md:py-28 relative overflow-hidden bg-[#05080f]">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-payflo-purple/3 via-transparent to-payflo-blue/3 blur-[100px] rounded-full pointer-events-none"></div>
-    <div class="container-custom relative">
-      <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
-        <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">
-          By the <span class="gradient-text">Numbers</span>
-        </h2>
-        <p class="mt-4 text-white/50 text-lg">The reach and impact of our work across the Laravel ecosystem.</p>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-        {[
-          { value: "18+", label: "Developers", icon: "ph:users-three-duotone" },
-          { value: "250+", label: "Projects Delivered", icon: "ph:rocket-launch-duotone" },
-          { value: "10M+", label: "Package Downloads", icon: "ph:download-duotone" },
-          { value: "8+", label: "Years in Business", icon: "ph:calendar-check-duotone" },
-        ].map((stat, i) => (
-          <div
-            class="animate-on-scroll glass-card p-6 md:p-8 text-center border-white/[0.06] hover:border-payflo-purple/20 bg-white/[0.03] group"
-            style={`animation-delay: ${i * 0.1}s`}
-          >
-            <Icon name={stat.icon} class="w-8 h-8 mx-auto mb-4 text-payflo-purple/60 group-hover:text-payflo-purple transition-colors" />
-            <div class="text-3xl md:text-4xl font-black text-white mb-1">{stat.value}</div>
-            <div class="text-sm text-white/40 font-medium">{stat.label}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BOTTOM 3-COLUMN SECTION ===== -->
-  <section class="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-[#05080f] via-payflo-dark to-payflo-dark">
-    <div class="container-custom">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-        <!-- Why Companies Choose Us -->
-        <div class="animate-on-scroll">
-          <div class="glass-card p-8 border-white/[0.06] bg-white/[0.02] h-full">
-            <div class="w-12 h-12 rounded-xl bg-payflo-purple/10 border border-payflo-purple/20 flex items-center justify-center mb-6">
-              <Icon name="ph:star-duotone" class="w-6 h-6 text-payflo-purple" />
+    <!-- ==================== MOBILE CARDS ==================== -->
+    <div class="mobile-cards grid grid-cols-1 sm:grid-cols-2 gap-5 px-4 max-w-5xl mx-auto mt-8 lg:hidden">
+      {
+        teamMembers.map((member) => (
+          <div class="member-card !relative">
+            <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] absolute top-3.5 right-3.5" />
+            <div class="flex gap-3.5 items-start">
+              <div class="w-[70px] h-[70px] rounded-full p-[2px] bg-gradient-to-br from-violet-500 via-pink-500 to-violet-500 flex-shrink-0">
+                <div
+                  class="w-full h-full rounded-full flex items-center justify-center font-bold text-white text-lg"
+                  style={`background:linear-gradient(135deg,${member.color1},${member.color2});font-family:'Sora',sans-serif;`}
+                >
+                  {member.initials}
+                </div>
+              </div>
+              <div class="min-w-0">
+                <div class="font-bold text-[16.5px] text-white">{member.name}</div>
+                <div class="text-[12.5px] font-bold text-payflo-pink">{member.role}</div>
+                <div class="text-[12.5px] text-purple-200/50 leading-snug mt-0.5">{member.desc}</div>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4">Why Companies Choose Us</h3>
-            <ul class="space-y-3">
-              {[
-                "Deep Laravel expertise — core contributors to the ecosystem",
-                "Proven track record with 250+ successful project deliveries",
-                "Open source first — we give back to the community",
-                "Transparent communication and agile development process",
-                "End-to-end service from strategy through deployment and maintenance",
-              ].map((item) => (
-                <li class="flex items-start gap-3 text-sm text-white/60">
-                  <svg class="w-4 h-4 mt-0.5 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <!-- Tech Stack -->
-        <div class="animate-on-scroll" style="animation-delay:0.1s">
-          <div class="glass-card p-8 border-white/[0.06] bg-white/[0.02] h-full">
-            <div class="w-12 h-12 rounded-xl bg-payflo-blue/10 border border-payflo-blue/20 flex items-center justify-center mb-6">
-              <Icon name="ph:code-duotone" class="w-6 h-6 text-payflo-blue" />
-            </div>
-            <h3 class="text-xl font-bold text-white mb-4">Our Tech Stack</h3>
-            <div class="flex flex-wrap gap-2">
-              {["Laravel", "PHP", "Vue.js", "React", "Tailwind", "Livewire", "Alpine.js", "MySQL", "PostgreSQL", "Redis", "AWS", "Vapor", "Docker", "GitHub Actions", "Three.js"].map((tech) => (
-                <span class="px-3 py-1.5 text-xs font-bold uppercase tracking-wider rounded-lg bg-white/[0.04] text-white/50 border border-white/[0.06] hover:border-payflo-purple/30 hover:text-white/80 hover:bg-white/[0.06] transition-all duration-200 cursor-default">
-                  {tech}
+            <div class="flex gap-1.5 mt-3.5 flex-wrap">
+              {member.skills.map((skill) => (
+                <span class="text-[11px] px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/[0.09] text-purple-200/50">
+                  {skill}
                 </span>
               ))}
             </div>
-          </div>
-        </div>
-
-        <!-- Open Source Impact -->
-        <div class="animate-on-scroll" style="animation-delay:0.2s">
-          <div class="glass-card p-8 border-white/[0.06] bg-white/[0.02] h-full">
-            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6">
-              <Icon name="ph:github-logo-duotone" class="w-6 h-6 text-emerald-400" />
+            <div class="flex gap-2 mt-3.5">
+              <a
+                href={`https://github.com/${member.github}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-[30px] h-[30px] rounded-lg flex items-center justify-center bg-white/[0.05] border border-white/[0.08] text-purple-200/40 hover:text-white hover:bg-gradient-to-br hover:from-payflo-purple hover:to-payflo-pink transition-all duration-200"
+                aria-label={`${member.name}'s GitHub`}
+              >
+                <Icon name="ph:github-logo" class="w-3.5 h-3.5" />
+              </a>
+              <a
+                href={`https://github.com/${member.github}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-[30px] h-[30px] rounded-lg flex items-center justify-center bg-white/[0.05] border border-white/[0.08] text-purple-200/40 hover:text-white hover:bg-gradient-to-br hover:from-payflo-purple hover:to-payflo-pink transition-all duration-200"
+                aria-label={`${member.name}'s LinkedIn`}
+              >
+                <Icon name="ph:linkedin-logo" class="w-3.5 h-3.5" />
+              </a>
+              <a
+                href={`https://github.com/${member.github}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-[30px] h-[30px] rounded-lg flex items-center justify-center bg-white/[0.05] border border-white/[0.08] text-purple-200/40 hover:text-white hover:bg-gradient-to-br hover:from-payflo-purple hover:to-payflo-pink transition-all duration-200"
+                aria-label={`${member.name}'s Twitter`}
+              >
+                <Icon name="ph:x-logo" class="w-3.5 h-3.5" />
+              </a>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4">Open Source Impact</h3>
-            <ul class="space-y-4">
-              {[
-                { pkg: "Laravel SEO", desc: "Powerful search engine optimization for Laravel apps", downloads: "2.5M+" },
-                { pkg: "Laravel Mail", desc: "Beautiful transactional email package", downloads: "1.8M+" },
-                { pkg: "Laravel GPT", desc: "AI integration toolkit for Laravel", downloads: "1.2M+" },
-              ].map((pkg) => (
-                <li class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] hover:bg-white/[0.06] transition-colors">
-                  <div class="w-8 h-8 rounded-lg bg-payflo-purple/10 border border-payflo-purple/20 flex items-center justify-center shrink-0 mt-0.5">
-                    <Icon name="ph:puzzle-piece-duotone" class="w-4 h-4 text-payflo-purple" />
-                  </div>
-                  <div class="min-w-0">
-                    <div class="flex items-center gap-2 mb-0.5">
-                      <span class="text-sm font-bold text-white">{pkg.pkg}</span>
-                      <span class="text-[10px] font-bold text-emerald-500/70 bg-emerald-500/10 px-1.5 py-0.5 rounded">{pkg.downloads} downloads</span>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- ==================== BOTTOM 3-COLUMN SECTION ==================== -->
+    <section class="py-20 md:py-28 relative overflow-hidden">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-payflo-purple/3 via-transparent to-payflo-blue/3 blur-[100px] rounded-full pointer-events-none"></div>
+      <div class="container-custom relative">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+          <!-- Why Companies Choose Us -->
+          <div class="animate-on-scroll">
+            <div class="glass-card p-8 border-white/[0.06] bg-white/[0.02] h-full">
+              <div class="w-12 h-12 rounded-xl bg-payflo-purple/10 border border-payflo-purple/20 flex items-center justify-center mb-6">
+                <Icon name="ph:star-duotone" class="w-6 h-6 text-payflo-purple" />
+              </div>
+              <h3
+                class="text-xl font-bold text-white mb-5"
+                style="font-family:'Sora',sans-serif;"
+              >
+                Why Companies Choose Us
+              </h3>
+              <ul class="space-y-3">
+                {[
+                  { icon: "ph:git-branch", title: "Laravel Core", sub: "Contributors" },
+                  { icon: "ph:git-fork", title: "Open Source", sub: "Creators" },
+                  { icon: "ph:magic-wand", title: "AI & Innovation", sub: "Focused" },
+                  { icon: "ph:lightning", title: "Performance", sub: "Experts" },
+                  { icon: "ph:stack-simple", title: "Clean & Scalable", sub: "Architecture" },
+                  { icon: "ph:cloud", title: "DevOps & Cloud", sub: "Specialists" },
+                ].map((item) => (
+                  <li class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg flex items-center justify-center bg-gradient-to-br from-payflo-purple/25 to-payflo-pink/20 border border-white/10 flex-shrink-0">
+                      <Icon name={item.icon} class="w-4 h-4 text-purple-200/80" />
                     </div>
-                    <p class="text-xs text-white/40">{pkg.desc}</p>
+                    <div>
+                      <div class="text-sm font-semibold text-white">{item.title}</div>
+                      <div class="text-xs text-purple-200/50">{item.sub}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="animate-on-scroll" style="animation-delay:0.1s;">
+            <div class="glass-card p-8 border-white/[0.06] bg-white/[0.02] h-full">
+              <div class="w-12 h-12 rounded-xl bg-payflo-blue/10 border border-payflo-blue/20 flex items-center justify-center mb-6">
+                <Icon name="ph:code-duotone" class="w-6 h-6 text-payflo-blue" />
+              </div>
+              <h3
+                class="text-xl font-bold text-white mb-5"
+                style="font-family:'Sora',sans-serif;"
+              >
+                Our Top Tech Stack
+              </h3>
+              <div class="grid grid-cols-2 gap-2.5">
+                {[
+                  { name: "Laravel", color: "#ff2d20", icon: "ph:fire" },
+                  { name: "Livewire", color: "#ff9500", icon: "ph:lightning" },
+                  { name: "Vue.js", color: "#42b883", icon: "ph:paint-brush" },
+                  { name: "PHP", color: "#8993be", icon: "ph:code" },
+                  { name: "Tailwind", color: "#38bdf8", icon: "ph:wind" },
+                  { name: "Docker", color: "#2496ed", icon: "ph:shipping-container" },
+                  { name: "MySQL", color: "#c9b6ff", icon: "ph:database" },
+                  { name: "AWS", color: "#ff9900", icon: "ph:cloud" },
+                ].map((tech) => (
+                  <div class="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:-translate-y-0.5 hover:border-payflo-pink/40 hover:bg-white/[0.07] transition-all duration-200 cursor-default">
+                    <Icon name={tech.icon} class="w-3.5 h-3.5" style={`color:${tech.color};`} />
+                    <span class="text-[13.5px] font-semibold text-purple-200/70">{tech.name}</span>
                   </div>
-                </li>
-              ))}
-            </ul>
+                ))}
+              </div>
+              <div class="text-center text-xs text-purple-200/30 mt-4">+ Many More</div>
+            </div>
+          </div>
+
+          <!-- Open Source Impact -->
+          <div class="animate-on-scroll" style="animation-delay:0.2s;">
+            <div class="glass-card p-8 border-white/[0.06] bg-white/[0.02] h-full">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6">
+                <Icon name="ph:github-logo-duotone" class="w-6 h-6 text-emerald-400" />
+              </div>
+              <h3
+                class="text-xl font-bold text-white mb-5"
+                style="font-family:'Sora',sans-serif;"
+              >
+                Open Source Impact
+              </h3>
+              <ul class="space-y-3">
+                {[
+                  { label: "Laravel Packages", value: "25+", icon: "ph:squares-four" },
+                  { label: "GitHub Repositories", value: "120+", icon: "ph:git-fork" },
+                  { label: "Stars Received", value: "5.2K+", icon: "ph:star" },
+                  { label: "Community Members", value: "15K+", icon: "ph:users-three" },
+                ].map((stat) => (
+                  <li class="flex items-center justify-between py-2.5 border-b border-white/[0.06] last:border-b-0">
+                    <span class="flex items-center gap-2.5 text-sm text-purple-200/50">
+                      <Icon name={stat.icon} class="w-4 h-4" />
+                      {stat.label}
+                    </span>
+                    <span class="font-bold text-payflo-pink" style="font-family:'Sora',sans-serif;">{stat.value}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="py-20 md:py-28 relative overflow-hidden bg-payflo-darker">
-    <div class="absolute top-0 left-1/4 w-96 h-96 bg-payflo-purple/10 blur-[120px] rounded-full pointer-events-none"></div>
-    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-payflo-blue/10 blur-[120px] rounded-full pointer-events-none"></div>
-    <div class="container-custom relative">
-      <div class="max-w-3xl mx-auto text-center animate-on-scroll">
-        <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">
-          Ready to Build Something <span class="gradient-text">Great</span>?
-        </h2>
-        <p class="mt-6 text-lg text-white/60 leading-relaxed">
-          Let's discuss your next project. Our team is ready to help you turn your vision into a powerful, scalable web application.
-        </p>
-        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/contact/" class="btn btn-primary text-base">
-            Start Your Project
-          </a>
-          <a href="/jobs/" class="btn btn-secondary text-base">
-            Join Our Team
-          </a>
+    <!-- ==================== SPECIALISTS INTRO ==================== -->
+    <section class="py-20 md:py-28 relative overflow-hidden">
+      <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-payflo-purple/5 blur-[150px] rounded-full pointer-events-none"></div>
+      <div class="container-custom relative">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+          <!-- Left: Text -->
+          <div class="flex-1 max-w-2xl animate-on-scroll">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-payflo-purple/20 to-payflo-pink/20 border border-payflo-purple/30 text-purple-200 mb-6">
+              <Icon name="ph:target" class="w-4 h-4" />
+              Who We Are
+            </span>
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white mb-6"
+              style="font-family:'Sora',sans-serif;"
+            >
+              Specialists Who Know
+              <span class="gradient-text">Laravel Inside Out</span>
+            </h2>
+            <div class="space-y-4 text-base text-purple-200/60 leading-relaxed">
+              <p>
+                We're not your do-it-all digital agency, but a partner focused on building web
+                applications with a solid foundation that can grow alongside your needs. By asking
+                the right questions first, we make thoughtful architecture decisions, and ship
+                clean code your team can maintain and extend long after launch.
+              </p>
+              <p>
+                Over time, we have created a collection of open source building blocks that
+                allow us to focus all our time and effort on making your project unique, rather
+                than on the scaffolding. And with our experience in building with AI, we can
+                ship faster, iterate more quickly, and develop more prototypes that can validate
+                your ideas.
+              </p>
+            </div>
+            <a
+              href="/contact/"
+              class="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl bg-payflo-purple text-white font-bold text-sm shadow-lg shadow-payflo-purple/25 hover:shadow-payflo-purple/40 hover:scale-105 active:scale-95 transition-all duration-300"
+            >
+              <Icon name="ph:paper-plane-tilt" class="w-4 h-4" />
+              Brief us your project
+            </a>
+          </div>
+
+          <!-- Right: Feature Card -->
+          <div class="w-full lg:w-[400px] flex-shrink-0 animate-on-scroll" style="animation-delay:0.15s;">
+            <div class="glass-card p-8 border-white/[0.06] bg-white/[0.02]">
+              <div class="space-y-4">
+                {[
+                  { icon: "ph:git-branch", title: "Laravel Core", sub: "Contributors to the ecosystem" },
+                  { icon: "ph:git-fork", title: "Open Source", sub: "Creators of reusable packages" },
+                  { icon: "ph:magic-wand", title: "AI & Innovation", sub: "Focused on shipping faster" },
+                  { icon: "ph:lightning", title: "Performance", sub: "Experts in optimization" },
+                  { icon: "ph:stack-simple", title: "Clean Architecture", sub: "Scalable & maintainable code" },
+                  { icon: "ph:cloud", title: "DevOps & Cloud", sub: "Deployment & infrastructure" },
+                ].map((item) => (
+                  <div class="flex items-start gap-4 p-3 rounded-xl hover:bg-white/[0.03] transition-colors">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br from-payflo-purple/25 to-payflo-pink/20 border border-white/10 flex-shrink-0">
+                      <Icon name={item.icon} class="w-5 h-5 text-purple-200/80" />
+                    </div>
+                    <div>
+                      <div class="text-sm font-bold text-white">{item.title}</div>
+                      <div class="text-xs text-purple-200/50 mt-0.5">{item.sub}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ==================== PROCESS ==================== -->
+    <section class="py-20 md:py-28 relative overflow-hidden">
+      <div class="absolute bottom-0 left-1/3 w-[600px] h-[600px] bg-payflo-pink/5 blur-[150px] rounded-full pointer-events-none"></div>
+      <div class="container-custom relative">
+        <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white"
+            style="font-family:'Sora',sans-serif;"
+          >
+            How We <span class="gradient-text">Work</span>
+          </h2>
+          <p class="mt-4 text-purple-200/50 text-lg">A proven process built around your goals, not our convenience.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          {[
+            {
+              step: "01",
+              title: "Research & Analysis",
+              desc: "We dig into your domain before touching any code. We accommodate new projects and legacy applications bursting out of their seams.",
+              icon: "ph:magnifying-glass",
+              iconBg: "bg-payflo-purple/10 border-payflo-purple/20",
+              iconColor: "text-payflo-purple",
+            },
+            {
+              step: "02",
+              title: "Build a Strong Foundation",
+              desc: "A Laravel codebase built for the long haul: clear structure, automated tests, and sensible abstractions that don't fight you when requirements change.",
+              icon: "ph:shield-check",
+              iconBg: "bg-payflo-blue/10 border-payflo-blue/20",
+              iconColor: "text-payflo-blue",
+            },
+            {
+              step: "03",
+              title: "Flexible Development",
+              desc: "We work in short cycles with frequent check-ins. Priorities can shift, but our process is designed for it, so you always get the most valuable thing next.",
+              icon: "ph:arrows-clockwise",
+              iconBg: "bg-payflo-pink/10 border-payflo-pink/20",
+              iconColor: "text-payflo-pink",
+            },
+          ].map((item, i) => (
+            <div class="animate-on-scroll" style={`animation-delay:${i * 0.1}s;`}>
+              <div class="glass-card p-8 border-white/[0.06] bg-white/[0.02] h-full relative overflow-hidden group hover:border-white/[0.12] transition-all duration-300">
+                {/* Step number watermark */}
+                <div class="absolute -top-4 -right-2 text-[100px] font-black text-white/[0.02] leading-none pointer-events-none select-none" style="font-family:'Sora',sans-serif;">
+                  {item.step}
+                </div>
+
+                <div class={`w-12 h-12 rounded-xl border flex items-center justify-center mb-6 ${item.iconBg}`}>
+                  <Icon name={item.icon} class={`w-6 h-6 ${item.iconColor}`} />
+                </div>
+
+                <div class="text-xs font-bold text-purple-200/30 mb-2 tracking-wider" style="font-family:'Sora',sans-serif;">
+                  STEP {item.step}
+                </div>
+                <h3
+                  class="text-xl font-bold text-white mb-3"
+                  style="font-family:'Sora',sans-serif;"
+                >
+                  {item.title}
+                </h3>
+                <p class="text-sm text-purple-200/50 leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== AI ERA ==================== -->
+    <section class="py-20 md:py-28 relative overflow-hidden">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-payflo-purple/5 via-transparent to-payflo-pink/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div class="container-custom relative">
+        <div class="max-w-3xl mx-auto text-center animate-on-scroll">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-payflo-purple/20 to-payflo-pink/20 border border-payflo-purple/30 text-purple-200 mb-6">
+            <Icon name="ph:cpu" class="w-4 h-4" />
+            AI-Powered Development
+          </span>
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white mb-8"
+            style="font-family:'Sora',sans-serif;"
+          >
+            Building for the <span class="gradient-text">AI Era</span>
+          </h2>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-5 text-base text-purple-200/60 leading-relaxed animate-on-scroll" style="animation-delay:0.1s;">
+          <p>
+            AI has genuinely changed how we build. Coding agents like Claude Code, Codex, and
+            Copilot do a serious chunk of the work for us now. They scaffold features, write
+            tests, work through refactors, and handle the kind of repetitive tasks that used to
+            eat half a developer's week. What we used to spend on boilerplate, we now spend on
+            architecture, edge cases, and the parts of your product that actually need careful
+            thinking.
+          </p>
+          <p>
+            None of it ships without a human in front of it. Every result goes through a senior
+            Laravel developer, who reviews it as carefully as they'd review a colleague's pull
+            request. We catch what the agent got wrong, sharpen what's clumsy, and make sure the
+            pieces fit together. The outcome is more software, shipped faster, without the
+            technical debt that usually comes with moving at this speed.
+          </p>
+        </div>
+
+        {/* Tech Badges */}
+        <div class="flex flex-wrap justify-center gap-3 mt-12 animate-on-scroll" style="animation-delay:0.2s;">
+          {[
+            { name: "Laravel", color: "#ff2d20" },
+            { name: "React", color: "#61dafb" },
+            { name: "Livewire", color: "#ff9500" },
+            { name: "Claude Code", color: "#d97706" },
+            { name: "Vue.js", color: "#42b883" },
+            { name: "Docker", color: "#2496ed" },
+          ].map((tech) => (
+            <div class="px-5 py-2.5 rounded-full bg-white/[0.04] border border-white/[0.08] hover:border-white/[0.2] hover:bg-white/[0.07] transition-all duration-200 cursor-default">
+              <span class="text-sm font-semibold" style={`color:${tech.color};`}>{tech.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA BANNER ==================== -->
+    <section class="pb-20 md:pb-28">
+      <div class="container-custom">
+        <a
+          href="/contact/"
+          class="cta-banner group flex items-center justify-between gap-5 p-5 md:p-6 rounded-2xl bg-gradient-to-r from-payflo-purple/15 to-payflo-pink/15 border border-payflo-pink/30 backdrop-blur-md cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_60px_-20px_rgba(236,72,153,0.5)]"
+        >
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center bg-gradient-to-br from-payflo-purple/30 to-payflo-pink/30 border border-white/10">
+              <Icon name="ph:paper-plane-tilt" class="w-5 h-5 text-purple-200" />
+            </div>
+            <div>
+              <div class="font-bold text-base text-white">Work With Us</div>
+              <div class="text-sm text-purple-200/50">Let's build something amazing</div>
+            </div>
+          </div>
+          <Icon name="ph:arrow-right" class="w-5 h-5 text-payflo-pink group-hover:translate-x-1 transition-transform duration-200" />
+        </a>
+      </div>
+    </section>
+  </div>
 </Layout>
 
 <script>
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import * as THREE from "three";
 
-// ── Team data from HTML ──
-const container = document.getElementById('constellation-container');
-const teamMembers = JSON.parse(container?.dataset?.members || '[]');
-const canvas = document.getElementById('team-canvas');
-const sceneContainer = document.getElementById('team-scene-container');
-
-// Only run on desktop where canvas exists
-if (canvas && sceneContainer) {
-const W = sceneContainer.clientWidth || window.innerWidth;
-const H = sceneContainer.clientHeight || 600;
-
-const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-renderer.setSize(W, H);
-renderer.shadowMap.enabled = true;
-
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(45, W / H, 0.1, 200);
-camera.position.set(0, 2, 22);
-camera.lookAt(0, 0, 0);
-
-// ── OrbitControls ──
-const controls = new OrbitControls(camera, canvas);
-controls.enableDamping = true;
-controls.dampingFactor = 0.05;
-controls.autoRotate = true;
-controls.autoRotateSpeed = 0.8;
-controls.minDistance = 10;
-controls.maxDistance = 35;
-controls.target.set(0, 0, 0);
-controls.update();
-
-// ── Lights ──
-scene.add(new THREE.AmbientLight(0x1a0a3a, 3));
-
-const purpleSpot = new THREE.PointLight(0xa855f7, 6, 30);
-purpleSpot.position.set(0, 6, 6);
-scene.add(purpleSpot);
-
-const pinkSpot = new THREE.PointLight(0xec4899, 4, 25);
-pinkSpot.position.set(5, -4, 4);
-scene.add(pinkSpot);
-
-const blueSpot = new THREE.PointLight(0x818cf8, 3, 20);
-blueSpot.position.set(-6, 2, 4);
-scene.add(blueSpot);
-
-// ── Background particles ──
-const bgParticlesGeo = new THREE.BufferGeometry();
-const N = 220;
-const positions = new Float32Array(N * 3);
-const speeds = new Float32Array(N);
-for (let i = 0; i < N; i++) {
-  positions[i*3] = (Math.random() - 0.5) * 120;
-  positions[i*3+1] = (Math.random() - 0.5) * 80;
-  positions[i*3+2] = -10 + (Math.random() - 0.5) * 40;
-  speeds[i] = 0.002 + Math.random() * 0.004;
-}
-bgParticlesGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-const particleMat = new THREE.PointsMaterial({ color: 0x7c3aed, size: 0.28, transparent: true, opacity: 0.55 });
-const particles = new THREE.Points(bgParticlesGeo, particleMat);
-scene.add(particles);
-
-// ── 3D positions for team members ──
-const cardPositions = [
-  new THREE.Vector3(0, 5.5, 0),
-  new THREE.Vector3(5.2, 2.5, 1.2),
-  new THREE.Vector3(4.6, -2.8, -0.8),
-  new THREE.Vector3(0, -5.0, 0.6),
-  new THREE.Vector3(-4.6, -2.8, -1.0),
-  new THREE.Vector3(-5.2, 2.5, 0.9),
+/* =====================================================================
+   TEAM DATA (for constellation positioning)
+===================================================================== */
+const teamData = [
+  { left: 9, top: 34 },
+  { left: 33, top: 16 },
+  { left: 65, top: 16 },
+  { left: 90, top: 34 },
+  { left: 22, top: 66 },
+  { left: 77, top: 66 },
 ];
 
-// ── Glowing orb helpers ──
-function makeOrb(radius, color, pos, emissiveColor) {
-  const group = new THREE.Group();
+/* =====================================================================
+   CONSTELLATION: DRAG + SVG LINES (desktop only)
+===================================================================== */
+const constellation = document.getElementById("constellation");
+const svg = document.getElementById("lines-svg");
+const coreEl = document.getElementById("core");
 
-  const geo = new THREE.SphereGeometry(radius, 24, 24);
-  const mat = new THREE.MeshPhysicalMaterial({
-    color,
-    emissive: emissiveColor || color,
-    emissiveIntensity: 0.3,
-    transparent: true,
-    opacity: 0.85,
-    roughness: 0.15,
-    metalness: 0.1,
+if (constellation && svg && coreEl && window.innerWidth > 1100) {
+  const dragEls = Array.from(constellation.querySelectorAll<HTMLElement>(".card-drag"));
+
+  // Drag state
+  const dragState = dragEls.map(() => ({ dx: 0, dy: 0 }));
+
+  dragEls.forEach((el, i) => {
+    let startX = 0,
+      startY = 0,
+      origX = 0,
+      origY = 0,
+      dragging = false;
+
+    el.addEventListener("pointerdown", (e: PointerEvent) => {
+      dragging = true;
+      el.classList.add("dragging");
+      el.setPointerCapture(e.pointerId);
+      startX = e.clientX;
+      startY = e.clientY;
+      origX = dragState[i].dx;
+      origY = dragState[i].dy;
+    });
+
+    el.addEventListener("pointermove", (e: PointerEvent) => {
+      if (!dragging) return;
+      dragState[i].dx = origX + (e.clientX - startX);
+      dragState[i].dy = origY + (e.clientY - startY);
+      el.style.transform = `translate(-50%,-50%) translate(${dragState[i].dx}px, ${dragState[i].dy}px)`;
+    });
+
+    const end = (e: PointerEvent) => {
+      if (!dragging) return;
+      dragging = false;
+      el.classList.remove("dragging");
+      try { el.releasePointerCapture(e.pointerId); } catch (_) {}
+    };
+    el.addEventListener("pointerup", end);
+    el.addEventListener("pointercancel", end);
   });
-  const mesh = new THREE.Mesh(geo, mat);
-  group.add(mesh);
 
-  const glowGeo = new THREE.SphereGeometry(radius * 1.6, 16, 16);
-  const glowMat = new THREE.MeshBasicMaterial({
-    color: emissiveColor || color,
-    transparent: true,
-    opacity: 0.12,
-  });
-  const glow = new THREE.Mesh(glowGeo, glowMat);
-  group.add(glow);
+  // Draw lines
+  function drawLines() {
+    const rect = constellation!.getBoundingClientRect();
+    const coreRect = coreEl!.getBoundingClientRect();
+    const cx = coreRect.left + coreRect.width / 2 - rect.left;
+    const cy = coreRect.top + coreRect.height / 2 - rect.top;
 
-  const ringGeo = new THREE.RingGeometry(radius * 0.85, radius * 1.15, 32);
-  const ringMat = new THREE.MeshBasicMaterial({
-    color: emissiveColor || color,
-    transparent: true,
-    opacity: 0.35,
-    side: THREE.DoubleSide,
-  });
-  const ring = new THREE.Mesh(ringGeo, ringMat);
-  ring.rotation.x = -Math.PI / 2;
-  ring.position.y = -radius * 0.1;
-  group.add(ring);
+    svg!.querySelectorAll(".link-path, .link-dot").forEach((n) => n.remove());
 
-  group.position.copy(pos);
-  scene.add(group);
-  return group;
-}
+    dragEls.forEach((el, i) => {
+      const r = el.getBoundingClientRect();
+      const x = r.left + r.width / 2 - rect.left;
+      const y = r.top + r.height / 2 - rect.top;
+      const mx = (cx + x) / 2;
+      const my = (cy + y) / 2 - 40;
 
-// ── Center orb (Laravel Company logo) ──
-const centerOrb = makeOrb(0.8, 0x7c3aed, new THREE.Vector3(0, 0, 0), 0xa855f7);
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", `M ${cx} ${cy} Q ${mx} ${my} ${x} ${y}`);
+      path.setAttribute("class", "link-path");
+      svg!.appendChild(path);
 
-// ── Team member orbs ──
-const orbColors = [0xa855f7, 0x818cf8, 0xd946ef, 0x818cf8, 0xa855f7, 0x818cf8];
-const orbs = teamMembers.map((_, i) => {
-  const pos = cardPositions[i];
-  return makeOrb(0.55, orbColors[i], pos, orbColors[i]);
-});
+      const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      dot.setAttribute("cx", String(x));
+      dot.setAttribute("cy", String(y));
+      dot.setAttribute("r", "3");
+      dot.setAttribute("class", "link-dot");
+      svg!.appendChild(dot);
+    });
 
-// ── Connector lines ──
-const centerV = new THREE.Vector3(0, 0, 0);
-cardPositions.forEach((pos, i) => {
-  const dir = new THREE.Vector3().subVectors(pos, centerV);
-  const len = dir.length();
-  const mid = new THREE.Vector3().addVectors(centerV, pos).multiplyScalar(0.5);
-
-  const geo = new THREE.CylinderGeometry(0.03, 0.03, len, 8);
-  const mat = new THREE.MeshBasicMaterial({ color: orbColors[i], transparent: true, opacity: 0.5 });
-  const mesh = new THREE.Mesh(geo, mat);
-  mesh.position.copy(mid);
-  mesh.lookAt(pos);
-  mesh.rotateX(Math.PI / 2);
-  scene.add(mesh);
-
-  const glowGeo = new THREE.CylinderGeometry(0.07, 0.07, len, 8);
-  const glowMat = new THREE.MeshBasicMaterial({ color: orbColors[i], transparent: true, opacity: 0.15 });
-  const glowMesh = new THREE.Mesh(glowGeo, glowMat);
-  glowMesh.position.copy(mid);
-  glowMesh.lookAt(pos);
-  glowMesh.rotateX(Math.PI / 2);
-  scene.add(glowMesh);
-});
-
-// ── HTML Labels ──
-const labelEls = teamMembers.map(member => {
-  const el = document.createElement('div');
-  el.className = 'team-constellation-label';
-  el.innerHTML = `
-    <div class="tcl-avatar"><img src="${member.avatar}" alt="${member.name}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=7c3aed&color=fff&size=48'" loading="lazy" /></div>
-    <div class="tcl-name">${member.name}</div>
-    <div class="tcl-role">${member.role}</div>
-  `;
-  sceneContainer.appendChild(el);
-  return el;
-});
-
-function projectToScreen(vec3, cam, w, h) {
-  const v = vec3.clone().project(cam);
-  return {
-    x: (v.x * 0.5 + 0.5) * w,
-    y: (v.y * -0.5 + 0.5) * h,
-  };
-}
-
-// ── Animation ──
-let t = 0;
-function animate() {
-  requestAnimationFrame(animate);
-  t += 0.012;
-
-  controls.update();
-
-  particles.rotation.y = t * 0.0008;
-  const pos = bgParticlesGeo.attributes.position.array;
-  for (let i = 0; i < N; i++) {
-    pos[i*3+1] += speeds[i];
-    if (pos[i*3+1] > 40) pos[i*3+1] = -40;
+    requestAnimationFrame(drawLines);
   }
-  bgParticlesGeo.attributes.position.needsUpdate = true;
+  requestAnimationFrame(drawLines);
+}
 
-  // Animate orbs
-  orbs.forEach((orb, i) => {
-    orb.position.y = cardPositions[i].y + Math.sin(t + i * 1.1) * 0.15;
-    orb.rotation.y = t * 0.06 + i * 0.4;
+/* =====================================================================
+   THREE.JS BACKGROUND — starfield + wireframe cubes + icosahedron
+===================================================================== */
+(function () {
+  const canvas = document.getElementById("bg-canvas") as HTMLCanvasElement;
+  if (!canvas) return;
+
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(
+    60,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+  );
+  camera.position.z = 60;
+
+  // Purple particle field
+  const particleCount = 700;
+  const positions = new Float32Array(particleCount * 3);
+  for (let i = 0; i < particleCount; i++) {
+    positions[i * 3] = (Math.random() - 0.5) * 260;
+    positions[i * 3 + 1] = (Math.random() - 0.5) * 200;
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 200 - 40;
+  }
+  const pGeo = new THREE.BufferGeometry();
+  pGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+  const pMat = new THREE.PointsMaterial({
+    color: 0xa855f7,
+    size: 0.9,
+    transparent: true,
+    opacity: 0.55,
   });
-  centerOrb.rotation.y = t * 0.04;
+  const points = new THREE.Points(pGeo, pMat);
+  scene.add(points);
 
-  purpleSpot.intensity = 5 + Math.sin(t * 1.3) * 1.5;
-  pinkSpot.intensity = 3.5 + Math.cos(t * 0.9) * 1.2;
+  // Pink particle field
+  const positions2 = new Float32Array(300 * 3);
+  for (let i = 0; i < 300; i++) {
+    positions2[i * 3] = (Math.random() - 0.5) * 220;
+    positions2[i * 3 + 1] = (Math.random() - 0.5) * 160;
+    positions2[i * 3 + 2] = (Math.random() - 0.5) * 160 - 20;
+  }
+  const pGeo2 = new THREE.BufferGeometry();
+  pGeo2.setAttribute("position", new THREE.BufferAttribute(positions2, 3));
+  const pMat2 = new THREE.PointsMaterial({
+    color: 0xec4899,
+    size: 1.1,
+    transparent: true,
+    opacity: 0.45,
+  });
+  const points2 = new THREE.Points(pGeo2, pMat2);
+  scene.add(points2);
 
-  renderer.render(scene, camera);
+  // Mouse-follow physics
+  const basePos1 = positions.slice();
+  const basePos2 = positions2.slice();
+  const vel1 = new Float32Array(positions.length);
+  const vel2 = new Float32Array(positions2.length);
 
-  // Position labels
-  const cW = canvas.clientWidth;
-  const cH = canvas.clientHeight;
-  teamMembers.forEach((_, i) => {
-    const pos = cardPositions[i];
-    const worldPos = new THREE.Vector3(pos.x, orbs[i].position.y + 1.2, pos.z);
-    const sc = projectToScreen(worldPos, camera, cW, cH);
-    const el = labelEls[i];
-    if (sc.x >= -50 && sc.x <= cW + 50 && sc.y >= -50 && sc.y <= cH + 50) {
-      el.style.display = 'block';
-      el.style.left = sc.x + 'px';
-      el.style.top = sc.y + 'px';
-    } else {
-      el.style.display = 'none';
+  const raycaster = new THREE.Raycaster();
+  const mouseNDC = new THREE.Vector2(0, 0);
+  const mousePlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 40);
+  const mouseWorld = new THREE.Vector3();
+  let hasMouse = false;
+
+  const INFLUENCE_RADIUS = 55;
+  const ATTRACT_STRENGTH = 0.9;
+  const SPRING_K = 0.018;
+  const DAMPING = 0.9;
+
+  function applyMouseForces(
+    posArr: Float32Array,
+    baseArr: Float32Array,
+    velArr: Float32Array,
+    group: THREE.Points
+  ) {
+    if (!hasMouse) return;
+    const localMouse = group.worldToLocal(mouseWorld.clone());
+    for (let i = 0; i < posArr.length; i += 3) {
+      const dx = localMouse.x - posArr[i];
+      const dy = localMouse.y - posArr[i + 1];
+      const dz = localMouse.z - posArr[i + 2];
+      const dist = Math.sqrt(dx * dx + dy * dy + dz * dz) || 0.001;
+
+      if (dist < INFLUENCE_RADIUS) {
+        const force = (1 - dist / INFLUENCE_RADIUS) * ATTRACT_STRENGTH;
+        velArr[i] += (dx / dist) * force;
+        velArr[i + 1] += (dy / dist) * force;
+        velArr[i + 2] += (dz / dist) * force;
+      }
+
+      velArr[i] += (baseArr[i] - posArr[i]) * SPRING_K;
+      velArr[i + 1] += (baseArr[i + 1] - posArr[i + 1]) * SPRING_K;
+      velArr[i + 2] += (baseArr[i + 2] - posArr[i + 2]) * SPRING_K;
+
+      velArr[i] *= DAMPING;
+      velArr[i + 1] *= DAMPING;
+      velArr[i + 2] *= DAMPING;
+
+      posArr[i] += velArr[i];
+      posArr[i + 1] += velArr[i + 1];
+      posArr[i + 2] += velArr[i + 2];
     }
-  });
-}
-animate();
+  }
 
-// ── Resize ──
-window.addEventListener('resize', () => {
-  const nW = sceneContainer.clientWidth;
-  const nH = sceneContainer.clientHeight;
-  renderer.setSize(nW, nH);
-  camera.aspect = nW / nH;
-  camera.updateProjectionMatrix();
-  controls.update();
-});
-}
+  // Floating wireframe cubes
+  const cubes: THREE.LineSegments[] = [];
+  const cubeColors = [0xa855f7, 0xec4899, 0x8b5cf6, 0xff2d20];
+  for (let i = 0; i < 10; i++) {
+    const size = 2 + Math.random() * 3.5;
+    const geo = new THREE.BoxGeometry(size, size, size);
+    const edges = new THREE.EdgesGeometry(geo);
+    const mat = new THREE.LineBasicMaterial({
+      color: cubeColors[i % cubeColors.length],
+      transparent: true,
+      opacity: 0.55,
+    });
+    const cube = new THREE.LineSegments(edges, mat);
+    cube.position.set(
+      (Math.random() - 0.5) * 90,
+      (Math.random() - 0.5) * 70,
+      (Math.random() - 0.5) * 50 - 10
+    );
+    cube.userData = {
+      speed: 0.2 + Math.random() * 0.4,
+      rotSpeed: (Math.random() - 0.5) * 0.01,
+      floatPhase: Math.random() * Math.PI * 2,
+      baseY: cube.position.y,
+    };
+    scene.add(cube);
+    cubes.push(cube);
+  }
+
+  // Central wireframe icosahedron
+  const icoGeo = new THREE.IcosahedronGeometry(9, 0);
+  const icoEdges = new THREE.EdgesGeometry(icoGeo);
+  const icoMat = new THREE.LineBasicMaterial({
+    color: 0xff2d20,
+    transparent: true,
+    opacity: 0.5,
+  });
+  const ico = new THREE.LineSegments(icoEdges, icoMat);
+  ico.position.set(0, -2, -25);
+  scene.add(ico);
+
+  scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let targetX = 0;
+  let targetY = 0;
+
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX / window.innerWidth - 0.5;
+    mouseY = e.clientY / window.innerHeight - 0.5;
+    mouseNDC.x = (e.clientX / window.innerWidth) * 2 - 1;
+    mouseNDC.y = -(e.clientY / window.innerHeight) * 2 + 1;
+    hasMouse = true;
+  });
+  window.addEventListener("mouseleave", () => {
+    hasMouse = false;
+  });
+  window.addEventListener(
+    "touchmove",
+    (e) => {
+      if (!e.touches.length) return;
+      const touch = e.touches[0];
+      mouseX = touch.clientX / window.innerWidth - 0.5;
+      mouseY = touch.clientY / window.innerHeight - 0.5;
+      mouseNDC.x = (touch.clientX / window.innerWidth) * 2 - 1;
+      mouseNDC.y = -(touch.clientY / window.innerHeight) * 2 + 1;
+      hasMouse = true;
+    },
+    { passive: true }
+  );
+  window.addEventListener("touchend", () => {
+    hasMouse = false;
+  });
+
+  window.addEventListener("resize", () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+
+  const clock = new THREE.Clock();
+  function animate() {
+    const t = clock.getElapsedTime();
+
+    if (hasMouse) {
+      raycaster.setFromCamera(mouseNDC, camera);
+      raycaster.ray.intersectPlane(mousePlane, mouseWorld);
+    }
+
+    points.rotation.y = t * 0.02;
+    points.rotation.x = t * 0.008;
+    points2.rotation.y = -t * 0.015;
+
+    applyMouseForces(positions, basePos1, vel1, points);
+    applyMouseForces(positions2, basePos2, vel2, points2);
+    pGeo.attributes.position.needsUpdate = true;
+    pGeo2.attributes.position.needsUpdate = true;
+
+    cubes.forEach((cube) => {
+      cube.rotation.x += cube.userData.rotSpeed;
+      cube.rotation.y += cube.userData.rotSpeed * 1.4;
+      cube.position.y =
+        cube.userData.baseY +
+        Math.sin(t * cube.userData.speed + cube.userData.floatPhase) * 3;
+    });
+
+    ico.rotation.y = t * 0.15;
+    ico.rotation.x = t * 0.08;
+    const s = 1 + Math.sin(t * 0.6) * 0.04;
+    ico.scale.set(s, s, s);
+
+    targetX += (mouseX - targetX) * 0.03;
+    targetY += (mouseY - targetY) * 0.03;
+    camera.position.x = targetX * 8;
+    camera.position.y = -targetY * 6;
+    camera.lookAt(0, 0, 0);
+
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
 </script>
 
 <style is:global>
-  @keyframes spin-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  .animate-spin-slow {
-    animation: spin-slow 4s linear infinite;
+  html {
+    overflow-x: hidden;
   }
 
-  @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3), 0 0 40px rgba(124, 58, 237, 0.1); }
-    50% { box-shadow: 0 0 30px rgba(124, 58, 237, 0.5), 0 0 60px rgba(124, 58, 237, 0.2); }
-  }
-  .animate-pulse-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
+  /* ===== Background Canvas & Grain ===== */
+  #bg-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
   }
 
-  .team-card .glass-card {
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                border-color 0.4s ease,
-                background-color 0.4s ease,
-                box-shadow 0.4s ease;
+  .grain-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  .team-card .glass-card:hover {
+
+  /* ===== Constellation Container ===== */
+  #constellation {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+  }
+
+  /* ===== SVG Connecting Lines ===== */
+  .link-path {
+    fill: none;
+    stroke: url(#lineGrad);
+    stroke-width: 1.4;
+    opacity: 0.55;
+    filter: drop-shadow(0 0 4px rgba(168, 124, 255, 0.5));
+  }
+  .link-dot {
+    fill: #c9b6ff;
+    filter: drop-shadow(0 0 5px #a855f7);
+  }
+
+  /* ===== Central Core Gem ===== */
+  .core {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 190px;
+    height: 190px;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .core-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(236, 72, 153, 0.35);
+    animation: core-spin 18s linear infinite;
+  }
+  .core-ring-r2 {
+    inset: -22px;
+    border-color: rgba(139, 92, 246, 0.25);
+    animation-duration: 26s;
+    animation-direction: reverse;
+  }
+  .core-glow {
+    position: absolute;
+    inset: 20px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(236, 72, 153, 0.35),
+      rgba(139, 92, 246, 0.15) 60%,
+      transparent 75%
+    );
+    filter: blur(6px);
+  }
+  .core-gem {
+    position: absolute;
+    inset: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 22px rgba(255, 45, 32, 0.55));
+  }
+
+  @keyframes core-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* ===== Quote Pill ===== */
+  .quote-pill {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(168, 124, 255, 0.22);
+    border-radius: 999px;
+    padding: 12px 26px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(14px);
+    white-space: nowrap;
+    font-size: 14px;
+    color: #b7aed6;
+    z-index: 4;
+  }
+
+  /* ===== Constellation Cards ===== */
+  .card-anchor {
+    position: absolute;
+    z-index: 5;
+  }
+  .card-float {
+    will-change: transform;
+  }
+  .card-drag {
+    width: 280px;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+    will-change: transform;
+    transform: translate(-50%, -50%);
+  }
+  .card-drag.dragging {
+    cursor: grabbing;
+    z-index: 50 !important;
+  }
+  .member-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(168, 124, 255, 0.22);
+    border-radius: 20px;
+    padding: 18px;
+    backdrop-filter: blur(16px);
+    transition:
+      border-color 0.3s ease,
+      background 0.3s ease,
+      box-shadow 0.3s ease;
+    box-shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.6);
+  }
+  .card-anchor:hover .member-card,
+  .card-drag.dragging .member-card {
+    border-color: rgba(236, 72, 153, 0.55);
+    background: rgba(255, 255, 255, 0.075);
+    box-shadow: 0 20px 55px -10px rgba(236, 72, 153, 0.35);
+  }
+
+  /* Drag hint */
+  .drag-hint {
+    position: absolute;
+    top: -9px;
+    right: 8px;
+    font-size: 9.5px;
+    color: #7a7096;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px 7px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 10;
+  }
+  .card-anchor:hover .drag-hint {
+    opacity: 1;
+  }
+
+  /* Floating animation */
+  @keyframes floatY {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(4px, -14px) rotate(0.6deg);
+    }
+  }
+
+  /* ===== Mobile Cards ===== */
+  .mobile-cards .member-card {
+    position: static;
+  }
+
+  /* ===== Team Card Hover (mobile) ===== */
+  .mobile-cards .member-card {
+    transition:
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 0.4s ease,
+      background-color 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+  .mobile-cards .member-card:hover {
     transform: translateY(-6px) scale(1.02);
+    border-color: rgba(236, 72, 153, 0.55);
+    background: rgba(255, 255, 255, 0.075);
     box-shadow: 0 20px 60px rgba(124, 58, 237, 0.15);
   }
 
-  /* Three.js scene container & canvas */
-  #team-scene-container {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-  }
-  #team-canvas {
-    display: block;
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 12px;
+  /* ===== CTA Banner ===== */
+  .cta-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  /* Floating labels above 3D orbs */
-  .team-constellation-label {
-    position: absolute;
-    text-align: center;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s;
-    z-index: 5;
-    width: 120px;
-  }
-  .team-constellation-label .tcl-avatar {
-    width: 48px;
-    height: 48px;
-    margin: 0 auto 6px;
-    border-radius: 50%;
-    padding: 2px;
-    background: linear-gradient(135deg, #a855f7, #ec4899, #3b82f6);
-  }
-  .team-constellation-label .tcl-avatar img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    background: #05080f;
-  }
-  .team-constellation-label .tcl-name {
-    font-weight: 700;
-    font-size: 12px;
-    color: #e2e8f0;
-    white-space: nowrap;
-    line-height: 1.2;
-  }
-  .team-constellation-label .tcl-role {
-    font-size: 10px;
-    color: #a855f7;
-    white-space: nowrap;
-    line-height: 1.3;
-    margin-top: 2px;
-  }
-
-  /* Constellation container responsive */
-  .constellation-container {
-    min-height: 400px;
-  }
-  @media (min-width: 1024px) {
-    .constellation-container {
-      min-height: 500px;
+  /* ===== Responsive ===== */
+  @media (max-width: 1100px) {
+    #constellation {
+      display: none;
     }
-    #team-scene-container {
-      display: block;
+    .mobile-cards {
+      display: grid !important;
     }
   }
 </style>
