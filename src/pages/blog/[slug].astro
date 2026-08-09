@@ -5,6 +5,7 @@ import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
 import logoSrc from "../../assets/logo.svg";
 import { marked } from "marked";
+import { enrichCodeBlocks } from "../../utils/codeHighlighter";
 
 function isMarkdown(content: string): boolean {
   const trimmed = content.trimStart();
@@ -27,9 +28,10 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { data } = post;
-const renderedContent = isMarkdown(data.content)
+const rawContent = isMarkdown(data.content)
   ? marked.parse(data.content) as string
   : data.content;
+const renderedContent = await enrichCodeBlocks(rawContent);
 ---
 
 <Layout
@@ -88,6 +90,51 @@ const renderedContent = isMarkdown(data.content)
     </article>
   </main>
 </Layout>
+
+<script>
+  function copyText(text: string) {
+    if (navigator.clipboard?.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+    return Promise.resolve();
+  }
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const button = target.closest(".code-block__copy");
+    if (!button) return;
+
+    const block = button.closest(".code-block");
+    const codeElement = block?.querySelector("pre code");
+    if (!codeElement) return;
+
+    const text = (codeElement.textContent ?? "").replace(/\n$/, "");
+    const label = button.querySelector(".code-block__copy-label");
+    const iconWrap = button.querySelector(".code-block__copy-icon-wrap");
+    const copyIcon = `<svg class="code-block__copy-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M10.5 5.5v-2a1 1 0 0 0-1-1h-5a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h2" stroke="currentColor" stroke-width="1.4"/></svg>`;
+    const checkIcon = `<svg class="code-block__copy-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+    copyText(text).then(() => {
+      button.classList.add("code-block__copy--done");
+      if (label) label.textContent = "Copied!";
+      if (iconWrap) iconWrap.innerHTML = checkIcon;
+      setTimeout(() => {
+        button.classList.remove("code-block__copy--done");
+        if (label) label.textContent = "Copy";
+        if (iconWrap) iconWrap.innerHTML = copyIcon;
+      }, 2000);
+    });
+  });
+</script>
 
 <style>
   .prose {

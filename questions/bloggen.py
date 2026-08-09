@@ -94,14 +94,14 @@ log = logging.getLogger("bloggen")
 # ============================================================================
 DEFAULT_CONFIG = {
     "api_endpoint": "https://ai.izdrail.com/v1/chat/completions",
-    "model": "gemma4:e2b",
+    "model": "gemma4:12b",
     "api_key": "",
     "request_timeout": 1200,
     "max_retries": 3,
     "backoff_factor": 2,
     "min_words": 350,
     "request_delay": 2.0,
-    "concurrency": 2,
+    "concurrency": 1,
     "system_prompt": (
         "You are a senior developer and technical blogger. "
         "Your answers are accurate, practical, and well-explained. "
