@@ -10,12 +10,54 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-    { name: "Services", href: "/services/" },
+    {
+        name: "Services",
+        href: "/services/",
+        children: [
+            { name: "All Services", href: "/services/" },
+            { name: "Custom Development", href: "/laravel-custom-module-development/" },
+            { name: "SaaS Development", href: "/laravel-saas-development/" },
+            { name: "MVP Development", href: "/laravel-mvp-development/" },
+            { name: "API Development", href: "/laravel-api-development/" },
+            { name: "E-commerce Development", href: "/laravel-ecommerce-development/" },
+            { name: "Laravel Consulting", href: "/laravel-consulting/" },
+            { name: "Maintenance & Support", href: "/laravel-maintenance-support/" },
+        ],
+    },
+    {
+        name: "Products",
+        href: "/products/",
+        children: [
+            { name: "All Products", href: "/products/" },
+            { name: "Laravel SEO", href: "/software/laravel-seo/" },
+            { name: "Laravel Mail", href: "/software/laravel-mail/" },
+            { name: "Laravel GPT", href: "/software/laravel-gpt/" },
+            { name: "Laravel UI", href: "/software/laravel-ui/" },
+            { name: "Laravel Social", href: "/software/laravel-social/" },
+            { name: "LeadsCaptain", href: "/software/leads-captain/" },
+        ],
+    },
     { name: "Open source", href: "/open-source/" },
-    { name: "Products", href: "/products/" },
     { name: "Blog", href: "/blog/" },
-    { name: "About", href: "/about-us/" },
+    {
+        name: "Company",
+        href: "/about-us/",
+        children: [
+            { name: "About Us", href: "/about-us/" },
+            { name: "Our Team", href: "/team/" },
+            { name: "Careers", href: "/jobs/" },
+            { name: "Partners", href: "/partners/" },
+            { name: "ESOP Program", href: "/esop/" },
+            { name: "Pricing", href: "/pricing/" },
+        ],
+    },
 ];
+
+function isActive(href: string): boolean {
+    const path = Astro.url.pathname;
+    if (href === "/") return path === "/";
+    return path === href || path.startsWith(href);
+}
 ---
 
 <header
@@ -47,35 +89,48 @@ const navItems: NavItem[] = [
             {
                 navItems.map((item) => (
                     <div class="relative group">
-                        {item.children ? (
-                            <>
-                                <button
-                                    class="nav-link flex items-center gap-1 py-2 px-3"
-                                    aria-expanded="false"
-                                    aria-haspopup="true"
+                        <a
+                            href={item.href}
+                            target={item.target}
+                            class={
+                                isActive(item.href)
+                                    ? "nav-link active-nav-link flex items-center gap-1 py-2 px-3"
+                                    : "nav-link flex items-center gap-1 py-2 px-3"
+                            }
+                            aria-expanded={item.children ? "false" : undefined}
+                            aria-haspopup={item.children ? "true" : undefined}
+                        >
+                            {item.name}
+                            {item.children && (
+                                <svg
+                                    class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
                                 >
-                                    {item.name}
-                                    <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 z-50">
-                                    <div class="glass-card rounded-xl py-3 min-w-56 shadow-xl border border-white/10">
-                                        {item.children.map((child) => (
-                                            <a
-                                                href={child.href}
-                                                class="block px-4 py-2.5 text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
-                                            >
-                                                {child.name}
-                                            </a>
-                                        ))}
-                                    </div>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            )}
+                        </a>
+                        {item.children && (
+                            <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0 z-50">
+                                <div class="glass-card rounded-xl py-3 min-w-56 shadow-xl border border-white/10">
+                                    {item.children.map((child) => (
+                                        <a
+                                            href={child.href}
+                                            target={child.target}
+                                            class={
+                                                isActive(child.href)
+                                                    ? "block px-4 py-2.5 text-white hover:text-white hover:bg-white/10 bg-white/10 transition-all duration-200 text-sm font-medium"
+                                                    : "block px-4 py-2.5 text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
+                                            }
+                                        >
+                                            {child.name}
+                                        </a>
+                                    ))}
                                 </div>
-                            </>
-                        ) : (
-                            <a href={item.href} class="nav-link py-2 px-3">
-                                {item.name}
-                            </a>
+                            </div>
                         )}
                     </div>
                 ))
@@ -92,22 +147,14 @@ const navItems: NavItem[] = [
             <!-- Mobile Menu Button -->
             <button
                 id="menu-toggle"
-                class="lg:hidden flex flex-col items-center justify-center w-10 h-10 glass-card p-2 focus:outline-none"
+                class="lg:hidden flex flex-col items-center justify-center w-10 h-10 glass-card p-2 focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2"
                 aria-label="Toggle navigation menu"
                 aria-expanded="false"
+                aria-controls="mobile-menu"
             >
-                <div
-                    class="w-6 h-0.5 bg-white mb-1.5 transition-all duration-300 line-1"
-                >
-                </div>
-                <div
-                    class="w-6 h-0.5 bg-white mb-1.5 transition-all duration-300 line-2"
-                >
-                </div>
-                <div
-                    class="w-6 h-0.5 bg-white transition-all duration-300 line-3"
-                >
-                </div>
+                <div class="w-6 h-0.5 bg-white mb-1.5 transition-all duration-300 line-1"></div>
+                <div class="w-6 h-0.5 bg-white mb-1.5 transition-all duration-300 line-2"></div>
+                <div class="w-6 h-0.5 bg-white transition-all duration-300 line-3"></div>
             </button>
         </div>
     </div>
@@ -115,7 +162,7 @@ const navItems: NavItem[] = [
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="mobile-menu">
         <div class="container-custom py-6">
-            <nav class="flex flex-col space-y-2">
+            <nav class="flex flex-col space-y-2" aria-label="Mobile navigation">
                 {
                     navItems.map((item) => (
                         <div class="mobile-nav-group">
@@ -123,20 +170,32 @@ const navItems: NavItem[] = [
                                 <>
                                     <button class="mobile-nav-toggle w-full flex items-center justify-between mobile-menu-item">
                                         <span>{item.name}</span>
-                                        <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                         </svg>
                                     </button>
                                     <div class="mobile-submenu hidden pl-4 mt-2 space-y-2">
                                         {item.children.map((child) => (
-                                            <a href={child.href} class="mobile-submenu-item">
+                                            <a
+                                                href={child.href}
+                                                target={child.target}
+                                                class={
+                                                    isActive(child.href)
+                                                        ? "mobile-submenu-item active"
+                                                        : "mobile-submenu-item"
+                                                }
+                                            >
                                                 {child.name}
                                             </a>
                                         ))}
                                     </div>
                                 </>
                             ) : (
-                                <a href={item.href} class="mobile-menu-item">
+                                <a
+                                    href={item.href}
+                                    target={item.target}
+                                    class={isActive(item.href) ? "mobile-menu-item active" : "mobile-menu-item"}
+                                >
                                     {item.name}
                                 </a>
                             )}
@@ -170,6 +229,8 @@ const navItems: NavItem[] = [
         backdrop-blur: 20px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        max-height: calc(100vh - 5rem);
+        overflow-y: auto;
     }
 
     .mobile-menu.active {
@@ -190,7 +251,8 @@ const navItems: NavItem[] = [
         transition: all 0.3s ease;
     }
 
-    .mobile-menu-item:hover {
+    .mobile-menu-item:hover,
+    .mobile-menu-item.active {
         background: rgba(255, 255, 255, 0.1);
         transform: scale(1.02);
     }
@@ -243,8 +305,9 @@ const navItems: NavItem[] = [
         transition: all 0.3s ease;
     }
 
-    .mobile-submenu-item:hover {
-        background: rgba(255, 255, 255, 0.1);
+    .mobile-submenu-item:hover,
+    .mobile-submenu-item.active {
+        background: rgba(255, 255, 255, 0.15);
     }
 
     @keyframes slideDown {
@@ -258,8 +321,8 @@ const navItems: NavItem[] = [
         }
     }
 
-    /* Hide mobile menu on desktop */
-    @media (min-width: 768px) {
+    /* Hide mobile menu on desktop (matches lg: breakpoint used by the hamburger) */
+    @media (min-width: 1024px) {
         .mobile-menu {
             display: none !important;
         }
@@ -267,76 +330,92 @@ const navItems: NavItem[] = [
 </style>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const header = document.getElementById("main-header");
+    function closeMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const btn = document.getElementById("menu-toggle");
+        if (!menu) return;
+        menu.classList.remove("active");
+        btn?.classList.remove("active");
+        btn?.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+    }
 
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 20) {
-                header?.classList.add("scrolled");
-            } else {
-                header?.classList.remove("scrolled");
-            }
+    function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const btn = document.getElementById("menu-toggle");
+        if (!menu || !btn) return;
+        const isOpen = !menu.classList.contains("active");
+        menu.classList.toggle("active", isOpen);
+        btn.classList.toggle("active", isOpen);
+        btn.setAttribute("aria-expanded", String(isOpen));
+        document.body.style.overflow = isOpen ? "hidden" : "";
+    }
+
+    // Runs on the initial load AND after every view transition so the
+    // freshly swapped-in header keeps working (fixes mobile menu on navigation).
+    document.addEventListener("astro:page-load", () => {
+        document.body.style.overflow = "";
+
+        const header = document.getElementById("main-header");
+        header?.classList.toggle("scrolled", window.scrollY > 20);
+
+        const btn = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (!btn || !mobileMenu) return;
+
+        // data-* guards make the bindings idempotent so handlers never
+        // accumulate when this script is re-injected by view transitions.
+        if (!btn.hasAttribute("data-bound")) {
+            btn.setAttribute("data-bound", "true");
+            btn.addEventListener("click", toggleMobileMenu);
+        }
+
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+            if (link.hasAttribute("data-bound")) return;
+            link.setAttribute("data-bound", "true");
+            link.addEventListener("click", closeMobileMenu);
         });
 
-        const menuToggle = document.getElementById("menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
-
-        console.log("Menu elements:", { menuToggle, mobileMenu });
-
-        if (menuToggle && mobileMenu) {
-            menuToggle.addEventListener("click", function () {
-                console.log("Menu button clicked");
-
-                // Toggle active class on button
-                menuToggle.classList.toggle("active");
-
-                // Toggle menu visibility
-                if (mobileMenu.classList.contains("active")) {
-                    console.log("Hiding menu");
-                    mobileMenu.classList.remove("active");
-                    menuToggle.setAttribute("aria-expanded", "false");
-                } else {
-                    console.log("Showing menu");
-                    mobileMenu.classList.add("active");
-                    menuToggle.setAttribute("aria-expanded", "true");
+        mobileMenu.querySelectorAll(".mobile-nav-toggle").forEach((toggle) => {
+            if (toggle.hasAttribute("data-bound")) return;
+            toggle.setAttribute("data-bound", "true");
+            toggle.addEventListener("click", () => {
+                const submenu = toggle.nextElementSibling;
+                if (submenu && submenu.classList.contains("mobile-submenu")) {
+                    toggle.classList.toggle("active");
+                    submenu.classList.toggle("hidden");
                 }
             });
+        });
+    });
 
-            // Close menu when clicking on links
-            const menuLinks = mobileMenu.querySelectorAll("a");
-            menuLinks.forEach((link) => {
-                link.addEventListener("click", function () {
-                    console.log("Menu link clicked, closing menu");
-                    mobileMenu.classList.remove("active");
-                    menuToggle.classList.remove("active");
-                    menuToggle.setAttribute("aria-expanded", "false");
-                });
-            });
+    // Hide desktop nav on scroll
+    window.addEventListener("scroll", () => {
+        const header = document.getElementById("main-header");
+        header?.classList.toggle("scrolled", window.scrollY > 20);
+    });
 
-            // Close menu on escape key
-            document.addEventListener("keydown", function (event) {
-                if (
-                    event.key === "Escape" &&
-                    mobileMenu.classList.contains("active")
-                ) {
-                    console.log("Escape pressed, closing menu");
-                    mobileMenu.classList.remove("active");
-                    menuToggle.classList.remove("active");
-                    menuToggle.setAttribute("aria-expanded", "false");
-                }
-            });
+    // Close the menu on Escape
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMobileMenu();
+    });
 
-            // Mobile submenu toggles
-            const mobileToggles = document.querySelectorAll('.mobile-nav-toggle');
-            mobileToggles.forEach(toggle => {
-                toggle.addEventListener('click', function() {
-                    const submenu = this.nextElementSibling;
-                    if (submenu && submenu.classList.contains('mobile-submenu')) {
-                        this.classList.toggle('active');
-                        submenu.classList.toggle('hidden');
-                    }
-                });
-            });
-        }
+    // Close the menu when clicking outside of it
+    document.addEventListener("click", (event) => {
+        const menu = document.getElementById("mobile-menu");
+        const btn = document.getElementById("menu-toggle");
+        if (!menu?.classList.contains("active")) return;
+        const target = event.target instanceof Node ? event.target : null;
+        if (menu.contains(target) || btn?.contains(target)) return;
+        closeMobileMenu();
+    });
+
+    // Close the menu when resizing up to desktop
+    let resizeTimer: number | undefined;
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            if (window.innerWidth >= 1024) closeMobileMenu();
+        }, 150);
     });
 </script>

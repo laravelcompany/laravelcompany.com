@@ -93,7 +93,7 @@ log = logging.getLogger("bloggen")
 # CONFIGURATION
 # ============================================================================
 DEFAULT_CONFIG = {
-    "api_endpoint": "https://ai.izdrail.com/v1/chat/completions",
+    "api_endpoint": "http://localhost:11434/v1/chat/completions",
     "model": "gemma4:12b",
     "api_key": "",
     "request_timeout": 1200,

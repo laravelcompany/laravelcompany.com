@@ -1,0 +1,34 @@
+{
+  "product": {
+    "product_id": "29584",
+    "title": "Programare pentru începători folosind SCRATCH",
+    "brand": "Litera",
+    "price": "39.99",
+    "old_price": "",
+    "url": "https://www.litera.ro/programare-pentru-incepatori-folosind-scratch",
+    "gtin": "",
+    "category": "Cărți",
+    "description": "- Instrucțiuni pas cu pas pentru primele noțiuni de programare și pentru crearea de jocuri, animații și nu numai - Icirc;ndrumări complete și glosar pentru meniul din Scratch -Ajutor suplimentar și download-uri online",
+    "image_urls": [
+      "https://cdn.litera.ro/media/catalog/product/c/7/c714-scg24.png"
+    ]
+  },
+  "campaign": {
+    "campaign_id": "873",
+    "campaign_name": "litera.ro",
+    "campaign_url": "https://www.litera.ro/",
+    "aff_code": "https://event.2performant.com/events/click?ad_type=product_store&unique=0382b82f8&aff_code=bf1d69700&campaign_unique=0a8a2c4d9"
+  },
+  "content": "# Programming for Beginners Using Scratch by Litera\n\nLearning to code doesn't have to be complicated. This educational book, *Programming for Beginners using Scratch*, from Litera, provides a comprehensive and accessible starting point for anyone interested in the world of coding. Designed specifically for absolute beginners, this guide introduces fundamental programming concepts through the popular visual platform, Scratch.\n\n## Master Programming Fundamentals with Visual Learning\n\nThis resource offers step-by-step instructions designed to take you from zero knowledge to creating functional projects. Whether you are a student looking to bolster STEM skills or an adult curious about coding logic, this book provides the perfect foundation. Through engaging exercises, you will learn how to structure code and bring your creative ideas to life digitally.\n\n**What You Will Learn:**\nThe curriculum guides users through hands-on creation, allowing learners to move beyond theory and into practical application. Topics covered include:\n\n*   Understanding core programming logic (sequencing, loops, conditional statements).\n*   Creating interactive games that engage the player.\n*   Developing dynamic animations and multimedia projects using Scratch.\n\n## Comprehensive Support for Every Learner\n\nWe understand that learning to code comes with questions. Thatâs why this book is more than just a manualâit's a complete learning resource package:\n\n*   **Step-by-Step Instructions:** Clear, beginner-friendly guidance covering initial programming concepts and advanced project creation.\n*   **Complete Scratch Menu Guide:** Includes detailed instructions and a glossary to help you navigate the entire Scratch environment confidently.\n*   **Supplemental Online Resources:** Access extra support and downloadable materials online, ensuring continuous learning long after you finish the book.\n\n## Product Details\n\n**Brand:** Litera\n**Category:** Books\n**Price:** 39.99\n\nStart your journey into software development today and unlock the power of computational thinking with this essential guide to Scratch programming.\n\n***\n\n### Frequently Asked Questions (FAQ)\n\n**Q: Do I need prior coding experience?**\nA: No. This book is specifically designed for beginners, providing step-by-step instructions assuming no prior knowledge of coding or Scratch.\n\n**Q: Is the resource entirely digital, or is it a physical book?**\nA: The purchase includes a comprehensive physical book and grants access to supplementary online downloads and resources mentioned in the guide.\n\n***\nTags: programming for beginners, learn scratch, kids coding book, visual programming, step-by-step coding guide, educational technology, computational thinking, Litera books",
+  "excerpt": "# Programming for Beginners Using Scratch by Litera Learning to code doesn't have to be complicated. This educational book, *Programming for Beginners using...",
+  "status": "completed",
+  "generated_at": "2026-08-12",
+  "metadata": {
+    "id": 1251,
+    "author": "Stefan Bogdanescu",
+    "authorRole": "Founder & Senior Architect",
+    "authorAvatar": "/avatar-stefan.jpg",
+    "image": null,
+    "tags": []
+  }
+}

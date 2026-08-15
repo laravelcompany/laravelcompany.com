@@ -1,0 +1,11 @@
+{
+  "title": "Laravel (6.0) Route not found error - but route exists in route:list",
+  "date": "2026-06-29",
+  "author": "Stefan Bogdanescu",
+  "authorRole": "Founder & Senior Architect",
+  "authorAvatar": "/avatar-stefan.jpg",
+  "excerpt": "# Laravel Route Not Found Paradox: Why Routes Exist but Aren't Found As a senior developer working with complex applications, we often encounter frustrating...",
+  "image": null,
+  "tags": [],
+  "content": "# Laravel Route Not Found Paradox: Why Routes Exist but Aren't Found\n\nAs a senior developer working with complex applications, we often encounter frustrating paradoxes in framework development. One of the most common—and maddening—scenarios is when routes are explicitly defined (confirmed by `php artisan route:list`), yet the application throws a `RouteNotFoundException`"
+}

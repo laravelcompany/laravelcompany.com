@@ -1,0 +1,113 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+import logoSrc from "../../assets/logo.svg";
+
+export async function getStaticPaths() {
+  const books = await getCollection("books");
+  return books.map((book) => ({
+    params: { slug: book.id },
+    props: { book },
+  }));
+}
+
+const { slug } = Astro.params;
+const { data } = await getCollection("books").then((cols) =>
+  cols.find((c) => c.id === slug)
+);
+
+const book = data ? await getCollection("books").then((c) => c.find((c) => c.id === slug)) : null;
+
+if (!book) {
+  return Astro.redirect("/books/");
+}
+
+const raw = book!.data;
+const rawContent = raw.content;
+const renderedContent = rawContent;
+---
+
+<Layout
+  title={`${raw.title} | Laravel Company Books`}
+  description={raw.excerpt}
+>
+  <main class="py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+    <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <span>/</span>
+      <a href="/books/" class="hover:text-white transition-colors">Books</a>
+      <span>/</span>
+      <span class="text-white truncate max-w-[200px]">{raw.title}</span>
+    </nav>
+
+    <article class="max-w-3xl mx-auto">
+      <div class="animate-on-scroll">
+        <div class="flex flex-wrap gap-2 mb-4">
+          {raw.tags?.map((tag) => (
+            <span class="text-xs px-2.5 py-1 rounded-full bg-payflo-purple/20 text-payflo-purple font-medium">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold mb-6">{raw.title}</h1>
+
+        <div class="flex items-center gap-4 mb-8 pb-8 border-b border-white/10">
+          <div>
+            <p class="font-semibold text-white">{raw.author}</p>
+            <p class="text-sm text-white/50">{raw.authorRole} &middot; {raw.date}</p>
+          </div>
+        </div>
+
+        {raw.image ? (
+          <img
+            src={raw.image}
+            alt={raw.title}
+            class="w-full rounded-xl mb-10 animate-on-scroll"
+          />
+        ) : (
+          <div class="w-full rounded-xl mb-10 animate-on-scroll bg-payflo-darker flex items-center justify-center py-20">
+            <Image
+              src={logoSrc}
+              alt="Laravel Company"
+              width={96}
+              class="w-24 h-24 opacity-30"
+            />
+          </div>
+        )}
+
+        <div class="prose prose-slate max-w-none animate-on-scroll">
+          <Fragment set:html={renderedContent} />
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>
+
+<div class="mt-16 bg-payflo-purple/10 border-l-4 border-payflo-purple p-6 max-w-2xl mx-auto animate-on-scroll">
+  <h2 class="text-xl font-bold mb-4">Buy this book</h2>
+  {raw.buyLink ? (
+    <a
+      href={raw.buyLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block bg-payflo-purple text-white font-medium px-6 py-3 rounded-lg hover:bg-payflo-purple/90 transition-colors"
+    >
+      Buy on Partner Site
+    </a>
+  ) : (
+    <p class="text-white/60 text-sm">
+      Buy link not available for this book.
+    </p>
+  )}
+</div>
+
+<script>
+  document.addEventListener("copy", (e) => {
+    if (navigator.clipboard?.writeText) {
+      e.preventDefault();
+    }
+  });
+</script>

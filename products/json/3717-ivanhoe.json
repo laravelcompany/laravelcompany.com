@@ -1,0 +1,34 @@
+{
+  "product": {
+    "product_id": "32313",
+    "title": "Ivanhoe",
+    "brand": "Litera",
+    "price": "24.99",
+    "old_price": "",
+    "url": "https://www.litera.ro/ivanhoe",
+    "gtin": "",
+    "category": "Copii",
+    "description": "Descoperă aventurile viteazului cavaler Ivanhoe în Anglia sfârșitului de secol al XI-lea. Textul este repovestit și adaptat de Charlotte Grossetete, fiind completat cu ilustrații color de Sylvain Bourrieres. &nbsp; Colecția Clasici Litera Junior propune abordarea marii literaturi prin repovestiri pe înțelesul copiilor. Cele mai iubite romane pentru copii și adolescenți, repovestite într-o manieră fidelă originalului și ilustrate sugestiv, vor trezi interesul pentru literatura încă de la vârsta primelor lecturi.",
+    "image_urls": [
+      "https://cdn.litera.ro/media/catalog/product/i/v/ivanhoe.png"
+    ]
+  },
+  "campaign": {
+    "campaign_id": "873",
+    "campaign_name": "litera.ro",
+    "campaign_url": "https://www.litera.ro/",
+    "aff_code": "https://event.2performant.com/events/click?ad_type=product_store&unique=83597d929&aff_code=bf1d69700&campaign_unique=0a8a2c4d9"
+  },
+  "content": "# Ivanhoe by Litera: Adventure Through Medieval England\n\n## Dive Into the World of Sir Ivanhoe\n\nBring the epic tales of medieval chivalry to your child's reading corner with **Ivanhoe** by Litera. This beautifully adapted edition allows young readers to discover the grand adventures of the knight, Ivanhoe, set against the backdrop of 11th-century England.\n\nLiteraâs *Junior Classics Collection* is meticulously designed to introduce children and pre-teens to great literature through engaging retellings. We take beloved classicsâstories perfect for kids and adolescentsâand adapt them into easily digestible narratives while remaining faithfully true to the original spirit of the story.\n\n## Why Choose This Classic Adaptation?\n\nThis particular edition enhances the reading experience, making complex historical narratives accessible and visually appealing:\n\n*   **Engaging Retelling:** The text has been carefully adapted and retold by Charlotte Grossetete, ensuring that the language is appropriate and captivating for young minds while preserving the depth of the original story.\n*   **Vivid Illustrations:** The book includes beautiful color illustrations by Sylvain Bourrieres, bringing the sights, sounds, and action of medieval England to life on every page.\n*   **Building a Love for Reading:** By presenting literary masterpieces in an engaging format, *Ivanhoe* helps spark genuine interest in literature right from the earliest reading stages.\n\nWhether your child is just starting their reading journey or is tackling advanced chapter books, this collection offers quality stories that promote imagination and historical curiosity.\n\n***\n\n### Product Details\n\n**Book:** Ivanhoe\n**Brand:** Litera\n**Category:** Children's Books / Classics (Copii)\n**Price:** $24.99\n\nExplore more fantastic childrenâs literature from the Litera collection today! [Visit litera.ro](https://www.litera.ro/)\n\n***\n\n### Frequently Asked Questions (FAQ)\n\n**Q: Is this book suitable for very young readers?**\nA: The *Junior Classics Collection* is designed to introduce older, complex stories through adapted retellings, making it perfect for early chapter book readers and pre-teens who are building their reading stamina.\n\n**Q: Does the adaptation compromise the original story?**\nA: No. The collection aims to approach great literature in a way that is faithful to the spirit of the original while adapting the language structure to be easily understood by children.\n\n***\n\n*Litera Junior Classics, Ivanhoe, Children's Literature, Medieval Tales, Adapted Books, Chapter Books for Kids, Litera Reading Collection, Classic Novels for Teens, Sir Ivanhoe.*",
+  "excerpt": "# Ivanhoe by Litera: Adventure Through Medieval England ## Dive Into the World of Sir Ivanhoe Bring the epic tales of medieval chivalry to your child's reading...",
+  "status": "completed",
+  "generated_at": "2026-08-12",
+  "metadata": {
+    "id": 3717,
+    "author": "Stefan Bogdanescu",
+    "authorRole": "Founder & Senior Architect",
+    "authorAvatar": "/avatar-stefan.jpg",
+    "image": null,
+    "tags": []
+  }
+}
