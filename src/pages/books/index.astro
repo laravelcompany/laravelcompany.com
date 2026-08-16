@@ -28,7 +28,8 @@ const sortedBooks = normalizedBooks.sort((a, b) => {
   return dateB.getTime() - dateA.getTime();
 });
 
-const paginatedBooks = paginate(sortedBooks, { pageSize: 10 });
+const pageSize = 10;
+const paginatedBooks = sortedBooks.slice(0, pageSize);
 
 function getPageNumbers(current: number, last: number): (number | "...")[] {
   if (last <= 7) return Array.from({ length: last }, (_, i) => i + 1);
@@ -46,7 +47,7 @@ function getPageNumbers(current: number, last: number): (number | "...")[] {
   return pages;
 }
 
-const page = Astro.props.page;
+const page = Astro.props.page || { currentPage: 1, lastPage: 1 };
 const pageNumbers = getPageNumbers(page.currentPage, page.lastPage);
 ---
 
@@ -71,9 +72,9 @@ const pageNumbers = getPageNumbers(page.currentPage, page.lastPage);
         {paginatedBooks.map((book, index) => {
           const raw = book.data;
           const truncatedExcerpt =
-            raw.excerpt.length > 150
+            (raw.excerpt?.length > 150
               ? raw.excerpt.slice(0, 150) + "..."
-              : raw.excerpt;
+              : raw.excerpt) || "";
 
           return (
             <a
