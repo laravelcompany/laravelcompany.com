@@ -7,6 +7,9 @@ export default defineConfig({
   site: 'https://laravelcompany.com',
   output: 'static',
   prefetch: true,
+  build: {
+    concurrency: 2,
+  },
   integrations: [
     tailwind(),
     icon(),
