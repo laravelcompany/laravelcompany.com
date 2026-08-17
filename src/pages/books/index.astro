@@ -69,12 +69,12 @@ const pageNumbers = getPageNumbers(page.currentPage, page.lastPage);
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {paginatedBooks.map((book, index) => {
-          const raw = book.data;
+        {paginatedBooks.filter(Boolean).map((book, index) => {
+          const raw = book;
           const truncatedExcerpt =
             (raw.excerpt?.length > 150
               ? raw.excerpt.slice(0, 150) + "..."
-              : raw.excerpt) || "";
+              : raw.excerpt) || "No excerpt available";
 
           return (
             <a
