@@ -79,7 +79,7 @@ log = logging.getLogger("prompt_improver")
 
 DEFAULT_CONFIG = {
     "api_endpoint": "https://ai.izdrail.com/v1/chat/completions",
-    "model": "hf.co/arbazsiddiqui/Ozan-v1-12B-GGUF:latest",
+    "model": "gemma4:e2b",
     "api_key": "",
     "request_timeout": 1200,
     "max_retries": 3,
