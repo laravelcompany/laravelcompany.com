@@ -25,6 +25,7 @@ export const GET: APIRoute = async ({ site }) => {
         'shop/',
         'jobs/',
         'blog/',
+        'books/',
         'guidelines/',
         'laravel-application-development-company/',
         'software-development-agency-london/',
@@ -101,6 +102,18 @@ export const GET: APIRoute = async ({ site }) => {
         console.error('Error fetching products for sitemap:', error);
     }
 
+    // 3c. Fetch curated books
+    let bookPages: string[] = [];
+    try {
+        const { getBooks } = await import('../utils/booksCache');
+        const books = await getBooks();
+        bookPages = books.map(book => `books/${book.slug}/`);
+        const totalPages = Math.ceil(books.length / 12);
+        for (let n = 2; n <= totalPages; n++) bookPages.push(`books/page/${n}/`);
+    } catch (error) {
+        console.error('Error fetching books for sitemap:', error);
+    }
+
     // 4. Fetch blog posts
     let blogPages: string[] = [];
     try {
@@ -110,7 +123,7 @@ export const GET: APIRoute = async ({ site }) => {
         console.error('Error fetching blog posts for sitemap:', error);
     }
 
-    const allPages = [...staticPages, ...geoServicePages, ...variantServicePages, ...jobPages, ...productPages, ...blogPages];
+    const allPages = [...staticPages, ...geoServicePages, ...variantServicePages, ...jobPages, ...productPages, ...bookPages, ...blogPages];
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

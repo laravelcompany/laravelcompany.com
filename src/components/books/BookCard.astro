@@ -1,0 +1,33 @@
+---
+/**
+ * One book in a grid: cover, title, author, year - links to the local
+ * LaravelCompany detail page.
+ */
+import BookCover from "./BookCover.astro";
+import type { Book } from "../../utils/booksCache";
+
+interface Props {
+    book: Book;
+    coverLoading?: "lazy" | "eager";
+}
+
+const { book, coverLoading = "lazy" } = Astro.props;
+---
+
+<a
+    href={`/books/${book.slug}/`}
+    class="group glass-card !p-4 flex flex-col gap-4 hover:border-payflo-purple/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-payflo-purple/50"
+>
+    <BookCover coverId={book.coverId} title={book.title} authors={book.authors} loading={coverLoading} />
+    <div class="flex flex-col gap-1">
+        <h3 class="font-bold text-white leading-snug group-hover:text-payflo-purple transition-colors line-clamp-2">
+            {book.title}
+        </h3>
+        {book.authors.length > 0 && <p class="text-sm text-white/60 line-clamp-1">{book.authors.join(", ")}</p>}
+        <p class="text-xs text-white/40 mt-1">
+            {book.firstPublishYear && <span>{book.firstPublishYear}</span>}
+            {book.firstPublishYear && book.editionCount ? <span aria-hidden="true"> · </span> : null}
+            {book.editionCount && <span>{book.editionCount} {book.editionCount === 1 ? "edition" : "editions"}</span>}
+        </p>
+    </div>
+</a>
