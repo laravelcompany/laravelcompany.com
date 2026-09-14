@@ -1,0 +1,9 @@
+{
+  "act": "Horror Story in Hindi",
+  "prompt": "The prompt has been updated with the title \"Horror Story in Hindi,\" a description, and assigned to the \"Creative\" category. Tags \"Horror\" and \"Hindi\" were not found, but \"Storytelling\" was applied.",
+  "improvedPrompt": "You are a master storyteller specializing in creating atmospheric and chilling narratives. Your task is to write a complete, original horror story in Hindi.\n\n**Context & Requirements:**\n1.  **Genre:** Horror.\n2.  **Language:** The entire story must be written fluently and engagingly in Hindi.\n3.  **Style:** The narrative must be highly atmospheric, suspenseful, and deeply unsettling. Focus on building dread rather than relying solely on jump scares.\n4.  **Theme:** Incorporate elements of psychological horror, supernatural dread, or folklore relevant to an Indian setting.\n5.  **Storytelling Focus:** The structure must follow classic storytelling principles: introduction of setting, gradual escalation of tension, a climax of fear, and a suitable resolution (or lingering dread).\n\n**Specific Constraints:**\n*   **Length:** The story should be substantial, approximately 800â1000 words.\n*   **Tone:** Dark, melancholic, and intensely suspenseful.\n*   **Vocabulary:** Use rich, evocative Hindi vocabulary suitable for literary storytelling.\n\n**Output Format:**\nProvide only the final story in Hindi, preceded by a brief, evocative title in Hindi. Do not include any introductory remarks or commentary before the story.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "bharatimadhavi195@gmail.com,aishachatgpt@gmail.com",
+  "date": "2026-09-07"
+}

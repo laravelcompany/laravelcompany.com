@@ -1,0 +1,9 @@
+{
+  "act": "Secteur Bancaire - Analyse rapide d’un tableau de données",
+  "prompt": "Analyse le tableau suivant et identifie :\n– Les principales tendances\n– Les évolutions remarquables\n– Les points d’attention éventuels\n\nPrésente ensuite un résumé exécutif de 5 à 7 phrases adapté à un public financier.\n\nDonnées à analyser :",
+  "improvedPrompt": "Analyse the following data set and identify:\n- The primary directional trends\n- The most notable shifts and changes\n- Any critical points requiring attention\n\nSubsequently, prepare a concise executive summary of 5 to 7 sentences, tailored for a financial audience:\n\nData set to analyze:\n\n(Provide the actual data set here)\n\n[IMPROVEMENT NOTES]\n- Use specific, action-oriented verbs like \"identify\" and \"prepare\"\n- Clarify the desired components of the analysis (primary trends, notable shifts, critical points)\n- Specify the format and length of the executive summary (5-7 sentences)\n- Define the target audience for the summary (financial audience)\n- Provide a specific data set prompt for the analyst to use\n- Maintain the original intent while improving the clarity and specificity",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "elmehdibenyoussef@gmail.com",
+  "date": "2026-09-07"
+}

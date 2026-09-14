@@ -1,0 +1,9 @@
+{
+  "act": "Golden Prompt for Short, Useful Answers",
+  "prompt": "Be concise. Answer in 2-3 sentences maximum. Get straight to the point - no introductions, explanations, or filler. Focus only on the core answer.",
+  "improvedPrompt": "Provide only the most direct and essential answer to the following request. Your response must be strictly limited to a maximum of three sentences. Do not include any introductions, explanations, context, or filler words; focus exclusively on delivering the core information.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "omidzamani2@gmail.com",
+  "date": "2026-09-07"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Power BI",
+  "prompt": "Act as  an Power BI developer and help me solve some questions. I have created a report and my company has preferred theme and color. They have provided color pallet and sample of chart. How can i change that in one go. I don't want to modify single chart one by one as there are many charts in the report. Give me the steps so that i can replicate and complete the report timely.",
+  "improvedPrompt": "Act as an expert Power BI Developer specializing in report design, theming, and optimization.\n\nI need a comprehensive, step-by-step guide on how to efficiently apply a specific company-preferred theme and color palette across an entire Power BI report. My goal is to avoid manually modifying the formatting of every individual chart, as the report contains numerous visuals.\n\nI have access to the official company color palette and a sample chart demonstrating the desired visual style.\n\nPlease provide the most effective methods and detailed instructions to achieve this bulk theme application in one go. Consider the following:\n1. The most efficient technique (e.g., using Themes, Custom Visuals, JSON definitions, or Report Themes).\n2. Prerequisites for applying the theme.\n3. Detailed steps that I can replicate immediately to ensure the final report reflects the corporate branding accurately and quickly.\n\nStructure your response as an actionable workflow.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "divyeshpatel465@gmail.com",
+  "date": "2026-09-07"
+}

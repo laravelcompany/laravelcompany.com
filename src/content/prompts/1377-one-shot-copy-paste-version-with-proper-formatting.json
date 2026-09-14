@@ -1,0 +1,9 @@
+{
+  "act": "One-Shot Copy-Paste Version with Proper Formatting",
+  "prompt": "I need to copy and paste it all on shot with all correct formatting and as a single block, do not write text outside the box. Include all codes formatting.",
+  "improvedPrompt": "Revised prompt:\n\n\"Please copy and paste the following content into a single block, preserving all existing formatting and code syntax accurately. Ensure that the text is written only within the designated box, without adding any additional text or formatting outside of the given content. Your goal is to maintain the original structure, indentation, and code block formatting exactly as it appears in the provided text.\"\n\nNote: The revised prompt provides more context, clarifies the desired output, and specifies the constraints and formatting requirements. It uses formal language to make the instructions unambiguous and professional. The revised wording guides the user to focus on accurately preserving the original formatting within a single block, without introducing any new content or modifications.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "maxhayim",
+  "date": "2026-09-07"
+}

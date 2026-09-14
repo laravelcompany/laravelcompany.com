@@ -1,0 +1,9 @@
+{
+  "act": "Personaje ART",
+  "prompt": "Draw the character from the image—(Your name)—in a free, spontaneous sketching style. Against a bright white background, freely arrange full-body drawings, close-ups of the face, small doodles, full-body sketches, and chibi or stylized versions, so that the page conveys the character's humor and personality. Do not create an organized character sheet; instead, make it look like a sketchbook page filled with spontaneously drawn details.",
+  "improvedPrompt": "Create a highly detailed, chaotic, and spontaneous sketchbook page featuring the character provided in the input image. The overall aesthetic should mimic a raw, hand-drawn sketch session.\n\nThe composition must be a dense, free-flowing arrangement of various visual elements related to the character, including:\n1. Full-body sketches.\n2. Close-up facial studies.\n3. Small, scattered doodles and quick annotations.\n4. Various stylized interpretations, such as chibi versions or exaggerated poses.\n\nArrange these elements randomly and overlappingly across the page without any grid, borders, or formal organization. The goal is to create a sense of spontaneous creativity and reveal the character's unique humor and personality through the juxtaposition of these unplanned drawings.\n\n**Style Constraints:**\n*   **Medium:** Use a rough, expressive sketching style, resembling pencil, charcoal, or ink lines on paper.\n*   **Background:** The entire composition must be set against a clean, bright white background to emphasize the drawn elements.\n*   **Texture:** Include visible sketch lines, smudges, and the texture of the paper to enhance the feeling of a genuine, unfinished sketchbook page.\n*   **Avoid:** Do not create a neat character sheet, panel, or organized layout. The final image must look like an explosion of spontaneous artistic ideas.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "issac.ron@gmail.com",
+  "date": "2026-09-07"
+}

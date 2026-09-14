@@ -1,0 +1,9 @@
+{
+  "act": "Create This cool Doodles.",
+  "prompt": "Using the uploaded image as the base photo, do NOT change the person's face, body, or pose. Add hand-drawn white doodle illustrations around the subject, sketchy marker / chalk style, imperfect playful lines, doodles should appear drawn on top of the photo. Doodle theme: ${theme} Include elements such as: ${object_list} Keep the background intact, do not cover the face, editorial aesthetic poster style, clean composition, high quality.",
+  "improvedPrompt": "Based on the uploaded image, perform an artistic overlay. Strictly maintain the original person's face, body, and pose exactly as they appear in the base photo.\n\n**Style and Execution:**\nIntegrate hand-drawn white doodle illustrations around the subject. The doodles must utilize a sketchy, imperfect, playful line quality, mimicking marker or chalk drawing styles. The doodles should appear layered *on top* of the original photograph.\n\n**Content and Theme:**\nThe doodles must adhere to the specified theme: ${theme}. Include specific elements from the list: ${object_list}.\n\n**Composition and Aesthetic:**\nMaintain the original background intact. Ensure the face is completely uncovered and untouched by the doodles. The final output must possess an editorial aesthetic, resembling a high-quality poster. The composition must be clean and balanced. Achieve extremely high visual quality.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "duttavibhas@gmail.com",
+  "date": "2026-09-07"
+}

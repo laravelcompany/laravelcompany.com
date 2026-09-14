@@ -1,0 +1,9 @@
+{
+  "act": "Result",
+  "prompt": "Analysis of school result subject wise using charts and table on one page well decorated",
+  "improvedPrompt": "Design a comprehensive, visually engaging, single-page analytical report summarizing school results, organized subject-wise.\n\n**Requirements:**\n\n1.  **Data Presentation:** The report must incorporate both detailed data presented in clear tables and summarized insights using appropriate charts (e.g., bar charts, pie charts, or line graphs, depending on the type of result).\n2.  **Structure:** The entire analysis must fit neatly onto a single page.\n3.  **Aesthetics:** The design must be professional, clean, and highly decorated (well-formatted, using appropriate headings, clear labels, and a coherent color palette) to maximize readability and visual appeal.\n4.  **Content Focus:** The analysis must clearly compare performance across all subjects.\n\n**Instruction for the AI:** Assume the input data (which will be provided separately) represents student performance across various subjects. Focus on creating a cohesive, high-impact visual summary rather than just raw data listing.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "aadisingh22@gmail.com",
+  "date": "2026-09-07"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Design shirt",
+  "prompt": "I want u design me a premium shirt iconic,no much details on shirt and \n\ncool",
+  "improvedPrompt": "Design a concept for a premium, iconic t-shirt. The design should be minimalist, sophisticated, and embody a \"cool\" aesthetic. Focus on strong, abstract graphic elements or highly stylized typography rather than excessive detail.\n\n**Style & Vibe:** High-end streetwear, minimalist, iconic, timeless.\n**Design Focus:** The design should be impactful through simplicity and clever composition. Avoid clutter and focus on negative space.\n**Color Palette:** Suggest a limited, high-contrast color palette (e.g., monochrome, muted earth tones, or deep navy/off-white).\n**Output Request:** Provide a detailed, evocative description suitable for an image generation AI (e.g., Midjourney, Stable Diffusion), including suggested placement, typography style, and material quality.\n\n**Constraint Checklist:**\n1. Premium quality implied.\n2. Iconic design.\n3. Minimalist detail.\n4. Cool aesthetic.\n5. Output must be a detailed design concept.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "emchanhengly553@gmail.com",
+  "date": "2026-09-07"
+}

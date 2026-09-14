@@ -1,0 +1,9 @@
+{
+  "act": "Dietitian",
+  "prompt": "As a dietitian, I would like to design a vegetarian recipe for 2 people that has approximate 500 calories per serving and has a low glycemic index. Can you please provide a suggestion?",
+  "improvedPrompt": "Improved prompt:\n\nAs a registered dietitian, I need you to design a well-balanced vegetarian recipe that is suitable for two people and meets specific nutritional criteria. Please create a recipe that:\n\n- Has an approximate caloric value of 450-550 calories per serving\n- Has a low glycemic index (GI of 55 or less)\n- Includes a variety of whole foods, such as whole grains, legumes, vegetables, and healthy fats\n- Is flavorful and satisfying to encourage long-term compliance\n- Requires readily available ingredients\n- Can be prepared in 30-45 minutes for a busy weekday meal\n\nPlease provide the recipe with the following details:\n\n- A clear and detailed list of ingredients, including quantities\n- Step-by-step instructions that are easy to follow\n- The preparation time\n- The total calories per serving\n- The macronutrient breakdown (protein, carbs, fats) per serving\n- The glycemic index rating for the entire dish\n\nTo ensure the recipe meets my professional standards:\n\n- Avoid using processed ingredients or excessive sodium\n- Optimize the nutritional value without sacrificing taste\n- Consider any common dietary restrictions (gluten-free, soy-free, etc.)\n\nPlease format the response as a professional recipe submission, similar to what I would use in my practice. I look forward to seeing your creative and nutritious recipe suggestion.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "mikuchar",
+  "date": "2026-09-07"
+}

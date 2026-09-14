@@ -1,0 +1,9 @@
+{
+  "act": "RFQ",
+  "prompt": "An RFQ email that can be sent to diferent industry when the leads list has different business industries and the RFQ needs to fit in every industry",
+  "improvedPrompt": "Act as an expert B2B sales and marketing copywriter. Your task is to create a highly adaptable Request for Quotation (RFQ) email template.\n\nThis template must be designed to be universally applicable, allowing it to be sent successfully to leads across vastly different business industries (e.g., manufacturing, SaaS, retail, logistics, healthcare, etc.). The core challenge is ensuring the email is professional, compelling, and contextually relevant regardless of the specific industry.\n\n**Instructions for the AI:**\n\n1.  **Structure:** Develop a modular email structure. Use clear placeholders (e.g., `[Industry Context]`, `[Specific Requirement]`, `[Project Scope]`) where the user must insert industry-specific details.\n2.  **Tone:** The tone must be highly professional, consultative, and focused on solving a business problem, not just listing requirements.\n3.  **Adaptability Strategy:** Include specific introductory and closing sections that explicitly prompt the recipient to consider their unique industry context, demonstrating that the quote is tailored, even though the main body remains generic.\n4.  **Content Requirements:** The email must clearly request the necessary information to generate an accurate quote (e.g., scope of work, desired timeline, existing infrastructure details).\n\n**Desired Output:** Provide the complete, ready-to-use email template, followed by a brief explanation detailing *how* a user should customize the bracketed sections for maximum effectiveness in any given industry.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "bobbysunday44-maker",
+  "date": "2026-09-07"
+}

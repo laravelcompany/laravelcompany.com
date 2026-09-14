@@ -1,0 +1,9 @@
+{
+  "act": "Prompt to learn free AI website which will be most useful for me to use for free",
+  "prompt": "I want to learn about various ai and websites which are free to use and knownly safe for making code to running code and writing professional prompt",
+  "improvedPrompt": "Act as an expert AI tool curator and educator. Your task is to provide a comprehensive, curated list of free, safe, and reliable online resources (AI tools and websites) that are specifically designed to help users learn and practice two main skills:\n1. Generating and executing code.\n2. Writing professional, effective prompts.\n\nPlease structure your response by categorizing the recommended tools. For each tool or website, provide the following details:\n1. **Name:** The official name of the tool.\n2. **Category:** (e.g., Code Interpreter, LLM Interface, Prompt Generator).\n3. **Primary Function:** A clear explanation of what the tool is best used for in the context of coding or prompting.\n4. **Safety/Trustworthiness:** A brief note on why the tool is generally considered safe and reliable.\n5. **Use Case Example:** A brief example of how a user would apply this tool to achieve a coding or prompting goal.\n\nEnsure all recommended resources are genuinely free to use (or offer a robust free tier) and are known for high safety standards. Focus on practical, actionable tools rather than abstract concepts.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "randomcopper406@gmail.com",
+  "date": "2026-09-07"
+}

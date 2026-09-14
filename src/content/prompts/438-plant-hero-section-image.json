@@ -1,0 +1,9 @@
+{
+  "act": "Plant Hero Section Image",
+  "prompt": "Create an image for a hero section with a 16:9 aspect ratio. The image should feature 6-7 different types of plants, all set in a natural environment with sunlight streaming in. Make sure the composition is aesthetically pleasing and suitable for use in a webpage hero section.",
+  "improvedPrompt": "Improved prompt:\n\nDesign a high-definition image for a webpage hero section, ensuring it adheres to a precise 16:9 aspect ratio. The image composition must include six to seven distinct types of plants, arranged organically within a natural outdoor setting. The scene should depict sunlight filtering through the foliage, creating a warm, inviting atmosphere.\n\nKey elements to include:\n- A variety of plant speciesâconsider a mix of evergreens, deciduous trees, shrubs, and ground cover to create visual depth\n- Natural textures and colors that evoke a sense of tranquil, outdoor space\n- Subtle lighting effects from the sunbeams, casting dappled shadows and highlighting the leafy surfaces\n- A composition that balances empty space and visual interest, guiding the viewer's eye naturally\n- A background that suggests an open, natural environment without dominant man-made structures\n\nTechnical requirements:\n- Resolution: At least 1920 x 1080 pixels\n- File format: PNG or JPG (with transparency optional)\n- Color profile: sRGB\n- Style: Photorealistic or stylized, but maintaining a sense of realistic lighting and composition\n\nPlease ensure the image is visually striking yet suitable for a hero section, providing the right balance of aesthetics and functionality for a modern webpage. The composition should be both artistically pleasing and immediately engaging for visitors.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "gurkankaya05",
+  "date": "2026-09-07"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Fancy Title Generator",
+  "prompt": "I want you to act as a fancy title generator. I will type keywords via comma and you will reply with fancy titles. my first keywords are api,test,automation",
+  "improvedPrompt": "**Improved Prompt:**\n\nI require your assistance in crafting professional and distinctive titles for a set of technical documents. You will act as a skilled naming specialist, tasked with translating my provided keywords into elegant, memorable titles that convey the essence of each document while adhering to a standard style.\n\nHere are the initial keywords for the first set of documents I need titled: \"API, Test, Automation\"\n\nYour responsibilities include:\n\n1. Ensuring the titles are clear, concise, and accurately represent the content of the documents.\n2. Maintaining a consistent tone across all generated titles within this set.\n3. Avoiding clichÃ©s or overused phrasing.\n4. Using proper capitalization and punctuation according to standard English conventions.\n5. Keeping each title under 70 characters, if possible, for formatting consistency.\n\nPlease provide three alternative titles for each keyword set, clearly labeled as Title 1, Title 2, and Title 3. If you cannot generate three suitable options, please explain why and suggest an alternative approach.\n\nFeel free to use hyphens or spaces between words as needed, but keep the title structure consistent within this set. If you have any questions about the context or style I prefer, please ask for clarification before proceeding.\n\nI look forward to seeing the elegant titles you can create from these technical keywords.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "sinanerdinc",
+  "date": "2026-09-07"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "TVS raider",
+  "prompt": "I want to know everything about tvs raider give a good prompt for this",
+  "improvedPrompt": "Act as a comprehensive automotive and technology research analyst. Your task is to generate an exhaustive, detailed, and structured overview of the TVS Raider motorcycle.\n\nPlease structure your response into the following distinct sections, ensuring factual accuracy based on publicly available information:\n\n1.  **Introduction and Overview:** Provide a brief summary of the TVS Raider's positioning in the market (segment, target audience, brand context).\n2.  **Detailed Specifications:** List all key technical specifications, including engine details (displacement, power, torque), fuel economy (ARAI/mileage figures), dimensions, weight, and performance metrics.\n3.  **Features and Technology:** Detail the key features of the bike, focusing on powertrain technology, suspension, braking systems, connectivity features (if any), and rider aids.\n4.  **Design and Aesthetics:** Describe the bike's design philosophy, styling, and unique visual elements.\n5.  **Market and Pricing:** Provide information regarding the current pricing structure (ex-showroom, on-road estimates, if available) and its competitive positioning against similar motorcycles.\n6.  **Reviews and Feedback Summary:** Synthesize key points from various independent reviews, highlighting both the strengths and the common criticisms mentioned by automotive journalists and users.\n7.  **Conclusion:** Offer a final summary evaluating the TVS Raider's overall value proposition.\n\nEnsure the tone is objective, analytical, and highly detailed. Use clear headings and bullet points for maximum readability.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "vaibhavshastri48514@gmail.com",
+  "date": "2026-09-07"
+}

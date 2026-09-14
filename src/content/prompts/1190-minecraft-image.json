@@ -1,0 +1,9 @@
+{
+  "act": "Minecraft image",
+  "prompt": "I want to make a ultra realistic minecraf character out of an image, the character should have all the characteristics of the person in the eg. Skin color and outfit leave out the background intact the finished result shouldn't come with a background",
+  "improvedPrompt": "Improved prompt:\n\nI require you to generate an ultra-realistic minecraft character model using the provided image as a reference. Your task is to create a character that closely resembles the individual in the image, preserving all distinct features and characteristics such as skin color, hair style, and clothing.\n\nPlease ensure the model is optimized for in-game performance, with a focus on maintaining a clean and polished appearance. The character should be extracted from the original image, removing the background entirely to ensure a seamless integration with the minecraft environment.\n\nYour final output should be a standalone character model, saved in a format compatible with minecraft resource packs, without any remaining background elements. Please provide the model in a compressed file format (e.g., zip) to ensure easy download and integration.\n\nWhile creating the model, pay close attention to the details of the reference image. Replicate the subject's facial features, hair color and style, clothing patterns, and any other distinct elements that make the character unique. Aim for a high level of visual fidelity, bringing the two-dimensional image to life as a three-dimensional character in the minecraft universe.\n\nPlease inform me if you encounter any challenges or limitations in the image that may impact the realism of the final model. I expect the output to be highly detailed, visually impressive, and functionally compatible with the minecraft environment.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "matthew.growth.ng@gmail.com",
+  "date": "2026-09-07"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "bulk images generate for black tshirt oversize short t shirt loose",
+  "prompt": "create a bulk 50 images for oversize tshirt black color 1:1, 8k quality professional style me",
+  "improvedPrompt": "Generate a set of 50 high-resolution, professional product photographs featuring an oversized, solid black t-shirt.\n\n**Style and Aesthetics:**\n*   **Subject Focus:** The t-shirt must be the central focus, showcasing the fit, drape, and texture of the fabric.\n*   **Style:** High-end fashion editorial or professional e-commerce photography. The mood should be sleek, minimalist, and sophisticated.\n*   **Lighting:** Studio lighting, utilizing dramatic shadows and crisp highlights to emphasize the fabric folds.\n*   **Setting:** Minimalist, clean backgrounds (e.g., concrete walls, seamless paper, or neutral grey/beige studio environments). Avoid busy backgrounds.\n\n**Technical Specifications:**\n*   **Aspect Ratio:** Strictly 1:1 (Square).\n*   **Resolution:** Ultra high quality, 8K detail.\n*   **Color Palette:** Monochromatic focus on black, white, and subtle grey tones.\n*   **Composition:** Focus on the oversized fit, emphasizing the relaxed, contemporary silhouette.\n\n**Output Requirement:**\nGenerate 50 distinct variations adhering precisely to these specifications, ensuring visual consistency across the entire set.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "dks.enterprises999@gmail.com",
+  "date": "2026-09-07"
+}

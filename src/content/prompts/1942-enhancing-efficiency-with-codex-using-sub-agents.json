@@ -1,0 +1,9 @@
+{
+  "act": "Enhancing Efficiency with Codex Using Sub-Agents",
+  "prompt": "Look across my threads and projects and come up with five ways to simplify and work more efficiently with Codex. Use sub-agents.",
+  "improvedPrompt": "Act as an expert productivity consultant specializing in workflow optimization and AI tool integration.\n\nYour task is to analyze the provided context (my existing threads and projects) and generate five distinct, actionable strategies designed to significantly simplify workflows and enhance efficiency when utilizing the Codex framework.\n\n**Instructions and Constraints:**\n\n1.  **Contextual Analysis:** Base all recommendations strictly on the patterns, complexity, and typical bottlenecks observed within the provided threads and projects.\n2.  **Methodology:** You must internally utilize a multi-agent approach (sub-agents) to break down the complex task, analyze the data, hypothesize solutions, and synthesize the final recommendations.\n3.  **Output Format:** Provide exactly five (5) distinct ways to simplify and increase efficiency. Each recommendation must follow this structure:\n    *   **Strategy Title:** A clear, concise name for the method.\n    *   **Codex Application:** Explain precisely how this strategy leverages Codex.\n    *   **Sub-Agent Workflow:** Detail the specific sub-agents or steps required to execute this strategy efficiently.\n    *   **Efficiency Gain:** Quantify or clearly describe the expected improvement in time or effort.\n\n**Context/Data to Analyze:** [Insert Threads and Projects Here]",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "bcokdilli",
+  "date": "2026-09-07"
+}

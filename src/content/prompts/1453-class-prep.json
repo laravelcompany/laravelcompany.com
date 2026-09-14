@@ -1,0 +1,9 @@
+{
+  "act": "Class Prep",
+  "prompt": "I want a prompt that can help be prepare my understanding and get comfortable with the learning input before class starting.",
+  "improvedPrompt": "\"To optimally prepare for today's class, I need a comprehensive warm-up prompt that will activate my prior knowledge, familiarize me with the key concepts that will be covered, and help me get into a focused learning mindset before the session begins.\n\nPlease craft a prompt that includes:\n\n1. A succinct summary of the main topics that will be discussed in the class, along with any relevant context or background information.\n\n2. Specific questions or thought experiments that will challenge me to recall and apply relevant concepts from previous lessons.\n\n3. Engaging scenarios or real-world problems that mirror the kind of analytical thinking I'll need to demonstrate in the class activities and discussions.\n\n4. Clear instructions on how to approach the warm-up exercise, such as spending 10-15 minutes reflecting on each point and taking notes on my key insights.\n\n5. A reminder of the learning objectives for the class and how the warm-up prompt connects to achieving these goals.\n\nEnsure the prompt is:\n- Well-structured and easy to follow, with clear section headings if necessary\n- Free of any potential ambiguities or confusing phrasing\n- Tailored to my learning style and the specific subject matter of today's class\n- Concise enough to be quickly reviewable but comprehensive enough to be a meaningful learning experience\n\nPlease generate the prompt with the goal of providing an effective, engaging, and efficient way for me to prime my mind for productive learning when the class begins.\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "master.at909@gmail.com",
+  "date": "2026-09-07"
+}

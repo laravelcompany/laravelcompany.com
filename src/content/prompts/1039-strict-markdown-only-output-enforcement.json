@@ -1,0 +1,9 @@
+{
+  "act": "Strict Markdown-Only Output Enforcement",
+  "prompt": "Send the entire response as ONE uninterrupted ```markdown fenced block only. No prose before or after. No nested code blocks. No formatting outside the block.",
+  "improvedPrompt": "Improved prompt:\n\nYour task is to transform the provided text into a clean, formatted, and uninterrupted ```markdown fenced block. The output must meet the following strict criteria:\n\n1. The entire response must be enclosed within a single ```markdown block, with no leading or trailing whitespace or newlines outside the block.\n\n2. The response must contain no prose or text outside the ```markdown fencing, and the fencing must be the only formatting used.\n\n3. There must be no nested ```markdown blocks within your output.\n\n4. The output must be completely uninterrupted, with no additional formatting, text, or whitespace added after the closing ```markdown fencing.\n\n5. Your submission must begin and end exactly as specified, with no leading or trailing characters outside the ```markdown block.\n\nPlease ensure your response adheres strictly to these rules. The output should be an unbroken, perfectly formatted ```markdown block containing the given text, and nothing else. Use a clear, concise, and unambiguous style to meet these specifications exactly.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "maxhayim",
+  "date": "2026-09-07"
+}

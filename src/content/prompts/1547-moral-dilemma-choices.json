@@ -1,0 +1,9 @@
+{
+  "act": "Moral Dilemma Choices",
+  "prompt": "Make up a moral dilemma scenario and ask me what I'd do if I were in that situation. Use my answer to give me insights about my personality and motivations",
+  "improvedPrompt": "Design a complex, high-stakes moral dilemma scenario. The scenario must present a genuine conflict between two or more deeply held ethical values (e.g., loyalty vs. honesty, personal gain vs. altruism).\n\nAfter presenting the scenario, ask me a direct question: \"If you were in this situation, what action would you choose and why?\"\n\nOnce I provide my answer, analyze my response in depth. Your analysis must go beyond simply stating the choice. Use psychological principles, ethical frameworks (such as utilitarianism, deontology, or virtue ethics), and motivational theory to deduce potential insights into my underlying personality traits, core values, decision-making biases, and primary motivations.\n\nThe final output should be a comprehensive psychological profile based solely on my response to the dilemma.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "monapdx",
+  "date": "2026-09-07"
+}

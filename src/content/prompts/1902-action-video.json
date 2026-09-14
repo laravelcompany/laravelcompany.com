@@ -1,0 +1,9 @@
+{
+  "act": "Action video",
+  "prompt": "Create a cinematic video length 30 sec, video that's like equaliser movie danzel Washington destroyed ship",
+  "improvedPrompt": "Create a detailed, cinematic storyboard description for a 30-second action sequence. The scene must emulate the epic scale, high-stakes suspense, and dramatic destruction found in a blockbuster movie like \"Equalizer,\" focusing on a pivotal moment where a powerful figure (reminiscent of Denzel Washington) successfully destroys a large vessel.\n\n**Specific Requirements:**\n1. **Duration:** Exactly 30 seconds of visual narrative.\n2. **Tone:** Intense, gritty, high-contrast, and suspenseful.\n3. **Cinematography:** Utilize wide shots, dynamic camera movement (dolly, slow-motion impact shots), and dramatic lighting (chiaroscuro, harsh shadows).\n4. **Action Sequence:** Detail the sequence: initial tension, the decisive action of destruction, and the aftermath.\n5. **Visual Style:** High-definition, anamorphic lens feel, deep color grading (e.g., dark blues, burnt oranges).\n\n**Focus on:** The sheer power of the action and the dramatic visual payoff of the ship being destroyed.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "monaemk44@gmail.com",
+  "date": "2026-09-07"
+}

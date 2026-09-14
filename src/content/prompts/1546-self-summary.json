@@ -1,0 +1,9 @@
+{
+  "act": "Self-summary",
+  "prompt": "Give me a summary of what you know about me so far",
+  "improvedPrompt": "Analyze the entire history of our current conversation. Based solely on the text we have exchanged, provide a concise summary of the key facts, topics, stated preferences, or context points you have gathered about me. Structure the summary clearly, perhaps using bullet points or thematic groupings, to make the information easily digestible. Do not speculate on information outside of what has been explicitly stated.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "monapdx",
+  "date": "2026-09-07"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Enterprise Sponsorship",
+  "prompt": "Design enterprise-level sponsorship tiers ($500, $1000, $5000) with benefits like priority support, custom features, and brand visibility for my [project].",
+  "improvedPrompt": "Here's an improved version of the prompt:\n\n\"Craft a comprehensive tiered sponsorship program for [Your Project Name], offering distinct packages designed for enterprise-level organizations with budgets ranging from $500 to $5,000.\n\nYour task is to create three clearly differentiated tiers: Bronze ($500), Silver ($1,000), and Gold ($5,000). Each tier should provide a unique combination of value and benefits to justify the increasing investment.\n\nThe benefits should include a mix of priority access, custom development, brand visibility, and exclusive perks tailored to professional organizations. Ensure that the benefits escalate meaningfully between tiers to provide clear incentives for upgrades.\n\nPlease format your response as a table or detailed description, including the following elements for each tier:\n- Tier name\n- Price point\n- Key benefits and features\n- Constraints or limitations (if any)\n\nThe sponsorship program should aim to:\n- Attract and retain enterprise clients\n- Generate predictable revenue\n- Create opportunities for upselling and cross-selling\n- Enhance the overall value proposition of [Your Project Name]\n\nPlease provide your recommendations based on best practices in enterprise sponsorship and subscription models. Use specific examples and data points to support your suggestions.\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "f",
+  "date": "2026-09-07"
+}

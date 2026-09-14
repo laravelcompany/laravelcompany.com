@@ -1,0 +1,9 @@
+{
+  "act": "SWAP MENU EXTERNAL C++",
+  "prompt": "CHANGE THE OLD MISTY LOADER TO THE NEWEST LOADER THAT IS ALREADY IN THE NEW SOURCE PATH WITH THE SAME FONT AND THE SAME THEME AND THE SAME SIZE AND JUST CHANGE THE LOADER TO ENTER THE KEYAUTH, DON'T CHANGE ANYTHING ELSE",
+  "improvedPrompt": "Please perform a precise visual or code replacement operation based on the following strict constraints.\n\n**Goal:** Replace the existing \"Misty Loader\" with the newest available loader from the designated source path.\n\n**Constraints and Requirements:**\n1.  **Source:** The replacement loader *must* be sourced from the \"new source path.\"\n2.  **Aesthetics Preservation:** The new loader must maintain absolute consistency with the original:\n    *   Font style must remain identical.\n    *   Theme must remain identical.\n    *   Size must remain identical.\n3.  **Specific Text Change:** The new loader must be modified to display the exact text: \"Enter the KeyAuth.\"\n4.  **Exclusivity:** Absolutely no other elements, code, or visual components of the original structure are to be changed. Only the loader component itself should be replaced and modified.\n\n**In summary: Replace the old Misty Loader with the newest version from the new source path, ensuring the font, theme, and size are perfectly preserved, and update the displayed text to \"Enter the KeyAuth.\"**",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "reyvannshz",
+  "date": "2026-09-07"
+}

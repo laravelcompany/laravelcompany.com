@@ -1,0 +1,9 @@
+{
+  "act": "Family picture",
+  "prompt": "Create a prompt to create family picture in a studio with customized arrangement of the family members",
+  "improvedPrompt": "[/SYSTEM_PROMPT]\n[USER_PROMPT]\n\nDesign a professional family portrait studio scene with a specific, customized arrangement of all family members. Provide a detailed description of the setup, including the type of studio, the backdrop, the lighting, and the specific placement and poses for each individual in the shot.\n\nAssume the family consists of:\n- Grandparents (60s, retired)\n- Parents (40s, professional)\n- Teenage children (15 and 17)\n- Young children (5 and 7)\n\nThe goal is to create a timeless, classic portrait that showcases the love and unity of the family while accommodating the different ages and personalities. The grandparents should be prominently featured as the centerpiece of the photo.\n\nProvide your description in a bullet-point format for clarity and ease of reading. Be sure to:\n\n- Specify the type of studio (traditional photo studio vs. natural light studio)\n- Describe the backdrop or background (solid color, scenic, etc.)\n- Detail the lighting setup (natural, artificial, softbox, etc.)\n- Position each family member clearly, indicating who is standing, sitting, and where they are located relative to the camera\n- Describe the poses or interactions between family members\n- Include a brief overall mood or atmosphere for the portrait\n\nYour prompt should be clear, detailed, and specific enough that a professional photographer could follow it to create the exact scene described. Avoid vagueness or ambiguity in your instructions.\n\nPlease output the prompt in this format and style, assuming the role of a professional portrait photographer giving clear instructions to a client and assistant.\n\n[/USER_PROMPT]",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "rodj3881@gmail.com",
+  "date": "2026-09-07"
+}

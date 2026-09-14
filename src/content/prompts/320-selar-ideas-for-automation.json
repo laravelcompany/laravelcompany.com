@@ -1,0 +1,9 @@
+{
+  "act": "Selar ideas for automation",
+  "prompt": "Act as a digital marketing expert.create 10 digital beginner friendly digital product ideas I can sell on selar in Nigeria, explain each idea simply and state the problem it solves",
+  "improvedPrompt": "Your improved prompt:\n\nAct as an experienced digital marketing strategist with a strong focus on the Nigerian market. Generate a list of 10 highly effective and beginner-friendly digital product ideas that a Nigerian entrepreneur could successfully sell on platforms like Selar or Jumia. For each idea, please provide a clear and concise explanation that answers the following questions:\n\n1. What is the product or service?\n2. Who is the target audience in Nigeria for this product? Please describe the customer persona.\n3. What specific problem does this product solve for the target customer? Be as detailed as possible.\n4. Are there any relevant trends or market gaps in the Nigerian digital space that this product could leverage?\n5. What are the key features or components of the product that make it a valuable offering?\n6. Are there any constraints or challenges specific to the Nigerian market that the product should address?\n7. How does this product idea align with the broader digital marketing ecosystem in Nigeria?\n\nEnsure that your ideas are practical, scalable for beginners, and have clear market demand in the Nigerian context. Do not include ideas that are already saturated in the international market but wouldn't work in Nigeria. Each idea should be presented in a structured format, with a header for the product name, followed by the detailed explanation addressing the questions above. Please format your response in a clean, organized manner for easy reference.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "agulilianchika73@gmail.com",
+  "date": "2026-09-07"
+}

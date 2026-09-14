@@ -1,0 +1,9 @@
+{
+  "act": "AIM summarized pdf",
+  "prompt": "study the whole PDF and shorten the questions in it with only bullet points and keep the necessary Images and diagrams explain each question in short and content rich manner the answer should contain only bullet points no lengthy answers give me in a PDF format, keep it as short as possible with information rich content  please include all the images present in the actual PDF with respective to their questions",
+  "improvedPrompt": "Analyze the entire provided PDF document. Your task is to transform the content into a highly condensed, information-rich study guide, adhering strictly to the following rules:\n\n**Output Requirements:**\n\n1.  **Format:** The entire output must be presented exclusively using bullet points. Avoid lengthy paragraphs or narrative explanations.\n2.  **Content Focus:** For each question or major topic identified in the PDF, provide only the essential, core information. The goal is maximum information density and brevity.\n3.  **Visual Integration:** Identify every image, diagram, and figure present in the original PDF. Each visual must be relevant to the corresponding section and must be included in the final output, clearly linked to the relevant question or explanation.\n4.  **Explanation Style:** Explain the concepts related to the questions in a concise, content-rich manner, using only bullet points.\n5.  **Structure:** Organize the output logically, ensuring that the flow mirrors the structure of the original PDF.\n\n**Goal:** Produce the shortest possible yet most comprehensive summary of the PDF, ensuring all critical information and visual context are retained and explained succinctly. Structure the final response as a ready-to-convert document.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "nihalbhushantallati@gmail.com",
+  "date": "2026-09-07"
+}

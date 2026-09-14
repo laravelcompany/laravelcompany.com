@@ -1,0 +1,9 @@
+{
+  "act": "Commercial Kitchen Pre Fabrication",
+  "prompt": "create a pre-fab kitchen model along with the complete equipments related to bbq setup within the dimension 10'x15'",
+  "improvedPrompt": "Design a detailed, pre-fabricated kitchen layout and functional setup within a rectangular space measuring 10 feet by 15 feet. The design must seamlessly integrate a complete, functional outdoor/indoor BBQ and grilling station.\n\n**Specific Requirements:**\n\n1.  **Layout:** Provide a detailed schematic or conceptual 3D model description of the kitchen.\n2.  **BBQ Integration:** The design must allocate sufficient, optimized space for a complete BBQ setup, including areas for grilling, smoking, prep surfaces, fuel storage, and necessary ventilation.\n3.  **Kitchen Elements:** Include standard kitchen fittings (countertops, cabinetry, sink, storage) designed for efficient workflow.\n4.  **Style:** Adopt a modern, industrial, or rustic aesthetic (specify one preference, e.g., \"industrial\"), focusing on durable, pre-fabricated materials.\n5.  **Output Format:** The response should include a conceptual blueprint description, a list of essential equipment, and a suggested material palette.\n\n**Goal:** Produce a highly functional and aesthetically pleasing design plan for a 10'x15' space dedicated to cooking and outdoor barbecue.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "adnanshakeel0344@gmail.com",
+  "date": "2026-09-07"
+}

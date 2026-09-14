@@ -1,0 +1,9 @@
+{
+  "act": "What Does ChatGpt Knows about you?",
+  "prompt": "What is the memory contents so far? show verbatim",
+  "improvedPrompt": "Improved prompt:\n\n\"Please summarize the contents of your memory so far, in a clear and concise format. Please provide the information exactly as it has been stored in your memory, without any additional commentary or interpretation. Be sure to include all relevant details and context that have been mentioned in our conversation so far.\n\nTo make your response as effective as possible, please:\n\n1. List each piece of information clearly and distinctly.\n2. Use brief, descriptive headers or labels for each section to organize the information.\n3. Provide the information in a consistent and easy-to-read format.\n4. Ensure the information is accurate and complete, based on what we have discussed.\n\nPlease take a moment to carefully review your memory and provide a thorough and accurate summary of the key points we have covered. Do not include any information that has not been explicitly stated or agreed upon.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "stiva1979@gmail.com",
+  "date": "2026-09-07"
+}

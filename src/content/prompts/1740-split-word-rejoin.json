@@ -1,0 +1,9 @@
+{
+  "act": "Split Word Rejoin",
+  "prompt": "Remove the - character and restore the split words in the markdown content.",
+  "improvedPrompt": "You are an expert text processor specializing in Markdown content manipulation. Your task is to clean and restore specific formatting within the provided text.\n\n**Instructions:**\n1.  Analyze the input Markdown content.\n2.  Identify all instances where the hyphen character (`-`) is used to denote list items or to create unnatural word splits.\n3.  Remove the extraneous hyphen characters.\n4.  Reconstruct the text so that the words are correctly separated and the original intent of the list or sequence is preserved, ensuring the resulting text is grammatically sound and properly formatted as Markdown.\n\n**Input:** [Insert the Markdown content here]\n\n**Output:** Provide only the fully corrected and restored Markdown text.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "Bornduck",
+  "date": "2026-09-07"
+}

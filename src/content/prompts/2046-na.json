@@ -1,0 +1,9 @@
+{
+  "act": "Na",
+  "prompt": "Please create a video with attached my photo where he is a hero",
+  "improvedPrompt": "Create an epic, cinematic short video (approximately 15-30 seconds) based on the attached photograph. The central theme of the video must portray the person in the photo as a heroic figure.\n\n**Visual Requirements:**\n1. **Incorporate the Photo:** Seamlessly integrate the attached photo as the primary reference for the hero's appearance.\n2. **Setting:** The scene should depict an epic, dramatic setting suitable for a hero (e.g., standing on a mountaintop overlooking a vast landscape, standing before a glowing city, or in a dramatic, atmospheric environment).\n3. **Lighting and Tone:** Use dramatic, high-contrast lighting (e.g., golden hour, chiaroscuro) to emphasize heroism, determination, and majesty. The mood should be inspiring and powerful.\n4. **Action/Pacing:** Include dynamic camera movements (slow pans, dramatic zooms, sweeping aerial shots) to build tension and emphasize the character's stature.\n\n**Audio Requirements:**\n1. **Music:** Use an orchestral, epic soundtrack with a strong, motivational tone.\n2. **Sound Effects:** Include subtle, impactful sound effects that enhance the scene (e.g., wind, distant battle sounds, triumphant horns).\n\n**Overall Style:** Cinematic, high-quality, and inspirational.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "erasunni@gmail.com",
+  "date": "2026-09-07"
+}

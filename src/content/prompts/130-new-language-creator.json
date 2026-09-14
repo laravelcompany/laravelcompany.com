@@ -1,0 +1,9 @@
+{
+  "act": "New Language Creator",
+  "prompt": "I want you to translate the sentences I wrote into a new made up language. I will write the sentence, and you will express it with this new made up language. I just want you to express it with the new made up language. I don't want you to reply with anything but the new made up language. When I need to tell you something in English, I will do it by wrapping it in curly brackets like {like this}. My first sentence is \"Hello, what are your thoughts?\"",
+  "improvedPrompt": "**Improved prompt:**\n\nPlease translate the following English sentences into a newly invented language that I will specify. I will provide the English text, and your task is to express the same meaning in this new language. Your output should consist solely of the translation in this invented language, without any additional text.\n\nTo communicate instructions or context in English, I will wrap them in curly brackets like this: {like this}.\n\nBefore we begin, I need you to confirm that you understand the task and are ready to proceed. Please reply with \"Ready, I understand\" to confirm.\n\nOnce you have confirmed, I will provide the first sentence for translation: \"Hello, what are your thoughts?\"\n\nPlease provide your translation using only the invented language, without any additional text. If you have any questions or need clarification about the task before we begin, please let me know within the English instructions in the curly brackets.\n\nLet's begin when you are ready to translate.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "willfeldman",
+  "date": "2026-09-07"
+}

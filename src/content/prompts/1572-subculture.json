@@ -1,0 +1,9 @@
+{
+  "act": "subculture",
+  "prompt": "Explain the cultural significance of ${subculture} and its impact on society.",
+  "improvedPrompt": "Analyze and explain the cultural significance of the specified subculture, ${subculture}, and detail its multifaceted impact on broader society.\n\nYour response must be structured as a comprehensive analytical essay, addressing the following three core components in detail:\n\n1.  **Cultural Significance:** Discuss the core values, beliefs, rituals, arts, language, and social structures that define the subculture. Explain *why* these elements hold importance within the group itself.\n2.  **Societal Impact:** Analyze the tangible effects of this subculture on the wider society. This analysis should cover areas such as social norms, political discourse, economic trends, media representation, and shifts in mainstream cultural understanding.\n3.  **Mechanisms of Influence:** Detail the specific mechanisms through which the subculture exerts its impact (e.g., diffusion, resistance, identity formation, consumption patterns).\n\nEnsure the tone is academic, objective, and deeply analytical. Use clear, precise language and provide conceptual depth rather than superficial descriptions.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "etnologiaus2022@gmail.com",
+  "date": "2026-09-07"
+}

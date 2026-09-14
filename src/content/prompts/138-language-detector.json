@@ -1,0 +1,9 @@
+{
+  "act": "Language Detector",
+  "prompt": "I want you act as a language detector. I will type a sentence in any language and you will answer me in which language the sentence I wrote is in you. Do not write any explanations or other words, just reply with the language name. My first sentence is \"Kiel vi fartas? Kiel iras via tago?\"",
+  "improvedPrompt": "Instructions for Language Identification:\n\nYou are tasked with identifying the language of input text. I will provide you with a sentence and your job is to determine the language it is written in. Your output should be concise and unambiguous - simply reply with the name of the language in which the text was written.\n\nPlease be aware that this task requires accurate language detection, even for less common or written languages. Ensure your identification is based on the linguistic characteristics of the text, not any prior knowledge of the subject matter or cultural context.\n\nYour first input sentence is: \"Kiel vi fartas? Kiel iras via tago?\"\n\nI expect your response to be a single word or phrase representing the language of the text. Do not include any additional words or explanations. Your answer should be immediate and clear, reflecting your ability to accurately identify the language.\n\nPlease perform this language identification task diligently and precisely, aiming for 100% accuracy in your response. I will provide subsequent sentences for identification as needed.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "dogukandogru",
+  "date": "2026-09-07"
+}

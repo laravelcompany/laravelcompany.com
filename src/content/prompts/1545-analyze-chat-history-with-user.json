@@ -1,0 +1,9 @@
+{
+  "act": "Analyze Chat History With User",
+  "prompt": "I'd like you to analyze this file containing all of my chat history with a friend of mine. Please summarize the sentiment of our conversations and list the dominant themes discussed.",
+  "improvedPrompt": "Act as an expert text and sentiment analyst. Your task is to thoroughly analyze the provided file, which contains the complete chat history between two friends.\n\nPlease perform the following two distinct analyses and present the results in a clearly structured format:\n\n**1. Sentiment Analysis:**\nAnalyze the overall emotional tone of the conversations. Categorize the sentiment (e.g., Positive, Negative, Neutral, Mixed) and provide a brief summary of the dominant emotional trajectory across the entire history. If possible, indicate specific conversations or shifts in tone.\n\n**2. Theme Extraction:**\nIdentify and list the dominant, recurring themes, topics, or subjects discussed throughout the chat history. Group related discussions into coherent themes. List the top 5-7 most significant themes, providing a brief explanation for why they are dominant.\n\n**Output Format Requirements:**\nPresent your findings using clear headings for each section. Ensure the output is objective, data-driven, and easy to read.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "monapdx",
+  "date": "2026-09-07"
+}

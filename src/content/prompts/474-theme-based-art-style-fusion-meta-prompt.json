@@ -1,0 +1,9 @@
+{
+  "act": "Theme based Art Style Fusion Meta-Prompt",
+  "prompt": "Theme=\"${theme}\" \nStyle=\"the most interesting fusion of 3 or more art styles to best capture the theme\"",
+  "improvedPrompt": "Theme: \"${theme}\"\nStyle: \"Develop a distinctive visual style that seamlessly blends three or more distinct art styles, chosen for their ability to harmoniously capture and enhance the essence of the given theme.\"\n\nHere's how I've refined the prompt:\n\n1. Added a clear introduction to define the theme as the central focus.\n2. Used the phrase \"Develop a distinctive visual style\" to emphasize the creative task at hand.\n3. Specified \"seamlessly blends\" to clarify that the fusion of styles should be smooth and integrated, rather than simply combining them.\n4. Emphasized \"distinct art styles\" to ensure the AI considers multiple, recognizable approaches.\n5. Explained \"chosen for their ability\" to clarify that the selection of styles should be purposeful and driven by their compatibility with the theme.\n6. Replaced \"best capture the theme\" with \"capture and enhance the essence of the theme\" to encourage more active and transformative interpretation.\n7. Changed the closing period to a comma to create a more polished sentence structure.\n\nThe revised prompt maintains the original intent while providing more detailed and clear instructions, setting a higher standard for the output, and guiding the AI towards a more sophisticated and thoughtful response.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "magejosh",
+  "date": "2026-09-07"
+}

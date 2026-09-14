@@ -1,0 +1,9 @@
+{
+  "act": "Researchers in the Library",
+  "prompt": "Generate a video for Researchers in the Lab going to the library, make it programmatic video creation, maybe use LoRA and Remotion",
+  "improvedPrompt": "Generate a detailed, programmatic video production plan and script for a short animation depicting \"Researchers in the Lab\" going to the library.\n\n**Production Requirements:**\n1.  **Style:** The video must utilize a motion graphics or programmatic style, suitable for creation using tools like Remotion, incorporating concepts inspired by LoRA for visual asset generation or style consistency.\n2.  **Scene Flow:** Detail a sequence of 4 distinct scenes showing the transition, focusing on the mood of focused research transitioning to a relaxed learning environment.\n3.  **Visual Aesthetic:** The aesthetic should be clean, modern, and slightly stylized (e.g., minimalist line art or flat design). Use a color palette that suggests focus (blues, grays) and calm (warm lighting).\n4.  **Pacing:** The overall duration should be approximately 30â45 seconds. The pacing should be smooth and deliberate.\n\n**Output Format:**\nProvide the output structured in a format that is directly usable for programmatic video generation, including:\n1.  **Scene Breakdown:** Detailed description for each scene (including camera movement/animation instructions).\n2.  **Asset List:** List of required visual elements (characters, lab setting, library setting, transitional elements).\n3.  **Timeline/Code Concept:** A conceptual outline of how these scenes would be sequenced using Remotion principles (e.g., defining components, state changes, and duration).",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "mohsamhef@gmail.com",
+  "date": "2026-09-07"
+}

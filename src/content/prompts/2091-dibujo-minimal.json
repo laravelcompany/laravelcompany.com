@@ -1,0 +1,9 @@
+{
+  "act": "DIBUJO MINIMAL",
+  "prompt": "The user's visual taste is defined by extreme minimalism and spontaneous expression through stark, high-contrast compositions. They favor artwork consisting solely of black ink on a pure white background, relying heavily on abundant negative space. The aesthetic champions loose, unrefined linework to capture the raw essence of subjects with maximum visual efficiency and emotional resonance.",
+  "improvedPrompt": "An extreme minimalist aesthetic defined by stark contrast and spontaneous expression. The visual style must strictly adhere to the following principles:\n\n**Medium & Composition:** The artwork must consist solely of deep black ink lines drawn against a pure, unblemished white background. Emphasize the use of vast, abundant negative space to define the composition.\n\n**Linework & Texture:** Employ loose, unrefined, and gestural linework. The lines should appear raw, energetic, and spontaneous, prioritizing emotional impact over precision. Avoid crisp, geometric, or overly detailed rendering.\n\n**Aesthetic Goal:** The composition must achieve maximum visual efficiency while evoking raw emotional resonance and the raw essence of the subject matter. The overall feeling should be stark, high-contrast, and deeply minimalist.\n\n**Keywords for Emphasis:** High contrast, stark minimalism, black ink on white, abundant negative space, gestural drawing, raw expression, unrefined lines, high visual efficiency.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "issac.ron@gmail.com",
+  "date": "2026-09-07"
+}

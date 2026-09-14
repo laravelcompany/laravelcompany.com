@@ -1,0 +1,9 @@
+{
+  "act": "friend",
+  "prompt": "write a mail to my best friend that he is not good in communication skills",
+  "improvedPrompt": "Write an email to my best friend regarding their communication skills. To ensure the email is effective and appropriate, please provide the following context before writing:\n\n1.  **Desired Tone:** (Choose one: Gentle/Supportive Correction, Direct/Serious Feedback, Humorous Teasing, Empathetic Concern, or Motivational).\n2.  **Specific Context/Reason:** Why are you bringing this up now? (e.g., Are you frustrated about a specific recent interaction, are you worried about their future opportunities, or are you trying to encourage them to improve?)\n3.  **Specific Examples (Optional but Recommended):** Include 1-2 very brief, general examples of the type of communication issue you are referring to (e.g., difficulty expressing feelings, poor listening skills, struggling with public speaking).\n4.  **Desired Outcome:** What do you want the friend to feel or do after reading the email? (e.g., Self-reflection, willingness to seek advice, immediate change).\n5.  **Relationship Dynamic:** Briefly describe your relationship (e.g., very casual and teasing, deeply serious and honest, etc.).\n\n**If no specific context is provided, generate an email that adopts a tone of gentle, supportive concern, focusing on how communication affects the relationship, and offers open-ended support for their growth.**",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "hunnysaini2007@gmail.com",
+  "date": "2026-09-07"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "cunninglinguist",
+  "prompt": "- Alliteration  \n- Antithesis  \n- Hyperbole  \n- Paradox  \n- Personification  \n- Rhetorical Questions  \n- Synaesthesia  \n- Hyperbaton  \n- Anadiplosis  \n- Diacope  \n- Epistrophe  \n- Tricolon  \n- Epizeuxis  \n- Syllepsis  \n- Isocolon  \n- Enallage  \n- Chiasmus  \n- Catachresis  \n- Litotes  \n- Metonymy  \n- Synecdoche  \n- Epanalepsis  \n- Aposiopesis  \n- Prolepsis  \n- Congeries  \n- Bdelygmia  \n- Adynaton  \n- Anaphora  \n- Assonance  \n- Blazon  \n- Hendiadys  \n- Hypotaxis  \n- Parataxis  \n- Merism  \n- Periodic Sentences  \n- Pleonasm  \n- Polyptoton  \n- Scēsis Onomaton  \n- Transferred Epithets  \n- Zeugma[1][4][6][8]",
+  "improvedPrompt": "Act as an expert literary analyst and rhetoric specialist. Your task is to provide comprehensive, detailed explanations and illustrative examples for every rhetorical and stylistic device listed below.\n\nFor each item, you must provide:\n1. A precise, clear definition of the device.\n2. A brief, illustrative example sentence or short passage demonstrating the use of that device.\n\nDo not provide unnecessary commentary; focus strictly on defining and exemplifying the listed terms.\n\nThe devices to be analyzed are:\nAlliteration, Antithesis, Hyperbole, Paradox, Personification, Rhetorical Questions, Synaesthesia, Hyperbaton, Anadiplosis, Diacope, Epistrophe, Tricolon, Epizeuxis, Syllepsis, Isocolon, Enallage, Chiasmus, Catachresis, Litotes, Metonymy, Synecdoche, Epanalepsis, Aposiopesis, Prolepsis, Congeries, Bdelygmia, Adynaton, Anaphora, Assonance, Blazon, Hendiadys, Hypotaxis, Parataxis, Merism, Periodic Sentences, Pleonasm, Polyptoton, ScÄsis Onomaton, Transferred Epithets, and Zeugma.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "kennynah85@gmail.com",
+  "date": "2026-09-07"
+}

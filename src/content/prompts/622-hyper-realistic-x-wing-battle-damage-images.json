@@ -1,0 +1,9 @@
+{
+  "act": "Hyper-Realistic X-Wing Battle Damage Images",
+  "prompt": "İmparatorluk güçleri ile bir çatışmadan yeni dönmüş ve orta seviyede hasarlanmış bir X-Wing'in hiper-realistik detay fotoğraflarını oluştur, 4 adet olsun",
+  "improvedPrompt": "\"The Imperial forces have just engaged in a intense battle and your X-Wing starfighter has sustained moderate damage. Your mission is to create a hyper-realistic, high-resolution set of four photographs showcasing the X-Wing from various angles, highlighting the extent of the battle damage while maintaining the iconic sleek design and recognizable cockpit area. Ensure the lighting is dramatic, with shadows emphasizing the dents, scorch marks, and missing panels, providing an up-close and personal view of the toll the conflict has taken on the vehicle. The images should evoke the sense of a gallant ship that has seen fierce combat yet still remains operational, ready for its next mission. Please use a cinematic style and composition, with a focus on storytelling through the visual details of the damaged exterior.\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "mehmetozturk@gmail.com",
+  "date": "2026-09-07"
+}

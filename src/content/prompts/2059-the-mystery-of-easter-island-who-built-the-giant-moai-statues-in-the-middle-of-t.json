@@ -1,0 +1,9 @@
+{
+  "act": "The Mystery of Easter Island | Who Built the Giant Moai Statues? In the middle of the Pacific Ocean lies a tiny island filled with hundreds of giant stone statues.",
+  "prompt": "The Mystery of Easter Island | Who Built the Giant Moai Statues?\nIn the middle of the Pacific Ocean lies a tiny island filled with hundreds of giant stone statues. But here's the mystery... Who built them, and how were they moved without modern technology?",
+  "improvedPrompt": "Act as an expert historian and archaeologist. Your task is to write an in-depth, engaging article exploring the enduring mystery of the Moai statues on Easter Island (Rapa Nui).\n\nThe article must address the following core questions with detailed analysis and reference to current archaeological theories:\n1. **Origin and Builders:** Who were the Polynesian ancestors responsible for carving and erecting these massive stone statues?\n2. **Construction Techniques:** What methods and tools did the Rapa Nui people use to carve the statues from the volcanic tuff?\n3. **Transportation:** How did the Rapa Nui people manage the monumental task of moving these statues from the quarries to their final locations, especially without modern technology?\n4. **Cultural Significance and Decline:** Discuss the cultural context of the statues and the theories surrounding the eventual decline or fate of the Moai society.\n\n**Style and Constraints:**\n*   **Tone:** Authoritative, mysterious, and highly informative.\n*   **Length:** Approximately 800-1000 words.\n*   **Structure:** Use clear headings and a compelling narrative flow.\n*   **Goal:** The final output should effectively synthesize the archaeological evidence and competing theories surrounding the Moai phenomenon.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "jumoaktar78@gmail.com",
+  "date": "2026-09-07"
+}

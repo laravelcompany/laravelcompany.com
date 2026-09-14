@@ -1,0 +1,9 @@
+{
+  "act": "MDCT Step-by-Step Calculation",
+  "prompt": "Implement MDCT for the input sequence:\n\nx(n) = [1, 2, 3, 4]\n\nSteps:\n1. Identify N and 2N\n2. Apply MDCT formula\n3. Show cosine values clearly\n4. Display step-by-step calculation table\n5. Give final coefficients",
+  "improvedPrompt": "Act as an expert in digital signal processing. Your task is to perform the Modified Discrete Cosine Transform (MDCT) on the provided input sequence.\n\n**Input Sequence:**\n$x(n) = [1, 2, 3, 4]$\n\n**Instructions and Required Output Format:**\nYou must execute the MDCT calculation following these strict steps and present the results clearly:\n\n1.  **Determine Parameters:** Clearly identify the length of the input sequence, $N$, and the length of the transformed sequence, $2N$.\n2.  **MDCT Formulation:** State the general formula for the MDCT, specifically noting the use of cosine functions and the required overlap/windowing mechanism inherent in the MDCT.\n3.  **Step-by-Step Calculation Table:** Provide a detailed, step-by-step calculation table showing how the MDCT coefficients are derived. This table must clearly illustrate the application of the cosine function to the overlapping segments.\n4.  **Final Coefficients:** Present the final calculated MDCT coefficients clearly.\n\nEnsure the entire response is structured logically, showing the mathematical derivation and the final result.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "mvel20342@gmail.com",
+  "date": "2026-09-07"
+}

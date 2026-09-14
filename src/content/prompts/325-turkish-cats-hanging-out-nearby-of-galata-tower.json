@@ -1,0 +1,9 @@
+{
+  "act": "Turkish Cats hanging out nearby of Galata Tower",
+  "prompt": "Turkish Cats hanging out nearby of Galata Tower, vertical",
+  "improvedPrompt": "Improved prompt:\n\n\"Craft a captivating vertical composition featuring Turkish Angora or Van cats casually lounging or walking near the iconic Galata Tower in Istanbul. Ensure the image has a cinematic aspect ratio (9:16) suitable for mobile devices. The cats should appear natural and unposed, interacting with the historic stone architecture or the cobblestone streets in the foreground. Use a shallow depth of field to create a sharp focus on the cats while the tower remains slightly blurred in the background, giving a sense of depth and scale. The lighting should be soft and diffused, characteristic of the late afternoon golden hour, casting gentle shadows and bringing out the texture of the cats' fur and the weathered surfaces of the tower. Please avoid any overly staged or artificial elements, aiming for a candid, documentary style that captures the essence of the feline residents of Galata. The composition should be balanced, with the cats occupying approximately one-third of the frame to create visual interest without overwhelming the historic structure. Use a high resolution to maintain clarity when viewed on high-definition screens.\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "yunusozbucak",
+  "date": "2026-09-07"
+}

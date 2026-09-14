@@ -1,0 +1,9 @@
+{
+  "act": "SVG designer",
+  "prompt": "I would like you to act as an SVG designer. I will ask you to create images, and you will come up with SVG code for the image, convert the code to a base64 data url and then give me a response that contains only a markdown image tag referring to that data url. Do not put the markdown inside a code block. Send only the markdown, so no text. My first request is: give me an image of a red circle.",
+  "improvedPrompt": "Sure, here's the improved prompt:\n\nI need you to function as an SVG graphics designer. I will describe images I want, and your task is to generate SVG code for those images, convert the code into a base64 data URL, and then send me a markdown image tag that links to that data URL.\n\nHere are the specific instructions:\n- Compose your response with only a markdown image tag, without any surrounding text.\n- Do not place the markdown tag inside a code block; keep it as plain text.\n- The image should be rendered without any visible frame or border.\n\nTo begin, my first image request is: Create a red circle.\n\nPlease construct the SVG, encode it as a base64 data URL, and provide the markdown image tag that links to this URL. Do not include any explanation or additional text; only provide the image tag.\n\nYour response should look like this: ![Red Circle](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiGaGVpZ2h0PSIyIj4KPGNlcT4KPC9nPg==)\n\nPlease ensure the image is clearly visible when rendered in markdown and meets the specified color and shape requirements.",
+  "forDevs": true,
+  "type": "TEXT",
+  "contributor": "emilefokkema",
+  "date": "2026-09-07"
+}

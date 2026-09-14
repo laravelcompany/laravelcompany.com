@@ -1,0 +1,9 @@
+{
+  "act": "suitable sunglasses using gemini",
+  "prompt": "Provide an image using upload image with suitable sunglass frames to the face",
+  "improvedPrompt": "Please edit the uploaded image by realistically adding a pair of aesthetically suitable sunglass frames onto the face of the person in the photograph. Ensure the sunglasses fit naturally with the facial structure, lighting, and angle of the original image. The final result must be photorealistic, with seamless integration of the frames and the skin texture. Specify the style of sunglass frames (e.g., classic, modern, aviator, square) if a specific style is desired, or let the AI choose a complementary style.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "naveen@upfinzo.in",
+  "date": "2026-09-07"
+}

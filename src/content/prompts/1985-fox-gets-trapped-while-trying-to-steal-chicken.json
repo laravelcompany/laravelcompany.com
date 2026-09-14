@@ -1,0 +1,9 @@
+{
+  "act": "Fox gets trapped while trying to steal chicken",
+  "prompt": "The fox was so clever that he was peeking in front of the house's courtyard while trying to steal a chicken.\nMeanwhile, the wise landlord was able to understand the fox's character.\nThe fox did not understand this.\nWithout realizing it, he jumped to catch the chicken.\nAnd the landlord, wise to his wits, spread a net and caught the fox.\nFinally the fox died.",
+  "improvedPrompt": "Write a short, engaging fable based on the following sequence of events. Focus on developing the character dynamics, the tension between the characters, and the moral lesson.\n\n**Plot Points to Include:**\n1. A clever fox attempts to steal a chicken from the courtyard of a wise landlord's house.\n2. The landlord observes the fox and manages to understand the fox's true nature (or cunning).\n3. The fox remains oblivious to the landlord's understanding.\n4. Driven by impulse, the fox acts without forethought to catch the chicken.\n5. The wise landlord, using his foresight, sets a trap (a net) to capture the fox.\n6. The story concludes with the fox's demise.\n\n**Style and Tone Requirements:**\n*   **Tone:** Cautionary, slightly whimsical, yet ultimately satisfying regarding the theme of wisdom prevailing over trickery.\n*   **Pacing:** Build tension during the fox's attempt and the landlord's realization, leading to a swift resolution.\n*   **Focus:** Emphasize the contrast between cunning and true wisdom.\n\n**Desired Output:** A complete narrative story, approximately 300-400 words.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "mdalimmdalim110@gmail.com",
+  "date": "2026-09-07"
+}
