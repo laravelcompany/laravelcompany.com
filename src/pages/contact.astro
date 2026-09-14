@@ -169,20 +169,46 @@ const organizationSchema = {
 
       <!-- Booking Grid -->
       <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Calendly Widget -->
+        <!-- Booking eligibility is resolved before Calendly is initialised. -->
         <div
-          class="rounded-xl overflow-hidden animate-on-scroll shadow-lg bg-white/10 p-0"
+          id="booking-panel"
+          class="relative min-h-[700px] rounded-2xl overflow-hidden animate-on-scroll shadow-xl bg-white/10 border border-orange-500/20"
+          aria-live="polite"
+          aria-busy="true"
         >
           <div
-            class="calendly-inline-widget"
-            data-url="https://calendly.com/laravelagency/30min?background_color=0f172a&text_color=ffffff&primary_color=7c3aed&utm_source=website&utm_medium=general_inquiry&utm_campaign=contact_page"
-            style="min-width:320px;height:700px;"
+            id="booking-loading"
+            class="absolute inset-0 flex items-center justify-center bg-slate-950/70"
           >
+            <div class="flex items-center gap-3 text-gray-300">
+              <span class="h-3 w-3 rounded-full bg-orange-400 animate-pulse"></span>
+              Checking calendar availability…
+            </div>
           </div>
-          <script
-            type="text/javascript"
-            src="https://assets.calendly.com/assets/external/widget.js"
-            async></script>
+
+          <div id="calendly-container" class="hidden min-h-[700px]"></div>
+
+          <div
+            id="booking-restricted"
+            class="hidden min-h-[700px] p-6 sm:p-10 items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-purple-950/80"
+          >
+            <div class="relative max-w-lg rounded-2xl border border-amber-400/30 bg-white/[0.06] p-7 sm:p-10 shadow-2xl shadow-orange-950/30 backdrop-blur">
+              <div class="absolute -inset-px -z-10 rounded-2xl bg-gradient-to-br from-amber-400/20 via-transparent to-purple-500/20"></div>
+              <div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-amber-400/30 bg-amber-400/10 text-3xl" aria-hidden="true">🔒</div>
+              <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">Booking temporarily unavailable</p>
+              <h2 class="mb-5 text-3xl font-bold text-white sm:text-4xl">Well… this is awkward.</h2>
+              <div class="space-y-4 text-base leading-relaxed text-gray-300">
+                <p>Our calendar has decided to take an unexpected day off.</p>
+                <p>We're currently not accepting new bookings from this region under our international commercial and security policy.</p>
+                <p>Nothing personal. It's one of those wonderfully complicated internet-business decisions. Apparently even calendars need boundaries.</p>
+                <p>If you're already a client or have an active business relationship with us, contact us directly:</p>
+              </div>
+              <div class="mt-7 grid gap-3 sm:grid-cols-2">
+                <a href="tel:+447448218899" class="rounded-xl border border-orange-400/30 bg-orange-400/10 px-4 py-3 text-center font-semibold text-orange-200 transition hover:bg-orange-400/20 focus:outline-none focus:ring-2 focus:ring-orange-400">Call +44 744 821 8899</a>
+                <a href="mailto:info@laravelcompany.com" class="rounded-xl border border-purple-400/30 bg-purple-400/10 px-4 py-3 text-center font-semibold text-purple-200 transition hover:bg-purple-400/20 focus:outline-none focus:ring-2 focus:ring-purple-400">Email our team</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Information Panel -->
@@ -294,7 +320,8 @@ const organizationSchema = {
 
               <!-- CTA -->
               <div
-                class="mt-8 p-4 bg-gradient-to-r from-amber-900/20 to-orange-900/20 rounded-lg border border-amber-900/30"
+                id="booking-cta"
+                class="hidden mt-8 p-4 bg-gradient-to-r from-amber-900/20 to-orange-900/20 rounded-lg border border-amber-900/30"
               >
                 <h4 class="font-semibold text-white mb-2">
                   👉 Let's Talk!
@@ -340,6 +367,61 @@ const organizationSchema = {
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    const showBooking = () => {
+      const panel = document.querySelector("#booking-panel");
+      const container = document.querySelector("#calendly-container");
+      const cta = document.querySelector("#booking-cta");
+      if (!panel || !container) return;
+
+      container.classList.remove("hidden");
+      container.innerHTML = '<div class="calendly-inline-widget" data-url="https://calendly.com/laravelagency/30min?background_color=0f172a&text_color=ffffff&primary_color=7c3aed&utm_source=website&utm_medium=general_inquiry&utm_campaign=contact_page" style="min-width:320px;height:700px;"></div>';
+      cta?.classList.remove("hidden");
+
+      const script = document.createElement("script");
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.head.appendChild(script);
+      panel.dataset.bookingState = "eligible";
+    };
+
+    const showRestriction = () => {
+      const panel = document.querySelector("#booking-panel");
+      const restricted = document.querySelector("#booking-restricted");
+      if (!panel || !restricted) return;
+      restricted.classList.remove("hidden");
+      restricted.classList.add("flex");
+      panel.dataset.bookingState = "restricted";
+    };
+
+    const resolveBookingEligibility = async () => {
+      const panel = document.querySelector("#booking-panel");
+      if (!panel || panel.dataset.bookingState) return;
+
+      const controller = new AbortController();
+      const timeout = window.setTimeout(() => controller.abort(), 2500);
+
+      try {
+        const response = await fetch("/api/booking-eligibility", {
+          credentials: "same-origin",
+          headers: { Accept: "application/json" },
+          signal: controller.signal,
+        });
+        const result = response.ok ? await response.json() : { eligible: true };
+        result.eligible === false ? showRestriction() : showBooking();
+      } catch {
+        showBooking();
+      } finally {
+        window.clearTimeout(timeout);
+        document.querySelector("#booking-loading")?.remove();
+        panel.setAttribute("aria-busy", "false");
+      }
+    };
+
+    document.addEventListener("astro:page-load", resolveBookingEligibility);
+    resolveBookingEligibility();
+  </script>
 
   <!-- Location & Contact Section -->
   <section class="py-20 bg-white/5">
