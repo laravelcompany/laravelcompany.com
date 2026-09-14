@@ -51,4 +51,6 @@ jobs:
           cloudflare-project-name: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
           directory: dist
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          github-environment: ${{ (github.ref == 'refs/heads/main' && 'production') || 'preview' }}
+          # This repository only defines the production GitHub Environment.
+          # Passing a missing preview environment makes successful PR uploads fail.
+          github-environment: ${{ github.ref == 'refs/heads/main' && 'production' || '' }}
