@@ -1,0 +1,90 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import HeroSection from "../../../components/HeroSection.astro";
+import BookCard from "../../../components/books/BookCard.astro";
+import { getBooks, type Book } from "../../../utils/booksCache";
+import { BOOKS_PAGE_SIZE } from "../../../data/books-curated";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+    const books = await getBooks();
+    const totalPages = Math.max(1, Math.ceil(books.length / BOOKS_PAGE_SIZE));
+    // Page 1 is the landing page; this route owns pages 2..N.
+    return Array.from({ length: Math.max(0, totalPages - 1) }, (_, i) => {
+        const pageNum = i + 2;
+        return {
+            params: { page: String(pageNum) },
+            props: {
+                books: books.slice((pageNum - 1) * BOOKS_PAGE_SIZE, pageNum * BOOKS_PAGE_SIZE),
+                pageNum,
+                totalPages,
+            },
+        };
+    });
+}
+
+interface Props {
+    books: Book[];
+    pageNum: number;
+    totalPages: number;
+}
+
+const { books, pageNum, totalPages } = Astro.props;
+
+function pageNumbers(current: number, last: number): (number | "...")[] {
+    if (last <= 7) return Array.from({ length: last }, (_, i) => i + 1);
+    const pages: (number | "...")[] = [1];
+    const rangeStart = Math.max(2, current - 1);
+    const rangeEnd = Math.min(last - 1, current + 1);
+    if (rangeStart > 2) pages.push("...");
+    for (let i = rangeStart; i <= rangeEnd; i++) pages.push(i);
+    if (rangeEnd < last - 1) pages.push("...");
+    pages.push(last);
+    return pages;
+}
+
+const numbers = pageNumbers(pageNum, totalPages);
+const hrefFor = (n: number) => (n === 1 ? "/books/" : `/books/page/${n}/`);
+---
+
+<Layout
+    title={`Books - Page ${pageNum} | Laravel Company`}
+    description={`Page ${pageNum} of the Laravel Company curated developer reading library.`}
+>
+    <HeroSection
+        title="Browse the full shelf"
+        highlightText="The Library"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Books", href: "/books/" }, { label: `Page ${pageNum}` }]}
+    />
+
+    <main class="container-custom pb-20 md:pb-32">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {books.map((book) => <BookCard book={book} />)}
+        </div>
+
+        <nav aria-label="Catalogue pagination" class="mt-10 flex justify-center items-center gap-2 flex-wrap">
+            {pageNum > 1 && (
+                <a href={hrefFor(pageNum - 1)} class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white/70 hover:text-white hover:border-payflo-purple/50 transition-colors" aria-label="Go to previous page">
+                    ← Prev
+                </a>
+            )}
+            {numbers.map((n) =>
+                n === "..." ? (
+                    <span class="px-2 text-white/40">…</span>
+                ) : n === pageNum ? (
+                    <span class="px-4 py-2 rounded-lg bg-payflo-purple text-white font-bold" aria-current="page">{n}</span>
+                ) : (
+                    <a href={hrefFor(n)} class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white/70 hover:text-white hover:border-payflo-purple/50 transition-colors" aria-label={`Go to page ${n}`}>
+                        {n}
+                    </a>
+                ),
+            )}
+            {pageNum < totalPages && (
+                <a href={hrefFor(pageNum + 1)} class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white/70 hover:text-white hover:border-payflo-purple/50 transition-colors" aria-label="Go to next page">
+                    Next →
+                </a>
+            )}
+        </nav>
+    </main>
+</Layout>
