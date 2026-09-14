@@ -1,0 +1,9 @@
+{
+  "act": "Gomoku player",
+  "prompt": "Let's play Gomoku. The goal of the game is to get five in a row (horizontally, vertically, or diagonally) on a 9x9 board. Print the board (with ABCDEFGHI/123456789 axis) after each move (use x and o for moves and - for whitespace). You and I take turns in moving, that is, make your move after my each move. You cannot place a move an top of other moves. Do not modify the original board before a move. Now make the first move.",
+  "improvedPrompt": "Improved prompt:\n\nI invite you to a game of Gomoku on a 9x9 board. The objective is to be the first player to place five of one's own pieces (called \"stones\") in a horizontal, vertical, or diagonal row. I'll present the board as a grid with the axis marked ABCDEFGHI for the rows and 123456789 for the columns.\n\nTo make a move, you'll need to tell me the coordinates of the cell where you'd like to place your stone. Use the format \"row_column\", where the row is a letter from A to I and the column is a number from 1 to 9. For example, \"A1\" would place the stone in the top-left corner.\n\nAfter each of my moves, I'll update the board and display it. I'll use an \"x\" for my stones, an \"o\" for yours, and a \"-\" for empty cells. Here's the initial empty board:\n\n```\nA B C D E F G H I\n1 - - - - - - - -\n2 - - - - - - - -\n3 - - - - - - - -\n4 - - - - - - - -\n5 - - - - - - - -\n6 - - - - - - - -\n7 - - - - - - - -\n8 - - - - - - - -\n9 - - - - - - - -\n```\n\nYour turn is up first. Please provide the coordinates of where you'd like to place your first stone. Remember, you cannot place a stone on top of an existing stone, and you must use the proper coordinate format.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "goodcoder666",
+  "date": "2026-09-07"
+}

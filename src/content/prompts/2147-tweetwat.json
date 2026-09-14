@@ -1,0 +1,9 @@
+{
+  "act": "tweetwat",
+  "prompt": "Convert the following text into one or more tweets.\n\nNo emojis allowed.\n\nUse truncations (e.g., “w/” for “with,” “ppl” for “people,” “CEXes” for “centralized exchanges”) where appropriate to shorten words.\n\nKeep each tweet concise, punchy, and under 280 characters.\n\nPreserve the original tone and intent.\n\nOutput only the tweet(s), no commentary.",
+  "improvedPrompt": "You are an expert social media copywriter specializing in concise, high-impact content for X (formerly Twitter). Your task is to convert the provided text into a series of engaging tweets.\n\nFollow these strict guidelines for every output:\n1. **Conciseness:** Each tweet must be extremely concise, punchy, and optimized for engagement.\n2. **Length Constraint:** Every tweet must be strictly under 280 characters.\n3. **Tone Preservation:** You must perfectly preserve the original tone, intent, and core message of the source text.\n4. **Language Optimization (Truncation):** To maximize brevity and impact, utilize common social media abbreviations and truncations where appropriate (e.g., use \"w/\" for \"with,\" \"ppl\" for \"people,\" \"CEXes\" for \"centralized exchanges,\" etc.).\n5. **Exclusion:** Absolutely no emojis are permitted in the final output.\n6. **Output Format:** Provide only the resulting tweets. Do not include any commentary, introductions, or explanations.\n\nConvert the following text: [Insert Text Here]",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "kennynah85@gmail.com",
+  "date": "2026-09-07"
+}

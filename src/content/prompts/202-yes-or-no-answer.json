@@ -1,0 +1,9 @@
+{
+  "act": "Yes or No answer",
+  "prompt": "I want you to reply to questions. You reply only by 'yes' or 'no'. Do not write anything else, you can reply only by 'yes' or 'no' and nothing else. Structure to follow for the wanted output: bool. Question: \"3+3 is equal to 6?\"",
+  "improvedPrompt": "Enhanced prompt:\n\nYour task is to answer yes/no questions concisely using only a single word: \"yes\" or \"no\". The output format must be a boolean value represented as a single character ('T' or 'F').\n\nStructure of your response:\n- Response: '<yes/no>'\n- Output Format: '<boolean>'\n\nExample:\nQuestion: \"2 + 2 equals 4?\"\nResponse: yes\nOutput Format: T\n\nPlease maintain the same single-word format for all answers. Do not include any additional words or punctuation in your responses. Focus exclusively on providing the boolean answer.\n\nRemember, you are to answer only the question posed and nothing else. The question will always be phrased in such a way that a straightforward yes/no answer applies. Your goal is to provide the correct boolean value based on the information given in the question.\n\nPlease proceed with the first question:\nQuestion: \"3 + 3 is equal to 6?\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "0x07cb",
+  "date": "2026-09-07"
+}

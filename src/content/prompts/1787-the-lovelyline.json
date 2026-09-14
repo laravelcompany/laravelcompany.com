@@ -1,0 +1,9 @@
+{
+  "act": "The Lovelyline",
+  "prompt": "A minimalist line-art drawing of a simple character conceptualizing 'overcoming an obstacle'. Clean black continuous line style on a white background. The concept should be conveyed through simple geometry and basic visual metaphors. Strictly maintain a flat, vector-like aesthetic with no 3D elements, no realistic textures, and no complex features.",
+  "improvedPrompt": "A minimalist, conceptual line-art drawing. The image must depict a simple, stylized character actively overcoming a clearly defined obstacle.\n\n**Style and Aesthetics:**\n1. **Line Quality:** Strict continuous black line art. The lines must be clean, unbroken, and flowing, emphasizing simplicity and elegance.\n2. **Color Palette:** Strictly monochromatic (black lines on a pure white background).\n3. **Aesthetic:** Flat, 2D vector-like design. Absolutely no shading, gradients, or 3D effects.\n4. **Geometry:** Utilize only basic, simple geometric shapes to define the character and the obstacle.\n\n**Concept:**\nThe composition must visually represent the abstract concept of 'overcoming an obstacle' using basic visual metaphors. Focus on dynamic composition and simple forms to convey effort, ascent, or breakthrough.\n\n**Constraints:**\n*   No complex features or details.\n*   No realistic textures.\n*   The overall impression must be highly minimalist and symbolic.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "zarfsaz.m@gmail.com",
+  "date": "2026-09-07"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Vintage Botanical Illustration Generator",
+  "prompt": "A botanical diagram of a ${subject}, illustrated in the style of vintage scientific journals. Accented with natural tones and detailed cross-sections, it’s labeled with handwritten annotations in sepia ink, evoking a scholarly, antique charm.",
+  "improvedPrompt": "Improved prompt:\n\nDesign a detailed botanical diagram of a ${subject}, modeled after the illustrations found in late 19th century scientific journals. The diagram should feature:\n\n1. Accurate and lifelike rendering of the subject's morphology, including all relevant structural components such as leaves, stems, flowers, and fruits.\n\n2. A muted, natural color palette inspired by sepia toned photographs, emphasizing earthy browns, greens, and tans. Avoid vivid or artificial hues.\n\n3. Cross-sectional views or cut-away illustrations highlighting internal structures, labeled with appropriate anatomical terms.\n\n4. Hand-drawn annotations rendered in a style reminiscent of 19th century ink pens, using slanted, flowing scripts. Use sepia tone for the ink.\n\n5. An overall composition that mimics the layout of a vintage scientific plate, with a border, title, and margin space for the handwriting.\n\n6. Ensure the diagram is sufficiently detailed to be educational and informative, yet visually appealing with a focus on aesthetic clarity.\n\n7. Maintain a consistent scale and proportion throughout the illustration, with key features and structures clearly distinguished.\n\n8. Avoid modern or digital graphic elements; the style should be utterly authentic to the pre-20th century scientific illustration aesthetic.\n\nPlease provide the diagram as a high-resolution vector or raster image file, suitable for printing or detailed digital inspection. The subject should be a plant species from the ${category} group.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "iamcanturk",
+  "date": "2026-09-07"
+}

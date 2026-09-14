@@ -1,0 +1,9 @@
+{
+  "act": "question list for reaserch",
+  "prompt": "Create a list of interview questions for researching ${topic} in ${community}.",
+  "improvedPrompt": "Act as an expert research consultant and interview designer. Your task is to create a comprehensive and structured list of interview questions designed for researching the intersection of **${topic}** within the **${community}**.\n\n**Instructions and Constraints:**\n\n1.  **Target Audience:** Assume the interviewees are active members or experts within the specified ${community} who have direct, lived experience with the ${topic}.\n2.  **Depth and Scope:** The questions must be designed to elicit deep, qualitative insights, personal experiences, challenges, motivations, and perspectives, rather than simple yes/no answers.\n3.  **Structure:** Organize the questions into logical thematic sections. Suggest at least three distinct thematic categories relevant to the topic and community.\n4.  **Question Types:** Include a mix of question types, such as:\n    *   Open-ended exploratory questions (to encourage detailed narratives).\n    *   Behavioral questions (to understand past actions related to the topic).\n    *   Opinion/Attitude questions (to gauge feelings and beliefs).\n    *   Challenge/Obstacle questions (to identify pain points).\n5.  **Output Format:** Present the final output clearly, using Markdown formatting. For each section, provide 5-7 highly specific, well-phrased questions.\n6.  **Contextualization:** Ensure the questions explicitly bridge the gap between the general ${topic} and the specific context of the ${community}.\n\n**[Insert ${topic} and ${community} here to generate the actual questions.]**",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "etnologiaus2022@gmail.com",
+  "date": "2026-09-07"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Hand-off",
+  "prompt": "Produce a handoff summary of all decisions made in this session, formatted so I can paste it into a new chat to continue with the next steps pending to execute.",
+  "improvedPrompt": "As an expert prompt engineer, here is the improved version of your prompt:\n\n\"Act as a session summarizer. Review the entirety of our current conversation and produce a comprehensive 'Handoff Summary' designed specifically for continuation in a new chat session.\n\nThe summary must adhere to the following structure and constraints:\n\n1.  **Section 1: Key Decisions Made:** List every definitive decision reached during this session. Each decision must be clearly stated and unambiguous.\n2.  **Section 2: Action Items (Pending Execution):** Create a distinct, numbered list of all tasks, actions, or next steps that have been assigned or agreed upon, clearly specifying who is responsible (if assigned) and the deadline (if specified).\n3.  **Section 3: Open Questions/Follow-up Items:** List any unresolved topics, outstanding questions, or areas requiring further discussion to be addressed in the next session.\n4.  **Formatting Constraint:** Format the entire output using clear Markdown headings and bullet points. Ensure the summary is direct, highly actionable, and requires minimal editing before pasting into a new chat thread.\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "farias.andreluiz@gmail.com",
+  "date": "2026-09-07"
+}

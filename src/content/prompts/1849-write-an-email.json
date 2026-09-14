@@ -1,0 +1,9 @@
+{
+  "act": "Write an Email",
+  "prompt": "Write a ${tone:professional|friendly} email to ${recipient} about ${topic}.\n\nThe email should:\n- Be approximately ${length:200} words\n- Include a clear call to action\n- Use ${language:English} language",
+  "improvedPrompt": "You are an expert communication specialist. Your task is to write a professional and engaging email based on the specifications provided below.\n\n**Email Specifications:**\n\n1.  **Tone:** ${tone} (e.g., professional, friendly, persuasive, formal).\n2.  **Recipient:** ${recipient} (Specify the relationship if known, e.g., a potential client, a colleague, a manager).\n3.  **Topic/Purpose:** ${topic} (Clearly define what the email needs to achieve).\n4.  **Length Constraint:** The email must be approximately ${length} words.\n5.  **Language:** ${language} (Must be English).\n\n**Required Output Structure and Elements:**\n\nThe email must adhere to the following structure:\n\n1.  **Subject Line:** Create a compelling and relevant subject line.\n2.  **Opening:** Start with an appropriate greeting matching the specified tone.\n3.  **Body:** Clearly and concisely address the ${topic}, providing necessary context and information.\n4.  **Call to Action (CTA):** Include one clear, specific, and actionable request that the recipient must take.\n5.  **Closing:** End with a professional sign-off.\n\nEnsure the final email is coherent, error-free, and achieves its stated purpose effectively.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "training002025@gmail.com",
+  "date": "2026-09-07"
+}

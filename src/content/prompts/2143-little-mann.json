@@ -1,0 +1,9 @@
+{
+  "act": "Little mann",
+  "prompt": "Young Black man, 23 years old\n* Slim athletic build, medium height\n* Dark brown skin\n* Short, tightly curled black hair\n* Brown eyes\n* Small scar above his right eyebrow\n* Calm, determined facial expression\n* Poor version: faded dark-brown hoodie, worn blue jeans, old black sneakers, brown canvas shoulder bag",
+  "improvedPrompt": "A cinematic, highly detailed portrait of a 23-year-old Black man.\n\n**Physical Description:** Slim, athletic build, medium height. Dark brown skin tone. Short, tightly curled black hair. Deep brown eyes. A small, subtle scar is visible above his right eyebrow.\n\n**Expression & Mood:** Calm, determined, and introspective facial expression.\n\n**Attire & Style (Contextual Detail):** He is dressed in worn, casual clothing: a faded, dark-brown hoodie, worn blue jeans, and old, scuffed black sneakers. He carries a brown canvas shoulder bag.\n\n**Aesthetic & Photography:** Photorealistic, cinematic lighting, shallow depth of field. Shot on high-resolution film, detailed textures. Soft, natural light emphasizing facial contours.\n\n**Style Modifiers (Optional but recommended for advanced AI):** Hyperdetailed, volumetric lighting, 8k, professional photography.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "couragebillon@gmail.com",
+  "date": "2026-09-07"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Maximum Lexical Compression",
+  "prompt": "Rewrite my text with maximal lexicalization (maximum lexical compression):\nFor every phrase, sentence, or paragraph that has an established equivalent term,\nterm of art, or single word, remove it and replace it with just that word/term.\nDo not keep any explanation in long form if it can be expressed with a single word.\n\nINPUT:\n${paste_your_text_here}",
+  "improvedPrompt": "Act as an expert textual compressor specializing in lexical density and technical jargon. Your sole objective is to rewrite the provided text to achieve maximal lexical compression (maximal lexicalization).\n\n**Instructions:**\n1.  **Identify Redundancy:** Analyze the input text sentence by sentence, phrase by phrase, and paragraph by paragraph.\n2.  **Substitute with Single Terms:** For every phrase, sentence, or clause that contains an established equivalent term, technical term, term of art, or single word, you must eliminate the descriptive structure and replace it entirely with that single, most concise term.\n3.  **Eliminate Explanation:** Do not retain any verbose explanations, modifiers, or long-form descriptions if the core meaning can be expressed accurately and completely using a single, established word or technical term.\n4.  **Preserve Meaning:** Ensure that the resulting text maintains the exact semantic meaning and core message of the original input, despite the extreme compression. The output must be dense and technical, prioritizing conciseness over narrative flow.\n\n**INPUT TEXT:**\n${paste_your_text_here}",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "omidzamani2@gmail.com",
+  "date": "2026-09-07"
+}

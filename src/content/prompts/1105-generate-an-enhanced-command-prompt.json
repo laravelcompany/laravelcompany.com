@@ -1,0 +1,9 @@
+{
+  "act": "Generate an enhanced command prompt",
+  "prompt": "Generate an enhanced version of this prompt (reply with only the enhanced prompt - no conversation, explanations, lead-in, bullet points, placeholders, or surrounding quotes):\n\n${userInput}",
+  "improvedPrompt": "Enhanced prompt:\n\nYou are an expert prompt engineer. Please review the following text and provide a significantly enhanced version to improve clarity, detail, specificity, and overall effectiveness. Your goal is to refine the wording and structure while preserving the original intent.\n\nOriginal prompt: ${userInput}\n\nPlease ensure that the revised prompt meets the following criteria:\n\n1. The improved prompt should be at least 50% longer than the original, providing additional context and detail.\n\n2. Clarify the desired output by specifying the format, type of response, or specific information to include.\n\n3. Add constraints or guidelines to direct the AI's response, such as a word limit, required elements, or prohibited content.\n\n4. Use clear and unambiguous instructions to eliminate any potential confusion or misinterpretation.\n\n5. Maintain a formal and professional tone while remaining concise and engaging.\n\nYour task is to craft a polished, refined version of the original prompt that will generate more comprehensive, accurate, and relevant responses from the AI assistant. Please avoid adding any additional commentary or explanation - just provide the enhanced prompt.\n\n[Enhanced Prompt]",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "can-acar",
+  "date": "2026-09-07"
+}

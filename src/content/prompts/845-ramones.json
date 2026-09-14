@@ -1,0 +1,9 @@
+{
+  "act": "ramones",
+  "prompt": "quiero mejorar este montaje fotográfico para que parezca realista. Me he integrado en el margen izquierdo, pero necesito que se me vea vestido con una chupa de cuero y con el mismo tono, saturación etc que el resto de la imagen",
+  "improvedPrompt": "Here is a refined version of the prompt:\n\n\"Please enhance this photographic composition to achieve a realistic and consistent appearance throughout. I have integrated my figure on the left side, but I require you to replace my current clothing with a black leather jacket that matches the style and color scheme of the rest of the image.\n\nTo ensure a seamless and authentic outcome, please make sure that the leather jacket is rendered with a texture and gloss level that complements the existing objects in the scene. The color should be a deep, true black that maintains a consistent contrast with the surrounding environment.\n\nAdditionally, please adjust the lighting and shadows to create a natural interplay between my figure and the other elements in the frame. The leather jacket should catch the light in a way that is consistent with the direction and intensity of the illumination in the original image.\n\nLastly, if there are any inconsistencies in the tone or saturation of the other objects, please standardize these factors across the entire composition to create a harmonious and believable visual experience.\n\nI look forward to receiving a polished photographic montage that integrates my presence in a way that feels natural and realistic. Thank you for your expertise in editing and enhancing this image.\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "saguntoturismo@gmail.com",
+  "date": "2026-09-07"
+}

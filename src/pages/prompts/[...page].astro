@@ -1,0 +1,159 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import type { GetStaticPaths, Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const allPrompts = await getCollection("prompts");
+  const sortedPrompts = allPrompts.sort((a, b) => {
+    const dateA = new Date(a.data.date || 0);
+    const dateB = new Date(b.data.date || 0);
+    return dateB.getTime() - dateA.getTime();
+  });
+  return paginate(sortedPrompts, { pageSize: 24 });
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: Page<CollectionEntry<"prompts">>;
+}
+
+const { page } = Astro.props;
+const sortedPrompts = page.data;
+
+function toExcerpt(improvedPrompt: string): string {
+  return improvedPrompt
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/[#*>`]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 220);
+}
+
+function getPageNumbers(current: number, last: number): (number | "...")[] {
+  if (last <= 7) return Array.from({ length: last }, (_, i) => i + 1);
+
+  const pages: (number | "...")[] = [1];
+  const delta = 1;
+  const rangeStart = Math.max(2, current - delta);
+  const rangeEnd = Math.min(last - 1, current + delta);
+
+  if (rangeStart > 2) pages.push("...");
+  for (let i = rangeStart; i <= rangeEnd; i++) pages.push(i);
+  if (rangeEnd < last - 1) pages.push("...");
+
+  pages.push(last);
+  return pages;
+}
+
+const pageNumbers = getPageNumbers(page.currentPage, page.lastPage);
+---
+
+<Layout
+  title={page.currentPage === 1 ? "Prompts | Laravel Company" : `Prompts - Page ${page.currentPage} | Laravel Company`}
+  description="A library of community-contributed AI prompts, reviewed and improved by Laravel Company - for development, writing, productivity, and more."
+>
+  <main class="py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+    <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-white">Prompts</span>
+      {page.currentPage > 1 && <><span>/</span><span class="text-white">Page {page.currentPage}</span></>}
+    </nav>
+
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4 text-center animate-on-scroll">Prompts</h1>
+      <p class="text-xl text-white/70 mb-12 text-center animate-on-scroll max-w-2xl mx-auto">
+        Community-contributed AI prompts, reviewed and improved by our team.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {sortedPrompts.map((prompt, index) => (
+          <a
+            href={`/prompts/${prompt.id}/`}
+            class="group glass-card overflow-hidden animate-on-scroll hover:border-payflo-purple/50 transition-all duration-300"
+            style={`animation-delay: ${index * 0.05}s`}
+          >
+            <div class="p-6">
+              <div class="flex flex-wrap gap-2 mb-3">
+                {prompt.data.type && (
+                  <span class="text-xs px-2.5 py-1 rounded-full bg-payflo-purple/20 text-payflo-purple font-medium">
+                    {prompt.data.type}
+                  </span>
+                )}
+                {prompt.data.forDevs && (
+                  <span class="text-xs px-2.5 py-1 rounded-full bg-payflo-blue/20 text-payflo-blue font-medium">
+                    For developers
+                  </span>
+                )}
+              </div>
+              <h2 class="text-lg font-semibold text-white mb-2 group-hover:text-payflo-purple transition-colors">
+                {prompt.data.act}
+              </h2>
+              <p class="text-sm text-white/60 mb-4 line-clamp-2">
+                {toExcerpt(prompt.data.improvedPrompt)}
+              </p>
+              <div class="flex items-center gap-3 text-xs text-white/40">
+                {prompt.data.date && <span>{prompt.data.date}</span>}
+                {prompt.data.date && prompt.data.contributor && <span class="w-1 h-1 rounded-full bg-white/20"></span>}
+                {prompt.data.contributor && <span>by {prompt.data.contributor}</span>}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {page.lastPage > 1 && (
+        <nav class="flex justify-center items-center gap-2 mt-12 animate-on-scroll" aria-label="Prompts pagination">
+          {page.currentPage > 1 && (
+            <a
+              href={page.currentPage === 2 ? "/prompts/" : `/prompts/${page.currentPage - 1}/`}
+              class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors text-sm"
+            >
+              <span class="flex items-center gap-1">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Previous
+              </span>
+            </a>
+          )}
+
+          <div class="flex items-center gap-1">
+            {pageNumbers.map((p) => (
+              p === "..." ? (
+                <span class="w-9 h-9 flex items-center justify-center text-sm text-white/40 select-none">...</span>
+              ) : p === page.currentPage ? (
+                <span class="w-9 h-9 rounded-lg bg-payflo-purple text-white flex items-center justify-center text-sm font-semibold">{p}</span>
+              ) : (
+                <a
+                  href={p === 1 ? "/prompts/" : `/prompts/${p}/`}
+                  class="w-9 h-9 rounded-lg bg-white/10 text-white/70 hover:bg-white/20 hover:text-white transition-colors flex items-center justify-center text-sm"
+                >{p}</a>
+              )
+            ))}
+          </div>
+
+          {page.currentPage < page.lastPage && (
+            <a
+              href={`/prompts/${page.currentPage + 1}/`}
+              class="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors text-sm"
+            >
+              <span class="flex items-center gap-1">
+                Next
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          )}
+        </nav>
+      )}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

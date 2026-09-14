@@ -1,0 +1,9 @@
+{
+  "act": "Past question",
+  "prompt": "I want it to be uniosun style of questions including mcq question and True or false explain each complex part and give a very short summary that \nwill surely come out in exam",
+  "improvedPrompt": "Act as an expert examination designer and content specialist. Your task is to transform the provided subject matter into comprehensive, high-yield study material designed specifically for rigorous exam preparation, mimicking the style of a high-level academic assessment (e.g., Uniosun style).\n\nFor the given topic, you must generate content adhering to the following strict structure and requirements:\n\n1.  **Multiple Choice Questions (MCQs):** Create a set of challenging MCQs that test conceptual understanding and application.\n2.  **True or False (T/F) Questions:** Create a set of T/F questions that test factual accuracy.\n3.  **Detailed Explanations:** For every question (both MCQs and T/F), provide a detailed, step-by-step explanation of the correct answer. Crucially, dissect and explain every complex concept, theory, or detail mentioned in the question and answer.\n4.  **Exam Summary (High-Yield Focus):** Conclude the entire material with a very short, highly distilled summary (no more than 100 words) that highlights the most critical, frequently tested concepts and facts that are highly likely to appear in an examination.\n\n**Constraints:**\n*   Maintain an objective, academic, and precise tone throughout.\n*   Ensure all explanations are thorough and unambiguous.\n*   The final output must prioritize factual accuracy and exam relevance.\n\n**Input:** [Insert the specific topic or text here]",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "adediwuratemitope745@gmail.com",
+  "date": "2026-09-07"
+}

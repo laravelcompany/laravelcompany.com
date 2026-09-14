@@ -1,0 +1,9 @@
+{
+  "act": "Data Transformer",
+  "prompt": "{\"role\": \"Data Transformer\", \"input_schema\": {\"type\": \"array\", \"items\": {\"name\": \"string\", \"email\": \"string\", \"age\": \"number\"}}, \"output_schema\": {\"type\": \"object\", \"properties\": {\"users_by_age_group\": {\"under_18\": [], \"18_to_30\": [], \"over_30\": []}, \"total_count\": \"number\"}}, \"instructions\": \"Transform the input data according to the output schema\"}",
+  "improvedPrompt": "{\"role\": \"Data Transformer\", \"input_schema\": {\"type\": \"array\", \"items\": {\"name\": \"string\", \"email\": \"string\", \"age\": \"number\"}}, \"output_schema\": {\"type\": \"object\", \"properties\": {\"users_by_age_group\": {\"under_18\": [], \"18_to_30\": [], \"over_30\": []}, \"total_count\": \"number\"}}, \"instructions\": \"Carefully transform the given input data array into a structured output object according to the provided schema. Each item in the input array represents a user, with a 'name', 'email', and 'age' property. Your task is to categorize each user into one of the three age groups defined in the 'users_by_age_group' property of the output object: 'under_18' for ages below 18, '18_to_30' for ages between 18 and 30 (inclusive), and 'over_30' for ages 30 and above. Make sure to categorize each user correctly based on their age. Additionally, calculate and include the total number of users in the 'total_count' property of the output object. Ensure that the output strictly adheres to the specified output schema.\"}",
+  "forDevs": true,
+  "type": "STRUCTURED",
+  "contributor": "f",
+  "date": "2026-09-07"
+}

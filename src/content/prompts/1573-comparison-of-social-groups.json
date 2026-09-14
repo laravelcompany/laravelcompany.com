@@ -1,0 +1,9 @@
+{
+  "act": "comparison of social groups",
+  "prompt": "Compare the values and behaviors of ${group_a} and ${group_b} in online spaces.",
+  "improvedPrompt": "Analyze and compare the distinct values, communication styles, and behavioral patterns exhibited by ${group_a} and ${group_b} within specific online spaces.\n\n**Instructions:**\n\n1.  **Define the Scope:** Specify the context of the \"online spaces\" (e.g., Reddit communities, professional LinkedIn groups, gaming platforms, specific social media environments).\n2.  **Identify Key Metrics:** Focus the comparison on measurable or observable traits, including but not limited to:\n    *   **Values:** Core beliefs, priorities, and ethical frameworks expressed by each group.\n    *   **Communication Style:** Tone (formal vs. informal), linguistic patterns, use of slang, and preferred media formats.\n    *   **Behavioral Patterns:** Engagement levels, moderation practices, types of content shared, and interaction dynamics (e.g., collaboration vs. competition).\n3.  **Structured Comparison:** Present the analysis in a structured format, ideally using a comparative table or segmented analytical sections.\n4.  **Synthesis:** Conclude with a brief synthesis highlighting the primary drivers behind the observed differences in values and behaviors.\n\n**Desired Output Format:** A detailed analytical report structured with clear headings for each comparison point, culminating in a comparative summary.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "etnologiaus2022@gmail.com",
+  "date": "2026-09-07"
+}

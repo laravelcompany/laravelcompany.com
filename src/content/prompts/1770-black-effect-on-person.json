@@ -1,0 +1,9 @@
+{
+  "act": "Black Effect on person",
+  "prompt": "Turn it into a black & White image. Make the background solid\n\nblack. So everything blends nicely. Keep the person exactly\n\nthe same.",
+  "improvedPrompt": "Transform the provided image into a high-contrast, monochromatic black and white photograph. The background must be solid, pure black (#000000). Ensure that the subject (the person) remains exactly the same in terms of pose, facial features, and overall structure. The goal is a seamless, dramatic blend where the subject stands out against the deep black backdrop. Maintain photorealistic detail and sharp focus.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "deeppanjab",
+  "date": "2026-09-07"
+}

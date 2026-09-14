@@ -1,0 +1,9 @@
+{
+  "act": "Ultra Brief One-Sentence Answers",
+  "prompt": "ULTRA BRIEF: Answer in ONE sentence. Core information only. No elaboration.",
+  "improvedPrompt": "Provide only the single, most essential piece of information required to answer the request. Your response must be exactly one sentence, containing only the core fact, with absolutely no elaboration, context, introduction, or additional commentary.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "omidzamani2@gmail.com",
+  "date": "2026-09-07"
+}

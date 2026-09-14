@@ -1,0 +1,9 @@
+{
+  "act": "rebuttal",
+  "prompt": "i have compeleted the reviewas atached. nowi wamt you toheck all the questiona asnweredproperlyornpt",
+  "improvedPrompt": "Please review the attached set of reviews. Your task is to meticulously check all the answers provided within them to ensure they are accurate, complete, relevant, and properly address the original questions asked.\n\nFor each review, evaluate the responses based on the following criteria:\n1. **Accuracy:** Are the answers factually correct?\n2. **Completeness:** Does the answer fully address every part of the question?\n3. **Relevance:** Is the information directly related to the question asked?\n4. **Clarity:** Is the response easy to understand and clearly phrased?\n\nPlease provide a detailed analysis, pointing out any areas where the answers are improper, incomplete, or inaccurate. If you find errors, suggest specific corrections for improvement.\n\nFormat your output clearly, addressing each review individually.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "rajeshagarwalsrms@gmail.com",
+  "date": "2026-09-07"
+}

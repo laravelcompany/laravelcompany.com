@@ -1,0 +1,237 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { marked } from "marked";
+import { enrichCodeBlocks } from "../../utils/codeHighlighter";
+
+function isMarkdown(content: string): boolean {
+  const trimmed = content.trimStart();
+  if (trimmed.startsWith("<")) return false;
+  return /(^#{1,6}\s|^\*\*|^\-\s|^\d+\.\s|```|^\[.*\]\(|^>\s|\|.+\|)/m.test(trimmed);
+}
+
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+});
+
+export async function getStaticPaths() {
+  const prompts = await getCollection("prompts");
+  return prompts.map((prompt) => ({
+    params: { slug: prompt.id },
+    props: { prompt },
+  }));
+}
+
+const { prompt } = Astro.props;
+const { data } = prompt;
+const rawContent = isMarkdown(data.improvedPrompt)
+  ? marked.parse(data.improvedPrompt) as string
+  : `<p>${data.improvedPrompt.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n{2,}/g, "</p><p>").replace(/\n/g, "<br>")}</p>`;
+const renderedContent = await enrichCodeBlocks(rawContent);
+const description = data.improvedPrompt
+  .replace(/```[\s\S]*?```/g, " ")
+  .replace(/[#*>`]/g, "")
+  .replace(/\s+/g, " ")
+  .trim()
+  .slice(0, 160);
+---
+
+<Layout
+  title={`${data.act} Prompt | Laravel Company Prompts`}
+  description={description}
+>
+  <main class="py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+    <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <span>/</span>
+      <a href="/prompts/" class="hover:text-white transition-colors">Prompts</a>
+      <span>/</span>
+      <span class="text-white truncate max-w-[200px]">{data.act}</span>
+    </nav>
+
+    <article class="max-w-3xl mx-auto">
+      <div class="animate-on-scroll">
+        <div class="flex flex-wrap gap-2 mb-4">
+          {data.type && (
+            <span class="text-xs px-2.5 py-1 rounded-full bg-payflo-purple/20 text-payflo-purple font-medium">
+              {data.type}
+            </span>
+          )}
+          {data.forDevs && (
+            <span class="text-xs px-2.5 py-1 rounded-full bg-payflo-blue/20 text-payflo-blue font-medium">
+              For developers
+            </span>
+          )}
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold mb-6">{data.act}</h1>
+
+        <div class="flex items-center gap-4 mb-8 pb-8 border-b border-white/10">
+          <div>
+            {data.contributor && <p class="font-semibold text-white">Contributed by {data.contributor}</p>}
+            <p class="text-sm text-white/50">Improved by Laravel Company{data.date ? ` · ${data.date}` : ""}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="prose prose-slate max-w-none animate-on-scroll">
+        <Fragment set:html={renderedContent} />
+      </div>
+
+      <details class="mt-12 glass-card p-6 animate-on-scroll group">
+        <summary class="cursor-pointer text-sm font-semibold text-white/70 hover:text-white transition-colors list-none flex items-center gap-2">
+          <svg class="w-4 h-4 transition-transform group-open:rotate-90" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Original prompt (before our improvements)
+        </summary>
+        <p class="mt-4 text-sm text-white/60 whitespace-pre-wrap leading-relaxed">{data.prompt}</p>
+      </details>
+    </article>
+  </main>
+</Layout>
+
+<script>
+  function copyText(text: string) {
+    if (navigator.clipboard?.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+    return Promise.resolve();
+  }
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const button = target.closest(".code-block__copy");
+    if (!button) return;
+
+    const block = button.closest(".code-block");
+    const codeElement = block?.querySelector("pre code");
+    if (!codeElement) return;
+
+    const text = (codeElement.textContent ?? "").replace(/\n$/, "");
+    const label = button.querySelector(".code-block__copy-label");
+    const iconWrap = button.querySelector(".code-block__copy-icon-wrap");
+    const copyIcon = `<svg class="code-block__copy-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M10.5 5.5v-2a1 1 0 0 0-1-1h-5a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h2" stroke="currentColor" stroke-width="1.4"/></svg>`;
+    const checkIcon = `<svg class="code-block__copy-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+    copyText(text).then(() => {
+      button.classList.add("code-block__copy--done");
+      if (label) label.textContent = "Copied!";
+      if (iconWrap) iconWrap.innerHTML = checkIcon;
+      setTimeout(() => {
+        button.classList.remove("code-block__copy--done");
+        if (label) label.textContent = "Copy";
+        if (iconWrap) iconWrap.innerHTML = copyIcon;
+      }, 2000);
+    });
+  });
+</script>
+
+<style>
+  .prose {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+  }
+  .prose h2 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .prose h3 {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose p {
+    margin-bottom: 1.25rem;
+  }
+  .prose ul {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+  .prose strong {
+    color: white;
+  }
+  .prose a {
+    color: #7c3aed;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+  .prose a:hover {
+    color: #3b82f6;
+  }
+  .prose blockquote {
+    border-left: 4px solid #7c3aed;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+  }
+  .prose img {
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+  }
+  .prose pre {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+  .prose code {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.875em;
+  }
+  .prose :not(pre) > code {
+    background: rgba(124, 58, 237, 0.2);
+    color: #c4b5fd;
+    padding: 0.15em 0.4em;
+    border-radius: 0.375rem;
+    font-size: 0.85em;
+  }
+  .prose pre code {
+    background: none;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0;
+    border-radius: 0;
+  }
+  .prose table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-collapse: collapse;
+  }
+  .prose th,
+  .prose td {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.625rem 1rem;
+    text-align: left;
+  }
+  .prose th {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-weight: 600;
+  }
+  .prose hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
+  }
+</style>

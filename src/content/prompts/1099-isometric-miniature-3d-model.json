@@ -1,0 +1,9 @@
+{
+  "act": "Isometric miniature 3D model",
+  "prompt": "Make a miniature, full-body, isometric, realistic figurine of this person, wearing ABC, doing XYZ, on a white background, minimal, 4K resolution.",
+  "improvedPrompt": "Improved prompt:\n\nDesign a highly detailed, 4K resolution isometric figurine of the individual provided, showcasing them in a full-body stance while performing the action specified as \"XYZ\". The figurine should be rendered in a realistic style, with keen attention paid to facial features and body proportions. The subject should be depicted wearing the attire described as \"ABC\" in a manner that appears both natural and visually appealing.\n\nTo ensure the final output meets the desired aesthetic, the background should be kept intentionally minimal and uncluttered, using a pure white color scheme to allow the figurine to be the sole focus of the composition. Avoid the inclusion of any distracting elements or accessories that could detract from the central subject.\n\nWhen crafting this piece, maintain a balance between stylistic simplification required for the isometric perspective and the level of detail necessary to preserve the subject's unique characteristics. The goal is not merely to create a simplified representation, but to capture the essence of the person in a visually striking, cohesive manner that respects the constraints of the isometric style while remaining true to the subject's identity.\n\nPlease submit the final design as a high-resolution, 4K image file in a format suitable for professional printing or digital display. Your expertise in figurine design and attention to the specified details are crucial to the success of this project.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "BahlulHasanli",
+  "date": "2026-09-07"
+}

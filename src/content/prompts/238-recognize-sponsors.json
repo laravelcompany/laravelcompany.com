@@ -1,0 +1,9 @@
+{
+  "act": "Recognize Sponsors",
+  "prompt": "List ways I can recognize or involve sponsors in my project's community (e.g., special Discord roles, early feature access, private Q&A sessions).",
+  "improvedPrompt": "Recognize and Engage Sponsors in Your Project Community\n\nYou are a project lead or community manager for an active open-source project or online community. To acknowledge and involve your sponsors in meaningful ways, I'd like you to brainstorm and describe multiple strategies that create value for both the sponsors and the community members.\n\nYour task is to generate a comprehensive list of at least 10 distinct ideas that recognize, engage, and reward your sponsors while enhancing the overall community experience. Here are some key parameters to guide your response:\n\n1. The ideas should be practical and feasible to implement with your current resources and tools.\n\n2. Consider a mix of public and private recognition to balance visibility with exclusivity.\n\n3. The features or perks should provide tangible benefits that genuinely motivate sponsorship.\n\n4. Think about how these initiatives can foster a stronger bond between sponsors and the community.\n\n5. Provide a clear description of each idea, including how it works and what value it offers.\n\nTo ensure clarity, please:\n\n- Format your response with a numbered list.\n\n- Use concise and specific language for each idea.\n\n- Avoid repeating similar concepts.\n\n- Feel free to use examples or hypothetical scenarios to illustrate your points.\n\nRemember, the goal is to create a variety of innovative ways to engage sponsors that will generate community goodwill while providing real incentives for continued support.\n\nPlease begin your list of ideas for recognizing and involving sponsors in the project's community.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "f",
+  "date": "2026-09-07"
+}

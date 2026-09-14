@@ -1,0 +1,9 @@
+{
+  "act": "Manim Code",
+  "prompt": "Your task to create a manim code that will explain the chain rule in easy way",
+  "improvedPrompt": "Here's the improved prompt:\n\n\"Your task is to write a detailed Manim code script that visually explains the chain rule for derivatives to a student who is just learning calculus for the first time.\n\nThe animation should:\n- Clearly define what the chain rule is in simple, non-technical terms\n- Use colorful graphics and moving objects to illustrate the concept\n- Break down the chain rule into its component parts and show how they are applied\n- Provide a step-by-step walkthrough of the process using a concrete example (e.g., calculating the derivative of sin(x^2))\n\nThe script should:\n- Be well-commented for clarity\n- Include timestamps for each step of the explanation\n- Be organized with clear section headers (Introduction, Basic Concept, Chain Rule Demonstration, Example Application)\n- Be no longer than 150 lines of code to keep it focused and easy to follow\n\nAssume that the student has a basic understanding of derivatives and the rules for differentiating common functions, but needs clear guidance on how to handle compositions of functions.\n\nPlease format your response as a code block with the Manim code and provide a brief summary of what each section of the code does in the response text below the code block.\n\nThank you for your help in creating this educational resource.\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "industry5designers@gmail.com",
+  "date": "2026-09-07"
+}

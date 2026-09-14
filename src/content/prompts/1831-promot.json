@@ -1,0 +1,9 @@
+{
+  "act": "Promot",
+  "prompt": "Cinematic intro animation. Dark navy blue background with subtle particle effects. \nLarge bold white text \"MARMARA MPDS\" appears with a cyan glow effect, letter by letter for PDS, color effect only effects the PDS letters, M letter is white. \nBelow it smaller text \"Fikirleri Projeye Dönüştürüyoruz\" fades in. \nFuturistic, minimalist tech aesthetic. No people.",
+  "improvedPrompt": "A cinematic, high-resolution intro animation with a futuristic, minimalist tech aesthetic.\n\n**Background:** Deep, dark navy blue background, subtly filled with fine, slow-moving particle effects (dust/digital noise).\n\n**Main Text Sequence:**\n1.  **Initial Appearance:** Large, bold, stark white text \"MARMARA MPDS\" slowly fades or glides into the center of the frame.\n2.  **Effect Application:** As the text appears, the letters \"PDS\" should immediately engage a vibrant, electric cyan glow effect. The letter \"M\" remains solid, pure white, without the glow. The effect must be highly focused, only illuminating the PDS segment. This effect should be dynamic and neon-like.\n3.  **Secondary Text:** After the main text settles, the smaller subtitle \"Fikirleri Projeye DÃ¶nÃ¼ÅtÃ¼rÃ¼yoruz\" fades in smoothly below \"MARMARA MPDS\".\n\n**Aesthetic Constraints:**\n*   **Style:** Futuristic, sleek, high-tech, and minimalist.\n*   **Lighting:** High contrast between the dark background and the glowing cyan/white text.\n*   **Composition:** Centered and balanced.\n*   **Exclusion:** Absolutely no human figures or characters should be present.\n\n**Desired Output:** A smooth, high-quality motion graphics sequence suitable for a cinematic opening title sequence.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "furkangtgg@gmail.com",
+  "date": "2026-09-07"
+}

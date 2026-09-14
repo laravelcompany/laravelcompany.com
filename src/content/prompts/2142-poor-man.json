@@ -1,0 +1,9 @@
+{
+  "act": "Poor man",
+  "prompt": "Scene 1 — 0–5 sec\nA poor young man stands outside a luxury building while people laugh at him.\nText: “They laughed when he said he would become rich…”",
+  "improvedPrompt": "Cinematic shot, 5 seconds duration. Scene focuses on intense social contrast. A very poor, gaunt young man stands forlornly outside the ornate, imposing facade of a gleaming luxury skyscraper. A group of affluent people are visible in the background, actively laughing and pointing at him with cruel amusement. The lighting should be harsh, emphasizing the stark disparity between the man and his surroundings. Superimposed text appears clearly over the scene: âThey laughed when he said he would become richâ¦â Style: Gritty, high-contrast realism, cinematic grading.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "couragebillon@gmail.com",
+  "date": "2026-09-07"
+}

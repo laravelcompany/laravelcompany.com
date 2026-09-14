@@ -1,0 +1,9 @@
+{
+  "act": "Key Concepts and Essential Definitions for Exam",
+  "prompt": "Analyze this document and identify all the fundamental ideas, terms, and notions. Explain each one clearly and directly, as if I needed to memorize them\nfor an important test or exam.",
+  "improvedPrompt": "Analyze the provided document thoroughly. Your task is to act as a master tutor preparing me for a high-stakes examination.\n\nYour response must systematically extract and explain the most fundamental concepts, key terms, and core notions present in the text.\n\nFor every identified concept, adhere to the following constraints:\n\n1.  **Clarity and Directness:** Explanations must be extremely clear, direct, and unambiguous. Avoid unnecessary prose or fluff.\n2.  **Memorability Focus:** Structure the explanations to maximize retention. For each term, provide a precise definition, essential context, and the core implication of that idea.\n3.  **Structure:** Present the information in a highly organized, easily scannable format, such as a structured list, tables, or heavily formatted bullet points, suitable for rapid review and memorization (e.g., \"Term: [Definition] | Key Implication: [Significance]\").\n4.  **Exhaustiveness:** Ensure that all critical, foundational ideas are captured, prioritizing concepts that are central to understanding the entire document.\n\nBegin the analysis immediately upon receiving the document.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "cperalesg@gmail.com",
+  "date": "2026-09-07"
+}

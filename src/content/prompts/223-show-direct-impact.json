@@ -1,0 +1,9 @@
+{
+  "act": "Show Direct Impact",
+  "prompt": "Write a paragraph that shows sponsors the direct impact their funding will have on my projects and the wider community.",
+  "improvedPrompt": "Here's the improved prompt:\n\n\"Compose a persuasive paragraph that clearly communicates the tangible and immediate impact that a sponsorship of $25,000 will have on my three ongoing community development projects. Please break down how this funding will:\n1. Enable the immediate purchase of 500 reusable water filters for the Clean Water Initiative, directly improving the health of 2,500 local residents.\n2. Allow the extension of the after-school tutoring program by two months, providing additional academic support to 100 at-risk youth.\n3. Fund the completion of the community garden infrastructure, which is expected to increase local food security and employ 15 residents in the construction phase.\n\nEnsure you use specific, measurable data points and maintain a professional yet heartfelt tone. The target audience is mid-level corporate social responsibility directors who value concrete outcomes and community impact. Please format the paragraph as a block of text, with no additional commentary.\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "f",
+  "date": "2026-09-07"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "war",
+  "prompt": "Xiongnu warriors on horses, central asian steppe, 5th century, dramatic sunset, volumetric lighting, hyper-realistic, 8k.",
+  "improvedPrompt": "Improved prompt:\n\n\"Compose an evocative, hyper-realistic digital artwork depicting a group of Xiongnu warriors charging across the vast, windswept expanse of the Central Asian steppe during a dramatic sunset in the year 450 AD. Utilize volumetric lighting techniques to capture the intense, warm glow of the setting sun as it casts long, dancing shadows across the warriors and their mounts. Ensure the horses are portrayed with a heightened level of anatomical accuracy and motion, their muscles rippling beneath the skin as they gallop. The warriors themselves should be rendered with maximum attention to historical detail, wearing authentic Xiongnu armor and carrying period-correct weapons such as composite bows and curved swords. The landscape should be expansive and authentic, featuring undulating grasslands, scattered boulders, and perhaps a distant mountain range fading into the twilight haze. Set the resolution at an 8K standard to ensure the finest possible level of detail and clarity is achieved. The composition should evoke a sense of primal power, danger, and the raw, untamed beauty of the early medieval steppe. Please format the final image as a high-resolution, lossless PNG file.\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "kh42647026@gmail.com",
+  "date": "2026-09-07"
+}

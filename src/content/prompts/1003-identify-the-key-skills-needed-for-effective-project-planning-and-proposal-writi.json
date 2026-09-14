@@ -1,0 +1,9 @@
+{
+  "act": "identify the key skills needed for effective project planning and proposal writing",
+  "prompt": "identify the key skills needed for effective project planning and",
+  "improvedPrompt": "**Prompt Improvement:**\n\n**Context and Clarification:**\nIdentify the critical skills required by project managers to successfully plan and execute projects from initiation through to completion.\n\n**Desired Output:**\nYour output should be a list of the 10-15 most important skills. Describe each skill in 1-2 concise sentences, explaining why it is crucial and how it contributes to effective project planning and execution.\n\n**Constraints and Instructions:**\n- Focus on skills relevant to all industries and project types, from small teams to large-scale initiatives.\n- Consider both technical (hard) skills and soft (interpersonal) skills.\n- Avoid obvious or clichÃ©d answers like \"good communication\" or \"attention to detail.\"\n- Organize the skills in order of their significance, with the most critical at the top.\n- Use clear, formal language and avoid contractions or casual tone.\n\n**Example Format for Output:**\n1. **Skill Name** - Description and why it's essential for effective project planning.\n\nPlease provide your response in a bulleted or numbered list, with each skill described as requested. Ensure your response is comprehensive, well-organized, and demonstrates a deep understanding of project management and the skills required for successful planning and execution.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "barrelgas@gmail.com",
+  "date": "2026-09-07"
+}

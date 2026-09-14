@@ -1,0 +1,9 @@
+{
+  "act": "Digital product ideas",
+  "prompt": "Act as a digital marketing expert create 10 beginner friendly digital product ideas,I can sell on selar in Nigeria, explain each ideas in simple and state the problem it solves",
+  "improvedPrompt": "You are an experienced digital marketing strategist with a keen understanding of the Nigerian market. Your task is to brainstorm and clearly articulate a list of 10 beginner-friendly digital product ideas that are suitable for sale on Selar, a popular e-commerce platform in Nigeria. For each idea, please provide a concise and engaging description that explains:\n\n1. The core concept of the digital product - what exactly it is\n2. The target audience for this product - who would benefit from it\n3. The specific problem or challenge that the product solves - what need it fulfills\n4. How it is delivered or accessed (e.g., ebook, online course, membership site, etc.)\n5. Any unique features or benefits that set it apart\n6. Why it is a beginner-friendly option (e.g., simplicity, affordability, quick results, etc.)\n\nPlease structure your response as a numbered list, with each idea clearly defined. Ensure your explanations are written in simple, clear language suitable for a non-technical audience in Nigeria. Avoid using jargon or overly complex terms.\n\nRemember, the goal is to provide actionable ideas for someone new to digital product creation who wants to start earning income through online sales in Nigeria. Focus on products that require minimal technical skills to create and sell, but offer genuine value to customers.\n\nTake your time to think through each idea thoroughly, and present them in a professional and engaging manner.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "agulilianchika73@gmail.com",
+  "date": "2026-09-07"
+}

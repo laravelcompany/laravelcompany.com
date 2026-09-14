@@ -1,0 +1,9 @@
+{
+  "act": "Subject meditating in a crystal sphere",
+  "prompt": "a transparent crystal portal floating in the middle of clouds in the sky, with a ${subject}, sitting inside meditating with golden lights coming up from all their chakras, 2 other light beams are traversing their body one from top to bottom and 2 diagonally",
+  "improvedPrompt": "Improved prompt:\n\nVisualize a luminous, crystalline portal suspended in the vast expanse of an ethereal cloud sea. The portal is composed of a shimmering, translucent substance, its edges blurred by the misty air that swirls around it. At the center of this celestial gateway sits a solitary figure, deeply immersed in a state of profound meditation. This ${subject} is cloaked in a soft, golden light that emanates from each of their seven primary energy centers, or chakras.\n\nThe golden radiance pulsates gently, illuminating the figure from within with a warm, inviting glow. Two distinct, white light beams cross the subject's body diagonally, intersecting at the solar plexus chakra in a harmonious geometric pattern. Simultaneously, a third beam of pure, radiant energy flows upwards from the earthly foundations of the portal, passing through the subject's physical form and crown chakra, establishing a direct link between the terrestrial and celestial realms.\n\nThe scene evokes a sense of serene balance, with the subject serving as the focal point where the earthly and ethereal energies converge and harmonize.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "magejosh",
+  "date": "2026-09-07"
+}

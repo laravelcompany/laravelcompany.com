@@ -1,0 +1,9 @@
+{
+  "act": "Improve",
+  "prompt": "What's the single smartest and most radically innovative and accretive and useful and compelling addition you could make to the project at this point?",
+  "improvedPrompt": "Here is the improved version of the prompt:\n\n\"Please identify the most strategic, innovative, and impactful enhancement you could propose for our current project at this stage. Your recommendation should be:\n\n1. Clearly explained in 2-4 concise bullet points.\n2. Supported by evidence of its potential to significantly improve project outcomes.\n3. Justified in terms of how it alignes with our project goals and constraints.\n4. Technically feasible within our current project scope and timeline.\n5. Described in enough detail that it could be immediately actionable by the team.\n\nPlease focus on a single, high-impact addition that you believe could meaningfully advance the project. Avoid listing multiple ideas or discussing incremental improvementsâwe're looking for a game-changing enhancement that could substantially change the project trajectory.\n\nProvide your recommendation in a format like this:\n- Enhancement: [Brief description]\n- Impact: [Explanation of how it improves project outcomes]\n- Alignment: [How it fits with project objectives]\n- Feasibility: [Yes/No, with explanation if No]\n- Action steps: [3-5 specific actions needed to implement this]\n\nYour response should be a thoughtful, well-justified recommendation that reflects your expertise and understanding of the project. Please keep your explanation concise and focus on the key points.\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "grantcarthew",
+  "date": "2026-09-07"
+}

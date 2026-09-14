@@ -1,0 +1,9 @@
+{
+  "act": "Childs Coloring Style",
+  "prompt": "A cartoon ${setting} scene with crayon colored ${detail1} and ${detail2} and ${detail3}, like that of a learning child.",
+  "improvedPrompt": "Improved prompt:\n\nDesign a vibrant cartoon scene set in a ${setting} environment, showcasing distinctive crayon-like colors and textures. The illustration should feature prominent crayon-colored ${detail1}, intricately shaded ${detail2}, and expressive crayon strokes for ${detail3}, evoking the playful style of a young artist discovering the world through bold colors.\n\nEnsure the scene captures the innocent wonder and imaginative spirit of a learning child, with exaggerated proportions, exaggerated expressions, and a focus on the visual impact of primary colors. The crayon effects should be prominent but not overshadow the overall composition of the scene, which should be balanced and visually harmonious despite its whimsical nature.\n\nThe desired output is a high-resolution digital illustration file in PNG format, suitable for print or display purposes, with dimensions of at least 2560x1440 pixels. Please include a transparent background for seamless integration into other designs if needed.\n\nPlease avoid using any explicit children or characters in the scene, focusing instead on the visual representation of a child's perspectiveâthrough the colors, textures, and overall composition. The scene should evoke a sense of discovery and curiosity without being didactic or overly simplistic.\n\nKindly provide the final illustration within 48 hours of receiving this prompt, with a short description of the creative process and the tools used (if relevant). Thank you.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "magejosh",
+  "date": "2026-09-07"
+}
