@@ -180,6 +180,24 @@ const faviconImg = await getImage({
     </script>
 
 
+    <!-- Swetrix Analytics -->
+    <script src="https://swetrix.org/swetrix.js" defer is:inline></script>
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function() {
+        swetrix.init('gRBaI0dFq2qm', {
+          apiURL: 'https://swetrixapi-ukxw2ujzpn9fc7yvhaguqhup.izdrail.com/log',
+        })
+        swetrix.trackViews()
+      })
+    </script>
+    <noscript>
+      <img
+        src="https://swetrixapi-ukxw2ujzpn9fc7yvhaguqhup.izdrail.com/log/noscript?pid=gRBaI0dFq2qm"
+        alt=""
+        referrerpolicy="no-referrer-when-downgrade"
+      />
+    </noscript>
+
   </head>
   <body
     class="min-h-screen flex flex-col bg-payflo-dark text-white selection:bg-payflo-purple/30"
