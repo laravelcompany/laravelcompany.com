@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "include": [
+    "/api/booking-eligibility",
+    "/api/books/search",
+    "/books/*"
+  ],
+  "exclude": []
+}

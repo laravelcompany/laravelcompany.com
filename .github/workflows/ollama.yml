@@ -77,20 +77,20 @@ jobs:
               -d "{\"body\": \"$ERROR_MSG\"}" \
               "${{ github.event.pull_request.comments_url }}" || echo "Failed to post error comment"
           
-            exit 1
+            echo "::warning::Local LLM analysis failed; leaving the diagnostic comment on the PR without blocking merge."
           fi
           
           # Check if response is empty
           if [ "$RESPONSE_SIZE" -eq 0 ] || [ -z "$RESPONSE_BODY" ]; then
             echo "❌ Empty response from GitHub API"
-            exit 1
+            echo "::warning::Local LLM analysis failed; leaving the diagnostic comment on the PR without blocking merge."
           fi
           
           # Validate JSON format
           if ! echo "$RESPONSE_BODY" | jq empty 2>/dev/null; then
             echo "❌ Invalid JSON response from GitHub API"
             echo "Raw response (first 500 chars): ${RESPONSE_BODY:0:500}"
-            exit 1
+            echo "::warning::Local LLM analysis failed; leaving the diagnostic comment on the PR without blocking merge."
           fi
           
           # Check if we got an empty array (no files changed)
@@ -112,8 +112,8 @@ jobs:
           echo "✅ Found $FILE_COUNT changed files"
           
           # Build the complete message with all files
-          PR_TITLE="${{ github.event.pull_request.title }}"
-          PR_DESCRIPTION="${{ github.event.pull_request.body }}"
+          PR_TITLE=$(jq -r '.pull_request.title // ""' "$GITHUB_EVENT_PATH")
+          PR_DESCRIPTION=$(jq -r '.pull_request.body // ""' "$GITHUB_EVENT_PATH")
           
           # Clean up PR description (remove null, escape quotes)
           if [ "$PR_DESCRIPTION" = "null" ] || [ -z "$PR_DESCRIPTION" ]; then
@@ -251,7 +251,7 @@ jobs:
               -d "{\"body\": \"$ERROR_MSG\"}" \
               "${{ github.event.pull_request.comments_url }}"
           
-            exit 1
+            echo "::warning::Local LLM analysis failed; leaving the diagnostic comment on the PR without blocking merge."
           fi
           
           echo "✅ LLM endpoint is reachable"
@@ -290,7 +290,7 @@ jobs:
               -d "{\"body\": \"$ERROR_MSG\"}" \
               "${{ github.event.pull_request.comments_url }}"
           
-            exit 1
+            echo "::warning::Local LLM analysis failed; leaving the diagnostic comment on the PR without blocking merge."
           fi
           
           # Parse LLM response
@@ -325,7 +325,7 @@ jobs:
                 -d "{\"body\": \"$ERROR_MSG\"}" \
                 "${{ github.event.pull_request.comments_url }}"
           
-              exit 1
+              echo "::warning::Local LLM returned invalid JSON; diagnostic comment posted without blocking merge."
             fi
           
             echo "✅ LLM response is valid JSON"
@@ -465,5 +465,5 @@ jobs:
               -d "$ERROR_JSON" \
               "${{ github.event.pull_request.comments_url }}"
           
-            exit 1
+            echo "::warning::Local LLM analysis failed; leaving the diagnostic comment on the PR without blocking merge."
           fi
