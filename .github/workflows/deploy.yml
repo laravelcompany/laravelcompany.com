@@ -44,13 +44,14 @@ jobs:
           NODE_OPTIONS: "--max-old-space-size=6144"
 
       - name: Deploy to Cloudflare Pages
-        uses: andykenward/github-actions-cloudflare-pages@46d86e1caa6b86365a41d335db65a6936a1beb39 # v3.5.0
-        with:
-          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          cloudflare-project-name: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-          directory: dist
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          # This repository only defines the production GitHub Environment.
-          # Passing a missing preview environment makes successful PR uploads fail.
-          github-environment: ${{ github.ref == 'refs/heads/main' && 'production' || '' }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_PROJECT_NAME: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          DEPLOY_BRANCH: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+        run: |
+          npx wrangler@4 pages deploy dist \
+            --project-name "$CLOUDFLARE_PROJECT_NAME" \
+            --branch "$DEPLOY_BRANCH" \
+            --commit-hash "${{ github.event.pull_request.head.sha || github.sha }}" \
+            --commit-message "${{ github.event.head_commit.message || github.event.pull_request.title }}"
