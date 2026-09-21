@@ -112,8 +112,8 @@ jobs:
           echo "✅ Found $FILE_COUNT changed files"
           
           # Build the complete message with all files
-          PR_TITLE="${{ github.event.pull_request.title }}"
-          PR_DESCRIPTION="${{ github.event.pull_request.body }}"
+          PR_TITLE=$(jq -r '.pull_request.title // ""' "$GITHUB_EVENT_PATH")
+          PR_DESCRIPTION=$(jq -r '.pull_request.body // ""' "$GITHUB_EVENT_PATH")
           
           # Clean up PR description (remove null, escape quotes)
           if [ "$PR_DESCRIPTION" = "null" ] || [ -z "$PR_DESCRIPTION" ]; then
