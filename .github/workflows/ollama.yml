@@ -8,7 +8,7 @@ on:
 jobs:
   analyze_pr:
     name: 'Send All PR Files to Local LLM'
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
     permissions:
       contents: read
       pull-requests: write
