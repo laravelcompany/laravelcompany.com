@@ -8,7 +8,7 @@ export default defineConfig({
   output: 'static',
   prefetch: true,
   build: {
-    concurrency: 2,
+    concurrency: 4,
   },
   integrations: [
     tailwind(),

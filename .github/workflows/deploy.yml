@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
   deployments: write
@@ -23,20 +27,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
-      - name: Cache Node modules
+      - name: Cache Astro build cache
         uses: actions/cache@v4
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          path: node_modules/.astro
+          key: ${{ runner.os }}-astro-cache-${{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-astro-cache-
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Verify NODE_OPTIONS
-        run: echo "NODE_OPTIONS=${NODE_OPTIONS:-unset}"
 
       - name: Build Astro site
         run: npm run build
