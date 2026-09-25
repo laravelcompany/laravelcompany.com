@@ -1,0 +1,144 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const allDocs = await getCollection("docs");
+  const docs = allDocs.filter((doc) => doc.id.replace(/\.md$/, "") !== "readme");
+
+  return docs.map((doc) => ({
+    params: { slug: doc.id.replace(/\.md$/, "") },
+    props: { doc, allDocs: docs },
+  }));
+}
+
+const { doc, allDocs } = Astro.props;
+const { Content } = await doc.render();
+
+const title = doc.body.split("\n")[0].replace(/^#\s*/, "");
+const currentSlug = doc.id.replace(/\.md$/, "");
+
+const otherDocs = allDocs
+  .filter((d) => d.id.replace(/\.md$/, "") !== currentSlug)
+  .map((d) => ({
+    slug: d.id.replace(/\.md$/, ""),
+    title: d.body.split("\n")[0].replace(/^#\s*/, ""),
+  }))
+  .sort((a, b) => a.title.localeCompare(b.title));
+
+const icons: Record<string, string> = {
+  "installation": "ph:download-duotone",
+  "structure": "ph:folder-duotone",
+  "frontend": "ph:paint-brush-duotone",
+  "database": "ph:database-duotone",
+  "session": "ph:clock-duotone",
+  "redis": "ph:lightning-duotone",
+  "csrf": "ph:shield-check-duotone",
+  "hashing": "ph:fingerprint-duotone",
+  "passwords": "ph:lock-key-duotone",
+  "packages": "ph:package-duotone",
+  "providers": "ph:puzzle-piece-duotone",
+  "facades": "ph:wall-duotone",
+  "lifecycle": "ph:arrows-clockwise-duotone",
+  "sail": "ph:boat-duotone",
+  "telescope": "ph:telescope-duotone",
+  "reverb": "ph:radio-duotone",
+  "mongodb": "ph:leaf-duotone",
+  "search": "ph:magnifying-glass-duotone",
+  "seeding": "ph:plant-duotone",
+  "urls": "ph:link-duotone",
+  "views": "ph:eye-duotone",
+  "releases": "ph:tag-duotone",
+  "ai": "ph:brain-duotone",
+  "documentation": "ph:book-open-duotone",
+};
+
+const icon = icons[currentSlug] || "ph:file-duotone";
+---
+
+<Layout title={`${title} - Laravel Documentation`}>
+  <section class="pt-16 pb-8 bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900">
+    <div class="container-custom">
+      <nav class="flex items-center gap-2 text-sm text-white/50 mb-8">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <a href="/docs/" class="hover:text-white transition-colors">Docs</a>
+        <span>/</span>
+        <span class="text-white">{title}</span>
+      </nav>
+      <a
+        href="/docs/"
+        class="inline-flex items-center text-violet-300 hover:text-white mb-8 transition-colors"
+      >
+        <Icon name="ph:arrow-left-duotone" class="h-5 w-5 mr-2" />
+        Back to all docs
+      </a>
+
+      <div class="flex items-center gap-4">
+        <div class="h-16 w-16 rounded-2xl bg-white/20 flex items-center justify-center text-white">
+          <Icon name={icon} class="h-8 w-8" />
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white">
+          {title}
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-gray-900">
+    <div class="container-custom max-w-4xl">
+      <article class="prose prose-xl max-w-none prose-invert
+        prose-headings:font-bold prose-headings:text-white
+        prose-p:text-gray-300 prose-p:leading-relaxed
+        prose-a:text-fuchsia-400 prose-a:no-underline hover:prose-a:underline
+        prose-code:text-fuchsia-300 prose-code:bg-fuchsia-900/50 prose-code:px-2 prose-code:py-0.5 prose-code:rounded
+        prose-pre:bg-gray-800 prose-pre:text-gray-100
+        prose-blockquote:border-l-4 prose-blockquote:border-fuchsia-500 prose-blockquote:bg-fuchsia-900/30 prose-blockquote:py-2 prose-blockquote:pr-2
+        prose-strong:text-white
+        prose-ul:text-gray-300 prose-ol:text-gray-300
+        prose-li:marker:text-fuchsia-400
+        prose-h2:text-white prose-h3:text-white
+      ">
+        <Content />
+      </article>
+
+      <div class="mt-16 pt-8 border-t border-gray-700">
+        <h2 class="text-2xl font-bold text-white mb-6">More Documentation</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {
+            otherDocs.map((doc) => (
+              <a
+                href={`/docs/${doc.slug}/`}
+                class="block p-4 rounded-lg bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-fuchsia-500 transition-all"
+              >
+                <span class="text-fuchsia-400 hover:text-fuchsia-300 font-medium">
+                  {doc.title}
+                </span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <a
+          href="/docs/"
+          class="inline-flex items-center px-6 py-3 bg-fuchsia-600 text-white rounded-lg hover:bg-fuchsia-700 transition-colors"
+        >
+          <Icon name="ph:arrow-left-duotone" class="h-5 w-5 mr-2" />
+          All Documentation
+        </a>
+
+        <div class="flex gap-4">
+          <span class="text-gray-400 text-sm">Missing a topic?</span>
+          <a href="/contact/" class="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-medium">
+            Let us know
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
