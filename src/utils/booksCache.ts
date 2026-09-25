@@ -117,8 +117,23 @@ function loadCache(): Book[] | null {
 /**
  * Get the curated catalogue. In CI (or FORCE_REFRESH_BOOKS) fetch fresh and
  * persist; on failure fall back to the snapshot. Locally prefer the snapshot.
+ *
+ * Memoized for the lifetime of the process: previously every consumer
+ * (books index, pagination, book detail routes, sitemap) refetched the
+ * whole Open Library catalogue in CI, so partial fetch failures made the
+ * prerendered pages drift from the linked and sitemap-listed set - 28
+ * book URLs were linked and listed but never rendered (404).
  */
-export async function getBooks(): Promise<Book[]> {
+let booksPromise: Promise<Book[]> | null = null;
+
+export function getBooks(): Promise<Book[]> {
+    if (!booksPromise) {
+        booksPromise = getBooksUncached();
+    }
+    return booksPromise;
+}
+
+async function getBooksUncached(): Promise<Book[]> {
     const isCI = process.env.CI === "true" || process.env.VERCEL || process.env.NETLIFY || process.env.CF_PAGES;
     const forceRefresh = process.env.FORCE_REFRESH_BOOKS === "true";
 
