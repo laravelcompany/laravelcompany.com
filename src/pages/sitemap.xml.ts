@@ -26,6 +26,7 @@ export const GET: APIRoute = async ({ site }) => {
         'jobs/',
         'blog/',
         'books/',
+        'docs/',
         'guidelines/',
         'laravel-application-development-company/',
         'software-development-agency-london/',
@@ -123,7 +124,18 @@ export const GET: APIRoute = async ({ site }) => {
         console.error('Error fetching blog posts for sitemap:', error);
     }
 
-    const allPages = [...staticPages, ...geoServicePages, ...variantServicePages, ...jobPages, ...productPages, ...bookPages, ...blogPages];
+    // 5. Fetch documentation pages
+    let docsPages: string[] = [];
+    try {
+        const docsEntries = await getCollection('docs');
+        docsPages = docsEntries
+            .filter(doc => doc.id.replace(/\.md$/, '') !== 'readme')
+            .map(doc => `docs/${doc.id.replace(/\.md$/, '')}/`);
+    } catch (error) {
+        console.error('Error fetching docs for sitemap:', error);
+    }
+
+    const allPages = [...staticPages, ...geoServicePages, ...variantServicePages, ...jobPages, ...productPages, ...bookPages, ...blogPages, ...docsPages];
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
