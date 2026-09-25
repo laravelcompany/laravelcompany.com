@@ -273,7 +273,7 @@ This method is like a compass pointing directly to an action. Use it when you wa
 
 Need some static files? Use the asset method to fetch them without worrying about HTTPS!
 
-    <img src="{{ asset('images/my-image.jpg') }}">
+    <img src="{{ asset('images/my-image.jpg') }}" alt="my image.jpg') }}">
 
 #### Route 🚢 (Charting your course)
 
@@ -285,7 +285,7 @@ The route method is like a map for your application's URLs. It helps you navigat
 
 When sailing the seas of the web, sometimes it's necessary to secure your assets. Use secure_asset for HTTPS-encrypted static files!
 
-    <img src="{{ secure_asset('images/my-image.jpg') }}">
+    <img src="{{ secure_asset('images/my-image.jpg') }}" alt="my image.jpg') }}">
 
 #### Secure URL 🚢 (Secure seas ahead)
 

@@ -739,7 +739,7 @@ public function toMail(object $notifiable): MailMessage
 
 In this example, we serve up a greeting, a line of text, a call to action, another line of text, and a parting message. These delightful methods provided by the `MailMessage` object make it simple, swift, and oh-so-satisfying to create small transactional emails. The mail channel will then sprinkle some magic on the message components, transforming them into a stunning, responsive HTML email template with a plain-text counterpart. Here's an example of an email cooked up by the `mail` channel:
 
-<img src="https://laravel.com/img/docs/notification-example-2.png">
+<img src="https://laravel.com/img/docs/notification-example-2.png" alt="notification example 2">
 
 > [!ATTENTION]
 > When sending mail notifications, don't forget to set the `name` configuration option in your `config/app.php` configuration file. This valuable nugget will be featured in the header and footer of your mail notification messages.

@@ -656,7 +656,7 @@ Imagine being Sherlock Holmes, and your log files are the grisly crime scene. Th
 
 Pail plays well with all the log drivers in Laravel, including the mysterious Sentry and the elusive Flare. And that's not all! It comes equipped with a sleuth of handy filters to help you zero in on the exact piece of evidence you need to crack your case! 🔎🕵️‍♀️
 
-<img src="https://laravel.com/img/docs/pail-example.png">
+<img src="https://laravel.com/img/docs/pail-example.png" alt="pail example">
 
 <a name="pail-installation"></a>
 ## Installing Pail: The Cinderella Story of a Package 👰👑

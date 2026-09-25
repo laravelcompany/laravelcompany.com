@@ -72,7 +72,7 @@ So, grab some popcorn (because this is about to get interesting), and let's jour
 
 When you wield Horizon, all of your queue worker configurations are tucked neatly into one simple configuration file - think of it as the little black dress of queue setup! By defining your application's worker settings in a version-controlled file, scaling or tweaking your application's queue workers during deployment becomes as easy as pie. 🥧
 
-Now, picture this: your beautifully organized queue system, displayed like a work of art in the Horizon dashboard. ✨🔥💥 <img src="https://laravel.com/img/docs/horizon-example.png">
+Now, picture this: your beautifully organized queue system, displayed like a work of art in the Horizon dashboard. ✨🔥💥 <img src="https://laravel.com/img/docs/horizon-example.png" alt="horizon example">
 
 [Jump to installation](#installation) if you're already impatient with anticipation! 😉
 
