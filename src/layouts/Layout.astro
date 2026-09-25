@@ -11,13 +11,16 @@ interface Props {
   title: string;
   description?: string;
   noindex?: boolean;
+  ogImage?: string;
 }
 
 const {
   title,
   description = "Laravel Company develops open-source Laravel tools for UI, Mail, SEO, GPT and Leads Management — no lock-in, no fluff, just solid engineering.",
   noindex = false,
+  ogImage = "/logo-square.png",
 } = Astro.props;
+const ogImageUrl = new URL(ogImage, Astro.site).href;
 
 // Preload critical assets
 const faviconImg = await getImage({
@@ -144,9 +147,9 @@ const faviconImg = await getImage({
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
-    <meta property="og:image" content={new URL("/logo-square.png", Astro.site)} />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Laravel Development Company" />
 
     <!-- Twitter Card -->
@@ -155,7 +158,7 @@ const faviconImg = await getImage({
     <meta name="twitter:creator" content="@laravelcompany" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL("/logo-square.png", Astro.site)} />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTWW0CXPP2"></script>
