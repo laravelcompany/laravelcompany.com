@@ -1,12 +1,12 @@
 ---
+import { reviewsAggregate, reviewsSchemaJSON } from "../../data/reviews";
+
 interface Props {
   serviceType: string;
   description: string;
-  ratingValue?: string;
-  reviewCount?: string;
 }
 
-const { serviceType, description, ratingValue = '4.9', reviewCount = '127' } = Astro.props;
+const { serviceType, description } = Astro.props;
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify({
@@ -18,11 +18,8 @@ const { serviceType, description, ratingValue = '4.9', reviewCount = '127' } = A
     "name": "Laravel Company",
     "url": "https://laravelcompany.com",
     "logo": "https://laravelcompany.com/logo.svg",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": ratingValue,
-      "reviewCount": reviewCount
-    },
+    "aggregateRating": reviewsAggregate,
+    "review": reviewsSchemaJSON,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "7 High Street",

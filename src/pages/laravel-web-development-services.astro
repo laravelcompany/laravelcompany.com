@@ -1,4 +1,6 @@
 ---
+import ClientReviews from "../components/ClientReviews.astro";
+import { reviewsAggregate, reviewsSchemaJSON } from "../data/reviews";
 import Layout from "../layouts/Layout.astro";
 import CTASection from "../components/CTASection.astro";
 import { Icon } from "astro-icon/components";
@@ -162,11 +164,8 @@ const serviceSchema = {
     "@type": "Organization",
     "name": "Laravel Company",
     "url": "https://laravelcompany.com",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "127"
-    }
+    "aggregateRating": reviewsAggregate,
+    "review": reviewsSchemaJSON
   },
   "description": "Full-service Laravel development agency offering custom web apps, API development, SaaS platforms, e-commerce, and maintenance services.",
   "hasOfferCatalog": {
@@ -433,6 +432,8 @@ const serviceSchema = {
 
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+    <ClientReviews />
 
     <!-- Internal Links -->
     <section class="py-16 border-t border-white/5">

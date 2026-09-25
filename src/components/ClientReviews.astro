@@ -1,0 +1,42 @@
+---
+import { clientReviews } from "../data/reviews";
+
+const stars = (rating: number) => Array.from({ length: 5 }, (_, i) => i < rating);
+---
+
+<section class="py-16 md:py-24 border-t border-white/5">
+  <div class="container-custom">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-3xl md:text-4xl font-black text-white">
+        What Our Clients Say
+      </h2>
+      <p class="text-white/60 mt-3">
+        Rated 5.0 out of 5 from {clientReviews.length} client reviews.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {clientReviews.map((review) => (
+        <figure class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col">
+          <div class="flex gap-1 mb-4" aria-label={`Rated ${review.rating} out of 5`}>
+            {stars(review.rating).map((filled) => (
+              <svg
+                class={`h-5 w-5 ${filled ? "text-yellow-400" : "text-white/20"}`}
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M9.05 2.93c.3-.92 1.6-.92 1.9 0l1.28 3.94a1 1 0 0 0 .95.69h4.14c.97 0 1.37 1.24.59 1.81l-3.35 2.44a1 1 0 0 0-.36 1.12l1.28 3.94c.3.92-.76 1.69-1.54 1.12l-3.35-2.44a1 1 0 0 0-1.18 0l-3.35 2.44c-.78.57-1.84-.2-1.54-1.12l1.28-3.94a1 1 0 0 0-.36-1.12L2.09 9.37c-.78-.57-.38-1.81.59-1.81h4.14a1 1 0 0 0 .95-.69l1.28-3.94Z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-white/80 leading-relaxed flex-1">
+            <p>&ldquo;{review.text}&rdquo;</p>
+          </blockquote>
+          <figcaption class="mt-4 text-sm font-bold text-white">
+            &mdash; {review.author}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
