@@ -1,4 +1,6 @@
 ---
+import ClientReviews from "../../components/ClientReviews.astro";
+import { reviewsAggregate, reviewsSchemaJSON } from "../../data/reviews";
 import Layout from '../../layouts/Layout.astro';
 import CTASection from '../../components/CTASection.astro';
 import GeoHero from '../../components/geo/GeoHero.astro';
@@ -354,11 +356,8 @@ const serviceSchema = {
     "name": "Laravel Company",
     "url": "https://laravelcompany.com",
     "logo": "https://laravelcompany.com/logo.svg",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "127"
-    }
+    "aggregateRating": reviewsAggregate,
+    "review": reviewsSchemaJSON
   },
   "description": "Custom Laravel development services including web applications, SaaS platforms, API development, AI integration, consulting, audits, maintenance, and migration. UK-based Laravel development company with 500+ projects delivered.",
   "areaServed": ["GB", "US", "EU", "Worldwide"],
@@ -783,6 +782,8 @@ const webpageSchema = {
         </div>
       </div>
     </section>
+
+    <ClientReviews />
 
     <!-- Internal Links -->
     <section class="py-16 border-t border-white/5">
