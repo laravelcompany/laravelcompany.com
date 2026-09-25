@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import HeroSection from "../../components/HeroSection.astro";
 import { getJobs, type Job } from "../../utils/jobsCache";
+import { generateJobSlug } from "../../utils/jobSlug";
 
 export const prerender = true;
 
@@ -15,32 +16,12 @@ export async function getStaticPaths() {
         console.error("Error fetching jobs for static paths:", error);
     }
 
-    function generateSlug(title: string, id: any, url?: string): string {
-        let safeId = id;
-        if (!safeId || safeId === "undefined" || safeId === "null") {
-            safeId = url
-                ? btoa(url).substring(0, 8)
-                : Math.random().toString(36).substring(2, 7);
-        }
-        const titleSlug = title
-            .toLowerCase()
-            .replace(/[^\w\s-]/g, "")
-            .replace(/\s+/g, "-")
-            .replace(/-+/g, "-")
-            .trim();
-        return `${titleSlug}-${safeId}`;
-    }
-
     return allJobs.map((job) => {
-        // Ensure job has an id and url for consistent behavior
         if (!job.url && job.job_url) job.url = job.job_url;
-        if (!job.id || job.id === "undefined") {
-            job.id = job.url ? btoa(job.url).substring(0, 8) : "unknown";
-        }
         if (!job.company) job.company = "Laravel Company Partner";
 
         return {
-            params: { slug: generateSlug(job.title, job.id, job.url) },
+            params: { slug: generateJobSlug(job.title, job.id, job.url) },
             props: { job },
         };
     });

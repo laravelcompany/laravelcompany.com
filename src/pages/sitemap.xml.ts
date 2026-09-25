@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { getJobs } from '../utils/jobsCache';
+import { generateJobSlug } from '../utils/jobSlug';
 import { LOCATIONS } from '../data/locations';
 import { SERVICE_MODIFIERS } from '../data/service-modifiers';
 
@@ -60,15 +61,7 @@ export const GET: APIRoute = async ({ site }) => {
     let jobPages: string[] = [];
     try {
         const jobs = await getJobs('laravel');
-        jobPages = jobs.map(job => {
-            const titleSlug = job.title
-                .toLowerCase()
-                .replace(/[^\w\s-]/g, "")
-                .replace(/\s+/g, "-")
-                .replace(/-+/g, "-")
-                .trim();
-            return `jobs/${titleSlug}-${job.id}/`;
-        });
+        jobPages = jobs.map(job => `jobs/${generateJobSlug(job.title, job.id, job.url || job.job_url)}/`);
     } catch (error) {
         console.error('Error fetching jobs for sitemap:', error);
     }
