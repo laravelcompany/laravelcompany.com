@@ -3,8 +3,10 @@ name: Build and Deploy to Cloudflare Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -23,20 +25,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
-      - name: Cache Node modules
+      - name: Cache Astro build cache
         uses: actions/cache@v4
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          path: node_modules/.astro
+          key: ${{ runner.os }}-astro-cache-${{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-astro-cache-
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Verify NODE_OPTIONS
-        run: echo "NODE_OPTIONS=${NODE_OPTIONS:-unset}"
 
       - name: Build Astro site
         run: npm run build
@@ -48,10 +48,10 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_PROJECT_NAME: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-          DEPLOY_BRANCH: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+          DEPLOY_BRANCH: ${{ github.ref_name }}
         run: |
           npx wrangler@4 pages deploy dist \
             --project-name "$CLOUDFLARE_PROJECT_NAME" \
             --branch "$DEPLOY_BRANCH" \
-            --commit-hash "${{ github.event.pull_request.head.sha || github.sha }}" \
-            --commit-message "${{ github.event.head_commit.message || github.event.pull_request.title }}"
+            --commit-hash "${{ github.sha }}" \
+            --commit-message "${{ github.event.head_commit.message }}"
