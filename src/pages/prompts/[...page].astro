@@ -63,11 +63,28 @@ const pageNumbers = getPageNumbers(page.currentPage, page.lastPage);
 
     <div class="max-w-5xl mx-auto">
       <h1 class="text-4xl font-bold mb-4 text-center animate-on-scroll">Prompts</h1>
-      <p class="text-xl text-white/70 mb-12 text-center animate-on-scroll max-w-2xl mx-auto">
+      <p class="text-xl text-white/70 mb-8 text-center animate-on-scroll max-w-2xl mx-auto">
         Community-contributed AI prompts, reviewed and improved by our team.
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="max-w-xl mx-auto mb-12 animate-on-scroll">
+        <div class="relative">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <input
+            id="prompt-search"
+            type="search"
+            placeholder="Search prompts..."
+            aria-label="Search prompts"
+            autocomplete="off"
+            class="w-full pl-12 pr-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-payflo-purple focus:ring-1 focus:ring-payflo-purple transition-colors"
+          />
+        </div>
+        <p id="prompt-search-status" class="text-sm text-white/50 mt-2 text-center hidden"></p>
+      </div>
+
+      <div id="prompt-search-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden"></div>
+
+      <div id="prompt-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sortedPrompts.map((prompt, index) => (
           <a
             href={`/prompts/${prompt.id}/`}
@@ -104,7 +121,7 @@ const pageNumbers = getPageNumbers(page.currentPage, page.lastPage);
       </div>
 
       {page.lastPage > 1 && (
-        <nav class="flex justify-center items-center gap-2 mt-12 animate-on-scroll" aria-label="Prompts pagination">
+        <nav id="prompt-pagination" class="flex justify-center items-center gap-2 mt-12 animate-on-scroll" aria-label="Prompts pagination">
           {page.currentPage > 1 && (
             <a
               href={page.currentPage === 2 ? "/prompts/" : `/prompts/${page.currentPage - 1}/`}
@@ -148,6 +165,95 @@ const pageNumbers = getPageNumbers(page.currentPage, page.lastPage);
     </div>
   </main>
 </Layout>
+
+<script>
+  interface PromptIndexEntry {
+    act: string;
+    slug: string;
+    type: string | null;
+    forDevs: boolean;
+    excerpt: string;
+  }
+
+  const searchInput = document.getElementById("prompt-search") as HTMLInputElement | null;
+  const searchResults = document.getElementById("prompt-search-results");
+  const searchStatus = document.getElementById("prompt-search-status");
+  const promptGrid = document.getElementById("prompt-grid");
+  const pagination = document.getElementById("prompt-pagination");
+
+  let indexPromise: Promise<PromptIndexEntry[]> | null = null;
+  function loadIndex(): Promise<PromptIndexEntry[]> {
+    if (!indexPromise) {
+      indexPromise = fetch("/prompts-index.json").then((r) => r.json());
+    }
+    return indexPromise;
+  }
+
+  function escapeHtml(value: string): string {
+    return value
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function cardHtml(prompt: PromptIndexEntry): string {
+    const badges = [
+      prompt.type
+        ? `<span class="text-xs px-2.5 py-1 rounded-full bg-payflo-purple/20 text-payflo-purple font-medium">${escapeHtml(prompt.type)}</span>`
+        : "",
+      prompt.forDevs
+        ? `<span class="text-xs px-2.5 py-1 rounded-full bg-payflo-blue/20 text-payflo-blue font-medium">For developers</span>`
+        : "",
+    ].join("");
+    return `
+      <a href="/prompts/${prompt.slug}/" class="group glass-card overflow-hidden hover:border-payflo-purple/50 transition-all duration-300">
+        <div class="p-6">
+          <div class="flex flex-wrap gap-2 mb-3">${badges}</div>
+          <h2 class="text-lg font-semibold text-white mb-2 group-hover:text-payflo-purple transition-colors">${escapeHtml(prompt.act)}</h2>
+          <p class="text-sm text-white/60 mb-4 line-clamp-2">${escapeHtml(prompt.excerpt)}</p>
+        </div>
+      </a>`;
+  }
+
+  let debounceTimer: number | undefined;
+  searchInput?.addEventListener("input", () => {
+    window.clearTimeout(debounceTimer);
+    debounceTimer = window.setTimeout(async () => {
+      const query = (searchInput.value || "").trim().toLowerCase();
+      if (!searchResults || !searchStatus || !promptGrid) return;
+
+      if (query.length < 2) {
+        searchResults.classList.add("hidden");
+        searchStatus.classList.add("hidden");
+        promptGrid.classList.remove("hidden");
+        pagination?.classList.remove("hidden");
+        return;
+      }
+
+      const index = await loadIndex();
+      if ((searchInput.value || "").trim().toLowerCase() !== query) return;
+
+      const matches = index
+        .filter(
+          (p) =>
+            p.act.toLowerCase().includes(query) ||
+            p.excerpt.toLowerCase().includes(query),
+        )
+        .slice(0, 48);
+
+      searchResults.innerHTML = matches.map(cardHtml).join("");
+      searchStatus.textContent =
+        matches.length === 0
+          ? `No prompts found for "${query}"`
+          : `${matches.length}${matches.length === 48 ? "+" : ""} result${matches.length === 1 ? "" : "s"} for "${query}"`;
+      searchStatus.classList.remove("hidden");
+      searchResults.classList.remove("hidden");
+      promptGrid.classList.add("hidden");
+      pagination?.classList.add("hidden");
+    }, 200);
+  });
+</script>
 
 <style>
   .line-clamp-2 {
