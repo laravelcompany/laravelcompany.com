@@ -101,9 +101,23 @@ function loadJobsFromCache(): Job[] | null {
 }
 
 /**
- * Get jobs - uses cache in development, fetches from API in production/CI
+ * Get jobs - uses cache in development, fetches from API in production/CI.
+ * Memoized per keyword for the lifetime of the process so every consumer
+ * (jobs index, job detail routes, sitemap) sees the same snapshot within
+ * a single build.
  */
-export async function getJobs(keyword: string = 'laravel'): Promise<Job[]> {
+const jobsPromises = new Map<string, Promise<Job[]>>();
+
+export function getJobs(keyword: string = 'laravel'): Promise<Job[]> {
+    let pending = jobsPromises.get(keyword);
+    if (!pending) {
+        pending = getJobsUncached(keyword);
+        jobsPromises.set(keyword, pending);
+    }
+    return pending;
+}
+
+async function getJobsUncached(keyword: string = 'laravel'): Promise<Job[]> {
     // Check if we're in a CI/deployment environment
     const isCI = process.env.CI === 'true' || process.env.VERCEL || process.env.NETLIFY;
     const forceRefresh = process.env.FORCE_REFRESH_JOBS === 'true';

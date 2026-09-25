@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/HeroSection.astro";
 import { getJobs, type Job } from "../utils/jobsCache";
+import { generateJobSlug } from "../utils/jobSlug";
 import { Icon } from "astro-icon/components";
 
 export const prerender = true;
@@ -15,12 +16,7 @@ if (import.meta.env.SSR) {
     try {
         const rawJobs = await getJobs(defaultKeyword);
         jobs = rawJobs.map((job) => {
-            // Ensure job has an id and url for consistent behavior
             if (!job.url && job.job_url) job.url = job.job_url;
-            // Robust check for missing or 'undefined' string ID
-            if (!job.id || job.id === "undefined") {
-                job.id = job.url ? btoa(job.url).substring(0, 8) : "unknown";
-            }
             if (!job.company) job.company = "Laravel Agency Partner";
             return job;
         });
@@ -55,19 +51,7 @@ function truncateDescription(desc: string, length: number = 150): string {
 }
 
 function generateSlug(title: string, id: any, url?: string): string {
-    let safeId = id;
-    if (!safeId || safeId === "undefined" || safeId === "null") {
-        safeId = url
-            ? btoa(url).substring(0, 8)
-            : Math.random().toString(36).substring(2, 7);
-    }
-    const titleSlug = title
-        .toLowerCase()
-        .replace(/[^\w\s-]/g, "")
-        .replace(/\s+/g, "-")
-        .replace(/-+/g, "-")
-        .trim();
-    return `${titleSlug}-${safeId}`;
+    return generateJobSlug(title, id, url);
 }
 
 function formatDate(dateStr?: string | null): string {
@@ -733,11 +717,6 @@ const locations = [
                         data.jobs || data.results || data.data || [];
                     const processedJobs = rawJobs.map((job: any) => {
                         if (!job.url && job.job_url) job.url = job.job_url;
-                        if (!job.id || job.id === "undefined") {
-                            job.id = job.url
-                                ? btoa(job.url).substring(0, 8)
-                                : "unknown";
-                        }
                         return job;
                     });
                     renderJobs(processedJobs);
@@ -768,7 +747,7 @@ const locations = [
                         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                             <div class="flex-1">
                                 <h3 class="text-xl font-bold mb-2">
-                                    <a href="/jobs/${generateSlug(job.title, job.id)}" class="text-gray-900 dark:text-white hover:text-payflo-purple transition-colors">
+                                    <a href="/jobs/${generateSlug(job.title, job.id, job.url || job.job_url)}" class="text-gray-900 dark:text-white hover:text-payflo-purple transition-colors">
                                         ${job.title}
                                     </a>
                                 </h3>
@@ -810,12 +789,19 @@ const locations = [
                 .join("");
         };
 
+        const hashString = (input: string) => {
+            let h = 5381;
+            for (let i = 0; i < input.length; i++) {
+                h = ((h << 5) + h + input.charCodeAt(i)) >>> 0;
+            }
+            return h.toString(36);
+        };
+
+        // Keep in sync with src/utils/jobSlug.ts
         const generateSlug = (title: string, id: any, url?: string) => {
             let safeId = id;
             if (!safeId || safeId === "undefined" || safeId === "null") {
-                safeId = url
-                    ? btoa(url).substring(0, 8)
-                    : Math.random().toString(36).substring(2, 7);
+                safeId = url ? hashString(url) : hashString(title);
             }
             return (
                 title
