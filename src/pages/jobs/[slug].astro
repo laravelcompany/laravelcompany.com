@@ -29,8 +29,22 @@ export async function getStaticPaths() {
 
 const { job } = Astro.props;
 
-// Use Calendly for all job applications
-const applyUrl = `https://calendly.com/laravelagency/30min?utm_source=website&utm_medium=job_application&utm_campaign=${encodeURIComponent(job.title)}`;
+// Use Calendly for all job applications. Tag every booking with the job
+// and the page it came from so applications can be attributed: UTM
+// parameters show up in Calendly tracking, and the a1-a3 custom answers
+// are stored on the scheduled event itself (no Calendly API needed).
+const pageUrl = new URL(Astro.url.pathname, Astro.site).href;
+const calendlyParams = [
+  "utm_source=website",
+  "utm_medium=job_application",
+  `utm_campaign=${encodeURIComponent(job.title)}`,
+  `utm_content=${encodeURIComponent(pageUrl)}`,
+  `a1=${encodeURIComponent(job.title)}`,
+  `a2=${encodeURIComponent(job.company)}`,
+  `a3=${encodeURIComponent(pageUrl)}`,
+].join("&");
+const applyUrl = `https://calendly.com/laravelagency/30min?${calendlyParams}`;
+const calendlyWidgetUrl = `https://calendly.com/laravelagency/30min?background_color=0f172a&text_color=ffffff&primary_color=7c3aed&${calendlyParams}`;
 const applyText = "Book an Interview to Apply";
 const contactUrl = "/contact";
 
@@ -263,7 +277,7 @@ const jsonLd = {
                                 </h3>
                                 <div
                                     class="calendly-inline-widget"
-                                    data-url={`https://calendly.com/laravelagency/30min?background_color=0f172a&text_color=ffffff&primary_color=7c3aed&utm_source=website&utm_medium=job_application&utm_campaign=${encodeURIComponent(job.title)}`}
+                                    data-url={calendlyWidgetUrl}
                                     style="min-width:320px;height:700px;"
                                 >
                                 </div>
@@ -564,4 +578,17 @@ const jsonLd = {
             </div>
         </section>
     </main>
+    <script is:inline define:vars={{ jobTitle: job.title, jobCompany: job.company }}>
+        window.addEventListener("message", function (e) {
+            if (e.data && e.data.event === "calendly.event_scheduled") {
+                if (typeof window.gtag === "function") {
+                    window.gtag("event", "calendly_booking", {
+                        job_title: jobTitle,
+                        job_company: jobCompany,
+                        page_path: window.location.pathname,
+                    });
+                }
+            }
+        });
+    </script>
 </Layout>
