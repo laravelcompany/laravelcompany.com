@@ -50,12 +50,48 @@ const rawContent = isMarkdown(cleanContent)
   ? marked.parse(cleanContent) as string
   : cleanContent;
 const renderedContent = await enrichCodeBlocks(rawContent);
+
+// Google truncates meta descriptions around 155-160 characters.
+function truncateDescription(text: string, max = 157): string {
+  if (text.length <= 160) return text;
+  const cut = text.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > 80 ? cut.slice(0, lastSpace) : cut).trimEnd() + "…";
+}
+
+const description = truncateDescription(cleanExcerpt);
+const postUrl = new URL(`/blog/${post.id}/`, Astro.site).href;
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: data.title,
+  description,
+  datePublished: data.date,
+  author: {
+    "@type": "Person",
+    name: data.author,
+    ...(data.authorRole ? { jobTitle: data.authorRole } : {}),
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Laravel Company",
+    url: "https://laravelcompany.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://laravelcompany.com/logo-square.png",
+    },
+  },
+  mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+  ...(data.image ? { image: new URL(data.image, Astro.site).href } : {}),
+  ...(data.tags?.length ? { keywords: data.tags.join(", ") } : {}),
+};
 ---
 
 <Layout
   title={`${data.title} | Laravel Company Blog`}
-  description={cleanExcerpt}
+  description={description}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <main class="py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
     <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
       <a href="/" class="hover:text-white transition-colors">Home</a>
