@@ -28,15 +28,33 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { data } = post;
-const rawContent = isMarkdown(data.content)
-  ? marked.parse(data.content) as string
-  : data.content;
+
+// Many imported posts embed generator labels in the content itself: a
+// leading "Title: ..." line (a duplicate of the post title, which this
+// page already renders as the h1) and a bare "Body:" marker line before
+// the actual text. Strip both so readers and search engines never see
+// them.
+function stripContentLabels(content: string): string {
+  return content
+    .replace(/^\s*Title:[^\n]*(\r?\n)?/, "")
+    .replace(/^Body:\s*$/gm, "")
+    .trimStart();
+}
+
+const cleanContent = stripContentLabels(data.content);
+const cleanExcerpt = data.excerpt
+  .replace(/^Title:\s*/, "")
+  .replace(/\s*Body:\s*/, " ")
+  .trim();
+const rawContent = isMarkdown(cleanContent)
+  ? marked.parse(cleanContent) as string
+  : cleanContent;
 const renderedContent = await enrichCodeBlocks(rawContent);
 ---
 
 <Layout
   title={`${data.title} | Laravel Company Blog`}
-  description={data.excerpt}
+  description={cleanExcerpt}
 >
   <main class="py-20 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
     <nav class="flex justify-center items-center gap-2 text-sm text-white/50 mb-8 animate-on-scroll">
