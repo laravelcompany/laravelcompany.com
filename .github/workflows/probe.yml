@@ -1,6 +1,8 @@
-# Diagnostic: re-registering to clear a stale workflow cache entry.
 name: probe-hosted-runner
 on:
+  push:
+    paths:
+      - .github/workflows/probe.yml
   workflow_dispatch:
 jobs:
   probe:
