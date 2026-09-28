@@ -1,3 +1,4 @@
+# Diagnostic: re-registering to clear a stale workflow cache entry.
 name: probe-hosted-runner
 on:
   workflow_dispatch:
