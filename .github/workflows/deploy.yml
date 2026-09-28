@@ -14,7 +14,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
     timeout-minutes: 360
     steps:
@@ -43,6 +43,34 @@ jobs:
         env:
           NODE_OPTIONS: "--max-old-space-size=6144"
 
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 1
+          compression-level: 9
+
+  deploy:
+    needs: build
+    # The self-hosted runner's egress intermittently kills TLS connections to
+    # Cloudflare's /pages/assets/upload mid-site (SocketError: other side
+    # closed, random file counts, Sep 25 + Sep 28). GitHub-hosted runners have
+    # a clean path; only the upload moves there, the heavy build stays put.
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
       - name: Deploy to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -50,8 +78,8 @@ jobs:
           CLOUDFLARE_PROJECT_NAME: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
           DEPLOY_BRANCH: ${{ github.ref_name }}
         run: |
-          # Cloudflare's /pages/assets/upload intermittently fails mid-upload of
-          # large sites (13k+ files) with an unparsable "Error: {}" body. Assets
+          # Cloudflare's upload API intermittently fails mid-upload of large
+          # sites (13k+ files) with an unparsable "Error: {}" body. Assets
           # upload by content hash, so a retry resumes instead of restarting.
           for attempt in 1 2 3; do
             if npx wrangler@4 pages deploy dist \
@@ -63,7 +91,7 @@ jobs:
             fi
             echo "::warning::wrangler deploy attempt $attempt of 3 failed"
             # Surface the real API error from wrangler's debug log before retrying.
-            latest_log=$(ls -t /root/.config/.wrangler/logs/wrangler-*.log 2>/dev/null | head -1)
+            latest_log=$(ls -t /home/runner/.config/.wrangler/logs/wrangler-*.log /root/.config/.wrangler/logs/wrangler-*.log 2>/dev/null | head -1)
             if [ -n "$latest_log" ]; then
               echo "--- wrangler log tail ($latest_log)"
               tail -n 40 "$latest_log" || true
