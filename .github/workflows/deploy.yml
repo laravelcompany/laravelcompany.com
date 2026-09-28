@@ -53,11 +53,13 @@ jobs:
 
   deploy:
     needs: build
-    # The self-hosted runner's egress intermittently kills TLS connections to
-    # Cloudflare's /pages/assets/upload mid-site (SocketError: other side
-    # closed, random file counts, Sep 25 + Sep 28). GitHub-hosted runners have
-    # a clean path; only the upload moves there, the heavy build stays put.
-    runs-on: ubuntu-latest
+    # GitHub-hosted runners turned out unusable for this org (Sep 28 probe:
+    # trivial ubuntu-latest job fails in ~2s with zero jobs/steps and no logs,
+    # same signature as the deploy job instant-failures). Back to the
+    # self-hosted runner; its intermittent TLS drops on Cloudflare's
+    # /pages/assets/upload are handled by the retry loop below (assets upload
+    # by content hash, so retries resume).
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
     timeout-minutes: 120
     steps:
       - name: Setup Node.js
