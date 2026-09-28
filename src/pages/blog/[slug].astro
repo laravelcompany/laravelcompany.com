@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import BlogLeadscaptainPopup from "../../components/BlogLeadscaptainPopup.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
@@ -143,6 +144,7 @@ const articleSchema = {
       </div>
     </article>
   </main>
+  <BlogLeadscaptainPopup />
 </Layout>
 
 <script>
