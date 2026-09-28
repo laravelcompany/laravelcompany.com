@@ -24,6 +24,7 @@
       &times;
     </button>
     <a
+      id="lc-popup-link"
       href="https://leadscaptain.com"
       target="_blank"
       rel="noopener sponsored"
@@ -46,6 +47,15 @@
 
 <script>
   const LC_POPUP_KEY = "lc-popup-dismissed";
+  function lcTrack(eventName, params) {
+    try {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", eventName, params || {});
+      }
+    } catch {
+      // analytics blocked - never break the popup
+    }
+  }
   const overlay = document.getElementById("lc-popup-overlay");
   const closeButton = document.getElementById("lc-popup-close");
 
@@ -80,11 +90,19 @@
       overlay.classList.add("opacity-100");
     });
     closeButton?.focus();
+    lcTrack("leadscaptain_popup_view", { page_path: window.location.pathname });
   }
 
   if (overlay) {
     window.setTimeout(lcMaybeOpenPopup, 3000);
     closeButton?.addEventListener("click", lcClosePopup);
+    const link = document.getElementById("lc-popup-link");
+    link?.addEventListener("click", () => {
+      lcTrack("leadscaptain_popup_click", {
+        link_url: link.href,
+        page_path: window.location.pathname,
+      });
+    });
     overlay.addEventListener("click", (event) => {
       if (event.target === overlay) lcClosePopup();
     });
