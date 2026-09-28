@@ -5,3 +5,4 @@ node_modules/
 # Jobs cache - regenerated during deployment
 src/data/jobs-cache.json
 src/data/books-cache.json
+products/*
