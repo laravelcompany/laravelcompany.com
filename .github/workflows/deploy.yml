@@ -50,8 +50,28 @@ jobs:
           CLOUDFLARE_PROJECT_NAME: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
           DEPLOY_BRANCH: ${{ github.ref_name }}
         run: |
-          npx wrangler@4 pages deploy dist \
-            --project-name "$CLOUDFLARE_PROJECT_NAME" \
-            --branch "$DEPLOY_BRANCH" \
-            --commit-hash "${{ github.sha }}" \
-            --commit-message "${{ github.event.head_commit.message }}"
+          # Cloudflare's /pages/assets/upload intermittently fails mid-upload of
+          # large sites (13k+ files) with an unparsable "Error: {}" body. Assets
+          # upload by content hash, so a retry resumes instead of restarting.
+          for attempt in 1 2 3; do
+            if npx wrangler@4 pages deploy dist \
+              --project-name "$CLOUDFLARE_PROJECT_NAME" \
+              --branch "$DEPLOY_BRANCH" \
+              --commit-hash "${{ github.sha }}" \
+              --commit-message "${{ github.event.head_commit.message }}"; then
+              exit 0
+            fi
+            echo "::warning::wrangler deploy attempt $attempt of 3 failed"
+            # Surface the real API error from wrangler's debug log before retrying.
+            latest_log=$(ls -t /root/.config/.wrangler/logs/wrangler-*.log 2>/dev/null | head -1)
+            if [ -n "$latest_log" ]; then
+              echo "--- wrangler log tail ($latest_log)"
+              tail -n 40 "$latest_log" || true
+              echo "---"
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              sleep $((attempt * 60))
+            fi
+          done
+          echo "::error::wrangler deploy failed after 3 attempts"
+          exit 1
