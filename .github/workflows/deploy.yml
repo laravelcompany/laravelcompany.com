@@ -83,7 +83,13 @@ jobs:
           # Cloudflare's upload API intermittently fails mid-upload of large
           # sites (13k+ files) with an unparsable "Error: {}" body. Assets
           # upload by content hash, so a retry resumes instead of restarting.
-          for attempt in 1 2 3; do
+          # Sep 28: failures cluster in windows (1 success at 07:40 UTC vs 9
+          # failures after 08:35, each dying 42-57s into the bulk upload with
+          # SocketError "other side closed" - reads as Cloudflare edge/API
+          # instability or rate-limiting for this egress). Hash-resume makes
+          # attempts cumulative, so ride out the window: 8 attempts, 2 min
+          # apart (worst case ~16 min of retries).
+          for attempt in 1 2 3 4 5 6 7 8; do
             if npx wrangler@4 pages deploy dist \
               --project-name "$CLOUDFLARE_PROJECT_NAME" \
               --branch "$DEPLOY_BRANCH" \
@@ -91,7 +97,7 @@ jobs:
               --commit-message "${{ github.event.head_commit.message }}"; then
               exit 0
             fi
-            echo "::warning::wrangler deploy attempt $attempt of 3 failed"
+            echo "::warning::wrangler deploy attempt $attempt of 8 failed"
             # Surface the real API error from wrangler's debug log before retrying.
             latest_log=$(ls -t /home/runner/.config/.wrangler/logs/wrangler-*.log /root/.config/.wrangler/logs/wrangler-*.log 2>/dev/null | head -1)
             if [ -n "$latest_log" ]; then
@@ -99,9 +105,9 @@ jobs:
               tail -n 40 "$latest_log" || true
               echo "---"
             fi
-            if [ "$attempt" -lt 3 ]; then
-              sleep $((attempt * 60))
+            if [ "$attempt" -lt 8 ]; then
+              sleep 120
             fi
           done
-          echo "::error::wrangler deploy failed after 3 attempts"
+          echo "::error::wrangler deploy failed after 8 attempts"
           exit 1
