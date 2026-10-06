@@ -210,6 +210,14 @@ function isActive(href: string): boolean {
 
 <style>
     /* Hamburger menu styles */
+    /* .glass-card sets padding:2rem which collapses the 40px button content box to 0 and hides the lines */
+    #menu-toggle {
+        padding: 0.5rem;
+    }
+    #menu-toggle > div {
+        flex-shrink: 0;
+    }
+
     #menu-toggle.active .line-1 {
         transform: translateY(7px) rotate(45deg);
     }
