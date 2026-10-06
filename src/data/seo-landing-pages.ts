@@ -339,6 +339,7 @@ export const seoLandingPages = {
       { href: "/upgrade-laravel-version/", label: "Upgrade Laravel Version", icon: "ph:arrow-circle-up-duotone" },
       { href: "/laravel-development-services/", label: "Laravel Development Services", icon: "ph:code-block-duotone" },
       { href: "/laravel-development-cost/", label: "Laravel Development Cost", icon: "ph:currency-circle-dollar-duotone" },
+      { href: "https://drupalcompany.com/services/drupal-migration-services/", label: "Drupal Migration (Drupal Company)", icon: "ph:arrow-square-out-duotone" },
     ],
     ctaTitle: "Plan the migration before the old stack starts costing more",
     ctaText:
