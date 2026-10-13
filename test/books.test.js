@@ -158,11 +158,43 @@ test("search endpoint: upstream failure is graceful 502, never a stack trace", a
   }
 });
 
-test("detail fallback: slug without work key is a real 404", async () => {
-  const res = await detailHandler({ params: { slug: "no-key-here" } });
-  assert.equal(res.status, 404);
-  const html = await res.text();
-  assert.ok(html.includes("Book not found"));
+test("detail fallback: clean title slug resolves to matching book", async () => {
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = async (url) => {
+    const target = String(url);
+    if (target.includes("/search.json?")) {
+      return new Response(JSON.stringify({ numFound: 1, docs: [{ ...rawDoc, title: "Beginning Laravel", key: "/works/OL22070359W" }] }), { status: 200 });
+    }
+    if (target.endsWith("/works/OL22070359W.json")) {
+      return new Response(JSON.stringify({ title: "Beginning Laravel", authors: [{ author: { key: "/authors/OL7494903A" } }], covers: [10434560] }), { status: 200 });
+    }
+    if (target.endsWith("/authors/OL7494903A.json")) {
+      return new Response(JSON.stringify({ name: "Sanjib Sinha" }), { status: 200 });
+    }
+    throw new Error(`Unexpected URL: ${target}`);
+  };
+  try {
+    const res = await detailHandler({ params: { slug: "beginning-laravel" } });
+    assert.equal(res.status, 200);
+    const html = await res.text();
+    assert.ok(html.includes("<h1>Beginning Laravel</h1>"));
+    assert.ok(html.includes("by Sanjib Sinha"));
+  } finally {
+    globalThis.fetch = realFetch;
+  }
+});
+
+test("detail fallback: unmatched clean title slug is a real 404", async () => {
+  const realFetch = globalThis.fetch;
+  globalThis.fetch = mockFetch({ numFound: 0, docs: [] });
+  try {
+    const res = await detailHandler({ params: { slug: "no-key-here" } });
+    assert.equal(res.status, 404);
+    const html = await res.text();
+    assert.ok(html.includes("Book not found"));
+  } finally {
+    globalThis.fetch = realFetch;
+  }
 });
 
 test("detail fallback: unknown book is 404, upstream failure is not", async () => {

@@ -2,12 +2,14 @@
  * Dynamic fallback for /books/{slug} on Cloudflare Pages.
  *
  * Static catalogue pages are prerendered by Astro and always win; this
- * function only runs for slugs with no static page - i.e. books found via
- * live search that are not in the curated catalogue. It resolves the work
- * key embedded in the slug and renders the same styled detail page.
+ * function runs for slugs with no static page. It resolves live-search slugs
+ * by embedded work key, or resolves a clean catalogue title slug by exact
+ * title match, then renders the same styled detail page.
  */
 import {
   extractWorkKeyFromSlug,
+  slugifyBookTitle,
+  searchOpenLibrary,
   fetchWork,
   coverUrl,
   escapeHtml,
@@ -90,26 +92,36 @@ function crumbs(bookTitle) {
 
 export async function onRequestGet({ params }) {
   const slug = typeof params?.slug === "string" ? params.slug : "";
-  const workKey = extractWorkKeyFromSlug(slug);
+  let workKey = extractWorkKeyFromSlug(slug);
   const canonical = `${SITE_URL}/books/${encodeURIComponent(slug)}/`;
   const defaultImage = `${SITE_URL}/logo-square.png`;
 
-  if (!workKey) {
-    return pageShell({
-      title: "Book not found | Laravel Company",
-      description: "This book could not be found in the Laravel Company library.",
-      canonical,
-      ogImage: defaultImage,
-      status: 404,
-      body: `${crumbs("Not found")}
+  try {
+    // Curated static pages use clean title slugs, while live-search detail
+    // URLs include the Open Library key. Resolve clean slugs on demand so
+    // catalogue links still work when a book was omitted from a partial build.
+    if (!workKey) {
+      const query = slug.replace(/-/g, " ");
+      const { books } = await searchOpenLibrary({ q: query, limit: 20 });
+      const match = books.find((candidate) => slugifyBookTitle(candidate.title) === slug);
+      workKey = match?.workKey || "";
+    }
+
+    if (!workKey) {
+      return pageShell({
+        title: "Book not found | Laravel Company",
+        description: "This book could not be found in the Laravel Company library.",
+        canonical,
+        ogImage: defaultImage,
+        status: 404,
+        body: `${crumbs("Not found")}
 <div class="card">
   <h1>Book not found</h1>
   <p class="desc">This one seems to have wandered off the shelf. Head back to <a href="/books/">the library</a> to keep browsing.</p>
 </div>`,
-    });
-  }
+      });
+    }
 
-  try {
     const book = await fetchWork(workKey);
     const description = bookMetaDescription(book);
     const cover = coverUrl(book.coverId, "L");
