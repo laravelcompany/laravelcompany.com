@@ -1,4 +1,5 @@
 ---
+import NetworkExtras from '../components/NetworkExtras.astro';
 import { ViewTransitions } from "astro:transitions";
 import { getImage } from "astro:assets";
 import Header from "../components/Header.astro";
@@ -328,6 +329,7 @@ const faviconImg = await getImage({
     <!-- MiroTalk Support Widget (iframe-based) -->
 
 
-  </body>
+    <NetworkExtras />
+</body>
 </html>
 
