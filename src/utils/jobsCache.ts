@@ -16,6 +16,18 @@ export interface Job {
     requirements?: string[];
     benefits?: string[];
     full_description?: string;
+    // Fields as the live jobs.izdrail.com API actually names them. The
+    // JobPosting JSON-LD builder reads these directly; the legacy names
+    // above stay for the rest of the template.
+    date_posted?: string;
+    job_type?: string;
+    is_remote?: boolean;
+    company_url?: string;
+    site?: string;
+    min_amount?: number;
+    max_amount?: number;
+    currency?: string;
+    interval?: string;
 }
 
 interface JobsApiResponse {

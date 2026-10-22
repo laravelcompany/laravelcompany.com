@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import HeroSection from "../../components/HeroSection.astro";
 import { getJobs, type Job } from "../../utils/jobsCache";
 import { generateJobSlug } from "../../utils/jobSlug";
+import { buildJobPostingJsonLd, stripHtml } from "../../utils/jobJsonLd";
 
 export const prerender = true;
 
@@ -48,18 +49,6 @@ const calendlyWidgetUrl = `https://calendly.com/laravelagency/30min?background_c
 const applyText = "Book an Interview to Apply";
 const contactUrl = "/contact";
 
-function stripHtml(html: string): string {
-    if (!html) return "";
-    return html
-        .replace(/<[^>]*>?/gm, "")
-        .replace(/&nbsp;/g, " ")
-        .replace(/&rsquo;/g, "'")
-        .replace(/&amp;/g, "&")
-        .replace(/&quot;/g, '"')
-        .replace(/&lt;/g, "<")
-        .replace(/&gt;/g, ">");
-}
-
 function formatDate(dateStr?: string | null): string {
     if (!dateStr) return "Recently posted";
     try {
@@ -74,26 +63,19 @@ function formatDate(dateStr?: string | null): string {
     }
 }
 
-const jsonLd = {
-    "@context": "https://schema.org/",
-    "@type": "JobPosting",
-    title: job.title,
-    description: stripHtml(job.description),
-    hiringOrganization: {
-        "@type": "Organization",
-        name: job.company,
-    },
-    jobLocation: {
-        "@type": "Place",
-        address: job.location,
-    },
-    datePosted: job.posted_date || new Date().toISOString(),
-    employmentType: job.type || "FULL_TIME",
-};
+// Built from the real job record only: missing required data (description,
+// datePosted, resolvable location) yields null and the page emits no
+// JobPosting markup at all - Google treats absent markup as valid but
+// incomplete markup as a critical structured-data error.
+const jsonLd = buildJobPostingJsonLd(job);
 ---
 
 <Layout title={`${job.title} at ${job.company}`}>
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    {
+        jsonLd && (
+            <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+        )
+    }
     <main>
         <HeroSection
             title={job.title}
