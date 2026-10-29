@@ -41,6 +41,9 @@ def main() -> None:
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     for stale in OUT_DIR.glob("*.json"):
+        # ctk-* entries come from prompts/third-party (awesome-claude-code-toolkit), not prompts.db
+        if stale.name.startswith("ctk-"):
+            continue
         stale.unlink()
 
     for row_id, act, prompt, for_devs, ptype, contributor, improved, created_at in rows:

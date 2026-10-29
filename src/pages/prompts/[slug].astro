@@ -70,19 +70,23 @@ const description = data.improvedPrompt
         <div class="flex items-center gap-4 mb-8 pb-8 border-b border-white/10">
           <div>
             {data.contributor && <p class="font-semibold text-white">Contributed by {data.contributor}</p>}
-            <p class="text-sm text-white/50">Improved by Laravel Company{data.date ? ` · ${data.date}` : ""}</p>
+            {data.sourceUrl ? (
+              <p class="text-sm text-white/50">Source: <a href={data.sourceUrl} rel="noopener" class="underline hover:text-white transition-colors">original file</a>{data.date ? ` · added ${data.date}` : ""}</p>
+            ) : (
+              <p class="text-sm text-white/50">Improved by Laravel Company{data.date ? ` · ${data.date}` : ""}</p>
+            )}
           </div>
         </div>
       </div>
 
-      <div class="prose prose-slate max-w-none animate-on-scroll">
+      <div class="prose prose-slate max-w-none">
         <Fragment set:html={renderedContent} />
       </div>
 
       <details class="mt-12 glass-card p-6 animate-on-scroll group">
         <summary class="cursor-pointer text-sm font-semibold text-white/70 hover:text-white transition-colors list-none flex items-center gap-2">
           <svg class="w-4 h-4 transition-transform group-open:rotate-90" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Original prompt (before our improvements)
+          {data.sourceUrl ? "Original source file (unmodified)" : "Original prompt (before our improvements)"}
         </summary>
         <p class="mt-4 text-sm text-white/60 whitespace-pre-wrap leading-relaxed">{data.prompt}</p>
       </details>

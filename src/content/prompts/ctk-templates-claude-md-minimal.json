@@ -1,0 +1,10 @@
+{
+  "act": "Project Name (template)",
+  "prompt": "# Project Name\n\nBrief description of what this project does.\n\n## Stack\n- Language: TypeScript\n- Framework: Next.js\n- Database: PostgreSQL\n\n## Commands\n- `npm install` - Install dependencies\n- `npm run dev` - Start development server\n- `npm test` - Run tests\n- `npm run build` - Production build\n\n## Conventions\n- Use conventional commits: `type(scope): message`\n- Create feature branches, submit PRs to main\n- Run tests before committing\n- Keep files under 300 lines\n\n## Key Files\n- `src/app/` - Application routes and pages\n- `src/lib/` - Shared utilities and helpers\n- `src/components/` - Reusable UI components\n",
+  "improvedPrompt": "# Project Name\n\nBrief description of what this project does.\n\n## Stack\n- Language: TypeScript\n- Framework: Next.js\n- Database: PostgreSQL\n\n## Commands\n- `npm install` - Install dependencies\n- `npm run dev` - Start development server\n- `npm test` - Run tests\n- `npm run build` - Production build\n\n## Conventions\n- Use conventional commits: `type(scope): message`\n- Create feature branches, submit PRs to main\n- Run tests before committing\n- Keep files under 300 lines\n\n## Key Files\n- `src/app/` - Application routes and pages\n- `src/lib/` - Shared utilities and helpers\n- `src/components/` - Reusable UI components\n",
+  "forDevs": true,
+  "type": "Claude Code template",
+  "contributor": "Rohit Ghumare (awesome-claude-code-toolkit)",
+  "date": "2026-10-29",
+  "sourceUrl": "https://github.com/rohitg00/awesome-claude-code-toolkit/blob/ebdf1d596d2cde5c5cceb32177e8d1cf4829e7d9/templates/claude-md/minimal.md"
+}
