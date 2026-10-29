@@ -233,12 +233,15 @@ function isActive(href: string): boolean {
     /* Mobile menu styles */
     .mobile-menu {
         display: none;
-        background: rgba(15, 23, 42, 0.95);
-        backdrop-blur: 20px;
+        background: #0f172a;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         max-height: calc(100vh - 5rem);
+        max-height: calc(100dvh - 5rem);
         overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     .mobile-menu.active {
@@ -249,9 +252,11 @@ function isActive(href: string): boolean {
     .mobile-menu-item {
         display: block;
         color: white;
-        font-size: 1.125rem;
+        font-size: 1.0625rem;
         font-weight: 600;
-        padding: 1rem;
+        text-align: left;
+        line-height: 1.4;
+        padding: 0.875rem 1rem;
         border-radius: 1rem;
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -262,7 +267,25 @@ function isActive(href: string): boolean {
     .mobile-menu-item:hover,
     .mobile-menu-item.active {
         background: rgba(255, 255, 255, 0.1);
-        transform: scale(1.02);
+    }
+
+    /* Group toggles: label left, chevron right, same height as plain links.
+       (.mobile-menu-item sets display:block, which dropped the chevron under the label.) */
+    .mobile-menu-item.mobile-nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .mobile-menu-item.mobile-nav-toggle svg {
+        flex-shrink: 0;
+    }
+
+    .mobile-menu .container-custom {
+        padding-top: 1rem;
+        padding-bottom: 1.25rem;
     }
 
     /* Hide desktop nav on scroll */
@@ -279,14 +302,14 @@ function isActive(href: string): boolean {
     .mobile-menu-cta {
         display: block;
         color: white;
-        font-size: 1.125rem;
+        font-size: 1.0625rem;
         font-weight: 700;
-        padding: 1rem 1.5rem;
+        padding: 0.875rem 1.5rem;
         border-radius: 1rem;
         background: var(--gradient-purple-pink);
         text-decoration: none;
         text-align: center;
-        margin-top: 1rem;
+        margin-top: 0.75rem;
         box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
         transition: all 0.3s ease;
     }
@@ -305,7 +328,7 @@ function isActive(href: string): boolean {
         color: white;
         font-size: 1rem;
         font-weight: 500;
-        padding: 0.75rem 1rem;
+        padding: 0.7rem 1rem;
         border-radius: 0.75rem;
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -337,6 +360,14 @@ function isActive(href: string): boolean {
     }
 </style>
 
+<style is:global>
+    /* Keep the LeadsCaptain sponsor card out of the open mobile menu */
+    html.lc-menu-open #lc-net-card,
+    html.lc-menu-open #lc-popup-card {
+        display: none !important;
+    }
+</style>
+
 <script>
     function closeMobileMenu() {
         const menu = document.getElementById("mobile-menu");
@@ -346,6 +377,7 @@ function isActive(href: string): boolean {
         btn?.classList.remove("active");
         btn?.setAttribute("aria-expanded", "false");
         document.body.style.overflow = "";
+        document.documentElement.classList.remove("lc-menu-open");
     }
 
     function toggleMobileMenu() {
@@ -357,6 +389,7 @@ function isActive(href: string): boolean {
         btn.classList.toggle("active", isOpen);
         btn.setAttribute("aria-expanded", String(isOpen));
         document.body.style.overflow = isOpen ? "hidden" : "";
+        document.documentElement.classList.toggle("lc-menu-open", isOpen);
     }
 
     // Runs on the initial load AND after every view transition so the
