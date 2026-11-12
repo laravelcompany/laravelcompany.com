@@ -20,7 +20,7 @@ async function callAI(chunk) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      model: 'mistral:7b',
+      model: 'hf.co/unsloth/Qwen3.5-9B-GGUF:UD-Q4_K_XL',
       prompt: `Rewrite the following Laravel documentation in a humorous, witty style while keeping the technical details accurate and helpful. Make it fun to read but still educational. Respond only with the rewritten content. Original:
 
 ${chunk}`,

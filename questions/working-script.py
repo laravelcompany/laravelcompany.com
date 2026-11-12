@@ -78,7 +78,7 @@ log = logging.getLogger("bloggen")
 # ============================================================================
 DEFAULT_CONFIG = {
     "api_endpoint": "https://ai.izdrail.com/v1/chat/completions",
-    "model": "neural-chat:7b",
+    "model": "hf.co/unsloth/Qwen3.5-9B-GGUF:UD-Q4_K_XL",
     "api_key": "",
     "request_timeout": 500,
     "max_retries": 3,

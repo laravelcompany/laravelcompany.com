@@ -94,7 +94,7 @@ log = logging.getLogger("bloggen")
 # ============================================================================
 DEFAULT_CONFIG = {
     "api_endpoint": "http://localhost:11434/v1/chat/completions",
-    "model": "gemma4:12b",
+    "model": "hf.co/unsloth/Qwen3.5-9B-GGUF:UD-Q4_K_XL",
     "api_key": "",
     "request_timeout": 1200,
     "max_retries": 3,
