@@ -1,13 +1,14 @@
 ---
 import { Icon } from 'astro-icon/components';
+const { scrollScene = false } = Astro.props;
 ---
 
-<section class="py-32 relative overflow-hidden">
+<section data-scroll-scene={scrollScene ? "cta" : undefined} class="py-32 relative overflow-hidden">
   <div class="bg-blob blob-1 !opacity-20"></div>
   <div class="bg-blob blob-2 !opacity-20"></div>
 
   <div class="container-custom relative">
-    <div class="max-w-4xl mx-auto text-center animate-on-scroll">
+    <div data-scene-item class="max-w-4xl mx-auto text-center animate-on-scroll">
       <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-payflo-purple/20 border border-payflo-purple/30 text-payflo-purple text-sm font-bold uppercase tracking-widest mb-6">
         <Icon name="ph:handshake-duotone" class="h-5 w-5" />
         Work with us

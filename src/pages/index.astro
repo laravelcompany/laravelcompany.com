@@ -14,10 +14,20 @@ import CTASection from "../components/CTASection.astro";
   description="LaravelCompany is a Laravel development company and Laravel agency providing professional Laravel development services for web applications built to grow."
 >
   <Hero />
-  <SpecialistsSection />
+  <SpecialistsSection scrollScene />
   <OpenSourceSection />
   <ProcessSection />
   <AIEraSection />
-  <TechStackSection />
-  <CTASection />
+  <TechStackSection scrollScene />
+  <CTASection scrollScene />
 </Layout>
+
+<script>import '../scripts/home-scroll.js';</script>
+<style is:global>
+[data-scroll-scene]{overflow:clip;scroll-margin-top:100px}
+[data-scroll-scene] .animate-on-scroll{opacity:1!important;transform:none!important}
+@media(min-width:1024px) and (min-height:700px) and (prefers-reduced-motion:no-preference){
+  [data-scroll-scene].scene-enhanced [data-scene-item]{transform:translate3d(var(--scene-x,0px),var(--scene-y,0px),0) rotate(var(--scene-angle,0deg)) scale(var(--scene-scale,1))!important;opacity:var(--scene-opacity,1)!important;transition:none;transform-origin:center}
+  [data-scroll-scene].scene-enhanced [data-scene-chip]{transform:translate3d(0,var(--scene-y,0px),0);opacity:var(--scene-opacity,1);transition:none}
+}
+</style>
