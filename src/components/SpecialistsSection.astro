@@ -1,8 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
+const { scrollScene = false } = Astro.props;
 ---
 
-<section class="py-24 relative overflow-hidden">
+<section data-scroll-scene={scrollScene ? "specialists" : undefined} class="py-24 relative overflow-hidden">
   <div class="absolute top-0 left-1/4 w-96 h-96 bg-payflo-purple/10 blur-[120px] rounded-full -z-10"></div>
   <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-payflo-pink/10 blur-[120px] rounded-full -z-10"></div>
 
@@ -21,7 +22,7 @@ import { Icon } from 'astro-icon/components';
     </div>
 
     <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="glass-card animate-on-scroll delay-2 text-center group">
+      <div data-scene-item class="glass-card animate-on-scroll delay-2 text-center group">
         <div class="h-16 w-16 mx-auto rounded-2xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center text-white mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-purple-500/20">
           <Icon name="ph:magnifying-glass-duotone" class="h-8 w-8" />
         </div>
@@ -31,7 +32,7 @@ import { Icon } from 'astro-icon/components';
         </p>
       </div>
 
-      <div class="glass-card animate-on-scroll delay-3 text-center group">
+      <div data-scene-item class="glass-card animate-on-scroll delay-3 text-center group">
         <div class="h-16 w-16 mx-auto rounded-2xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center text-white mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-purple-500/20">
           <Icon name="ph:cube-duotone" class="h-8 w-8" />
         </div>
@@ -41,7 +42,7 @@ import { Icon } from 'astro-icon/components';
         </p>
       </div>
 
-      <div class="glass-card animate-on-scroll delay-4 text-center group">
+      <div data-scene-item class="glass-card animate-on-scroll delay-4 text-center group">
         <div class="h-16 w-16 mx-auto rounded-2xl bg-gradient-to-br from-payflo-purple to-payflo-pink flex items-center justify-center text-white mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-purple-500/20">
           <Icon name="ph:code-duotone" class="h-8 w-8" />
         </div>
