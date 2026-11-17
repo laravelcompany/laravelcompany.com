@@ -1,12 +1,14 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import icon from "astro-icon";
+import remarkDocLinks from './src/utils/remarkDocLinks.mjs';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://laravelcompany.com',
   output: 'static',
   prefetch: true,
+  markdown: { remarkPlugins: [remarkDocLinks] },
   build: {
     concurrency: 4,
   },
