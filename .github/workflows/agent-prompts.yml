@@ -1,0 +1,29 @@
+name: Agent prompt tooling tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate_agent_prompt.py'
+      - 'tests/test_generate_agent_prompt.py'
+      - 'tests/agent-prompt.test.js'
+      - 'docs/agent-prompts.md'
+      - '.github/workflows/agent-prompts.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: self-hosted
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Python prompt generator tests
+        run: python3 -m unittest discover -s tests -p 'test_generate_agent_prompt.py' -v
+      - name: Full Node regression suite
+        run: npm test

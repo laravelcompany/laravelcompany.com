@@ -73,3 +73,14 @@ Restricted ISO country codes are configured with the Cloudflare Pages environmen
 The endpoint fails open: missing country metadata, invalid data, endpoint errors, non-success responses, and the browser 2.5-second timeout all preserve the normal Calendly experience. The response is privately cached for five minutes. Restricted visitors never receive the Calendly iframe or script and the Calendly CTA remains hidden; existing clients can still call or email directly.
 
 Cloudflare request metadata is the existing hosting platform geolocation provider, so this implementation does not call ip-api.com and has no extra provider licence or API key. If the hosting platform changes, replace functions/_lib/cloudflareCountryProvider.js without changing the contact page or eligibility rules. The free ip-api.com endpoint must not be introduced for production use because it has no HTTPS support and is not licensed for commercial use.
+
+## Agent prompt generator
+
+Compose task-specific agent briefs offline from the existing prompt database:
+
+```sh
+python3 scripts/generate_agent_prompt.py --search "code review" --developers --list
+python3 scripts/generate_agent_prompt.py --id 217 --task "Review queue retry handling; return findings and tests, do not deploy." --output /tmp/review-agent.md
+```
+
+See [the CLI guide](docs/agent-prompts.md) for context files, Markdown/JSON output, source provenance and tests. No API keys, model calls or deployment required.
