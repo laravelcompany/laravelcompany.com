@@ -78,8 +78,15 @@ body {
 }
 
 /* ===== Button Styles & Effects ===== */
-.btn {
-  @apply inline-block px-8 py-4 rounded-xl font-bold transition-all duration-300 text-center;
+@layer components {
+  /* Keep icon and label on one centered row; utilities such as hidden still win. */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold transition-all duration-300 text-center;
+  }
+
+  .btn > svg {
+    flex-shrink: 0;
+  }
 }
 
 .btn-primary {
