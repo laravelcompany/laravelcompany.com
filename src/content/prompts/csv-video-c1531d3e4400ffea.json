@@ -1,0 +1,9 @@
+{
+  "act": "Video",
+  "prompt": "Cinematic close-up of a mysterious bartender pouring a glowing green liquid into a glass, heavy smoke rising, dark cocktail bar background, 4k, hyper-realistic, slow motion.",
+  "improvedPrompt": "Cinematic close-up of a mysterious bartender pouring a glowing green liquid into a glass, heavy smoke rising, dark cocktail bar background, 4k, hyper-realistic, slow motion.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "itnesttomal@gmail.com",
+  "sourceFile": "prompts.csv"
+}

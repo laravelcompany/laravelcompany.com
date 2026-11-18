@@ -1,0 +1,9 @@
+{
+  "act": "Student Chapter Summary: Short, Visual Revision Notes",
+  "prompt": "Summarize this chapter for a student. Rules:\n1. Cover every topic and key point; do not skip anything.\n2. Keep it short: brief bullet points, no long paragraphs.\n3. Make it visual: use tables for comparisons, simple text diagrams or flowcharts for processes, and bold for key terms.\n4. Use simple language and give one short example for each hard concept.\n5. End with a 5-line quick-revision recap.\n\n",
+  "improvedPrompt": "Summarize this chapter for a student. Rules:\n1. Cover every topic and key point; do not skip anything.\n2. Keep it short: brief bullet points, no long paragraphs.\n3. Make it visual: use tables for comparisons, simple text diagrams or flowcharts for processes, and bold for key terms.\n4. Use simple language and give one short example for each hard concept.\n5. End with a 5-line quick-revision recap.\n\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "fitsumdegif523@gmail.com",
+  "sourceFile": "prompts.csv"
+}

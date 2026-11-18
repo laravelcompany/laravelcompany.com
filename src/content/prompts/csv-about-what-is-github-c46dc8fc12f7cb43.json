@@ -1,0 +1,9 @@
+{
+  "act": "about what is github",
+  "prompt": "i want the complete guide for github like how to use and what is the need of this tools\n",
+  "improvedPrompt": "i want the complete guide for github like how to use and what is the need of this tools\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "toolsyalla@gmail.com",
+  "sourceFile": "prompts.csv"
+}

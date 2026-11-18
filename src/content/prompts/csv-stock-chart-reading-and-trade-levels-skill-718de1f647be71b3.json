@@ -1,0 +1,9 @@
+{
+  "act": "Stock Chart Reading and Trade Levels Skill",
+  "prompt": "---\nname: stock-chart-reading-and-trade-levels-skill\ndescription: analysis of stock market charts given, and giving perfect reading n target n buy n sell n stop-loss \n---\n\n# Ai agent pro\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...",
+  "improvedPrompt": "---\nname: stock-chart-reading-and-trade-levels-skill\ndescription: analysis of stock market charts given, and giving perfect reading n target n buy n sell n stop-loss \n---\n\n# Ai agent pro\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "aayush3957@gmail.com",
+  "sourceFile": "prompts.csv"
+}

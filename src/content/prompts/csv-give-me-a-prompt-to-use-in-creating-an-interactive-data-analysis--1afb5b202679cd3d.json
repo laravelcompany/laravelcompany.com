@@ -1,0 +1,9 @@
+{
+  "act": "Give me a prompt to use in creating an interactive data analysis dashboard",
+  "prompt": "Give me a prompt to use in creating an interactive data analysis dashboard",
+  "improvedPrompt": "Give me a prompt to use in creating an interactive data analysis dashboard",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "sammyduwa2@gmail.com",
+  "sourceFile": "prompts.csv"
+}

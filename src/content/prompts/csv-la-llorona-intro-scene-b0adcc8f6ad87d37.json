@@ -1,0 +1,9 @@
+{
+  "act": "La Llorona Intro Scene",
+  "prompt": "Créame esta escena. Escena 1.1: ⁠A dark, lonely rural dirt road at night, flanked by twisted, gnarled trees and a murky river under a pale moon. Dense fog floating close to the ground, cinematic lighting, spooky atmosphere, dark horror movie style, highly detailed, 8k --ar\n",
+  "improvedPrompt": "Créame esta escena. Escena 1.1: ⁠A dark, lonely rural dirt road at night, flanked by twisted, gnarled trees and a murky river under a pale moon. Dense fog floating close to the ground, cinematic lighting, spooky atmosphere, dark horror movie style, highly detailed, 8k --ar\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "saulrinconm@gmail.com",
+  "sourceFile": "prompts.csv"
+}

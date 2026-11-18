@@ -1,0 +1,9 @@
+{
+  "act": "Building Code with Ollama Instead of Claude Code",
+  "prompt": "I’m tired of using Claude Code to build my code because of tokens limits can Ollama build code scripts agentic workflow?",
+  "improvedPrompt": "I’m tired of using Claude Code to build my code because of tokens limits can Ollama build code scripts agentic workflow?",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "BuiltByPhil",
+  "sourceFile": "prompts.csv"
+}

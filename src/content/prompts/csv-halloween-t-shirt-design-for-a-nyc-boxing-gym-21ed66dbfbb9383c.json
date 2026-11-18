@@ -1,0 +1,9 @@
+{
+  "act": "Halloween T-Shirt Design for a NYC Boxing Gym",
+  "prompt": "Create a Halloween-themed illustration featuring three sports: boxing, Muay Thai and Brazilian Jiu-Jitsu, using the three attached illustrations. Keep only the skeletal figures and remove all backgrounds. Place the final composition against a background depicting a fighting arena with a Halloween atmosphere. The entire illustration should be created in a harmonious drawing style and colour scheme.",
+  "improvedPrompt": "Create a Halloween-themed illustration featuring three sports: boxing, Muay Thai and Brazilian Jiu-Jitsu, using the three attached illustrations. Keep only the skeletal figures and remove all backgrounds. Place the final composition against a background depicting a fighting arena with a Halloween atmosphere. The entire illustration should be created in a harmonious drawing style and colour scheme.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "abouhanae.72@gmail.com",
+  "sourceFile": "prompts.csv"
+}

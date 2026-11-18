@@ -1,0 +1,9 @@
+{
+  "act": "SQL Query Explainer for Non-Engineers",
+  "prompt": "Explain this SQL for a non-engineer stakeholder.\n\nSQL:\n${sql}\n\nAlso provide:\n- What business question it answers\n- Tables/joins in plain words\n- Filters and date ranges\n- Risks (cartesian joins, missing filters, PII exposure)\n- A one-paragraph executive summary\n\nAssume the reader knows spreadsheets but not SQL. Do not rewrite the query unless asked.",
+  "improvedPrompt": "Explain this SQL for a non-engineer stakeholder.\n\nSQL:\n${sql}\n\nAlso provide:\n- What business question it answers\n- Tables/joins in plain words\n- Filters and date ranges\n- Risks (cartesian joins, missing filters, PII exposure)\n- A one-paragraph executive summary\n\nAssume the reader knows spreadsheets but not SQL. Do not rewrite the query unless asked.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "f",
+  "sourceFile": "prompts.csv"
+}

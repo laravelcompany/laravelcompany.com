@@ -1,0 +1,9 @@
+{
+  "act": "Flappy Bird game",
+  "prompt": "A flappy bird game looks technologically and also look like in the future. When you reach the goal there’ll be a celebration",
+  "improvedPrompt": "A flappy bird game looks technologically and also look like in the future. When you reach the goal there’ll be a celebration",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "kienvan103027@gmail.com",
+  "sourceFile": "prompts.csv"
+}

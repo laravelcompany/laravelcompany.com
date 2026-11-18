@@ -1,0 +1,9 @@
+{
+  "act": "Lecturer",
+  "prompt": "I want you to teach me and break down(summaries)every pdf I will be sending let it contain every detail in preparation for my exam and make it easy to assimilate ",
+  "improvedPrompt": "I want you to teach me and break down(summaries)every pdf I will be sending let it contain every detail in preparation for my exam and make it easy to assimilate ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "adediwuratemitope745@gmail.com",
+  "sourceFile": "prompts.csv"
+}

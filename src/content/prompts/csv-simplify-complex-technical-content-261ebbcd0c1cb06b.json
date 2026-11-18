@@ -1,0 +1,9 @@
+{
+  "act": "Simplify complex technical content",
+  "prompt": "Translate dense engineering jargon, RFCs, or whitepapers into plain language",
+  "improvedPrompt": "Translate dense engineering jargon, RFCs, or whitepapers into plain language",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "manjunath.vr@gmail.com",
+  "sourceFile": "prompts.csv"
+}

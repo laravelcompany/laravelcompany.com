@@ -1,0 +1,9 @@
+{
+  "act": "Playful Fisheye Candid Portrait",
+  "prompt": "GPT Image 2.5 on ChatGPT\n\nPrompt: \n\nCreate a realistic fisheye photo of the woman in my uploaded selfie, preserving her exact facial features. She sits on a doorstep in front of weathered green wooden doors, wearing a beige trench coat, ivory turtleneck, and light blue jeans. A curious tabby-and-white cat fills the right foreground with an oversized nose and expressive eyes. Soft daylight, natural textures, playful candid mood, ultra-realistic photography, landscape 16:9, no text.",
+  "improvedPrompt": "GPT Image 2.5 on ChatGPT\n\nPrompt: \n\nCreate a realistic fisheye photo of the woman in my uploaded selfie, preserving her exact facial features. She sits on a doorstep in front of weathered green wooden doors, wearing a beige trench coat, ivory turtleneck, and light blue jeans. A curious tabby-and-white cat fills the right foreground with an oversized nose and expressive eyes. Soft daylight, natural textures, playful candid mood, ultra-realistic photography, landscape 16:9, no text.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "alejandro.garcia.garay@gmail.com",
+  "sourceFile": "prompts.csv"
+}

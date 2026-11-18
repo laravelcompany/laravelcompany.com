@@ -1,0 +1,9 @@
+{
+  "act": "A story of a boy who wants to become cricket player",
+  "prompt": "A boy's story about becoming a cricket player just like virat kohli ",
+  "improvedPrompt": "A boy's story about becoming a cricket player just like virat kohli ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "teotiaakash511@gmail.com",
+  "sourceFile": "prompts.csv"
+}

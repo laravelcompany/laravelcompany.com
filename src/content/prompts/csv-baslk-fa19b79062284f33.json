@@ -1,0 +1,9 @@
+{
+  "act": "Başlık",
+  "prompt": "ti ve kahiredeki otel kaldı aşkım benim aşkım benim haklısın ama bu paylaş Facebook Tweet ve fotoğrafları${aşkım}",
+  "improvedPrompt": "ti ve kahiredeki otel kaldı aşkım benim aşkım benim haklısın ama bu paylaş Facebook Tweet ve fotoğrafları${aşkım}",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "aliq0330@gmail.com",
+  "sourceFile": "prompts.csv"
+}

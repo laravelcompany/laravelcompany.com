@@ -1,0 +1,9 @@
+{
+  "act": "Give me text book to learn Spanish with Myanmar language",
+  "prompt": "Give me note book to learn Spanish with Myanmar translation ",
+  "improvedPrompt": "Give me note book to learn Spanish with Myanmar translation ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "thinn666@gmail.com",
+  "sourceFile": "prompts.csv"
+}

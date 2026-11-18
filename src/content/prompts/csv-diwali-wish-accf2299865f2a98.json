@@ -1,0 +1,9 @@
+{
+  "act": "Diwali wish",
+  "prompt": "Please create a Diwali poster for me that includes a greeting message—one with a unique, thought-provoking concept that compels people to reflect. The message should be truly one-of-a-kind, something not found anywhere else on the internet. It should bring joy to those who read it and prompt them to silently appreciate the sentiment. Also, please include my name at the bottom of the poster.",
+  "improvedPrompt": "Please create a Diwali poster for me that includes a greeting message—one with a unique, thought-provoking concept that compels people to reflect. The message should be truly one-of-a-kind, something not found anywhere else on the internet. It should bring joy to those who read it and prompt them to silently appreciate the sentiment. Also, please include my name at the bottom of the poster.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "punutruchisingh@gmail.com",
+  "sourceFile": "prompts.csv"
+}

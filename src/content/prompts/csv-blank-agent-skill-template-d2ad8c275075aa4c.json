@@ -1,0 +1,9 @@
+{
+  "act": "Blank Agent Skill Template",
+  "prompt": "---\nname: my-skill-name\ndescription: A clear description of what this skill does and when to use it\n---\n\n# My Skill\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n",
+  "improvedPrompt": "---\nname: my-skill-name\ndescription: A clear description of what this skill does and when to use it\n---\n\n# My Skill\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "melemaliki1963@gmail.com",
+  "sourceFile": "prompts.csv"
+}

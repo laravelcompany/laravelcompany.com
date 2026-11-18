@@ -1,0 +1,9 @@
+{
+  "act": "Change the attire",
+  "prompt": "I want to change the attire of this image to something with good clothes and should change the background to some famous places",
+  "improvedPrompt": "I want to change the attire of this image to something with good clothes and should change the background to some famous places",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "koushikaakula0@gmail.com",
+  "sourceFile": "prompts.csv"
+}

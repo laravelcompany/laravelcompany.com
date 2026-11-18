@@ -1,0 +1,9 @@
+{
+  "act": "Camera Shot",
+  "prompt": "A professional, cinematic portrait featuring a {subject} in a stunning {dress} and {Hairstyle} expertly enhanced by detailed makeup and posed in a specific {Poses}. The scene is set against a carefully chosen {background}, illuminated by artistic {light} and captured with precise{framing} to create a high-fashion aesthetic",
+  "improvedPrompt": "A professional, cinematic portrait featuring a {subject} in a stunning {dress} and {Hairstyle} expertly enhanced by detailed makeup and posed in a specific {Poses}. The scene is set against a carefully chosen {background}, illuminated by artistic {light} and captured with precise{framing} to create a high-fashion aesthetic",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "pnkca.in@gmail.com",
+  "sourceFile": "prompts.csv"
+}

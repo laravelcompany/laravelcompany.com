@@ -1,0 +1,9 @@
+{
+  "act": "Earn Extra Income With a Spare Home PC",
+  "prompt": "I Have intel 7 pc with 32 gb ram and  1TB HDD at home. How i can i use this for earn additional income. ",
+  "improvedPrompt": "I Have intel 7 pc with 32 gb ram and  1TB HDD at home. How i can i use this for earn additional income. ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "amit.rodrigues@gmail.com",
+  "sourceFile": "prompts.csv"
+}

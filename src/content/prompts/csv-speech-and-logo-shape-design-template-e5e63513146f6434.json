@@ -1,0 +1,9 @@
+{
+  "act": "Speech and Logo Shape Design Template",
+  "prompt": "Create a template to create two great shape designs by inserting speech or a special logo",
+  "improvedPrompt": "Create a template to create two great shape designs by inserting speech or a special logo",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "mzbodi128@gmail.com",
+  "sourceFile": "prompts.csv"
+}

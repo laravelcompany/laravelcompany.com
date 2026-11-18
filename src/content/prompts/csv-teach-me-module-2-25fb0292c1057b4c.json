@@ -1,0 +1,9 @@
+{
+  "act": "Teach me module 2",
+  "prompt": "Teach me module 2 properly and sequentially in proper flow, compare both document and include every numerical and theory sequentially from both documents",
+  "improvedPrompt": "Teach me module 2 properly and sequentially in proper flow, compare both document and include every numerical and theory sequentially from both documents",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "fisherandy083@gmail.com",
+  "sourceFile": "prompts.csv"
+}

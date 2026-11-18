@@ -1,0 +1,9 @@
+{
+  "act": "Market plan",
+  "prompt": "Design and creation of a marketing plan on Social Media platforms to market Hayek Travel services and bicycles in Britain. The target segment is Gulf students and Arab tourists.",
+  "improvedPrompt": "Design and creation of a marketing plan on Social Media platforms to market Hayek Travel services and bicycles in Britain. The target segment is Gulf students and Arab tourists.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "shaghnab@gmail.com",
+  "sourceFile": "prompts.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Surprise Point-and-Click Game Generator",
+  "prompt": "Create a point and click game with the theme and mechanic of the AI choice, make me surprise",
+  "improvedPrompt": "Create a point and click game with the theme and mechanic of the AI choice, make me surprise",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "dinhducthanh130320006@gmail.com",
+  "sourceFile": "prompts.csv"
+}

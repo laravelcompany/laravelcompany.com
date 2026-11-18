@@ -1,0 +1,9 @@
+{
+  "act": "learning linux for beginer",
+  "prompt": "---\nname: learning-linux-for-beginer\ndescription: A clear description of what this skill does and when to use it\n---\n\n# learning linux for beginer\n\nDescribe what this skill does and how the agent should use it. using the repo https://github.com/TunB3ru/LINUX-WORLD.git\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...",
+  "improvedPrompt": "---\nname: learning-linux-for-beginer\ndescription: A clear description of what this skill does and when to use it\n---\n\n# learning linux for beginer\n\nDescribe what this skill does and how the agent should use it. using the repo https://github.com/TunB3ru/LINUX-WORLD.git\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "TunB3ru",
+  "sourceFile": "prompts.csv"
+}

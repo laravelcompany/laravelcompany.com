@@ -8,3 +8,9 @@ src/data/books-cache.json
 products/*
 # Blog search index - generated at build time
 public/search-index.json
+
+public/prompt-search/
+public/prompts-search.json
+
+__pycache__/
+*.pyc

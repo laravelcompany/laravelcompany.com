@@ -1,0 +1,9 @@
+{
+  "act": "School managment erp",
+  "prompt": "I want to build full school erp in Shell      | Electron (latest stable)            |\n| Frontend   | React + Vite + TypeScript           |\n| UI         | Ant Design v5                       |\n| State      | Zustand                             |\n| Database   | better-sqlite3, WAL mode            |\n| PDF/Print  | pdfmake + webContents.print         |\n| Excel      | exceljs                             |\n| Packaging  | electron-builder (NSIS, Windows x64)| FOR INDIA IN MULLTY LANGUAGE LIKE  ENGLISH & GUJARATI SO GIVE ME MASTER GOOD PLAN FOR AI AGENT  IN SCHOOL.MD ,AGENT SKILL.MS,ETC... FROM FRUNT TO BECKEND ETC... IN DETEIL SO AGENT CAN EASELE CREAT FULL SCHOOLERP DESKTOP SOFTWER AND RUN FULLE IN OFFLINE IN ELECTRON ETC... ",
+  "improvedPrompt": "I want to build full school erp in Shell      | Electron (latest stable)            |\n| Frontend   | React + Vite + TypeScript           |\n| UI         | Ant Design v5                       |\n| State      | Zustand                             |\n| Database   | better-sqlite3, WAL mode            |\n| PDF/Print  | pdfmake + webContents.print         |\n| Excel      | exceljs                             |\n| Packaging  | electron-builder (NSIS, Windows x64)| FOR INDIA IN MULLTY LANGUAGE LIKE  ENGLISH & GUJARATI SO GIVE ME MASTER GOOD PLAN FOR AI AGENT  IN SCHOOL.MD ,AGENT SKILL.MS,ETC... FROM FRUNT TO BECKEND ETC... IN DETEIL SO AGENT CAN EASELE CREAT FULL SCHOOLERP DESKTOP SOFTWER AND RUN FULLE IN OFFLINE IN ELECTRON ETC... ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "harichaudhary79900@gmail.com",
+  "sourceFile": "prompts.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "VLSI asic design verification engineer",
+  "prompt": "This is the job of the model\n\nCreate a test pinch and Raman hotel minis verification test in Raymond for SBI from the scratch along with the design as well dispatched be in the uvm environment and also it is pinch is should be expendable which should cover all the corner and cases especially spi interrupts conditions bus recovery conditions",
+  "improvedPrompt": "This is the job of the model\n\nCreate a test pinch and Raman hotel minis verification test in Raymond for SBI from the scratch along with the design as well dispatched be in the uvm environment and also it is pinch is should be expendable which should cover all the corner and cases especially spi interrupts conditions bus recovery conditions",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "dhasarathankkp@gmail.com",
+  "sourceFile": "prompts.csv"
+}

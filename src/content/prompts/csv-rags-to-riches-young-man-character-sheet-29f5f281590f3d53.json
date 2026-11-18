@@ -1,0 +1,9 @@
+{
+  "act": "Rags to Riches Young Man Character Sheet",
+  "prompt": "    Young Black man, 23 years old\n* Slim athletic build, medium height\n* Dark brown skin\n* Short, tightly curled black hair\n* Brown eyes\n* Small scar above his right eyebrow\n* Calm, determined facial expression\n* Poor version: faded dark-brown hoodie, worn blue jeans, old black sneakers, brown canvas shoulder bag",
+  "improvedPrompt": "    Young Black man, 23 years old\n* Slim athletic build, medium height\n* Dark brown skin\n* Short, tightly curled black hair\n* Brown eyes\n* Small scar above his right eyebrow\n* Calm, determined facial expression\n* Poor version: faded dark-brown hoodie, worn blue jeans, old black sneakers, brown canvas shoulder bag",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "couragebillon@gmail.com",
+  "sourceFile": "prompts.csv"
+}

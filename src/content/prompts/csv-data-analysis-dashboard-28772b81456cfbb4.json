@@ -1,0 +1,9 @@
+{
+  "act": "Data Analysis Dashboard",
+  "prompt": "Create for me an ultra-realistic dashboard titled \"ANALYSIS OF BRD SESSIONS/DOCUMENT DELIVERY AUG - OCT\"\n\nLet it show, in graphs, histograms, and pie charts, all the documents I have worked on so far concerning BRDs and documents under growth stack",
+  "improvedPrompt": "Create for me an ultra-realistic dashboard titled \"ANALYSIS OF BRD SESSIONS/DOCUMENT DELIVERY AUG - OCT\"\n\nLet it show, in graphs, histograms, and pie charts, all the documents I have worked on so far concerning BRDs and documents under growth stack",
+  "forDevs": true,
+  "type": "TEXT",
+  "contributor": "sammyduwa2@gmail.com",
+  "sourceFile": "prompts.csv"
+}

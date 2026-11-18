@@ -1,0 +1,9 @@
+{
+  "act": "shipping stamp",
+  "prompt": "create a PNG image like a stamp saying sent to $(country). Image in red, retro style, horizontal stamp",
+  "improvedPrompt": "create a PNG image like a stamp saying sent to $(country). Image in red, retro style, horizontal stamp",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "jmartsdesign",
+  "sourceFile": "prompts.csv"
+}

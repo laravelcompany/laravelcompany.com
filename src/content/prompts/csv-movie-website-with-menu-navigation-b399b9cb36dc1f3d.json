@@ -1,0 +1,9 @@
+{
+  "act": "Movie Website with Menu Navigation",
+  "prompt": "Create a movie website that will have menu navigation, beautiful selectors, and more.",
+  "improvedPrompt": "Create a movie website that will have menu navigation, beautiful selectors, and more.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "xachikhambaryan107@gmail.com",
+  "sourceFile": "prompts.csv"
+}

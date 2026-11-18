@@ -34,6 +34,7 @@ const promptCollection = defineCollection({
     contributor: z.string().nullable().optional(),
     date: z.string().optional(),
     sourceUrl: z.string().nullable().optional(),
+    sourceFile: z.string().optional(),
   }),
 });
 

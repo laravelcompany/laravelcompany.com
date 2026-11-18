@@ -1,0 +1,9 @@
+{
+  "act": "Add Black Glasses to My Photo",
+  "prompt": "add black glasses on my picture that suits on me that cover my eyes also make it realistic ",
+  "improvedPrompt": "add black glasses on my picture that suits on me that cover my eyes also make it realistic ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "rajputbhanupratap2007@gmail.com",
+  "sourceFile": "prompts.csv"
+}

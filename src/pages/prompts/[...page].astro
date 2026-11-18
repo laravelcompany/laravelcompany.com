@@ -64,7 +64,7 @@ const pageNumbers = getPageNumbers(page.currentPage, page.lastPage);
     <div class="max-w-5xl mx-auto">
       <h1 class="text-4xl font-bold mb-4 text-center animate-on-scroll">Prompts</h1>
       <p class="text-xl text-white/70 mb-8 text-center animate-on-scroll max-w-2xl mx-auto">
-        Community-contributed AI prompts, with the source credited on each one.
+        Browse {page.total.toLocaleString("en-GB")} community-contributed prompts. Search the full text, title or contributor.
       </p>
 
       <div class="max-w-xl mx-auto mb-12 animate-on-scroll">
@@ -73,16 +73,26 @@ const pageNumbers = getPageNumbers(page.currentPage, page.lastPage);
           <input
             id="prompt-search"
             type="search"
-            placeholder="Search prompts..."
+            placeholder="Try Laravel testing, a role, or a contributor..."
             aria-label="Search prompts"
             autocomplete="off"
             class="w-full pl-12 pr-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-payflo-purple focus:ring-1 focus:ring-payflo-purple transition-colors"
           />
         </div>
-        <p id="prompt-search-status" class="text-sm text-white/50 mt-2 text-center hidden"></p>
+        <div class="flex flex-wrap items-center gap-3 mt-4 text-sm">
+          <label for="prompt-type" class="sr-only">Prompt type</label>
+          <select id="prompt-type" class="rounded-lg bg-slate-900 border border-white/20 px-3 py-2 text-white">
+            <option value="">All types</option><option>TEXT</option><option>STRUCTURED</option><option>IMAGE</option>
+          </select>
+          <label class="flex items-center gap-2 text-white/70"><input id="prompt-devs" type="checkbox" class="accent-violet-500" /> For developers</label>
+          <button id="prompt-clear" type="button" class="ml-auto text-white/70 underline hover:text-white">Clear filters</button>
+        </div>
+        <p id="prompt-search-status" role="status" aria-live="polite" class="text-sm text-white/70 mt-3 text-center hidden"></p>
       </div>
 
       <div id="prompt-search-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden"></div>
+
+      <div class="text-center"><button id="prompt-more" type="button" class="hidden mt-8 mb-8 px-5 py-3 rounded-xl bg-payflo-purple text-white">Show more results</button></div>
 
       <div id="prompt-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sortedPrompts.map((prompt, index) => (
@@ -167,92 +177,72 @@ const pageNumbers = getPageNumbers(page.currentPage, page.lastPage);
 </Layout>
 
 <script>
-  interface PromptIndexEntry {
-    act: string;
-    slug: string;
-    type: string | null;
-    forDevs: boolean;
-    excerpt: string;
+  import PromptWorker from '../../search/prompts.worker.js?worker';
+  const input = document.getElementById('prompt-search') as HTMLInputElement;
+  const type = document.getElementById('prompt-type') as HTMLSelectElement;
+  const devs = document.getElementById('prompt-devs') as HTMLInputElement;
+  const results = document.getElementById('prompt-search-results')!;
+  const status = document.getElementById('prompt-search-status')!;
+  const grid = document.getElementById('prompt-grid')!;
+  const pagination = document.getElementById('prompt-pagination');
+  const more = document.getElementById('prompt-more')!;
+  let worker: Worker | undefined;
+  let requestId = 0;
+  let matches: any[] = [];
+  let visible = 24;
+  let timer: ReturnType<typeof setTimeout>;
+  const escape = (s: string) => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
+  function render() {
+    results.innerHTML = matches.slice(0, visible).map(p => `
+      <a href="/prompts/${encodeURIComponent(p.slug)}/" class="group glass-card p-6 hover:border-payflo-purple/50 transition-colors">
+        <div class="text-xs text-violet-300 mb-3">${escape(p.type)}${p.forDevs ? ' · For developers' : ''}</div>
+        <h2 class="text-lg font-semibold mb-2 group-hover:text-payflo-purple">${escape(p.act)}</h2>
+        <p class="text-sm text-white/60 line-clamp-2 mb-4">${escape(p.excerpt)}</p>
+        ${p.contributor ? `<p class="text-xs text-white/40">by ${escape(p.contributor)}</p>` : ''}
+      </a>`).join('');
+    status.textContent = matches.length ? `Showing ${Math.min(visible, matches.length)} of ${matches.length.toLocaleString('en-GB')} matching prompts` : 'No prompts match. Try fewer words or clear the filters.';
+    more.classList.toggle('hidden', visible >= matches.length);
   }
-
-  const searchInput = document.getElementById("prompt-search") as HTMLInputElement | null;
-  const searchResults = document.getElementById("prompt-search-results");
-  const searchStatus = document.getElementById("prompt-search-status");
-  const promptGrid = document.getElementById("prompt-grid");
-  const pagination = document.getElementById("prompt-pagination");
-
-  let indexPromise: Promise<PromptIndexEntry[]> | null = null;
-  function loadIndex(): Promise<PromptIndexEntry[]> {
-    if (!indexPromise) {
-      indexPromise = fetch("/prompts-index.json").then((r) => r.json());
+  function search() {
+    const id = ++requestId;
+    const query = input.value.trim();
+    const params = new URLSearchParams();
+    if (query) params.set('q', query);
+    if (type.value) params.set('type', type.value);
+    if (devs.checked) params.set('devs', '1');
+    history.replaceState(null, '', location.pathname + (params.size ? '?' + params : ''));
+    const active = !!(query || type.value || devs.checked);
+    grid.classList.toggle('hidden', active);
+    pagination?.classList.toggle('hidden', active);
+    results.classList.toggle('hidden', !active);
+    status.classList.toggle('hidden', !active);
+    more.classList.add('hidden');
+    if (!active) return;
+    results.innerHTML = '';
+    status.textContent = 'Searching the full prompt library...';
+    if (!worker) {
+      worker = new PromptWorker();
+      worker.onmessage = ({data}) => {
+        if (data.id !== requestId) return;
+        if (data.error) { status.textContent = 'Search could not load. Please try again. You can still browse the pages below.'; grid.classList.remove('hidden'); pagination?.classList.remove('hidden'); return; }
+        matches = data.matches;
+        visible = 24;
+        render();
+      };
+      worker.onerror = () => { status.textContent = 'Search could not load. Refresh to try again.'; grid.classList.remove('hidden'); pagination?.classList.remove('hidden'); };
     }
-    return indexPromise;
+    worker.postMessage({ id, query, type: type.value, devs: devs.checked });
   }
-
-  function escapeHtml(value: string): string {
-    return value
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
-  }
-
-  function cardHtml(prompt: PromptIndexEntry): string {
-    const badges = [
-      prompt.type
-        ? `<span class="text-xs px-2.5 py-1 rounded-full bg-payflo-purple/20 text-payflo-purple font-medium">${escapeHtml(prompt.type)}</span>`
-        : "",
-      prompt.forDevs
-        ? `<span class="text-xs px-2.5 py-1 rounded-full bg-payflo-blue/20 text-payflo-blue font-medium">For developers</span>`
-        : "",
-    ].join("");
-    return `
-      <a href="/prompts/${prompt.slug}/" class="group glass-card overflow-hidden hover:border-payflo-purple/50 transition-all duration-300">
-        <div class="p-6">
-          <div class="flex flex-wrap gap-2 mb-3">${badges}</div>
-          <h2 class="text-lg font-semibold text-white mb-2 group-hover:text-payflo-purple transition-colors">${escapeHtml(prompt.act)}</h2>
-          <p class="text-sm text-white/60 mb-4 line-clamp-2">${escapeHtml(prompt.excerpt)}</p>
-        </div>
-      </a>`;
-  }
-
-  let debounceTimer: number | undefined;
-  searchInput?.addEventListener("input", () => {
-    window.clearTimeout(debounceTimer);
-    debounceTimer = window.setTimeout(async () => {
-      const query = (searchInput.value || "").trim().toLowerCase();
-      if (!searchResults || !searchStatus || !promptGrid) return;
-
-      if (query.length < 2) {
-        searchResults.classList.add("hidden");
-        searchStatus.classList.add("hidden");
-        promptGrid.classList.remove("hidden");
-        pagination?.classList.remove("hidden");
-        return;
-      }
-
-      const index = await loadIndex();
-      if ((searchInput.value || "").trim().toLowerCase() !== query) return;
-
-      const matches = index
-        .filter(
-          (p) =>
-            p.act.toLowerCase().includes(query) ||
-            p.excerpt.toLowerCase().includes(query),
-        )
-        .slice(0, 48);
-
-      searchResults.innerHTML = matches.map(cardHtml).join("");
-      searchStatus.textContent =
-        matches.length === 0
-          ? `No prompts found for "${query}"`
-          : `${matches.length}${matches.length === 48 ? "+" : ""} result${matches.length === 1 ? "" : "s"} for "${query}"`;
-      searchStatus.classList.remove("hidden");
-      searchResults.classList.remove("hidden");
-      promptGrid.classList.add("hidden");
-      pagination?.classList.add("hidden");
-    }, 200);
-  });
+  input.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(search, 200); });
+  type.addEventListener('change', search);
+  devs.addEventListener('change', search);
+  document.getElementById('prompt-clear')!.addEventListener('click', () => { clearTimeout(timer); input.value = ''; type.value = ''; devs.checked = false; search(); input.focus(); });
+  more.addEventListener('click', () => { visible += 24; render(); });
+  const params = new URLSearchParams(location.search);
+  input.value = params.get('q') || '';
+  type.value = params.get('type') || '';
+  devs.checked = params.get('devs') === '1';
+  if (input.value || type.value || devs.checked) search();
 </script>
 
 <style>

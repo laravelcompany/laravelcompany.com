@@ -1,0 +1,9 @@
+{
+  "act": "How CODA Evaluates Dental Schools and Clinics",
+  "prompt": "How CODA  EVALUATe OTHER DENTAL MEDICINE clinics and SCHOOLS inside universities in the united states",
+  "improvedPrompt": "How CODA  EVALUATe OTHER DENTAL MEDICINE clinics and SCHOOLS inside universities in the united states",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "wchiclana@gmail.com",
+  "sourceFile": "prompts.csv"
+}

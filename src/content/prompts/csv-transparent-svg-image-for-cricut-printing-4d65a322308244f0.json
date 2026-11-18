@@ -1,0 +1,9 @@
+{
+  "act": "Transparent SVG Image for Cricut Printing",
+  "prompt": "I want to create a transparent background image for a SVG file to print on my Cricut so I can apply permanent vinyl to a car.\n\nWhat I want is \"text\" to say - Look Pretty Play Dirty\nA Skull & sunflowers,  something that will look good with Black and Pink Vinyl",
+  "improvedPrompt": "I want to create a transparent background image for a SVG file to print on my Cricut so I can apply permanent vinyl to a car.\n\nWhat I want is \"text\" to say - Look Pretty Play Dirty\nA Skull & sunflowers,  something that will look good with Black and Pink Vinyl",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "vartisvit@gmail.com",
+  "sourceFile": "prompts.csv"
+}

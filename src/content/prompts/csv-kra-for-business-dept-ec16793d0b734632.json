@@ -1,0 +1,9 @@
+{
+  "act": "KRA for Business Dept",
+  "prompt": "generate a instruction for project in claude where you need to review the kra and suggest the user any gaps or betterment ideas with specific reason. the intention is to develop the individual in his her role and result oriented",
+  "improvedPrompt": "generate a instruction for project in claude where you need to review the kra and suggest the user any gaps or betterment ideas with specific reason. the intention is to develop the individual in his her role and result oriented",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "prebilsan.traveldiaries@gmail.com",
+  "sourceFile": "prompts.csv"
+}

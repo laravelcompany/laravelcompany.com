@@ -1,0 +1,9 @@
+{
+  "act": "Cinematic Evolution of Cars from 1920s to Electric Vehicles",
+  "prompt": "\"Generate a video: Documentary style cinematic sequence showing the evolution of cars from vintage 1920s automobile to modern electric vehicle charging at sunset, photorealistic, dramatic lighting\"",
+  "improvedPrompt": "\"Generate a video: Documentary style cinematic sequence showing the evolution of cars from vintage 1920s automobile to modern electric vehicle charging at sunset, photorealistic, dramatic lighting\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "mkukaljane@gmail.com",
+  "sourceFile": "prompts.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Animated Logo Title Card Reveal",
+  "prompt": "Cinematic intro animation. Dark navy blue background with subtle particle effects. \nLarge bold white text \"MARMARA MPDS\" appears with a cyan glow effect, letter by letter for PDS, color effect only effects the PDS letters, M letter is white. \nBelow it smaller text \"Fikirleri Projeye Dönüştürüyoruz\" fades in. \nFuturistic, minimalist tech aesthetic. No people.",
+  "improvedPrompt": "Cinematic intro animation. Dark navy blue background with subtle particle effects. \nLarge bold white text \"MARMARA MPDS\" appears with a cyan glow effect, letter by letter for PDS, color effect only effects the PDS letters, M letter is white. \nBelow it smaller text \"Fikirleri Projeye Dönüştürüyoruz\" fades in. \nFuturistic, minimalist tech aesthetic. No people.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "furkangtgg@gmail.com",
+  "sourceFile": "prompts.csv"
+}

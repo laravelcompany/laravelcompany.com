@@ -1,0 +1,9 @@
+{
+  "act": "Fashion Showcase",
+  "prompt": "---\nname: fashion-showcase\ndescription: create humanize movement for fashion outfit showcase\n---\n\n# My Skill\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n",
+  "improvedPrompt": "---\nname: fashion-showcase\ndescription: create humanize movement for fashion outfit showcase\n---\n\n# My Skill\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "knirawx@gmail.com",
+  "sourceFile": "prompts.csv"
+}

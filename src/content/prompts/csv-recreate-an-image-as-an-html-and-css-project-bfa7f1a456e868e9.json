@@ -1,0 +1,9 @@
+{
+  "act": "Recreate an Image as an HTML and CSS Project",
+  "prompt": "create full project html css as well as this image 100%",
+  "improvedPrompt": "create full project html css as well as this image 100%",
+  "forDevs": true,
+  "type": "TEXT",
+  "contributor": "talalalnhmi11@gmail.com",
+  "sourceFile": "prompts.csv"
+}

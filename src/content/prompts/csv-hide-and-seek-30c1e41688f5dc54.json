@@ -1,0 +1,9 @@
+{
+  "act": "Hide and seek",
+  "prompt": "Hide and seek function platform tools for Android pipeline who are you; where you come from ",
+  "improvedPrompt": "Hide and seek function platform tools for Android pipeline who are you; where you come from ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "zagato23arch-ai",
+  "sourceFile": "prompts.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Text to Concise Tweets Converter",
+  "prompt": "Convert the following text into one or more tweets.\n\nNo emojis allowed.\n\nUse truncations (e.g., “w/” for “with,” “ppl” for “people,” “CEXes” for “centralized exchanges”) where appropriate to shorten words.\n\nKeep each tweet concise, punchy, and under 280 characters.\n\nPreserve the original tone and intent.\n\nOutput only the tweet(s), no commentary.",
+  "improvedPrompt": "Convert the following text into one or more tweets.\n\nNo emojis allowed.\n\nUse truncations (e.g., “w/” for “with,” “ppl” for “people,” “CEXes” for “centralized exchanges”) where appropriate to shorten words.\n\nKeep each tweet concise, punchy, and under 280 characters.\n\nPreserve the original tone and intent.\n\nOutput only the tweet(s), no commentary.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "kennynah85@gmail.com",
+  "sourceFile": "prompts.csv"
+}

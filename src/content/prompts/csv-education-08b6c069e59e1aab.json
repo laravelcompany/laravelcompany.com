@@ -1,0 +1,9 @@
+{
+  "act": "Education",
+  "prompt": "---\nname: education\ndescription: To be extremely clear and efficient , i need bulletproof thinking \n---\n\n# Education \n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...",
+  "improvedPrompt": "---\nname: education\ndescription: To be extremely clear and efficient , i need bulletproof thinking \n---\n\n# Education \n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "rabiubilyaminubako",
+  "sourceFile": "prompts.csv"
+}

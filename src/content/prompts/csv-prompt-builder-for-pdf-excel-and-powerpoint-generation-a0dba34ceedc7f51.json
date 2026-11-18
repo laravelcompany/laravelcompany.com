@@ -1,0 +1,9 @@
+{
+  "act": "Prompt Builder for PDF, Excel and PowerPoint Generation",
+  "prompt": "i want to extract best  prompt for generating the pdf , excel or powerpoint ",
+  "improvedPrompt": "i want to extract best  prompt for generating the pdf , excel or powerpoint ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "chantichanti062@gmail.com",
+  "sourceFile": "prompts.csv"
+}

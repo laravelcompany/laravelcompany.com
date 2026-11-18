@@ -1,0 +1,9 @@
+{
+  "act": "sales and marketing strategy",
+  "prompt": "---\nname: sales-and-marketing-strategy\ndescription: I am the proprietor of a company with an in-house sheet metal manufacturing facility. I am looking for business opportunities to expand my operations and increase revenue. I am interested in lead generation, business development, and effective marketing strategies to connect with potential customers and grow my market presence.\n---\n\n# My Skill\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...",
+  "improvedPrompt": "---\nname: sales-and-marketing-strategy\ndescription: I am the proprietor of a company with an in-house sheet metal manufacturing facility. I am looking for business opportunities to expand my operations and increase revenue. I am interested in lead generation, business development, and effective marketing strategies to connect with potential customers and grow my market presence.\n---\n\n# My Skill\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "dhruveshbpatna@gmail.com",
+  "sourceFile": "prompts.csv"
+}

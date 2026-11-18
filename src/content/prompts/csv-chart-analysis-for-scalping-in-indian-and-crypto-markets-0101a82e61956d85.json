@@ -1,0 +1,9 @@
+{
+  "act": "Chart Analysis for Scalping in Indian and Crypto Markets",
+  "prompt": "Analysis the given chart n give perfect reading and stop loss n buy n sell n profit percentage and applying strategy etc in India n crypto market for scalping ",
+  "improvedPrompt": "Analysis the given chart n give perfect reading and stop loss n buy n sell n profit percentage and applying strategy etc in India n crypto market for scalping ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "aayush3957@gmail.com",
+  "sourceFile": "prompts.csv"
+}

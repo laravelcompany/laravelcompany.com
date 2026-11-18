@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run build:search-index && astro build",
+    "build": "npm run build:prompts && npm run build:search-index && astro build",
     "build:search-index": "node scripts/build-search-index.mjs",
     "preview": "astro preview",
     "test": "node --test",
     "check": "astro check",
-    "astro": "astro"
+    "astro": "astro",
+    "build:prompts": "python3 scripts/import_prompts_csv.py && node scripts/build-prompt-search.mjs",
+    "pretest": "npm run build:prompts"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
@@ -24,6 +26,7 @@
     "marked": "^18.0.6",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
+    "sanitize-html": "^2.18.2",
     "tailwindcss": "^3.3.6",
     "three": "^0.185.0"
   },

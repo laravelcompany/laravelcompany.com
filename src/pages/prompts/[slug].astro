@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { marked } from "marked";
+import sanitizeHtml from "sanitize-html";
 import { enrichCodeBlocks } from "../../utils/codeHighlighter";
 
 function isMarkdown(content: string): boolean {
@@ -28,7 +29,7 @@ const { data } = prompt;
 const rawContent = isMarkdown(data.improvedPrompt)
   ? marked.parse(data.improvedPrompt) as string
   : `<p>${data.improvedPrompt.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n{2,}/g, "</p><p>").replace(/\n/g, "<br>")}</p>`;
-const renderedContent = await enrichCodeBlocks(rawContent);
+const renderedContent = await enrichCodeBlocks(sanitizeHtml(rawContent, { allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]), allowedAttributes: { ...sanitizeHtml.defaults.allowedAttributes, code: ["class"], img: ["src", "alt", "title"] } }));
 const description = data.improvedPrompt
   .replace(/```[\s\S]*?```/g, " ")
   .replace(/[#*>`]/g, "")
@@ -73,7 +74,7 @@ const description = data.improvedPrompt
             {data.sourceUrl ? (
               <p class="text-sm text-white/50">Source: <a href={data.sourceUrl} rel="noopener" class="underline hover:text-white transition-colors">original file</a>{data.date ? ` · added ${data.date}` : ""}</p>
             ) : (
-              <p class="text-sm text-white/50">Improved by Laravel Company{data.date ? ` · ${data.date}` : ""}</p>
+              <p class="text-sm text-white/50">{data.sourceFile ? "Imported from prompts.csv, original text preserved" : "Improved by Laravel Company"}{data.date ? ` · ${data.date}` : ""}</p>
             )}
           </div>
         </div>
@@ -86,7 +87,7 @@ const description = data.improvedPrompt
       <details class="mt-12 glass-card p-6 animate-on-scroll group">
         <summary class="cursor-pointer text-sm font-semibold text-white/70 hover:text-white transition-colors list-none flex items-center gap-2">
           <svg class="w-4 h-4 transition-transform group-open:rotate-90" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          {data.sourceUrl ? "Original source file (unmodified)" : "Original prompt (before our improvements)"}
+          {data.sourceFile ? "Original CSV prompt (unmodified)" : data.sourceUrl ? "Original source file (unmodified)" : "Original prompt (before our improvements)"}
         </summary>
         <p class="mt-4 text-sm text-white/60 whitespace-pre-wrap leading-relaxed">{data.prompt}</p>
       </details>

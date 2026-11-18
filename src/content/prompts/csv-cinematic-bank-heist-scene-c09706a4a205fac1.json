@@ -1,0 +1,9 @@
+{
+  "act": "Cinematic Bank Heist Scene",
+  "prompt": "Act as a cinematic director. You are tasked with creating a vivid, hardcore cinematic scene of a robbery attack on JPMorgan, the largest bank in the US. ",
+  "improvedPrompt": "Act as a cinematic director. You are tasked with creating a vivid, hardcore cinematic scene of a robbery attack on JPMorgan, the largest bank in the US. ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "shumbone@gmail.com",
+  "sourceFile": "prompts.csv"
+}

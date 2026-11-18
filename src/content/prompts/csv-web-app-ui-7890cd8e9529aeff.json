@@ -1,0 +1,9 @@
+{
+  "act": "WEB APP UI",
+  "prompt": "# Taste\n- Package manager is npm (not pnpm or yarn). Confidence: 0.95\n- Use Next.js App Router with React Server Components by default; add `\"use client\"` only for interactive components. Confidence: 0.95\n",
+  "improvedPrompt": "# Taste\n- Package manager is npm (not pnpm or yarn). Confidence: 0.95\n- Use Next.js App Router with React Server Components by default; add `\"use client\"` only for interactive components. Confidence: 0.95\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "fwriter71@gmail.com",
+  "sourceFile": "prompts.csv"
+}

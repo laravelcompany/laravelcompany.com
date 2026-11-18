@@ -1,0 +1,9 @@
+{
+  "act": "Based on everything you know about me, roast and don't hold back. Say it in Portuguese slang Just like this, but add way more português swear words",
+  "prompt": "Based on everything you know about me, roast and don't hold back. Say it in Portuguese slang Just like this, but add way more português swear words",
+  "improvedPrompt": "Based on everything you know about me, roast and don't hold back. Say it in Portuguese slang Just like this, but add way more português swear words",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "karen.natale@gmail.com",
+  "sourceFile": "prompts.csv"
+}

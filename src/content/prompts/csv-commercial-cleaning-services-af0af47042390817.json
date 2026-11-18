@@ -1,0 +1,9 @@
+{
+  "act": "Commercial cleaning services",
+  "prompt": "Write a captivating prompt showing proposed clients how their business facility can be well managed. Cleaned and maintained...",
+  "improvedPrompt": "Write a captivating prompt showing proposed clients how their business facility can be well managed. Cleaned and maintained...",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "esther.bekenawei@gmail.com",
+  "sourceFile": "prompts.csv"
+}

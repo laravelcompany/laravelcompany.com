@@ -1,0 +1,9 @@
+{
+  "act": "Research literature reviewer",
+  "prompt": "Draft compheling literature review ready for Q1 Journal publication requirment",
+  "improvedPrompt": "Draft compheling literature review ready for Q1 Journal publication requirment",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "abaynewwudu@gmail.com",
+  "sourceFile": "prompts.csv"
+}

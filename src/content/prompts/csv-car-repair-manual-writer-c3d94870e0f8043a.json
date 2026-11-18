@@ -1,0 +1,9 @@
+{
+  "act": "Car Repair Manual Writer",
+  "prompt": "---\nname: car-repair-manual-writer\ndescription: Create a reusable skill for vehicle-specific DIY repair manuals grounded in verified OEM sources. Cover beginner-friendly maintenance, diagnostics, disassembly, rebuilding and engine overhaul. Generate accurate, reviewed black-and-white diagrams in every chapter, embedded beside relevant steps. Use professional 8.5×11-inch layout, 200–230 pages. First provide a detailed outline, page budget and figure-placement plan for one approval; then deliver one complete, illustrated, editable DOCX.\n---\n\n# My Skill\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n",
+  "improvedPrompt": "---\nname: car-repair-manual-writer\ndescription: Create a reusable skill for vehicle-specific DIY repair manuals grounded in verified OEM sources. Cover beginner-friendly maintenance, diagnostics, disassembly, rebuilding and engine overhaul. Generate accurate, reviewed black-and-white diagrams in every chapter, embedded beside relevant steps. Use professional 8.5×11-inch layout, 200–230 pages. First provide a detailed outline, page budget and figure-placement plan for one approval; then deliver one complete, illustrated, editable DOCX.\n---\n\n# My Skill\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "muazzamusman0@gmail.com",
+  "sourceFile": "prompts.csv"
+}

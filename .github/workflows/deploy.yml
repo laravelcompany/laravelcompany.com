@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    runs-on: ubuntu-latest
     timeout-minutes: 360
     steps:
       - name: Checkout code
@@ -38,6 +38,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Test
+        run: npm test && python3 -m unittest discover -s tests -p "test_*.py"
+
       - name: Build Astro site
         run: npm run build
         env:
@@ -59,7 +62,7 @@ jobs:
     # self-hosted runner; its intermittent TLS drops on Cloudflare's
     # /pages/assets/upload are handled by the retry loop below (assets upload
     # by content hash, so retries resume).
-    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
       - name: Setup Node.js

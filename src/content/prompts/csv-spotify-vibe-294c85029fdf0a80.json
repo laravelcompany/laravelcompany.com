@@ -1,0 +1,9 @@
+{
+  "act": "Spotify Vibe",
+  "prompt": "---\nname: spotify-vibe\ndescription: For Spotify Vibe \n---\n\n# My Skill\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n\u001fFILE:README.md gf\u001e\n\n\u001fFILE:README.md golden brown background\u001e\n",
+  "improvedPrompt": "---\nname: spotify-vibe\ndescription: For Spotify Vibe \n---\n\n# My Skill\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n\u001fFILE:README.md gf\u001e\n\n\u001fFILE:README.md golden brown background\u001e\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "asasane325@gmail.com",
+  "sourceFile": "prompts.csv"
+}

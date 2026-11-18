@@ -1,0 +1,9 @@
+{
+  "act": "Animation Style Master Prompt from a Reference Video",
+  "prompt": "analyze the uploaded video and create a comperhensive master  prompt , to be ble to create such video animation style",
+  "improvedPrompt": "analyze the uploaded video and create a comperhensive master  prompt , to be ble to create such video animation style",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "hadimuradi777@gmail.com",
+  "sourceFile": "prompts.csv"
+}

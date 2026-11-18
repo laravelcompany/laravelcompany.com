@@ -1,0 +1,9 @@
+{
+  "act": "modern acrylic signage",
+  "prompt": "Act as an interior designer and visualization art director. \nBeside the door, put the logo in modern acrylic signage (transparent, and it has its own coloring). Do not change the picture; just put the signage in a modern way",
+  "improvedPrompt": "Act as an interior designer and visualization art director. \nBeside the door, put the logo in modern acrylic signage (transparent, and it has its own coloring). Do not change the picture; just put the signage in a modern way",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "2mikister",
+  "sourceFile": "prompts.csv"
+}

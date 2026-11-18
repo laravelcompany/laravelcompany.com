@@ -1,0 +1,9 @@
+{
+  "act": "CLASSIC TRADING GAIN AI",
+  "prompt": "---\nname: classic-trading-gain-ai\ndescription: Classic Best Trader\n---\n\n# CLASSIC TRADING GAIN AI\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n-STEP 3: ....",
+  "improvedPrompt": "---\nname: classic-trading-gain-ai\ndescription: Classic Best Trader\n---\n\n# CLASSIC TRADING GAIN AI\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n-STEP 3: ....",
+  "forDevs": false,
+  "type": "STRUCTURED",
+  "contributor": "dkansah",
+  "sourceFile": "prompts.csv"
+}

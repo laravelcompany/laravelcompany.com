@@ -1,0 +1,9 @@
+{
+  "act": "Nature",
+  "prompt": "---\nname: nature\ndescription: Introduction \n---\n\n# Nature\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...",
+  "improvedPrompt": "---\nname: nature\ndescription: Introduction \n---\n\n# Nature\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "www.sirikrishnalasya@gmail.com",
+  "sourceFile": "prompts.csv"
+}

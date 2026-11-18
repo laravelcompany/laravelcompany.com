@@ -1,0 +1,9 @@
+{
+  "act": "search for clients",
+  "prompt": "Act as a ${role:sales engineer} creating documentation for ${posible clients}.",
+  "improvedPrompt": "Act as a ${role:sales engineer} creating documentation for ${posible clients}.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "engheshameletihad-stack",
+  "sourceFile": "prompts.csv"
+}

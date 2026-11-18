@@ -1,0 +1,9 @@
+{
+  "act": "writing and format",
+  "prompt": "I need a prompt for formatting an Arabic Word document, covering aspects such as text direction, alignment (centering), font size differentiation between headings and paragraphs, and the centering and directional alignment of tables.",
+  "improvedPrompt": "I need a prompt for formatting an Arabic Word document, covering aspects such as text direction, alignment (centering), font size differentiation between headings and paragraphs, and the centering and directional alignment of tables.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "takewa.metwaly@gmail.com",
+  "sourceFile": "prompts.csv"
+}

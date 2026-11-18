@@ -1,0 +1,9 @@
+{
+  "act": "Business plan",
+  "prompt": "Write a professional and humanised  business plan requesting for funding to be submitted to bank of industry in Nigeria. Used Nigerian naira for all the analysis.business name will be Lekki 360 Grill & Lounge in Lekki Lagos as the proposed location ",
+  "improvedPrompt": "Write a professional and humanised  business plan requesting for funding to be submitted to bank of industry in Nigeria. Used Nigerian naira for all the analysis.business name will be Lekki 360 Grill & Lounge in Lekki Lagos as the proposed location ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "hatwoodsng@gmail.com",
+  "sourceFile": "prompts.csv"
+}

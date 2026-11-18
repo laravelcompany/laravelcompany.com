@@ -1,0 +1,9 @@
+{
+  "act": "Create a bank website with a lot of functions  naming it FATE BANK",
+  "prompt": "I want a bank app prompt and I want it professional and better. I want it to be name FATE BANK ",
+  "improvedPrompt": "I want a bank app prompt and I want it professional and better. I want it to be name FATE BANK ",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "froshoro@gmail.com",
+  "sourceFile": "prompts.csv"
+}

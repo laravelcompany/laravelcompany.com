@@ -1,0 +1,9 @@
+{
+  "act": "Minutes of meeting",
+  "prompt": "Minutes of meeting held at department of Chemical Sciences FUK \n\n",
+  "improvedPrompt": "Minutes of meeting held at department of Chemical Sciences FUK \n\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "zabdu70@gmail.com",
+  "sourceFile": "prompts.csv"
+}

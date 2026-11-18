@@ -1,0 +1,9 @@
+{
+  "act": "stealth ninja",
+  "prompt": "# Skill: Stealth Ninja\n\n## Purpose\nEnables the agent to execute web automation and data extraction without triggering anti-bot mechanisms (e.g., Cloudflare, Akamai, CAPTCHAs).\n\n## Instructions\n1. Randomize user-agent strings to mimic real, updated browser distributions.\n2. Emulate realistic human cursor movements, variable scroll speeds, and natural typing delays.\n3. Strip automation indicators by overriding `navigator.webdriver` to `undefined`.\n4. Manage and rotate proxies / residential IPs dynamically between requests.\n5. Accept and solve CAPTCHAs using third-party solving services if explicitly blocked.\n",
+  "improvedPrompt": "# Skill: Stealth Ninja\n\n## Purpose\nEnables the agent to execute web automation and data extraction without triggering anti-bot mechanisms (e.g., Cloudflare, Akamai, CAPTCHAs).\n\n## Instructions\n1. Randomize user-agent strings to mimic real, updated browser distributions.\n2. Emulate realistic human cursor movements, variable scroll speeds, and natural typing delays.\n3. Strip automation indicators by overriding `navigator.webdriver` to `undefined`.\n4. Manage and rotate proxies / residential IPs dynamically between requests.\n5. Accept and solve CAPTCHAs using third-party solving services if explicitly blocked.\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "jonasmoody795@gmail.com",
+  "sourceFile": "prompts.csv"
+}

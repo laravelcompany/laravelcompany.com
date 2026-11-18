@@ -1,0 +1,9 @@
+{
+  "act": "Creation of website",
+  "prompt": "User accounts and profiles for individuals or campus teams.\nCarbon calculator covering electricity, travel, food, and waste, with clearly stated calculation factors.\nInteractive dashboard showing emissions by category and trends over time.\nReduction planner where users compare scenarios, such as switching transport or reducing electricity use.\nGoals and challenges with progress tracking and team leaderboards.\nDownloadable reports summarizing emissions and suggested actions.",
+  "improvedPrompt": "User accounts and profiles for individuals or campus teams.\nCarbon calculator covering electricity, travel, food, and waste, with clearly stated calculation factors.\nInteractive dashboard showing emissions by category and trends over time.\nReduction planner where users compare scenarios, such as switching transport or reducing electricity use.\nGoals and challenges with progress tracking and team leaderboards.\nDownloadable reports summarizing emissions and suggested actions.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "swaroopxxbevinal@gmail.com",
+  "sourceFile": "prompts.csv"
+}

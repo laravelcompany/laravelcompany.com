@@ -1,0 +1,9 @@
+{
+  "act": "Rainy Neon Alley Wait: Low-Angle No-Face Figure Under a Clear Umbrella",
+  "prompt": "Rainy alley, one neon kanji sign half-out, female Japanese figure wearing cropped jacket tank top, pleated mini-skirt, patent high-heeled over-the-knee boots, under a clear umbrella that catches magenta light. Camera low. No face shown. Mood: waiting for a reply that isn't coming. Soft grain, no film logo.\n\nOptional prefix for extra punch: Cel Shaded Art,",
+  "improvedPrompt": "Rainy alley, one neon kanji sign half-out, female Japanese figure wearing cropped jacket tank top, pleated mini-skirt, patent high-heeled over-the-knee boots, under a clear umbrella that catches magenta light. Camera low. No face shown. Mood: waiting for a reply that isn't coming. Soft grain, no film logo.\n\nOptional prefix for extra punch: Cel Shaded Art,",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "f",
+  "sourceFile": "prompts.csv"
+}

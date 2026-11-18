@@ -1,0 +1,9 @@
+{
+  "act": "Rags to Riches Motivational Short Video",
+  "prompt": "Scene 1 — 0–5 sec\nA poor young man stands outside a luxury building while people laugh at him.\nText: “They laughed when he said he would become rich…”",
+  "improvedPrompt": "Scene 1 — 0–5 sec\nA poor young man stands outside a luxury building while people laugh at him.\nText: “They laughed when he said he would become rich…”",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "couragebillon@gmail.com",
+  "sourceFile": "prompts.csv"
+}

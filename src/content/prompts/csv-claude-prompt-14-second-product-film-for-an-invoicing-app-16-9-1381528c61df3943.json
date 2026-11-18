@@ -1,0 +1,9 @@
+{
+  "act": "Claude prompt: 14-second product film for an invoicing app (16:9)",
+  "prompt": "Build a 14-second motion design product film in 16:9 (1920x1080, 30 fps) for my app ${name}, which ${what_it_does}.\nBuild it as one HTML page with one animation timeline, so I can export it as an MP4.\n\nLook: light grey-green background with a soft grid, white cards with thin borders, one brand colour ${hex}, one clean sans-serif font.\n\nThe text builds word by word: \"${hook_question}\" / \"${name} ${step_1}, ${step_2}, and ${step_3} for you.\" / \"${result}.\"\nScene 1: the hook question, big and centred.\nScenes 2 to 4: one card shows each step. The card from one step becomes the object of the next step.\nScene 5: the result with a small \"done\" stamp.\nScene 6: logo, name and \"${tagline}\".\n\nRules: the camera never stands still. Every move is eased. Key words are in the brand colour, the rest stays dark.",
+  "improvedPrompt": "Build a 14-second motion design product film in 16:9 (1920x1080, 30 fps) for my app ${name}, which ${what_it_does}.\nBuild it as one HTML page with one animation timeline, so I can export it as an MP4.\n\nLook: light grey-green background with a soft grid, white cards with thin borders, one brand colour ${hex}, one clean sans-serif font.\n\nThe text builds word by word: \"${hook_question}\" / \"${name} ${step_1}, ${step_2}, and ${step_3} for you.\" / \"${result}.\"\nScene 1: the hook question, big and centred.\nScenes 2 to 4: one card shows each step. The card from one step becomes the object of the next step.\nScene 5: the result with a small \"done\" stamp.\nScene 6: logo, name and \"${tagline}\".\n\nRules: the camera never stands still. Every move is eased. Key words are in the brand colour, the rest stays dark.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "admin@drillup.io",
+  "sourceFile": "prompts.csv"
+}

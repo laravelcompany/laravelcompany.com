@@ -1,0 +1,9 @@
+{
+  "act": "character sheet",
+  "prompt": "A 3D character sheet of a chubby boy in a Caricatured Realism style, arranged in a single image with three sections:\n\n- Full body, front view\n- Full body, back view\n- Head, front view",
+  "improvedPrompt": "A 3D character sheet of a chubby boy in a Caricatured Realism style, arranged in a single image with three sections:\n\n- Full body, front view\n- Full body, back view\n- Head, front view",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "ali.rococo.12@gmail.com",
+  "sourceFile": "prompts.csv"
+}

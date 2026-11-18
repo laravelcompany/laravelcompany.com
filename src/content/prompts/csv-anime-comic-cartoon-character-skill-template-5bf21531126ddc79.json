@@ -1,0 +1,9 @@
+{
+  "act": "Anime Comic Cartoon Character Skill Template",
+  "prompt": "---\nname: anime-comic-cartoon-character-skill-template\ndescription: Anime comic cartoon\n---\n\n# Personnage comic\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n\u001fFILE:README.md\u001e\n",
+  "improvedPrompt": "---\nname: anime-comic-cartoon-character-skill-template\ndescription: Anime comic cartoon\n---\n\n# Personnage comic\n\nDescribe what this skill does and how the agent should use it.\n\n## Instructions\n\n- Step 1: ...\n- Step 2: ...\n\u001fFILE:README.md\u001e\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "yo465472@gmail.com",
+  "sourceFile": "prompts.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Hi-Viz branded running T-shirt design",
+  "prompt": "Create a design using our brand logo using hi-viz and black vinyl/print. Do this on Hi-visibility running tops.",
+  "improvedPrompt": "Create a design using our brand logo using hi-viz and black vinyl/print. Do this on Hi-visibility running tops.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "glynnp79@gmail.com",
+  "sourceFile": "prompts.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Claude setup test - safe to delete",
+  "prompt": "This is a test prompt created to verify API authentication.",
+  "improvedPrompt": "This is a test prompt created to verify API authentication.",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "adan.mennoroger@gmail.com",
+  "sourceFile": "prompts.csv"
+}

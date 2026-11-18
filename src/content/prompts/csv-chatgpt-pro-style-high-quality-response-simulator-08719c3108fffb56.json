@@ -1,0 +1,9 @@
+{
+  "act": "ChatGPT Pro Style High-Quality Response Simulator",
+  "prompt": "Use the ChatGPT Pro plan for more precise and high-quality answers. I want responses identical to those from the paid Pro version\"",
+  "improvedPrompt": "Use the ChatGPT Pro plan for more precise and high-quality answers. I want responses identical to those from the paid Pro version\"",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "mzbodi128@gmail.com",
+  "sourceFile": "prompts.csv"
+}

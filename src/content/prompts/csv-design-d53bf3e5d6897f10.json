@@ -1,0 +1,9 @@
+{
+  "act": "design",
+  "prompt": "generate the best web design for match the website I'm building\n",
+  "improvedPrompt": "generate the best web design for match the website I'm building\n",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "kogneatguesthousegh@gmail.com",
+  "sourceFile": "prompts.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "act": "Paper Lantern Harbor at Dusk",
+  "prompt": "A quiet wooden harbor at dusk, hundreds of warm paper lanterns hanging from boats and piers, calm water reflecting orange and rose light, soft fog, cinematic wide shot, ultra-detailed, peaceful atmosphere, no people in foreground",
+  "improvedPrompt": "A quiet wooden harbor at dusk, hundreds of warm paper lanterns hanging from boats and piers, calm water reflecting orange and rose light, soft fog, cinematic wide shot, ultra-detailed, peaceful atmosphere, no people in foreground",
+  "forDevs": false,
+  "type": "TEXT",
+  "contributor": "f",
+  "sourceFile": "prompts.csv"
+}
