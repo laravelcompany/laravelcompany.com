@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
+import react from '@astrojs/react';
 import icon from "astro-icon";
 import remarkDocLinks from './src/utils/remarkDocLinks.mjs';
 
@@ -14,6 +15,7 @@ export default defineConfig({
   },
   integrations: [
     tailwind(),
+    react(),
     icon(),
   ],
   image: {

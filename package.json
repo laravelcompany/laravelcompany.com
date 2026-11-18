@@ -5,20 +5,25 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "npm run build:search-index && astro build",
+    "build:search-index": "node scripts/build-search-index.mjs",
     "preview": "astro preview",
     "test": "node --test",
     "check": "astro check",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.2",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.3",
+    "@docsearch/react": "^3.9.0",
     "@fontsource-variable/inter": "^5.0.15",
     "@iconify-json/ph": "^1.2.2",
     "astro": "^5.7.0",
     "astro-icon": "^1.1.5",
     "marked": "^18.0.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "tailwindcss": "^3.3.6",
     "three": "^0.185.0"
   },

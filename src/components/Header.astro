@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import logoSrc from "../assets/logo.svg";
+import AlgoliaDocSearch from "./search/AlgoliaDocSearch";
 
 interface NavItem {
     name: string;
@@ -138,6 +139,7 @@ function isActive(href: string): boolean {
         </nav>
 
         <div class="flex items-center space-x-4">
+            <AlgoliaDocSearch client:only="react" />
             <a
                 href="/contact/"
                 class="btn btn-primary focus:outline-none focus:ring-2 focus:ring-payflo-purple focus:ring-offset-2 hidden lg:inline-flex"

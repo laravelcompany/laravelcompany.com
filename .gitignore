@@ -6,3 +6,5 @@ node_modules/
 src/data/jobs-cache.json
 src/data/books-cache.json
 products/*
+# Blog search index - generated at build time
+public/search-index.json
