@@ -64,10 +64,11 @@ const description = truncateDescription(cleanExcerpt);
 const postUrl = new URL(`/blog/${post.id}/`, Astro.site).href;
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
+  "@type": "NewsArticle",
   headline: data.title,
   description,
   datePublished: data.date,
+  dateModified: data.date,
   author: {
     "@type": "Person",
     name: data.author,
