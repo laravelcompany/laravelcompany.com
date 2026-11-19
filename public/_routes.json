@@ -1,11 +1,7 @@
 {
   "version": 1,
   "include": [
-    "/*",
-    "/api/search",
-    "/api/booking-eligibility",
-    "/api/books/search",
-    "/books/*"
+    "/*"
   ],
   "exclude": []
 }
