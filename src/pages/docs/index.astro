@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import HeroSection from "../../components/HeroSection.astro";
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
+import { stripMarkdown } from "../../utils/stripMarkdown.mjs";
 
 export const prerender = true;
 
@@ -46,7 +47,7 @@ const docsList = docs
   .map((doc) => ({
     slug: doc.id.replace(/\.md$/, ""),
     title: doc.body.split("\n")[0].replace(/^#\s*/, ""),
-    excerpt: doc.body.split("\n").slice(1, 3).join(" ").substring(0, 150),
+    excerpt: stripMarkdown(doc.body.split("\n").slice(1, 8).join(" ")).substring(0, 150),
     icon: icons[doc.id.replace(/\.md$/, "")] || "ph:file-duotone",
   }))
   .sort((a, b) => a.title.localeCompare(b.title));
