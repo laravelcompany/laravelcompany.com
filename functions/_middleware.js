@@ -10,8 +10,14 @@
  *    equity. 301 extension-less GET/HEAD URLs to the trailing-slash form.
  *    Skipped for /api/ (function routes) and /books/ (dynamic function
  *    parses the exact pathname).
+ * 3. Section fallbacks: expired jobs, removed prompts files and dropped blog
+ *    slugs 301 to the section listing. This cannot be a _redirects splat:
+ *    Pages splats take precedence over static assets and /x/* matches /x/
+ *    itself, so a splat loops on its own section index. Redirect only after
+ *    the origin answered 404, so live pages are never touched.
  */
 const VERSION_PREFIX = /^\/docs\/(?:\{\{version\}\}|%7B%7Bversion%7D%7D)(\/.*)?$/i;
+const FALLBACK_SECTION = /^\/(jobs|prompts|blog)\/.+/;
 
 export function redirectFor(pathname, search = "") {
   const versionMatch = VERSION_PREFIX.exec(pathname);
@@ -32,6 +38,11 @@ export function redirectFor(pathname, search = "") {
   return null;
 }
 
+export function sectionFallbackFor(pathname) {
+  const m = FALLBACK_SECTION.exec(pathname);
+  return m ? `/${m[1]}/` : null;
+}
+
 export async function onRequest(context) {
   const { request } = context;
   if (request.method === "GET" || request.method === "HEAD") {
@@ -40,6 +51,12 @@ export async function onRequest(context) {
     if (target) {
       return Response.redirect(new URL(target + url.search, url).toString(), 301);
     }
+    const response = await context.next();
+    const fallback = sectionFallbackFor(url.pathname);
+    if (response.status === 404 && fallback) {
+      return Response.redirect(new URL(fallback + url.search, url).toString(), 301);
+    }
+    return response;
   }
   return context.next();
 }

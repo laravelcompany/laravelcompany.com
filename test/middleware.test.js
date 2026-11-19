@@ -31,3 +31,27 @@ test('no redirect loop: output of a redirect is stable', () => {
     assert.equal(redirectFor(once), null, `${path} -> ${once} must not redirect again`);
   }
 });
+
+test('section fallback targets expired jobs, removed prompts and dropped blog slugs only', async () => {
+  const { sectionFallbackFor, onRequest } = await import('../functions/_middleware.js');
+  assert.equal(sectionFallbackFor('/jobs/expired-job-123'), '/jobs/');
+  assert.equal(sectionFallbackFor('/jobs/expired-job-123/'), '/jobs/');
+  assert.equal(sectionFallbackFor('/prompts/old-file.py'), '/prompts/');
+  assert.equal(sectionFallbackFor('/blog/dropped-slug/'), '/blog/');
+  for (const path of ['/jobs/', '/blog/', '/prompts/', '/', '/contact', '/api/search', '/books/x']) {
+    assert.equal(sectionFallbackFor(path), null, path);
+  }
+});
+
+test('onRequest redirects only on a real 404, never on live pages', async () => {
+  const { onRequest } = await import('../functions/_middleware.js');
+  const ctx404 = { request: new Request('https://laravelcompany.com/jobs/expired-job-123/'), next: async () => new Response('nope', { status: 404 }) };
+  const r404 = await onRequest(ctx404);
+  assert.equal(r404.status, 301);
+  assert.equal(new URL(r404.headers.get('location')).pathname, '/jobs/');
+  const live = new Response('ok', { status: 200 });
+  const ctx200 = { request: new Request('https://laravelcompany.com/blog/real-post/'), next: async () => live };
+  assert.equal(await onRequest(ctx200), live);
+  const ctx404plain = { request: new Request('https://laravelcompany.com/totally-unknown/'), next: async () => new Response('nope', { status: 404 }) };
+  assert.equal((await onRequest(ctx404plain)).status, 404);
+});

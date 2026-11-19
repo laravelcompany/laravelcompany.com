@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import test from 'node:test';
 
+import { sectionFallbackFor } from '../functions/_middleware.js';
+
 const lines = readFileSync(new URL('../public/_redirects', import.meta.url), 'utf8')
   .split('\n')
   .map((l) => l.trim())
@@ -48,8 +50,6 @@ test('no rule redirects a path to itself', () => {
   for (const { from, to } of rules) {
     const destPath = new URL(to).pathname;
     assert.notEqual(from.replace(/\/$/, ''), destPath.replace(/\/$/, ''), `self-redirect: ${from}`);
-    // splats target their own parent listing (e.g. /jobs/* -> /jobs/); the parent
-    // is a prerendered static page, which Cloudflare Pages serves before redirects.
   }
 });
 
@@ -62,14 +62,22 @@ test('internal destinations point at pages that actually exist', () => {
   }
 });
 
-test('GA-reported 404s are covered by an explicit rule or a splat', () => {
+test('GA-reported 404s are covered by an explicit rule or the middleware section fallback', () => {
   const samples = ['/pricing', '/ecommerce', '/contact-us', '/about', '/blog/my-first-post',
     '/blog/setting-up-a-laravel-development-environment', '/jobs/full-stack-php-developer-cnfq1i/',
     '/prompts/linkedin-parser.py', '/sitemap-index.xml', '/docs/storage'];
   for (const path of samples) {
-    const hit = rules.find((r) => r.from === path)
-      || rules.find((r) => r.from.endsWith('/*') && path.startsWith(r.from.slice(0, -1)));
+    const withSlash = path.endsWith('/') ? path : `${path}/`;
+    const hit = rules.find((r) => r.from === path || r.from === withSlash)
+      || sectionFallbackFor(path)
+      || sectionFallbackFor(withSlash);
     assert.ok(hit, `no redirect covers ${path}`);
+  }
+});
+
+test('no splat rules: Pages splats override static assets and loop on their own index', () => {
+  for (const { from } of rules) {
+    assert.ok(!from.includes('*'), `splat rule loops on its own section index: ${from}`);
   }
 });
 

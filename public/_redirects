@@ -196,7 +196,7 @@
 /woocommerce-integration/ https://laravelcompany.com/laravel-ecommerce-development/ 301
 /yii3-vs-symfony https://laravelcompany.com/blog/ 301
 /yii3-vs-symfony/ https://laravelcompany.com/blog/ 301
-# splat fallbacks (static assets take precedence, so only missing pages redirect)
-/jobs/* https://laravelcompany.com/jobs/ 301
-/prompts/* https://laravelcompany.com/prompts/ 301
-/blog/* https://laravelcompany.com/blog/ 301
+# Section fallbacks for expired jobs, removed prompts files and dropped blog
+# slugs live in functions/_middleware.js: Pages splat redirects take precedence
+# over static assets and /x/* matches /x/ itself, so _redirects splats loop on
+# their own section index. The middleware redirects only on a real 404.
