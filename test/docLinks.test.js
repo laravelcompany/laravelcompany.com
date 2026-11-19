@@ -31,7 +31,7 @@ test('Markdown transform handles inline/reference links, leaves code and text al
 
 test('production config enables docs-link transform and real corpus slugs are read', () => {
   const config = readFileSync(new URL('../astro.config.mjs', import.meta.url), 'utf8');
-  assert.match(config, /remarkPlugins:\s*\[remarkDocLinks\]/);
+  assert.match(config, /remarkPlugins:\s*\[remarkDocLinks[\],\s\w]*\]/);
   const tree = { type: 'root', children: [{ type: 'link', url: '/docs/{{version}}/queues' }] };
   remarkDocLinks()(tree);
   assert.equal(tree.children[0].url, '/docs/queues/');

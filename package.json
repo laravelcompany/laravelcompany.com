@@ -31,6 +31,7 @@
     "three": "^0.185.0"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.20",
     "sass": "^1.69.5"
   }
 }

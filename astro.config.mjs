@@ -3,13 +3,15 @@ import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 import icon from "astro-icon";
 import remarkDocLinks from './src/utils/remarkDocLinks.mjs';
+import remarkStripPageToc from './src/utils/remarkStripPageToc.mjs';
+import remarkDocsAlerts from './src/utils/remarkDocsAlerts.mjs';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://laravelcompany.com',
   output: 'static',
   prefetch: true,
-  markdown: { remarkPlugins: [remarkDocLinks] },
+  markdown: { remarkPlugins: [remarkDocLinks, remarkStripPageToc, remarkDocsAlerts] },
   build: {
     concurrency: 4,
   },
