@@ -139,7 +139,18 @@ async function getJobsUncached(keyword: string = 'laravel'): Promise<Job[]> {
         const jobs = await fetchJobsFromAPI(keyword);
         if (jobs.length > 0) {
             saveJobsToCache(jobs);
+            return jobs;
         }
+
+        // The API being down must not bake an empty "jobs API unavailable"
+        // page into the deployment: fall back to the last good snapshot
+        // committed at src/data/jobs-cache.json.
+        const cachedJobs = loadJobsFromCache();
+        if (cachedJobs && cachedJobs.length > 0) {
+            console.log(`⚠️ Jobs API unavailable in CI - using committed cache (${cachedJobs.length} jobs)`);
+            return cachedJobs;
+        }
+
         return jobs;
     }
 

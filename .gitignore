@@ -2,8 +2,7 @@
 dist/
 node_modules/
 
-# Jobs cache - regenerated during deployment
-src/data/jobs-cache.json
+# Books cache - regenerated during deployment
 src/data/books-cache.json
 products/*
 # Blog search index - generated at build time
