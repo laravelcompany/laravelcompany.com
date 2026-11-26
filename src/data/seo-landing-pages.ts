@@ -840,120 +840,91 @@ export const seoLandingPages = {
 
   laravelCustomModuleDevelopment: {
     title: "Laravel Custom Module Development | Extend Existing Applications",
-    description:
-      "Laravel custom module development for adding new features, business workflows, and reusable modules to existing applications without a full rewrite.",
+    description: "Plan new features, business workflows and integrations for an existing Laravel application. Discuss scope, testing and rollout before committing to a rebuild.",
     eyebrow: "Feature Expansion",
     icon: "ph:puzzle-piece-duotone",
     breadcrumbs: [
       { label: "Home", href: "/" },
-      { label: "Services", href: "/laravel-services/" },
+      { label: "Services", href: "/services/" },
       { label: "Laravel Custom Module Development", href: "/laravel-custom-module-development/" },
     ],
     heroPrefix: "Laravel",
     heroAccent: "Custom Module",
     heroSuffix: "Development",
-    heroLead:
-      "Searchers looking for Laravel custom module development already have a working application or at least a clear product shape in mind. They are not asking for a blank-slate build. They want a specialist who can extend an existing codebase in a structured way, add new business functionality, and keep the application maintainable as it grows. This page is built for that intent, showing how module work improves delivery without forcing a full rewrite.",
+    heroLead: "Extend an existing Laravel application with a clearly scoped feature, workflow or integration. Start with the current codebase, define what the new module needs to do, and agree how it will be tested and introduced into production.",
     stats: [
-      { value: "extend", label: "existing apps" },
-      { value: "reusable", label: "module design" },
-      { value: "less", label: "rewrite risk" },
-      { value: "clean", label: "architecture focus" },
+      { value: "clear", label: "feature boundaries" },
+      { value: "existing", label: "application context" },
+      { value: "planned", label: "integration points" },
+      { value: "defined", label: "acceptance checks" },
     ],
-    introTitle: "Modules are how mature applications stay manageable",
+    introTitle: "Add capability without assuming a full rebuild",
     introParagraphs: [
-      "A healthy Laravel product often reaches a point where the next feature cannot just be bolted onto the existing codebase. It needs structure. That is where custom module development comes in. Instead of piling logic into controllers or views, the team introduces a clear boundary around a business capability. That makes the feature easier to test, easier to update, and easier to hand off later. A module-focused landing page should explain that this is not academic architecture. It is a practical way to keep a growing application from turning into a tangle of one-off changes.",
-      "The buyer who searches for custom module development may be dealing with a feature backlog, a new product line, a legacy application that needs expansion, or a team that wants to package functionality in a more reusable way. They need confidence that the provider understands the existing system, can work within it, and can add capability without breaking what already works. The best answer is not a vague promise. It is a clear explanation of how modules are planned, built, tested, and integrated into the current codebase.",
+      "A new feature does not always require replacing the application around it. Billing workflows, reporting, approvals and customer portals can often be scoped as changes to an existing product. Whether that approach is suitable depends on the condition of the codebase, its dependencies and the business rules it already supports.",
+      "A module is a boundary around a capability, not a guarantee of a particular folder structure or package. The useful starting point is the workflow: who uses it, which records it owns, what it must connect to and how the team will know it works.",
     ],
     sections: [
       {
-        title: "Why modules are better than quick patches",
+        title: "Define the workflow and its boundaries",
         paragraphs: [
-          "It is tempting to add a feature by editing the nearest file and moving on, especially when the business wants speed. But that approach eventually creates a system that is hard to reason about. Custom modules solve that problem by grouping logic around a domain or workflow, making the code easier to locate and maintain. In Laravel, that may mean structuring service classes, actions, routes, views, and tests around a feature boundary so the new functionality behaves like a coherent part of the application rather than an accidental addition.",
-          "This matters commercially because poorly structured feature work becomes expensive to change later. If the buyer wants a page about custom module development, they are usually already feeling the pain of that cost. The landing page should acknowledge that reality and show that the goal is not only to deliver the requested feature, but to deliver it in a way that keeps future maintenance predictable. That is especially persuasive for product teams that expect the module to evolve over time.",
+          "Document the current workflow before adding the new one. Identify users, permissions, inputs, outputs and failure cases. Separate essential behaviour from optional additions so the delivery scope can be reviewed against a concrete business need.",
+          "Make dependencies explicit. A reporting module may read existing data without owning it; an approval workflow may need to record decisions, notify users and preserve an audit trail. Those differences affect the design and acceptance criteria.",
         ],
       },
       {
-        title: "What a custom module can include",
+        title: "Choose the right level of separation",
         paragraphs: [
-          "A module can be as small as a workflow enhancement or as broad as a feature set that includes its own data model, interface, permissions, and integrations. Common examples include billing modules, reporting modules, approval systems, document workflows, partner portals, or inventory controls. The page should help the visitor see that a module is not just a technical label. It is a way to contain business complexity so the system stays understandable as more requirements are added.",
-          "The most important thing is that the module serves a real business function rather than a purely technical one. If it does, then module development becomes a useful strategic tool. A company can add functionality without a full rewrite, extend an existing product into a new segment, or build a new workflow that plugs into the current app. That flexibility is valuable to both startups and established businesses, and it is one of the strongest reasons this keyword converts well.",
+          "A small feature may fit the existing application conventions. A broader capability may benefit from feature-focused classes, routes, views and tests. An independently reused component may justify a package. The choice should follow the requirements rather than impose a new architecture on every project.",
+          "Review data ownership and integration points before implementation. Consider how validation, authorisation, background work and external services fit the current application, and where a change could affect existing behaviour.",
         ],
-        bullets: [
-          "Billing and subscription workflows.",
-          "Reporting and analytics views.",
-          "Approval and review systems.",
-          "Role-based portal or dashboard features.",
+        bullets: ["Billing and subscription workflows.", "Reporting and data exports.", "Approval and document workflows.", "Role-based portals and dashboards."],
+      },
+      {
+        title: "Test the new feature and existing behaviour",
+        paragraphs: [
+          "Agree acceptance checks for the new workflow and regression checks for the parts of the application it touches. Include permission boundaries, invalid input and failed integrations as well as successful requests.",
+          "Where a module changes stored data, review migration and rollback options with the deployment plan. Background jobs, notifications and external side effects need their own failure and recovery checks. The exact test plan depends on the application and the risks of the change.",
         ],
       },
       {
-        title: "How modules fit into a Laravel codebase",
+        title: "Plan rollout and future maintenance",
         paragraphs: [
-          "A good Laravel team will not treat module development as a separate universe. The module should fit the existing architecture, follow the project’s conventions, and remain compatible with the application’s deployment and testing process. That often means mapping out where the new code belongs, deciding how it communicates with the rest of the app, and setting boundaries so the module does not become a source of coupling. This is one of the areas where specialist Laravel experience matters most because the value is in making the feature feel native to the application.",
-          "The best module work also anticipates future growth. If a feature is likely to expand, the implementation should leave room for new rules, new screens, or new integrations without requiring a rewrite. This is why a buyer should care about the team’s design habits as much as the final output. A module can be delivered quickly and still be maintainable, but only if the provider thinks about boundaries, naming, testing, and data ownership from the beginning.",
+          "Decide how the feature reaches users, which configuration it needs and what must be monitored after release. A staged rollout or feature flag may be useful for a higher-risk workflow, but it should be chosen for a specific reason.",
+          "Record the module's responsibilities, dependencies and support expectations. Keep deployment instructions and known limitations with the code so the next person can make changes without rediscovering the design.",
         ],
       },
       {
-        title: "Modules are often the right alternative to a rebuild",
+        title: "Prepare for a module development discussion",
         paragraphs: [
-          "Many businesses assume their options are to keep patching an old application or rebuild it completely. Module development offers a third path. If the base application is still solid but the feature gap is growing, a module can create the missing capability without discarding the entire system. That can save time, reduce cost, and protect the existing business logic that already works. The page should make this option feel concrete because it is exactly the kind of practical solution a serious buyer is looking for.",
-          "This is also a trust signal. A provider who recommends module development where appropriate is showing restraint and judgment. They are not forcing a full rewrite to increase billable scope. They are choosing the right level of intervention for the problem. That kind of advice is especially attractive to companies with production systems, because it signals that the team understands risk, not just implementation.",
-        ],
-      },
-      {
-        title: "How to evaluate a module development partner",
-        paragraphs: [
-          "When buyers evaluate a module development partner, they should ask how the team reviews the existing codebase, how they structure the new feature, and how they make sure the module remains testable. They should also ask how the feature will be deployed and how it will be supported after launch. Those questions matter because the best module work is the kind that disappears into the product in a good way. It should feel like part of the application, not a fragile add-on.",
-          "The final commercial point is this: custom module development helps companies keep moving without pausing everything for a rebuild. That makes it a high-intent search term because the buyer already knows the app exists and simply needs to evolve it. If the page can speak to that urgency and show a credible delivery process, it becomes a strong lead generator for projects that are both practical and profitable.",
+          "Bring a short description of the workflow, the Laravel and PHP versions, relevant integrations and any deadline or operational constraints. Note whether the current application has tests and a staging environment. Do not send passwords or production credentials in an enquiry.",
+          "The first decision is whether extending the current application is sensible. A focused change, a larger refactor or a replacement may each be appropriate in different circumstances. That decision needs evidence from the application, not a promise made before reviewing it.",
         ],
       },
     ],
     faqs: [
-      {
-        question: "What is Laravel custom module development?",
-        answer:
-          "It is the process of building a well-bounded feature or workflow inside an existing Laravel application so the new capability stays manageable and does not turn into a pile of ad hoc changes.",
-      },
-      {
-        question: "Can you add a module to an existing Laravel app?",
-        answer:
-          "Yes. We regularly extend existing Laravel applications with new modules for billing, reporting, workflows, dashboards, and other business functions.",
-      },
-      {
-        question: "Is module development better than a full rewrite?",
-        answer:
-          "Often it is, if the base application is still healthy. Module development can add the required functionality with less risk, lower cost, and less disruption than a rebuild.",
-      },
-      {
-        question: "How do you keep modules maintainable?",
-        answer:
-          "We keep the module boundaries clear, add tests, follow the project’s conventions, and avoid unnecessary coupling so the code can be extended later without becoming brittle.",
-      },
+      { question: "What is Laravel custom module development?", answer: "It is the design and implementation of a bounded feature or workflow within an existing Laravel application. The boundary may be expressed through the application's existing structure, feature-focused code or a reusable package, depending on the need." },
+      { question: "Can a module be added to an existing Laravel app?", answer: "It may be possible. Suitability depends on the current architecture, supported framework versions, dependencies, tests and integration requirements. A codebase review helps define the scope and risks." },
+      { question: "Is a module better than a full rewrite?", answer: "Not always. Extending a healthy application can preserve useful behaviour, but serious architectural or support problems may require a broader change. Compare the options after reviewing the application and business constraints." },
+      { question: "What should a module specification include?", answer: "Include the workflow, users and permissions, data ownership, integrations, acceptance criteria, deployment needs and support expectations. Keep optional additions separate from essential behaviour." },
     ],
     relatedLinks: [
-      { href: "/laravel-maintenance-support/", label: "Laravel Maintenance Support", icon: "ph:wrench-duotone" },
+      { href: "/laravel-maintenance-support/", label: "Laravel Maintenance and Support", icon: "ph:wrench-duotone" },
       { href: "/laravel-api-development/", label: "Laravel API Development", icon: "ph:plugs-connected-duotone" },
-      { href: "/upgrade-laravel-version/", label: "Upgrade Laravel Version", icon: "ph:arrow-circle-up-duotone" },
-      { href: "/laravel-services/", label: "Laravel Services", icon: "ph:buildings-duotone" },
+      { href: "/laravel-consulting/", label: "Laravel Consulting", icon: "ph:chat-circle-duotone" },
+      { href: "/services/", label: "Laravel Development Services", icon: "ph:buildings-duotone" },
     ],
-    ctaTitle: "Add the feature without destabilising the whole application",
-    ctaText:
-      "If your Laravel app needs a new capability, module-based development is often the safest route. We can review the existing codebase, propose a structure, and build the feature in a way that stays maintainable.",
+    ctaTitle: "Discuss the next feature for your Laravel application",
+    ctaText: "Describe the workflow you want to add and the constraints of the current application. Use the project enquiry to start a discussion about scope, integration and testing.",
     ctaPrimaryLabel: "Discuss a Module",
     ctaPrimaryHref: "/contact/",
     ctaSecondaryLabel: "View Services",
-    ctaSecondaryHref: "/laravel-services/",
+    ctaSecondaryHref: "/services/",
     serviceSchema: {
       "@context": "https://schema.org",
       "@type": "Service",
       serviceType: "Laravel Custom Module Development",
-      provider: {
-        "@type": "Organization",
-        name: "Laravel Company",
-        url: "https://laravelcompany.com",
-      },
-      description:
-        "Laravel custom module development services for extending existing applications with maintainable features.",
+      provider: { "@type": "Organization", name: "Laravel Company", url: "https://laravelcompany.com" },
+      description: "Laravel custom module development for extending existing applications with scoped features and workflows.",
     },
   },
 } as const;

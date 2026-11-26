@@ -156,8 +156,7 @@ const faqSchema = {
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {sections.slice(0, 4).map((section) => (
               <div class="glass-card p-6 border-white/10">
-                <h3 class="text-xl font-black text-white mb-3">{section.title}</h3>
-                <p class="text-sm text-white/60 leading-relaxed">{section.paragraphs[0]}</p>
+                <a href={`#service-section-${sections.indexOf(section) + 1}`} class="text-xl font-black text-white hover:text-payflo-purple transition-colors">{section.title}</a>
               </div>
             ))}
           </div>
@@ -166,7 +165,7 @@ const faqSchema = {
     </section>
 
     {sections.map((section, index) => (
-      <section class={`py-20 ${index % 2 === 1 ? "bg-white/5" : ""}`}>
+      <section id={`service-section-${index + 1}`} class={`py-20 ${index % 2 === 1 ? "bg-white/5" : ""}`}>
         <div class="container-custom max-w-5xl mx-auto">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div class="lg:col-span-4">
