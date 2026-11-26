@@ -56,3 +56,38 @@ test('onRequest redirects only on a real 404, never on live pages', async () => 
   const ctx404plain = { request: new Request('https://laravelcompany.com/totally-unknown/'), next: async () => new Response('nope', { status: 404 }) };
   assert.equal((await onRequest(ctx404plain)).status, 404);
 });
+
+test('numeric versioned docs URLs redirect to the unversioned page', () => {
+  assert.equal(redirectFor('/docs/8.x/mail'), '/docs/mail/');
+  assert.equal(redirectFor('/docs/8.x/mail/'), '/docs/mail/');
+  assert.equal(redirectFor('/docs/7.x/version-control'), '/docs/version-control/');
+  assert.equal(redirectFor('/docs/8.x'), '/docs/');
+  assert.equal(redirectFor('/docs/8.x/'), '/docs/');
+});
+
+test('legacy site sections fall back to the closest live section', async () => {
+  const { sectionFallbackFor } = await import('../functions/_middleware.js');
+  assert.equal(sectionFallbackFor('/guides/twilio-device'), '/blog/');
+  assert.equal(sectionFallbackFor('/tutorials/sinch-sms'), '/blog/');
+  assert.equal(sectionFallbackFor('/tech-blog/some-post'), '/blog/');
+  assert.equal(sectionFallbackFor('/tag/voip'), '/blog/');
+  assert.equal(sectionFallbackFor('/2021/05/old-post'), '/blog/');
+  assert.equal(sectionFallbackFor('/android-development/sending-sms'), '/blog/');
+  assert.equal(sectionFallbackFor('/docs/sinch-sms-api'), '/docs/');
+  assert.equal(sectionFallbackFor('/services/twilio'), '/services/');
+  assert.equal(sectionFallbackFor('/products/old-product'), '/products/');
+  assert.equal(sectionFallbackFor('/partners/old-partner'), '/partners/');
+  assert.equal(sectionFallbackFor('/guides/'), '/blog/');
+  assert.equal(sectionFallbackFor('/ios-development/2018/04/16/advanced-uipickerview/'), '/blog/');
+  assert.equal(sectionFallbackFor('/our-services/e-commerce-development/'), '/services/');
+  assert.equal(sectionFallbackFor('/solutions/sms-gateway/'), '/solutions/');
+  assert.equal(sectionFallbackFor('/magento-development/advanced-magento-cron-job-setup/'), '/magento-agency-london/');
+  assert.equal(sectionFallbackFor('/jobs/expired-job-123'), '/jobs/');
+  assert.equal(sectionFallbackFor('/books/removed-book'), '/books/');
+});
+
+test('no redirect loop on versioned docs output', () => {
+  const once = redirectFor('/docs/8.x/mail');
+  assert.ok(once);
+  assert.equal(redirectFor(once), null, `${once} must not redirect again`);
+});

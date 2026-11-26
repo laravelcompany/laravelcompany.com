@@ -15,14 +15,41 @@
  *    Pages splats take precedence over static assets and /x/* matches /x/
  *    itself, so a splat loops on its own section index. Redirect only after
  *    the origin answered 404, so live pages are never touched.
+ * 4. Legacy-site fallbacks (GSC 2026-11-26, ~3k URLs from the pre-rebuild
+ *    VoIP/Android/tutorials site still crawled from old links): whole dead
+ *    sections 301 to the closest live section after the origin answers 404.
+ *    Root-level legacy slugs cannot be pattern-matched here, so those live
+ *    as explicit rules in public/_redirects.
  */
 const VERSION_PREFIX = /^\/docs\/(?:\{\{version\}\}|%7B%7Bversion%7D%7D)(\/.*)?$/i;
-const FALLBACK_SECTION = /^\/(jobs|prompts|blog|books)\/.+/;
+const NUMERIC_DOCS_VERSION = /^\/docs\/\d+\.x(\/.*)?$/i;
+const FALLBACK_MAP = [
+    [/^\/jobs\/.+/i, "/jobs/"],
+    [/^\/prompts\/.+/i, "/prompts/"],
+    [/^\/books\/.+/i, "/books/"],
+    [/^\/blog\/.+/i, "/blog/"],
+    [
+        /^\/(?:guides|tutorials|tech-blog|articles|learn|learning|learning-center|resources|tag|tags|category|categories|series|android|android-development|blackberry|bower|developers|development|events|ios-development|\d{4})(?:\/.*)?$/i,
+        "/blog/",
+    ],
+    [/^\/docs\/.+/i, "/docs/"],
+    [/^\/magento-development\/.+/i, "/magento-agency-london/"],
+    [/^\/our-services(?:\/.*)?$/i, "/services/"],
+    [/^\/solutions\/.+/i, "/solutions/"],
+    [/^\/services\/.+/i, "/services/"],
+    [/^\/products\/.+/i, "/products/"],
+    [/^\/partners\/.+/i, "/partners/"],
+];
 
 export function redirectFor(pathname, search = "") {
   const versionMatch = VERSION_PREFIX.exec(pathname);
   if (versionMatch) {
     const rest = (versionMatch[1] || "/").replace(/\/+$/, "");
+    return `/docs${rest}/`;
+  }
+  const numericVersionMatch = NUMERIC_DOCS_VERSION.exec(pathname);
+  if (numericVersionMatch) {
+    const rest = (numericVersionMatch[1] || "/").replace(/\/+$/, "");
     return `/docs${rest}/`;
   }
   const lastSegment = pathname.split("/").pop() || "";
@@ -39,8 +66,10 @@ export function redirectFor(pathname, search = "") {
 }
 
 export function sectionFallbackFor(pathname) {
-  const m = FALLBACK_SECTION.exec(pathname);
-  return m ? `/${m[1]}/` : null;
+  for (const [pattern, target] of FALLBACK_MAP) {
+    if (pattern.test(pathname)) return target;
+  }
+  return null;
 }
 
 export async function onRequest(context) {
