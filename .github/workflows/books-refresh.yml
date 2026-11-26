@@ -1,0 +1,38 @@
+name: Refresh eBay books feed
+
+on:
+  schedule:
+    - cron: '23 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python tests
+        run: python3 -m unittest discover tools/ebay-books/tests
+      - name: Generate feed (keeps old feed on failure)
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          EPN_CAMPAIGN_ID: ${{ secrets.EPN_CAMPAIGN_ID }}
+        run: python3 tools/ebay-books/generate.py
+      - name: Commit feed (triggers deploy)
+        run: |
+          git config user.name "books-refresh"
+          git config user.email "books-refresh@users.noreply.github.com"
+          git add src/data/books/products.json
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -m "Refresh eBay books feed $(date -u +%F)"
+          git push
+      # Pushes made with GITHUB_TOKEN do not start another push workflow.
+      - name: Deploy refreshed books
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

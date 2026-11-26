@@ -1,33 +1,32 @@
 ---
-/**
- * One book in a grid: cover, title, author, year - links to the local
- * LaravelCompany detail page.
- */
-import BookCover from "./BookCover.astro";
-import type { Book } from "../../utils/booksCache";
+/** One eBay book listing in a grid. Links to the local detail page. */
+import { bookPath, truncate, money, type EbayBook } from "../../utils/ebayBooks";
 
 interface Props {
-    book: Book;
-    coverLoading?: "lazy" | "eager";
+    book: EbayBook;
 }
-
-const { book, coverLoading = "lazy" } = Astro.props;
+const { book } = Astro.props;
 ---
 
 <a
-    href={`/books/${book.slug}/`}
-    class="group glass-card !p-4 flex flex-col gap-4 hover:border-payflo-purple/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-payflo-purple/50"
+    href={bookPath(book)}
+    data-title={book.title.toLowerCase()}
+    class="book-card group glass-card !p-4 flex flex-col gap-4 hover:border-payflo-purple/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-payflo-purple/50"
 >
-    <BookCover coverId={book.coverId} title={book.title} authors={book.authors} loading={coverLoading} />
+    <div class="relative overflow-hidden rounded-xl bg-white/5 flex items-center justify-center" style="aspect-ratio: 3 / 4;">
+        {
+            book.image_url ? (
+                <img src={book.image_url} alt={book.title} loading="lazy" referrerpolicy="no-referrer" class="w-full h-full object-contain" />
+            ) : (
+                <span class="p-4 text-center text-sm font-bold text-white/70">{truncate(book.title, 60)}</span>
+            )
+        }
+    </div>
     <div class="flex flex-col gap-1">
         <h3 class="font-bold text-white leading-snug group-hover:text-payflo-purple transition-colors line-clamp-2">
-            {book.title}
+            {truncate(book.title, 90)}
         </h3>
-        {book.authors.length > 0 && <p class="text-sm text-white/60 line-clamp-1">{book.authors.join(", ")}</p>}
-        <p class="text-xs text-white/40 mt-1">
-            {book.firstPublishYear && <span>{book.firstPublishYear}</span>}
-            {book.firstPublishYear && book.editionCount ? <span aria-hidden="true"> · </span> : null}
-            {book.editionCount && <span>{book.editionCount} {book.editionCount === 1 ? "edition" : "editions"}</span>}
-        </p>
+        <p class="text-xs text-white/40">{book.condition || "Condition not stated"}</p>
+        <p class="text-white font-semibold mt-1">{money(book)} <span class="text-xs font-normal text-white/40">on eBay UK</span></p>
     </div>
 </a>

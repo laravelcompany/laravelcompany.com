@@ -39,7 +39,7 @@ jobs:
         run: npm ci
 
       - name: Test
-        run: npm test && python3 -m unittest discover -s tests -p "test_*.py"
+        run: npm test && python3 -m unittest discover -s tests -p "test_*.py" && python3 -m unittest discover tools/ebay-books/tests
 
       - name: Build Astro site
         run: npm run build

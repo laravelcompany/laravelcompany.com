@@ -13,3 +13,7 @@ public/prompts-search.json
 
 __pycache__/
 *.pyc
+
+# eBay books generator working files
+tools/ebay-books/products.sqlite
+tools/ebay-books/output/

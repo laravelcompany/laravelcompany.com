@@ -1,0 +1,31 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import HeroSection from "../../../components/HeroSection.astro";
+import BookCard from "../../../components/books/BookCard.astro";
+import AffiliateDisclosure from "../../../components/books/AffiliateDisclosure.astro";
+import { shelves } from "../../../utils/ebayBooks";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+    return shelves().map((s) => ({ params: { category: s.slug }, props: { shelf: s } }));
+}
+const { shelf } = Astro.props;
+---
+
+<Layout
+    title={`${shelf.name} Books on eBay UK | Laravel Company`}
+    description={`${shelf.items.length} ${shelf.name} book listings from eBay UK, with condition and price.`}
+>
+    <HeroSection
+        title={`${shelf.name} Books`}
+        subtitle={`${shelf.items.length} listings from eBay UK. Compare condition and price, then buy on eBay.`}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Books", href: "/books/" }, { label: shelf.name }]}
+    />
+    <main class="container-custom pb-20 md:pb-32">
+        <AffiliateDisclosure />
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {shelf.items.map((b) => <BookCard book={b} />)}
+        </div>
+    </main>
+</Layout>

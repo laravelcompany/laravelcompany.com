@@ -1,0 +1,72 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import AffiliateDisclosure from "../../../components/books/AffiliateDisclosure.astro";
+import { books, shelves, itemSlug, money, truncate, dateTime, AFFILIATE_REL } from "../../../utils/ebayBooks";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+    const names = Object.fromEntries(shelves().map((s) => [s.slug, s.name]));
+    return books.map((p) => ({
+        params: { category: p.category, item_id: itemSlug(p.item_id) },
+        props: { p, shelfName: names[p.category] },
+    }));
+}
+const { p, shelfName } = Astro.props;
+const url = new URL(`/books/${p.category}/${itemSlug(p.item_id)}/`, Astro.site ?? "https://laravelcompany.com").href;
+const ld = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: p.title,
+    ...(p.image_url && { image: p.image_url }),
+    url,
+    offers: {
+        "@type": "Offer",
+        price: p.price,
+        priceCurrency: p.currency,
+        url: p.affiliate_url,
+        itemCondition: /new/i.test(p.condition) ? "https://schema.org/NewCondition" : "https://schema.org/UsedCondition",
+    },
+};
+---
+
+<Layout title={`${truncate(p.title, 60)} | Laravel Company Books`} description={`${p.title} on eBay UK, ${money(p)} at time of check.`}>
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+    <main class="container-custom pt-28 md:pt-36 pb-20 md:pb-32">
+        <nav class="flex items-center gap-2 text-sm text-white/50 mb-10 flex-wrap" aria-label="Breadcrumbs">
+            <a href="/" class="hover:text-white transition-colors">Home</a><span>/</span>
+            <a href="/books/" class="hover:text-white transition-colors">Books</a><span>/</span>
+            <a href={`/books/${p.category}/`} class="hover:text-white transition-colors">{shelfName}</a>
+        </nav>
+        <AffiliateDisclosure />
+        <div class="grid md:grid-cols-[minmax(0,360px)_1fr] gap-10">
+            <div class="glass-card !p-4 flex items-center justify-center">
+                {p.image_url && <img src={p.image_url} alt={p.title} width="400" height="500" class="max-h-[480px] w-auto object-contain" referrerpolicy="no-referrer" />}
+            </div>
+            <div>
+                <p class="text-sm text-payflo-purple mb-2">{shelfName} · eBay UK listing</p>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-4">{p.title}</h1>
+                <p class="text-3xl font-bold text-white">{money(p)}</p>
+                <p class="text-xs text-white/40 mb-6">Price at time of check. Confirm price and availability on eBay.</p>
+                {
+                    p.short_description && (
+                        <section class="mb-6" aria-label="eBay description summary">
+                            <h2 class="text-lg font-bold text-white mb-2">eBay description summary</h2>
+                            <p class="text-white/70 leading-relaxed">{p.short_description}</p>
+                            <p class="text-xs text-white/40 mt-1">Summary supplied by eBay. Open the listing for the seller's full description.</p>
+                        </section>
+                    )
+                }
+                <dl class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-sm mb-8">
+                    <dt class="text-white/40">Condition</dt><dd class="text-white/80">{p.condition || "Not stated"}</dd>
+                    {p.seller && <><dt class="text-white/40">Seller</dt><dd class="text-white/80">{p.seller}</dd></>}
+                    {p.location && <><dt class="text-white/40">Location</dt><dd class="text-white/80">{p.location}</dd></>}
+                    <dt class="text-white/40">Last checked</dt><dd class="text-white/80">{dateTime(p.last_seen)}</dd>
+                </dl>
+                <a class="btn btn-primary" href={p.affiliate_url} target="_blank" rel={AFFILIATE_REL}>
+                    Buy on eBay <span aria-hidden="true">↗</span><span class="sr-only">(opens in new tab)</span>
+                </a>
+            </div>
+        </div>
+    </main>
+</Layout>

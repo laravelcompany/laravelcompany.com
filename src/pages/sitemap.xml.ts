@@ -95,16 +95,16 @@ export const GET: APIRoute = async ({ site }) => {
         console.error('Error fetching products for sitemap:', error);
     }
 
-    // 3c. Fetch curated books
+    // 3c. eBay book listings
     let bookPages: string[] = [];
     try {
-        const { getBooks } = await import('../utils/booksCache');
-        const books = await getBooks();
-        bookPages = books.map(book => `books/${book.slug}/`);
-        const totalPages = Math.ceil(books.length / 12);
-        for (let n = 2; n <= totalPages; n++) bookPages.push(`books/page/${n}/`);
+        const { books, shelves, itemSlug } = await import('../utils/ebayBooks');
+        bookPages = [
+            ...shelves().map(s => `books/${s.slug}/`),
+            ...books.map(b => `books/${b.category}/${itemSlug(b.item_id)}/`),
+        ];
     } catch (error) {
-        console.error('Error fetching books for sitemap:', error);
+        console.error('Error building book URLs for sitemap:', error);
     }
 
     // 4. Fetch blog posts
