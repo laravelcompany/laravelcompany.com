@@ -17,7 +17,7 @@
  *    the origin answered 404, so live pages are never touched.
  */
 const VERSION_PREFIX = /^\/docs\/(?:\{\{version\}\}|%7B%7Bversion%7D%7D)(\/.*)?$/i;
-const FALLBACK_SECTION = /^\/(jobs|prompts|blog)\/.+/;
+const FALLBACK_SECTION = /^\/(jobs|prompts|blog|books)\/.+/;
 
 export function redirectFor(pathname, search = "") {
   const versionMatch = VERSION_PREFIX.exec(pathname);

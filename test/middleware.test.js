@@ -38,7 +38,8 @@ test('section fallback targets expired jobs, removed prompts and dropped blog sl
   assert.equal(sectionFallbackFor('/jobs/expired-job-123/'), '/jobs/');
   assert.equal(sectionFallbackFor('/prompts/old-file.py'), '/prompts/');
   assert.equal(sectionFallbackFor('/blog/dropped-slug/'), '/blog/');
-  for (const path of ['/jobs/', '/blog/', '/prompts/', '/', '/contact', '/api/search', '/books/x']) {
+  assert.equal(sectionFallbackFor('/books/old-open-library-slug/'), '/books/');
+  for (const path of ['/jobs/', '/blog/', '/prompts/', '/', '/contact', '/api/search']) {
     assert.equal(sectionFallbackFor(path), null, path);
   }
 });
