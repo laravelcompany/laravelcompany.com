@@ -20,6 +20,7 @@ const localBusinessSchema = {
   name: "Laravel Company",
   image: "https://laravelcompany.com/images/logo.png",
   email: "info@laravelcompany.com",
+  telephone: "+44 744 821 88 99",
   address: {
     "@type": "PostalAddress",
     streetAddress: "7 High Street",
@@ -54,6 +55,7 @@ const localBusinessSchema = {
 const contactPointSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPoint",
+  telephone: "+44 744 821 88 99",
   contactType: "customer service",
   areaServed: "GB",
   availableLanguage: ["English"],
@@ -68,7 +70,7 @@ const organizationSchema = {
   logo: "https://laravelcompany.com/images/logo.png",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+44-744-8218899",
+    telephone: "+44 744 821 88 99",
     contactType: "sales",
     email: "info@laravelcompany.com",
     areaServed: "GB",
