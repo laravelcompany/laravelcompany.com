@@ -12,6 +12,10 @@ export const GET: APIRoute = async ({ site }) => {
     const staticPages = [
         '',
         'about-us/',
+        'services/',
+        'laravel-development-agency/',
+        'laravel-saas-development/',
+        'laravel-api-development/',
         'contact/',
         'cookie-policy/',
         'privacy-policy/',
@@ -127,7 +131,10 @@ export const GET: APIRoute = async ({ site }) => {
         console.error('Error fetching docs for sitemap:', error);
     }
 
-    const allPages = [...staticPages, ...geoServicePages, ...variantServicePages, ...jobPages, ...productPages, ...bookPages, ...blogPages, ...docsPages];
+    const allPages = [...new Set([...staticPages, ...geoServicePages, ...variantServicePages, ...jobPages, ...productPages, ...bookPages, ...blogPages, ...docsPages])];
+    // Build time is not a content modification date. Omit lastmod until a
+    // reliable per-page source is available. XML locations must be escaped.
+    const escapeXml = (value: string) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -143,8 +150,7 @@ export const GET: APIRoute = async ({ site }) => {
                 else if (isVariant) { priority = '0.6'; changefreq = 'monthly'; }
                 return `
   <url>
-    <loc>${url}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
+    <loc>${escapeXml(url)}</loc>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
