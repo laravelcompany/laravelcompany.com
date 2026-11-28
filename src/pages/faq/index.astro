@@ -1,0 +1,89 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { FAQ_QUESTIONS } from "../../data/faq-questions";
+
+const siteUrl = "https://laravelcompany.com";
+const pageUrl = `${siteUrl}/faq/`;
+const pageTitle = "Laravel FAQ | Laravel Company";
+const pageDescription =
+  "Answers to common questions about Laravel, hiring Laravel developers and working with a Laravel development company.";
+
+const answered = FAQ_QUESTIONS.filter((q) => q.answer && q.answer.trim().length > 0);
+const upcoming = FAQ_QUESTIONS.filter((q) => !q.answer || q.answer.trim().length === 0);
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+    { "@type": "ListItem", "position": 2, "name": "FAQ", "item": pageUrl }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <div class="max-w-3xl mx-auto px-4 py-16">
+    <nav aria-label="Breadcrumb" class="mb-8 text-sm text-gray-400">
+      <ol class="list-none p-0 flex flex-wrap items-center gap-1">
+        <li>
+          <a href="/" class="hover:text-payflo-purple transition-colors">Home</a>
+        </li>
+        <li aria-hidden="true" class="mx-1">/</li>
+        <li class="text-white" aria-current="page">FAQ</li>
+      </ol>
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Laravel FAQ</h1>
+    <p class="text-lg text-gray-400 mb-10">
+      Common questions about Laravel, hiring Laravel developers and working with a
+      Laravel development company.
+    </p>
+
+    {answered.length > 0 && (
+      <ul class="space-y-4 mb-12">
+        {answered.map((q) => (
+          <li>
+            <a
+              href={`/faq/${q.slug}/`}
+              class="text-payflo-purple hover:text-purple-400 font-medium transition-colors"
+            >
+              {q.question}
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+
+    {upcoming.length > 0 && (
+      <div>
+        <h2 class="text-xl font-semibold text-white mb-4">Answers in preparation</h2>
+        <ul class="space-y-3">
+          {upcoming.map((q) => (
+            <li>
+              <a
+                href={`/faq/${q.slug}/`}
+                class="text-gray-300 hover:text-white transition-colors"
+              >
+                {q.question}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <hr class="my-12 border-gray-800" />
+
+    <div class="text-center">
+      <p class="text-gray-400 mb-4">Looking for Laravel development services?</p>
+      <a
+        href="/"
+        class="inline-block bg-payflo-purple hover:bg-purple-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+      >
+        Laravel Development Company
+      </a>
+    </div>
+  </div>
+</Layout>
