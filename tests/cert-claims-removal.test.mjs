@@ -29,3 +29,23 @@ test('no replacement claims invented: removed copy was deleted, not swapped for 
   assert.ok(!/ISO 27001 (certified|aligned|compliant)/i.test(sovereign), 'no ISO 27001 claim of any form on eu-sovereign');
   assert.ok(!/ISO 27001 (certified|aligned|compliant)/i.test(healthcare.match(/Enterprise Compliance[\s\S]*?<\/ul>/)?.[0] || ''), 'no ISO 27001 claim in the healthcare compliance list');
 });
+
+test('extension: eu-sovereign drops SecNumCloud, C5, SOC 2 and all certification JSON-LD', () => {
+  assert.ok(!sovereign.includes('SecNumCloud Ready'), 'badge removed');
+  assert.ok(!sovereign.includes('C5 Compliant'), 'badge removed');
+  assert.ok(!sovereign.includes('SOC 2 Type II verified'), 'list item removed');
+  assert.ok(!sovereign.includes('GDPR compliant operations'), 'list item removed');
+  assert.ok(!sovereign.includes('"certification"'), 'Organization JSON-LD carries no certification claims');
+});
+
+test('extension: healthcare drops named-standards support and expertise claims', () => {
+  assert.ok(!healthcare.includes('We support HIPAA, GDPR, SOC 2, ISO 27001'), 'FAQ support claim removed');
+  assert.ok(!healthcare.includes('deep compliance expertise across HIPAA'), 'body expertise claim removed');
+  assert.ok(!healthcare.includes('audit-ready from day one'), 'audit-ready guarantee removed');
+});
+
+test('extension: no new claims invented in replacement copy', () => {
+  assert.ok(!/SecNumCloud (Ready|Compliant|certified)/i.test(sovereign));
+  assert.ok(!/C5 (Compliant|certified)/i.test(sovereign));
+  assert.ok(!/audit-ready/.test(healthcare));
+});
