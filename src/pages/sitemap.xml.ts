@@ -4,62 +4,56 @@ import { getJobs } from '../utils/jobsCache';
 import { generateJobSlug } from '../utils/jobSlug';
 import { LOCATIONS } from '../data/locations';
 import { SERVICE_MODIFIERS } from '../data/service-modifiers';
+import { FAQ_QUESTIONS } from '../data/faq-questions';
+import countriesCities from '../data/countries-cities.json';
+import slugify from '../utils/slugify';
+
+// Static routes are derived from the filesystem at build time, not a
+// hand-maintained list: every top-level or one-level-deep .astro page becomes a
+// sitemap entry unless it is the 404 page, carries `noindex`, or is a dynamic
+// ([...]) route (those are enumerated from their data sources below).
+const rawPages = import.meta.glob(['./*.astro', './*/*.astro'], {
+    query: '?raw',
+    import: 'default',
+    eager: true,
+});
+
+const staticPages: string[] = Object.entries(rawPages)
+    .filter(([path, source]) => {
+        if (path.includes('[')) return false; // dynamic route, handled below
+        if (typeof source === 'string' && /noindex/.test(source)) return false;
+        return true;
+    })
+    .map(([path]) => {
+        const route = path.replace(/^\.\//, '').replace(/\.astro$/, '');
+        if (route === '404') return null;
+        if (route === 'index') return '';
+        return route.endsWith('/index') ? route.slice(0, -'/index'.length) + '/' : route + '/';
+    })
+    .filter((route): route is string => route !== null);
+
+// Paginated [...page] routes are skipped by the glob filter above, so their
+// page-1 index URLs are listed here explicitly.
+const paginatedIndexPages = ['blog/', 'prompts/'];
 
 export const GET: APIRoute = async ({ site }) => {
     const baseUrl = site ? site.toString() : 'https://laravelcompany.com';
-
-    // 1. Define static pages
-    const staticPages = [
-        '',
-        'about-us/',
-        'services/',
-        'laravel-development-agency/',
-        'laravel-saas-development/',
-        'laravel-api-development/',
-        'contact/',
-        'cookie-policy/',
-        'privacy-policy/',
-        'solutions/',
-        'terms-of-use/',
-        'software/',
-        'software/laravel-mail/',
-        'software/laravel-gpt/',
-        'software/laravel-seo/',
-        'software/laravel-ui/',
-        'shop/',
-        'jobs/',
-        'blog/',
-        'books/',
-        'docs/',
-        'guidelines/',
-        'laravel-application-development-company/',
-        'software-development-agency-london/',
-        'hire-aws-consultant/',
-        'magento-agency-london/',
-        'laravel-consulting/',
-        'database-development-services/',
-        'compliance/',
-        'nis2-essential-entity-provider/',
-        'cra-compliant-software-vendor/',
-        'eu-sovereign-cloud-provider/',
-        'gdpr-europrise-certified/',
-        'laravel-company-website-github/',
-        'laravel-company-headquarters-phone-number-usa/',
-        'hire-dedicated-laravel-developers/',
-        'laravel-maintenance-support/',
-        'laravel-migration-services/',
-        'laravel-api-integration-services/',
-        'laravel-development-company-usa/',
-        'laravel-livewire-development/',
-        'laravel-aws-deployment-services/',
-        'laravel-custom-module-development/',
-    ];
 
     // 2a. Generate geo service pages
     const geoServicePages = LOCATIONS.map(loc => `services/laravel-development-company-in-${loc.slug}/`);
 
     // 2b. Generate service variant pages
     const variantServicePages = SERVICE_MODIFIERS.map(mod => `services/${mod.slug}-laravel-development-company/`);
+
+    // 2c. FAQ pages (note: /faq/ itself has no index route, so it is excluded)
+    // Only FAQ pages with real answers are indexable; empty-answer pages are noindex.
+    const faqPages = FAQ_QUESTIONS.filter(q => q.answer && q.answer.trim().length > 0).map(q => `faq/${q.slug}/`);
+
+    // 2d. Country/city matrix
+    const countryCityPages = Object.entries(countriesCities).flatMap(([countryKey, cities]) => [
+        `${countryKey.toLowerCase()}/`,
+        ...cities.map(city => `${countryKey.toLowerCase()}/${slugify(city)}/`),
+    ]);
 
     // 2. Fetch dynamic jobs
     let jobPages: string[] = [];
@@ -131,7 +125,25 @@ export const GET: APIRoute = async ({ site }) => {
         console.error('Error fetching docs for sitemap:', error);
     }
 
-    const allPages = [...new Set([...staticPages, ...geoServicePages, ...variantServicePages, ...jobPages, ...productPages, ...bookPages, ...blogPages, ...docsPages])];
+    // 6. Fetch prompt library pages
+    let promptPages: string[] = [];
+    try {
+        const promptEntries = await getCollection('prompts');
+        promptPages = promptEntries.map(prompt => `prompts/${prompt.id}/`);
+    } catch (error) {
+        console.error('Error fetching prompts for sitemap:', error);
+    }
+
+    // 7. Fetch funny-docs pages
+    let funnyDocsPages: string[] = [];
+    try {
+        const funnyDocsEntries = await getCollection('funny-docs');
+        funnyDocsPages = funnyDocsEntries.map(doc => `funny-docs/${doc.id.replace(/\.md$/, '')}/`);
+    } catch (error) {
+        console.error('Error fetching funny-docs for sitemap:', error);
+    }
+
+    const allPages = [...new Set([...staticPages, ...paginatedIndexPages, ...geoServicePages, ...variantServicePages, ...faqPages, ...countryCityPages, ...jobPages, ...productPages, ...bookPages, ...blogPages, ...docsPages, ...promptPages, ...funnyDocsPages])];
     // Build time is not a content modification date. Omit lastmod until a
     // reliable per-page source is available. XML locations must be escaped.
     const escapeXml = (value: string) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
