@@ -6,6 +6,7 @@ import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
 import logoSrc from "../../assets/logo.svg";
 import { marked } from "marked";
+import { demoteH1Html } from "../../utils/demoteH1Html.mjs";
 import { enrichCodeBlocks } from "../../utils/codeHighlighter";
 
 function isMarkdown(content: string): boolean {
@@ -50,7 +51,10 @@ const cleanExcerpt = data.excerpt
 const rawContent = isMarkdown(cleanContent)
   ? marked.parse(cleanContent) as string
   : cleanContent;
-const renderedContent = await enrichCodeBlocks(rawContent);
+// Issue #40: the page title is the only h1; demote any h1 inside the
+// imported body so the document outline has exactly one h1.
+const demotedContent = demoteH1Html(rawContent);
+const renderedContent = await enrichCodeBlocks(demotedContent);
 
 // Google truncates meta descriptions around 155-160 characters.
 function truncateDescription(text: string, max = 157): string {
