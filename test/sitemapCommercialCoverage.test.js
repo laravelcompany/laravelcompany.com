@@ -27,7 +27,7 @@ test('every indexable static page route is covered by the derivation', () => {
 });
 
 test('previously missing dynamic trees are enumerated', () => {
-  for (const token of ['FAQ_QUESTIONS.map', "getCollection('prompts')", "getCollection('funny-docs')", 'countriesCities']) {
+  for (const token of ['FAQ_QUESTIONS.filter', "getCollection('prompts')", "getCollection('funny-docs')", 'countriesCities']) {
     assert.ok(source.includes(token), `sitemap must enumerate ${token}`);
   }
 });
