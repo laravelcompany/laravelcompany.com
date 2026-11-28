@@ -72,7 +72,9 @@ test('plugin only touches docs and funny-docs content files', () => {
 
 test('production config registers the page-TOC strip after the link rewrites', () => {
   const config = readFileSync(new URL('../astro.config.mjs', import.meta.url), 'utf8');
-  assert.match(config, /remarkPlugins:\s*\[remarkDocLinks,\s*remarkStripPageToc,\s*remarkDocsAlerts\]/);
+  // Ordering is the contract: the TOC strip must run after the link rewrites.
+  // Later plugins (e.g. remarkDemoteH1) may follow without breaking it.
+  assert.match(config, /remarkPlugins:\s*\[remarkDocLinks,\s*remarkStripPageToc,\s*remarkDocsAlerts[\],\s\w]*\]/);
 });
 
 test('docTitle prefers the first H1 and humanizes the slug otherwise', () => {
