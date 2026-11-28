@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://laravelcompany.com/sitemap.xml
-Sitemap: https://laravelcompany.com/news-sitemap.xml
