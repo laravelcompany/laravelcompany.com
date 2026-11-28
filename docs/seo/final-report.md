@@ -70,7 +70,9 @@ fixed (sitemap token assertion left red at the #65 merge).
 - Education/LMS industry page: no demonstrable experience recorded; brief forbids inventing.
 - Filament starter kits/packages: deferred (brief: only if genuinely maintainable).
 - New location pages: existing matrix already covers target cities; thin-but-unique
-  (~32-61 unique words per city) — enrich existing rather than add.
+  (~32-61 unique words per city). The audit recommendation was to enrich existing
+  pages rather than add; Stefan decided 2026-11-28 to keep the city pages as they
+  are — no enrichment, no new location pages.
 
 ## 7. Blocked (needs Stefan or external access)
 
