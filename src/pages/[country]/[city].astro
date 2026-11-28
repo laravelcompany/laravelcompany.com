@@ -39,8 +39,6 @@ const countryData = countryContent[countryKey] || {
   services: 'Web and software development services.',
   laws: 'GDPR compliance required. Local data protection laws apply.',
   slang: 'Business culture varies by region.',
-  expertName: 'Local Expert',
-  expertTitle: 'Software Developer',
 };
 
 // Get city-specific content
@@ -162,32 +160,6 @@ const currentDate = new Date().toISOString().split('T')[0];
       <ProjectCalculator currency={countryData.currency} currencySymbol={countryData.currencySymbol} />
     </div>
 
-    <!-- Local Expert -->
-    <div class="bg-gray-800 rounded-2xl p-8 animate-on-scroll" itemscope itemtype="https://schema.org/Person">
-      <div class="flex flex-col md:flex-row items-center gap-6">
-        <div class="w-24 h-24 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-3xl font-bold">
-          {countryData.expertName.charAt(0)}
-        </div>
-        <div>
-          <h2 class="text-2xl font-bold mb-2">
-            Meet Your Local Expert <span itemprop="name">{countryData.expertName}</span>
-          </h2>
-          <p class="text-gray-300 mb-2">{countryData.expertTitle} based in {cityName}, {countryName}</p>
-          <p class="text-gray-400 text-sm">
-            {countryData.expertName} brings deep knowledge of {cityName}'s tech ecosystem,
-            local regulations, and business culture to ensure your project's success.
-          </p>
-          <meta itemprop="jobTitle" content={countryData.expertTitle} />
-          <div itemprop="workLocation" itemscope itemtype="https://schema.org/City">
-            <meta itemprop="name" content={cityName} />
-          </div>
-          <div itemprop="homeLocation" itemscope itemtype="https://schema.org/City">
-            <meta itemprop="name" content={cityName} />
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- JSON-LD Schema.org for Article -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -195,17 +167,8 @@ const currentDate = new Date().toISOString().split('T')[0];
       "headline": `Laravel Development Services in ${cityName}, ${countryName}`,
       "description": `Expert software development services in ${cityName}, ${countryName}. Local tech expertise, regulatory compliance, and tailored solutions.`,
       "author": {
-        "@type": "Person",
-        "name": countryData.expertName,
-        "jobTitle": countryData.expertTitle,
-        "homeLocation": {
-          "@type": "City",
-          "name": cityName
-        },
-        "workLocation": {
-          "@type": "City",
-          "name": cityName
-        }
+        "@type": "Organization",
+        "name": "Laravel Company"
       },
       "contentLocation": {
         "@type": "City",
